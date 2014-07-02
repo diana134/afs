@@ -4,8 +4,12 @@ from PyQt4.QtGui import QApplication, QMainWindow
 from ui_mainwindow import Ui_MainWindow
 import sqlite3
 
+def slotAddNewParticipant():
+	print "Participant!"
+
 def setupSlots():
-	btn_addParticipants.clicked.connect(Participant.addToDB(conn))
+	btn_addParticipants.clicked.connect(slotAddNewParticipant())
+	print "Signals and slots initialized"
 
 def initDatabase():
 	conn = sqlite3.connect('../Database/AFS.db')
