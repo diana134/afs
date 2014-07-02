@@ -100,16 +100,22 @@
             <x>10</x>
             <y>20</y>
             <width>511</width>
-            <height>251</height>
+            <height>277</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout">
+           <property name="fieldGrowthPolicy">
+            <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+           </property>
            <item row="0" column="0">
             <widget class="QLabel" name="label_2">
              <property name="text">
               <string>Name</string>
              </property>
             </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_2"/>
            </item>
            <item row="1" column="0">
             <widget class="QLabel" name="label_3">
@@ -118,12 +124,18 @@
              </property>
             </widget>
            </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEdit_3"/>
+           </item>
            <item row="2" column="0">
             <widget class="QLabel" name="label_4">
              <property name="text">
               <string>Town</string>
              </property>
             </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="lineEdit_5"/>
            </item>
            <item row="3" column="0">
             <widget class="QLabel" name="label_5">
@@ -132,10 +144,20 @@
              </property>
             </widget>
            </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="lineEdit_4"/>
+           </item>
            <item row="4" column="0">
             <widget class="QLabel" name="label_6">
              <property name="text">
               <string>Home Phone</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="lineEdit_6">
+             <property name="inputMethodHints">
+              <set>Qt::ImhDigitsOnly</set>
              </property>
             </widget>
            </item>
@@ -146,43 +168,17 @@
              </property>
             </widget>
            </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="label_8">
-             <property name="text">
-              <string>Email</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="label_9">
-             <property name="text">
-              <string>Birth Date (yy/mm/dd)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QLineEdit" name="lineEdit_2"/>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLineEdit" name="lineEdit_3"/>
-           </item>
-           <item row="3" column="1">
-            <widget class="QLineEdit" name="lineEdit_4"/>
-           </item>
-           <item row="2" column="1">
-            <widget class="QLineEdit" name="lineEdit_5"/>
-           </item>
-           <item row="4" column="1">
-            <widget class="QLineEdit" name="lineEdit_6">
-             <property name="inputMethodHints">
-              <set>Qt::ImhDigitsOnly</set>
-             </property>
-            </widget>
-           </item>
            <item row="5" column="1">
             <widget class="QLineEdit" name="lineEdit_7">
              <property name="inputMethodHints">
               <set>Qt::ImhDigitsOnly</set>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>Email</string>
              </property>
             </widget>
            </item>
@@ -193,8 +189,22 @@
              </property>
             </widget>
            </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>Birth Date (yy/mm/dd)</string>
+             </property>
+            </widget>
+           </item>
            <item row="7" column="1">
             <widget class="QDateEdit" name="dateEdit"/>
+           </item>
+           <item row="8" column="1">
+            <widget class="QPushButton" name="btn_addParticipant">
+             <property name="text">
+              <string>Add &amp;Participant</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -211,7 +221,7 @@
             <x>10</x>
             <y>20</y>
             <width>511</width>
-            <height>321</height>
+            <height>343</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout_3">
