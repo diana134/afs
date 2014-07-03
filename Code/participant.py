@@ -1,15 +1,15 @@
 class Participant:
 	"""Holds participant data (name, address, contact info, etc)"""
 	def __init__(self, first=None, last=None, address=None, town=None, postal=None, home=None, cell=None, email=None, dob=None):
-		self.first = first
-		self.last = last
-		self.address = address
-		self.town = town
-		self.postal = postal
-		self.home = home
-		self.cell = cell
-		self.email = email
-		self.dob = dob
+		self.first = str(first)
+		self.last = str(last)
+		self.address = str(address)
+		self.town = str(town)
+		self.postal = str(postal)
+		self.home = str(home)
+		self.cell = str(cell)
+		self.email = str(email)
+		self.dob = str(dob)
 
 	def isEqualTo(self, obj):
 		if type(Participant):
@@ -28,3 +28,5 @@ class Participant:
 
 	def addToDB(self, conn):
 		conn.execute("INSERT INTO participants (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", (self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob));
+		conn.commit()
+		return True
