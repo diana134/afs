@@ -1,28 +1,45 @@
 class Participant:
 	"""Holds participant data (name, address, contact info, etc)"""
 	def __init__(self, first=None, last=None, address=None, town=None, postal=None, home=None, cell=None, email=None, dob=None):
-		self.first = str(first)
-		self.last = str(last)
-		self.address = str(address)
-		self.town = str(town)
-		self.postal = str(postal)
-		self.home = str(home)
-		self.cell = str(cell)
-		self.email = str(email)
-		self.dob = str(dob)
+		self.first = str(first) if first is not None else None
+		self.last = str(last) if last is not None else None
+		self.address = str(address) if address is not None else None
+		self.town = str(town) if town is not None else None
+		self.postal = str(postal) if postal is not None else None
+		self.home = str(home) if home is not None else None
+		self.cell = str(cell) if cell is not None else None
+		self.email = str(email) if email is not None else None
+		self.dob = str(dob) if dob is not None else None
 
 	def isEqualTo(self, obj):
-		if type(Participant):
-			if (self.first == obj.first and
-					self.last == obj.last and
-					(obj.address is None or obj.address == "" or self.address == obj.address) and
-					(obj.town is None or obj.town == "" or self.town == obj.town) and
-					(obj.postal is None or obj.postal == "" or self.postal == obj.postal) and
-					(obj.home is None or obj.home == "" or self.home == obj.home) and
-					(obj.cell is None or obj.cell == "" or self.cell == obj.cell) and
-					(obj.email is None or obj.email == "" or self.email == obj.email) and
-					self.dob == obj.dob):
+		if isinstance(obj, Participant):
+			if (self.requiredFieldIsGood(self.first, obj.first) and
+					self.requiredFieldIsGood(self.last, obj.last) and
+					self.optionalFieldIsGood(self.address, obj.address) and
+					self.optionalFieldIsGood(self.town, obj.town) and
+					self.optionalFieldIsGood(self.postal, obj.postal) and
+					self.optionalFieldIsGood(self.home, obj.home) and
+					self.optionalFieldIsGood(self.cell, obj.cell) and
+					self.optionalFieldIsGood(self.email, obj.email) and
+					self.requiredFieldIsGood(self.dob, obj.dob)):
 				return True
+			else:
+				return False
+		else:
+			return False
+
+	def optionalFieldIsGood(self, mine, theirs):
+		if (theirs is None or
+				theirs == "" or
+				theirs == mine):
+			return True
+		else:
+			return False
+
+	def requiredFieldIsGood(self, mine, theirs):
+		if (theirs is not None and
+				mine == theirs):
+			return True
 		else:
 			return False
 

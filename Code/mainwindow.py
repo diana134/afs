@@ -11,14 +11,18 @@ from participant import Participant
 app = QApplication(sys.argv)
 
 class MainWindow(QWidget):
-	def __init__(self):
+	def __init__(self, testing=False, testConn=None):
 		# Initialize object using ui_mainwindow
 		super(MainWindow, self).__init__()
 		self.window = QMainWindow()
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self.window)
 		self.connectSlots()
-		self.conn = self.initDatabase()
+		self.testing = testing
+		if testConn is not None:
+			self.conn = testConn
+		else:
+			self.conn = self.initDatabase()		
 
 	def initDatabase(self):
 		conn = sqlite3.connect('../Database/AFS')
@@ -40,23 +44,27 @@ class MainWindow(QWidget):
 		cell = self.ui.cellPhoneLineEdit.text()
 		email = self.ui.emailLineEdit.text()
 		dob = self.ui.dateOfBirthDateEdit.date().toString(1)
-		print address
 		# Error checking
 		# TODO: set focus to incorrect field
 		if first is None or first == "":
-			QMessageBox.warning(self, 'Missing Field', 'Participant must have a First Name', QMessageBox.Ok)
+			if not self.testing:
+				QMessageBox.warning(self, 'Missing Field', 'Participant must have a First Name', QMessageBox.Ok)
 		elif last is None or last == "":
-			QMessageBox.warning(self, 'Missing Field', 'Participant must have a Last Name', QMessageBox.Ok)
-		elif dob is None or dob == QDate(1900, 1, 1):
-			QMessageBox.warning(self, 'Missing Field', 'Participant must have a Date of Birth', QMessageBox.Ok)
+			if not self.testing:
+				QMessageBox.warning(self, 'Missing Field', 'Participant must have a Last Name', QMessageBox.Ok)
+		elif dob is None or dob == "1900-01-01":
+			if not self.testing:
+				QMessageBox.warning(self, 'Missing Field', 'Participant must have a Date of Birth', QMessageBox.Ok)
 		else:
 			p = Participant(first, last, address, city, postal, home, cell, email, dob)
 			try:
-				p.addToDB(self.conn)# If we get here, we had success
-				QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
+				p.addToDB(self.conn)
+				if not self.testing:
+					QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
 			except Exception, e:
 				print traceback.format_exc()
-				QMessageBox.critical(self, 'Add Participant', 'Failed to add new participant\n{0}'.format(e), QMessageBox.Ok)
+				if not self.testing:
+					QMessageBox.critical(self, 'Add Participant', 'Failed to add new participant\n{0}'.format(e), QMessageBox.Ok)
 
 	##########
 
