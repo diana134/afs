@@ -28,21 +28,25 @@ class ParticipantTests(unittest.TestCase):
         self.p = Participant('Foo', 'Bar', '123 Anywhere St.', 'Sometown', '1Q2W3E', 1234567890, 1234567890, 'foobar@testmail.com', '1900-01-01')
 
     def testIsEqualToSame(self):
+        """test that two identical Participants are the same"""
         pp = Participant('Foo', 'Bar', '123 Anywhere St.', 'Sometown', '1Q2W3E', 1234567890, 1234567890, 'foobar@testmail.com', '1900-01-01')
         isMatch = self.p.isEqualTo(pp)
         self.assertTrue(isMatch)
 
     def testIsEqualToNone(self):
+        """test that None in optional fields still matches"""
         pp = Participant('Foo', 'Bar', None, None, None, None, None, None, '1900-01-01')
         isMatch = self.p.isEqualTo(pp)
         self.assertTrue(isMatch)
 
     def testIsEqualToBlank(self):
+        """test that blanks in optional fields still matches"""
         pp = Participant('Foo', 'Bar', '', '', '', '', '', '', '1900-01-01')
         isMatch = self.p.isEqualTo(pp)
         self.assertTrue(isMatch)
 
     def testIsEqualToMissingFields(self):
+        """test that missing required fields causes Participant not to match"""
         pp = Participant('', '', '', '', '', '', '', '', '')
         isMatch = self.p.isEqualTo(pp)
         self.assertFalse(isMatch)
@@ -51,11 +55,12 @@ class ParticipantTests(unittest.TestCase):
         self.assertFalse(isMatch)
 
 class ParticipantDatabaseTests(unittest.TestCase):
-
+    """test database related functions in Participant"""
     def setUp(self):
         self.conn = sqlite3.connect('../../Database/AFS')
 
     def testAddToDB(self):
+        """test that a correctly formatted Participant can be added to the database properly"""
         p = Participant('Foo', 'Bar', '123 Anywhere St.', 'Sometown', '1Q2W3E', '1234567890', '1234567890', 'foobar@testmail.com', '1900-01-01')
         p.addToDB(self.conn)
         self.conn.commit()
@@ -105,6 +110,7 @@ class ParticipantGUITests(unittest.TestCase):
         # del self.app
 
     def testAddNewParticipantCorrect(self):
+        """tests adding a correctly formatted new Participant from the GUI"""
         # Clear and then type test data into the participant form
         self.form.ui.firstNameLineEdit.clear()
         QTest.keyClicks(self.form.ui.firstNameLineEdit, "Foo")
@@ -146,33 +152,33 @@ class ParticipantGUITests(unittest.TestCase):
         self.assertTrue(isMatch)
 
     def testAddNewParticipantIncorrect(self):
+        """tests that trying to add a Participant missing a required field fails"""
       # Clear and then type test data into the participant form
-        # self.form.ui.firstNameLineEdit.clear()
-        # QTest.keyClicks(self.form.ui.firstNameLineEdit, "Foo")
-        # self.form.ui.lastNameLineEdit.clear()
-        # QTest.keyClicks(self.form.ui.lastNameLineEdit, "Bar")
-        # self.form.ui.addressLineEdit.clear()
-        # QTest.keyClicks(self.form.ui.addressLineEdit, "123 Anywhere St.")
-        # self.form.ui.cityLineEdit.clear()
-        # QTest.keyClicks(self.form.ui.cityLineEdit, "Sometown")
-        # self.form.ui.postalCodeLineEdit.clear()
-        # QTest.keyClicks(self.form.ui.postalCodeLineEdit, "1Q2W3E")
-        # self.form.ui.homePhoneLineEdit.clear()
-        # QTest.keyClicks(self.form.ui.homePhoneLineEdit, "1234567890")
-        # self.form.ui.cellPhoneLineEdit.clear()
-        # QTest.keyClicks(self.form.ui.cellPhoneLineEdit, "1234567890")
-        # self.form.ui.emailLineEdit.clear()
-        # QTest.keyClicks(self.form.ui.emailLineEdit, "foobar@testmail.com")
+        self.form.ui.firstNameLineEdit.clear()
+        QTest.keyClicks(self.form.ui.firstNameLineEdit, "Foo")
+        self.form.ui.lastNameLineEdit.clear()
+        QTest.keyClicks(self.form.ui.lastNameLineEdit, "Bar")
+        self.form.ui.addressLineEdit.clear()
+        QTest.keyClicks(self.form.ui.addressLineEdit, "123 Anywhere St.")
+        self.form.ui.cityLineEdit.clear()
+        QTest.keyClicks(self.form.ui.cityLineEdit, "Sometown")
+        self.form.ui.postalCodeLineEdit.clear()
+        QTest.keyClicks(self.form.ui.postalCodeLineEdit, "1Q2W3E")
+        self.form.ui.homePhoneLineEdit.clear()
+        QTest.keyClicks(self.form.ui.homePhoneLineEdit, "1234567890")
+        self.form.ui.cellPhoneLineEdit.clear()
+        QTest.keyClicks(self.form.ui.cellPhoneLineEdit, "1234567890")
+        self.form.ui.emailLineEdit.clear()
+        QTest.keyClicks(self.form.ui.emailLineEdit, "foobar@testmail.com")
         # Purposely leave out dob
 
         # Push Add Participant button with the left mouse button
-        # QTest.mouseClick(self.form.ui.addParticipantBtn, Qt.LeftButton)
-        # # Query db
-        # cursor = self.conn.execute("SELECT first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth FROM participants WHERE first_name='Foo' AND last_name='Bar'")
-        # # Check that nothing was inserted
-        # row = cursor.fetchone()
-        # self.assertIsNone(row)
-        pass
+        QTest.mouseClick(self.form.ui.addParticipantBtn, Qt.LeftButton)
+        # Query db
+        cursor = self.conn.execute("SELECT first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth FROM participants WHERE first_name='Foo' AND last_name='Bar'")
+        # Check that nothing was inserted
+        row = cursor.fetchone()
+        self.assertIsNone(row)
         
 
 if __name__ == '__main__':

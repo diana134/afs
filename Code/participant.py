@@ -1,5 +1,5 @@
 class Participant:
-	"""Holds participant data (name, address, contact info, etc)"""
+	"""Holds participant data (name, address, contact info, etc) as strings"""
 	def __init__(self, first=None, last=None, address=None, town=None, postal=None, home=None, cell=None, email=None, dob=None):
 		self.first = str(first) if first is not None else None
 		self.last = str(last) if last is not None else None
@@ -12,6 +12,7 @@ class Participant:
 		self.dob = str(dob) if dob is not None else None
 
 	def isEqualTo(self, obj):
+		"""check if obj is equal to this Participant"""
 		if isinstance(obj, Participant):
 			if (self.requiredFieldIsGood(self.first, obj.first) and
 					self.requiredFieldIsGood(self.last, obj.last) and
@@ -29,6 +30,7 @@ class Participant:
 			return False
 
 	def optionalFieldIsGood(self, mine, theirs):
+		"""check if optional field theirs matches with mine"""
 		if (theirs is None or
 				theirs == "" or
 				theirs == mine):
@@ -37,6 +39,7 @@ class Participant:
 			return False
 
 	def requiredFieldIsGood(self, mine, theirs):
+		"""check if required field theirs matches with mine"""
 		if (theirs is not None and
 				mine == theirs):
 			return True
@@ -44,6 +47,7 @@ class Participant:
 			return False
 
 	def addToDB(self, conn):
+		"""add this Participant to the database using connection conn"""
 		conn.execute("INSERT INTO participants (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", (self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob));
 		conn.commit()
 		return True

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Wed Jul  2 20:09:41 2014
+# Created: Fri Jul  4 16:29:05 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -305,7 +305,7 @@ class Ui_MainWindow(object):
         self.emailLabel.setText(QtGui.QApplication.translate("MainWindow", "Email", None, QtGui.QApplication.UnicodeUTF8))
         self.dateOfBirthLabel.setText(QtGui.QApplication.translate("MainWindow", "Date of Birth", None, QtGui.QApplication.UnicodeUTF8))
         self.dateOfBirthDateEdit.setDisplayFormat(QtGui.QApplication.translate("MainWindow", "yyyy-MM-dd", None, QtGui.QApplication.UnicodeUTF8))
-        self.addParticipantBtn.setText(QtGui.QApplication.translate("MainWindow", "Add Participant", None, QtGui.QApplication.UnicodeUTF8))
+        self.addParticipantBtn.setText(QtGui.QApplication.translate("MainWindow", "Add &Participant", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox_3.setTitle(QtGui.QApplication.translate("MainWindow", "Selection Information", None, QtGui.QApplication.UnicodeUTF8))
         self.label_17.setText(QtGui.QApplication.translate("MainWindow", "Discipline", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.setItemText(0, QtGui.QApplication.translate("MainWindow", "Piano", None, QtGui.QApplication.UnicodeUTF8))

@@ -25,16 +25,19 @@ class MainWindow(QWidget):
 			self.conn = self.initDatabase()		
 
 	def initDatabase(self):
+		"""initializes the database, returns connection"""
 		conn = sqlite3.connect('../Database/AFS')
 		print "Opened database"
 		return conn
 
 	def connectSlots(self):
+		"""connect the various ui signals to their slots"""
 		self.ui.addParticipantBtn.clicked.connect(self.addParticipantBtn_clicked)
 
 	###### Slots ######
 
 	def addParticipantBtn_clicked(self):
+		"""handles the Add Participant button being clicked"""
 		first = self.ui.firstNameLineEdit.text()
 		last = self.ui.lastNameLineEdit.text()
 		address = self.ui.addressLineEdit.text()

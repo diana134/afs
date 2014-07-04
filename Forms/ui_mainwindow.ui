@@ -209,7 +209,7 @@
                <item row="9" column="0" colspan="2">
                 <widget class="QPushButton" name="addParticipantBtn">
                  <property name="text">
-                  <string>Add Participant</string>
+                  <string>Add &amp;Participant</string>
                  </property>
                 </widget>
                </item>
