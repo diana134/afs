@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddSoloParticipantDialog</class>
+ <widget class="QWidget" name="AddSoloParticipantDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>332</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add Solo Participant</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="1">
+    <widget class="QPushButton" name="addParticipantBtn">
+     <property name="text">
+      <string>Add &amp;Participant</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <layout class="QFormLayout" name="formLayout">
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="firstNameLabel">
+       <property name="text">
+        <string>First Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="firstNameLineEdit"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="lastNameLabel">
+       <property name="text">
+        <string>Last Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lastNameLineEdit"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="addressLabel">
+       <property name="text">
+        <string>Address</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="addressLineEdit"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="cityLabel">
+       <property name="text">
+        <string>City</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="cityLineEdit"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="postalCodeLabel">
+       <property name="text">
+        <string>Postal Code</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="postalCodeLineEdit">
+       <property name="inputMethodHints">
+        <set>Qt::ImhNone</set>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="homePhoneLabel">
+       <property name="text">
+        <string>Home Phone</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="homePhoneLineEdit">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="cellPhoneLabel">
+       <property name="text">
+        <string>Cell Phone</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="cellPhoneLineEdit">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="emailLabel">
+       <property name="text">
+        <string>Email</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="emailLineEdit">
+       <property name="inputMethodHints">
+        <set>Qt::ImhEmailCharactersOnly</set>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="dateOfBirthLabel">
+       <property name="text">
+        <string>Date of Birth</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QDateEdit" name="dateOfBirthDateEdit">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="date">
+        <date>
+         <year>1900</year>
+         <month>1</month>
+         <day>1</day>
+        </date>
+       </property>
+       <property name="minimumDate">
+        <date>
+         <year>1900</year>
+         <month>1</month>
+         <day>1</day>
+        </date>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy-MM-dd</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0">
+    <widget class="QPushButton" name="cancelBtn">
+     <property name="text">
+      <string>&amp;Cancel</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
