@@ -5,6 +5,7 @@ from PyQt4.QtGui import QApplication, QMainWindow, QWidget, QMessageBox
 from PyQt4.QtCore import QDate
 from ui_mainwindow import Ui_MainWindow
 from addSoloParticipantDialog import AddSoloParticipantDialog
+from addGroupParticipantDialog import AddGroupParticipantDialog
 import sqlite3
 import traceback
 from participant import Participant
@@ -34,6 +35,7 @@ class MainWindow(QWidget):
     def connectSlots(self):
         """connect the various ui signals to their slots"""
         self.ui.addSoloParticipantBtn.clicked.connect(self.addSoloParticipantBtn_clicked)
+        self.ui.addGroupParticipantBtn.clicked.connect(self.addGroupParticipantBtn_clicked)
 
     ###### Slots ######
 
@@ -46,12 +48,24 @@ class MainWindow(QWidget):
             p = dialog.getParticipant()
             try:
                 p.addToDB(self.conn)
-                if not self.testing:
-                    QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
+                QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
             except Exception, e:
                 print traceback.format_exc()
-                if not self.testing:
-                    QMessageBox.critical(self, 'Add Participant', 'Failed to add new participant\n{0}'.format(e), QMessageBox.Ok)
+                QMessageBox.critical(self, 'Add Participant', 'Failed to add new participant\n{0}'.format(e), QMessageBox.Ok)
+
+    def addGroupParticipantBtn_clicked(self):
+        dialog = AddGroupParticipantDialog(testing=self.testing)
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            gp = dialog.getGroupParticipant()
+            try:
+                gp.addToDB(self.conn)
+                QMessageBox.information(self, 'Add Group Participant', 'Successfully added new group participant', QMessageBox.Ok)
+            except Exception, e:
+                print traceback.format_exc()
+                QMessageBox.critical(self, 'Add Group Participant', 'Failed to add new group participant\n{0}'.format(e), QMessageBox.Ok)
 
     ##########
 

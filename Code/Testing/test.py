@@ -2,7 +2,7 @@ import sys
 sys.path.insert(0, '../')
 sys.path.insert(0, '../../Forms')
 from addSoloParticipantDialog import AddSoloParticipantDialog
-from participant import Participant
+from participant import Participant, GroupParticipant
 from mainwindow import MainWindow
 import unittest
 import sqlite3
@@ -27,11 +27,15 @@ class ParticipantTests(unittest.TestCase):
     """tests non-databse functions in Participant"""
     def setUp(self):
         self.p = Participant('Foo', 'Bar', '123 Anywhere St.', 'Sometown', '1Q2W3E', 1234567890, 1234567890, 'foobar@testmail.com', '1900-01-01')
+        self.gp = GroupParticipant('Foo', 1, 1, 1, 'Foo Bar')
 
     def testIsEqualToSame(self):
         """test that two identical Participants are the same"""
         pp = Participant('Foo', 'Bar', '123 Anywhere St.', 'Sometown', '1Q2W3E', 1234567890, 1234567890, 'foobar@testmail.com', '1900-01-01')
         isMatch = self.p.isEqualTo(pp)
+        self.assertTrue(isMatch)
+        gpp = GroupParticipant('Foo', 1, 1, 1, 'Foo Bar')
+        isMatch = self.gp.isEqualTo(gpp)
         self.assertTrue(isMatch)
 
     def testIsEqualToNone(self):
@@ -39,11 +43,17 @@ class ParticipantTests(unittest.TestCase):
         pp = Participant('Foo', 'Bar', None, None, None, None, None, None, '1900-01-01')
         isMatch = self.p.isEqualTo(pp)
         self.assertTrue(isMatch)
+        gpp = GroupParticipant('Foo', None, None, None, None)
+        isMatch = self.gp.isEqualTo(gpp)
+        self.assertTrue(isMatch)
 
     def testIsEqualToBlank(self):
-        """test that blanks in optional fields still matches"""
+        """test that blanks in optional fields still match"""
         pp = Participant('Foo', 'Bar', '', '', '', '', '', '', '1900-01-01')
         isMatch = self.p.isEqualTo(pp)
+        self.assertTrue(isMatch)
+        gpp = GroupParticipant('Foo', '', '', '', '')
+        isMatch = self.gp.isEqualTo(gpp)
         self.assertTrue(isMatch)
 
     def testIsEqualToMissingFields(self):
@@ -53,6 +63,12 @@ class ParticipantTests(unittest.TestCase):
         self.assertFalse(isMatch)
         pp = Participant(None, None, None, None, None, None, None, None, None)
         isMatch = self.p.isEqualTo(pp)
+        self.assertFalse(isMatch)
+        gpp = GroupParticipant('', '', '', '', '')
+        isMatch = self.gp.isEqualTo(gpp)
+        self.assertFalse(isMatch)
+        gpp = GroupParticipant(None, None, None, None, None)
+        isMatch = self.gp.isEqualTo(gpp)
         self.assertFalse(isMatch)
 
 class ParticipantDatabaseTests(unittest.TestCase):
@@ -85,6 +101,35 @@ class ParticipantDatabaseTests(unittest.TestCase):
 
     def tearDown(self):
         self.conn.execute("DELETE FROM participants WHERE first_name='Foo' AND last_name='Bar'")
+        self.conn.commit()
+        self.conn.close()
+
+class GroupParticipantDatabaseTests(unittest.TestCase):
+    """test database related functions in GroupParticipant"""
+    def setUp(self):
+        self.conn = sqlite3.connect('../../Database/AFS')
+
+    def testAddToDB(self):
+        """test that a correctly formatted GroupParticipant can be added to the database properly"""
+        p = GroupParticipant('Foo', '2', '2', '8', 'Foo Bar, Foo Bar2')
+        p.addToDB(self.conn)
+        self.conn.commit()
+        #query db
+        cursor = self.conn.execute("SELECT group_name, group_size, school_grade, average_age, participants FROM groupparticipants WHERE group_name='Foo'")
+        #check info is same
+        row = cursor.fetchone()
+        self.assertIsNotNone(row)
+        groupName = row[0]
+        groupSize = row[1]
+        schoolGrade = row[2]
+        averageAge = row[3]
+        participants = row[4]
+        pp = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants)
+        isMatch = p.isEqualTo(pp)
+        self.assertTrue(isMatch)
+
+    def tearDown(self):
+        self.conn.execute("DELETE FROM groupparticipants WHERE group_name='Foo'")
         self.conn.commit()
         self.conn.close()
 

@@ -21,6 +21,7 @@ class AddSoloParticipantDialog(QDialog):
     def connectSlots(self):
         """connect the various ui signals to their slots"""
         self.ui.addParticipantBtn.clicked.connect(self.addParticipantBtn_clicked)
+        self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
 
     def getParticipant(self):
         """returns the Participant object created from user data"""
@@ -42,14 +43,14 @@ class AddSoloParticipantDialog(QDialog):
         # Error checking
         # TODO: set focus to incorrect field
         if first is None or first == "":
-            if not self.testing:
-                QMessageBox.warning(self, 'Missing Field', 'Participant must have a First Name', QMessageBox.Ok)
+            QMessageBox.warning(self, 'Missing Field', 'Participant must have a First Name', QMessageBox.Ok)
         elif last is None or last == "":
-            if not self.testing:
-                QMessageBox.warning(self, 'Missing Field', 'Participant must have a Last Name', QMessageBox.Ok)
+            QMessageBox.warning(self, 'Missing Field', 'Participant must have a Last Name', QMessageBox.Ok)
         elif dob is None or dob == "1900-01-01":
-            if not self.testing:
-                QMessageBox.warning(self, 'Missing Field', 'Participant must have a Date of Birth', QMessageBox.Ok)
+            QMessageBox.warning(self, 'Missing Field', 'Participant must have a Date of Birth', QMessageBox.Ok)
         else:
             self.p = Participant(first, last, address, city, postal, home, cell, email, dob)
             self.accept()
+
+    def cancelBtn_clicked(self):
+        self.reject()
