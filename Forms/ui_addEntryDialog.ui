@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddEntryDialog</class>
+ <widget class="QDialog" name="AddEntryDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>546</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add Entry</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="2">
+    <widget class="QPushButton" name="addEntryBtn">
+     <property name="text">
+      <string>A&amp;dd Entry</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="cancelBtn">
+     <property name="text">
+      <string>&amp;Cancel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="3">
+    <layout class="QFormLayout" name="formLayout_2">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinAndMaxSize</enum>
+     </property>
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <property name="rowWrapPolicy">
+      <enum>QFormLayout::DontWrapRows</enum>
+     </property>
+     <item row="1" column="0">
+      <widget class="QLabel" name="participantLabel">
+       <property name="text">
+        <string>Participant</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="participantLineEdit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="chooseParticipantBtn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>TODO</string>
+         </property>
+         <property name="text">
+          <string>Choose...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="createNewSoloParticipantBtn">
+         <property name="text">
+          <string>Create New &amp;Solo...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="createNewGroupParticipantBtn">
+         <property name="text">
+          <string>Create New &amp;Group...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="teacherLabel">
+       <property name="text">
+        <string>Teacher</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="teacherLineEdit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="chooseTeacherBtn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Choose...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="createNewTeacherBtn">
+         <property name="text">
+          <string>Create New...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="disciplineLabel">
+       <property name="text">
+        <string>Discipline</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QComboBox" name="disciplineComboBox">
+       <item>
+        <property name="text">
+         <string>Dance</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Piano</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Choral</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Vocal</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Instrumental</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Band</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Speech</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="participantLevelGradeLabel">
+       <property name="text">
+        <string>Level/Years of Instruction</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="levelLineEdit"/>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="classNumberLabel">
+       <property name="text">
+        <string>Class Number</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="classNumberLineEdit"/>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="classNameLabel">
+       <property name="text">
+        <string>Class Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="classNameLineEdit"/>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="styleLabel">
+       <property name="text">
+        <string>Style</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="styleLineEdit"/>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="instrumentLabel">
+       <property name="text">
+        <string>Instrument</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLineEdit" name="instrumentLineEdit"/>
+     </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="titleLabel">
+       <property name="text">
+        <string>Title</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QLineEdit" name="titleLineEdit"/>
+     </item>
+     <item row="12" column="0">
+      <widget class="QLabel" name="composerLabel">
+       <property name="text">
+        <string>Composer</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="1">
+      <widget class="QLineEdit" name="composerLineEdit"/>
+     </item>
+     <item row="13" column="0">
+      <widget class="QLabel" name="arrangerLabel">
+       <property name="text">
+        <string>Arranger</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="1">
+      <widget class="QLineEdit" name="arrangerLineEdit"/>
+     </item>
+     <item row="14" column="0">
+      <widget class="QLabel" name="artistLabel">
+       <property name="text">
+        <string>Artist</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="1">
+      <widget class="QLineEdit" name="artistLineEdit"/>
+     </item>
+     <item row="15" column="0">
+      <widget class="QLabel" name="authorLabel">
+       <property name="text">
+        <string>Author</string>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="1">
+      <widget class="QLineEdit" name="authorLineEdit"/>
+     </item>
+     <item row="16" column="0">
+      <widget class="QLabel" name="opusLabel">
+       <property name="text">
+        <string>Opus</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="1">
+      <widget class="QLineEdit" name="opusLineEdit"/>
+     </item>
+     <item row="17" column="0">
+      <widget class="QLabel" name="noLabel">
+       <property name="text">
+        <string>No.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="1">
+      <widget class="QLineEdit" name="noLineEdit"/>
+     </item>
+     <item row="18" column="0">
+      <widget class="QLabel" name="movementLabel">
+       <property name="text">
+        <string>Movement</string>
+       </property>
+      </widget>
+     </item>
+     <item row="18" column="1">
+      <widget class="QLineEdit" name="movementLineEdit"/>
+     </item>
+     <item row="19" column="0">
+      <widget class="QLabel" name="performanceTimeLabel">
+       <property name="text">
+        <string>Performance Time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="19" column="1">
+      <widget class="QLineEdit" name="performanceTimeLineEdit"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

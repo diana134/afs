@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addSoloParticipantDialog.ui'
 #
-# Created: Mon Aug 11 16:23:55 2014
+# Created: Fri Aug 15 01:37:03 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -18,12 +18,17 @@ class Ui_AddSoloParticipantDialog(object):
     def setupUi(self, AddSoloParticipantDialog):
         AddSoloParticipantDialog.setObjectName(_fromUtf8("AddSoloParticipantDialog"))
         AddSoloParticipantDialog.setWindowModality(QtCore.Qt.ApplicationModal)
-        AddSoloParticipantDialog.resize(400, 332)
+        AddSoloParticipantDialog.resize(400, 326)
         self.gridLayout = QtGui.QGridLayout(AddSoloParticipantDialog)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
+        self.cancelBtn = QtGui.QPushButton(AddSoloParticipantDialog)
+        self.cancelBtn.setObjectName(_fromUtf8("cancelBtn"))
+        self.gridLayout.addWidget(self.cancelBtn, 2, 1, 1, 1)
         self.addParticipantBtn = QtGui.QPushButton(AddSoloParticipantDialog)
         self.addParticipantBtn.setObjectName(_fromUtf8("addParticipantBtn"))
-        self.gridLayout.addWidget(self.addParticipantBtn, 2, 1, 1, 1)
+        self.gridLayout.addWidget(self.addParticipantBtn, 2, 2, 1, 1)
+        spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem, 2, 0, 1, 1)
         self.formLayout = QtGui.QFormLayout()
         self.formLayout.setFieldGrowthPolicy(QtGui.QFormLayout.AllNonFixedFieldsGrow)
         self.formLayout.setObjectName(_fromUtf8("formLayout"))
@@ -88,17 +93,15 @@ class Ui_AddSoloParticipantDialog(object):
         self.dateOfBirthDateEdit.setMinimumDate(QtCore.QDate(1900, 1, 1))
         self.dateOfBirthDateEdit.setObjectName(_fromUtf8("dateOfBirthDateEdit"))
         self.formLayout.setWidget(8, QtGui.QFormLayout.FieldRole, self.dateOfBirthDateEdit)
-        self.gridLayout.addLayout(self.formLayout, 0, 0, 1, 2)
-        self.cancelBtn = QtGui.QPushButton(AddSoloParticipantDialog)
-        self.cancelBtn.setObjectName(_fromUtf8("cancelBtn"))
-        self.gridLayout.addWidget(self.cancelBtn, 2, 0, 1, 1)
+        self.gridLayout.addLayout(self.formLayout, 0, 0, 1, 3)
 
         self.retranslateUi(AddSoloParticipantDialog)
         QtCore.QMetaObject.connectSlotsByName(AddSoloParticipantDialog)
 
     def retranslateUi(self, AddSoloParticipantDialog):
         AddSoloParticipantDialog.setWindowTitle(QtGui.QApplication.translate("AddSoloParticipantDialog", "Add Solo Participant", None, QtGui.QApplication.UnicodeUTF8))
-        self.addParticipantBtn.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "Add &Participant", None, QtGui.QApplication.UnicodeUTF8))
+        self.cancelBtn.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "&Cancel", None, QtGui.QApplication.UnicodeUTF8))
+        self.addParticipantBtn.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "A&dd Participant", None, QtGui.QApplication.UnicodeUTF8))
         self.firstNameLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "First Name", None, QtGui.QApplication.UnicodeUTF8))
         self.lastNameLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "Last Name", None, QtGui.QApplication.UnicodeUTF8))
         self.addressLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "Address", None, QtGui.QApplication.UnicodeUTF8))
@@ -109,5 +112,4 @@ class Ui_AddSoloParticipantDialog(object):
         self.emailLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "Email", None, QtGui.QApplication.UnicodeUTF8))
         self.dateOfBirthLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "Date of Birth", None, QtGui.QApplication.UnicodeUTF8))
         self.dateOfBirthDateEdit.setDisplayFormat(QtGui.QApplication.translate("AddSoloParticipantDialog", "yyyy-MM-dd", None, QtGui.QApplication.UnicodeUTF8))
-        self.cancelBtn.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "&Cancel", None, QtGui.QApplication.UnicodeUTF8))
 
