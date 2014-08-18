@@ -1,3 +1,5 @@
+from utilities import requiredFieldIsGood, optionalFieldIsGood
+
 class Participant:
     """Holds participant data (name, address, contact info, etc) as strings"""
     def __init__(self, first=None, last=None, address=None, town=None, postal=None, home=None, cell=None, email=None, dob=None):
@@ -64,22 +66,3 @@ class GroupParticipant():
         conn.execute("INSERT INTO groupparticipants (group_name, group_size, school_grade, average_age, participants) VALUES (?, ?, ?, ?, ?)", (self.groupName, self.groupSize, self.schoolGrade, self.averageAge, self.participants));
         conn.commit()
         return True
-
-### Used by both solo and group participants
-
-def optionalFieldIsGood(mine, theirs):
-        """check if optional field theirs matches with mine"""
-        if (theirs is None or
-                theirs == "" or
-                theirs == mine):
-            return True
-        else:
-            return False
-
-def requiredFieldIsGood(mine, theirs):
-    """check if required field theirs matches with mine"""
-    if (theirs is not None and
-            mine == theirs):
-        return True
-    else:
-        return False
