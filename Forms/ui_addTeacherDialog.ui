@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>addTeacherDialog</class>
- <widget class="QDialog" name="addTeacherDialog">
+ <class>AddTeacherDialog</class>
+ <widget class="QDialog" name="AddTeacherDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -22,7 +22,7 @@
     </widget>
    </item>
    <item row="2" column="2">
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="addTeacherBtn">
      <property name="text">
       <string>A&amp;dd Teacher</string>
      </property>

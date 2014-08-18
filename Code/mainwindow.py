@@ -6,6 +6,7 @@ from PyQt4.QtCore import QDate
 from ui_mainwindow import Ui_MainWindow
 from addSoloParticipantDialog import AddSoloParticipantDialog
 from addGroupParticipantDialog import AddGroupParticipantDialog
+from addTeacherDialog import AddTeacherDialog
 from addEntryDialog import AddEntryDialog
 import sqlite3
 import traceback
@@ -37,6 +38,7 @@ class MainWindow(QWidget):
         """connect the various ui signals to their slots"""
         self.ui.addSoloParticipantBtn.clicked.connect(self.addSoloParticipantBtn_clicked)
         self.ui.addGroupParticipantBtn.clicked.connect(self.addGroupParticipantBtn_clicked)
+        self.ui.addTeacherBtn.clicked.connect(self.addTeacherBtn_clicked)
         self.ui.addEntryBtn.clicked.connect(self.addEntryBtn_clicked)
 
     ###### Slots ######
@@ -68,6 +70,20 @@ class MainWindow(QWidget):
             except Exception, e:
                 print traceback.format_exc()
                 QMessageBox.critical(self, 'Add Group Participant', 'Failed to add new group participant\n{0}'.format(e), QMessageBox.Ok)
+
+    def addTeacherBtn_clicked(self):
+        dialog = AddTeacherDialog(testing=self.testing)
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            t = dialog.getTeacher()
+            try:
+                t.addToDB(self.conn)
+                QMessageBox.information(self, 'Add Teacher', 'Successfully added new teacher', QMessageBox.Ok)
+            except Exception, e:
+                print traceback.format_exc()
+                QMessageBox.critical(self, 'Add Teacher', 'Failed to add new teacher\n{0}'.format(e), QMessageBox.Ok)
 
     def addEntryBtn_clicked(self):
         dialog = AddEntryDialog(testing=self.testing)
