@@ -35,6 +35,7 @@ class AddEntryDialog(QDialog):
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
         self.ui.createNewSoloParticipantBtn.clicked.connect(self.createNewSoloParticipantBtn_clicked)
         self.ui.createNewGroupParticipantBtn.clicked.connect(self.createNewGroupParticipantBtn_clicked)
+        self.ui.createNewTeacherBtn.clicked.connect(self.createNewTeacherBtn_clicked)
         self.ui.disciplineComboBox.currentIndexChanged['QString'].connect(self.disciplineComboBox_changed)
 
     ### Slots ###
@@ -79,6 +80,23 @@ class AddEntryDialog(QDialog):
             except Exception, e:
                 print traceback.format_exc()
                 QMessageBox.critical(self, 'Add Group Participant', 'Failed to add new gorup participant\n{0}'.format(e), QMessageBox.Ok)
+
+    def createNewTeacherBtn_clicked(self):
+        """opens Add Teacher Dialog"""
+        dialog = AddTeacherDialog(testing=self.testing)
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            t = dialog.getTeacher()
+            try:
+                t.addToDB(self.conn)
+                self.ui.teacherLineEdit.setText(t.first + ' ' + t.last)
+                # TODO get PK from db to attach new teacher to this entry
+                QMessageBox.information(self, 'Add Teacher', 'Successfully added new teacher', QMessageBox.Ok)
+            except Exception, e:
+                print traceback.format_exc()
+                QMessageBox.critical(self, 'Add Teacher', 'Failed to add new teacher\n{0}'.format(e), QMessageBox.Ok)
 
     def disciplineComboBox_changed(self, text):
         """changes which fields are enabled based on the selected discipline"""
