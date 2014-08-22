@@ -2,10 +2,14 @@ import sys
 sys.path.insert(0, '../Forms/')
 from PyQt4 import QtGui
 from PyQt4.QtGui import QDialog, QMessageBox
+import traceback
 from ui_addEntryDialog import Ui_AddEntryDialog
+from addSoloParticipantDialog import AddSoloParticipantDialog
+from addGroupParticipantDialog import AddGroupParticipantDialog
+from addTeacherDialog import AddTeacherDialog
 
 class AddEntryDialog(QDialog):
-    def __init__(self, parent=None, testing=False):
+    def __init__(self, parent=None, testing=False, conn=None):
         # Initialize object using ui_addEntry
         super(AddEntryDialog, self).__init__(parent)
         self.ui = Ui_AddEntryDialog()
@@ -13,6 +17,7 @@ class AddEntryDialog(QDialog):
         self.dance() # Slightly cheater way to start the ui properly
         # Initialize class variables
         self.testing = testing
+        self.conn = conn
         self.disciplines = {'Dance' : self.dance,   # For Pythonic switch-case
                                 'Piano' : self.piano,
                                 'Choral' : self.choral,
@@ -28,6 +33,8 @@ class AddEntryDialog(QDialog):
         """connect the various ui signals to their slots"""
         self.ui.addEntryBtn.clicked.connect(self.addEntryBtn_clicked)
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
+        self.ui.createNewSoloParticipantBtn.clicked.connect(self.createNewSoloParticipantBtn_clicked)
+        self.ui.createNewGroupParticipantBtn.clicked.connect(self.createNewGroupParticipantBtn_clicked)
         self.ui.disciplineComboBox.currentIndexChanged['QString'].connect(self.disciplineComboBox_changed)
 
     ### Slots ###
@@ -38,6 +45,40 @@ class AddEntryDialog(QDialog):
 
     def cancelBtn_clicked(self):
         self.reject()
+
+    def createNewSoloParticipantBtn_clicked(self):
+        """opens Add Solo Participant Dialog"""
+        dialog = AddSoloParticipantDialog(testing=self.testing)
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            p = dialog.getParticipant()
+            try:
+                p.addToDB(self.conn)
+                self.ui.participantLineEdit.setText(p.first + ' ' + p.last)
+                # TODO get PK from db to attach new participant to this entry
+                QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
+            except Exception, e:
+                print traceback.format_exc()
+                QMessageBox.critical(self, 'Add Participant', 'Failed to add new participant\n{0}'.format(e), QMessageBox.Ok)
+
+    def createNewGroupParticipantBtn_clicked(self):
+        """opens Add Group Participant Dialog"""
+        dialog = AddGroupParticipantDialog(testing=self.testing)
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            gp = dialog.getGroupParticipant()
+            try:
+                gp.addToDB(self.conn)
+                self.ui.participantLineEdit.setText(gp.groupName)
+                # TODO get PK from db to attach new participant to this entry
+                QMessageBox.information(self, 'Add Group Participant', 'Successfully added new group participant', QMessageBox.Ok)
+            except Exception, e:
+                print traceback.format_exc()
+                QMessageBox.critical(self, 'Add Group Participant', 'Failed to add new gorup participant\n{0}'.format(e), QMessageBox.Ok)
 
     def disciplineComboBox_changed(self, text):
         """changes which fields are enabled based on the selected discipline"""

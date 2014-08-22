@@ -2,8 +2,8 @@ import sys
 sys.path.insert(0, '../Forms/')
 from PyQt4 import QtGui
 from PyQt4.QtGui import QDialog, QMessageBox
-from ui_addSoloParticipantDialog import Ui_AddSoloParticipantDialog
 import traceback
+from ui_addSoloParticipantDialog import Ui_AddSoloParticipantDialog
 from participant import Participant
 
 class AddSoloParticipantDialog(QDialog):

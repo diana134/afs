@@ -10,7 +10,6 @@ from addTeacherDialog import AddTeacherDialog
 from addEntryDialog import AddEntryDialog
 import sqlite3
 import traceback
-from participant import Participant
 
 app = QApplication(sys.argv)
 
@@ -86,7 +85,7 @@ class MainWindow(QWidget):
                 QMessageBox.critical(self, 'Add Teacher', 'Failed to add new teacher\n{0}'.format(e), QMessageBox.Ok)
 
     def addEntryBtn_clicked(self):
-        dialog = AddEntryDialog(testing=self.testing)
+        dialog = AddEntryDialog(testing=self.testing, conn=self.conn)
         # For Modal dialog
         result = dialog.exec_()
 
