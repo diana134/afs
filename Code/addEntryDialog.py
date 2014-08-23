@@ -7,6 +7,7 @@ from ui_addEntryDialog import Ui_AddEntryDialog
 from addSoloParticipantDialog import AddSoloParticipantDialog
 from addGroupParticipantDialog import AddGroupParticipantDialog
 from addTeacherDialog import AddTeacherDialog
+from entry import Entry
 
 class AddEntryDialog(QDialog):
     def __init__(self, parent=None, testing=False, conn=None):
@@ -18,6 +19,7 @@ class AddEntryDialog(QDialog):
         # Initialize class variables
         self.testing = testing
         self.conn = conn
+        self.entry = None
         self.disciplines = {'Dance' : self.dance,   # For Pythonic switch-case
                                 'Piano' : self.piano,
                                 'Choral' : self.choral,
@@ -38,11 +40,49 @@ class AddEntryDialog(QDialog):
         self.ui.createNewTeacherBtn.clicked.connect(self.createNewTeacherBtn_clicked)
         self.ui.disciplineComboBox.currentIndexChanged['QString'].connect(self.disciplineComboBox_changed)
 
+    def getEntry(self):
+        return self.entry
+
     ### Slots ###
 
     def addEntryBtn_clicked(self):
         """handles the Add Entry button being clicked"""
-        pass
+        # TODO real IDs
+        participantID = 0
+        teacherID = 0
+        discipline = self.ui.disciplineComboBox.currentText()
+        level = self.ui.levelLineEdit.text()
+        classNumber = self.ui.classNumberLineEdit.text()
+        className = self.ui.classNameLineEdit.text()
+        style = self.ui.styleLineEdit.text()
+        instrument = self.ui.instrumentLineEdit.text()
+        title = self.ui.titleLineEdit.text()
+        composer = self.ui.composerLineEdit.text()
+        arranger = self.ui.arrangerLineEdit.text()
+        artist = self.ui.artistLineEdit.text()
+        author = self.ui.authorLineEdit.text()
+        opus = self.ui.opusLineEdit.text()
+        no = self.ui.noLineEdit.text()
+        movement = self.ui.movementLineEdit.text()
+        performanceTime = self.ui.performanceTimeLineEdit.text()
+
+        # Error checking
+        # TODO: set focus to incorrect field
+        if participantID is None or participantID == "":
+            QMessageBox.warning(self, 'Missing Field', 'Entry must have a Participant', QMessageBox.Ok)
+        elif teacherID is None or teacherID == "":
+            QMessageBox.warning(self, 'Missing Field', 'Entry must have a Teacher', QMessageBox.Ok)
+        elif discipline is None or discipline == "":
+            QMessageBox.warning(self, 'Missing Field', 'Entry must have a Discipline', QMessageBox.Ok)
+        elif classNumber is None or classNumber == "":
+            QMessageBox.warning(self, 'Missing Field', 'Entry must have a Class Number', QMessageBox.Ok)
+        elif className is None or className == "":
+            QMessageBox.warning(self, 'Missing Field', 'Entry must have a Class Name', QMessageBox.Ok)
+        elif title is None or title == "":
+            QMessageBox.warning(self, 'Missing Field', 'Entry must have a Title', QMessageBox.Ok)
+        else:
+            self.entry = Entry(participantID, teacherID, discipline, level, classNumber, className, title, performanceTime, style, composer, opus, no, movement, arranger, artist, instrument, author)
+            self.accept()
 
     def cancelBtn_clicked(self):
         self.reject()

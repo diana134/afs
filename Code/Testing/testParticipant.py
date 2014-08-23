@@ -62,6 +62,9 @@ class ParticipantDatabaseTests(unittest.TestCase):
     """test database related functions in Participant"""
     def setUp(self):
         self.conn = sqlite3.connect('../../Database/AFS')
+        # Start fresh
+        self.conn.execute("DELETE FROM participants WHERE first_name='Foo' AND last_name='Bar'")
+        self.conn.commit()
 
     def testAddToDB(self):
         """test that a correctly formatted Participant can be added to the database properly"""

@@ -41,6 +41,9 @@ class TeacherDatabaseTests(unittest.TestCase):
     """test database related functions in Teacher"""
     def setUp(self):
         self.conn = sqlite3.connect('../../Database/AFS')
+        # Start fresh
+        self.conn.execute("DELETE FROM teachers WHERE first_name='Foo' AND last_name='Bar'")
+        self.conn.commit()
 
     def testAddToDB(self):
         """test that a correctly formatted Teacher can be added to the database properly"""

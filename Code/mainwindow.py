@@ -93,10 +93,10 @@ class MainWindow(QWidget):
             entry = dialog.getEntry()
             try:
                 entry.addToDB(self.conn)
-                QMessageBox.information(self, 'Add Group Participant', 'Successfully added new group participant', QMessageBox.Ok)
+                QMessageBox.information(self, 'Add Group Participant', 'Successfully added new Entry', QMessageBox.Ok)
             except Exception, e:
                 print traceback.format_exc()
-                QMessageBox.critical(self, 'Add Group Participant', 'Failed to add new group participant\n{0}'.format(e), QMessageBox.Ok)
+                QMessageBox.critical(self, 'Add Group Participant', 'Failed to add new Entry\n{0}'.format(e), QMessageBox.Ok)
 
     ##########
 
