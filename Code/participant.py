@@ -1,6 +1,20 @@
 from utilities import requiredFieldIsGood, optionalFieldIsGood
+from abc import ABCMeta, abstractmethod
 
 class Participant:
+    """Super class to hopefully make organizing things easier later"""
+    __metaclass__ = ABCMeta
+    
+    @abstractmethod
+    def isEqualTo(self, obj):
+        pass
+
+    @abstractmethod
+    def addToDB(self, conn):
+        """check if obj is equal to this Participant"""
+        pass
+
+class SoloParticipant(Participant):
     """Holds participant data (name, address, contact info, etc) as strings"""
     def __init__(self, first=None, last=None, address=None, town=None, postal=None, home=None, cell=None, email=None, dob=None):
         # Deal with getting QStrings from UI
@@ -15,8 +29,8 @@ class Participant:
         self.dob = str(dob) if dob is not None else None
 
     def isEqualTo(self, obj):
-        """check if obj is equal to this Participant"""
-        if isinstance(obj, Participant):
+        """check if obj is equal to this SoloParticipant"""
+        if isinstance(obj, SoloParticipant):
             if (requiredFieldIsGood(self.first, obj.first) and
                     requiredFieldIsGood(self.last, obj.last) and
                     optionalFieldIsGood(self.address, obj.address) and
@@ -33,12 +47,12 @@ class Participant:
             return False
 
     def addToDB(self, conn):
-        """add this Participant to the database using connection conn"""
-        conn.execute("INSERT INTO participants (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", (self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob));
+        """add this SoloParticipant to the database using connection conn"""
+        conn.execute("INSERT INTO soloparticipants (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", (self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob));
         conn.commit()
         return True
 
-class GroupParticipant():
+class GroupParticipant(Participant):
     """Holds GroupParticipant data (name, size, age, etc) as strings"""
     def __init__(self, groupName=None, groupSize=None, schoolGrade=None, averageAge=None, participants=None):
         self.groupName = str(groupName) if groupName is not None else None

@@ -2,7 +2,7 @@ import sys
 sys.path.insert(0, '../')
 # sys.path.insert(0, '../../Forms')
 # from addSoloParticipantDialog import AddSoloParticipantDialog
-from participant import Participant, GroupParticipant
+from participant import SoloParticipant, GroupParticipant
 # from mainwindow import MainWindow
 import unittest
 import sqlite3
@@ -13,13 +13,13 @@ import sqlite3
 class ParticipantTests(unittest.TestCase):
     """tests non-databse functions in Participant"""
     def setUp(self):
-        self.p = Participant('Foo', 'Bar', '123 Anywhere St.', 'Sometown', '1Q2W3E', 1234567890, 1234567890, 'foobar@testmail.com', '1900-01-01')
+        self.sp = SoloParticipant('Foo', 'Bar', '123 Anywhere St.', 'Sometown', '1Q2W3E', 1234567890, 1234567890, 'foobar@testmail.com', '1900-01-01')
         self.gp = GroupParticipant('Foo', 1, 1, 1, 'Foo Bar')
 
     def testIsEqualToSame(self):
         """test that two identical Participants are the same"""
-        pp = Participant('Foo', 'Bar', '123 Anywhere St.', 'Sometown', '1Q2W3E', 1234567890, 1234567890, 'foobar@testmail.com', '1900-01-01')
-        isMatch = self.p.isEqualTo(pp)
+        spp = SoloParticipant('Foo', 'Bar', '123 Anywhere St.', 'Sometown', '1Q2W3E', 1234567890, 1234567890, 'foobar@testmail.com', '1900-01-01')
+        isMatch = self.sp.isEqualTo(spp)
         self.assertTrue(isMatch)
         gpp = GroupParticipant('Foo', 1, 1, 1, 'Foo Bar')
         isMatch = self.gp.isEqualTo(gpp)
@@ -27,8 +27,8 @@ class ParticipantTests(unittest.TestCase):
 
     def testIsEqualToNone(self):
         """test that None in optional fields still matches"""
-        pp = Participant('Foo', 'Bar', None, None, None, None, None, None, '1900-01-01')
-        isMatch = self.p.isEqualTo(pp)
+        spp = SoloParticipant('Foo', 'Bar', None, None, None, None, None, None, '1900-01-01')
+        isMatch = self.sp.isEqualTo(spp)
         self.assertTrue(isMatch)
         gpp = GroupParticipant('Foo', None, None, None, None)
         isMatch = self.gp.isEqualTo(gpp)
@@ -36,8 +36,8 @@ class ParticipantTests(unittest.TestCase):
 
     def testIsEqualToBlank(self):
         """test that blanks in optional fields still match"""
-        pp = Participant('Foo', 'Bar', '', '', '', '', '', '', '1900-01-01')
-        isMatch = self.p.isEqualTo(pp)
+        spp = SoloParticipant('Foo', 'Bar', '', '', '', '', '', '', '1900-01-01')
+        isMatch = self.sp.isEqualTo(spp)
         self.assertTrue(isMatch)
         gpp = GroupParticipant('Foo', '', '', '', '')
         isMatch = self.gp.isEqualTo(gpp)
@@ -45,11 +45,11 @@ class ParticipantTests(unittest.TestCase):
 
     def testIsEqualToMissingFields(self):
         """test that missing required fields causes Participant not to match"""
-        pp = Participant('', '', '', '', '', '', '', '', '')
-        isMatch = self.p.isEqualTo(pp)
+        spp = SoloParticipant('', '', '', '', '', '', '', '', '')
+        isMatch = self.sp.isEqualTo(spp)
         self.assertFalse(isMatch)
-        pp = Participant(None, None, None, None, None, None, None, None, None)
-        isMatch = self.p.isEqualTo(pp)
+        spp = SoloParticipant(None, None, None, None, None, None, None, None, None)
+        isMatch = self.sp.isEqualTo(spp)
         self.assertFalse(isMatch)
         gpp = GroupParticipant('', '', '', '', '')
         isMatch = self.gp.isEqualTo(gpp)
@@ -58,21 +58,21 @@ class ParticipantTests(unittest.TestCase):
         isMatch = self.gp.isEqualTo(gpp)
         self.assertFalse(isMatch)
 
-class ParticipantDatabaseTests(unittest.TestCase):
-    """test database related functions in Participant"""
+class SoloParticipantDatabaseTests(unittest.TestCase):
+    """test database related functions in SoloParticipant"""
     def setUp(self):
         self.conn = sqlite3.connect('../../Database/AFS')
         # Start fresh
-        self.conn.execute("DELETE FROM participants WHERE first_name='Foo' AND last_name='Bar'")
+        self.conn.execute("DELETE FROM soloparticipants WHERE first_name='Foo' AND last_name='Bar'")
         self.conn.commit()
 
     def testAddToDB(self):
         """test that a correctly formatted Participant can be added to the database properly"""
-        p = Participant('Foo', 'Bar', '123 Anywhere St.', 'Sometown', '1Q2W3E', '1234567890', '1234567890', 'foobar@testmail.com', '1900-01-01')
-        p.addToDB(self.conn)
+        sp = SoloParticipant('Foo', 'Bar', '123 Anywhere St.', 'Sometown', '1Q2W3E', '1234567890', '1234567890', 'foobar@testmail.com', '1900-01-01')
+        sp.addToDB(self.conn)
         self.conn.commit()
         #query db
-        cursor = self.conn.execute("SELECT first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth FROM participants WHERE first_name='Foo' AND last_name='Bar'")
+        cursor = self.conn.execute("SELECT first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth FROM soloparticipants WHERE first_name='Foo' AND last_name='Bar'")
         #check info is same
         row = cursor.fetchone()
         self.assertIsNotNone(row)
@@ -85,12 +85,12 @@ class ParticipantDatabaseTests(unittest.TestCase):
         cell = row[6]
         email = row[7]
         dob = row[8]
-        pp = Participant(first, last, address, town, postal, home, cell, email, dob)
-        isMatch = p.isEqualTo(pp)
+        spp = SoloParticipant(first, last, address, town, postal, home, cell, email, dob)
+        isMatch = spp.isEqualTo(sp)
         self.assertTrue(isMatch)
 
     def tearDown(self):
-        self.conn.execute("DELETE FROM participants WHERE first_name='Foo' AND last_name='Bar'")
+        self.conn.execute("DELETE FROM soloparticipants WHERE first_name='Foo' AND last_name='Bar'")
         self.conn.commit()
         self.conn.close()
 
@@ -114,8 +114,8 @@ class GroupParticipantDatabaseTests(unittest.TestCase):
         schoolGrade = row[2]
         averageAge = row[3]
         participants = row[4]
-        pp = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants)
-        isMatch = p.isEqualTo(pp)
+        sp = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants)
+        isMatch = p.isEqualTo(sp)
         self.assertTrue(isMatch)
 
     def tearDown(self):
