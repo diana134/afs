@@ -1,10 +1,10 @@
 import sys
 sys.path.insert(0, '../Forms/')
-from PyQt4 import QtGui
+# from PyQt4 import QtGui
 from PyQt4.QtGui import QDialog, QMessageBox
-import traceback
+# import traceback
 from ui_addSoloParticipantDialog import Ui_AddSoloParticipantDialog
-from participant import Participant
+from participant import SoloParticipant
 
 class AddSoloParticipantDialog(QDialog):
     def __init__(self, parent=None, testing=False):
@@ -31,15 +31,15 @@ class AddSoloParticipantDialog(QDialog):
 
     def addParticipantBtn_clicked(self):
         """handles the Add Participant button being clicked"""
-        first = self.ui.firstNameLineEdit.text()
-        last = self.ui.lastNameLineEdit.text()
-        address = self.ui.addressLineEdit.text()
-        city = self.ui.cityLineEdit.text()
-        postal = self.ui.postalCodeLineEdit.text()
-        home = self.ui.homePhoneLineEdit.text()
-        cell = self.ui.cellPhoneLineEdit.text()
-        email = self.ui.emailLineEdit.text()
-        dob = self.ui.dateOfBirthDateEdit.date().toString(1)
+        first = str(self.ui.firstNameLineEdit.text()).strip()
+        last = str(self.ui.lastNameLineEdit.text()).strip()
+        address = str(self.ui.addressLineEdit.text()).strip()
+        city = str(self.ui.cityLineEdit.text()).strip()
+        postal = str(self.ui.postalCodeLineEdit.text()).strip()
+        home = str(self.ui.homePhoneLineEdit.text()).strip()
+        cell = str(self.ui.cellPhoneLineEdit.text()).strip()
+        email = str(self.ui.emailLineEdit.text()).strip()
+        dob = str(self.ui.dateOfBirthDateEdit.date().toString(1)).strip()
         # Error checking
         # TODO: set focus to incorrect field
         if first is None or first == "":
@@ -49,8 +49,9 @@ class AddSoloParticipantDialog(QDialog):
         elif dob is None or dob == "1900-01-01":
             QMessageBox.warning(self, 'Missing Field', 'Participant must have a Date of Birth', QMessageBox.Ok)
         else:
-            self.p = Participant(first, last, address, city, postal, home, cell, email, dob)
+            self.p = SoloParticipant(first, last, address, city, postal, home, cell, email, dob)
             self.accept()
 
     def cancelBtn_clicked(self):
         self.reject()
+        

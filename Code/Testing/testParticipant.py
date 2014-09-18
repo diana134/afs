@@ -3,9 +3,11 @@ sys.path.insert(0, '../')
 # sys.path.insert(0, '../../Forms')
 # from addSoloParticipantDialog import AddSoloParticipantDialog
 from participant import SoloParticipant, GroupParticipant
+from databaseInteraction import DatabaseInteraction
 # from mainwindow import MainWindow
 import unittest
 import sqlite3
+from PyQt4.QtSql import QSqlQuery
 # from PyQt4.QtGui import QApplication
 # from PyQt4.QtTest import QTest
 # from PyQt4.QtCore import Qt, QDate, QPoint
@@ -61,38 +63,45 @@ class ParticipantTests(unittest.TestCase):
 class SoloParticipantDatabaseTests(unittest.TestCase):
     """test database related functions in SoloParticipant"""
     def setUp(self):
-        self.conn = sqlite3.connect('../../Database/AFS')
+        # self.conn = sqlite3.connect('../../Database/AFS')
+        self.db = DatabaseInteraction(test=True)
         # Start fresh
-        self.conn.execute("DELETE FROM soloparticipants WHERE first_name='Foo' AND last_name='Bar'")
-        self.conn.commit()
+        query = QSqlQuery(self.db.conn)
+        query.exec_("DELETE FROM soloparticipants WHERE first_name='Foo' AND last_name='Bar'")
+        self.db.conn.commit()
 
     def testAddToDB(self):
         """test that a correctly formatted Participant can be added to the database properly"""
         sp = SoloParticipant('Foo', 'Bar', '123 Anywhere St.', 'Sometown', '1Q2W3E', '1234567890', '1234567890', 'foobar@testmail.com', '1900-01-01')
-        sp.addToDB(self.conn)
-        self.conn.commit()
+        sp.addToDB(self.db)
+        # self.conn.commit()
         #query db
-        cursor = self.conn.execute("SELECT first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth FROM soloparticipants WHERE first_name='Foo' AND last_name='Bar'")
+        query = QSqlQuery(self.db.conn)
+        query.exec_("SELECT first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth FROM soloparticipants WHERE first_name='Foo' AND last_name='Bar'")
         #check info is same
-        row = cursor.fetchone()
-        self.assertIsNotNone(row)
-        first = row[0]
-        last = row[1]
-        address = row[2]
-        town = row[3]
-        postal = row[4]
-        home = row[5]
-        cell = row[6]
-        email = row[7]
-        dob = row[8]
+        self.assertTrue(query.next())
+        first = query.value(0).toString()
+        last = query.value(1).toString()
+        address = query.value(2).toString()
+        town = query.value(3).toString()
+        postal = query.value(4).toString()
+        home = query.value(5).toString()
+        cell = query.value(6).toString()
+        email = query.value(7).toString()
+        dob = query.value(8).toString()
         spp = SoloParticipant(first, last, address, town, postal, home, cell, email, dob)
+        print spp.first, spp.last, spp.address
         isMatch = spp.isEqualTo(sp)
         self.assertTrue(isMatch)
 
     def tearDown(self):
-        self.conn.execute("DELETE FROM soloparticipants WHERE first_name='Foo' AND last_name='Bar'")
-        self.conn.commit()
-        self.conn.close()
+        # self.conn.execute("DELETE FROM soloparticipants WHERE first_name='Foo' AND last_name='Bar'")
+        # self.conn.commit()
+        # self.conn.close()
+        query = QSqlQuery(self.db.conn)
+        query.exec_("DELETE FROM soloparticipants WHERE first_name='Foo' AND last_name='Bar'")
+        self.db.conn.commit()
+
 
 class GroupParticipantDatabaseTests(unittest.TestCase):
     """test database related functions in GroupParticipant"""

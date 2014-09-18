@@ -1,17 +1,20 @@
+"""Deals with Participants"""
+
 from utilities import requiredFieldIsGood, optionalFieldIsGood
 from abc import ABCMeta, abstractmethod
 
-class Participant:
+class Participant(object):
     """Super class to hopefully make organizing things easier later"""
     __metaclass__ = ABCMeta
     
     @abstractmethod
     def isEqualTo(self, obj):
+        """check if obj is equal to this Participant"""
         pass
 
     @abstractmethod
     def addToDB(self, conn):
-        """check if obj is equal to this Participant"""
+        """add this thing to the database"""
         pass
 
 class SoloParticipant(Participant):
@@ -46,11 +49,30 @@ class SoloParticipant(Participant):
         else:
             return False
 
-    def addToDB(self, conn):
-        """add this SoloParticipant to the database using connection conn"""
-        conn.execute("INSERT INTO soloparticipants (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", (self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob));
-        conn.commit()
-        return True
+    def addToDB(self, db):
+        """add this SoloParticipant to the database using DatabaseInteraction db, return the result (i.e. an error)"""
+        # conn.execute("INSERT INTO soloparticipants (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", (self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob));
+        # conn.commit()
+        # return True
+        
+        # result = conn.addToDB("INSERT INTO soloparticipants (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", (self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob));
+        # return result
+        
+        # valueDict = {'first_name': self.first,
+        #                 'last_name': self.last,
+        #                 'address': self.address,
+        #                 'town': self.town,
+        #                 'postal_code': self.postal,
+        #                 'home_phone': self.home,
+        #                 'cell_phone': self.cell,
+        #                 'email': self.email,
+        #                 'date_of_birth': self.dob}
+        # conn.insertSoloParticipant(valueDict)
+
+        # Very important to send these in the correct order or shit breaks
+        result = db.addSoloParticipant((self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob))
+        return result
+
 
 class GroupParticipant(Participant):
     """Holds GroupParticipant data (name, size, age, etc) as strings"""

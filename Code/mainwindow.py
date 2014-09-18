@@ -1,37 +1,42 @@
+"""A scheduling program for the RFOTA"""
+
 import sys
 sys.path.insert(0, '../Forms/')
-from PyQt4 import QtGui
+# from PyQt4 import QtGui
 from PyQt4.QtGui import QApplication, QMainWindow, QWidget, QMessageBox
-from PyQt4.QtCore import QDate
+# from PyQt4.QtCore import QDate
 from ui_mainwindow import Ui_MainWindow
 from addSoloParticipantDialog import AddSoloParticipantDialog
 from addGroupParticipantDialog import AddGroupParticipantDialog
 from addTeacherDialog import AddTeacherDialog
 from addEntryDialog import AddEntryDialog
-import sqlite3
+from databaseInteraction import DatabaseInteraction
+# import sqlite3
 import traceback
 
 app = QApplication(sys.argv)
 
 class MainWindow(QWidget):
-    def __init__(self, testing=False, testConn=None):
+    """The main window of the program"""
+    def __init__(self, testing=False):
         # Initialize object using ui_mainwindow
         super(MainWindow, self).__init__()
         self.window = QMainWindow()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.window)
+        self.db = DatabaseInteraction()
         self.connectSlots()
         self.testing = testing
-        if testConn is not None:
-            self.conn = testConn
-        else:
-            self.conn = self.initDatabase()     
+        # if testConn is not None:
+        #     self.conn = testConn
+        # else:
+        #     self.conn = self.initDatabase()     
 
-    def initDatabase(self):
-        """initializes the database, returns connection"""
-        conn = sqlite3.connect('../Database/AFS')
-        print "Opened database"
-        return conn
+    # def initDatabase(self):
+    #     """initializes the database, returns connection"""
+    #     conn = sqlite3.connect('../Database/AFS')
+    #     print "Opened database"
+    #     return conn
 
     def connectSlots(self):
         """connect the various ui signals to their slots"""
@@ -49,9 +54,12 @@ class MainWindow(QWidget):
 
         if result == True:
             p = dialog.getParticipant()
-            try:
-                p.addToDB(self.conn)
-                QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
+            try: # TODO try/except still necessary with new model format?
+                result = p.addToDB(self.db)
+                if result == "":
+                    QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
+                else:
+                    QMessageBox.critical(self, 'Add Participant', 'Failed to add new participant\n{0}'.format(result), QMessageBox.Ok)
             except Exception, e:
                 print traceback.format_exc()
                 QMessageBox.critical(self, 'Add Participant', 'Failed to add new participant\n{0}'.format(e), QMessageBox.Ok)
@@ -112,3 +120,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
