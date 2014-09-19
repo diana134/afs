@@ -1,10 +1,12 @@
+"""The form for adding a new GroupParticipant"""
+
 import sys
 sys.path.insert(0, '../Forms/')
-from PyQt4 import QtGui
+# from PyQt4 import QtGui
 from PyQt4.QtGui import QDialog, QMessageBox
 from ui_addGroupParticipantDialog import Ui_AddGroupParticipantDialog
-import traceback
-from participant import Participant, GroupParticipant
+# import traceback
+from participant import GroupParticipant
 
 class AddGroupParticipantDialog(QDialog):
     def __init__(self, parent=None, testing=False):
@@ -31,11 +33,11 @@ class AddGroupParticipantDialog(QDialog):
 
     def addParticipantBtn_clicked(self):
         """handles the Add Participant button being clicked"""
-        groupName = self.ui.groupNameLineEdit.text()
-        groupSize = self.ui.groupSizeLineEdit.text()
-        schoolGrade = self.ui.schoolGradeLineEdit.text()
-        averageAge = self.ui.averageAgeLineEdit.text()
-        participants = self.ui.participantsLineEdit.text()
+        groupName = str(self.ui.groupNameLineEdit.text()).strip()
+        groupSize = str(self.ui.groupSizeLineEdit.text()).strip()
+        schoolGrade = str(self.ui.schoolGradeLineEdit.text()).strip()
+        averageAge = str(self.ui.averageAgeLineEdit.text()).strip()
+        participants = str(self.ui.participantsLineEdit.text()).strip()
         
         # Error checking
         # TODO: set focus to incorrect field

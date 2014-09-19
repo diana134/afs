@@ -1,3 +1,5 @@
+"""Unit tests for participant.py"""
+
 import sys
 sys.path.insert(0, '../')
 # sys.path.insert(0, '../../Forms')
@@ -6,7 +8,7 @@ from participant import SoloParticipant, GroupParticipant
 from databaseInteraction import DatabaseInteraction
 # from mainwindow import MainWindow
 import unittest
-import sqlite3
+# import sqlite3
 from PyQt4.QtSql import QSqlQuery
 # from PyQt4.QtGui import QApplication
 # from PyQt4.QtTest import QTest
@@ -71,7 +73,7 @@ class SoloParticipantDatabaseTests(unittest.TestCase):
         self.db.conn.commit()
 
     def testAddToDB(self):
-        """test that a correctly formatted Participant can be added to the database properly"""
+        """test that a correctly formatted SoloParticipant can be added to the database properly"""
         sp = SoloParticipant('Foo', 'Bar', '123 Anywhere St.', 'Sometown', '1Q2W3E', '1234567890', '1234567890', 'foobar@testmail.com', '1900-01-01')
         sp.addToDB(self.db)
         # self.conn.commit()
@@ -90,7 +92,6 @@ class SoloParticipantDatabaseTests(unittest.TestCase):
         email = query.value(7).toString()
         dob = query.value(8).toString()
         spp = SoloParticipant(first, last, address, town, postal, home, cell, email, dob)
-        print spp.first, spp.last, spp.address
         isMatch = spp.isEqualTo(sp)
         self.assertTrue(isMatch)
 
@@ -101,36 +102,41 @@ class SoloParticipantDatabaseTests(unittest.TestCase):
         query = QSqlQuery(self.db.conn)
         query.exec_("DELETE FROM soloparticipants WHERE first_name='Foo' AND last_name='Bar'")
         self.db.conn.commit()
+        self.db.close()
 
 
 class GroupParticipantDatabaseTests(unittest.TestCase):
     """test database related functions in GroupParticipant"""
     def setUp(self):
-        self.conn = sqlite3.connect('../../Database/AFS')
+        self.db = DatabaseInteraction(test=True)
+        # Start fresh
+        query = QSqlQuery(self.db.conn)
+        query.exec_("DELETE FROM groupparticipants WHERE group_name='Foo'")
+        self.db.conn.commit()
 
     def testAddToDB(self):
         """test that a correctly formatted GroupParticipant can be added to the database properly"""
-        p = GroupParticipant('Foo', '2', '2', '8', 'Foo Bar, Foo Bar2')
-        p.addToDB(self.conn)
-        self.conn.commit()
+        gp = GroupParticipant('Foo', '2', '2', '8', 'Foo Bar, Foo Bar2')
+        gp.addToDB(self.db)
         #query db
-        cursor = self.conn.execute("SELECT group_name, group_size, school_grade, average_age, participants FROM groupparticipants WHERE group_name='Foo'")
+        query = QSqlQuery(self.db.conn)
+        query.exec_("SELECT group_name, group_size, school_grade, average_age, participants FROM groupparticipants WHERE group_name='Foo'")
         #check info is same
-        row = cursor.fetchone()
-        self.assertIsNotNone(row)
-        groupName = row[0]
-        groupSize = row[1]
-        schoolGrade = row[2]
-        averageAge = row[3]
-        participants = row[4]
-        sp = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants)
-        isMatch = p.isEqualTo(sp)
+        self.assertTrue(query.next())
+        groupName = query.value(0).toString()
+        groupSize = query.value(1).toString()
+        schoolGrade = query.value(2).toString()
+        averageAge = query.value(3).toString()
+        participants = query.value(4).toString()
+        gpp = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants)
+        isMatch = gpp.isEqualTo(gp)
         self.assertTrue(isMatch)
 
     def tearDown(self):
-        self.conn.execute("DELETE FROM groupparticipants WHERE group_name='Foo'")
-        self.conn.commit()
-        self.conn.close()
+        query = QSqlQuery(self.db.conn)
+        query.exec_("DELETE FROM groupparticipants WHERE group_name='Foo'")
+        self.db.conn.commit()
+        self.db.close()
 
 # GUI testing is overly fiddly and time consuming :/
 # class AddSoloParticipantDialogTests(unittest.TestCase):

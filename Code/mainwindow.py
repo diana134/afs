@@ -71,9 +71,12 @@ class MainWindow(QWidget):
 
         if result == True:
             gp = dialog.getGroupParticipant()
-            try:
-                gp.addToDB(self.conn)
-                QMessageBox.information(self, 'Add Group Participant', 'Successfully added new group participant', QMessageBox.Ok)
+            try: # TODO try/except still necessary with new model format?
+                result = gp.addToDB(self.db)
+                if result == "":
+                    QMessageBox.information(self, 'Add Group Participant', 'Successfully added new group participant', QMessageBox.Ok)
+                else:
+                    QMessageBox.critical(self, 'Add Group Participant', 'Failed to add new group participant\n{0}'.format(e), QMessageBox.Ok)
             except Exception, e:
                 print traceback.format_exc()
                 QMessageBox.critical(self, 'Add Group Participant', 'Failed to add new group participant\n{0}'.format(e), QMessageBox.Ok)
@@ -120,4 +123,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

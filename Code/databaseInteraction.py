@@ -34,18 +34,21 @@ class DatabaseInteraction(object):
             sys.exit(1)
         
         # SoloParticipant
-        self.soloParticipantModel = QSqlTableModel()
-        self.soloParticipantModel.setTable("soloparticipants")
-        self.soloParticipantModel.select()
+        # self.soloParticipantModel = QSqlTableModel()
+        # self.soloParticipantModel.setTable("soloparticipants")
+        # self.soloParticipantModel.select()
 
         # GroupParticipant
-        self.groupParticipantModel = QSqlTableModel()
-        self.groupParticipantModel.setTable("groupparticipants")
-        self.groupParticipantModel.select()
+        # self.groupParticipantModel = QSqlTableModel()
+        # self.groupParticipantModel.setTable("groupparticipants")
+        # self.groupParticipantModel.select()
 
     def close(self):
         """Clean everything up and close the connection"""
+        connName = self.conn.connectionName()
         self.conn.close()
+        self.conn = QSqlDatabase()
+        self.conn.removeDatabase(connName)
 
     def addSoloParticipant(self, values):
         """Adds a new SoloParticipant record to the db"""
@@ -71,4 +74,21 @@ class DatabaseInteraction(object):
             # TODO: log this instead of printing to console
             print "addSoloParticipant FAILED\n\tquery: {0}\
                 \n\tvalues: {1}\n\terror: {2}".format(query, values, e)
+            return e
+
+    def addGroupParticipant(self, values):
+        """Adds a new GroupParticipant record to the db"""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("INSERT INTO groupparticipants \
+                (group_name, group_size, school_grade, average_age, participants) \
+                VALUES (?, ?, ?, ?, ?)")
+            for value in values:
+                query.addBindValue(value)
+            query.exec_()
+            return ""
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "addGroupParticipant FAILED\n\tquery: {0}\
+                \n\tvalues: {1}\n\terror: {2}".format(query.lastQuery(), values, e)
             return e

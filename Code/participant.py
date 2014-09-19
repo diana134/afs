@@ -21,6 +21,7 @@ class SoloParticipant(Participant):
     """Holds participant data (name, address, contact info, etc) as strings"""
     def __init__(self, first=None, last=None, address=None, town=None, postal=None, home=None, cell=None, email=None, dob=None):
         # Deal with getting QStrings from UI
+        # TODO: don't need to str anymore, handled at ui
         self.first = str(first) if first is not None else None
         self.last = str(last) if last is not None else None
         self.address = str(address) if address is not None else None
@@ -77,6 +78,7 @@ class SoloParticipant(Participant):
 class GroupParticipant(Participant):
     """Holds GroupParticipant data (name, size, age, etc) as strings"""
     def __init__(self, groupName=None, groupSize=None, schoolGrade=None, averageAge=None, participants=None):
+        # TODO: don't need to str anymore, handled at ui
         self.groupName = str(groupName) if groupName is not None else None
         self.groupSize = str(groupSize) if groupSize is not None else None
         self.schoolGrade = str(schoolGrade) if schoolGrade is not None else None
@@ -97,8 +99,12 @@ class GroupParticipant(Participant):
         else:
             return False
         
-    def addToDB(self, conn):
-        """add this GroupParticipant to the database using connection conn"""
-        conn.execute("INSERT INTO groupparticipants (group_name, group_size, school_grade, average_age, participants) VALUES (?, ?, ?, ?, ?)", (self.groupName, self.groupSize, self.schoolGrade, self.averageAge, self.participants));
-        conn.commit()
-        return True
+    def addToDB(self, db):
+        """add this SoloParticipant to the database using DatabaseInteraction db, return the result (i.e. an error)"""
+        # conn.execute("INSERT INTO groupparticipants (group_name, group_size, school_grade, average_age, participants) VALUES (?, ?, ?, ?, ?)", (self.groupName, self.groupSize, self.schoolGrade, self.averageAge, self.participants));
+        # conn.commit()
+        # return True
+
+        # Very important to send these in the correct order or shit breaks
+        result = db.addGroupParticipant((self.groupName, self.groupSize, self.schoolGrade, self.averageAge, self.participants))
+        return result

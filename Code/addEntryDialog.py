@@ -98,6 +98,7 @@ class AddEntryDialog(QDialog):
             try:
                 p.addToDB(self.conn)
                 self.ui.participantLineEdit.setText(p.first + ' ' + p.last)
+                cursor = self.conn.execute("SELECT id FROM entries WHERE id=(SELECT MAX(id) FROM entries)") # TODO put this where it makes more sense
                 # TODO get PK from db to attach new participant to this entry
                 QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
             except Exception, e:
