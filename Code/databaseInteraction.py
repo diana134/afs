@@ -109,3 +109,20 @@ class DatabaseInteraction(object):
             print "addTeacher FAILED\n\tquery: {0}\
                 \n\tvalues: {1}\n\terror: {2}".format(query.lastQuery(), values, e)
             return e
+
+    def addEntry(self, values):
+        """Adds a new Entry record to the db"""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("INSERT INTO entries \
+                (participant_id, teacher_id, discipline, level, class_number, class_name, title, performance_time, style, composer, opus, no, movement, arranger, artist, instrument, author) \
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
+            for value in values:
+                query.addBindValue(value)
+            query.exec_()
+            return ""
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "addEntry FAILED\n\tquery: {0}\
+                \n\tvalues: {1}\n\terror: {2}".format(query.lastQuery(), values, e)
+            return e

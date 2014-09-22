@@ -50,21 +50,21 @@ class AddEntryDialog(QDialog):
         # TODO real IDs
         participantID = 0
         teacherID = 0
-        discipline = self.ui.disciplineComboBox.currentText()
-        level = self.ui.levelLineEdit.text()
-        classNumber = self.ui.classNumberLineEdit.text()
-        className = self.ui.classNameLineEdit.text()
-        style = self.ui.styleLineEdit.text()
-        instrument = self.ui.instrumentLineEdit.text()
-        title = self.ui.titleLineEdit.text()
-        composer = self.ui.composerLineEdit.text()
-        arranger = self.ui.arrangerLineEdit.text()
-        artist = self.ui.artistLineEdit.text()
-        author = self.ui.authorLineEdit.text()
-        opus = self.ui.opusLineEdit.text()
-        no = self.ui.noLineEdit.text()
-        movement = self.ui.movementLineEdit.text()
-        performanceTime = self.ui.performanceTimeLineEdit.text()
+        discipline = str(self.ui.disciplineComboBox.currentText()).strip()
+        level = str(self.ui.levelLineEdit.text()).strip()
+        classNumber = str(self.ui.classNumberLineEdit.text()).strip()
+        className = str(self.ui.classNameLineEdit.text()).strip()
+        style = str(self.ui.styleLineEdit.text()).strip()
+        instrument = str(self.ui.instrumentLineEdit.text()).strip()
+        title = str(self.ui.titleLineEdit.text()).strip()
+        composer = str(self.ui.composerLineEdit.text()).strip()
+        arranger = str(self.ui.arrangerLineEdit.text()).strip()
+        artist = str(self.ui.artistLineEdit.text()).strip()
+        author = str(self.ui.authorLineEdit.text()).strip()
+        opus = str(self.ui.opusLineEdit.text()).strip()
+        no = str(self.ui.noLineEdit.text()).strip()
+        movement = str(self.ui.movementLineEdit.text()).strip()
+        performanceTime = str(self.ui.performanceTimeLineEdit.text()).strip()
 
         # Error checking
         # TODO: set focus to incorrect field

@@ -99,18 +99,21 @@ class MainWindow(QWidget):
                 QMessageBox.critical(self, 'Add Teacher', 'Failed to add new teacher\n{0}'.format(e), QMessageBox.Ok)
 
     def addEntryBtn_clicked(self):
-        dialog = AddEntryDialog(testing=self.testing, conn=self.conn)
+        dialog = AddEntryDialog(testing=self.testing)
         # For Modal dialog
         result = dialog.exec_()
 
         if result == True:
             entry = dialog.getEntry()
-            try:
-                entry.addToDB(self.conn)
-                QMessageBox.information(self, 'Add Group Participant', 'Successfully added new Entry', QMessageBox.Ok)
+            try: # TODO try/except still necessary with new model format?
+                result = entry.addToDB(self.db)
+                if result == "":
+                    QMessageBox.information(self, 'Add Entry', 'Successfully added new Entry', QMessageBox.Ok)
+                else:
+                    QMessageBox.critical(self, 'Add Entry', 'Failed to add new Entry\n{0}'.format(e), QMessageBox.Ok)
             except Exception, e:
                 print traceback.format_exc()
-                QMessageBox.critical(self, 'Add Group Participant', 'Failed to add new Entry\n{0}'.format(e), QMessageBox.Ok)
+                QMessageBox.critical(self, 'Add Entry', 'Failed to add new Entry\n{0}'.format(e), QMessageBox.Ok)
 
     ##########
 

@@ -1,6 +1,8 @@
+"""Deals with Entries"""
+
 from utilities import requiredFieldIsGood, optionalFieldIsGood
 
-class Entry:
+class Entry(object):
     """holds Entry data as strings"""
     def __init__(self, participantID=None, teacherID=None, discipline=None, level=None, classNumber=None, className=None, title=None, performanceTime=None, style=None, composer=None, opus=None, no=None, movement=None, arranger=None, artist=None, instrument=None, author=None):
         # Deal with getting QStrings from UI
@@ -48,16 +50,20 @@ class Entry:
         else:
             return False
 
-    def addToDB(self, conn):
+    def addToDB(self, db):
         """add this Entry to the database using connection conn"""
-        conn.execute("INSERT INTO entries (participant_id, teacher_id, discipline, level, class_number, class_name, title, performance_time, style, composer, opus, no, movement, arranger, artist, instrument, author) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", 
-            (self.participantID, self.teacherID, self.discipline, self.level, self.classNumber, self.className, self.title, self.performanceTime, self.style, self.composer, self.opus, self.no, self.movement, self.arranger, self.artist, self.instrument, self.author));
-        conn.commit()
-        return True
+        # conn.execute("INSERT INTO entries (participant_id, teacher_id, discipline, level, class_number, class_name, title, performance_time, style, composer, opus, no, movement, arranger, artist, instrument, author) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", 
+        #     (self.participantID, self.teacherID, self.discipline, self.level, self.classNumber, self.className, self.title, self.performanceTime, self.style, self.composer, self.opus, self.no, self.movement, self.arranger, self.artist, self.instrument, self.author));
+        # conn.commit()
+        # return True
+
+        # Very important to send these in the correct order or shit breaks
+        result = db.addEntry((self.participantID, self.teacherID, self.discipline, self.level, self.classNumber, self.className, self.title, self.performanceTime, self.style, self.composer, self.opus, self.no, self.movement, self.arranger, self.artist, self.instrument, self.author))
+        return result
 
     def __str__(self):
-        s = ''
-        return self.participantID + self.teacherID + self.discipline #+ self.level + self.classNumber + self.className + self.title + self.performanceTime + self.style + self.composer + self.opus + self.no + self.movement + self.arranger + self.artist + self.instrument + self.author
+        # s = ''
+        return self.participantID + self.teacherID + self.discipline + self.level + self.classNumber + self.className + self.title + self.performanceTime + self.style + self.composer + self.opus + self.no + self.movement + self.arranger + self.artist + self.instrument + self.author
 
 # class DanceEntry(Entry):
 #     def __init__(self, style=None):
