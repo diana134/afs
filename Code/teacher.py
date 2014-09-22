@@ -1,9 +1,12 @@
+"""Deals with Teachers"""
+
 from utilities import requiredFieldIsGood, optionalFieldIsGood
 
-class Teacher:
+class Teacher(object):
     """Holds Teacher data (name, address, contact info, etc) as strings"""
     def __init__(self, first=None, last=None, address=None, city=None, postal=None, daytimePhone=None, eveningPhone=None, email=None):
         # Deal with getting QStrings from UI
+        # TODO: don't need to str anymore, handled at ui
         self.first = str(first) if first is not None else None
         self.last = str(last) if last is not None else None
         self.address = str(address) if address is not None else None
@@ -30,8 +33,12 @@ class Teacher:
         else:
             return False
 
-    def addToDB(self, conn):
-        """add this Teacher to the database using connection conn"""
-        conn.execute("INSERT INTO teachers (first_name, last_name, address, city, postal_code, daytime_phone, evening_phone, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", (self.first, self.last, self.address, self.city, self.postal, self.daytimePhone, self.eveningPhone, self.email));
-        conn.commit()
-        return True
+    def addToDB(self, db):
+        """add this Teacher to the database using DatabaseInteraction db, return the result (i.e. an error)"""
+        # conn.execute("INSERT INTO teachers (first_name, last_name, address, city, postal_code, daytime_phone, evening_phone, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", (self.first, self.last, self.address, self.city, self.postal, self.daytimePhone, self.eveningPhone, self.email));
+        # conn.commit()
+        # return True
+
+        # Very important to send these in the correct order or shit breaks
+        result = db.addTeacher((self.first, self.last, self.address, self.city, self.postal, self.daytimePhone, self.eveningPhone, self.email))
+        return result

@@ -1,9 +1,11 @@
+"""The form for adding new Teachers"""
+
 import sys
 sys.path.insert(0, '../Forms/')
-from PyQt4 import QtGui
+# from PyQt4 import QtGui
 from PyQt4.QtGui import QDialog, QMessageBox
 from ui_addTeacherDialog import Ui_AddTeacherDialog
-import traceback
+# import traceback
 from teacher import Teacher
 
 class AddTeacherDialog(QDialog):
@@ -31,14 +33,14 @@ class AddTeacherDialog(QDialog):
 
     def addTeacherBtn_clicked(self):
         """handles the Add Teacher button being clicked"""
-        first = self.ui.firstNameLineEdit.text()
-        last = self.ui.lastNameLineEdit.text()
-        address = self.ui.addressLineEdit.text()
-        city = self.ui.cityLineEdit.text()
-        postal = self.ui.postalCodeLineEdit.text()
-        daytimePhone = self.ui.daytimePhoneLineEdit.text()
-        eveningPhone = self.ui.eveningPhoneLineEdit.text()
-        email = self.ui.emailLineEdit.text()
+        first = str(self.ui.firstNameLineEdit.text()).strip()
+        last = str(self.ui.lastNameLineEdit.text()).strip()
+        address = str(self.ui.addressLineEdit.text()).strip()
+        city = str(self.ui.cityLineEdit.text()).strip()
+        postal = str(self.ui.postalCodeLineEdit.text()).strip()
+        daytimePhone = str(self.ui.daytimePhoneLineEdit.text()).strip()
+        eveningPhone = str(self.ui.eveningPhoneLineEdit.text()).strip()
+        email = str(self.ui.emailLineEdit.text()).strip()
         
         # Error checking
         # TODO: set focus to incorrect field

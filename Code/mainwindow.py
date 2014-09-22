@@ -88,9 +88,12 @@ class MainWindow(QWidget):
 
         if result == True:
             t = dialog.getTeacher()
-            try:
-                t.addToDB(self.conn)
-                QMessageBox.information(self, 'Add Teacher', 'Successfully added new teacher', QMessageBox.Ok)
+            try: # TODO try/except still necessary with new model format?
+                result = t.addToDB(self.db)
+                if result == "":
+                    QMessageBox.information(self, 'Add Teacher', 'Successfully added new teacher', QMessageBox.Ok)
+                else:
+                    QMessageBox.critical(self, 'Add Teacher', 'Failed to add new teacher\n{0}'.format(e), QMessageBox.Ok)
             except Exception, e:
                 print traceback.format_exc()
                 QMessageBox.critical(self, 'Add Teacher', 'Failed to add new teacher\n{0}'.format(e), QMessageBox.Ok)

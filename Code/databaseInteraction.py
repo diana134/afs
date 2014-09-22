@@ -92,3 +92,20 @@ class DatabaseInteraction(object):
             print "addGroupParticipant FAILED\n\tquery: {0}\
                 \n\tvalues: {1}\n\terror: {2}".format(query.lastQuery(), values, e)
             return e
+
+    def addTeacher(self, values):
+        """Adds a new Teacher record to the db"""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("INSERT INTO teachers \
+                (first_name, last_name, address, city, postal_code, daytime_phone, evening_phone, email) \
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)")
+            for value in values:
+                query.addBindValue(value)
+            query.exec_()
+            return ""
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "addTeacher FAILED\n\tquery: {0}\
+                \n\tvalues: {1}\n\terror: {2}".format(query.lastQuery(), values, e)
+            return e
