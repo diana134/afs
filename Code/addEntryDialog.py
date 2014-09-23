@@ -7,10 +7,11 @@ from ui_addEntryDialog import Ui_AddEntryDialog
 from addSoloParticipantDialog import AddSoloParticipantDialog
 from addGroupParticipantDialog import AddGroupParticipantDialog
 from addTeacherDialog import AddTeacherDialog
+from chooseParticipantDialog import ChooseParticipantDialog
 from entry import Entry
 
 class AddEntryDialog(QDialog):
-    def __init__(self, parent=None, testing=False, conn=None):
+    def __init__(self, parent=None, testing=False, db=None):
         # Initialize object using ui_addEntry
         super(AddEntryDialog, self).__init__(parent)
         self.ui = Ui_AddEntryDialog()
@@ -18,8 +19,9 @@ class AddEntryDialog(QDialog):
         self.dance() # Slightly cheater way to start the ui properly
         # Initialize class variables
         self.testing = testing
-        self.conn = conn
+        self.db = db
         self.entry = None
+        self.participantId = None
         self.disciplines = {'Dance' : self.dance,   # For Pythonic switch-case
                                 'Piano' : self.piano,
                                 'Choral' : self.choral,
@@ -35,6 +37,7 @@ class AddEntryDialog(QDialog):
         """connect the various ui signals to their slots"""
         self.ui.addEntryBtn.clicked.connect(self.addEntryBtn_clicked)
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
+        self.ui.chooseParticipantBtn.clicked.connect(self.chooseParticipantBtn_clicked)
         self.ui.createNewSoloParticipantBtn.clicked.connect(self.createNewSoloParticipantBtn_clicked)
         self.ui.createNewGroupParticipantBtn.clicked.connect(self.createNewGroupParticipantBtn_clicked)
         self.ui.createNewTeacherBtn.clicked.connect(self.createNewTeacherBtn_clicked)
@@ -48,7 +51,7 @@ class AddEntryDialog(QDialog):
     def addEntryBtn_clicked(self):
         """handles the Add Entry button being clicked"""
         # TODO real IDs
-        participantID = 0
+        participantID = self.participantId
         teacherID = 0
         discipline = str(self.ui.disciplineComboBox.currentText()).strip()
         level = str(self.ui.levelLineEdit.text()).strip()
@@ -82,10 +85,29 @@ class AddEntryDialog(QDialog):
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Title', QMessageBox.Ok)
         else:
             self.entry = Entry(participantID, teacherID, discipline, level, classNumber, className, title, performanceTime, style, composer, opus, no, movement, arranger, artist, instrument, author)
+            print self.entry
             self.accept()
 
     def cancelBtn_clicked(self):
         self.reject()
+
+    def chooseParticipantBtn_clicked(self):
+        """opens Choose Participant Dialog"""
+        dialog = ChooseParticipantDialog(self.db.soloParticipantModel, self.db.groupParticipantModel)
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            self.participantId = dialog.getParticipantId()
+            # Use the id to get the name for display
+            p = self.db.getParticipantFromId(self.participantId)
+            name = ""
+            # Deal with it whether it's a solo or group
+            try:
+                name = p.first + " " + p.last
+            except AttributeError:
+                name = p.groupName
+        self.ui.participantLineEdit.setText(name)
 
     def createNewSoloParticipantBtn_clicked(self):
         """opens Add Solo Participant Dialog"""
@@ -96,10 +118,9 @@ class AddEntryDialog(QDialog):
         if result == True:
             p = dialog.getParticipant()
             try:
-                p.addToDB(self.conn)
+                p.addToDB(self.db)
                 self.ui.participantLineEdit.setText(p.first + ' ' + p.last)
-                cursor = self.conn.execute("SELECT id FROM entries WHERE id=(SELECT MAX(id) FROM entries)") # TODO put this where it makes more sense
-                # TODO get PK from db to attach new participant to this entry
+                self.participantId = self.db.getLastSoloParticipantId()
                 QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
             except Exception, e:
                 print traceback.format_exc()
@@ -114,9 +135,9 @@ class AddEntryDialog(QDialog):
         if result == True:
             gp = dialog.getGroupParticipant()
             try:
-                gp.addToDB(self.conn)
+                gp.addToDB(self.db)
                 self.ui.participantLineEdit.setText(gp.groupName)
-                # TODO get PK from db to attach new participant to this entry
+                self.participantId = self.db.getLastGroupParticipantId()
                 QMessageBox.information(self, 'Add Group Participant', 'Successfully added new group participant', QMessageBox.Ok)
             except Exception, e:
                 print traceback.format_exc()
@@ -131,7 +152,7 @@ class AddEntryDialog(QDialog):
         if result == True:
             t = dialog.getTeacher()
             try:
-                t.addToDB(self.conn)
+                t.addToDB(self.db)
                 self.ui.teacherLineEdit.setText(t.first + ' ' + t.last)
                 # TODO get PK from db to attach new teacher to this entry
                 QMessageBox.information(self, 'Add Teacher', 'Successfully added new teacher', QMessageBox.Ok)

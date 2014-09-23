@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'ui_addEntryDialog.ui'
 #
-# Created: Fri Aug 15 02:47:16 2014
-#      by: PyQt4 UI code generator 4.9.3
+# Created: Mon Sep 22 18:29:24 2014
+#      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -12,13 +12,22 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
-    _fromUtf8 = lambda s: s
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
 
 class Ui_AddEntryDialog(object):
     def setupUi(self, AddEntryDialog):
         AddEntryDialog.setObjectName(_fromUtf8("AddEntryDialog"))
         AddEntryDialog.setWindowModality(QtCore.Qt.ApplicationModal)
-        AddEntryDialog.resize(546, 650)
+        AddEntryDialog.resize(546, 653)
         self.gridLayout = QtGui.QGridLayout(AddEntryDialog)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
         self.addEntryBtn = QtGui.QPushButton(AddEntryDialog)
@@ -44,7 +53,7 @@ class Ui_AddEntryDialog(object):
         self.gridLayout_2 = QtGui.QGridLayout()
         self.gridLayout_2.setObjectName(_fromUtf8("gridLayout_2"))
         self.chooseParticipantBtn = QtGui.QPushButton(AddEntryDialog)
-        self.chooseParticipantBtn.setEnabled(False)
+        self.chooseParticipantBtn.setEnabled(True)
         self.chooseParticipantBtn.setObjectName(_fromUtf8("chooseParticipantBtn"))
         self.gridLayout_2.addWidget(self.chooseParticipantBtn, 0, 0, 1, 1)
         self.createNewSoloParticipantBtn = QtGui.QPushButton(AddEntryDialog)
@@ -174,37 +183,37 @@ class Ui_AddEntryDialog(object):
         QtCore.QMetaObject.connectSlotsByName(AddEntryDialog)
 
     def retranslateUi(self, AddEntryDialog):
-        AddEntryDialog.setWindowTitle(QtGui.QApplication.translate("AddEntryDialog", "Add Entry", None, QtGui.QApplication.UnicodeUTF8))
-        self.addEntryBtn.setText(QtGui.QApplication.translate("AddEntryDialog", "A&dd Entry", None, QtGui.QApplication.UnicodeUTF8))
-        self.cancelBtn.setText(QtGui.QApplication.translate("AddEntryDialog", "&Cancel", None, QtGui.QApplication.UnicodeUTF8))
-        self.participantLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Participant", None, QtGui.QApplication.UnicodeUTF8))
-        self.chooseParticipantBtn.setToolTip(QtGui.QApplication.translate("AddEntryDialog", "TODO", None, QtGui.QApplication.UnicodeUTF8))
-        self.chooseParticipantBtn.setText(QtGui.QApplication.translate("AddEntryDialog", "Choose...", None, QtGui.QApplication.UnicodeUTF8))
-        self.createNewSoloParticipantBtn.setText(QtGui.QApplication.translate("AddEntryDialog", "Create New &Solo...", None, QtGui.QApplication.UnicodeUTF8))
-        self.createNewGroupParticipantBtn.setText(QtGui.QApplication.translate("AddEntryDialog", "Create New &Group...", None, QtGui.QApplication.UnicodeUTF8))
-        self.teacherLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Teacher", None, QtGui.QApplication.UnicodeUTF8))
-        self.chooseTeacherBtn.setText(QtGui.QApplication.translate("AddEntryDialog", "Choose...", None, QtGui.QApplication.UnicodeUTF8))
-        self.createNewTeacherBtn.setText(QtGui.QApplication.translate("AddEntryDialog", "Create New...", None, QtGui.QApplication.UnicodeUTF8))
-        self.disciplineLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Discipline", None, QtGui.QApplication.UnicodeUTF8))
-        self.disciplineComboBox.setItemText(0, QtGui.QApplication.translate("AddEntryDialog", "Dance", None, QtGui.QApplication.UnicodeUTF8))
-        self.disciplineComboBox.setItemText(1, QtGui.QApplication.translate("AddEntryDialog", "Piano", None, QtGui.QApplication.UnicodeUTF8))
-        self.disciplineComboBox.setItemText(2, QtGui.QApplication.translate("AddEntryDialog", "Choral", None, QtGui.QApplication.UnicodeUTF8))
-        self.disciplineComboBox.setItemText(3, QtGui.QApplication.translate("AddEntryDialog", "Vocal", None, QtGui.QApplication.UnicodeUTF8))
-        self.disciplineComboBox.setItemText(4, QtGui.QApplication.translate("AddEntryDialog", "Instrumental", None, QtGui.QApplication.UnicodeUTF8))
-        self.disciplineComboBox.setItemText(5, QtGui.QApplication.translate("AddEntryDialog", "Band", None, QtGui.QApplication.UnicodeUTF8))
-        self.disciplineComboBox.setItemText(6, QtGui.QApplication.translate("AddEntryDialog", "Speech", None, QtGui.QApplication.UnicodeUTF8))
-        self.participantLevelGradeLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Level/Years of Instruction", None, QtGui.QApplication.UnicodeUTF8))
-        self.classNumberLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Class Number", None, QtGui.QApplication.UnicodeUTF8))
-        self.classNameLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Class Name", None, QtGui.QApplication.UnicodeUTF8))
-        self.styleLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Style", None, QtGui.QApplication.UnicodeUTF8))
-        self.instrumentLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Instrument", None, QtGui.QApplication.UnicodeUTF8))
-        self.titleLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Title", None, QtGui.QApplication.UnicodeUTF8))
-        self.composerLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Composer", None, QtGui.QApplication.UnicodeUTF8))
-        self.arrangerLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Arranger", None, QtGui.QApplication.UnicodeUTF8))
-        self.artistLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Artist", None, QtGui.QApplication.UnicodeUTF8))
-        self.authorLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Author", None, QtGui.QApplication.UnicodeUTF8))
-        self.opusLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Opus", None, QtGui.QApplication.UnicodeUTF8))
-        self.noLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "No.", None, QtGui.QApplication.UnicodeUTF8))
-        self.movementLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Movement", None, QtGui.QApplication.UnicodeUTF8))
-        self.performanceTimeLabel.setText(QtGui.QApplication.translate("AddEntryDialog", "Performance Time", None, QtGui.QApplication.UnicodeUTF8))
+        AddEntryDialog.setWindowTitle(_translate("AddEntryDialog", "Add Entry", None))
+        self.addEntryBtn.setText(_translate("AddEntryDialog", "A&dd Entry", None))
+        self.cancelBtn.setText(_translate("AddEntryDialog", "&Cancel", None))
+        self.participantLabel.setText(_translate("AddEntryDialog", "Participant", None))
+        self.chooseParticipantBtn.setToolTip(_translate("AddEntryDialog", "TODO", None))
+        self.chooseParticipantBtn.setText(_translate("AddEntryDialog", "Choose...", None))
+        self.createNewSoloParticipantBtn.setText(_translate("AddEntryDialog", "Create New &Solo...", None))
+        self.createNewGroupParticipantBtn.setText(_translate("AddEntryDialog", "Create New &Group...", None))
+        self.teacherLabel.setText(_translate("AddEntryDialog", "Teacher", None))
+        self.chooseTeacherBtn.setText(_translate("AddEntryDialog", "Choose...", None))
+        self.createNewTeacherBtn.setText(_translate("AddEntryDialog", "Create New...", None))
+        self.disciplineLabel.setText(_translate("AddEntryDialog", "Discipline", None))
+        self.disciplineComboBox.setItemText(0, _translate("AddEntryDialog", "Dance", None))
+        self.disciplineComboBox.setItemText(1, _translate("AddEntryDialog", "Piano", None))
+        self.disciplineComboBox.setItemText(2, _translate("AddEntryDialog", "Choral", None))
+        self.disciplineComboBox.setItemText(3, _translate("AddEntryDialog", "Vocal", None))
+        self.disciplineComboBox.setItemText(4, _translate("AddEntryDialog", "Instrumental", None))
+        self.disciplineComboBox.setItemText(5, _translate("AddEntryDialog", "Band", None))
+        self.disciplineComboBox.setItemText(6, _translate("AddEntryDialog", "Speech", None))
+        self.participantLevelGradeLabel.setText(_translate("AddEntryDialog", "Level/Years of Instruction", None))
+        self.classNumberLabel.setText(_translate("AddEntryDialog", "Class Number", None))
+        self.classNameLabel.setText(_translate("AddEntryDialog", "Class Name", None))
+        self.styleLabel.setText(_translate("AddEntryDialog", "Style", None))
+        self.instrumentLabel.setText(_translate("AddEntryDialog", "Instrument", None))
+        self.titleLabel.setText(_translate("AddEntryDialog", "Title", None))
+        self.composerLabel.setText(_translate("AddEntryDialog", "Composer", None))
+        self.arrangerLabel.setText(_translate("AddEntryDialog", "Arranger", None))
+        self.artistLabel.setText(_translate("AddEntryDialog", "Artist", None))
+        self.authorLabel.setText(_translate("AddEntryDialog", "Author", None))
+        self.opusLabel.setText(_translate("AddEntryDialog", "Opus", None))
+        self.noLabel.setText(_translate("AddEntryDialog", "No.", None))
+        self.movementLabel.setText(_translate("AddEntryDialog", "Movement", None))
+        self.performanceTimeLabel.setText(_translate("AddEntryDialog", "Performance Time", None))
 

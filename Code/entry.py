@@ -6,6 +6,7 @@ class Entry(object):
     """holds Entry data as strings"""
     def __init__(self, participantID=None, teacherID=None, discipline=None, level=None, classNumber=None, className=None, title=None, performanceTime=None, style=None, composer=None, opus=None, no=None, movement=None, arranger=None, artist=None, instrument=None, author=None):
         # Deal with getting QStrings from UI
+        # TODO: dealt with at ui level now
         self.participantID = str(participantID) if participantID is not None else None
         self.teacherID = str(teacherID) if teacherID is not None else None
         self.discipline = str(discipline) if discipline is not None else None

@@ -99,7 +99,7 @@ class MainWindow(QWidget):
                 QMessageBox.critical(self, 'Add Teacher', 'Failed to add new teacher\n{0}'.format(e), QMessageBox.Ok)
 
     def addEntryBtn_clicked(self):
-        dialog = AddEntryDialog(testing=self.testing)
+        dialog = AddEntryDialog(testing=self.testing, db=self.db)
         # For Modal dialog
         result = dialog.exec_()
 
