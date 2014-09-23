@@ -8,6 +8,7 @@ from addSoloParticipantDialog import AddSoloParticipantDialog
 from addGroupParticipantDialog import AddGroupParticipantDialog
 from addTeacherDialog import AddTeacherDialog
 from chooseParticipantDialog import ChooseParticipantDialog
+from chooseTeacherDialog import ChooseTeacherDialog
 from entry import Entry
 
 class AddEntryDialog(QDialog):
@@ -22,6 +23,7 @@ class AddEntryDialog(QDialog):
         self.db = db
         self.entry = None
         self.participantId = None
+        self.teacherId = None
         self.disciplines = {'Dance' : self.dance,   # For Pythonic switch-case
                                 'Piano' : self.piano,
                                 'Choral' : self.choral,
@@ -38,6 +40,7 @@ class AddEntryDialog(QDialog):
         self.ui.addEntryBtn.clicked.connect(self.addEntryBtn_clicked)
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
         self.ui.chooseParticipantBtn.clicked.connect(self.chooseParticipantBtn_clicked)
+        self.ui.chooseTeacherBtn.clicked.connect(self.chooseTeacherBtn_clicked)
         self.ui.createNewSoloParticipantBtn.clicked.connect(self.createNewSoloParticipantBtn_clicked)
         self.ui.createNewGroupParticipantBtn.clicked.connect(self.createNewGroupParticipantBtn_clicked)
         self.ui.createNewTeacherBtn.clicked.connect(self.createNewTeacherBtn_clicked)
@@ -50,9 +53,8 @@ class AddEntryDialog(QDialog):
 
     def addEntryBtn_clicked(self):
         """handles the Add Entry button being clicked"""
-        # TODO real IDs
         participantID = self.participantId
-        teacherID = 0
+        teacherID = self.teacherId
         discipline = str(self.ui.disciplineComboBox.currentText()).strip()
         level = str(self.ui.levelLineEdit.text()).strip()
         classNumber = str(self.ui.classNumberLineEdit.text()).strip()
@@ -107,7 +109,20 @@ class AddEntryDialog(QDialog):
                 name = p.first + " " + p.last
             except AttributeError:
                 name = p.groupName
-        self.ui.participantLineEdit.setText(name)
+            self.ui.participantLineEdit.setText(name)
+
+    def chooseTeacherBtn_clicked(self):
+        """opens Choose Teacher Dialog"""
+        dialog = ChooseTeacherDialog(self.db.teacherModel)
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            self.teacherId = dialog.getTeacherId()
+            # Use the id to get the name for display
+            t = self.db.getTeacherFromId(self.teacherId)
+            name = name = t.first + " " + t.last
+            self.ui.teacherLineEdit.setText(name)
 
     def createNewSoloParticipantBtn_clicked(self):
         """opens Add Solo Participant Dialog"""
@@ -154,7 +169,7 @@ class AddEntryDialog(QDialog):
             try:
                 t.addToDB(self.db)
                 self.ui.teacherLineEdit.setText(t.first + ' ' + t.last)
-                # TODO get PK from db to attach new teacher to this entry
+                self.teacherId = self.db.getLastTeacherId()
                 QMessageBox.information(self, 'Add Teacher', 'Successfully added new teacher', QMessageBox.Ok)
             except Exception, e:
                 print traceback.format_exc()

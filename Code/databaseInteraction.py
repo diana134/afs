@@ -6,6 +6,7 @@ import os
 from PyQt4.QtSql import QSqlDatabase, QSqlTableModel, QSqlQuery
 
 from participant import SoloParticipant, GroupParticipant
+from teacher import Teacher
 
 CONFIG_DATABASE_PATH = "../Database/"
 CONFIG_TEST_DATABASE_PATH = "../../Database/"
@@ -44,6 +45,11 @@ class DatabaseInteraction(object):
         self.groupParticipantModel = QSqlTableModel(db=self.conn)
         self.groupParticipantModel.setTable("groupparticipants")
         self.groupParticipantModel.select()
+
+        # Teacher
+        self.teacherModel = QSqlTableModel(db=self.conn)
+        self.teacherModel.setTable("teachers")
+        self.teacherModel.select()
 
     def close(self):
         """Clean everything up and close the connection"""
@@ -107,6 +113,7 @@ class DatabaseInteraction(object):
             for value in values:
                 query.addBindValue(value)
             query.exec_()
+            self.teacherModel.select()
             return ""
         except Exception, e:
             # TODO: log this instead of printing to console
@@ -183,8 +190,7 @@ class DatabaseInteraction(object):
             return "s" + participantId
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "getLastSoloParticipantId FAILED\n\tquery: {0}\
-                \n\tvalues: {1}\n\terror: {2}".format(query.lastQuery(), participantId, e)
+            print "getLastSoloParticipantId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
 
     def getLastGroupParticipantId(self):
         """Get the id of the most recently added GroupParticipant"""
@@ -196,5 +202,42 @@ class DatabaseInteraction(object):
             return "g" + participantId
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "getLastSoloParticipantId FAILED\n\tquery: {0}\
-                \n\tvalues: {1}\n\terror: {2}".format(query.lastQuery(), participantId, e)
+            print "getLastSoloParticipantId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+
+    def getTeacherFromId(self, teacherId):
+        """Retrieve the appropriate Teacher from the given id"""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("SELECT first_name, last_name, address, city, postal_code, daytime_phone, evening_phone, email \
+                    FROM teachers WHERE id=:id")
+            numericId = teacherId
+            query.bindValue(":id", numericId)
+            query.exec_()
+            # Now turn it into the appropriate object
+            query.next()
+            first = query.value(0).toString()
+            last = query.value(1).toString()
+            address = query.value(2).toString()
+            city = query.value(3).toString()
+            postal = query.value(4).toString()
+            daytimePhone = query.value(5).toString()
+            eveningPhone = query.value(6).toString()
+            email = query.value(7).toString()
+            retrievedTeacher = Teacher(first, last, address, city, postal, daytimePhone, eveningPhone, email)
+            return retrievedTeacher
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "getTeacherFromId FAILED\n\tquery: {0}\
+                \n\tvalues: {1}\n\terror: {2}".format(query.lastQuery(), numericId, e)
+
+    def getLastTeacherId(self):
+        """Get the id of the most recently added Teacher"""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("SELECT id from teachers WHERE id=(SELECT MAX(id) FROM teachers)")
+            query.next()
+            teacherId = query.value(0).toString()
+            return teacherId
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "getLastTeacherIdFAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)

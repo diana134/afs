@@ -119,7 +119,7 @@
        <item row="0" column="0">
         <widget class="QPushButton" name="chooseTeacherBtn">
          <property name="enabled">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <property name="text">
           <string>Choose...</string>

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addEntryDialog.ui'
 #
-# Created: Mon Sep 22 18:29:24 2014
+# Created: Tue Sep 23 01:40:03 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -73,7 +73,7 @@ class Ui_AddEntryDialog(object):
         self.gridLayout_3 = QtGui.QGridLayout()
         self.gridLayout_3.setObjectName(_fromUtf8("gridLayout_3"))
         self.chooseTeacherBtn = QtGui.QPushButton(AddEntryDialog)
-        self.chooseTeacherBtn.setEnabled(False)
+        self.chooseTeacherBtn.setEnabled(True)
         self.chooseTeacherBtn.setObjectName(_fromUtf8("chooseTeacherBtn"))
         self.gridLayout_3.addWidget(self.chooseTeacherBtn, 0, 0, 1, 1)
         self.createNewTeacherBtn = QtGui.QPushButton(AddEntryDialog)
