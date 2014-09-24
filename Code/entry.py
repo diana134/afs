@@ -4,7 +4,7 @@ from utilities import requiredFieldIsGood, optionalFieldIsGood
 
 class Entry(object):
     """holds Entry data as strings"""
-    def __init__(self, participantID=None, teacherID=None, discipline=None, level=None, classNumber=None, className=None, title=None, performanceTime=None, style=None, composer=None, opus=None, no=None, movement=None, arranger=None, artist=None, instrument=None, author=None):
+    def __init__(self, participantID="", teacherID="", discipline="", level="", classNumber="", className="", title="", performanceTime="", style="", composer="", opus="", no="", movement="", arranger="", artist="", instrument="", author=""):
         # Deal with getting QStrings from UI
         # TODO: dealt with at ui level now
         self.participantID = str(participantID) if participantID is not None else None

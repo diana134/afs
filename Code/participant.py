@@ -19,7 +19,7 @@ class Participant(object):
 
 class SoloParticipant(Participant):
     """Holds participant data (name, address, contact info, etc) as strings"""
-    def __init__(self, first=None, last=None, address=None, town=None, postal=None, home=None, cell=None, email=None, dob=None):
+    def __init__(self, first="", last="", address="", town="", postal="", home="", cell="", email="", dob=""):
         # Deal with getting QStrings from UI
         # TODO: don't need to str anymore, handled at ui
         self.first = str(first) if first is not None else None
@@ -77,7 +77,7 @@ class SoloParticipant(Participant):
 
 class GroupParticipant(Participant):
     """Holds GroupParticipant data (name, size, age, etc) as strings"""
-    def __init__(self, groupName=None, groupSize=None, schoolGrade=None, averageAge=None, participants=None):
+    def __init__(self, groupName="", groupSize="", schoolGrade="", averageAge="", participants=""):
         # TODO: don't need to str anymore, handled at ui
         self.groupName = str(groupName) if groupName is not None else None
         self.groupSize = str(groupSize) if groupSize is not None else None

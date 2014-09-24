@@ -4,7 +4,7 @@ from utilities import requiredFieldIsGood, optionalFieldIsGood
 
 class Teacher(object):
     """Holds Teacher data (name, address, contact info, etc) as strings"""
-    def __init__(self, first=None, last=None, address=None, city=None, postal=None, daytimePhone=None, eveningPhone=None, email=None):
+    def __init__(self, first="", last="", address="", city="", postal="", daytimePhone="", eveningPhone="", email=""):
         # Deal with getting QStrings from UI
         # TODO: don't need to str anymore, handled at ui
         self.first = str(first) if first is not None else None
