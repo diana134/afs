@@ -7,6 +7,7 @@ from PyQt4.QtSql import QSqlDatabase, QSqlTableModel, QSqlQuery
 
 from participant import SoloParticipant, GroupParticipant
 from teacher import Teacher
+from entry import Entry
 
 CONFIG_DATABASE_PATH = "../Database/"
 CONFIG_TEST_DATABASE_PATH = "../../Database/"
@@ -241,3 +242,40 @@ class DatabaseInteraction(object):
         except Exception, e:
             # TODO: log this instead of printing to console
             print "getLastTeacherIdFAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+
+    #####
+
+    def getAllEntries(self):
+        """Retrieve all the Entries and return them in a list"""
+        entryList = []
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("SELECT participant_id, teacher_id, discipline, level, class_number, \
+                class_name, title, performance_time, style, composer, opus, no, movement, arranger, \
+                artist, instrument, author FROM entries")
+            query.exec_()
+            while query.next() == True:
+                participantID = query.value(0).toString()
+                teacherID = query.value(1).toString()
+                discipline = query.value(2).toString()
+                level = query.value(3).toString()
+                classNumber = query.value(4).toString()
+                className = query.value(5).toString()
+                title = query.value(6).toString()
+                performanceTime = query.value(7).toString()
+                style = query.value(8).toString()
+                composer = query.value(9).toString()
+                opus = query.value(10).toString()
+                no = query.value(11).toString()
+                movement = query.value(12).toString()
+                arranger = query.value(13).toString()
+                artist = query.value(14).toString()
+                instrument = query.value(15).toString()
+                author = query.value(16).toString()
+                ee = Entry(participantID, teacherID, discipline, level, classNumber, className, title, performanceTime, style, composer, opus, no, movement, arranger, artist, instrument, author)
+                entryList.append(ee)
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "getLastTeacherIdFAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+        return entryList
+        
