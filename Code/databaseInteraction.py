@@ -185,25 +185,27 @@ class DatabaseInteraction(object):
         """Get the id of the most recently added SoloParticipant"""
         try:
             query = QSqlQuery(self.conn)
-            query.prepare("SELECT id from soloparticipants WHERE id=(SELECT MAX(id) FROM soloparticipants)")
+            query.exec_("SELECT MAX(id) FROM soloparticipants")
             query.next()
             participantId = query.value(0).toString()
             return "s" + participantId
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "getLastSoloParticipantId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            print "getLastSoloParticipantId FAILED\n\tquery: {0}\
+                \n\terror: {1}".format(query.lastQuery(), e)
 
     def getLastGroupParticipantId(self):
         """Get the id of the most recently added GroupParticipant"""
         try:
             query = QSqlQuery(self.conn)
-            query.prepare("SELECT id from groupparticipants WHERE id=(SELECT MAX(id) FROM groupparticipants)")
+            query.exec_("SELECT MAX(id) FROM groupparticipants")
             query.next()
             participantId = query.value(0).toString()
             return "g" + participantId
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "getLastSoloParticipantId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            print "getLastSoloParticipantId FAILED\n\tquery: {0}\
+                \n\terror: {1}".format(query.lastQuery(), e)
 
     def getTeacherFromId(self, teacherId):
         """Retrieve the appropriate Teacher from the given id"""
@@ -241,7 +243,7 @@ class DatabaseInteraction(object):
             return teacherId
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "getLastTeacherIdFAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            print "getLastTeacherId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
 
     #####
 
@@ -274,8 +276,7 @@ class DatabaseInteraction(object):
                 author = query.value(16).toString()
                 ee = Entry(participantID, teacherID, discipline, level, classNumber, className, title, performanceTime, style, composer, opus, no, movement, arranger, artist, instrument, author)
                 entryList.append(ee)
+            return entryList
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "getLastTeacherIdFAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
-        return entryList
-        
+            print "getAllEntries FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
