@@ -1,14 +1,22 @@
 """The Event object used by a Schedule"""
 
 import sys
+import datetime
 
-JUDGINGTIMEPERENTRY = 60 # seconds
-FINALADJUDICATIONTIMEPERENTRY = 180 # seconds
+JUDGINGTIMEPERENTRY = datetime.timedelta(seconds=60)
+FINALADJUDICATIONTIMEPERENTRY = datetime.timedelta(seconds=180)
 
 def convertTimeToSeconds(timeString):
     """convert MM:SS to seconds"""
     tokens = timeString.split(':')
     return int(tokens[0]) * 60 + int(tokens[1])
+
+def convertStringToTimedelta(timeString):
+    """convert 'M:SS' to timedelta"""
+    tokens = timeString.split(':')
+    minutes = int(tokens[0])
+    seconds = int(tokens[1])
+    return datetime.timedelta(minutes=minutes, seconds=seconds)
 
 class Event(object):
     """Used by a Schedule"""
@@ -16,16 +24,15 @@ class Event(object):
         self.classNumber = classNumber
         self.className = "" # TODO: is this necessary?
         self.entries = []
-        self.totalTime = 0 # in seconds
+        self.totalTime = datetime.timedelta(seconds=0)
 
     def calculateTotalTime(self):
         """calculate the total time this Event is likely to take"""
-        performanceTime = 0
+        performanceTime = datetime.timedelta()
         for entry in self.entries:
-            timeInSeconds = convertTimeToSeconds(entry.performanceTime)
-            performanceTime += timeInSeconds
-        judgingTime = len(self.entries) * JUDGINGTIMEPERENTRY
-        finalAdjudicationTime = len(self.entries) * FINALADJUDICATIONTIMEPERENTRY
+            performanceTime += convertStringToTimedelta(entry.performanceTime)
+        judgingTime = JUDGINGTIMEPERENTRY * len(self.entries)
+        finalAdjudicationTime = FINALADJUDICATIONTIMEPERENTRY * len(self.entries)
         self.totalTime = performanceTime + judgingTime + finalAdjudicationTime
 
     def addEntry(self, entry):

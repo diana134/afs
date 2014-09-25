@@ -14,7 +14,7 @@ class Schedule(object):
         # As a file? In the DB? Pickle it?
         pass
 
-    def checkForOverlappingEvents(self):
+    def countOverlappingEvents(self):
         """counts the number of overlapping events"""
         overlapCount = 0
         for i in range(len(self.arrangement)):
@@ -60,13 +60,30 @@ class Schedule(object):
                     occurances += 1
             return occurances
 
+    def countOverbookedParticipants(self):
+        """counts the number of times Participants occur in concsecutive Events"""
+        overlapCount = 0
+        for i in range(len(self.arrangement)):
+            # Make sure there is at least one Event left in the arrangement
+            if i < len(self.arrangement) - 1:
+                event = self.arrangement[i][1]
+                nextEvent = self.arrangement[i+1][1]
+                # get participantIds for this event and the next one
+                eventParticipants = event.getParticipantIds()
+                nextEventParticipants = nextEvent.getParticipantIds()
+                # check if any of this Event's Participants are in the next Event too
+                for pId in eventParticipants:
+                    if pId in nextEventParticipants:
+                        overlapCount += 1
+        return overlapCount
+
     def fitness(self):
         """assesses the 'goodness' of the arrangement based on participants not being \
         overbooked (constraint), schools being together, and young kids being in the morning(?)"""
         # TODO: make sure arrangement is sorted by time before beginning
         
         # Ensure Events do no overlap
-        overlapCount = self.checkForOverlappingEvents()
+        overlapCount = self.countOverlappingEvents()
         if overlapCount > 0:
             # mark as infeasible
             # decrease fitness based on number of overlapping Events

@@ -8,8 +8,8 @@ import datetime
 from schedule import Schedule
 from event import Event
 
-class CheckForOverlappingEventsTests(unittest.TestCase):
-    """tests checkForOverlappingEvents"""
+class CountOverlappingEventsTests(unittest.TestCase):
+    """tests countOverlappingEvents"""
     def setUp(self):
         # Make some Events and fudge the totalTime
         self.e1 = Event("1")
@@ -27,7 +27,7 @@ class CheckForOverlappingEventsTests(unittest.TestCase):
         s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 2), self.e2))
         s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 4), self.e3))
         # Now the actual test
-        count = s.checkForOverlappingEvents()
+        count = s.countOverlappingEvents()
         self.assertEqual(count, 0)
 
     def testOverlapsOnStartEndTimes(self):
@@ -38,7 +38,7 @@ class CheckForOverlappingEventsTests(unittest.TestCase):
         s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 1), self.e2))
         s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 2), self.e3))
         # Now the actual test
-        count = s.checkForOverlappingEvents()
+        count = s.countOverlappingEvents()
         self.assertEqual(count, 2)
 
     def testOverlapsOnSameStartTime(self):
@@ -49,7 +49,7 @@ class CheckForOverlappingEventsTests(unittest.TestCase):
         s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 0), self.e2))
         s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 0), self.e3))
         # Now the actual test
-        count = s.checkForOverlappingEvents()
+        count = s.countOverlappingEvents()
         self.assertEqual(count, 2)
 
 class IsStartTimeTooEarlyTests(unittest.TestCase):
