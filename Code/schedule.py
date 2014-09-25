@@ -42,6 +42,23 @@ class Schedule(object):
         else:
             return False
 
+    def occursDuringGivenTime(self, beginTime, endTime):
+        """checks if any of the Events in the arrangement have start or \
+        end times that are between beginTime and endTime"""
+        # Ensure endTime is later than beginTime
+        if endTime <= beginTime:
+            raise Exception("endTime <= beginTime in Schedule.occursDuringGivenTime")
+        else:
+            for time, event in self.arrangement:
+                # if event starts between beginTime and endTime
+                if time >= beginTime and time < endTime:
+                    return True
+                # if event ends between beginTime and endTime
+                if time + event.totalTime >= beginTime and time + event.totalTime < endTime:
+                    return True
+            # if we made it here, nothing started or ended between beginTime and endTime
+            return False
+
     def fitness(self):
         """assesses the 'goodness' of the arrangement based on participants not being \
         overbooked (constraint), schools being together, and young kids being in the morning(?)"""
@@ -73,10 +90,37 @@ class Schedule(object):
             pass
 
         # Ensure Events do not begin or end during lunch time
+        lunchStartTime = None
+        lunchEndTime = None
+        if self.occursDuringGivenTime(lunchStartTime, lunchEndTime):
+            # Mark as infeasible
+            # decrease fitness
+            pass
+        else:
+            # increase fitness
+            pass
 
         # Ensure Events do not begin or end during dinner time
+        dinnerStartTime = None
+        dinnerEndTime = None
+        if self.occursDuringGivenTime(dinnerStartTime, dinnerEndTime):
+            # Mark as infeasible
+            # decrease fitness
+            pass
+        else:
+            # increase fitness
+            pass
 
         # Ensure Events do not begin or end at night i.e. (between 9pm one night and 9am the next day)
+        dayEndTime = None
+        nextDayStartTime = None
+        if self.occursDuringGivenTime(dayEndTime, nextDayStartTime):
+            # Mark as infeasible
+            # decrease fitness
+            pass
+        else:
+            # increase fitness
+            pass
 
         # Ensure SoloParticipants are not in concsecutive Events
 
