@@ -35,6 +35,13 @@ class Schedule(object):
         else:
             return False
 
+    def isEndTimeTooLate(self, endDateTime):
+        """checks if the arrangement ends too late"""
+        if self.arrangement[-1][0] + self.arrangement[-1][1].totalTime >= endDateTime:
+            return True
+        else:
+            return False
+
     def fitness(self):
         """assesses the 'goodness' of the arrangement based on participants not being \
         overbooked (constraint), schools being together, and young kids being in the morning(?)"""
@@ -46,13 +53,24 @@ class Schedule(object):
         # TODO: decrease fitness based on number of overlapping Events
 
         # Ensure arrangement does not begin before the start date/time
-        startDateTime = None # TODO: where does this come from
+        startDateTime = None # TODO: where does this come from?
         if self.isStartTimeTooEarly(startDateTime):
             # Mark as infeasible
             # decrease fitness
             pass
+        else:
+            # increase fitness
+            pass
 
         # Ensure arrangement does not end after end date/time
+        endDateTime = None # TODO: where does this come from?
+        if self.isEndTimeTooLate(endDateTime):
+            # Mark as infeasible
+            # decrease fitness
+            pass
+        else:
+            # increase fitness
+            pass
 
         # Ensure Events do not begin or end during lunch time
 

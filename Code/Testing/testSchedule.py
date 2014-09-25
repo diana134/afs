@@ -89,6 +89,43 @@ class IsStartTimeTooEarlyTests(unittest.TestCase):
         # Test
         self.assertFalse(s.isStartTimeTooEarly(startDateTime))
 
+class IsEndTimeTooLateTests(unittest.TestCase):
+    """tests IsEndTimeTooLate"""
+    def setUp(self):
+        # Make an Event and fudge the totalTime
+        self.e1 = Event("1")
+        self.e1.totalTime = datetime.timedelta(minutes=1)
+
+    def testEarlyTimeIsFalse(self):
+        """an early end time returns false"""
+        # Make a Schedule
+        s = Schedule()
+        s.arrangement.append((datetime.datetime(2014, 1, 1, 20, 0, 0), self.e1))
+        # Make a startDateTime later than the last Event ends
+        endDateTime = datetime.datetime(2014, 1, 1, 21, 0, 0)
+        # Test
+        self.assertFalse(s.isEndTimeTooLate(endDateTime))
+
+    def testOnTimeIsTrue(self):
+        """an on time end time returns true"""
+        # Make a Schedule
+        s = Schedule()
+        s.arrangement.append((datetime.datetime(2014, 1, 1, 20, 59, 0), self.e1))
+        # Make a startDateTime the same time as the last Event ends
+        endDateTime = datetime.datetime(2014, 1, 1, 21, 0, 0)
+        # Test
+        self.assertTrue(s.isEndTimeTooLate(endDateTime))
+
+    def testLateTimeIsTrue(self):
+        """a late end time returns true"""
+        # Make a Schedule
+        s = Schedule()
+        s.arrangement.append((datetime.datetime(2014, 1, 1, 22, 0, 0), self.e1))
+        # Make a endDateTime earlier than the last Event
+        endDateTime = datetime.datetime(2014, 1, 1, 21, 0, 0)
+        # Test
+        self.assertTrue(s.isEndTimeTooLate(endDateTime))
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2) # for slightly more detailed results
