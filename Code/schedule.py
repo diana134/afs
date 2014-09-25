@@ -30,6 +30,7 @@ class Schedule(object):
 
     def isStartTimeTooEarly(self, startDateTime):
         """checks if the arrangement starts too early"""
+        # TODO is this still useful?
         if self.arrangement[0][0] < startDateTime:
             return True
         else:
@@ -37,14 +38,15 @@ class Schedule(object):
 
     def isEndTimeTooLate(self, endDateTime):
         """checks if the arrangement ends too late"""
+        # TODO is this still useful?
         if self.arrangement[-1][0] + self.arrangement[-1][1].totalTime >= endDateTime:
             return True
         else:
             return False
 
-    def occursDuringGivenTime(self, beginTime, endTime):
-        """checks if any of the Events in the arrangement have start or \
-        end times that are between beginTime and endTime"""
+    def occurancesDuringGivenTimes(self, beginTime, endTime):
+        """counts the number of Events that start or finish between beginTime and endTime"""
+        occurances = 0
         # Ensure endTime is later than beginTime
         if endTime <= beginTime:
             raise Exception("endTime <= beginTime in Schedule.occursDuringGivenTime")
@@ -52,12 +54,11 @@ class Schedule(object):
             for time, event in self.arrangement:
                 # if event starts between beginTime and endTime
                 if time >= beginTime and time < endTime:
-                    return True
+                    occurances += 1
                 # if event ends between beginTime and endTime
-                if time + event.totalTime >= beginTime and time + event.totalTime < endTime:
-                    return True
-            # if we made it here, nothing started or ended between beginTime and endTime
-            return False
+                elif time + event.totalTime >= beginTime and time + event.totalTime < endTime:
+                    occurances += 1
+            return occurances
 
     def fitness(self):
         """assesses the 'goodness' of the arrangement based on participants not being \
@@ -66,65 +67,56 @@ class Schedule(object):
         
         # Ensure Events do no overlap
         overlapCount = self.checkForOverlappingEvents()
-        # TODO: if overlapCount > 0 mark as infeasible
-        # TODO: decrease fitness based on number of overlapping Events
+        if overlapCount > 0:
+            # mark as infeasible
+            # decrease fitness based on number of overlapping Events
+            pass
 
-        # Ensure arrangement does not begin before the start date/time
+        # Ensure arrangement occurs entirely within given times
         startDateTime = None # TODO: where does this come from?
-        if self.isStartTimeTooEarly(startDateTime):
+        endDateTime = None
+        goodOccurances = self.occurancesDuringGivenTimes(startDateTime, endDateTime)
+        erroneousOccurances = abs(len(self.arrangement) - goodOccurances)
+        if erroneousOccurances > 0:
             # Mark as infeasible
-            # decrease fitness
-            pass
-        else:
-            # increase fitness
-            pass
-
-        # Ensure arrangement does not end after end date/time
-        endDateTime = None # TODO: where does this come from?
-        if self.isEndTimeTooLate(endDateTime):
-            # Mark as infeasible
-            # decrease fitness
-            pass
-        else:
-            # increase fitness
+            # decrease fitness based on number of Events not occuring within the specified time
             pass
 
         # Ensure Events do not begin or end during lunch time
         lunchStartTime = None
         lunchEndTime = None
-        if self.occursDuringGivenTime(lunchStartTime, lunchEndTime):
+        lunchOccurances = self.occurancesDuringGivenTimes(lunchStartTime, lunchEndTime)
+        if lunchOccurances > 0:
             # Mark as infeasible
-            # decrease fitness
-            pass
-        else:
-            # increase fitness
+            # decrease fitness based on number of Events occuring during lunch
             pass
 
         # Ensure Events do not begin or end during dinner time
         dinnerStartTime = None
         dinnerEndTime = None
-        if self.occursDuringGivenTime(dinnerStartTime, dinnerEndTime):
+        dinnerOccurances = self.occurancesDuringGivenTimes(dinnerStartTime, dinnerEndTime)
+        if dinnerOccurances > 0:
             # Mark as infeasible
-            # decrease fitness
-            pass
-        else:
-            # increase fitness
+            # decrease fitness based on number of Events occuring during dinner
             pass
 
         # Ensure Events do not begin or end at night i.e. (between 9pm one night and 9am the next day)
         dayEndTime = None
         nextDayStartTime = None
-        if self.occursDuringGivenTime(dayEndTime, nextDayStartTime):
+        nightOccurances = self.occurancesDuringGivenTimes(dayEndTime, nextDayStartTime)
+        if nightOccurances > 0:
             # Mark as infeasible
-            # decrease fitness
-            pass
-        else:
-            # increase fitness
+            # decrease fitness based on number of Events occuring during the night
             pass
 
         # Ensure SoloParticipants are not in concsecutive Events
+        # for each event
+            # get Participants for this event and the next one
+            # for each Participant in this event
+                # if it's in the list of Participants for the next one
+                    # boo!
 
-        # Ensure GroupParticipants from same school are in consecutive events
+        # Ensure GroupParticipants from same school are in consecutive events(?)
         # (does not apply to anything with constume changes i.e. Dance, Musical Theatre)
 
         # Bonus points for Events for young ages being in the morning(?)
