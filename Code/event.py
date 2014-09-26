@@ -39,3 +39,10 @@ class Event(object):
         """add an Entry to this Event and recalculate the totalTime"""
         self.entries.append(entry)
         self.calculateTotalTime()
+
+    def getParticipantIds(self):
+        """returns a list of the participantIds for the Entries"""
+        idList = []
+        for entry in self.entries:
+            idList.append(entry.participantID)
+        return idList

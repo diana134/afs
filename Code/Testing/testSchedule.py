@@ -7,6 +7,7 @@ import datetime
 
 from schedule import Schedule
 from event import Event
+from entry import Entry
 
 class CountOverlappingEventsTests(unittest.TestCase):
     """tests countOverlappingEvents"""
@@ -187,6 +188,68 @@ class OccurancesDuringGivenTimesTests(unittest.TestCase):
         endTime = datetime.datetime(2014, 1, 1, 0, 1)
         # Test
         self.assertEqual(self.s.occurancesDuringGivenTimes(beginTime, endTime), 0)
+
+class CountOverbookedSoloParticipantsTests(unittest.TestCase):
+    """tests for CountOverbookedSoloParticipantsTests"""
+    def setUp(self):
+        # Make some Events
+        self.event1 = Event("1")
+        self.event2 = Event("2")
+        self.event3 = Event("3")
+        # Make a Schedule
+        self.s = Schedule()
+        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 0, 0), self.event1))
+        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 2, 0, 0), self.event2))
+        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 3, 0, 0), self.event3))
+        # Make some Entries with different particpants
+        self.entry1 = Entry(participantID="s1", performanceTime="1:00")
+        self.entry2 = Entry(participantID="g2", performanceTime="1:00")
+        self.entry3 = Entry(participantID="g3", performanceTime="1:00")
+
+    def testAllEventsHaveSameParticipant(self):
+        """should return 2"""
+        # Give all the Events an Entry with the same ParticipantID
+        self.event1.addEntry(self.entry1)
+        self.event2.addEntry(self.entry1)
+        self.event3.addEntry(self.entry1)
+        # Test
+        self.assertEqual(self.s.countOverbookedSoloParticipants(), 2)
+
+    def testConsecutiveEventsHaveSameParticipant(self):
+        """should return 1"""
+        # Give 2 consecutive Events an Entry with the same ParticipantID
+        self.event1.addEntry(self.entry1)
+        self.event2.addEntry(self.entry1)
+        self.event3.addEntry(self.entry2)
+        # Test
+        self.assertEqual(self.s.countOverbookedSoloParticipants(), 1)
+
+    def testParticipantSeparatedByEvent(self):
+        """should return 0"""
+        # Give all the outside Events the same Participant
+        self.event1.addEntry(self.entry1)
+        self.event2.addEntry(self.entry2)
+        self.event3.addEntry(self.entry1)
+        # Test
+        self.assertEqual(self.s.countOverbookedSoloParticipants(), 0)
+
+    def testAllEventsHaveDifferntParticipants(self):
+        """should return 0"""
+        # Give all the Events a differnt participant
+        self.event1.addEntry(self.entry1)
+        self.event2.addEntry(self.entry2)
+        self.event3.addEntry(self.entry3)
+        # Test
+        self.assertEqual(self.s.countOverbookedSoloParticipants(), 0)
+
+    def testGroupParticipantsNotCounted(self):
+        """should return 0"""
+        # Give 2 consecutive events the same GroupParticipant
+        self.event1.addEntry(self.entry1)
+        self.event2.addEntry(self.entry2)
+        self.event3.addEntry(self.entry2)
+        # Test
+        self.assertEqual(self.s.countOverbookedSoloParticipants(), 0)
 
 if __name__ == '__main__':
     unittest.main(verbosity=2) # for slightly more detailed results

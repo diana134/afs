@@ -60,8 +60,8 @@ class Schedule(object):
                     occurances += 1
             return occurances
 
-    def countOverbookedParticipants(self):
-        """counts the number of times Participants occur in concsecutive Events"""
+    def countOverbookedSoloParticipants(self):
+        """counts the number of times SoloParticipants occur in concsecutive Events"""
         overlapCount = 0
         for i in range(len(self.arrangement)):
             # Make sure there is at least one Event left in the arrangement
@@ -73,7 +73,7 @@ class Schedule(object):
                 nextEventParticipants = nextEvent.getParticipantIds()
                 # check if any of this Event's Participants are in the next Event too
                 for pId in eventParticipants:
-                    if pId in nextEventParticipants:
+                    if pId[0] == 's' and pId in nextEventParticipants:
                         overlapCount += 1
         return overlapCount
 
@@ -127,11 +127,11 @@ class Schedule(object):
             pass
 
         # Ensure SoloParticipants are not in concsecutive Events
-        # for each event
-            # get Participants for this event and the next one
-            # for each Participant in this event
-                # if it's in the list of Participants for the next one
-                    # boo!
+        soloParticipantOverlaps = self.countOverbookedSoloParticipants()
+        if soloParticipantOverlaps > 0:
+            # Mark as infeasible
+            # decrease fitness based on number of solo participant overlaps
+            pass
 
         # Ensure GroupParticipants from same school are in consecutive events(?)
         # (does not apply to anything with constume changes i.e. Dance, Musical Theatre)

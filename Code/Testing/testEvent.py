@@ -5,7 +5,7 @@ sys.path.insert(0, '../')
 import unittest
 import datetime
 
-from event import Event, JUDGINGTIMEPERENTRY, FINALADJUDICATIONTIMEPERENTRY
+from event import *
 from entry import Entry
 
 class EventTests(unittest.TestCase):
@@ -25,6 +25,11 @@ class EventTests(unittest.TestCase):
         self.testEvent.addEntry(entry)
         timeShouldBe = datetime.timedelta(minutes=1) + JUDGINGTIMEPERENTRY + FINALADJUDICATIONTIMEPERENTRY
         self.assertEqual(self.testEvent.totalTime, timeShouldBe)
+
+    def testConvertStringToTimeDelta(self):
+        """test that string '1:42' returns a timedelta with 1 minute, 42 seconds"""
+        resultDelta = convertStringToTimedelta("1:42")
+        self.assertEqual(resultDelta, datetime.timedelta(minutes=1, seconds=42))
 
 if __name__ == '__main__':
     unittest.main(verbosity=2) # for slightly more detailed results
