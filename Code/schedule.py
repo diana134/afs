@@ -1,13 +1,47 @@
 """The Schedule object used by the scheduling algorithm"""
 
 import sys
+from random import randrange, shuffle
+import datetime
 
 class Schedule(object):
     """Used by the scheduling algorithm"""
-    def __init__(self):
-        self.arrangement = [] # list of (dateTime, Event) tuples (remember that these are immutable)
-        # TODO: time can only change +/- 5 minutes (300 seconds)
-        # TODO have a init that randomly makes an arrangement?
+    def __init__(self, arrangement=None, startTime=None, endTime=None):
+        self.arrangement = arrangement if arrangement is not None else [] # list of (dateTime, Event) tuples (remember that these are immutable)
+        self.startTime = startTime # datetime object of the time this Schedule should start
+        self.endTime = endTime # datetime object of the time this Schedule should end by
+        # TODO: time can only change +/- 5 minutes (300 seconds)        
+
+    @classmethod
+    def makeNewRandomSchedule(cls, eventList, startTime, endTime):
+        """Returns a new random Schedule sorted by start times"""
+        arrangement = []
+        shuffle(eventList)
+        for entry in eventList:
+            # Generate a random start time between self.startTime and self.endTime
+            arrangement.append((Schedule.generateStartTimeInIncrements(startTime, endTime), entry))
+        schedule = Schedule(arrangement=arrangement, startTime=startTime, endTime=endTime)
+        # Sort the arrangement by start times
+        schedule.sort()
+        return schedule
+
+    @staticmethod
+    def generateStartTimeInIncrements(startTime, endTime):
+        """Returns a datetime object between startTime and endTime in 5 minute increments"""
+        # Ensure endTime is later than beginTime
+        if endTime <= startTime:
+            raise Exception("endTime <= startTime in Schedule.generateStartTimeInIncrements")
+        delta = endTime - startTime
+        int_delta = delta.total_seconds()
+        randomSecond = randrange(0, int_delta, 300)
+        # Round to nearest multiple of 300 seconds (5 minutes)
+        # randomSecond = round(randomSecond / 300.0) * 300.0
+        return startTime + datetime.timedelta(seconds=randomSecond)
+
+    def sort(self):
+        """Sorts self.arrangement in place in order of start time"""
+        # Magic code from stackoverflow
+        self.arrangement.sort(key=lambda tup: tup[0]) 
 
     def save(self):
         """save this schedule"""

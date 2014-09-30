@@ -9,6 +9,69 @@ from schedule import Schedule
 from event import Event
 from entry import Entry
 
+class MakeNewRandomScheduleTests(unittest.TestCase):
+    """tests for MakeNewRandomScheduleTests"""
+
+    def testFactory(self):
+        """test that the factory method generates a new Schedule with times and Events"""
+        startTime = datetime.datetime(2014, 1, 1, 12)
+        endTime = datetime.datetime(2014, 1, 1, 13)
+        eventList = [Event("1"), Event("2"), Event("3")]
+        s = Schedule.makeNewRandomSchedule(eventList, startTime, endTime)
+        # Make sure all Events were added
+        self.assertEqual(len(s.arrangement), 3)
+        # Make sure all Events have times
+        for pair in s.arrangement:
+            self.assertIsNotNone(pair[0])
+        # Make sure the times are sorted
+        for i in range(len(s.arrangement) - 1):
+            time = s.arrangement[i][0]
+            nextTime = s.arrangement[i+1][0]
+            self.assertLessEqual(time, nextTime)
+    
+class GenerateStartTimeInIncrements(unittest.TestCase):
+    """tests for GenerateStartTimeInIncrements"""
+    
+    def testSameStartEnd(self):
+        """test that the same start and end times throws an exception"""
+        startTime = datetime.datetime(2014, 1, 1, 12)
+        endTime = datetime.datetime(2014, 1, 1, 12)
+        self.assertRaises(Exception, Schedule.generateStartTimeInIncrements, startTime, endTime)
+
+    def testEndBeforeStart(self):
+        """test that an end time before the start time throws an exception"""
+        startTime = datetime.datetime(2014, 1, 1, 12)
+        endTime = datetime.datetime(2014, 1, 1, 11)
+        self.assertRaises(Exception, Schedule.generateStartTimeInIncrements, startTime, endTime)
+
+    def testProperRounding(self):
+        """test that given times 10 minutes apart, only 3 results are possible"""
+        startTime = datetime.datetime(2014, 1, 1, 12)
+        endTime = datetime.datetime(2014, 1, 1, 12, 10)
+        possibleResults = [datetime.datetime(2014, 1, 1, 12), datetime.datetime(2014, 1, 1, 12, 5), 
+            datetime.datetime(2014, 1, 1, 12, 10)]
+        # Try 10 times
+        for _ in xrange(1, 10):
+            time = Schedule.generateStartTimeInIncrements(startTime, endTime)
+            self.assertIn(time, possibleResults)
+
+class Sort(unittest.TestCase):
+    """test for Sort"""
+    def setUp(self):
+        # Make a Schedule
+        self.s = Schedule()
+        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 3), Event("1")))
+        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 2), Event("2")))
+        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 1), Event("3")))
+
+    def testSortWorks(self):
+        """test that each time is <= the next time"""
+        self.s.sort()
+        for i in range(len(self.s.arrangement) - 1):
+            time = self.s.arrangement[i][0]
+            nextTime = self.s.arrangement[i+1][0]
+            self.assertLessEqual(time, nextTime)
+
 class CountOverlappingEventsTests(unittest.TestCase):
     """tests countOverlappingEvents"""
     def setUp(self):
@@ -221,6 +284,8 @@ class CountOverbookedSoloParticipantsTests(unittest.TestCase):
         self.event1.addEntry(self.entry1)
         self.event2.addEntry(self.entry1)
         self.event3.addEntry(self.entry2)
+        # for thing in self.s.arrangement:
+        #     print thing
         # Test
         self.assertEqual(self.s.countOverbookedSoloParticipants(), 1)
 

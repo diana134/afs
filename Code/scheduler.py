@@ -24,6 +24,7 @@ class Scheduler(object):
     """Handles the scheduling of all the Events"""
     def __init__(self, db):
         self.db = db
+        self.population = [] # this holds the population of potential schedules
         
     def process(self):
         """The big fancy algorithm"""
@@ -33,6 +34,10 @@ class Scheduler(object):
         eventList = sortEntriesByClass(entryList)
         # Now start making Schedules
         # Initialize the population
+        # there are an awful lot of ways the events can be ordered, 
+        # so just start with 1000 and see where that gets us
+        for _ in xrange(1, 1000):
+            self.population.append(Schedule.makeNewRandomSchedule(eventList, startTime, endTime))
 
         done = False
         while not done:
