@@ -1,6 +1,7 @@
 """Contains the scheduling algorithm and all its bits"""
 
 import sys
+import random
 
 from schedule import Schedule
 from event import Event
@@ -25,6 +26,52 @@ class Scheduler(object):
     def __init__(self, db):
         self.db = db
         self.population = [] # this holds the population of potential schedules
+
+    @staticmethod
+    def mate(parents):
+        """mates each pair of parents and returns a list of offspring"""
+        offspring = []
+        for i in xrange(0, len(parents) - 1, 2):
+            mom = parents[i].arrangement
+            dad = parents[i+1].arrangement
+            child1 = []
+            child2 = []
+            for j in xrange(len(mom)):
+                child1Time = None
+                child1Event = None
+                child2Time = None
+                child2Event = None
+                # Randomly choose which time each child will get
+                timeChoice = random.randint(0, 1)
+                if timeChoice == 0:
+                    # child1 gets mom's time, child2 gets dad's time
+                    child1Time = mom[j][0]
+                    child2Time = dad[j][0]
+                else:
+                    # child2 gets mom's time, child1 gets dad's time
+                    child1Time = dad[j][0]
+                    child2Time = mom[j][0]
+
+                # Randomly choose which event each child will get
+                eventChoice = random.randint(0, 1)
+                if eventChoice == 0:
+                    # child1 gets mom's event, child2 gets dad's event
+                    child1Event = mom[j][1]
+                    child2Event = dad[j][1]
+                else:
+                    # child2 gets mom's event, child1 gets dad's event
+                    child1Event = dad[j][1]
+                    child2Event = mom[j][1]
+
+                child1.append((child1Time, child1Event))
+                child2.append((child2Time, child2Event))
+
+            # Add the children to the list of offspring
+            childSched1 = Schedule(child1)
+            childSched2 = Schedule(child2)
+            offspring.append(childSched1)
+            offspring.append(childSched2)
+        return offspring
         
     def process(self):
         """The big fancy algorithm"""
@@ -41,13 +88,13 @@ class Scheduler(object):
 
         done = False
         while not done:
-            # Select individuals for mating
             # Sort population by fitness, descending
             self.population.sort(key=lambda x: x.fitness, reverse=True) # Magic code from stackoverflow
-            # Choose top 10% (100 individuals in this case)
+            # Choose top 10% for mating
             parents = self.population[:len(self.population)*0.1]
 
             # Mate individuals to produce offspring
+            offspring = mate(parents)
 
             # Mutate offspring
 
