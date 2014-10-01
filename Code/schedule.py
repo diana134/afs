@@ -97,19 +97,29 @@ class Schedule(object):
     def countOverbookedSoloParticipants(self):
         """counts the number of times SoloParticipants occur in concsecutive Events"""
         overlapCount = 0
-        for i in range(len(self.arrangement)):
-            # Make sure there is at least one Event left in the arrangement
-            if i < len(self.arrangement) - 1:
-                event = self.arrangement[i][1]
-                nextEvent = self.arrangement[i+1][1]
-                # get participantIds for this event and the next one
-                eventParticipants = event.getParticipantIds()
-                nextEventParticipants = nextEvent.getParticipantIds()
-                # check if any of this Event's Participants are in the next Event too
-                for pId in eventParticipants:
-                    if pId[0] == 's' and pId in nextEventParticipants:
-                        overlapCount += 1
+        for i in range(len(self.arrangement) - 1):
+            event = self.arrangement[i][1]
+            nextEvent = self.arrangement[i+1][1]
+            # get participantIds for this event and the next one
+            eventParticipants = event.getParticipantIds()
+            nextEventParticipants = nextEvent.getParticipantIds()
+            # check if any of this Event's Participants are in the next Event too
+            for pId in eventParticipants:
+                if pId[0] == 's' and pId in nextEventParticipants:
+                    overlapCount += 1
         return overlapCount
+
+    def calculateDowntime(self):
+        """add up the time when no Events are occurring"""
+        downtime = datetime.timedelta(seconds=0)
+        for i in range(len(self.arrangement) - 1):
+            time = self.arrangement[i][0]
+            event = self.arrangement[i][1]
+            nextTime = self.arrangement[i+1][0]
+            eventEnd = time + event.totalTime
+            if eventEnd < nextTime:
+                downtime = downtime + (nextTime - eventEnd)
+        return downtime
 
     def fitness(self):
         """assesses the 'goodness' of the arrangement based on participants not being \
@@ -167,7 +177,8 @@ class Schedule(object):
             pass
 
         # We want a minimum of downtime between Events
-
+        downtime = self.calculateDowntime()
+        # More downtime == lower fitness
 
         # Ensure GroupParticipants from same school are in consecutive events(?)
         # (does not apply to anything with constume changes i.e. Dance, Musical Theatre)

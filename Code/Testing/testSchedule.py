@@ -317,5 +317,43 @@ class CountOverbookedSoloParticipantsTests(unittest.TestCase):
         # Test
         self.assertEqual(self.s.countOverbookedSoloParticipants(), 0)
 
+class CalculateDowntimeTests(unittest.TestCase):
+    """test for CalculateDowntimeTests"""
+    def setUp(self):
+        # Make some Events and fudge the totalTime
+        self.e1 = Event("1")
+        self.e1.totalTime = datetime.timedelta(minutes=1)
+        self.e2 = Event("2")
+        self.e2.totalTime = datetime.timedelta(minutes=1)
+        self.e3 = Event("3")
+        self.e3.totalTime = datetime.timedelta(minutes=1)
+
+    def testEventsOverlapIsZeroDowntime(self):
+        """Events with overlapping start and end times should have no downtime between them"""
+        s = Schedule()
+        s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 0), self.e1))
+        s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 1), self.e2))
+        s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 2), self.e3))
+        downtime = s.calculateDowntime()
+        self.assertEqual(downtime, datetime.timedelta(seconds=0))
+
+    def testEventsAtSameTimeIsZeroDowntime(self):
+        """Events that start at the same time should have no downtime between them"""
+        s = Schedule()
+        s.arrangement.append((datetime.datetime(2014, 1, 1, 1), self.e1))
+        s.arrangement.append((datetime.datetime(2014, 1, 1, 1), self.e2))
+        s.arrangement.append((datetime.datetime(2014, 1, 1, 1), self.e3))
+        downtime = s.calculateDowntime()
+        self.assertEqual(downtime, datetime.timedelta(seconds=0))
+
+    def testEventsOneMinuteApartIsTwo(self):
+        """Three Events one minute apart should have 2 minutes downtime"""
+        s = Schedule()
+        s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 0), self.e1))
+        s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 2), self.e2))
+        s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 4), self.e3))
+        downtime = s.calculateDowntime()
+        self.assertEqual(downtime, datetime.timedelta(minutes=2))
+
 if __name__ == '__main__':
     unittest.main(verbosity=2) # for slightly more detailed results
