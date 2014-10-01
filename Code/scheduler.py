@@ -2,11 +2,12 @@
 
 import sys
 import random
+import datetime
 
 from schedule import Schedule
 from event import Event
 
-MUTATIONRATE = 0.25 # 25% chance of mutation
+MUTATIONRATE = 0.1 # 10% chance of mutation
 
 def sortEntriesByClass(entryList):
     """Sorts entryList into Events by class and returns a list"""
@@ -75,24 +76,31 @@ class Scheduler(object):
             offspring.append(childSched2)
         return offspring
 
-    # @staticmethod
-    # def mutate(offspring):
-    #     """modify the start time +/- 5 minutes and swap Events in each offspring"""
-    #     for child in offspring:
-    #         for i in xrange(len(child.arrangement)):
-    #             time, event = child.arrangement[i]
-    #             newTime = None
-    #             # Will this element mutate?
-    #             mutationChance = random.random()
-    #             if mutationChance <= MUTATIONRATE:
-    #                 # Change time +/- 5 min
-    #                 plusOrMinus = random.random()
-    #                 if plusOrMinus < 0.5:
-    #                     # Subtract 5 minutes
-    #                     newTime = time - datetime.timedelta(minutes=5)
-    #                 else:
-    #                     # Add 5 minutes
-    #                     newTime = time + datetime.timedelta(minutes=5)
+    @staticmethod
+    def mutate(offspring):
+        """takes a list of Schedules and modifies the start time +/-5 minutes and swaps Events in each"""
+        for child in offspring:
+            for i in xrange(len(child.arrangement)):
+                time, event = child.arrangement[i]
+                # Will this element mutate?
+                mutationChance = random.random()
+                if mutationChance <= MUTATIONRATE:
+                    # Change time +/- 5 min
+                    newTime = None
+                    plusOrMinus = random.random()
+                    if plusOrMinus < 0.5:
+                        # Subtract 5 minutes
+                        newTime = time - datetime.timedelta(minutes=5)
+                    else:
+                        # Add 5 minutes
+                        newTime = time + datetime.timedelta(minutes=5)
+                    child.arrangement[i][0] = newTime
+                    # Swap this Event with another
+                    swapTarget = random.randint(0, len(child.arrangement))
+                    tmpEvent = event
+                    child.arrangement[i][1] = child.arrangement[swapTarget][1]
+                    child.arrangement[swapTarget][1] = tmpEvent
+        return offspring # necessary? have we modified the original object? python is strange
         
     def process(self):
         """The big fancy algorithm"""
@@ -118,7 +126,7 @@ class Scheduler(object):
             offspring = self.mate(parents)
 
             # Mutate offspring
-            # mutatedOffspring = self.mutate(offspring)
+            mutatedOffspring = self.mutate(offspring) # have we modified the original offspring?
 
             # Add offspring to population (replace population?)
 
