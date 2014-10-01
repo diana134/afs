@@ -7,7 +7,7 @@ import datetime
 class Schedule(object):
     """Used by the scheduling algorithm"""
     def __init__(self, arrangement=None):
-        self.arrangement = arrangement if arrangement is not None else [] # list of (dateTime, Event) tuples (remember that these are immutable)
+        self.arrangement = arrangement if arrangement is not None else [] # list of [dateTime, Event] lists
         # self.startTime = startTime # datetime object of the time this Schedule should start
         # self.endTime = endTime # datetime object of the time this Schedule should end by
         self.fitness = 0 # closer to 0 is better
@@ -20,7 +20,7 @@ class Schedule(object):
         shuffle(eventList)
         for entry in eventList:
             # Generate a random start time between self.startTime and self.endTime
-            arrangement.append((Schedule.generateStartTimeInIncrements(startTime, endTime), entry))
+            arrangement.append([Schedule.generateStartTimeInIncrements(startTime, endTime), entry])
         schedule = Schedule(arrangement=arrangement)
         # Sort the arrangement by start times
         schedule.sort()

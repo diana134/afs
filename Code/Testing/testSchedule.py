@@ -60,9 +60,9 @@ class Sort(unittest.TestCase):
     def setUp(self):
         # Make a Schedule
         self.s = Schedule()
-        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 3), Event("1")))
-        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 2), Event("2")))
-        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 1), Event("3")))
+        self.s.arrangement.append([datetime.datetime(2014, 1, 1, 3), Event("1")])
+        self.s.arrangement.append([datetime.datetime(2014, 1, 1, 2), Event("2")])
+        self.s.arrangement.append([datetime.datetime(2014, 1, 1, 1), Event("3")])
 
     def testSortWorks(self):
         """test that each time is <= the next time"""
@@ -87,9 +87,9 @@ class CountOverlappingEventsTests(unittest.TestCase):
         """test that no overlapping Events returns 0"""
         # Make a Schedule with non-overlapping times
         s = Schedule()
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 0), self.e1))
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 2), self.e2))
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 4), self.e3))
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 9, 0), self.e1])
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 9, 2), self.e2])
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 9, 4), self.e3])
         # Now the actual test
         count = s.countOverlappingEvents()
         self.assertEqual(count, 0)
@@ -99,9 +99,9 @@ class CountOverlappingEventsTests(unittest.TestCase):
     #     """test that overlaps occur when an Event starts when the previous one ends"""
     #     # Make a Schedule with overlapping times
     #     s = Schedule()
-    #     s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 0), self.e1))
-    #     s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 1), self.e2))
-    #     s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 2), self.e3))
+    #     s.arrangement.append([datetime.datetime(2014, 1, 1, 9, 0), self.e1])
+    #     s.arrangement.append([datetime.datetime(2014, 1, 1, 9, 1), self.e2))
+    #     s.arrangement.append([datetime.datetime(2014, 1, 1, 9, 2), self.e3))
     #     # Now the actual test
     #     count = s.countOverlappingEvents()
     #     self.assertEqual(count, 2)
@@ -110,9 +110,9 @@ class CountOverlappingEventsTests(unittest.TestCase):
         """test that overlaps are counted properly when events start at the same time"""
         # Make a Schedule with same times
         s = Schedule()
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 0), self.e1))
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 0), self.e2))
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 0), self.e3))
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 9, 0), self.e1])
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 9, 0), self.e2])
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 9, 0), self.e3])
         # Now the actual test
         count = s.countOverlappingEvents()
         self.assertEqual(count, 2)
@@ -128,7 +128,7 @@ class IsStartTimeTooEarlyTests(unittest.TestCase):
         """a too early start time returns true"""
         # Make a Schedule
         s = Schedule()
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 8, 0, 0), self.e1))
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 8, 0, 0), self.e1])
         # Make a startDateTime later than the first Event
         startDateTime = datetime.datetime(2014, 1, 1, 9, 0, 0)
         # Test
@@ -138,7 +138,7 @@ class IsStartTimeTooEarlyTests(unittest.TestCase):
         """an on time start time returns false"""
         # Make a Schedule
         s = Schedule()
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 0, 0), self.e1))
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 9, 0, 0), self.e1])
         # Make a startDateTime the same time as the first Event
         startDateTime = datetime.datetime(2014, 1, 1, 9, 0, 0)
         # Test
@@ -148,7 +148,7 @@ class IsStartTimeTooEarlyTests(unittest.TestCase):
         """a late start time returns false"""
         # Make a Schedule
         s = Schedule()
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 10, 0, 0), self.e1))
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 10, 0, 0), self.e1])
         # Make a startDateTime earlier than the first Event
         startDateTime = datetime.datetime(2014, 1, 1, 9, 0, 0)
         # Test
@@ -165,7 +165,7 @@ class IsEndTimeTooLateTests(unittest.TestCase):
         """an early end time returns false"""
         # Make a Schedule
         s = Schedule()
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 20, 0, 0), self.e1))
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 20, 0, 0), self.e1])
         # Make a startDateTime later than the last Event ends
         endDateTime = datetime.datetime(2014, 1, 1, 21, 0, 0)
         # Test
@@ -175,7 +175,7 @@ class IsEndTimeTooLateTests(unittest.TestCase):
         """an on time end time returns true"""
         # Make a Schedule
         s = Schedule()
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 20, 59, 0), self.e1))
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 20, 59, 0), self.e1])
         # Make a startDateTime the same time as the last Event ends
         endDateTime = datetime.datetime(2014, 1, 1, 21, 0, 0)
         # Test
@@ -185,7 +185,7 @@ class IsEndTimeTooLateTests(unittest.TestCase):
         """a late end time returns true"""
         # Make a Schedule
         s = Schedule()
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 22, 0, 0), self.e1))
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 22, 0, 0), self.e1])
         # Make a endDateTime earlier than the last Event
         endDateTime = datetime.datetime(2014, 1, 1, 21, 0, 0)
         # Test
@@ -203,9 +203,9 @@ class OccurancesDuringGivenTimesTests(unittest.TestCase):
         self.e3.totalTime = datetime.timedelta(minutes=1)
         # Make a Schedule
         self.s = Schedule()
-        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 0, 0), self.e1))
-        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 2, 0, 0), self.e2))
-        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 3, 0, 0), self.e3))
+        self.s.arrangement.append([datetime.datetime(2014, 1, 1, 1, 0, 0), self.e1])
+        self.s.arrangement.append([datetime.datetime(2014, 1, 1, 2, 0, 0), self.e2])
+        self.s.arrangement.append([datetime.datetime(2014, 1, 1, 3, 0, 0), self.e3])
 
     def testEndTimeBeforeBeginTimeRaisesException(self):
         """having endTime >= beginTime should raise an exception"""
@@ -262,9 +262,9 @@ class CountOverbookedSoloParticipantsTests(unittest.TestCase):
         self.event3 = Event("3")
         # Make a Schedule
         self.s = Schedule()
-        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 0, 0), self.event1))
-        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 2, 0, 0), self.event2))
-        self.s.arrangement.append((datetime.datetime(2014, 1, 1, 3, 0, 0), self.event3))
+        self.s.arrangement.append([datetime.datetime(2014, 1, 1, 1, 0, 0), self.event1])
+        self.s.arrangement.append([datetime.datetime(2014, 1, 1, 2, 0, 0), self.event2])
+        self.s.arrangement.append([datetime.datetime(2014, 1, 1, 3, 0, 0), self.event3])
         # Make some Entries with different particpants
         self.entry1 = Entry(participantID="s1", performanceTime="1:00")
         self.entry2 = Entry(participantID="g2", performanceTime="1:00")
@@ -331,27 +331,27 @@ class CalculateDowntimeTests(unittest.TestCase):
     def testEventsOverlapIsZeroDowntime(self):
         """Events with overlapping start and end times should have no downtime between them"""
         s = Schedule()
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 0), self.e1))
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 1), self.e2))
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 2), self.e3))
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 1, 0), self.e1])
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 1, 1), self.e2])
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 1, 2), self.e3])
         downtime = s.calculateDowntime()
         self.assertEqual(downtime, datetime.timedelta(seconds=0))
 
     def testEventsAtSameTimeIsZeroDowntime(self):
         """Events that start at the same time should have no downtime between them"""
         s = Schedule()
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 1), self.e1))
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 1), self.e2))
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 1), self.e3))
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 1), self.e1])
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 1), self.e2])
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 1), self.e3])
         downtime = s.calculateDowntime()
         self.assertEqual(downtime, datetime.timedelta(seconds=0))
 
     def testEventsOneMinuteApartIsTwo(self):
         """Three Events one minute apart should have 2 minutes downtime"""
         s = Schedule()
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 0), self.e1))
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 2), self.e2))
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 1, 4), self.e3))
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 1, 0), self.e1])
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 1, 2), self.e2])
+        s.arrangement.append([datetime.datetime(2014, 1, 1, 1, 4), self.e3])
         downtime = s.calculateDowntime()
         self.assertEqual(downtime, datetime.timedelta(minutes=2))
 

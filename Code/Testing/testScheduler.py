@@ -35,7 +35,7 @@ class MateTests(unittest.TestCase):
         """4 identical parents should produce 4 identical offspring"""
         startTime = datetime.datetime(2014, 1, 1, 1)
         event = Event("1")
-        parent = Schedule([(startTime, event)])
+        parent = Schedule([[startTime, event]])
         parents = [parent, parent, parent, parent]
         # Mate to produce offspring
         offspring = Scheduler.mate(parents)

@@ -6,6 +6,8 @@ import random
 from schedule import Schedule
 from event import Event
 
+MUTATIONRATE = 0.25 # 25% chance of mutation
+
 def sortEntriesByClass(entryList):
     """Sorts entryList into Events by class and returns a list"""
     eventList = []
@@ -63,8 +65,8 @@ class Scheduler(object):
                     child1Event = dad[j][1]
                     child2Event = mom[j][1]
 
-                child1.append((child1Time, child1Event))
-                child2.append((child2Time, child2Event))
+                child1.append([child1Time, child1Event])
+                child2.append([child2Time, child2Event])
 
             # Add the children to the list of offspring
             childSched1 = Schedule(child1)
@@ -72,6 +74,25 @@ class Scheduler(object):
             offspring.append(childSched1)
             offspring.append(childSched2)
         return offspring
+
+    # @staticmethod
+    # def mutate(offspring):
+    #     """modify the start time +/- 5 minutes and swap Events in each offspring"""
+    #     for child in offspring:
+    #         for i in xrange(len(child.arrangement)):
+    #             time, event = child.arrangement[i]
+    #             newTime = None
+    #             # Will this element mutate?
+    #             mutationChance = random.random()
+    #             if mutationChance <= MUTATIONRATE:
+    #                 # Change time +/- 5 min
+    #                 plusOrMinus = random.random()
+    #                 if plusOrMinus < 0.5:
+    #                     # Subtract 5 minutes
+    #                     newTime = time - datetime.timedelta(minutes=5)
+    #                 else:
+    #                     # Add 5 minutes
+    #                     newTime = time + datetime.timedelta(minutes=5)
         
     def process(self):
         """The big fancy algorithm"""
@@ -93,10 +114,11 @@ class Scheduler(object):
             # Choose top 10% for mating
             parents = self.population[:len(self.population)*0.1]
 
-            # Mate individuals to produce offspring
-            offspring = mate(parents)
+            # Mate parents to produce offspring
+            offspring = self.mate(parents)
 
             # Mutate offspring
+            # mutatedOffspring = self.mutate(offspring)
 
             # Add offspring to population (replace population?)
 
