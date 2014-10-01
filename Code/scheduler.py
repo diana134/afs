@@ -41,8 +41,11 @@ class Scheduler(object):
 
         done = False
         while not done:
-            pass
             # Select individuals for mating
+            # Sort population by fitness, descending
+            self.population.sort(key=lambda x: x.fitness, reverse=True) # Magic code from stackoverflow
+            # Choose top 10% (100 individuals in this case)
+            parents = self.population[:len(self.population)*0.1]
 
             # Mate individuals to produce offspring
 

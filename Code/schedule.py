@@ -40,7 +40,7 @@ class Schedule(object):
         return startTime + datetime.timedelta(seconds=randomSecond)
 
     def sort(self):
-        """Sorts self.arrangement in place in order of start time"""
+        """Sorts self.arrangement in place in order of start time, ascending"""
         # Magic code from stackoverflow
         self.arrangement.sort(key=lambda tup: tup[0]) 
 
