@@ -355,5 +355,25 @@ class CalculateDowntimeTests(unittest.TestCase):
         downtime = s.calculateDowntime()
         self.assertEqual(downtime, datetime.timedelta(minutes=2))
 
+class CalculateFitnessTests(unittest.TestCase):
+    """tests for CalculateFitnessTests"""
+    
+    def testSanity(self):
+        """A a Schedule with a single Event within the time parameters is feasible with a fitness of 0"""
+        event = Event("1")
+        event.totalTime = datetime.timedelta(minutes=1)
+        s = Schedule([(datetime.datetime(2014, 1, 1, 10), event)])
+        startDateTime = datetime.datetime(2014, 1, 1, 9)
+        endDateTime = datetime.datetime(2014, 1, 1, 21)
+        lunchStartTime = datetime.datetime(2014, 1, 1, 12)
+        lunchEndTime = datetime.datetime(2014, 1, 1, 13)
+        dinnerStartTime = datetime.datetime(2014, 1, 1, 17)
+        dinnerEndTime = datetime.datetime(2014, 1, 1, 18)
+        dayEndTime = datetime.datetime(2014, 1, 1, 21)
+        nextDayStartTime = datetime.datetime(2014, 1, 2, 9)
+        s.calculateFitness(startDateTime, endDateTime, lunchStartTime, lunchEndTime, dinnerStartTime, dinnerEndTime, dayEndTime, nextDayStartTime)
+        self.assertTrue(s.feasible)
+        self.assertEqual(s.fitness, 0)
+
 if __name__ == '__main__':
-    unittest.main(verbosity=2) # for slightly more detailed results
+    unittest.main(verbosity=2) # for slightly morre detailed results

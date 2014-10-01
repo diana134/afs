@@ -6,11 +6,12 @@ import datetime
 
 class Schedule(object):
     """Used by the scheduling algorithm"""
-    def __init__(self, arrangement=None, startTime=None, endTime=None):
+    def __init__(self, arrangement=None):
         self.arrangement = arrangement if arrangement is not None else [] # list of (dateTime, Event) tuples (remember that these are immutable)
-        self.startTime = startTime # datetime object of the time this Schedule should start
-        self.endTime = endTime # datetime object of the time this Schedule should end by
-        # TODO: time can only change +/- 5 minutes (300 seconds)        
+        # self.startTime = startTime # datetime object of the time this Schedule should start
+        # self.endTime = endTime # datetime object of the time this Schedule should end by
+        self.fitness = 0 # closer to 0 is better
+        self.feasible = None # decided while calulating fitnes
 
     @classmethod
     def makeNewRandomSchedule(cls, eventList, startTime, endTime):
@@ -20,7 +21,7 @@ class Schedule(object):
         for entry in eventList:
             # Generate a random start time between self.startTime and self.endTime
             arrangement.append((Schedule.generateStartTimeInIncrements(startTime, endTime), entry))
-        schedule = Schedule(arrangement=arrangement, startTime=startTime, endTime=endTime)
+        schedule = Schedule(arrangement=arrangement)
         # Sort the arrangement by start times
         schedule.sort()
         return schedule
@@ -121,7 +122,7 @@ class Schedule(object):
                 downtime = downtime + (nextTime - eventEnd)
         return downtime
 
-    def fitness(self):
+    def calculateFitness(self, startDateTime, endDateTime, lunchStartTime, lunchEndTime, dinnerStartTime, dinnerEndTime, dayEndTime, nextDayStartTime):
         """assesses the 'goodness' of the arrangement based on participants not being \
         overbooked (constraint), schools being together, and young kids being in the morning(?)"""
         # TODO: make sure arrangement is sorted by time before beginning
@@ -129,56 +130,58 @@ class Schedule(object):
         # Ensure Events do no overlap
         overlapCount = self.countOverlappingEvents()
         if overlapCount > 0:
-            # mark as infeasible
+            # infeasible
+            self.feasible = False
             # decrease fitness based on number of overlapping Events
-            pass
+            self.fitness -= overlapCount
 
         # Ensure arrangement occurs entirely within given times
-        startDateTime = None # TODO: where does this come from?
-        endDateTime = None
         goodOccurances = self.occurancesDuringGivenTimes(startDateTime, endDateTime)
         erroneousOccurances = abs(len(self.arrangement) - goodOccurances)
         if erroneousOccurances > 0:
-            # Mark as infeasible
+            # infeasible
+            self.feasible = False
             # decrease fitness based on number of Events not occuring within the specified time
-            pass
+            self.fitness -= erroneousOccurances
 
         # Ensure Events do not begin or end during lunch time
-        lunchStartTime = None
-        lunchEndTime = None
         lunchOccurances = self.occurancesDuringGivenTimes(lunchStartTime, lunchEndTime)
         if lunchOccurances > 0:
-            # Mark as infeasible
+            # infeasible
+            self.feasible = False
             # decrease fitness based on number of Events occuring during lunch
-            pass
+            self.fitness -= lunchOccurances
 
         # Ensure Events do not begin or end during dinner time
-        dinnerStartTime = None
-        dinnerEndTime = None
         dinnerOccurances = self.occurancesDuringGivenTimes(dinnerStartTime, dinnerEndTime)
         if dinnerOccurances > 0:
-            # Mark as infeasible
+            # infeasible
+            self.feasible = False
             # decrease fitness based on number of Events occuring during dinner
-            pass
+            self.fitness -= dinnerOccurances
 
         # Ensure Events do not begin or end at night i.e. (between 9pm one night and 9am the next day)
-        dayEndTime = None
-        nextDayStartTime = None
         nightOccurances = self.occurancesDuringGivenTimes(dayEndTime, nextDayStartTime)
         if nightOccurances > 0:
-            # Mark as infeasible
+            # infeasible
+            self.feasible = False
             # decrease fitness based on number of Events occuring during the night
-            pass
+            self.fitness -= nightOccurances
+
+        # At this point if feasibility hasn't been marked false, this is a feasible Schedule
+        if self.feasible is None:
+            self.feasible = True
 
         # Check if SoloParticipants are in concsecutive Events
         soloParticipantOverlaps = self.countOverbookedSoloParticipants()
         if soloParticipantOverlaps > 0:
             # decrease fitness based on number of solo participant overlaps
-            pass
+            self.fitness -= soloParticipantOverlaps
 
         # We want a minimum of downtime between Events
         downtime = self.calculateDowntime()
-        # More downtime == lower fitness
+        # Decrease fitness by 1 point for every 5 minutes of downtime
+        self.fitness -= downtime.total_seconds() / 300
 
         # Ensure GroupParticipants from same school are in consecutive events(?)
         # (does not apply to anything with constume changes i.e. Dance, Musical Theatre)
