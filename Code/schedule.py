@@ -57,7 +57,7 @@ class Schedule(object):
                 time = self.arrangement[i][0]
                 event = self.arrangement[i][1]
                 nextTime = self.arrangement[i+1][0]
-                if time + event.totalTime >= nextTime:
+                if time + event.totalTime > nextTime:
                     # events overlap
                     overlapCount += 1
         return overlapCount
@@ -160,12 +160,14 @@ class Schedule(object):
             # decrease fitness based on number of Events occuring during the night
             pass
 
-        # Ensure SoloParticipants are not in concsecutive Events
+        # Check if SoloParticipants are in concsecutive Events
         soloParticipantOverlaps = self.countOverbookedSoloParticipants()
         if soloParticipantOverlaps > 0:
-            # Mark as infeasible
             # decrease fitness based on number of solo participant overlaps
             pass
+
+        # We want a minimum of downtime between Events
+
 
         # Ensure GroupParticipants from same school are in consecutive events(?)
         # (does not apply to anything with constume changes i.e. Dance, Musical Theatre)

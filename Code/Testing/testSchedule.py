@@ -94,16 +94,17 @@ class CountOverlappingEventsTests(unittest.TestCase):
         count = s.countOverlappingEvents()
         self.assertEqual(count, 0)
 
-    def testOverlapsOnStartEndTimes(self):
-        """test that overlaps occur when an Event starts when the previous one ends"""
-        # Make a Schedule with overlapping times
-        s = Schedule()
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 0), self.e1))
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 1), self.e2))
-        s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 2), self.e3))
-        # Now the actual test
-        count = s.countOverlappingEvents()
-        self.assertEqual(count, 2)
+    # No good if we want a minimum of downtime between events
+    # def testOverlapsOnStartEndTimes(self):
+    #     """test that overlaps occur when an Event starts when the previous one ends"""
+    #     # Make a Schedule with overlapping times
+    #     s = Schedule()
+    #     s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 0), self.e1))
+    #     s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 1), self.e2))
+    #     s.arrangement.append((datetime.datetime(2014, 1, 1, 9, 2), self.e3))
+    #     # Now the actual test
+    #     count = s.countOverlappingEvents()
+    #     self.assertEqual(count, 2)
 
     def testOverlapsOnSameStartTime(self):
         """test that overlaps are counted properly when events start at the same time"""
