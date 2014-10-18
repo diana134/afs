@@ -14,30 +14,28 @@ class Schedule(object):
         self.feasible = None # decided while calulating fitnes
 
     @classmethod
-    def makeNewRandomSchedule(cls, eventList, startTime, endTime):
+    def makeNewRandomSchedule(cls, eventList, scheduleStartDatetime, scheduleEndDatetime):
         """Returns a new random Schedule sorted by start times"""
         arrangement = []
         shuffle(eventList)
         for entry in eventList:
-            # Generate a random start time between self.startTime and self.endTime
-            arrangement.append([Schedule.generateStartTimeInIncrements(startTime, endTime), entry])
+            # Generate a random start time between scheduleStartDatetime and scheduleEndDatetime
+            arrangement.append([Schedule.generateStartTimeInIncrements(scheduleStartDatetime, scheduleEndDatetime), entry])
         schedule = Schedule(arrangement=arrangement)
         # Sort the arrangement by start times
         schedule.sort()
         return schedule
 
     @staticmethod
-    def generateStartTimeInIncrements(startTime, endTime):
-        """Returns a datetime object between startTime and endTime in 5 minute increments"""
-        # Ensure endTime is later than beginTime
-        if endTime <= startTime:
-            raise Exception("endTime <= startTime in Schedule.generateStartTimeInIncrements")
-        delta = endTime - startTime
+    def generateStartTimeInIncrements(scheduleStartDatetime, scheduleEndDatetime):
+        """Returns a datetime object between scheduleStartDatetime and scheduleEndDatetime in 5 minute increments"""
+        # Ensure scheduleEndDate is later than scheduleStartDate
+        if scheduleEndDatetime <= scheduleStartDatetime:
+            raise Exception("scheduleEndDatetime <= scheduleStartDatetime in Schedule.generateStartTimeInIncrements")
+        delta = scheduleEndDatetime - scheduleStartDatetime
         int_delta = delta.total_seconds()
         randomSecond = randrange(0, int_delta, 300)
-        # Round to nearest multiple of 300 seconds (5 minutes)
-        # randomSecond = round(randomSecond / 300.0) * 300.0
-        return startTime + datetime.timedelta(seconds=randomSecond)
+        return scheduleStartDatetime + datetime.timedelta(seconds=randomSecond)
 
     def sort(self):
         """Sorts self.arrangement in place in order of start time, ascending"""
@@ -79,21 +77,45 @@ class Schedule(object):
         else:
             return False
 
-    def occurancesDuringGivenTimes(self, beginTime, endTime):
-        """counts the number of Events that start or finish between beginTime and endTime"""
+    def occurancesDuringGivenDatetimes(self, beginDatetime, endDatetime):
+        """counts the number of Events that start or end between beginDatetime and endDatetime"""
         occurances = 0
-        # Ensure endTime is later than beginTime
-        if endTime <= beginTime:
-            raise Exception("endTime <= beginTime in Schedule.occursDuringGivenTime")
+        # Ensure endDatetime is valid
+        if endDatetime <= beginDatetime:
+            raise Exception("endDatetime <= beginDatetime in Schedule.occurancesDuringGivenDatetimes")
         else:
-            for time, event in self.arrangement:
-                # if event starts between beginTime and endTime
-                if time >= beginTime and time < endTime:
+            for dt, event in self.arrangement:
+                # if event starts between beginDatetime and endDatetime
+                if dt >= beginDatetime and dt < endDatetime:
                     occurances += 1
-                # if event ends between beginTime and endTime
-                elif time + event.totalTime >= beginTime and time + event.totalTime < endTime:
+                # if event ends between beginDatetime and endDatetime
+                elif dt + event.totalTime >= beginDatetime and dt + event.totalTime < endDatetime:
                     occurances += 1
             return occurances
+
+    def occurancesDuringGivenTimes(self, beginTime, endTime):
+        """counts the number of Events that start or end between beginTime and endTime"""
+        occurances = 0
+        # endTime can be before or after beginTime, so figure out which way to count
+        if endTime < beginTime:
+            # endTime is the next day
+            for dt, event in self.arrangement:
+                # if event starts between beginTime and endTime
+                if dt.time() >= beginTime or dt.time() < endTime:
+                    occurances += 1
+                # if event ends between beginTime and endTime
+                elif (dt + event.totalTime).time() >= beginTime or (dt + event.totalTime).time() < endTime:
+                    occurances += 1
+        else:
+            # endTime is later today
+            for dt, event in self.arrangement:
+                # if event starts between beginTime and endTime
+                if dt.time() >= beginTime and dt.time() < endTime:
+                    occurances += 1
+                # if event ends between beginTime and endTime
+                elif (dt + event.totalTime).time() >= beginTime and (dt + event.totalTime).time() < endTime:
+                    occurances += 1
+        return occurances
 
     def countOverbookedSoloParticipants(self):
         """counts the number of times SoloParticipants occur in concsecutive Events"""
@@ -122,11 +144,13 @@ class Schedule(object):
                 downtime = downtime + (nextTime - eventEnd)
         return downtime
 
-    def calculateFitness(self, startDateTime, endDateTime, lunchStartTime, lunchEndTime, dinnerStartTime, dinnerEndTime, dayEndTime, nextDayStartTime):
+    def calculateFitness(self, scheduleStartDate, scheduleEndDate, lunchStartTime, lunchEndTime, dinnerStartTime, dinnerEndTime, dayStartTime, dayEndTime):
         """assesses the 'goodness' of the arrangement based on participants not being \
         overbooked (constraint), schools being together, and young kids being in the morning(?)"""
-        # TODO: make sure arrangement is sorted by time before beginning
         
+        scheduleStartDatetime = datetime.datetime.combine(scheduleStartDate, dayStartTime)
+        scheduleEndDatetime = datetime.datetime.combine(scheduleEndDate, dayEndTime)
+
         # Ensure Events do no overlap
         overlapCount = self.countOverlappingEvents()
         if overlapCount > 0:
@@ -135,8 +159,8 @@ class Schedule(object):
             # decrease fitness based on number of overlapping Events
             self.fitness -= overlapCount
 
-        # Ensure arrangement occurs entirely within given times
-        goodOccurances = self.occurancesDuringGivenTimes(startDateTime, endDateTime)
+        # Ensure arrangement occurs entirely within given dates
+        goodOccurances = self.occurancesDuringGivenDatetimes(scheduleStartDatetime, scheduleEndDatetime)
         erroneousOccurances = abs(len(self.arrangement) - goodOccurances)
         if erroneousOccurances > 0:
             # infeasible
@@ -161,7 +185,7 @@ class Schedule(object):
             self.fitness -= dinnerOccurances
 
         # Ensure Events do not begin or end at night i.e. (between 9pm one night and 9am the next day)
-        nightOccurances = self.occurancesDuringGivenTimes(dayEndTime, nextDayStartTime)
+        nightOccurances = self.occurancesDuringGivenTimes(dayEndTime, dayStartTime)
         if nightOccurances > 0:
             # infeasible
             self.feasible = False

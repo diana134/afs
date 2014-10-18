@@ -191,6 +191,68 @@ class IsEndTimeTooLateTests(unittest.TestCase):
         # Test
         self.assertTrue(s.isEndTimeTooLate(endDateTime))
 
+class OccurancesDuringGivenDatetimesTests(unittest.TestCase):
+    """tests occurancesDuringGivenDatetimes"""
+    def setUp(self):
+        # Make some Events and fudge the totalTime
+        self.e1 = Event("1")
+        self.e1.totalTime = datetime.timedelta(minutes=1)
+        self.e2 = Event("2")
+        self.e2.totalTime = datetime.timedelta(minutes=1)
+        self.e3 = Event("3")
+        self.e3.totalTime = datetime.timedelta(minutes=1)
+        # Make a Schedule
+        self.s = Schedule()
+        self.s.arrangement.append([datetime.datetime(2014, 1, 1, 1, 0, 0), self.e1])
+        self.s.arrangement.append([datetime.datetime(2014, 1, 1, 2, 0, 0), self.e2])
+        self.s.arrangement.append([datetime.datetime(2014, 1, 1, 3, 0, 0), self.e3])
+
+    def testEndDatetimeBeforeBeginDatetimeRaisesException(self):
+        """having endDatetime >= beginDatetime should raise an exception"""
+        beginDatetime = datetime.datetime(2014, 1, 1, 5)
+        endDatetime = datetime.datetime(2014, 1, 1, 1)
+        self.assertRaises(Exception, self.s.occurancesDuringGivenDatetimes, beginDatetime, endDatetime)
+
+    def testEventsEndBefore(self):
+        """all Events start and end before beginDatetime should return 0"""
+        # Make beginDatetime after all Events are over
+        beginDatetime = datetime.datetime(2014, 1, 1, 4)
+        endDatetime = datetime.datetime(2014, 1, 1, 5)
+        # Test
+        self.assertEqual(self.s.occurancesDuringGivenDatetimes(beginDatetime, endDatetime), 0)
+
+    def testEventSpanningBegin(self):
+        """an Event spanning beginDatetime should return 1"""
+        # Make beginDatetime during e2
+        beginDatetime = datetime.datetime(2014, 1, 1, 2, 0, 30)
+        endDatetime = datetime.datetime(2014, 1, 1, 3)
+        # Test
+        self.assertEqual(self.s.occurancesDuringGivenDatetimes(beginDatetime, endDatetime), 1)
+
+    def testEventDuringDatetime(self):
+        """an Event during beginDatetime and endDatetime should return only 1"""
+        # Make beginDatetime before e2 and endDatetime after e2
+        beginDatetime = datetime.datetime(2014, 1, 1, 1, 2, 0)
+        endDatetime = datetime.datetime(2014, 1, 1, 2, 2, 0)
+        # Test
+        self.assertEqual(self.s.occurancesDuringGivenDatetimes(beginDatetime, endDatetime), 1)
+
+    def testEventSpanningEnd(self):
+        """an Event spanning endDatetime should return 1"""
+        # Make endDatetime during e2
+        beginDatetime = datetime.datetime(2014, 1, 1, 1, 2)
+        endDatetime = datetime.datetime(2014, 1, 1, 2, 0, 30)
+        # Test
+        self.assertEqual(self.s.occurancesDuringGivenDatetimes(beginDatetime, endDatetime), 1)
+
+    def testEventsBeginAfter(self):
+        """all Events start and end after endDatetime should return 0"""
+        # Make endDatetime before all events occur
+        beginDatetime = datetime.datetime(2014, 1, 1, 0)
+        endDatetime = datetime.datetime(2014, 1, 1, 0, 1)
+        # Test
+        self.assertEqual(self.s.occurancesDuringGivenDatetimes(beginDatetime, endDatetime), 0)
+
 class OccurancesDuringGivenTimesTests(unittest.TestCase):
     """tests occurancesDuringGivenTimes"""
     def setUp(self):
@@ -207,51 +269,53 @@ class OccurancesDuringGivenTimesTests(unittest.TestCase):
         self.s.arrangement.append([datetime.datetime(2014, 1, 1, 2, 0, 0), self.e2])
         self.s.arrangement.append([datetime.datetime(2014, 1, 1, 3, 0, 0), self.e3])
 
-    def testEndTimeBeforeBeginTimeRaisesException(self):
-        """having endTime >= beginTime should raise an exception"""
-        beginTime = datetime.datetime(2014, 1, 1, 5)
-        endTime = datetime.datetime(2014, 1, 1, 1)
-        self.assertRaises(Exception, self.s.occurancesDuringGivenTimes, beginTime, endTime)
-
     def testEventsEndBefore(self):
         """all Events start and end before beginTime should return 0"""
         # Make beginTime after all Events are over
-        beginTime = datetime.datetime(2014, 1, 1, 4)
-        endTime = datetime.datetime(2014, 1, 1, 5)
+        beginTime = datetime.time(4, 0, 0)
+        endTime = datetime.time(5, 0, 0)
         # Test
         self.assertEqual(self.s.occurancesDuringGivenTimes(beginTime, endTime), 0)
 
     def testEventSpanningBegin(self):
         """an Event spanning beginTime should return 1"""
         # Make beginTime during e2
-        beginTime = datetime.datetime(2014, 1, 1, 2, 0, 30)
-        endTime = datetime.datetime(2014, 1, 1, 3)
+        beginTime = datetime.time(2, 0, 30)
+        endTime = datetime.time(3, 0, 0)
         # Test
         self.assertEqual(self.s.occurancesDuringGivenTimes(beginTime, endTime), 1)
 
     def testEventDuringTime(self):
         """an Event during beginTime and endTime should return only 1"""
         # Make beginTime before e2 and endTime after e2
-        beginTime = datetime.datetime(2014, 1, 1, 1, 2, 0)
-        endTime = datetime.datetime(2014, 1, 1, 2, 2, 0)
+        beginTime = datetime.time(1, 2, 0)
+        endTime = datetime.time(2, 2, 0)
         # Test
         self.assertEqual(self.s.occurancesDuringGivenTimes(beginTime, endTime), 1)
 
     def testEventSpanningEnd(self):
         """an Event spanning endTime should return 1"""
         # Make endTime during e2
-        beginTime = datetime.datetime(2014, 1, 1, 1, 2)
-        endTime = datetime.datetime(2014, 1, 1, 2, 0, 30)
+        beginTime = datetime.time(1, 1, 2)
+        endTime = datetime.time(2, 0, 30)
         # Test
         self.assertEqual(self.s.occurancesDuringGivenTimes(beginTime, endTime), 1)
 
     def testEventsBeginAfter(self):
         """all Events start and end after endTime should return 0"""
         # Make endTime before all events occur
-        beginTime = datetime.datetime(2014, 1, 1, 0)
-        endTime = datetime.datetime(2014, 1, 1, 0, 1)
+        beginTime = datetime.time(0, 0, 0)
+        endTime = datetime.time(0, 0, 1)
         # Test
         self.assertEqual(self.s.occurancesDuringGivenTimes(beginTime, endTime), 0)
+
+    def testEndBeforeStart(self):
+        """endTime < startTime should act as if endTime were next day, should return 2"""
+        # Make endTime before e2 and beginTime after e2
+        beginTime = datetime.time(2, 2, 0)
+        endTime = datetime.time(1, 2, 0)
+        # Test
+        self.assertEqual(self.s.occurancesDuringGivenTimes(beginTime, endTime), 2)
 
 class CountOverbookedSoloParticipantsTests(unittest.TestCase):
     """tests for CountOverbookedSoloParticipantsTests"""
@@ -365,13 +429,13 @@ class CalculateFitnessTests(unittest.TestCase):
         s = Schedule([(datetime.datetime(2014, 1, 1, 10), event)])
         startDateTime = datetime.datetime(2014, 1, 1, 9)
         endDateTime = datetime.datetime(2014, 1, 1, 21)
-        lunchStartTime = datetime.datetime(2014, 1, 1, 12)
-        lunchEndTime = datetime.datetime(2014, 1, 1, 13)
-        dinnerStartTime = datetime.datetime(2014, 1, 1, 17)
-        dinnerEndTime = datetime.datetime(2014, 1, 1, 18)
-        dayEndTime = datetime.datetime(2014, 1, 1, 21)
-        nextDayStartTime = datetime.datetime(2014, 1, 2, 9)
-        s.calculateFitness(startDateTime, endDateTime, lunchStartTime, lunchEndTime, dinnerStartTime, dinnerEndTime, dayEndTime, nextDayStartTime)
+        lunchStartTime = datetime.time(hour=12)
+        lunchEndTime = datetime.time(hour=13)
+        dinnerStartTime = datetime.time(hour=17)
+        dinnerEndTime = datetime.time(hour=18)
+        dayEndTime = datetime.time(hour=21)
+        dayStartTime = datetime.time(9)
+        s.calculateFitness(startDateTime, endDateTime, lunchStartTime, lunchEndTime, dinnerStartTime, dinnerEndTime, dayStartTime, dayEndTime)
         self.assertTrue(s.feasible)
         self.assertEqual(s.fitness, 0)
 
