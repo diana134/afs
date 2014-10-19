@@ -1,6 +1,7 @@
 """Deals with Entries"""
 
 from utilities import requiredFieldIsGood, optionalFieldIsGood
+from databaseInteraction import dbInteractionInstance
 
 class Entry(object):
     """holds Entry data as strings"""
@@ -65,6 +66,41 @@ class Entry(object):
     def __str__(self):
         # s = ''
         return self.participantID + self.teacherID + self.discipline + self.level + self.classNumber + self.className + self.title + self.performanceTime + self.style + self.composer + self.opus + self.no + self.movement + self.arranger + self.artist + self.instrument + self.author
+        
+    def getCsvHeader(self):
+        """Returns a comma-separated string of column headers for use in a CSV file"""
+        return '"Participant","Teacher","Discipline","Level","Title","Performance Time","Style","Composer","Opus","No.","Movement","Arranger","Artist","Instrument","Author"'
+        
+    def export(self,csvFile,depth=2):
+        """Write this entry to a csv file, padded with <depth> empty columns as indentation. \
+        csvFile must be an open file with write permissions."""
+        
+        participant = dbInteractionInstance.getParticipantFromId(self.participantID)
+        teacher = dbInteractionInstance.getTeacherFromId(self.teacherID)
+        
+        leadingCommas = ''
+        for i in range(depth):
+            leadingCommas = leadingCommas+','
+            
+        s = '{indent}"{participantName}","{teacherName}","{discipline}","{level}","{title}","{time}","{style}","{composer}","{opus}","{no}","{movement}","{arranger}","{artist}","{instrument}","{author}"\n'.format(
+            indent=leadingCommas,
+            participantName=participant,
+            teacherName=teacher,
+            discipline=self.discipline,
+            level=self.level,
+            title=self.title,
+            time=self.performanceTime,
+            style=self.style,
+            composer=self.composer,
+            opus=self.opus,
+            no=self.no,
+            movement=self.movement,
+            arranger=self.arranger,
+            artist=self.artist,
+            instrument=self.instrument,
+            author=self.author
+        )
+        csvFile.write(s)
 
 # class DanceEntry(Entry):
 #     def __init__(self, style=None):

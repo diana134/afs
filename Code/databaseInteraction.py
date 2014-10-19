@@ -13,6 +13,8 @@ CONFIG_DATABASE_PATH = "../Database/"
 CONFIG_TEST_DATABASE_PATH = "../../Database/"
 CONFIG_DATABASE_NAME = "AFS"
 
+dbInteractionInstance = None
+
 class DatabaseInteraction(object):
     """Handles all interactions with the database"""
     def __init__(self, test=False):
@@ -51,6 +53,8 @@ class DatabaseInteraction(object):
         self.teacherModel = QSqlTableModel(db=self.conn)
         self.teacherModel.setTable("teachers")
         self.teacherModel.select()
+        
+        dbInteractionInstance = self
 
     def close(self):
         """Clean everything up and close the connection"""
@@ -58,6 +62,8 @@ class DatabaseInteraction(object):
         self.conn.close()
         self.conn = QSqlDatabase()
         self.conn.removeDatabase(connName)
+        
+        dbInteractionInstance = None
 
     def addSoloParticipant(self, values):
         """Adds a new SoloParticipant record to the db"""

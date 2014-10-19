@@ -46,3 +46,29 @@ class Event(object):
         for entry in self.entries:
             idList.append(entry.participantID)
         return idList
+
+    def export(self,csvFile,depth=1):
+        """Export this event to a csv file as part of the export procedure. \
+        csvFile must be a file opened with w permissions.  <depth> empty columns \
+        are added to the beginning to serve as indentation"""
+        
+        leadingCommas = ''
+        for i in range(depth):
+            leadingCommas = leadingCommas+','
+        
+        s = '{indent}{number},"{name}","Total Time: {time}"\n'.format(
+            indent = leadingCommas,
+            number = self.classNumber,
+            name = self.className,
+            time = self.totalTime
+        )
+        csvFile.write(s)
+        
+        s = '{indent}{header}\n'.format(
+            indent = leadingCommas,
+            header = Entry.getCsvHeader()
+        )
+        csvFile.write(s)
+        
+        for e in self.entries:
+            e.export(csvFile,depth+1)

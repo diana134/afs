@@ -46,7 +46,18 @@ class Session(object):
             return True
         else:
             return False
-
+            
+    def export(self,csvFile):
+        """Export this session to a csv.  The csvFile parameter must be a file with write permissions"""
+        s = '"{startDate}","{endDate}","{numEvents} events"\n'.format(
+            startDate = self.startDateTime,
+            endDate = self.endDateTime,
+            numEvents = len(self.eventList)
+        )
+        s.write(s)
+        for e in self.eventList:
+            e.export(csvFile)
+        
 # class Day(object):
 #     """Part of a Schedule"""
 #     def __init__(self, date=None, sessions=None):
@@ -145,6 +156,13 @@ class Schedule(object):
         self.sessions.clear()
         for s in loaded.sessions:
             self.sessions.append(s)
+            
+    def export(self,filename):
+        """Export the schedule as a reasonably-nicely formatted .csv file so they can play around with in in Excel"""
+        fout = open(filename,'w')
+        for s in self.sessions:
+            s.export(fout)
+        fout.close()
 
     # def countOverlappingEvents(self):
     #     """counts the number of overlapping events"""
