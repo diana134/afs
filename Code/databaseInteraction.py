@@ -320,4 +320,4 @@ class DatabaseInteraction(object):
             return entryList
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "getAllEntries FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            print "getAllEntriesInDiscipline FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)

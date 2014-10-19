@@ -1,7 +1,7 @@
 """Deals with Entries"""
 
 from utilities import requiredFieldIsGood, optionalFieldIsGood
-from databaseInteraction import dbInteractionInstance
+# from databaseInteraction import dbInteractionInstance
 
 class Entry(object):
     """holds Entry data as strings"""
@@ -71,12 +71,12 @@ class Entry(object):
         """Returns a comma-separated string of column headers for use in a CSV file"""
         return '"Participant","Teacher","Discipline","Level","Title","Performance Time","Style","Composer","Opus","No.","Movement","Arranger","Artist","Instrument","Author"'
         
-    def export(self,csvFile,depth=2):
+    def export(self, db, csvFile, depth=2):
         """Write this entry to a csv file, padded with <depth> empty columns as indentation. \
         csvFile must be an open file with write permissions."""
         
-        participant = dbInteractionInstance.getParticipantFromId(self.participantID)
-        teacher = dbInteractionInstance.getTeacherFromId(self.teacherID)
+        participant = db.getParticipantFromId(self.participantID)
+        teacher = db.getTeacherFromId(self.teacherID)
         
         leadingCommas = ''
         for i in range(depth):

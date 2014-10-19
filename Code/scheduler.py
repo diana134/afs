@@ -174,7 +174,6 @@ class Scheduler(object):
     #     return solution
 
 
-    # TODO pass in and handle all the dates and times
     def process(self, entriesInDiscipline, sessionDatetimes):
         """Starts a backtracking search for a solution, returns a valid Schedule or None if no solution exists"""
         print "Working..."
