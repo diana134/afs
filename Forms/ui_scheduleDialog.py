@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_scheduleDialog.ui'
 #
-# Created: Sun Oct 19 15:06:11 2014
+# Created: Sun Oct 19 15:47:49 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -101,10 +101,10 @@ class Ui_ScheduleDialog(object):
         self.gridLayout.addItem(spacerItem3, 2, 2, 1, 1)
         self.verticalLayout_2.addLayout(self.gridLayout)
         self.verticalLayout_3.addWidget(self.splitter)
-        self.buttonBox = QtGui.QDialogButtonBox(ScheduleDialog)
-        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
-        self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
-        self.verticalLayout_3.addWidget(self.buttonBox)
+        self.btnBox = QtGui.QDialogButtonBox(ScheduleDialog)
+        self.btnBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
+        self.btnBox.setObjectName(_fromUtf8("btnBox"))
+        self.verticalLayout_3.addWidget(self.btnBox)
 
         self.retranslateUi(ScheduleDialog)
         QtCore.QMetaObject.connectSlotsByName(ScheduleDialog)

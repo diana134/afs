@@ -153,7 +153,7 @@ class Schedule(object):
         fin.close()
         
         # copy the data we loaded into self
-        self.sessions.clear()
+        self.sessions = []
         for s in loaded.sessions:
             self.sessions.append(s)
             

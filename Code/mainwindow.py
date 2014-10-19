@@ -13,6 +13,7 @@ from addEntryDialog import AddEntryDialog
 from scheduleDialog import ScheduleDialog
 from databaseInteraction import DatabaseInteraction
 from scheduler import Scheduler
+from schedule import Schedule
 # import sqlite3
 import traceback
 import datetime
@@ -49,6 +50,7 @@ class MainWindow(QWidget):
         self.ui.addTeacherBtn.clicked.connect(self.addTeacherBtn_clicked)
         self.ui.addEntryBtn.clicked.connect(self.addEntryBtn_clicked)
         self.ui.makeScheduleBtn.clicked.connect(self.makeScheduleBtn_clicked)
+        self.ui.loadScheduleBtn.clicked.connect(self.loadScheduleBtn_clicked)
 
     ###### Slots ######
 
@@ -136,7 +138,16 @@ class MainWindow(QWidget):
         dialog = ScheduleDialog(schedule=solution, db=self.db)
         result = dialog.exec_()
         if result == True:
-            # TODO save the schedule
+            pass
+
+    def loadScheduleBtn_clicked(self):
+        """Loads a schedule from file"""
+        # TODO let user choose
+        schedule = Schedule()
+        schedule.load("testSchedule")
+        dialog = ScheduleDialog(schedule=schedule, db=self.db)
+        result = dialog.exec_()
+        if result == True:
             pass
 
     ##########

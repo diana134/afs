@@ -24,6 +24,8 @@ class ScheduleDialog(QDialog):
         self.ui.scheduleRightBtn.clicked.connect(self.scheduleRightBtn_clicked)
         self.ui.entriesUpBtn.clicked.connect(self.entriesUpBtn_clicked)
         self.ui.entriesDownBtn.clicked.connect(self.entriesDownBtn_clicked)
+        self.ui.btnBox.accepted.connect(self.okBtn_clicked)
+        self.ui.btnBox.rejected.connect(self.cancelBtn_clicked)
 
     def displaySchedule(self):
         """Displays the schedule in scheduleTableWidget"""
@@ -45,6 +47,17 @@ class ScheduleDialog(QDialog):
         self.ui.scheduleTableWidget.setHorizontalHeaderLabels(tableHeader)
 
     ##### Slots #####
+
+    def okBtn_clicked(self):
+        """Saves schedule for future use"""
+        # TODO user can choose filename
+        self.schedule.save("testSchedule")
+        # All done!
+        self.accept()
+
+    def cancelBtn_clicked(self):
+        """Discards the schedule and closes the window"""
+        self.reject()
 
     def scheduleTableWidget_itemSelectionChanged(self):
         """Displays the entries of the selected event in entriesTableWidget"""

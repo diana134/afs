@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Wed Oct 15 17:04:47 2014
+# Created: Sun Oct 19 15:49:18 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -47,6 +47,9 @@ class Ui_MainWindow(object):
         self.makeScheduleBtn = QtGui.QPushButton(self.centralwidget)
         self.makeScheduleBtn.setObjectName(_fromUtf8("makeScheduleBtn"))
         self.gridLayout.addWidget(self.makeScheduleBtn, 2, 0, 1, 1)
+        self.loadScheduleBtn = QtGui.QPushButton(self.centralwidget)
+        self.loadScheduleBtn.setObjectName(_fromUtf8("loadScheduleBtn"))
+        self.gridLayout.addWidget(self.loadScheduleBtn, 2, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -59,4 +62,5 @@ class Ui_MainWindow(object):
         self.addEntryBtn.setText(_translate("MainWindow", "Add &Entry", None))
         self.addGroupParticipantBtn.setText(_translate("MainWindow", "Add &Group Participant", None))
         self.makeScheduleBtn.setText(_translate("MainWindow", "&Make Schedule", None))
+        self.loadScheduleBtn.setText(_translate("MainWindow", "&Load Schedule", None))
 
