@@ -74,6 +74,9 @@ class SoloParticipant(Participant):
         result = db.addSoloParticipant((self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob))
         return result
 
+    def __str__(self):
+        return '{0} {1}'.format(self.first,self.last)
+
 
 class GroupParticipant(Participant):
     """Holds GroupParticipant data (name, size, age, etc) as strings"""
@@ -108,3 +111,6 @@ class GroupParticipant(Participant):
         # Very important to send these in the correct order or shit breaks
         result = db.addGroupParticipant((self.groupName, self.groupSize, self.schoolGrade, self.averageAge, self.participants))
         return result
+
+    def __str__(self):
+        return self.groupName

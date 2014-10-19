@@ -42,3 +42,6 @@ class Teacher(object):
         # Very important to send these in the correct order or shit breaks
         result = db.addTeacher((self.first, self.last, self.address, self.city, self.postal, self.daytimePhone, self.eveningPhone, self.email))
         return result
+        
+    def __str__(self):
+        return '{0} {1}'.format(self.first,self.last)
