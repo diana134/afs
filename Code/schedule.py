@@ -3,6 +3,7 @@
 import sys
 # from random import randrange, shuffle
 import datetime
+import pickle
 
 class Session(object):
     """Part of a Schedule"""
@@ -128,10 +129,22 @@ class Schedule(object):
     #     # Magic code from stackoverflow
     #     self.arrangement.sort(key=lambda tup: tup[0]) 
 
-    def save(self):
-        """save this schedule"""
-        # As a file? In the DB? Pickle it?
-        pass
+    def save(self,filename):
+        """Save the schedule as a pickled blob and write it to the specified filename"""
+        fout = open(filename,'w')
+        pickle.dump(self, fout)
+        fout.close()
+        
+    def load(self,filename):
+        """Load the schedule from a pickled blob"""
+        fin = open(filename,'r')
+        loaded = pickle.load(fin)
+        fin.close()
+        
+        # copy the data we loaded into self
+        self.sessions.clear()
+        for s in loaded.sessions:
+            self.sessions.append(s)
 
     # def countOverlappingEvents(self):
     #     """counts the number of overlapping events"""
