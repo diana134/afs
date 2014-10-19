@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Sun Oct 19 15:49:18 2014
+# Created: Sun Oct 19 15:59:15 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -32,6 +32,9 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.gridLayout = QtGui.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
+        self.makeScheduleBtn = QtGui.QPushButton(self.centralwidget)
+        self.makeScheduleBtn.setObjectName(_fromUtf8("makeScheduleBtn"))
+        self.gridLayout.addWidget(self.makeScheduleBtn, 2, 0, 1, 1)
         self.addTeacherBtn = QtGui.QPushButton(self.centralwidget)
         self.addTeacherBtn.setObjectName(_fromUtf8("addTeacherBtn"))
         self.gridLayout.addWidget(self.addTeacherBtn, 1, 0, 1, 1)
@@ -44,9 +47,6 @@ class Ui_MainWindow(object):
         self.addGroupParticipantBtn = QtGui.QPushButton(self.centralwidget)
         self.addGroupParticipantBtn.setObjectName(_fromUtf8("addGroupParticipantBtn"))
         self.gridLayout.addWidget(self.addGroupParticipantBtn, 0, 1, 1, 1)
-        self.makeScheduleBtn = QtGui.QPushButton(self.centralwidget)
-        self.makeScheduleBtn.setObjectName(_fromUtf8("makeScheduleBtn"))
-        self.gridLayout.addWidget(self.makeScheduleBtn, 2, 0, 1, 1)
         self.loadScheduleBtn = QtGui.QPushButton(self.centralwidget)
         self.loadScheduleBtn.setObjectName(_fromUtf8("loadScheduleBtn"))
         self.gridLayout.addWidget(self.loadScheduleBtn, 2, 1, 1, 1)
@@ -57,10 +57,10 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "Arts Festival Scheduler", None))
+        self.makeScheduleBtn.setText(_translate("MainWindow", "&Make Schedule", None))
         self.addTeacherBtn.setText(_translate("MainWindow", "Add &Teacher", None))
         self.addSoloParticipantBtn.setText(_translate("MainWindow", "Add &Solo Participant", None))
         self.addEntryBtn.setText(_translate("MainWindow", "Add &Entry", None))
         self.addGroupParticipantBtn.setText(_translate("MainWindow", "Add &Group Participant", None))
-        self.makeScheduleBtn.setText(_translate("MainWindow", "&Make Schedule", None))
         self.loadScheduleBtn.setText(_translate("MainWindow", "&Load Schedule", None))
 

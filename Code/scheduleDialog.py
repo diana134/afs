@@ -2,7 +2,7 @@
 
 import sys
 sys.path.insert(0, '../Forms/')
-from PyQt4.QtGui import QDialog, QTableWidgetItem
+from PyQt4.QtGui import QDialog, QTableWidgetItem, QMessageBox
 from ui_scheduleDialog import Ui_ScheduleDialog
 
 class ScheduleDialog(QDialog):
@@ -26,6 +26,7 @@ class ScheduleDialog(QDialog):
         self.ui.entriesDownBtn.clicked.connect(self.entriesDownBtn_clicked)
         self.ui.btnBox.accepted.connect(self.okBtn_clicked)
         self.ui.btnBox.rejected.connect(self.cancelBtn_clicked)
+        self.ui.exportScheduleBtn.clicked.connect(self.exportScheduleBtn_clicked)
 
     def displaySchedule(self):
         """Displays the schedule in scheduleTableWidget"""
@@ -88,6 +89,12 @@ class ScheduleDialog(QDialog):
         else:
             # Clear table
             self.ui.entriesTableWidget.setRowCount(0)
+
+    def exportScheduleBtn_clicked(self):
+        """Exports a schedule to a csv"""
+        filename = "testScheduleCSV"
+        self.schedule.export(db=self.db, filename=filename)
+        QMessageBox.information(self, 'Export Schedule', 'Schedule exported to ' + filename, QMessageBox.Ok)
 
     def scheduleUpBtn_clicked(self):
         pass

@@ -67,7 +67,8 @@ class Entry(object):
         # s = ''
         return self.participantID + self.teacherID + self.discipline + self.level + self.classNumber + self.className + self.title + self.performanceTime + self.style + self.composer + self.opus + self.no + self.movement + self.arranger + self.artist + self.instrument + self.author
         
-    def getCsvHeader(self):
+    @staticmethod
+    def getCsvHeader():
         """Returns a comma-separated string of column headers for use in a CSV file"""
         return '"Participant","Teacher","Discipline","Level","Title","Performance Time","Style","Composer","Opus","No.","Movement","Arranger","Artist","Instrument","Author"'
         
