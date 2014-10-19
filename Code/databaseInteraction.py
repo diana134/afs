@@ -280,3 +280,38 @@ class DatabaseInteraction(object):
         except Exception, e:
             # TODO: log this instead of printing to console
             print "getAllEntries FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+
+    def getAllEntriesInDiscipline(self, discipline):
+        """Returns all the Entries for the given discipline"""
+        entryList = []
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("SELECT participant_id, teacher_id, discipline, level, class_number, \
+                class_name, title, performance_time, style, composer, opus, no, movement, arranger, \
+                artist, instrument, author FROM entries WHERE discipline=:discipline")
+            query.bindValue(":discipline", discipline)
+            query.exec_()
+            while query.next() == True:
+                participantID = query.value(0).toString()
+                teacherID = query.value(1).toString()
+                discipline = query.value(2).toString()
+                level = query.value(3).toString()
+                classNumber = query.value(4).toString()
+                className = query.value(5).toString()
+                title = query.value(6).toString()
+                performanceTime = query.value(7).toString()
+                style = query.value(8).toString()
+                composer = query.value(9).toString()
+                opus = query.value(10).toString()
+                no = query.value(11).toString()
+                movement = query.value(12).toString()
+                arranger = query.value(13).toString()
+                artist = query.value(14).toString()
+                instrument = query.value(15).toString()
+                author = query.value(16).toString()
+                ee = Entry(participantID, teacherID, discipline, level, classNumber, className, title, performanceTime, style, composer, opus, no, movement, arranger, artist, instrument, author)
+                entryList.append(ee)
+            return entryList
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "getAllEntries FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)

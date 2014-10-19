@@ -11,8 +11,10 @@ from addGroupParticipantDialog import AddGroupParticipantDialog
 from addTeacherDialog import AddTeacherDialog
 from addEntryDialog import AddEntryDialog
 from databaseInteraction import DatabaseInteraction
+from scheduler import Scheduler
 # import sqlite3
 import traceback
+import datetime
 
 app = QApplication(sys.argv)
 
@@ -27,6 +29,7 @@ class MainWindow(QWidget):
         self.db = DatabaseInteraction()
         self.connectSlots()
         self.testing = testing
+        self.scheduler = Scheduler(self.db)
         # if testConn is not None:
         #     self.conn = testConn
         # else:
@@ -44,6 +47,7 @@ class MainWindow(QWidget):
         self.ui.addGroupParticipantBtn.clicked.connect(self.addGroupParticipantBtn_clicked)
         self.ui.addTeacherBtn.clicked.connect(self.addTeacherBtn_clicked)
         self.ui.addEntryBtn.clicked.connect(self.addEntryBtn_clicked)
+        self.ui.makeScheduleBtn.clicked.connect(self.makeScheduleBtn_clicked)
 
     ###### Slots ######
 
@@ -114,6 +118,20 @@ class MainWindow(QWidget):
             except Exception, e:
                 print traceback.format_exc()
                 QMessageBox.critical(self, 'Add Entry', 'Failed to add new Entry\n{0}'.format(e), QMessageBox.Ok)
+
+    def makeScheduleBtn_clicked(self):
+        ### Test Code ###
+        s1Start = datetime.datetime(2014, 4, 7, 9)
+        s1End = datetime.datetime(2014, 4, 7, 12)
+        s2Start = datetime.datetime(2014, 4, 7, 13)
+        s2End = datetime.datetime(2014, 4, 7, 17)
+        s3Start = datetime.datetime(2014, 4, 7, 18)
+        s3End = datetime.datetime(2014, 4, 7, 21)
+        sessionDatetimes = [(s1Start, s1End), (s2Start, s2End), (s3Start, s3End)]
+        entries = self.db.getAllEntriesInDiscipline("Piano")
+        ####
+        solution = self.scheduler.process(entries, sessionDatetimes)
+        print solution
 
     ##########
 

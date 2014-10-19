@@ -28,22 +28,22 @@ class ShedulerTests(unittest.TestCase):
         self.assertTrue(len(eventList[1].entries) == 1)
         self.assertTrue(len(eventList[2].entries) == 1)
 
-class MateTests(unittest.TestCase):    
-    """tests for MateTests"""
+# class MateTests(unittest.TestCase):    
+#     """tests for MateTests"""
     
-    def testSanity(self):
-        """4 identical parents should produce 4 identical offspring"""
-        startTime = datetime.datetime(2014, 1, 1, 1)
-        event = Event("1")
-        parent = Schedule([[startTime, event]])
-        parents = [parent, parent, parent, parent]
-        # Mate to produce offspring
-        offspring = Scheduler.mate(parents)
-        # Make sure there are 4 offspring
-        self.assertEqual(len(offspring), 4)
-        # Make sure all offspring == parent
-        for child in offspring:
-            self.assertEqual(child.arrangement, parent.arrangement)
+#     def testSanity(self):
+#         """4 identical parents should produce 4 identical offspring"""
+#         startTime = datetime.datetime(2014, 1, 1, 1)
+#         event = Event("1")
+#         parent = Schedule([[startTime, event]])
+#         parents = [parent, parent, parent, parent]
+#         # Mate to produce offspring
+#         offspring = Scheduler.mate(parents)
+#         # Make sure there are 4 offspring
+#         self.assertEqual(len(offspring), 4)
+#         # Make sure all offspring == parent
+#         for child in offspring:
+#             self.assertEqual(child.arrangement, parent.arrangement)
     
 if __name__ == '__main__':
     unittest.main(verbosity=2) # for slightly more detailed results
