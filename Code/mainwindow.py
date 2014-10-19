@@ -10,6 +10,7 @@ from addSoloParticipantDialog import AddSoloParticipantDialog
 from addGroupParticipantDialog import AddGroupParticipantDialog
 from addTeacherDialog import AddTeacherDialog
 from addEntryDialog import AddEntryDialog
+from scheduleDialog import ScheduleDialog
 from databaseInteraction import DatabaseInteraction
 from scheduler import Scheduler
 # import sqlite3
@@ -132,6 +133,11 @@ class MainWindow(QWidget):
         ####
         solution = self.scheduler.process(entries, sessionDatetimes)
         print solution
+        dialog = ScheduleDialog(schedule=solution, db=self.db)
+        result = dialog.exec_()
+        if result == True:
+            # TODO save the schedule
+            pass
 
     ##########
 
