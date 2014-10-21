@@ -314,12 +314,26 @@
      <item row="19" column="0">
       <widget class="QLabel" name="performanceTimeLabel">
        <property name="text">
-        <string>Performance Time</string>
+        <string>Performance Time (mm:ss)</string>
        </property>
       </widget>
      </item>
      <item row="19" column="1">
-      <widget class="QLineEdit" name="performanceTimeLineEdit"/>
+      <widget class="QTimeEdit" name="performanceTimeEdit">
+       <property name="maximumDateTime">
+        <datetime>
+         <hour>1</hour>
+         <minute>59</minute>
+         <second>59</second>
+         <year>2000</year>
+         <month>1</month>
+         <day>1</day>
+        </datetime>
+       </property>
+       <property name="displayFormat">
+        <string>mm:ss</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>

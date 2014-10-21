@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_chooseParticipantDialog.ui'
 #
-# Created: Tue Sep 23 01:05:57 2014
+# Created: Tue Oct 21 00:24:32 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -66,7 +66,7 @@ class Ui_ChooseParticipantDialog(object):
         self.verticalLayout.addWidget(self.btnBox)
 
         self.retranslateUi(ChooseParticipantDialog)
-        self.participantTypeTabWidget.setCurrentIndex(0)
+        self.participantTypeTabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(ChooseParticipantDialog)
 
     def retranslateUi(self, ChooseParticipantDialog):

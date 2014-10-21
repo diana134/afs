@@ -33,6 +33,7 @@ class AddSoloParticipantDialog(QDialog):
 
     def clearFields(self):
         """Clears and resets all fields"""
+        self.p = None
         self.ui.firstNameLineEdit.clear()
         self.ui.lastNameLineEdit.clear()
         self.ui.addressLineEdit.clear()

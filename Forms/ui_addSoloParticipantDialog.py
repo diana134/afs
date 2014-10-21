@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'ui_addSoloParticipantDialog.ui'
 #
-# Created: Fri Aug 15 01:37:03 2014
-#      by: PyQt4 UI code generator 4.9.3
+# Created: Tue Oct 21 00:31:48 2014
+#      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -12,7 +12,16 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
-    _fromUtf8 = lambda s: s
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
 
 class Ui_AddSoloParticipantDialog(object):
     def setupUi(self, AddSoloParticipantDialog):
@@ -91,6 +100,7 @@ class Ui_AddSoloParticipantDialog(object):
         self.dateOfBirthDateEdit.setAutoFillBackground(False)
         self.dateOfBirthDateEdit.setDate(QtCore.QDate(1900, 1, 1))
         self.dateOfBirthDateEdit.setMinimumDate(QtCore.QDate(1900, 1, 1))
+        self.dateOfBirthDateEdit.setCalendarPopup(True)
         self.dateOfBirthDateEdit.setObjectName(_fromUtf8("dateOfBirthDateEdit"))
         self.formLayout.setWidget(8, QtGui.QFormLayout.FieldRole, self.dateOfBirthDateEdit)
         self.gridLayout.addLayout(self.formLayout, 0, 0, 1, 3)
@@ -99,17 +109,17 @@ class Ui_AddSoloParticipantDialog(object):
         QtCore.QMetaObject.connectSlotsByName(AddSoloParticipantDialog)
 
     def retranslateUi(self, AddSoloParticipantDialog):
-        AddSoloParticipantDialog.setWindowTitle(QtGui.QApplication.translate("AddSoloParticipantDialog", "Add Solo Participant", None, QtGui.QApplication.UnicodeUTF8))
-        self.cancelBtn.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "&Cancel", None, QtGui.QApplication.UnicodeUTF8))
-        self.addParticipantBtn.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "A&dd Participant", None, QtGui.QApplication.UnicodeUTF8))
-        self.firstNameLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "First Name", None, QtGui.QApplication.UnicodeUTF8))
-        self.lastNameLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "Last Name", None, QtGui.QApplication.UnicodeUTF8))
-        self.addressLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "Address", None, QtGui.QApplication.UnicodeUTF8))
-        self.cityLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "City", None, QtGui.QApplication.UnicodeUTF8))
-        self.postalCodeLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "Postal Code", None, QtGui.QApplication.UnicodeUTF8))
-        self.homePhoneLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "Home Phone", None, QtGui.QApplication.UnicodeUTF8))
-        self.cellPhoneLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "Cell Phone", None, QtGui.QApplication.UnicodeUTF8))
-        self.emailLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "Email", None, QtGui.QApplication.UnicodeUTF8))
-        self.dateOfBirthLabel.setText(QtGui.QApplication.translate("AddSoloParticipantDialog", "Date of Birth", None, QtGui.QApplication.UnicodeUTF8))
-        self.dateOfBirthDateEdit.setDisplayFormat(QtGui.QApplication.translate("AddSoloParticipantDialog", "yyyy-MM-dd", None, QtGui.QApplication.UnicodeUTF8))
+        AddSoloParticipantDialog.setWindowTitle(_translate("AddSoloParticipantDialog", "Add Solo Participant", None))
+        self.cancelBtn.setText(_translate("AddSoloParticipantDialog", "&Cancel", None))
+        self.addParticipantBtn.setText(_translate("AddSoloParticipantDialog", "A&dd Participant", None))
+        self.firstNameLabel.setText(_translate("AddSoloParticipantDialog", "First Name", None))
+        self.lastNameLabel.setText(_translate("AddSoloParticipantDialog", "Last Name", None))
+        self.addressLabel.setText(_translate("AddSoloParticipantDialog", "Address", None))
+        self.cityLabel.setText(_translate("AddSoloParticipantDialog", "City", None))
+        self.postalCodeLabel.setText(_translate("AddSoloParticipantDialog", "Postal Code", None))
+        self.homePhoneLabel.setText(_translate("AddSoloParticipantDialog", "Home Phone", None))
+        self.cellPhoneLabel.setText(_translate("AddSoloParticipantDialog", "Cell Phone", None))
+        self.emailLabel.setText(_translate("AddSoloParticipantDialog", "Email", None))
+        self.dateOfBirthLabel.setText(_translate("AddSoloParticipantDialog", "Date of Birth", None))
+        self.dateOfBirthDateEdit.setDisplayFormat(_translate("AddSoloParticipantDialog", "yyyy-MM-dd", None))
 

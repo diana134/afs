@@ -1,8 +1,10 @@
+"""The dialog for adding an Entry"""
+
 import sys
 sys.path.insert(0, '../Forms/')
-from PyQt4 import QtGui
 from PyQt4.QtGui import QDialog, QMessageBox
-import traceback
+from PyQt4.QtCore import QTime
+
 from ui_addEntryDialog import Ui_AddEntryDialog
 from addSoloParticipantDialog import AddSoloParticipantDialog
 from addGroupParticipantDialog import AddGroupParticipantDialog
@@ -10,9 +12,10 @@ from addTeacherDialog import AddTeacherDialog
 from chooseParticipantDialog import ChooseParticipantDialog
 from chooseTeacherDialog import ChooseTeacherDialog
 from entry import Entry
+from utilities import sanitize
 
 class AddEntryDialog(QDialog):
-    def __init__(self, parent=None, testing=False, db=None):
+    def __init__(self, parent=None, testing=False, db=None, closeAfterAdd=False):
         # Initialize object using ui_addEntry
         super(AddEntryDialog, self).__init__(parent)
         self.ui = Ui_AddEntryDialog()
@@ -21,6 +24,7 @@ class AddEntryDialog(QDialog):
         # Initialize class variables
         self.testing = testing
         self.db = db
+        self.closeAfterAdd = closeAfterAdd
         self.entry = None
         self.participantId = None
         self.teacherId = None
@@ -49,6 +53,30 @@ class AddEntryDialog(QDialog):
     def getEntry(self):
         return self.entry
 
+    def clearFields(self):
+        """Clears and resets all the fields"""
+        # Leave Participant selected
+        # self.participantId = None
+        # self.ui.participantLineEdit.clear()
+        # Leave Teacher selected
+        # self.teacherId.clear()
+        # self.ui.teacherLineEdit.clear()
+        # Leave Discipline how it is
+        self.ui.levelLineEdit.clear()
+        self.ui.classNumberLineEdit.clear()
+        self.ui.classNameLineEdit.clear()
+        self.ui.styleLineEdit.clear()
+        self.ui.instrumentLineEdit.clear()
+        self.ui.titleLineEdit.clear()
+        self.ui.composerLineEdit.clear()
+        self.ui.arrangerLineEdit.clear()
+        self.ui.artistLineEdit.clear()
+        self.ui.authorLineEdit.clear()
+        self.ui.opusLineEdit.clear()
+        self.ui.movementLineEdit.clear()
+        self.ui.noLineEdit.clear()
+        self.ui.performanceTimeEdit.setTime(QTime(0, 0, 0))
+
     ### Slots ###
 
     def addEntryBtn_clicked(self):
@@ -57,25 +85,39 @@ class AddEntryDialog(QDialog):
         teacherID = self.teacherId
         discipline = str(self.ui.disciplineComboBox.currentText()).strip()
         level = str(self.ui.levelLineEdit.text()).strip()
+        level = sanitize(level)
         classNumber = str(self.ui.classNumberLineEdit.text()).strip()
+        classNumber = sanitize(classNumber)
         className = str(self.ui.classNameLineEdit.text()).strip()
+        className = sanitize(className)
         style = str(self.ui.styleLineEdit.text()).strip()
+        style = sanitize(style)
         instrument = str(self.ui.instrumentLineEdit.text()).strip()
+        instrument = sanitize(instrument)
         title = str(self.ui.titleLineEdit.text()).strip()
+        title = sanitize(title)
         composer = str(self.ui.composerLineEdit.text()).strip()
+        composer = sanitize(composer)
         arranger = str(self.ui.arrangerLineEdit.text()).strip()
+        arranger = sanitize(arranger)
         artist = str(self.ui.artistLineEdit.text()).strip()
+        artist = sanitize(artist)
         author = str(self.ui.authorLineEdit.text()).strip()
+        author = sanitize(author)
         opus = str(self.ui.opusLineEdit.text()).strip()
+        opus = sanitize(opus)
         no = str(self.ui.noLineEdit.text()).strip()
+        no = sanitize(no)
         movement = str(self.ui.movementLineEdit.text()).strip()
-        performanceTime = str(self.ui.performanceTimeLineEdit.text()).strip()
+        movement = sanitize(movement)
+        # Don't need to sanitize a timeEdit
+        performanceTime = str(self.ui.performanceTimeEdit.time().toString("m:ss"))
 
-        # Error checking
-        # TODO: set focus to incorrect field
+        # Check for empty fields
         if participantID is None or participantID == "":
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Participant', QMessageBox.Ok)
         elif teacherID is None or teacherID == "":
+            # TODO how to handle this for disciplines that don't usually have teachers? (speech)
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Teacher', QMessageBox.Ok)
         elif discipline is None or discipline == "":
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Discipline', QMessageBox.Ok)
@@ -85,10 +127,22 @@ class AddEntryDialog(QDialog):
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Class Name', QMessageBox.Ok)
         elif title is None or title == "":
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Title', QMessageBox.Ok)
+        # Check for valid fields
+        elif performanceTime == "0:00" and QMessageBox.question(self, 'Validate Performance Time', 'Are you sure you want to leave performance time blank? This could cause the scheduling algorithm to make poor choices.', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+            # Stop here
+            pass
         else:
             self.entry = Entry(participantID, teacherID, discipline, level, classNumber, className, title, performanceTime, style, composer, opus, no, movement, arranger, artist, instrument, author)
-            print self.entry
-            self.accept()
+            result = self.entry.addToDB(self.db)
+            if result == "":
+                QMessageBox.information(self, 'Add Entry', 'Successfully added new entry', QMessageBox.Ok)
+                self.clearFields()
+                if self.closeAfterAdd:
+                    self.accept()
+            else:
+                QMessageBox.critical(self, 'Add Entry', 'Failed to add new entry\n{0}'.format(result), QMessageBox.Ok)
+
+
 
     def cancelBtn_clicked(self):
         self.reject()

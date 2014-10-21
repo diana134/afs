@@ -74,18 +74,6 @@ class MainWindow(QWidget):
         # For Modal dialog
         result = dialog.exec_()
 
-        if result == True:
-            entry = dialog.getEntry()
-            try: # TODO try/except still necessary with new model format?
-                result = entry.addToDB(self.db)
-                if result == "":
-                    QMessageBox.information(self, 'Add Entry', 'Successfully added new Entry', QMessageBox.Ok)
-                else:
-                    QMessageBox.critical(self, 'Add Entry', 'Failed to add new Entry\n{0}'.format(e), QMessageBox.Ok)
-            except Exception, e:
-                print traceback.format_exc()
-                QMessageBox.critical(self, 'Add Entry', 'Failed to add new Entry\n{0}'.format(e), QMessageBox.Ok)
-
     def makeScheduleBtn_clicked(self):
         ### Test Code ###
         s1Start = datetime.datetime(2014, 4, 7, 9)

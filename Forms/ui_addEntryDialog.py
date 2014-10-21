@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addEntryDialog.ui'
 #
-# Created: Tue Sep 23 01:40:03 2014
+# Created: Tue Oct 21 00:24:32 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -174,9 +174,10 @@ class Ui_AddEntryDialog(object):
         self.performanceTimeLabel = QtGui.QLabel(AddEntryDialog)
         self.performanceTimeLabel.setObjectName(_fromUtf8("performanceTimeLabel"))
         self.formLayout_2.setWidget(19, QtGui.QFormLayout.LabelRole, self.performanceTimeLabel)
-        self.performanceTimeLineEdit = QtGui.QLineEdit(AddEntryDialog)
-        self.performanceTimeLineEdit.setObjectName(_fromUtf8("performanceTimeLineEdit"))
-        self.formLayout_2.setWidget(19, QtGui.QFormLayout.FieldRole, self.performanceTimeLineEdit)
+        self.performanceTimeEdit = QtGui.QTimeEdit(AddEntryDialog)
+        self.performanceTimeEdit.setMaximumDateTime(QtCore.QDateTime(QtCore.QDate(2000, 1, 1), QtCore.QTime(1, 59, 59)))
+        self.performanceTimeEdit.setObjectName(_fromUtf8("performanceTimeEdit"))
+        self.formLayout_2.setWidget(19, QtGui.QFormLayout.FieldRole, self.performanceTimeEdit)
         self.gridLayout.addLayout(self.formLayout_2, 0, 0, 1, 3)
 
         self.retranslateUi(AddEntryDialog)
@@ -215,5 +216,6 @@ class Ui_AddEntryDialog(object):
         self.opusLabel.setText(_translate("AddEntryDialog", "Opus", None))
         self.noLabel.setText(_translate("AddEntryDialog", "No.", None))
         self.movementLabel.setText(_translate("AddEntryDialog", "Movement", None))
-        self.performanceTimeLabel.setText(_translate("AddEntryDialog", "Performance Time", None))
+        self.performanceTimeLabel.setText(_translate("AddEntryDialog", "Performance Time (mm:ss)", None))
+        self.performanceTimeEdit.setDisplayFormat(_translate("AddEntryDialog", "mm:ss", None))
 

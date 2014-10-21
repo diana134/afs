@@ -44,6 +44,8 @@ class AddGroupParticipantDialog(QDialog):
 
     def clearFields(self):
         """Clears and resets all fields"""
+        self.gp = None
+        self.participantIds = []
         self.ui.groupNameLineEdit.clear()
         self.ui.groupSizeLineEdit.clear()
         self.ui.schoolGradeLineEdit.clear()
