@@ -148,20 +148,14 @@ class AddEntryDialog(QDialog):
 
     def createNewTeacherBtn_clicked(self):
         """opens Add Teacher Dialog"""
-        dialog = AddTeacherDialog(testing=self.testing)
+        dialog = AddTeacherDialog(testing=self.testing, db=self.db, closeAfterAdd=True)
         # For Modal dialog
         result = dialog.exec_()
 
         if result == True:
             t = dialog.getTeacher()
-            try:
-                t.addToDB(self.db)
-                self.ui.teacherLineEdit.setText(t.first + ' ' + t.last)
-                self.teacherId = self.db.getLastTeacherId()
-                QMessageBox.information(self, 'Add Teacher', 'Successfully added new teacher', QMessageBox.Ok)
-            except Exception, e:
-                print traceback.format_exc()
-                QMessageBox.critical(self, 'Add Teacher', 'Failed to add new teacher\n{0}'.format(e), QMessageBox.Ok)
+            self.ui.teacherLineEdit.setText(t.first + ' ' + t.last)
+            self.teacherId = self.db.getLastTeacherId()
 
     def disciplineComboBox_changed(self, text):
         """changes which fields are enabled based on the selected discipline"""

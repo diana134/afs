@@ -4,7 +4,6 @@ import sys
 sys.path.insert(0, '../Forms/')
 import traceback
 from PyQt4.QtGui import QDialog, QAbstractItemView, QMessageBox
-# from PyQt4.QtCore import QModelIndex
 
 from ui_chooseTeacherDialog import Ui_ChooseTeacherDialog
 
