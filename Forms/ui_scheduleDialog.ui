@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>View/Edit Schedule</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
@@ -215,12 +215,6 @@
     </widget>
    </item>
   </layout>
-  <zorder>horizontalLayoutWidget</zorder>
-  <zorder>btnBox</zorder>
-  <zorder>verticalLayoutWidget</zorder>
-  <zorder>gridLayoutWidget_2</zorder>
-  <zorder>verticalLayoutWidget_2</zorder>
-  <zorder>horizontalLayoutWidget</zorder>
  </widget>
  <resources/>
  <connections/>

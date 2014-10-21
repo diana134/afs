@@ -20,17 +20,15 @@ class Participant(object):
 class SoloParticipant(Participant):
     """Holds participant data (name, address, contact info, etc) as strings"""
     def __init__(self, first="", last="", address="", town="", postal="", home="", cell="", email="", dob=""):
-        # Deal with getting QStrings from UI
-        # TODO: don't need to str anymore, handled at ui
-        self.first = str(first) if first is not None else None
-        self.last = str(last) if last is not None else None
-        self.address = str(address) if address is not None else None
-        self.town = str(town) if town is not None else None
-        self.postal = str(postal) if postal is not None else None
-        self.home = str(home) if home is not None else None
-        self.cell = str(cell) if cell is not None else None
-        self.email = str(email) if email is not None else None
-        self.dob = str(dob) if dob is not None else None
+        self.first = first
+        self.last = last
+        self.address = address
+        self.town = town
+        self.postal = postal
+        self.home = home
+        self.cell = cell
+        self.email = email
+        self.dob = dob
 
     def isEqualTo(self, obj):
         """check if obj is equal to this SoloParticipant"""

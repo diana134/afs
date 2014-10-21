@@ -126,20 +126,14 @@ class AddEntryDialog(QDialog):
 
     def createNewSoloParticipantBtn_clicked(self):
         """opens Add Solo Participant Dialog"""
-        dialog = AddSoloParticipantDialog(testing=self.testing)
+        dialog = AddSoloParticipantDialog(testing=self.testing, db=self.db, closeAfterAdd=True)
         # For Modal dialog
         result = dialog.exec_()
 
         if result == True:
             p = dialog.getParticipant()
-            try:
-                p.addToDB(self.db)
-                self.ui.participantLineEdit.setText(p.first + ' ' + p.last)
-                self.participantId = self.db.getLastSoloParticipantId()
-                QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
-            except Exception, e:
-                print traceback.format_exc()
-                QMessageBox.critical(self, 'Add Participant', 'Failed to add new participant\n{0}'.format(e), QMessageBox.Ok)
+            self.ui.participantLineEdit.setText(p.first + ' ' + p.last)
+            self.participantId = self.db.getLastSoloParticipantId()
 
     def createNewGroupParticipantBtn_clicked(self):
         """opens Add Group Participant Dialog"""

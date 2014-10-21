@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_scheduleDialog.ui'
 #
-# Created: Sun Oct 19 15:59:15 2014
+# Created: Sun Oct 19 19:14:00 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -118,7 +118,7 @@ class Ui_ScheduleDialog(object):
         QtCore.QMetaObject.connectSlotsByName(ScheduleDialog)
 
     def retranslateUi(self, ScheduleDialog):
-        ScheduleDialog.setWindowTitle(_translate("ScheduleDialog", "Form", None))
+        ScheduleDialog.setWindowTitle(_translate("ScheduleDialog", "View/Edit Schedule", None))
         self.label.setText(_translate("ScheduleDialog", "Schedule", None))
         self.scheduleLeftBtn.setText(_translate("ScheduleDialog", "...", None))
         self.scheduleUpBtn.setText(_translate("ScheduleDialog", "...", None))

@@ -55,21 +55,9 @@ class MainWindow(QWidget):
     ###### Slots ######
 
     def addSoloParticipantBtn_clicked(self):
-        dialog = AddSoloParticipantDialog(testing=self.testing)
+        dialog = AddSoloParticipantDialog(testing=self.testing, db=self.db)
         # For Modal dialog
-        result = dialog.exec_()
-
-        if result == True:
-            p = dialog.getParticipant()
-            try: # TODO try/except still necessary with new model format?
-                result = p.addToDB(self.db)
-                if result == "":
-                    QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
-                else:
-                    QMessageBox.critical(self, 'Add Participant', 'Failed to add new participant\n{0}'.format(result), QMessageBox.Ok)
-            except Exception, e:
-                print traceback.format_exc()
-                QMessageBox.critical(self, 'Add Participant', 'Failed to add new participant\n{0}'.format(e), QMessageBox.Ok)
+        dialog.exec_()
 
     def addGroupParticipantBtn_clicked(self):
         dialog = AddGroupParticipantDialog(testing=self.testing)

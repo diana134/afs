@@ -92,7 +92,7 @@ class ScheduleDialog(QDialog):
 
     def exportScheduleBtn_clicked(self):
         """Exports a schedule to a csv"""
-        filename = "testScheduleCSV"
+        filename = "testScheduleCSV.csv"
         self.schedule.export(db=self.db, filename=filename)
         QMessageBox.information(self, 'Export Schedule', 'Schedule exported to ' + filename, QMessageBox.Ok)
 
