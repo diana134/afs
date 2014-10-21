@@ -60,21 +60,9 @@ class MainWindow(QWidget):
         dialog.exec_()
 
     def addGroupParticipantBtn_clicked(self):
-        dialog = AddGroupParticipantDialog(testing=self.testing)
+        dialog = AddGroupParticipantDialog(testing=self.testing, db=self.db)
         # For Modal dialog
         result = dialog.exec_()
-
-        if result == True:
-            gp = dialog.getGroupParticipant()
-            try: # TODO try/except still necessary with new model format?
-                result = gp.addToDB(self.db)
-                if result == "":
-                    QMessageBox.information(self, 'Add Group Participant', 'Successfully added new group participant', QMessageBox.Ok)
-                else:
-                    QMessageBox.critical(self, 'Add Group Participant', 'Failed to add new group participant\n{0}'.format(e), QMessageBox.Ok)
-            except Exception, e:
-                print traceback.format_exc()
-                QMessageBox.critical(self, 'Add Group Participant', 'Failed to add new group participant\n{0}'.format(e), QMessageBox.Ok)
 
     def addTeacherBtn_clicked(self):
         dialog = AddTeacherDialog(testing=self.testing)

@@ -50,23 +50,6 @@ class SoloParticipant(Participant):
 
     def addToDB(self, db):
         """add this SoloParticipant to the database using DatabaseInteraction db, return the result (i.e. an error)"""
-        # conn.execute("INSERT INTO soloparticipants (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", (self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob));
-        # conn.commit()
-        # return True
-        
-        # result = conn.addToDB("INSERT INTO soloparticipants (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", (self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob));
-        # return result
-        
-        # valueDict = {'first_name': self.first,
-        #                 'last_name': self.last,
-        #                 'address': self.address,
-        #                 'town': self.town,
-        #                 'postal_code': self.postal,
-        #                 'home_phone': self.home,
-        #                 'cell_phone': self.cell,
-        #                 'email': self.email,
-        #                 'date_of_birth': self.dob}
-        # conn.insertSoloParticipant(valueDict)
 
         # Very important to send these in the correct order or shit breaks
         result = db.addSoloParticipant((self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob))
@@ -79,12 +62,11 @@ class SoloParticipant(Participant):
 class GroupParticipant(Participant):
     """Holds GroupParticipant data (name, size, age, etc) as strings"""
     def __init__(self, groupName="", groupSize="", schoolGrade="", averageAge="", participants=""):
-        # TODO: don't need to str anymore, handled at ui
-        self.groupName = str(groupName) if groupName is not None else None
-        self.groupSize = str(groupSize) if groupSize is not None else None
-        self.schoolGrade = str(schoolGrade) if schoolGrade is not None else None
-        self.averageAge = str(averageAge) if averageAge is not None else None
-        self.participants = str(participants) if participants is not None else None
+        self.groupName = groupName
+        self.groupSize = groupSize
+        self.schoolGrade = schoolGrade
+        self.averageAge = averageAge
+        self.participants = participants
 
     def isEqualTo(self, obj):
         """check if obj is equal to this GroupParticipant"""
@@ -102,9 +84,6 @@ class GroupParticipant(Participant):
         
     def addToDB(self, db):
         """add this SoloParticipant to the database using DatabaseInteraction db, return the result (i.e. an error)"""
-        # conn.execute("INSERT INTO groupparticipants (group_name, group_size, school_grade, average_age, participants) VALUES (?, ?, ?, ?, ?)", (self.groupName, self.groupSize, self.schoolGrade, self.averageAge, self.participants));
-        # conn.commit()
-        # return True
 
         # Very important to send these in the correct order or shit breaks
         result = db.addGroupParticipant((self.groupName, self.groupSize, self.schoolGrade, self.averageAge, self.participants))

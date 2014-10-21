@@ -10,16 +10,20 @@ from ui_chooseParticipantDialog import Ui_ChooseParticipantDialog
 
 class ChooseParticipantDialog(QDialog):
     """Dialog for choosing an existing Participant"""
-    def __init__(self, soloParticipantModel, groupParticipantModel, parent=None):
+    def __init__(self, soloParticipantModel, groupParticipantModel=None, parent=None):
         super(ChooseParticipantDialog, self).__init__(parent)
         self.ui = Ui_ChooseParticipantDialog()
         self.ui.setupUi(self)
         self.ui.soloParticipantTableView.setModel(soloParticipantModel)
         self.ui.soloParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.soloParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.ui.groupParticipantTableView.setModel(groupParticipantModel)
-        self.ui.groupParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
-        self.ui.groupParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        if groupParticipantModel is None:
+            # Disable Groups tab
+            self.ui.groupParticipantsTab.setEnabled(False)
+        else:
+            self.ui.groupParticipantTableView.setModel(groupParticipantModel)
+            self.ui.groupParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
+            self.ui.groupParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         # Initialize class variables
         self.soloParticipantModel = soloParticipantModel
         self.groupParticipantModel = groupParticipantModel
@@ -65,7 +69,7 @@ class ChooseParticipantDialog(QDialog):
             modelIndex = [i for i in indexList if i.row() == row and i.column() == column][0]
             # Get id of selected participant
             data = model.data(modelIndex)
-            participantId = data.toString()
+            participantId = str(data.toString())
             # Add appropriate prefix (so we know which table the index is from)
             participantId = prefix + participantId
             # And store it for retrieval

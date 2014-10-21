@@ -137,20 +137,14 @@ class AddEntryDialog(QDialog):
 
     def createNewGroupParticipantBtn_clicked(self):
         """opens Add Group Participant Dialog"""
-        dialog = AddGroupParticipantDialog(testing=self.testing)
+        dialog = AddGroupParticipantDialog(testing=self.testing, db=self.db, closeAfterAdd=True)
         # For Modal dialog
         result = dialog.exec_()
 
         if result == True:
             gp = dialog.getGroupParticipant()
-            try:
-                gp.addToDB(self.db)
-                self.ui.participantLineEdit.setText(gp.groupName)
-                self.participantId = self.db.getLastGroupParticipantId()
-                QMessageBox.information(self, 'Add Group Participant', 'Successfully added new group participant', QMessageBox.Ok)
-            except Exception, e:
-                print traceback.format_exc()
-                QMessageBox.critical(self, 'Add Group Participant', 'Failed to add new gorup participant\n{0}'.format(e), QMessageBox.Ok)
+            self.ui.participantLineEdit.setText(gp.groupName)
+            self.participantId = self.db.getLastGroupParticipantId()
 
     def createNewTeacherBtn_clicked(self):
         """opens Add Teacher Dialog"""
