@@ -9,16 +9,16 @@ from addSoloParticipantDialog import AddSoloParticipantDialog
 from chooseParticipantDialog import ChooseParticipantDialog
 from participant import GroupParticipant
 from utilities import sanitize, validateName
+from databaseInteraction import dbInteractionInstance
 
 class AddGroupParticipantDialog(QDialog):
-    def __init__(self, parent=None, testing=False, db=None, closeAfterAdd=False):
+    def __init__(self, parent=None, testing=False, closeAfterAdd=False):
         # Initialize object using ui_addGroupParticipant
         super(AddGroupParticipantDialog, self).__init__(parent)
         self.ui = Ui_AddGroupParticipantDialog()
         self.ui.setupUi(self)
         # Initialize class variables
         self.testing = testing
-        self.db = db
         self.closeAfterAdd = closeAfterAdd
         self.gp = None
         self.participantIds = []
@@ -84,7 +84,7 @@ class AddGroupParticipantDialog(QDialog):
             QMessageBox.warning(self, 'Incorrect Field', 'Average Age must be a whole number', QMessageBox.Ok)
         else:
             self.gp = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants)
-            result = self.gp.addToDB(self.db)
+            result = dbInteractionInstance.addGroupParticipant(self.gp)
             if result == "":
                 QMessageBox.information(self, 'Add Group Participant', 'Successfully added new group participant', QMessageBox.Ok)
                 self.clearFields()
@@ -96,7 +96,7 @@ class AddGroupParticipantDialog(QDialog):
 
     def chooseBtn_clicked(self, lineToFill):
         """opens Choose Participant Dialog"""
-        dialog = ChooseParticipantDialog(self.db.soloParticipantModel)
+        dialog = ChooseParticipantDialog()
         # For Modal dialog
         result = dialog.exec_()
 
@@ -104,20 +104,20 @@ class AddGroupParticipantDialog(QDialog):
             pId = dialog.getParticipantId()
             self.participantIds.append(pId)
             # Use the id to get the name for display
-            p = self.db.getParticipantFromId(pId)
+            p = dbInteractionInstance.getParticipantFromId(pId)
             name = p.first + " " + p.last
             lineToFill.setText(name)
 
     def createNewBtn_clicked(self, lineToFill):
         """opens Add Solo Participant Dialog"""
-        dialog = AddSoloParticipantDialog(testing=self.testing, db=self.db, closeAfterAdd=True)
+        dialog = AddSoloParticipantDialog(testing=self.testing, closeAfterAdd=True)
         # For Modal dialog
         result = dialog.exec_()
 
         if result == True:
             p = dialog.getParticipant()
             lineToFill.setText(p.first + ' ' + p.last)
-            self.participantId.append(self.db.getLastSoloParticipantId())
+            self.participantIds.append(dbInteractionInstance.getLastSoloParticipantId())
 
     def chooseP1Btn_clicked(self):
         """opens Choose Participant Dialog"""

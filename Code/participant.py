@@ -1,7 +1,8 @@
 """Deals with Participants"""
 
-from utilities import requiredFieldIsGood, optionalFieldIsGood
 from abc import ABCMeta, abstractmethod
+
+from utilities import requiredFieldIsGood, optionalFieldIsGood
 
 class Participant(object):
     """Super class to hopefully make organizing things easier later"""
@@ -12,10 +13,10 @@ class Participant(object):
         """check if obj is equal to this Participant"""
         pass
 
-    @abstractmethod
-    def addToDB(self, conn):
-        """add this thing to the database"""
-        pass
+    # @abstractmethod
+    # def addToDB(self):
+    #     """add this thing to the database"""
+    #     pass
 
 class SoloParticipant(Participant):
     """Holds participant data (name, address, contact info, etc) as strings"""
@@ -48,15 +49,15 @@ class SoloParticipant(Participant):
         else:
             return False
 
-    def addToDB(self, db):
-        """add this SoloParticipant to the database using DatabaseInteraction db, return the result (i.e. an error)"""
+    # def addToDB(self):
+    #     """add this SoloParticipant to the database using DatabaseInteraction db, return the result (i.e. an error)"""
 
-        # Very important to send these in the correct order or shit breaks
-        result = db.addSoloParticipant((self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob))
-        return result
+    #     # Very important to send these in the correct order or shit breaks
+    #     result = dbInteractionInstance.addSoloParticipant((self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob))
+    #     return result
 
     def __str__(self):
-        return '{0} {1}'.format(self.first,self.last)
+        return '{0} {1}'.format(self.first, self.last)
 
 
 class GroupParticipant(Participant):
@@ -82,12 +83,12 @@ class GroupParticipant(Participant):
         else:
             return False
         
-    def addToDB(self, db):
-        """add this SoloParticipant to the database using DatabaseInteraction db, return the result (i.e. an error)"""
+    # def addToDB(self):
+    #     """add this GroupParticipant to the database using dbInteractionInstance, return the result (i.e. an error)"""
 
-        # Very important to send these in the correct order or shit breaks
-        result = db.addGroupParticipant((self.groupName, self.groupSize, self.schoolGrade, self.averageAge, self.participants))
-        return result
+    #     # Very important to send these in the correct order or shit breaks
+    #     result = dbInteractionInstance.addGroupParticipant((self.groupName, self.groupSize, self.schoolGrade, self.averageAge, self.participants))
+    #     return result
 
     def __str__(self):
         return self.groupName

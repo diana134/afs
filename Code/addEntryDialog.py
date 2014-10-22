@@ -13,9 +13,10 @@ from chooseParticipantDialog import ChooseParticipantDialog
 from chooseTeacherDialog import ChooseTeacherDialog
 from entry import Entry
 from utilities import sanitize
+from databaseInteraction import dbInteractionInstance
 
 class AddEntryDialog(QDialog):
-    def __init__(self, parent=None, testing=False, db=None, closeAfterAdd=False):
+    def __init__(self, parent=None, testing=False, closeAfterAdd=False):
         # Initialize object using ui_addEntry
         super(AddEntryDialog, self).__init__(parent)
         self.ui = Ui_AddEntryDialog()
@@ -23,7 +24,6 @@ class AddEntryDialog(QDialog):
         self.dance() # Slightly cheater way to start the ui properly
         # Initialize class variables
         self.testing = testing
-        self.db = db
         self.closeAfterAdd = closeAfterAdd
         self.entry = None
         self.participantId = None
@@ -133,7 +133,7 @@ class AddEntryDialog(QDialog):
             pass
         else:
             self.entry = Entry(participantID, teacherID, discipline, level, classNumber, className, title, performanceTime, style, composer, opus, no, movement, arranger, artist, instrument, author)
-            result = self.entry.addToDB(self.db)
+            result = dbInteractionInstance.addEntry(self.entry)
             if result == "":
                 QMessageBox.information(self, 'Add Entry', 'Successfully added new entry', QMessageBox.Ok)
                 self.clearFields()
@@ -142,21 +142,19 @@ class AddEntryDialog(QDialog):
             else:
                 QMessageBox.critical(self, 'Add Entry', 'Failed to add new entry\n{0}'.format(result), QMessageBox.Ok)
 
-
-
     def cancelBtn_clicked(self):
         self.reject()
 
     def chooseParticipantBtn_clicked(self):
         """opens Choose Participant Dialog"""
-        dialog = ChooseParticipantDialog(self.db.soloParticipantModel, self.db.groupParticipantModel)
+        dialog = ChooseParticipantDialog()
         # For Modal dialog
         result = dialog.exec_()
 
         if result == True:
             self.participantId = dialog.getParticipantId()
             # Use the id to get the name for display
-            p = self.db.getParticipantFromId(self.participantId)
+            p = dbInteractionInstance.getParticipantFromId(self.participantId)
             name = ""
             # Deal with it whether it's a solo or group
             try:
@@ -167,49 +165,49 @@ class AddEntryDialog(QDialog):
 
     def chooseTeacherBtn_clicked(self):
         """opens Choose Teacher Dialog"""
-        dialog = ChooseTeacherDialog(self.db.teacherModel)
+        dialog = ChooseTeacherDialog()
         # For Modal dialog
         result = dialog.exec_()
 
         if result == True:
             self.teacherId = dialog.getTeacherId()
             # Use the id to get the name for display
-            t = self.db.getTeacherFromId(self.teacherId)
+            t = dbInteractionInstance.getTeacherFromId(self.teacherId)
             name = name = t.first + " " + t.last
             self.ui.teacherLineEdit.setText(name)
 
     def createNewSoloParticipantBtn_clicked(self):
         """opens Add Solo Participant Dialog"""
-        dialog = AddSoloParticipantDialog(testing=self.testing, db=self.db, closeAfterAdd=True)
+        dialog = AddSoloParticipantDialog(testing=self.testing, closeAfterAdd=True)
         # For Modal dialog
         result = dialog.exec_()
 
         if result == True:
             p = dialog.getParticipant()
             self.ui.participantLineEdit.setText(p.first + ' ' + p.last)
-            self.participantId = self.db.getLastSoloParticipantId()
+            self.participantId = dbInteractionInstance.getLastSoloParticipantId()
 
     def createNewGroupParticipantBtn_clicked(self):
         """opens Add Group Participant Dialog"""
-        dialog = AddGroupParticipantDialog(testing=self.testing, db=self.db, closeAfterAdd=True)
+        dialog = AddGroupParticipantDialog(testing=self.testing, closeAfterAdd=True)
         # For Modal dialog
         result = dialog.exec_()
 
         if result == True:
             gp = dialog.getGroupParticipant()
             self.ui.participantLineEdit.setText(gp.groupName)
-            self.participantId = self.db.getLastGroupParticipantId()
+            self.participantId = dbInteractionInstance.getLastGroupParticipantId()
 
     def createNewTeacherBtn_clicked(self):
         """opens Add Teacher Dialog"""
-        dialog = AddTeacherDialog(testing=self.testing, db=self.db, closeAfterAdd=True)
+        dialog = AddTeacherDialog(testing=self.testing, closeAfterAdd=True)
         # For Modal dialog
         result = dialog.exec_()
 
         if result == True:
             t = dialog.getTeacher()
             self.ui.teacherLineEdit.setText(t.first + ' ' + t.last)
-            self.teacherId = self.db.getLastTeacherId()
+            self.teacherId = dbInteractionInstance.getLastTeacherId()
 
     def disciplineComboBox_changed(self, text):
         """changes which fields are enabled based on the selected discipline"""

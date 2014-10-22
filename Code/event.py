@@ -48,7 +48,7 @@ class Event(object):
             idList.append(entry.participantID)
         return idList
 
-    def export(self, db, csvFile,depth=1):
+    def export(self, csvFile,depth=1):
         """Export this event to a csv file as part of the export procedure. \
         csvFile must be a file opened with w permissions.  <depth> empty columns \
         are added to the beginning to serve as indentation"""
@@ -72,4 +72,4 @@ class Event(object):
         csvFile.write(s)
         
         for e in self.entries:
-            e.export(db, csvFile, depth+1)
+            e.export(csvFile, depth+1)

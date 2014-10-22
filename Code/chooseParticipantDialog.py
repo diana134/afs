@@ -6,26 +6,25 @@ import traceback
 from PyQt4.QtGui import QDialog, QAbstractItemView, QMessageBox
 
 from ui_chooseParticipantDialog import Ui_ChooseParticipantDialog
+from databaseInteraction import dbInteractionInstance
 
 class ChooseParticipantDialog(QDialog):
     """Dialog for choosing an existing Participant"""
-    def __init__(self, soloParticipantModel, groupParticipantModel=None, parent=None):
+    def __init__(self, parent=None):
         super(ChooseParticipantDialog, self).__init__(parent)
         self.ui = Ui_ChooseParticipantDialog()
         self.ui.setupUi(self)
-        self.ui.soloParticipantTableView.setModel(soloParticipantModel)
+        self.ui.soloParticipantTableView.setModel(dbInteractionInstance.soloParticipantModel)
         self.ui.soloParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.soloParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        if groupParticipantModel is None:
-            # Disable Groups tab
-            self.ui.groupParticipantsTab.setEnabled(False)
-        else:
-            self.ui.groupParticipantTableView.setModel(groupParticipantModel)
-            self.ui.groupParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
-            self.ui.groupParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        # if groupParticipantModel is None:
+        #     # Disable Groups tab
+        #     self.ui.groupParticipantsTab.setEnabled(False)
+        # else:
+        self.ui.groupParticipantTableView.setModel(dbInteractionInstance.groupParticipantModel)
+        self.ui.groupParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.groupParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         # Initialize class variables
-        self.soloParticipantModel = soloParticipantModel
-        self.groupParticipantModel = groupParticipantModel
         self.participantId = -1
         # Make the buttons do things
         self.connectSlots()
@@ -49,12 +48,12 @@ class ChooseParticipantDialog(QDialog):
 
         if self.ui.participantTypeTabWidget.currentIndex() == 0:
             # Do Solo Participant stuff
-            model = self.soloParticipantModel
+            model = dbInteractionInstance.soloParticipantModel
             view = self.ui.soloParticipantTableView
             prefix = "s"
         else:
             # Do Group Participant stuff
-            model = self.groupParticipantModel
+            model = dbInteractionInstance.groupParticipantModel
             view = self.ui.groupParticipantTableView
             prefix = "g"
 

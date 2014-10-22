@@ -7,16 +7,16 @@ from PyQt4.QtGui import QDialog, QMessageBox
 from ui_addTeacherDialog import Ui_AddTeacherDialog
 from utilities import sanitize, validateName, stripPhoneNumber
 from teacher import Teacher
+from databaseInteraction import dbInteractionInstance
 
 class AddTeacherDialog(QDialog):
-    def __init__(self, parent=None, testing=False, db=None, closeAfterAdd=False):
+    def __init__(self, parent=None, testing=False, closeAfterAdd=False):
         # Initialize object using ui_addTeacher
         super(AddTeacherDialog, self).__init__(parent)
         self.ui = Ui_AddTeacherDialog()
         self.ui.setupUi(self)
         # Initialize class variables
         self.testing = testing
-        self.db = db
         self.closeAfterAdd = closeAfterAdd
         self.teacher = None
         # Make the buttons do things
@@ -83,7 +83,7 @@ class AddTeacherDialog(QDialog):
             pass
         else:
             self.teacher = Teacher(first, last, address, city, postal, daytimePhone, eveningPhone, email)
-            result = self.teacher.addToDB(self.db)
+            result = dbInteractionInstance.addTeacher(self.teacher)
             if result == "":
                 QMessageBox.information(self, 'Add Teacher', 'Successfully added new teacher', QMessageBox.Ok)
                 self.clearFields()

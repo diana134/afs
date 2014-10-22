@@ -2,21 +2,18 @@
 
 import sys
 sys.path.insert(0, '../Forms/')
-# from PyQt4 import QtGui
-from PyQt4.QtGui import QApplication, QMainWindow, QWidget, QMessageBox
-# from PyQt4.QtCore import QDate
+from PyQt4.QtGui import QApplication, QMainWindow, QWidget
+import datetime
+
 from ui_mainwindow import Ui_MainWindow
 from addSoloParticipantDialog import AddSoloParticipantDialog
 from addGroupParticipantDialog import AddGroupParticipantDialog
 from addTeacherDialog import AddTeacherDialog
 from addEntryDialog import AddEntryDialog
 from scheduleDialog import ScheduleDialog
-from databaseInteraction import DatabaseInteraction
+from databaseInteraction import dbInteractionInstance
 from scheduler import Scheduler
 from schedule import Schedule
-# import sqlite3
-import traceback
-import datetime
 
 app = QApplication(sys.argv)
 
@@ -28,20 +25,9 @@ class MainWindow(QWidget):
         self.window = QMainWindow()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.window)
-        self.db = DatabaseInteraction()
         self.connectSlots()
         self.testing = testing
-        self.scheduler = Scheduler(self.db)
-        # if testConn is not None:
-        #     self.conn = testConn
-        # else:
-        #     self.conn = self.initDatabase()     
-
-    # def initDatabase(self):
-    #     """initializes the database, returns connection"""
-    #     conn = sqlite3.connect('../Database/AFS')
-    #     print "Opened database"
-    #     return conn
+        self.scheduler = Scheduler()
 
     def connectSlots(self):
         """connect the various ui signals to their slots"""
@@ -55,24 +41,24 @@ class MainWindow(QWidget):
     ###### Slots ######
 
     def addSoloParticipantBtn_clicked(self):
-        dialog = AddSoloParticipantDialog(testing=self.testing, db=self.db)
+        dialog = AddSoloParticipantDialog(testing=self.testing)
         # For Modal dialog
         dialog.exec_()
 
     def addGroupParticipantBtn_clicked(self):
-        dialog = AddGroupParticipantDialog(testing=self.testing, db=self.db)
+        dialog = AddGroupParticipantDialog(testing=self.testing)
         # For Modal dialog
-        result = dialog.exec_()
+        dialog.exec_()
 
     def addTeacherBtn_clicked(self):
-        dialog = AddTeacherDialog(testing=self.testing, db=self.db)
+        dialog = AddTeacherDialog(testing=self.testing)
         # For Modal dialog
-        result = dialog.exec_()
+        dialog.exec_()
 
     def addEntryBtn_clicked(self):
-        dialog = AddEntryDialog(testing=self.testing, db=self.db)
+        dialog = AddEntryDialog(testing=self.testing)
         # For Modal dialog
-        result = dialog.exec_()
+        dialog.exec_()
 
     def makeScheduleBtn_clicked(self):
         ### Test Code ###
@@ -83,11 +69,11 @@ class MainWindow(QWidget):
         s3Start = datetime.datetime(2014, 4, 7, 18)
         s3End = datetime.datetime(2014, 4, 7, 21)
         sessionDatetimes = [(s1Start, s1End), (s2Start, s2End), (s3Start, s3End)]
-        entries = self.db.getAllEntriesInDiscipline("Piano")
+        entries = dbInteractionInstance.getAllEntriesInDiscipline("Piano")
         ####
         solution = self.scheduler.process(entries, sessionDatetimes)
         print solution
-        dialog = ScheduleDialog(schedule=solution, db=self.db)
+        dialog = ScheduleDialog(schedule=solution)
         result = dialog.exec_()
         if result == True:
             pass
@@ -97,7 +83,7 @@ class MainWindow(QWidget):
         # TODO let user choose
         schedule = Schedule()
         schedule.load("testSchedule")
-        dialog = ScheduleDialog(schedule=schedule, db=self.db)
+        dialog = ScheduleDialog(schedule=schedule)
         result = dialog.exec_()
         if result == True:
             pass

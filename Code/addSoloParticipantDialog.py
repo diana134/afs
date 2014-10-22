@@ -7,16 +7,16 @@ from PyQt4.QtGui import QDialog, QMessageBox
 from ui_addSoloParticipantDialog import Ui_AddSoloParticipantDialog
 from participant import SoloParticipant
 from utilities import sanitize, validateName, stripPhoneNumber
+from databaseInteraction import dbInteractionInstance
 
 class AddSoloParticipantDialog(QDialog):
-    def __init__(self, parent=None, testing=False, db=None, closeAfterAdd=False):
+    def __init__(self, parent=None, testing=False, closeAfterAdd=False):
         # Initialize object using ui_addSoloParticipant
         super(AddSoloParticipantDialog, self).__init__(parent)
         self.ui = Ui_AddSoloParticipantDialog()
         self.ui.setupUi(self)
         # Initialize class variables
         self.testing = testing
-        self.db = db
         self.closeAfterAdd = closeAfterAdd
         self.p = None
         # Make the buttons do things
@@ -86,7 +86,7 @@ class AddSoloParticipantDialog(QDialog):
             pass
         else:
             self.p = SoloParticipant(first, last, address, city, postal, home, cell, email, dob)
-            result = self.p.addToDB(self.db)
+            result = dbInteractionInstance.addSoloParticipant(self.p)
             if result == "":
                 QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
                 self.clearFields()

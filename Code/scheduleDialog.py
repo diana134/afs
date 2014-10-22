@@ -3,14 +3,15 @@
 import sys
 sys.path.insert(0, '../Forms/')
 from PyQt4.QtGui import QDialog, QTableWidgetItem, QMessageBox
+
 from ui_scheduleDialog import Ui_ScheduleDialog
+from databaseInteraction import dbInteractionInstance
 
 class ScheduleDialog(QDialog):
-    def __init__(self, parent=None, schedule=None, db=None):
+    def __init__(self, parent=None, schedule=None):
         super(ScheduleDialog, self).__init__(parent)
         self.ui = Ui_ScheduleDialog()
         self.ui.setupUi(self)
-        self.db = db
         self.schedule = schedule
         self.displaySchedule()
         self.connectSlots()    
@@ -78,12 +79,12 @@ class ScheduleDialog(QDialog):
             for row in xrange(len(event.entries)):
                 entry = event.entries[row]
                 self.ui.entriesTableWidget.setItem(row, 0, QTableWidgetItem(entry.title))
-                participant = self.db.getParticipantFromId(entry.participantID)
+                participant = dbInteractionInstance.getParticipantFromId(entry.participantID)
                 name = ""
                 try:
                     name = participant.first + " " + participant.last
                 except AttributeError:
-                    name = participant.name
+                    name = participant.groupName
                 self.ui.entriesTableWidget.setItem(row, 1, QTableWidgetItem(name))
                 self.ui.entriesTableWidget.setItem(row, 2, QTableWidgetItem(entry.performanceTime))
         else:
@@ -93,7 +94,7 @@ class ScheduleDialog(QDialog):
     def exportScheduleBtn_clicked(self):
         """Exports a schedule to a csv"""
         filename = "testScheduleCSV.csv"
-        self.schedule.export(db=self.db, filename=filename)
+        self.schedule.export(filename=filename)
         QMessageBox.information(self, 'Export Schedule', 'Schedule exported to ' + filename, QMessageBox.Ok)
 
     def scheduleUpBtn_clicked(self):
