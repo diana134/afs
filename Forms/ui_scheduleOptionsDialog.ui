@@ -6,93 +6,76 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>685</width>
-    <height>202</height>
+    <width>390</width>
+    <height>374</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Schedule Options</string>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
-    <layout class="QFormLayout" name="formLayout">
-     <property name="fieldGrowthPolicy">
-      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Timing Options</string>
      </property>
-     <item row="0" column="0">
-      <widget class="QLabel" name="timeToWriteCommentsLabel">
-       <property name="text">
-        <string>Time to Write Comments</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QTimeEdit" name="commentsTimeEdit">
-       <property name="displayFormat">
-        <string>HH:mm</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="adjudicationTimePerEntryLabel">
-       <property name="text">
-        <string>Adjudication Time Per Entry</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QTimeEdit" name="adjudicationTimeEdit">
-       <property name="displayFormat">
-        <string>HH:mm</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="toleranceForOvertimeLabel">
-       <property name="text">
-        <string>Tolerance for Overtime</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QTimeEdit" name="toleranceTimeEdit">
-       <property name="displayFormat">
-        <string>HH:mm</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="sessionDateAndTimeLabel">
-       <property name="text">
-        <string>Session Date and Time</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QDateTimeEdit" name="sessionDateTimeEdit">
-       <property name="displayFormat">
-        <string>yyyy/M/d h:mm AP</string>
-       </property>
-       <property name="calendarPopup">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="QPushButton" name="addSessionBtn">
-       <property name="text">
-        <string>&amp;Add Session</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QPushButton" name="deleteSessionBtn">
-       <property name="text">
-        <string>&amp;Delete Session</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+     <layout class="QFormLayout" name="formLayout_2">
+      <property name="fieldGrowthPolicy">
+       <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="timeToWriteCommentsLabel">
+        <property name="toolTip">
+         <string>The time between entries in a class while the adjudicator writes comments.</string>
+        </property>
+        <property name="text">
+         <string>Time to Write Comments PerEntry</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QTimeEdit" name="commentsTimeEdit">
+        <property name="displayFormat">
+         <string>HH:mm</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="adjudicationTimePerEntryLabel">
+        <property name="toolTip">
+         <string>The time at the end of the class to adjudicate each of the entries.</string>
+        </property>
+        <property name="text">
+         <string>Adjudication Time Per Entry</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QTimeEdit" name="adjudicationTimeEdit">
+        <property name="displayFormat">
+         <string>HH:mm</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="toleranceForOvertimeLabel">
+        <property name="toolTip">
+         <string>The time past the end of the session entries can be allowed to run.</string>
+        </property>
+        <property name="text">
+         <string>Tolerance for Overtime</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QTimeEdit" name="toleranceTimeEdit">
+        <property name="displayFormat">
+         <string>HH:mm</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
    <item>
     <widget class="QGroupBox" name="groupBox">
@@ -101,14 +84,69 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QListWidget" name="sessionListWidget"/>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Start</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateTimeEdit" name="sessionStartDateTimeEdit">
+          <property name="displayFormat">
+           <string>yyyy/M/d h:mm AP</string>
+          </property>
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>End</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateTimeEdit" name="sessionEndDateTimeEdit">
+          <property name="displayFormat">
+           <string>yyyy/M/d h:mm AP</string>
+          </property>
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QDialogButtonBox" name="buttonBox">
-        <property name="standardButtons">
-         <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="addSessionBtn">
+          <property name="text">
+           <string>&amp;Add Session</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="deleteSessionBtn">
+          <property name="text">
+           <string>&amp;Delete Session</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QListWidget" name="sessionListWidget"/>
       </item>
      </layout>
     </widget>
