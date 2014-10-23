@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>390</width>
-    <height>374</height>
+    <height>535</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,7 +29,7 @@
          <string>The time between entries in a class while the adjudicator writes comments.</string>
         </property>
         <property name="text">
-         <string>Time to Write Comments PerEntry</string>
+         <string>Time to Write Comments Per Entry</string>
         </property>
        </widget>
       </item>
@@ -72,6 +72,64 @@
         <property name="displayFormat">
          <string>HH:mm</string>
         </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Other Options</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="fieldGrowthPolicy">
+       <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="disciplineLabel">
+        <property name="text">
+         <string>Discipline</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="disciplineComboBox">
+        <item>
+         <property name="text">
+          <string>Dance</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Piano</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Choral</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vocal</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Instrumental</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Band</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Speech</string>
+         </property>
+        </item>
        </widget>
       </item>
      </layout>
@@ -149,6 +207,13 @@
        <widget class="QListWidget" name="sessionListWidget"/>
       </item>
      </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="btnBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
     </widget>
    </item>
   </layout>
