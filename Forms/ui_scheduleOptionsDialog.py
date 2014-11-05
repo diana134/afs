@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_scheduleOptionsDialog.ui'
 #
-# Created: Thu Oct 23 17:27:44 2014
+# Created: Tue Nov  4 20:33:34 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -23,13 +23,13 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-class Ui_scheduleOptionsDialog(object):
-    def setupUi(self, scheduleOptionsDialog):
-        scheduleOptionsDialog.setObjectName(_fromUtf8("scheduleOptionsDialog"))
-        scheduleOptionsDialog.resize(390, 535)
-        self.verticalLayout_2 = QtGui.QVBoxLayout(scheduleOptionsDialog)
+class Ui_ScheduleOptionsDialog(object):
+    def setupUi(self, ScheduleOptionsDialog):
+        ScheduleOptionsDialog.setObjectName(_fromUtf8("ScheduleOptionsDialog"))
+        ScheduleOptionsDialog.resize(390, 535)
+        self.verticalLayout_2 = QtGui.QVBoxLayout(ScheduleOptionsDialog)
         self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
-        self.groupBox_2 = QtGui.QGroupBox(scheduleOptionsDialog)
+        self.groupBox_2 = QtGui.QGroupBox(ScheduleOptionsDialog)
         self.groupBox_2.setObjectName(_fromUtf8("groupBox_2"))
         self.formLayout_2 = QtGui.QFormLayout(self.groupBox_2)
         self.formLayout_2.setFieldGrowthPolicy(QtGui.QFormLayout.AllNonFixedFieldsGrow)
@@ -53,7 +53,7 @@ class Ui_scheduleOptionsDialog(object):
         self.toleranceTimeEdit.setObjectName(_fromUtf8("toleranceTimeEdit"))
         self.formLayout_2.setWidget(2, QtGui.QFormLayout.FieldRole, self.toleranceTimeEdit)
         self.verticalLayout_2.addWidget(self.groupBox_2)
-        self.groupBox_3 = QtGui.QGroupBox(scheduleOptionsDialog)
+        self.groupBox_3 = QtGui.QGroupBox(ScheduleOptionsDialog)
         self.groupBox_3.setObjectName(_fromUtf8("groupBox_3"))
         self.formLayout = QtGui.QFormLayout(self.groupBox_3)
         self.formLayout.setFieldGrowthPolicy(QtGui.QFormLayout.AllNonFixedFieldsGrow)
@@ -72,7 +72,7 @@ class Ui_scheduleOptionsDialog(object):
         self.disciplineComboBox.addItem(_fromUtf8(""))
         self.formLayout.setWidget(0, QtGui.QFormLayout.FieldRole, self.disciplineComboBox)
         self.verticalLayout_2.addWidget(self.groupBox_3)
-        self.groupBox = QtGui.QGroupBox(scheduleOptionsDialog)
+        self.groupBox = QtGui.QGroupBox(ScheduleOptionsDialog)
         self.groupBox.setObjectName(_fromUtf8("groupBox"))
         self.verticalLayout = QtGui.QVBoxLayout(self.groupBox)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
@@ -108,40 +108,40 @@ class Ui_scheduleOptionsDialog(object):
         self.sessionListWidget.setObjectName(_fromUtf8("sessionListWidget"))
         self.verticalLayout.addWidget(self.sessionListWidget)
         self.verticalLayout_2.addWidget(self.groupBox)
-        self.btnBox = QtGui.QDialogButtonBox(scheduleOptionsDialog)
+        self.btnBox = QtGui.QDialogButtonBox(ScheduleOptionsDialog)
         self.btnBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
         self.btnBox.setObjectName(_fromUtf8("btnBox"))
         self.verticalLayout_2.addWidget(self.btnBox)
 
-        self.retranslateUi(scheduleOptionsDialog)
-        QtCore.QMetaObject.connectSlotsByName(scheduleOptionsDialog)
+        self.retranslateUi(ScheduleOptionsDialog)
+        QtCore.QMetaObject.connectSlotsByName(ScheduleOptionsDialog)
 
-    def retranslateUi(self, scheduleOptionsDialog):
-        scheduleOptionsDialog.setWindowTitle(_translate("scheduleOptionsDialog", "Schedule Options", None))
-        self.groupBox_2.setTitle(_translate("scheduleOptionsDialog", "Timing Options", None))
-        self.timeToWriteCommentsLabel.setToolTip(_translate("scheduleOptionsDialog", "The time between entries in a class while the adjudicator writes comments.", None))
-        self.timeToWriteCommentsLabel.setText(_translate("scheduleOptionsDialog", "Time to Write Comments Per Entry", None))
-        self.commentsTimeEdit.setDisplayFormat(_translate("scheduleOptionsDialog", "HH:mm", None))
-        self.adjudicationTimePerEntryLabel.setToolTip(_translate("scheduleOptionsDialog", "The time at the end of the class to adjudicate each of the entries.", None))
-        self.adjudicationTimePerEntryLabel.setText(_translate("scheduleOptionsDialog", "Adjudication Time Per Entry", None))
-        self.adjudicationTimeEdit.setDisplayFormat(_translate("scheduleOptionsDialog", "HH:mm", None))
-        self.toleranceForOvertimeLabel.setToolTip(_translate("scheduleOptionsDialog", "The time past the end of the session entries can be allowed to run.", None))
-        self.toleranceForOvertimeLabel.setText(_translate("scheduleOptionsDialog", "Tolerance for Overtime", None))
-        self.toleranceTimeEdit.setDisplayFormat(_translate("scheduleOptionsDialog", "HH:mm", None))
-        self.groupBox_3.setTitle(_translate("scheduleOptionsDialog", "Other Options", None))
-        self.disciplineLabel.setText(_translate("scheduleOptionsDialog", "Discipline", None))
-        self.disciplineComboBox.setItemText(0, _translate("scheduleOptionsDialog", "Dance", None))
-        self.disciplineComboBox.setItemText(1, _translate("scheduleOptionsDialog", "Piano", None))
-        self.disciplineComboBox.setItemText(2, _translate("scheduleOptionsDialog", "Choral", None))
-        self.disciplineComboBox.setItemText(3, _translate("scheduleOptionsDialog", "Vocal", None))
-        self.disciplineComboBox.setItemText(4, _translate("scheduleOptionsDialog", "Instrumental", None))
-        self.disciplineComboBox.setItemText(5, _translate("scheduleOptionsDialog", "Band", None))
-        self.disciplineComboBox.setItemText(6, _translate("scheduleOptionsDialog", "Speech", None))
-        self.groupBox.setTitle(_translate("scheduleOptionsDialog", "Session Dates and Times", None))
-        self.label.setText(_translate("scheduleOptionsDialog", "Start", None))
-        self.sessionStartDateTimeEdit.setDisplayFormat(_translate("scheduleOptionsDialog", "yyyy/M/d h:mm AP", None))
-        self.label_2.setText(_translate("scheduleOptionsDialog", "End", None))
-        self.sessionEndDateTimeEdit.setDisplayFormat(_translate("scheduleOptionsDialog", "yyyy/M/d h:mm AP", None))
-        self.addSessionBtn.setText(_translate("scheduleOptionsDialog", "&Add Session", None))
-        self.deleteSessionBtn.setText(_translate("scheduleOptionsDialog", "&Delete Session", None))
+    def retranslateUi(self, ScheduleOptionsDialog):
+        ScheduleOptionsDialog.setWindowTitle(_translate("ScheduleOptionsDialog", "Schedule Options", None))
+        self.groupBox_2.setTitle(_translate("ScheduleOptionsDialog", "Timing Options", None))
+        self.timeToWriteCommentsLabel.setToolTip(_translate("ScheduleOptionsDialog", "The time between entries in a class while the adjudicator writes comments.", None))
+        self.timeToWriteCommentsLabel.setText(_translate("ScheduleOptionsDialog", "Time to Write Comments Per Entry (mm:ss)", None))
+        self.commentsTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "HH:mm", None))
+        self.adjudicationTimePerEntryLabel.setToolTip(_translate("ScheduleOptionsDialog", "The time at the end of the class to adjudicate each of the entries.", None))
+        self.adjudicationTimePerEntryLabel.setText(_translate("ScheduleOptionsDialog", "Adjudication Time Per Entry (mm:ss)", None))
+        self.adjudicationTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "HH:mm", None))
+        self.toleranceForOvertimeLabel.setToolTip(_translate("ScheduleOptionsDialog", "The time past the end of the session entries can be allowed to run.", None))
+        self.toleranceForOvertimeLabel.setText(_translate("ScheduleOptionsDialog", "Tolerance for Overtime (mm:ss)", None))
+        self.toleranceTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "HH:mm", None))
+        self.groupBox_3.setTitle(_translate("ScheduleOptionsDialog", "Other Options", None))
+        self.disciplineLabel.setText(_translate("ScheduleOptionsDialog", "Discipline", None))
+        self.disciplineComboBox.setItemText(0, _translate("ScheduleOptionsDialog", "Dance", None))
+        self.disciplineComboBox.setItemText(1, _translate("ScheduleOptionsDialog", "Piano", None))
+        self.disciplineComboBox.setItemText(2, _translate("ScheduleOptionsDialog", "Choral", None))
+        self.disciplineComboBox.setItemText(3, _translate("ScheduleOptionsDialog", "Vocal", None))
+        self.disciplineComboBox.setItemText(4, _translate("ScheduleOptionsDialog", "Instrumental", None))
+        self.disciplineComboBox.setItemText(5, _translate("ScheduleOptionsDialog", "Band", None))
+        self.disciplineComboBox.setItemText(6, _translate("ScheduleOptionsDialog", "Speech", None))
+        self.groupBox.setTitle(_translate("ScheduleOptionsDialog", "Session Dates and Times", None))
+        self.label.setText(_translate("ScheduleOptionsDialog", "Start", None))
+        self.sessionStartDateTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "yyyy/M/d h:mm AP", None))
+        self.label_2.setText(_translate("ScheduleOptionsDialog", "End", None))
+        self.sessionEndDateTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "yyyy/M/d h:mm AP", None))
+        self.addSessionBtn.setText(_translate("ScheduleOptionsDialog", "&Add Session", None))
+        self.deleteSessionBtn.setText(_translate("ScheduleOptionsDialog", "&Delete Session", None))
 

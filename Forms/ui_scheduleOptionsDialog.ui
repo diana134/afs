@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>scheduleOptionsDialog</class>
- <widget class="QDialog" name="scheduleOptionsDialog">
+ <class>ScheduleOptionsDialog</class>
+ <widget class="QDialog" name="ScheduleOptionsDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -29,7 +29,7 @@
          <string>The time between entries in a class while the adjudicator writes comments.</string>
         </property>
         <property name="text">
-         <string>Time to Write Comments Per Entry</string>
+         <string>Time to Write Comments Per Entry (mm:ss)</string>
         </property>
        </widget>
       </item>
@@ -46,7 +46,7 @@
          <string>The time at the end of the class to adjudicate each of the entries.</string>
         </property>
         <property name="text">
-         <string>Adjudication Time Per Entry</string>
+         <string>Adjudication Time Per Entry (mm:ss)</string>
         </property>
        </widget>
       </item>
@@ -63,7 +63,7 @@
          <string>The time past the end of the session entries can be allowed to run.</string>
         </property>
         <property name="text">
-         <string>Tolerance for Overtime</string>
+         <string>Tolerance for Overtime (mm:ss)</string>
         </property>
        </widget>
       </item>

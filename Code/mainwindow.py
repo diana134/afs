@@ -11,6 +11,7 @@ from addGroupParticipantDialog import AddGroupParticipantDialog
 from addTeacherDialog import AddTeacherDialog
 from addEntryDialog import AddEntryDialog
 from scheduleDialog import ScheduleDialog
+from scheduleOptionsDialog import ScheduleOptionsDialog
 from databaseInteraction import dbInteractionInstance
 from scheduler import Scheduler
 from schedule import Schedule
@@ -71,12 +72,15 @@ class MainWindow(QWidget):
         sessionDatetimes = [(s1Start, s1End), (s2Start, s2End), (s3Start, s3End)]
         entries = dbInteractionInstance.getAllEntriesInDiscipline("Piano")
         ####
-        solution = self.scheduler.process(entries, sessionDatetimes)
-        print solution
-        dialog = ScheduleDialog(schedule=solution)
-        result = dialog.exec_()
+        scheduleOptionsDialog = ScheduleOptionsDialog()
+        result = scheduleOptionsDialog.exec_()
         if result == True:
-            pass
+            solution = self.scheduler.process(entries, sessionDatetimes)
+            print solution
+            dialog = ScheduleDialog(schedule=solution)
+            result = dialog.exec_()
+            if result == True:
+                pass
 
     def loadScheduleBtn_clicked(self):
         """Loads a schedule from file"""
