@@ -3,6 +3,7 @@
 import sys
 sys.path.insert(0, '../Forms/')
 from PyQt4.QtGui import QDialog, QListWidgetItem
+from time import strptime
 
 from ui_scheduleOptionsDialog import Ui_ScheduleOptionsDialog
 
@@ -27,6 +28,7 @@ class ScheduleOptionsDialog(QDialog):
 
     def addSessionBtn_clicked(self):
         """Adds a session to the list widget"""
+        # TODO error checking (start before end, not same, not same as in list)
         startDatetimeString = str(self.ui.sessionStartDateTimeEdit.dateTime().toString("yyyy/M/d h:mm AP"))
         endDatetimeString = str(self.ui.sessionEndDateTimeEdit.dateTime().toString("yyyy/M/d h:mm AP"))
         listWidgetString = startDatetimeString + " ==> " + endDatetimeString
@@ -39,6 +41,17 @@ class ScheduleOptionsDialog(QDialog):
 
     def okBtn_clicked(self):
         # TODO save settings
+
+        # parse list widget items into sessions for storage
+        for row in range(self.ui.sessionListWidget.count()):
+            text = str(self.ui.sessionListWidget.item(row).text())
+            tokens = text.split(" ==> ")
+            startDatetime = strptime(tokens[0], "%Y/%m/%d %I:%M %p")
+            endDatetime = strptime(tokens[1], "%Y/%m/%d %I:%M %p")
+            print startDatetime
+            print endDatetime
+            # TODO store this somewhere
+
         self.accept()
 
     def cancelBtn_clicked(self):
