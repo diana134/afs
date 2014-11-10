@@ -2,7 +2,7 @@
 
 import sys
 sys.path.insert(0, '../Forms/')
-from PyQt4.QtGui import QApplication, QMainWindow, QWidget, QMessageBox
+from PyQt4.QtGui import QApplication, QMainWindow, QWidget, QMessageBox, QFileDialog
 # import datetime
 
 from ui_mainwindow import Ui_MainWindow
@@ -89,13 +89,17 @@ class MainWindow(QWidget):
 
     def loadScheduleBtn_clicked(self):
         """Loads a schedule from file"""
-        # TODO let user choose
         schedule = Schedule()
-        schedule.load("testSchedule")
-        dialog = ScheduleDialog(schedule=schedule)
-        result = dialog.exec_()
-        if result == True:
-            pass
+        filename = QFileDialog.getOpenFileName(self, "Load Schedule", "", "Schedule Files (*.sched)")
+        if filename is not None and filename != "":
+            try:
+                schedule.load(filename)
+                dialog = ScheduleDialog(schedule=schedule)
+                result = dialog.exec_()
+                if result == True:
+                    pass
+            except Exception:
+                QMessageBox.critical("Error", "Failed to load schedule.", QMessageBox.Ok)
 
     ##########
 

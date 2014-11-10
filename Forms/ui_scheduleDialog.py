@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_scheduleDialog.ui'
 #
-# Created: Sun Oct 19 19:14:00 2014
+# Created: Sun Nov  9 19:47:39 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -105,6 +105,10 @@ class Ui_ScheduleDialog(object):
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
         spacerItem4 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem4)
+        self.validateBtn = QtGui.QPushButton(ScheduleDialog)
+        self.validateBtn.setEnabled(False)
+        self.validateBtn.setObjectName(_fromUtf8("validateBtn"))
+        self.horizontalLayout.addWidget(self.validateBtn)
         self.exportScheduleBtn = QtGui.QPushButton(ScheduleDialog)
         self.exportScheduleBtn.setObjectName(_fromUtf8("exportScheduleBtn"))
         self.horizontalLayout.addWidget(self.exportScheduleBtn)
@@ -127,5 +131,6 @@ class Ui_ScheduleDialog(object):
         self.label_2.setText(_translate("ScheduleDialog", "Entries", None))
         self.entriesUpBtn.setText(_translate("ScheduleDialog", "...", None))
         self.entriesDownBtn.setText(_translate("ScheduleDialog", "...", None))
+        self.validateBtn.setText(_translate("ScheduleDialog", "&Validate Schedule", None))
         self.exportScheduleBtn.setText(_translate("ScheduleDialog", "&Export Schedule", None))
 

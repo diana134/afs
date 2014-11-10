@@ -2,7 +2,7 @@
 
 import sys
 sys.path.insert(0, '../Forms/')
-from PyQt4.QtGui import QDialog, QTableWidgetItem, QMessageBox
+from PyQt4.QtGui import QDialog, QTableWidgetItem, QMessageBox, QFileDialog
 
 from ui_scheduleDialog import Ui_ScheduleDialog
 from databaseInteraction import dbInteractionInstance
@@ -52,10 +52,12 @@ class ScheduleDialog(QDialog):
 
     def okBtn_clicked(self):
         """Saves schedule for future use"""
-        # TODO user can choose filename
-        self.schedule.save("testSchedule")
-        # All done!
-        self.accept()
+        filename = QFileDialog.getSaveFileName(self, "Save Schedule", "", "Schedule Files (*.sched)")
+        if filename is not None and filename != "":
+            self.schedule.save(filename+".sched")
+            QMessageBox.information(self, 'Save Schedule', 'Schedule saved to ' + filename, QMessageBox.Ok)
+            # All done!
+            self.accept()
 
     def cancelBtn_clicked(self):
         """Discards the schedule and closes the window"""
@@ -93,20 +95,38 @@ class ScheduleDialog(QDialog):
 
     def exportScheduleBtn_clicked(self):
         """Exports a schedule to a csv"""
-        filename = "testScheduleCSV.csv"
-        self.schedule.export(filename=filename)
-        QMessageBox.information(self, 'Export Schedule', 'Schedule exported to ' + filename, QMessageBox.Ok)
+        filename = QFileDialog.getSaveFileName(self, "Export Schedule", "", "CSV Files (*.csv)")
+        if filename is not None and filename != "":
+            filename = filename + ".csv"
+            self.schedule.export(filename=filename)
+            QMessageBox.information(self, 'Export Schedule', 'Schedule exported to ' + filename, QMessageBox.Ok)
 
     def scheduleUpBtn_clicked(self):
+        # currRow = self.ui.scheduleTableWidget.currentRow()
+        # currCol = self.ui.scheduleTableWidget.currentColumn()
+        # # if selected is not top
+        # if currRow > 0:
+        #     # swap with thing above
+        #     itemAbove = self.ui.scheduleTableWidget.item(currRow+1, currCol)
+        #     currItem = self.ui.scheduleTableWidget.currentItem()
+        #     self.ui.scheduleTableWidget.setItem(currRow, currCol, itemAbove)
+        #     self.ui.scheduleTableWidget.setItem(currRow+1, currCol, currItem)
+        #     self.ui.scheduleTableWidget.setCurrentItem(currItem)
         pass
 
     def scheduleDownBtn_clicked(self):
+        # if selected is not bottom
+            # swap with thing below
         pass
 
     def scheduleLeftBtn_clicked(self):
+        # if selected is not furthest left
+            # add to bottom of next left column
         pass
 
     def scheduleRightBtn_clicked(self):
+        # if selected is not furthest right
+            # add to bottom of next right column
         pass
 
     def entriesUpBtn_clicked(self):

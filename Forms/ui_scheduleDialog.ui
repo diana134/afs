@@ -199,6 +199,16 @@
       </spacer>
      </item>
      <item>
+      <widget class="QPushButton" name="validateBtn">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>&amp;Validate Schedule</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="exportScheduleBtn">
        <property name="text">
         <string>&amp;Export Schedule</string>

@@ -67,6 +67,8 @@ class Entry(object):
     def export(self, csvFile, depth=2):
         """Write this entry to a csv file, padded with <depth> empty columns as indentation. \
         csvFile must be an open file with write permissions."""
+        # super hack
+        from databaseInteraction import dbInteractionInstance
         
         participant = dbInteractionInstance.getParticipantFromId(self.participantID)
         teacher = dbInteractionInstance.getTeacherFromId(self.teacherID)
