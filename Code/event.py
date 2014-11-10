@@ -1,11 +1,13 @@
 """The Event object used by a Schedule"""
 
-import sys
+# import sys
 import datetime
-from entry import Entry
 
-JUDGINGTIMEPERENTRY = datetime.timedelta(seconds=60)
-FINALADJUDICATIONTIMEPERENTRY = datetime.timedelta(seconds=180)
+from entry import Entry
+from settingsInteraction import settingsInteractionInstance
+
+# JUDGINGTIMEPERENTRY = datetime.timedelta(seconds=60)
+# FINALADJUDICATIONTIMEPERENTRY = datetime.timedelta(seconds=180)
 
 def convertTimeToSeconds(timeString):
     """convert MM:SS to seconds"""
@@ -32,8 +34,8 @@ class Event(object):
         performanceTime = datetime.timedelta()
         for entry in self.entries:
             performanceTime += convertStringToTimedelta(entry.performanceTime)
-        judgingTime = JUDGINGTIMEPERENTRY * len(self.entries)
-        finalAdjudicationTime = FINALADJUDICATIONTIMEPERENTRY * len(self.entries)
+        judgingTime = settingsInteractionInstance.loadJudgingTimePerEntry() * len(self.entries)
+        finalAdjudicationTime = settingsInteractionInstance.loadFinalAdjudicationTime() * len(self.entries)
         self.totalTime = performanceTime + judgingTime + finalAdjudicationTime
 
     def addEntry(self, entry):
@@ -48,26 +50,26 @@ class Event(object):
             idList.append(entry.participantID)
         return idList
 
-    def export(self, csvFile,depth=1):
+    def export(self, csvFile, depth=1):
         """Export this event to a csv file as part of the export procedure. \
         csvFile must be a file opened with w permissions.  <depth> empty columns \
         are added to the beginning to serve as indentation"""
         
         leadingCommas = ''
-        for i in range(depth):
+        for _ in range(depth):
             leadingCommas = leadingCommas+','
         
         s = '{indent}{number},"{name}","Total Time: {time}"\n'.format(
-            indent = leadingCommas,
-            number = self.classNumber,
-            name = self.className,
-            time = self.totalTime
+            indent=leadingCommas,
+            number=self.classNumber,
+            name=self.className,
+            time=self.totalTime
         )
         csvFile.write(s)
         
         s = '{indent},{header}\n'.format(
-            indent = leadingCommas,
-            header = Entry.getCsvHeader()
+            indent=leadingCommas,
+            header=Entry.getCsvHeader()
         )
         csvFile.write(s)
         

@@ -1,11 +1,12 @@
 """Contains the scheduling algorithm and all its bits"""
 
-import datetime
+# import datetime
 
 from schedule import Schedule
 from event import Event
+from settingsInteraction import settingsInteractionInstance
 
-TOLERANCE = datetime.timedelta(minutes=10)
+# TOLERANCE = datetime.timedelta(minutes=10)
 
 class Scheduler(object):
     """Handles the scheduling of all the Events"""
@@ -76,7 +77,7 @@ class Scheduler(object):
         valid = True
 
         # Check that there is time for this event, within a tolerance
-        if event.totalTime > session.emptyTime() + TOLERANCE:
+        if event.totalTime > session.emptyTime() + settingsInteractionInstance.loadTolerance():
             valid = False
 
         return valid

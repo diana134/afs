@@ -2,8 +2,8 @@
 
 import sys
 sys.path.insert(0, '../Forms/')
-from PyQt4.QtGui import QApplication, QMainWindow, QWidget
-import datetime
+from PyQt4.QtGui import QApplication, QMainWindow, QWidget, QMessageBox
+# import datetime
 
 from ui_mainwindow import Ui_MainWindow
 from addSoloParticipantDialog import AddSoloParticipantDialog
@@ -13,6 +13,7 @@ from addEntryDialog import AddEntryDialog
 from scheduleDialog import ScheduleDialog
 from scheduleOptionsDialog import ScheduleOptionsDialog
 from databaseInteraction import dbInteractionInstance
+from settingsInteraction import settingsInteractionInstance
 from scheduler import Scheduler
 from schedule import Schedule
 
@@ -63,20 +64,24 @@ class MainWindow(QWidget):
 
     def makeScheduleBtn_clicked(self):
         ### Test Code ###
-        s1Start = datetime.datetime(2014, 4, 7, 9)
-        s1End = datetime.datetime(2014, 4, 7, 12)
-        s2Start = datetime.datetime(2014, 4, 7, 13)
-        s2End = datetime.datetime(2014, 4, 7, 17)
-        s3Start = datetime.datetime(2014, 4, 7, 18)
-        s3End = datetime.datetime(2014, 4, 7, 21)
-        sessionDatetimes = [(s1Start, s1End), (s2Start, s2End), (s3Start, s3End)]
-        entries = dbInteractionInstance.getAllEntriesInDiscipline("Piano")
+        # s1Start = datetime.datetime(2014, 4, 7, 9)
+        # s1End = datetime.datetime(2014, 4, 7, 12)
+        # s2Start = datetime.datetime(2014, 4, 7, 13)
+        # s2End = datetime.datetime(2014, 4, 7, 17)
+        # s3Start = datetime.datetime(2014, 4, 7, 18)
+        # s3End = datetime.datetime(2014, 4, 7, 21)
+        # sessionDatetimes = [(s1Start, s1End), (s2Start, s2End), (s3Start, s3End)]
         ####
         scheduleOptionsDialog = ScheduleOptionsDialog()
         result = scheduleOptionsDialog.exec_()
         if result == True:
-            solution = self.scheduler.process(entries, sessionDatetimes)
-            print solution
+            entries = dbInteractionInstance.getAllEntriesInDiscipline(settingsInteractionInstance.loadDiscipline())
+            solution = self.scheduler.process(entries, settingsInteractionInstance.loadSessionDatetimes())
+            print solution            
+            if solution is None:
+                QMessageBox.warning(self, 'No schedule found', 'No schedule was found for the specified parameters. Try increasing tolerance for overtime or making the sessions longer.', 
+                    QMessageBox.Ok)
+                return
             dialog = ScheduleDialog(schedule=solution)
             result = dialog.exec_()
             if result == True:

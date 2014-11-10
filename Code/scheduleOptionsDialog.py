@@ -2,10 +2,11 @@
 
 import sys
 sys.path.insert(0, '../Forms/')
-from PyQt4.QtGui import QDialog, QListWidgetItem
+from PyQt4.QtGui import QDialog, QListWidgetItem, QMessageBox
 from time import strptime
 
 from ui_scheduleOptionsDialog import Ui_ScheduleOptionsDialog
+from settingsInteraction import settingsInteractionInstance
 
 class ScheduleOptionsDialog(QDialog):
     def __init__(self, parent=None):
@@ -16,6 +17,7 @@ class ScheduleOptionsDialog(QDialog):
         # Initialize class variables
         # Make the buttons do things
         self.connectSlots()
+        # TODO load last values
 
     def connectSlots(self):
         """connect the various ui signals to their slots"""
@@ -28,9 +30,13 @@ class ScheduleOptionsDialog(QDialog):
 
     def addSessionBtn_clicked(self):
         """Adds a session to the list widget"""
-        # TODO error checking (start before end, not same, not same as in list)
-        startDatetimeString = str(self.ui.sessionStartDateTimeEdit.dateTime().toString("yyyy/M/d h:mm AP"))
-        endDatetimeString = str(self.ui.sessionEndDateTimeEdit.dateTime().toString("yyyy/M/d h:mm AP"))
+        startDatetime = self.ui.sessionStartDateTimeEdit.dateTime()
+        endDatetime = self.ui.sessionEndDateTimeEdit.dateTime()
+        if startDatetime >= endDatetime:
+            QMessageBox.warning(self, 'Invalid Session Times', 'A session must start before it ends.', QMessageBox.Ok)
+            return
+        startDatetimeString = str(startDatetime.toString("yyyy/M/d h:mm AP"))
+        endDatetimeString = str(endDatetime.toString("yyyy/M/d h:mm AP"))
         listWidgetString = startDatetimeString + " ==> " + endDatetimeString
         QListWidgetItem(listWidgetString, self.ui.sessionListWidget)
 
@@ -40,17 +46,26 @@ class ScheduleOptionsDialog(QDialog):
             self.ui.sessionListWidget.takeItem(self.ui.sessionListWidget.currentRow())
 
     def okBtn_clicked(self):
-        # TODO save settings
+        """stores the selected settings and closes the dialog"""
+        sessionDatetimes = []
+
+        settingsInteractionInstance.storeJudgingTimePerEntry(str(self.ui.commentsTimeEdit.time().toString("mm:ss")))
+        settingsInteractionInstance.storeFinalAdjudicationTime(str(self.ui.adjudicationTimeEdit.time().toString("mm:ss")))
+        settingsInteractionInstance.storeTolerance(str(self.ui.toleranceTimeEdit.time().toString("mm:ss")))
+        settingsInteractionInstance.storeDiscipline(str(self.ui.disciplineComboBox.currentText()).strip())
 
         # parse list widget items into sessions for storage
+        if self.ui.sessionListWidget.count() <= 0:
+            QMessageBox.warning(self, 'Invalid Session Times', 'Must have at least one session to schedule.', QMessageBox.Ok)
+            return
         for row in range(self.ui.sessionListWidget.count()):
             text = str(self.ui.sessionListWidget.item(row).text())
             tokens = text.split(" ==> ")
-            startDatetime = strptime(tokens[0], "%Y/%m/%d %I:%M %p")
-            endDatetime = strptime(tokens[1], "%Y/%m/%d %I:%M %p")
-            print startDatetime
-            print endDatetime
-            # TODO store this somewhere
+            startDatetime = tokens[0]
+            endDatetime = tokens[1]
+            sessionDatetimes.append((startDatetime, endDatetime))
+
+        settingsInteractionInstance.storeSessionDatetimes(sessionDatetimes)
 
         self.accept()
 
