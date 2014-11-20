@@ -5,7 +5,7 @@ sys.path.insert(0, '../Forms/')
 from PyQt4.QtGui import QDialog, QMessageBox
 
 from ui_addTeacherDialog import Ui_AddTeacherDialog
-from utilities import sanitize, validateName, stripPhoneNumber
+from utilities import *
 from teacher import Teacher
 from databaseInteraction import dbInteractionInstance
 
@@ -55,8 +55,9 @@ class AddTeacherDialog(QDialog):
         address = sanitize(address)
         city = str(self.ui.cityLineEdit.text()).strip()
         city = sanitize(city)
-        postal = str(self.ui.postalCodeLineEdit.text()).strip()
+        postal = str(self.ui.postalCodeLineEdit.text()).replace(" ", "")
         postal = sanitize(postal)
+        postal = stripPostal(postal)
         daytimePhone = str(self.ui.daytimePhoneLineEdit.text()).strip()
         daytimePhone = sanitize(daytimePhone)
         daytimePhone = stripPhoneNumber(daytimePhone)
@@ -75,6 +76,8 @@ class AddTeacherDialog(QDialog):
             # Stop here
             pass
         # Check for valid fields
+        elif email != "" and validEmail(email) == False:
+            QMessageBox.warning(self, 'Invalid Email', email + ' is not a valid email format', QMessageBox.Ok)
         elif validateName(first) == False and QMessageBox.question(self, 'Validate First Name', 'Are you sure \'' + first + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
             # Stop here
             pass

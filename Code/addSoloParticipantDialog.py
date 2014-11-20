@@ -3,10 +3,11 @@
 import sys
 sys.path.insert(0, '../Forms/')
 from PyQt4.QtGui import QDialog, QMessageBox
+from PyQt4.QtCore import QDate
 
 from ui_addSoloParticipantDialog import Ui_AddSoloParticipantDialog
 from participant import SoloParticipant
-from utilities import sanitize, validateName, stripPhoneNumber
+from utilities import *
 from databaseInteraction import dbInteractionInstance
 
 class AddSoloParticipantDialog(QDialog):
@@ -15,6 +16,10 @@ class AddSoloParticipantDialog(QDialog):
         super(AddSoloParticipantDialog, self).__init__(parent)
         self.ui = Ui_AddSoloParticipantDialog()
         self.ui.setupUi(self)
+        # Set default date to January 1 18 years ago
+        defaultYear = (QDate.currentDate().addYears(-18)).year()
+        self.defaultDate = QDate(defaultYear, 1, 1)
+        self.ui.dateOfBirthDateEdit.setDate(self.defaultDate)
         # Initialize class variables
         self.testing = testing
         self.closeAfterAdd = closeAfterAdd
@@ -42,7 +47,7 @@ class AddSoloParticipantDialog(QDialog):
         self.ui.homePhoneLineEdit.clear()
         self.ui.cellPhoneLineEdit.clear()
         self.ui.emailLineEdit.clear()
-        self.ui.dateOfBirthDateEdit.setDate(self.ui.dateOfBirthDateEdit.minimumDate())
+        self.ui.dateOfBirthDateEdit.setDate(self.defaultDate)
 
     ### Slots ###
 
@@ -57,8 +62,9 @@ class AddSoloParticipantDialog(QDialog):
         address = sanitize(address)
         city = str(self.ui.cityLineEdit.text()).strip()
         city = sanitize(city)
-        postal = str(self.ui.postalCodeLineEdit.text()).strip()
+        postal = str(self.ui.postalCodeLineEdit.text()).replace(" ", "")
         postal = sanitize(postal)
+        postal = stripPostal(postal)
         home = str(self.ui.homePhoneLineEdit.text()).strip()
         home = sanitize(home)
         home = stripPhoneNumber(home)
@@ -75,9 +81,11 @@ class AddSoloParticipantDialog(QDialog):
             QMessageBox.warning(self, 'Missing Field', 'Participant must have a First Name', QMessageBox.Ok)
         elif last is None or last == "":
             QMessageBox.warning(self, 'Missing Field', 'Participant must have a Last Name', QMessageBox.Ok)
-        elif dob is None or dob == "1900-01-01":
-            QMessageBox.warning(self, 'Missing Field', 'Participant must have a Date of Birth', QMessageBox.Ok)
+        # elif dob is None or dob == "1900-01-01":
+        #     QMessageBox.warning(self, 'Missing Field', 'Participant must have a Date of Birth', QMessageBox.Ok)
         # Check for valid fields
+        elif email != "" and validEmail(email) == False:
+            QMessageBox.warning(self, 'Invalid Email', email + ' is not a valid email format', QMessageBox.Ok)
         elif validateName(first) == False and QMessageBox.question(self, 'Validate First Name', 'Are you sure \'' + first + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
             # Stop here
             pass

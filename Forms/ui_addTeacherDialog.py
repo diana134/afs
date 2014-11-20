@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'ui_addTeacherDialog.ui'
 #
-# Created: Mon Aug 18 17:05:49 2014
-#      by: PyQt4 UI code generator 4.9.3
+# Created: Thu Nov 20 11:37:09 2014
+#      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -12,7 +12,16 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
-    _fromUtf8 = lambda s: s
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
 
 class Ui_AddTeacherDialog(object):
     def setupUi(self, AddTeacherDialog):
@@ -21,9 +30,12 @@ class Ui_AddTeacherDialog(object):
         self.gridLayout = QtGui.QGridLayout(AddTeacherDialog)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
         self.cancelBtn = QtGui.QPushButton(AddTeacherDialog)
+        self.cancelBtn.setAutoDefault(False)
         self.cancelBtn.setObjectName(_fromUtf8("cancelBtn"))
         self.gridLayout.addWidget(self.cancelBtn, 2, 1, 1, 1)
         self.addTeacherBtn = QtGui.QPushButton(AddTeacherDialog)
+        self.addTeacherBtn.setAutoDefault(False)
+        self.addTeacherBtn.setDefault(True)
         self.addTeacherBtn.setObjectName(_fromUtf8("addTeacherBtn"))
         self.gridLayout.addWidget(self.addTeacherBtn, 2, 2, 1, 1)
         spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
@@ -85,15 +97,15 @@ class Ui_AddTeacherDialog(object):
         QtCore.QMetaObject.connectSlotsByName(AddTeacherDialog)
 
     def retranslateUi(self, AddTeacherDialog):
-        AddTeacherDialog.setWindowTitle(QtGui.QApplication.translate("AddTeacherDialog", "Add Teacher", None, QtGui.QApplication.UnicodeUTF8))
-        self.cancelBtn.setText(QtGui.QApplication.translate("AddTeacherDialog", "&Cancel", None, QtGui.QApplication.UnicodeUTF8))
-        self.addTeacherBtn.setText(QtGui.QApplication.translate("AddTeacherDialog", "A&dd Teacher", None, QtGui.QApplication.UnicodeUTF8))
-        self.firstNameLabel.setText(QtGui.QApplication.translate("AddTeacherDialog", "First Name", None, QtGui.QApplication.UnicodeUTF8))
-        self.lastNameLabel.setText(QtGui.QApplication.translate("AddTeacherDialog", "Last Name", None, QtGui.QApplication.UnicodeUTF8))
-        self.addressLabel.setText(QtGui.QApplication.translate("AddTeacherDialog", "Address", None, QtGui.QApplication.UnicodeUTF8))
-        self.cityLabel.setText(QtGui.QApplication.translate("AddTeacherDialog", "City", None, QtGui.QApplication.UnicodeUTF8))
-        self.postalCodeLabel.setText(QtGui.QApplication.translate("AddTeacherDialog", "Postal Code", None, QtGui.QApplication.UnicodeUTF8))
-        self.daytimePhoneLabel.setText(QtGui.QApplication.translate("AddTeacherDialog", "Daytime Phone", None, QtGui.QApplication.UnicodeUTF8))
-        self.eveningPhoneLabel.setText(QtGui.QApplication.translate("AddTeacherDialog", "Evening Phone", None, QtGui.QApplication.UnicodeUTF8))
-        self.emailLabel.setText(QtGui.QApplication.translate("AddTeacherDialog", "Email", None, QtGui.QApplication.UnicodeUTF8))
+        AddTeacherDialog.setWindowTitle(_translate("AddTeacherDialog", "Add Teacher", None))
+        self.cancelBtn.setText(_translate("AddTeacherDialog", "&Cancel", None))
+        self.addTeacherBtn.setText(_translate("AddTeacherDialog", "A&dd Teacher", None))
+        self.firstNameLabel.setText(_translate("AddTeacherDialog", "First Name", None))
+        self.lastNameLabel.setText(_translate("AddTeacherDialog", "Last Name", None))
+        self.addressLabel.setText(_translate("AddTeacherDialog", "Address", None))
+        self.cityLabel.setText(_translate("AddTeacherDialog", "City", None))
+        self.postalCodeLabel.setText(_translate("AddTeacherDialog", "Postal Code", None))
+        self.daytimePhoneLabel.setText(_translate("AddTeacherDialog", "Daytime Phone", None))
+        self.eveningPhoneLabel.setText(_translate("AddTeacherDialog", "Evening Phone", None))
+        self.emailLabel.setText(_translate("AddTeacherDialog", "Email", None))
 

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addEntryDialog.ui'
 #
-# Created: Tue Oct 21 00:24:32 2014
+# Created: Thu Nov 20 11:37:09 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -31,11 +31,14 @@ class Ui_AddEntryDialog(object):
         self.gridLayout = QtGui.QGridLayout(AddEntryDialog)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
         self.addEntryBtn = QtGui.QPushButton(AddEntryDialog)
+        self.addEntryBtn.setAutoDefault(False)
+        self.addEntryBtn.setDefault(True)
         self.addEntryBtn.setObjectName(_fromUtf8("addEntryBtn"))
         self.gridLayout.addWidget(self.addEntryBtn, 1, 2, 1, 1)
         spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.gridLayout.addItem(spacerItem, 1, 0, 1, 1)
         self.cancelBtn = QtGui.QPushButton(AddEntryDialog)
+        self.cancelBtn.setAutoDefault(False)
         self.cancelBtn.setObjectName(_fromUtf8("cancelBtn"))
         self.gridLayout.addWidget(self.cancelBtn, 1, 1, 1, 1)
         self.formLayout_2 = QtGui.QFormLayout()

@@ -49,3 +49,17 @@ def stripPhoneNumber(number):
             newNumber += c
 
     return newNumber
+
+def validEmail(email):
+    """Returns False if email doesn't follow abc@def.ghj format"""
+    match = re.match("^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$", email)
+    return match != None
+
+def stripPostal(postal):
+    """Returns postal code string stripped of any characters other than A-Z, 0-9"""
+    newPostal = ''
+    for c in postal.upper():
+        if c.isalnum():
+            newPostal += c
+
+    return newPostal

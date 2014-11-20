@@ -22,6 +22,12 @@
      <property name="text">
       <string>A&amp;dd Entry</string>
      </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item row="1" column="0">
@@ -41,6 +47,9 @@
     <widget class="QPushButton" name="cancelBtn">
      <property name="text">
       <string>&amp;Cancel</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
      </property>
     </widget>
    </item>

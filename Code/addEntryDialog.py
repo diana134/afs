@@ -54,7 +54,7 @@ class AddEntryDialog(QDialog):
         return self.entry
 
     def clearFields(self):
-        """Clears and resets all the fields"""
+        """Clears and resets the fields below Discipline"""
         # Leave Participant selected
         # self.participantId = None
         # self.ui.participantLineEdit.clear()
@@ -213,6 +213,9 @@ class AddEntryDialog(QDialog):
         """changes which fields are enabled based on the selected discipline"""
         if str(text) in self.disciplines:
             self.disciplines[str(text)]()
+            self.clearFields()
+            self.teacherId = ""
+            self.ui.teacherLineEdit.clear()
         else:
             QMessageBox.warning(self, 'Invalid Discipline', 'An invalid discipline was selected. Please try again.', QMessageBox.Ok)
 

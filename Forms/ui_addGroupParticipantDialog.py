@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addGroupParticipantDialog.ui'
 #
-# Created: Mon Oct 20 21:37:13 2014
+# Created: Thu Nov 20 11:37:09 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -36,6 +36,7 @@ class Ui_AddGroupParticipantDialog(object):
         self.cancelBtn.setObjectName(_fromUtf8("cancelBtn"))
         self.gridLayout.addWidget(self.cancelBtn, 1, 1, 1, 1)
         self.addParticipantBtn = QtGui.QPushButton(AddGroupParticipantDialog)
+        self.addParticipantBtn.setDefault(True)
         self.addParticipantBtn.setObjectName(_fromUtf8("addParticipantBtn"))
         self.gridLayout.addWidget(self.addParticipantBtn, 1, 2, 1, 1)
         self.formLayout_2 = QtGui.QFormLayout()

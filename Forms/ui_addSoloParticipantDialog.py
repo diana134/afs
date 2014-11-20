@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addSoloParticipantDialog.ui'
 #
-# Created: Tue Oct 21 00:31:48 2014
+# Created: Thu Nov 20 12:22:15 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -34,6 +34,7 @@ class Ui_AddSoloParticipantDialog(object):
         self.cancelBtn.setObjectName(_fromUtf8("cancelBtn"))
         self.gridLayout.addWidget(self.cancelBtn, 2, 1, 1, 1)
         self.addParticipantBtn = QtGui.QPushButton(AddSoloParticipantDialog)
+        self.addParticipantBtn.setDefault(True)
         self.addParticipantBtn.setObjectName(_fromUtf8("addParticipantBtn"))
         self.gridLayout.addWidget(self.addParticipantBtn, 2, 2, 1, 1)
         spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
@@ -98,7 +99,7 @@ class Ui_AddSoloParticipantDialog(object):
         self.formLayout.setWidget(8, QtGui.QFormLayout.LabelRole, self.dateOfBirthLabel)
         self.dateOfBirthDateEdit = QtGui.QDateEdit(AddSoloParticipantDialog)
         self.dateOfBirthDateEdit.setAutoFillBackground(False)
-        self.dateOfBirthDateEdit.setDate(QtCore.QDate(1900, 1, 1))
+        self.dateOfBirthDateEdit.setDate(QtCore.QDate(1996, 1, 1))
         self.dateOfBirthDateEdit.setMinimumDate(QtCore.QDate(1900, 1, 1))
         self.dateOfBirthDateEdit.setCalendarPopup(True)
         self.dateOfBirthDateEdit.setObjectName(_fromUtf8("dateOfBirthDateEdit"))
