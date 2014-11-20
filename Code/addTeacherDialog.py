@@ -33,7 +33,6 @@ class AddTeacherDialog(QDialog):
 
     def clearFields(self):
         """Clears and resets all fields"""
-        self.teacher = None
         self.ui.firstNameLineEdit.clear()
         self.ui.lastNameLineEdit.clear()
         self.ui.addressLineEdit.clear()
@@ -70,30 +69,37 @@ class AddTeacherDialog(QDialog):
         # Check for empty fields
         if first is None or first == "":
             QMessageBox.warning(self, 'Missing Field', 'Teacher must have a First Name', QMessageBox.Ok)
-        elif last is None or last == "":
+            return
+        
+        if last is None or last == "":
             QMessageBox.warning(self, 'Missing Field', 'Teacher must have a Last Name', QMessageBox.Ok)
-        elif (email is None or email == "") and QMessageBox.question(self, 'Missing Email', 'Are you sure you want to leave Email blank?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
-            # Stop here
-            pass
+            return
+
+        if email is None or email == "":
+            if QMessageBox.question(self, 'Missing Email', 'Are you sure you want to leave Email blank?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+                return
         # Check for valid fields
-        elif email != "" and validEmail(email) == False:
+        elif validEmail(email) == False:
             QMessageBox.warning(self, 'Invalid Email', email + ' is not a valid email format', QMessageBox.Ok)
-        elif validateName(first) == False and QMessageBox.question(self, 'Validate First Name', 'Are you sure \'' + first + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
-            # Stop here
-            pass
-        elif validateName(last) == False and QMessageBox.question(self, 'Validate Last Name', 'Are you sure \'' + last + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
-            # Stop here
-            pass
+            return
+
+        if validateName(first) == False:
+            if QMessageBox.question(self, 'Validate First Name', 'Are you sure \'' + first + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+                return
+
+        if validateName(last) == False:
+            if QMessageBox.question(self, 'Validate Last Name', 'Are you sure \'' + last + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+                return
+
+        self.teacher = Teacher(first, last, address, city, postal, daytimePhone, eveningPhone, email)
+        result = dbInteractionInstance.addTeacher(self.teacher)
+        if result == "":
+            QMessageBox.information(self, 'Add Teacher', 'Successfully added new teacher', QMessageBox.Ok)
+            self.clearFields()
+            if self.closeAfterAdd:
+                self.accept()
         else:
-            self.teacher = Teacher(first, last, address, city, postal, daytimePhone, eveningPhone, email)
-            result = dbInteractionInstance.addTeacher(self.teacher)
-            if result == "":
-                QMessageBox.information(self, 'Add Teacher', 'Successfully added new teacher', QMessageBox.Ok)
-                self.clearFields()
-                if self.closeAfterAdd:
-                    self.accept()
-            else:
-                QMessageBox.critical(self, 'Add Teacher', 'Failed to add new teacher\n{0}'.format(result), QMessageBox.Ok)
+            QMessageBox.critical(self, 'Add Teacher', 'Failed to add new teacher\n{0}'.format(result), QMessageBox.Ok)
 
     def cancelBtn_clicked(self):
         self.reject()

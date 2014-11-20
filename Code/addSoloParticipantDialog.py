@@ -38,7 +38,6 @@ class AddSoloParticipantDialog(QDialog):
 
     def clearFields(self):
         """Clears and resets all fields"""
-        self.p = None
         self.ui.firstNameLineEdit.clear()
         self.ui.lastNameLineEdit.clear()
         self.ui.addressLineEdit.clear()
@@ -79,29 +78,38 @@ class AddSoloParticipantDialog(QDialog):
         # Check for empty fields
         if first is None or first == "":
             QMessageBox.warning(self, 'Missing Field', 'Participant must have a First Name', QMessageBox.Ok)
-        elif last is None or last == "":
+            return
+        
+        if last is None or last == "":
             QMessageBox.warning(self, 'Missing Field', 'Participant must have a Last Name', QMessageBox.Ok)
-        # elif dob is None or dob == "1900-01-01":
+            return
+        
+        # if dob is None or dob == "1900-01-01":
         #     QMessageBox.warning(self, 'Missing Field', 'Participant must have a Date of Birth', QMessageBox.Ok)
+        #     return
+
         # Check for valid fields
-        elif email != "" and validEmail(email) == False:
+        if email != "" and validEmail(email) == False:
             QMessageBox.warning(self, 'Invalid Email', email + ' is not a valid email format', QMessageBox.Ok)
-        elif validateName(first) == False and QMessageBox.question(self, 'Validate First Name', 'Are you sure \'' + first + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
-            # Stop here
-            pass
-        elif validateName(last) == False and QMessageBox.question(self, 'Validate Last Name', 'Are you sure \'' + last + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
-            # Stop here
-            pass
+            return
+
+        if validateName(first) == False:
+            if QMessageBox.question(self, 'Validate First Name', 'Are you sure \'' + first + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+                return
+
+        if validateName(last) == False:
+            if QMessageBox.question(self, 'Validate Last Name', 'Are you sure \'' + last + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+                return
+
+        self.p = SoloParticipant(first, last, address, city, postal, home, cell, email, dob)
+        result = dbInteractionInstance.addSoloParticipant(self.p)
+        if result == "":
+            QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
+            self.clearFields()
+            if self.closeAfterAdd:
+                self.accept()
         else:
-            self.p = SoloParticipant(first, last, address, city, postal, home, cell, email, dob)
-            result = dbInteractionInstance.addSoloParticipant(self.p)
-            if result == "":
-                QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
-                self.clearFields()
-                if self.closeAfterAdd:
-                    self.accept()
-            else:
-                QMessageBox.critical(self, 'Add Participant', 'Failed to add new participant\n{0}'.format(result), QMessageBox.Ok)
+            QMessageBox.critical(self, 'Add Participant', 'Failed to add new participant\n{0}'.format(result), QMessageBox.Ok)
 
     def cancelBtn_clicked(self):
         self.reject()

@@ -44,7 +44,6 @@ class AddGroupParticipantDialog(QDialog):
 
     def clearFields(self):
         """Clears and resets all fields"""
-        self.gp = None
         self.participantIds = []
         self.ui.groupNameLineEdit.clear()
         self.ui.groupSizeLineEdit.clear()
@@ -72,24 +71,32 @@ class AddGroupParticipantDialog(QDialog):
         # Check for empty fields
         if groupName is None or groupName == "":
             QMessageBox.warning(self, 'Missing Field', 'Participant must have a Group Name', QMessageBox.Ok)
+            return
+
         # Check for valid fields
-        elif validateName(groupName) == False and QMessageBox.question(self, 'Validate Group Name', 'Are you sure \'' + groupName + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
-            # Stop here
-            pass
-        elif groupSize != "" and not groupSize.isdigit():
+        if validateName(groupName) == False:
+            if QMessageBox.question(self, 'Validate Group Name', 'Are you sure \'' + groupName + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+                return
+
+        if groupSize != "" and not groupSize.isdigit():
             QMessageBox.warning(self, 'Incorrect Field', 'Group Size must be a number', QMessageBox.Ok)
-        elif schoolGrade != "" and not schoolGrade.isalphanumeric():
+            return
+
+        if schoolGrade != "" and not schoolGrade.isalphanumeric():
             QMessageBox.warning(self, 'Incorrect Field', 'School Grade must be only letters and numbers', QMessageBox.Ok)
-        elif averageAge != "" and not averageAge.isdigit():
+            return
+
+        if averageAge != "" and not averageAge.isdigit():
             QMessageBox.warning(self, 'Incorrect Field', 'Average Age must be a whole number', QMessageBox.Ok)
-        else:
-            self.gp = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants)
-            result = dbInteractionInstance.addGroupParticipant(self.gp)
-            if result == "":
-                QMessageBox.information(self, 'Add Group Participant', 'Successfully added new group participant', QMessageBox.Ok)
-                self.clearFields()
-                if self.closeAfterAdd:
-                    self.accept()
+            return
+
+        self.gp = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants)
+        result = dbInteractionInstance.addGroupParticipant(self.gp)
+        if result == "":
+            QMessageBox.information(self, 'Add Group Participant', 'Successfully added new group participant', QMessageBox.Ok)
+            self.clearFields()
+            if self.closeAfterAdd:
+                self.accept()
 
     def cancelBtn_clicked(self):
         self.reject()
