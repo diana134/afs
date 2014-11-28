@@ -3,6 +3,7 @@
 import sys
 sys.path.insert(0, '../Forms/')
 from PyQt4.QtGui import QDialog, QListWidgetItem, QMessageBox
+from PyQt4.QtCore import QDate
 from time import strptime
 
 from ui_scheduleOptionsDialog import Ui_ScheduleOptionsDialog
@@ -14,7 +15,11 @@ class ScheduleOptionsDialog(QDialog):
         super(ScheduleOptionsDialog, self).__init__(parent)
         self.ui = Ui_ScheduleOptionsDialog()
         self.ui.setupUi(self)
-        # Initialize class variables
+        # Set session dates to be current year
+        defaultYear = QDate.currentDate().year()
+        self.defaultDate = QDate(defaultYear, 1, 1)
+        self.ui.sessionStartDateTimeEdit.setDate(self.defaultDate)
+        self.ui.sessionEndDateTimeEdit.setDate(self.defaultDate)
         # Make the buttons do things
         self.connectSlots()
         # TODO load last values

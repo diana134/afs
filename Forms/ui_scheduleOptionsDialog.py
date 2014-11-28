@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_scheduleOptionsDialog.ui'
 #
-# Created: Tue Nov  4 20:33:34 2014
+# Created: Fri Nov 28 14:04:37 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_ScheduleOptionsDialog(object):
     def setupUi(self, ScheduleOptionsDialog):
         ScheduleOptionsDialog.setObjectName(_fromUtf8("ScheduleOptionsDialog"))
-        ScheduleOptionsDialog.resize(390, 535)
+        ScheduleOptionsDialog.resize(403, 535)
         self.verticalLayout_2 = QtGui.QVBoxLayout(ScheduleOptionsDialog)
         self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
         self.groupBox_2 = QtGui.QGroupBox(ScheduleOptionsDialog)
@@ -83,6 +83,7 @@ class Ui_ScheduleOptionsDialog(object):
         self.label.setObjectName(_fromUtf8("label"))
         self.horizontalLayout_4.addWidget(self.label)
         self.sessionStartDateTimeEdit = QtGui.QDateTimeEdit(self.groupBox)
+        self.sessionStartDateTimeEdit.setDate(QtCore.QDate(2015, 1, 1))
         self.sessionStartDateTimeEdit.setCalendarPopup(True)
         self.sessionStartDateTimeEdit.setObjectName(_fromUtf8("sessionStartDateTimeEdit"))
         self.horizontalLayout_4.addWidget(self.sessionStartDateTimeEdit)
@@ -91,6 +92,7 @@ class Ui_ScheduleOptionsDialog(object):
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.horizontalLayout_4.addWidget(self.label_2)
         self.sessionEndDateTimeEdit = QtGui.QDateTimeEdit(self.groupBox)
+        self.sessionEndDateTimeEdit.setDate(QtCore.QDate(2015, 1, 1))
         self.sessionEndDateTimeEdit.setCalendarPopup(True)
         self.sessionEndDateTimeEdit.setObjectName(_fromUtf8("sessionEndDateTimeEdit"))
         self.horizontalLayout_4.addWidget(self.sessionEndDateTimeEdit)
