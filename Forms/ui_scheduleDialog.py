@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_scheduleDialog.ui'
 #
-# Created: Sun Nov  9 19:47:39 2014
+# Created: Fri Nov 28 14:18:55 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -114,7 +114,8 @@ class Ui_ScheduleDialog(object):
         self.horizontalLayout.addWidget(self.exportScheduleBtn)
         self.verticalLayout_3.addLayout(self.horizontalLayout)
         self.btnBox = QtGui.QDialogButtonBox(ScheduleDialog)
-        self.btnBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
+        self.btnBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Save)
+        self.btnBox.setCenterButtons(False)
         self.btnBox.setObjectName(_fromUtf8("btnBox"))
         self.verticalLayout_3.addWidget(self.btnBox)
 

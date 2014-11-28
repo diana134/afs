@@ -25,7 +25,7 @@ class ScheduleDialog(QDialog):
         self.ui.scheduleRightBtn.clicked.connect(self.scheduleRightBtn_clicked)
         self.ui.entriesUpBtn.clicked.connect(self.entriesUpBtn_clicked)
         self.ui.entriesDownBtn.clicked.connect(self.entriesDownBtn_clicked)
-        self.ui.btnBox.accepted.connect(self.okBtn_clicked)
+        self.ui.btnBox.accepted.connect(self.saveBtn_clicked)
         self.ui.btnBox.rejected.connect(self.cancelBtn_clicked)
         self.ui.exportScheduleBtn.clicked.connect(self.exportScheduleBtn_clicked)
 
@@ -50,7 +50,7 @@ class ScheduleDialog(QDialog):
 
     ##### Slots #####
 
-    def okBtn_clicked(self):
+    def saveBtn_clicked(self):
         """Saves schedule for future use"""
         filename = QFileDialog.getSaveFileName(self, "Save Schedule", "", "Schedule Files (*.sched)")
         if filename is not None and filename != "":
