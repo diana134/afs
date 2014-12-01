@@ -11,6 +11,7 @@ from addGroupParticipantDialog import AddGroupParticipantDialog
 from addTeacherDialog import AddTeacherDialog
 from chooseParticipantDialog import ChooseParticipantDialog
 from chooseTeacherDialog import ChooseTeacherDialog
+from pieceWidget import PieceWidget
 from entry import Entry
 from utilities import sanitize
 from databaseInteraction import dbInteractionInstance
@@ -21,21 +22,15 @@ class AddEntryDialog(QDialog):
         super(AddEntryDialog, self).__init__(parent)
         self.ui = Ui_AddEntryDialog()
         self.ui.setupUi(self)
-        self.dance() # Slightly cheater way to start the ui properly
+        # HACK Make the PieceWidget in the first tab work right
+        self.ui.tabWidget.removeTab(0)
+        self.ui.tabWidget.addTab(PieceWidget(), "Piece 1")
         # Initialize class variables
         self.testing = testing
         self.closeAfterAdd = closeAfterAdd
         self.entry = None
         self.participantId = None
         self.teacherId = None
-        self.disciplines = {'Dance' : self.dance,   # For Pythonic switch-case
-                                'Piano' : self.piano,
-                                'Choral' : self.choral,
-                                'Vocal' : self.vocal,
-                                'Instrumental' : self.instrumental,
-                                'Band' : self.band,
-                                'Speech' : self.speech
-                            }
         # Make the buttons do things
         self.connectSlots()
 
@@ -49,33 +44,11 @@ class AddEntryDialog(QDialog):
         self.ui.createNewGroupParticipantBtn.clicked.connect(self.createNewGroupParticipantBtn_clicked)
         self.ui.createNewTeacherBtn.clicked.connect(self.createNewTeacherBtn_clicked)
         self.ui.disciplineComboBox.currentIndexChanged['QString'].connect(self.disciplineComboBox_changed)
+        self.ui.addPieceBtn.clicked.connect(self.addPieceBtn_clicked)
+        self.ui.tabWidget.tabCloseRequested['int'].connect(self.closeTab)
 
     def getEntry(self):
         return self.entry
-
-    def clearFields(self):
-        """Clears and resets the fields below Discipline"""
-        # Leave Participant selected
-        # self.participantId = None
-        # self.ui.participantLineEdit.clear()
-        # Leave Teacher selected
-        # self.teacherId.clear()
-        # self.ui.teacherLineEdit.clear()
-        # Leave Discipline how it is
-        self.ui.levelLineEdit.clear()
-        self.ui.classNumberLineEdit.clear()
-        self.ui.classNameLineEdit.clear()
-        self.ui.styleLineEdit.clear()
-        self.ui.instrumentLineEdit.clear()
-        self.ui.titleLineEdit.clear()
-        self.ui.composerLineEdit.clear()
-        self.ui.arrangerLineEdit.clear()
-        self.ui.artistLineEdit.clear()
-        self.ui.authorLineEdit.clear()
-        self.ui.opusLineEdit.clear()
-        self.ui.movementLineEdit.clear()
-        self.ui.noLineEdit.clear()
-        self.ui.performanceTimeEdit.setTime(QTime(0, 0, 0))
 
     ### Slots ###
 
@@ -211,150 +184,18 @@ class AddEntryDialog(QDialog):
 
     def disciplineComboBox_changed(self, text):
         """changes which fields are enabled based on the selected discipline"""
-        if str(text) in self.disciplines:
-            self.disciplines[str(text)]()
-            self.clearFields()
-            self.teacherId = ""
-            self.ui.teacherLineEdit.clear()
-        else:
-            QMessageBox.warning(self, 'Invalid Discipline', 'An invalid discipline was selected. Please try again.', QMessageBox.Ok)
+        for i in xrange(0, self.ui.tabWidget.count()):
+            pieceWidget = self.ui.tabWidget.widget(i)
+            pieceWidget.changeDiscipline(text)
+        self.teacherId = ""
+        self.ui.teacherLineEdit.clear()
 
-    def dance(self):
-        self.ui.styleLabel.setEnabled(True)
-        self.ui.styleLineEdit.setEnabled(True)
-        self.ui.instrumentLabel.setEnabled(False)
-        self.ui.instrumentLineEdit.setEnabled(False)
-        self.ui.composerLabel.setEnabled(False)
-        self.ui.composerLineEdit.setEnabled(False)
-        self.ui.arrangerLabel.setEnabled(False)
-        self.ui.arrangerLineEdit.setEnabled(False)
-        self.ui.artistLabel.setEnabled(False)
-        self.ui.artistLineEdit.setEnabled(False)
-        self.ui.authorLabel.setEnabled(False)
-        self.ui.authorLineEdit.setEnabled(False)
-        self.ui.opusLabel.setEnabled(False)
-        self.ui.opusLineEdit.setEnabled(False)
-        self.ui.noLabel.setEnabled(False)
-        self.ui.noLineEdit.setEnabled(False)
-        self.ui.movementLabel.setEnabled(False)
-        self.ui.movementLineEdit.setEnabled(False)
+    def addPieceBtn_clicked(self):
+        tabCount = self.ui.tabWidget.count()
+        self.ui.tabWidget.addTab(PieceWidget(), "Piece {0}".format(tabCount+1))
 
-    def piano(self):
-        self.ui.styleLabel.setEnabled(False)
-        self.ui.styleLineEdit.setEnabled(False)
-        self.ui.instrumentLabel.setEnabled(False)
-        self.ui.instrumentLineEdit.setEnabled(False)
-        self.ui.composerLabel.setEnabled(True)
-        self.ui.composerLineEdit.setEnabled(True)
-        self.ui.arrangerLabel.setEnabled(False)
-        self.ui.arrangerLineEdit.setEnabled(False)
-        self.ui.artistLabel.setEnabled(False)
-        self.ui.artistLineEdit.setEnabled(False)
-        self.ui.authorLabel.setEnabled(False)
-        self.ui.authorLineEdit.setEnabled(False)
-        self.ui.opusLabel.setEnabled(True)
-        self.ui.opusLineEdit.setEnabled(True)
-        self.ui.noLabel.setEnabled(True)
-        self.ui.noLineEdit.setEnabled(True)
-        self.ui.movementLabel.setEnabled(True)
-        self.ui.movementLineEdit.setEnabled(True)
-
-    def choral(self):
-        self.ui.styleLabel.setEnabled(True)
-        self.ui.styleLineEdit.setEnabled(True)
-        self.ui.instrumentLabel.setEnabled(False)
-        self.ui.instrumentLineEdit.setEnabled(False)
-        self.ui.composerLabel.setEnabled(True)
-        self.ui.composerLineEdit.setEnabled(True)
-        self.ui.arrangerLabel.setEnabled(True)
-        self.ui.arrangerLineEdit.setEnabled(True)
-        self.ui.artistLabel.setEnabled(False)
-        self.ui.artistLineEdit.setEnabled(False)
-        self.ui.authorLabel.setEnabled(False)
-        self.ui.authorLineEdit.setEnabled(False)
-        self.ui.opusLabel.setEnabled(False)
-        self.ui.opusLineEdit.setEnabled(False)
-        self.ui.noLabel.setEnabled(False)
-        self.ui.noLineEdit.setEnabled(False)
-        self.ui.movementLabel.setEnabled(False)
-        self.ui.movementLineEdit.setEnabled(False)
-
-    def vocal(self):
-        self.ui.styleLabel.setEnabled(True)
-        self.ui.styleLineEdit.setEnabled(True)
-        self.ui.instrumentLabel.setEnabled(False)
-        self.ui.instrumentLineEdit.setEnabled(False)
-        self.ui.composerLabel.setEnabled(True)
-        self.ui.composerLineEdit.setEnabled(True)
-        self.ui.arrangerLabel.setEnabled(True)
-        self.ui.arrangerLineEdit.setEnabled(True)
-        self.ui.artistLabel.setEnabled(False)
-        self.ui.artistLineEdit.setEnabled(False)
-        self.ui.authorLabel.setEnabled(False)
-        self.ui.authorLineEdit.setEnabled(False)
-        self.ui.opusLabel.setEnabled(False)
-        self.ui.opusLineEdit.setEnabled(False)
-        self.ui.noLabel.setEnabled(False)
-        self.ui.noLineEdit.setEnabled(False)
-        self.ui.movementLabel.setEnabled(False)
-        self.ui.movementLineEdit.setEnabled(False)
-
-    def instrumental(self):
-        self.ui.styleLabel.setEnabled(False)
-        self.ui.styleLineEdit.setEnabled(False)
-        self.ui.instrumentLabel.setEnabled(True)
-        self.ui.instrumentLineEdit.setEnabled(True)
-        self.ui.composerLabel.setEnabled(True)
-        self.ui.composerLineEdit.setEnabled(True)
-        self.ui.arrangerLabel.setEnabled(True)
-        self.ui.arrangerLineEdit.setEnabled(True)
-        self.ui.artistLabel.setEnabled(False)
-        self.ui.artistLineEdit.setEnabled(False)
-        self.ui.authorLabel.setEnabled(False)
-        self.ui.authorLineEdit.setEnabled(False)
-        self.ui.opusLabel.setEnabled(False)
-        self.ui.opusLineEdit.setEnabled(False)
-        self.ui.noLabel.setEnabled(False)
-        self.ui.noLineEdit.setEnabled(False)
-        self.ui.movementLabel.setEnabled(False)
-        self.ui.movementLineEdit.setEnabled(False)
-
-    def band(self):
-        self.ui.styleLabel.setEnabled(True)
-        self.ui.styleLineEdit.setEnabled(True)
-        self.ui.instrumentLabel.setEnabled(False)
-        self.ui.instrumentLineEdit.setEnabled(False)
-        self.ui.composerLabel.setEnabled(True)
-        self.ui.composerLineEdit.setEnabled(True)
-        self.ui.arrangerLabel.setEnabled(True)
-        self.ui.arrangerLineEdit.setEnabled(True)
-        self.ui.artistLabel.setEnabled(False)
-        self.ui.artistLineEdit.setEnabled(False)
-        self.ui.authorLabel.setEnabled(False)
-        self.ui.authorLineEdit.setEnabled(False)
-        self.ui.opusLabel.setEnabled(False)
-        self.ui.opusLineEdit.setEnabled(False)
-        self.ui.noLabel.setEnabled(False)
-        self.ui.noLineEdit.setEnabled(False)
-        self.ui.movementLabel.setEnabled(False)
-        self.ui.movementLineEdit.setEnabled(False)
-
-    def speech(self):
-        self.ui.styleLabel.setEnabled(False)
-        self.ui.styleLineEdit.setEnabled(False)
-        self.ui.instrumentLabel.setEnabled(False)
-        self.ui.instrumentLineEdit.setEnabled(False)
-        self.ui.composerLabel.setEnabled(False)
-        self.ui.composerLineEdit.setEnabled(False)
-        self.ui.arrangerLabel.setEnabled(False)
-        self.ui.arrangerLineEdit.setEnabled(False)
-        self.ui.artistLabel.setEnabled(False)
-        self.ui.artistLineEdit.setEnabled(False)
-        self.ui.authorLabel.setEnabled(True)
-        self.ui.authorLineEdit.setEnabled(True)
-        self.ui.opusLabel.setEnabled(False)
-        self.ui.opusLineEdit.setEnabled(False)
-        self.ui.noLabel.setEnabled(False)
-        self.ui.noLineEdit.setEnabled(False)
-        self.ui.movementLabel.setEnabled(False)
-        self.ui.movementLineEdit.setEnabled(False)
+    def closeTab(self, index):
+        self.ui.tabWidget.removeTab(index)
+        # rename tabs
+        for i in xrange(0, self.ui.tabWidget.count()):
+            self.ui.tabWidget.setTabText(i, "Piece {0}".format(i+1))
