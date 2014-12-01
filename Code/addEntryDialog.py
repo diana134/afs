@@ -22,6 +22,7 @@ class AddEntryDialog(QDialog):
         super(AddEntryDialog, self).__init__(parent)
         self.ui = Ui_AddEntryDialog()
         self.ui.setupUi(self)
+        self.dance() # Slightly cheater way to start the ui properly
         # HACK Make the PieceWidget in the first tab work right
         self.ui.tabWidget.removeTab(0)
         self.ui.tabWidget.addTab(PieceWidget(), "Piece 1")
@@ -31,6 +32,14 @@ class AddEntryDialog(QDialog):
         self.entry = None
         self.participantId = None
         self.teacherId = None
+        self.disciplines = {'Dance' : self.dance,   # For Pythonic switch-case
+                                'Piano' : self.piano,
+                                'Choral' : self.choral,
+                                'Vocal' : self.vocal,
+                                'Instrumental' : self.instrumental,
+                                'Band' : self.band,
+                                'Speech' : self.speech
+                            }
         # Make the buttons do things
         self.connectSlots()
 
@@ -49,6 +58,13 @@ class AddEntryDialog(QDialog):
 
     def getEntry(self):
         return self.entry
+
+    def clearFields(self):
+        self.ui.levelLineEdit.clear()
+        self.ui.classNumberLineEdit.clear()
+        self.ui.classNameLineEdit.clear()
+        self.ui.styleLineEdit.clear()
+        self.ui.instrumentLineEdit.clear()
 
     ### Slots ###
 
@@ -184,11 +200,16 @@ class AddEntryDialog(QDialog):
 
     def disciplineComboBox_changed(self, text):
         """changes which fields are enabled based on the selected discipline"""
-        for i in xrange(0, self.ui.tabWidget.count()):
-            pieceWidget = self.ui.tabWidget.widget(i)
-            pieceWidget.changeDiscipline(text)
-        self.teacherId = ""
-        self.ui.teacherLineEdit.clear()
+        if str(text) in self.disciplines:
+            self.disciplines[str(text)]()
+            self.clearFields()
+            for i in xrange(0, self.ui.tabWidget.count()):
+                pieceWidget = self.ui.tabWidget.widget(i)
+                pieceWidget.changeDiscipline(text)
+            self.teacherId = ""
+            self.ui.teacherLineEdit.clear()
+        else:
+            QMessageBox.critical(self, 'Invalid Discipline', 'An invalid discipline was selected. Please try again.', QMessageBox.Ok)
 
     def addPieceBtn_clicked(self):
         tabCount = self.ui.tabWidget.count()
@@ -199,3 +220,45 @@ class AddEntryDialog(QDialog):
         # rename tabs
         for i in xrange(0, self.ui.tabWidget.count()):
             self.ui.tabWidget.setTabText(i, "Piece {0}".format(i+1))
+
+    def dance(self):
+        self.ui.styleLabel.setEnabled(True)
+        self.ui.styleLineEdit.setEnabled(True)
+        self.ui.instrumentLabel.setEnabled(False)
+        self.ui.instrumentLineEdit.setEnabled(False)
+
+    def piano(self):
+        self.ui.styleLabel.setEnabled(False)
+        self.ui.styleLineEdit.setEnabled(False)
+        self.ui.instrumentLabel.setEnabled(False)
+        self.ui.instrumentLineEdit.setEnabled(False)
+
+    def choral(self):
+        self.ui.styleLabel.setEnabled(True)
+        self.ui.styleLineEdit.setEnabled(True)
+        self.ui.instrumentLabel.setEnabled(False)
+        self.ui.instrumentLineEdit.setEnabled(False)
+
+    def vocal(self):
+        self.ui.styleLabel.setEnabled(True)
+        self.ui.styleLineEdit.setEnabled(True)
+        self.ui.instrumentLabel.setEnabled(False)
+        self.ui.instrumentLineEdit.setEnabled(False)
+
+    def instrumental(self):
+        self.ui.styleLabel.setEnabled(False)
+        self.ui.styleLineEdit.setEnabled(False)
+        self.ui.instrumentLabel.setEnabled(True)
+        self.ui.instrumentLineEdit.setEnabled(True)
+
+    def band(self):
+        self.ui.styleLabel.setEnabled(True)
+        self.ui.styleLineEdit.setEnabled(True)
+        self.ui.instrumentLabel.setEnabled(False)
+        self.ui.instrumentLineEdit.setEnabled(False)
+
+    def speech(self):
+        self.ui.styleLabel.setEnabled(False)
+        self.ui.styleLineEdit.setEnabled(False)
+        self.ui.instrumentLabel.setEnabled(False)
+        self.ui.instrumentLineEdit.setEnabled(False)

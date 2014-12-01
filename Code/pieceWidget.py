@@ -2,7 +2,7 @@
 
 import sys
 sys.path.insert(0, '../Forms/')
-from PyQt4.QtGui import QWidget, QMessageBox
+from PyQt4.QtGui import QWidget
 from PyQt4.QtCore import QTime
 
 from ui_pieceWidget import Ui_PieceWidget
@@ -25,12 +25,7 @@ class PieceWidget(QWidget):
                             }
 
     def clearFields(self):
-        """Clears and resets the fields below Discipline"""
-        self.ui.levelLineEdit.clear()
-        self.ui.classNumberLineEdit.clear()
-        self.ui.classNameLineEdit.clear()
-        self.ui.styleLineEdit.clear()
-        self.ui.instrumentLineEdit.clear()
+        """Clears and resets the fields"""
         self.ui.titleLineEdit.clear()
         self.ui.composerLineEdit.clear()
         self.ui.arrangerLineEdit.clear()
@@ -46,15 +41,8 @@ class PieceWidget(QWidget):
         if str(text) in self.disciplines:
             self.disciplines[str(text)]()
             self.clearFields()
-        else:
-            QMessageBox.critical(self, 'Invalid Discipline', 'An invalid discipline was selected. Please try again.', QMessageBox.Ok)
-
 
     def dance(self):
-        self.ui.styleLabel.setEnabled(True)
-        self.ui.styleLineEdit.setEnabled(True)
-        self.ui.instrumentLabel.setEnabled(False)
-        self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.composerLabel.setEnabled(False)
         self.ui.composerLineEdit.setEnabled(False)
         self.ui.arrangerLabel.setEnabled(False)
@@ -71,10 +59,6 @@ class PieceWidget(QWidget):
         self.ui.movementLineEdit.setEnabled(False)
 
     def piano(self):
-        self.ui.styleLabel.setEnabled(False)
-        self.ui.styleLineEdit.setEnabled(False)
-        self.ui.instrumentLabel.setEnabled(False)
-        self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.composerLabel.setEnabled(True)
         self.ui.composerLineEdit.setEnabled(True)
         self.ui.arrangerLabel.setEnabled(False)
@@ -91,10 +75,6 @@ class PieceWidget(QWidget):
         self.ui.movementLineEdit.setEnabled(True)
 
     def choral(self):
-        self.ui.styleLabel.setEnabled(True)
-        self.ui.styleLineEdit.setEnabled(True)
-        self.ui.instrumentLabel.setEnabled(False)
-        self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.composerLabel.setEnabled(True)
         self.ui.composerLineEdit.setEnabled(True)
         self.ui.arrangerLabel.setEnabled(True)
@@ -111,10 +91,6 @@ class PieceWidget(QWidget):
         self.ui.movementLineEdit.setEnabled(False)
 
     def vocal(self):
-        self.ui.styleLabel.setEnabled(True)
-        self.ui.styleLineEdit.setEnabled(True)
-        self.ui.instrumentLabel.setEnabled(False)
-        self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.composerLabel.setEnabled(True)
         self.ui.composerLineEdit.setEnabled(True)
         self.ui.arrangerLabel.setEnabled(True)
@@ -131,10 +107,6 @@ class PieceWidget(QWidget):
         self.ui.movementLineEdit.setEnabled(False)
 
     def instrumental(self):
-        self.ui.styleLabel.setEnabled(False)
-        self.ui.styleLineEdit.setEnabled(False)
-        self.ui.instrumentLabel.setEnabled(True)
-        self.ui.instrumentLineEdit.setEnabled(True)
         self.ui.composerLabel.setEnabled(True)
         self.ui.composerLineEdit.setEnabled(True)
         self.ui.arrangerLabel.setEnabled(True)
@@ -151,10 +123,6 @@ class PieceWidget(QWidget):
         self.ui.movementLineEdit.setEnabled(False)
 
     def band(self):
-        self.ui.styleLabel.setEnabled(True)
-        self.ui.styleLineEdit.setEnabled(True)
-        self.ui.instrumentLabel.setEnabled(False)
-        self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.composerLabel.setEnabled(True)
         self.ui.composerLineEdit.setEnabled(True)
         self.ui.arrangerLabel.setEnabled(True)
@@ -171,10 +139,6 @@ class PieceWidget(QWidget):
         self.ui.movementLineEdit.setEnabled(False)
 
     def speech(self):
-        self.ui.styleLabel.setEnabled(False)
-        self.ui.styleLineEdit.setEnabled(False)
-        self.ui.instrumentLabel.setEnabled(False)
-        self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.composerLabel.setEnabled(False)
         self.ui.composerLineEdit.setEnabled(False)
         self.ui.arrangerLabel.setEnabled(False)
