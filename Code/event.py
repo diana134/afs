@@ -33,7 +33,9 @@ class Event(object):
         """calculate the total time this Event is likely to take"""
         performanceTime = datetime.timedelta()
         for entry in self.entries:
-            performanceTime += convertStringToTimedelta(entry.performanceTime)
+            for piece in entry.pieces:
+                performanceTime += convertStringToTimedelta(piece['performanceTime'])
+        # TODO is the following correct for multiple pieces? Fine for now probably.
         judgingTime = settingsInteractionInstance.loadJudgingTimePerEntry() * len(self.entries)
         finalAdjudicationTime = settingsInteractionInstance.loadFinalAdjudicationTime() * len(self.entries)
         self.totalTime = performanceTime + judgingTime + finalAdjudicationTime

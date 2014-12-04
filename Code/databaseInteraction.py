@@ -180,6 +180,7 @@ class DatabaseInteraction(object):
     #####
 
     def deleteEntryFromId(self, entryId):
+        # TODO handle pieces
         try:
             query = QSqlQuery(self.conn)
             # Delete the entry
@@ -341,7 +342,7 @@ class DatabaseInteraction(object):
             while query.next() == True:
                 fields = {}
                 fields['title'] = str(query.value(0).toString())
-                fields['performance_time'] = str(query.value(1).toString())
+                fields['performanceTime'] = str(query.value(1).toString())
                 fields['composer'] = str(query.value(2).toString())
                 fields['opus'] = str(query.value(3).toString())
                 fields['no'] = str(query.value(4).toString())
