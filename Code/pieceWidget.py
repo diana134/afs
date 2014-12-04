@@ -6,6 +6,7 @@ from PyQt4.QtGui import QWidget
 from PyQt4.QtCore import QTime
 
 from ui_pieceWidget import Ui_PieceWidget
+from utilities import sanitize
 
 class PieceWidget(QWidget):
     def __init__(self, parent=None):
@@ -35,6 +36,30 @@ class PieceWidget(QWidget):
         self.ui.movementLineEdit.clear()
         self.ui.noLineEdit.clear()
         self.ui.performanceTimeEdit.setTime(QTime(0, 0, 0))
+
+    def getFields(self):
+        """Returns a dictionary of all the fields, stripped and sanitized"""
+        fields = {}
+        fields['title'] = str(self.ui.titleLineEdit.text()).strip()
+        fields['title'] = sanitize(fields['title'])
+        fields['composer'] = str(self.ui.composerLineEdit.text()).strip()
+        fields['composer'] = sanitize(fields['composer'])
+        fields['arranger'] = str(self.ui.arrangerLineEdit.text()).strip()
+        fields['arranger'] = sanitize(fields['arranger'])
+        fields['artist'] = str(self.ui.artistLineEdit.text()).strip()
+        fields['artist'] = sanitize(fields['artist'])
+        fields['author'] = str(self.ui.authorLineEdit.text()).strip()
+        fields['author'] = sanitize(fields['author'])
+        fields['opus'] = str(self.ui.opusLineEdit.text()).strip()
+        fields['opus'] = sanitize(fields['opus'])
+        fields['no'] = str(self.ui.noLineEdit.text()).strip()
+        fields['no'] = sanitize(fields['no'])
+        fields['movement'] = str(self.ui.movementLineEdit.text()).strip()
+        fields['movement'] = sanitize(fields['movement'])
+        # Don't need to sanitize a timeEdit
+        fields['performanceTime'] = str(self.ui.performanceTimeEdit.time().toString("m:ss"))
+
+        return fields
 
     def changeDiscipline(self, text):
         """changes which fields are enabled based on the selected discipline"""

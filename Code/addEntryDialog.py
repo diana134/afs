@@ -3,7 +3,6 @@
 import sys
 sys.path.insert(0, '../Forms/')
 from PyQt4.QtGui import QDialog, QMessageBox
-from PyQt4.QtCore import QTime
 
 from ui_addEntryDialog import Ui_AddEntryDialog
 from addSoloParticipantDialog import AddSoloParticipantDialog
@@ -83,24 +82,6 @@ class AddEntryDialog(QDialog):
         style = sanitize(style)
         instrument = str(self.ui.instrumentLineEdit.text()).strip()
         instrument = sanitize(instrument)
-        title = str(self.ui.titleLineEdit.text()).strip()
-        title = sanitize(title)
-        composer = str(self.ui.composerLineEdit.text()).strip()
-        composer = sanitize(composer)
-        arranger = str(self.ui.arrangerLineEdit.text()).strip()
-        arranger = sanitize(arranger)
-        artist = str(self.ui.artistLineEdit.text()).strip()
-        artist = sanitize(artist)
-        author = str(self.ui.authorLineEdit.text()).strip()
-        author = sanitize(author)
-        opus = str(self.ui.opusLineEdit.text()).strip()
-        opus = sanitize(opus)
-        no = str(self.ui.noLineEdit.text()).strip()
-        no = sanitize(no)
-        movement = str(self.ui.movementLineEdit.text()).strip()
-        movement = sanitize(movement)
-        # Don't need to sanitize a timeEdit
-        performanceTime = str(self.ui.performanceTimeEdit.time().toString("m:ss"))
 
         # Check for empty fields
         if participantID is None or participantID == "":
@@ -114,22 +95,40 @@ class AddEntryDialog(QDialog):
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Class Number', QMessageBox.Ok)
         elif className is None or className == "":
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Class Name', QMessageBox.Ok)
-        elif title is None or title == "":
-            QMessageBox.warning(self, 'Missing Field', 'Entry must have a Title', QMessageBox.Ok)
-        # Check for valid fields
-        elif performanceTime == "0:00" and QMessageBox.question(self, 'Validate Performance Time', 'Are you sure you want to leave performance time blank? This could cause the scheduling algorithm to make poor choices.', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
-            # Stop here
-            pass
         else:
-            self.entry = Entry(participantID, teacherID, discipline, level, classNumber, className, title, performanceTime, style, composer, opus, no, movement, arranger, artist, instrument, author)
-            result = dbInteractionInstance.addEntry(self.entry)
-            if result == "":
-                QMessageBox.information(self, 'Add Entry', 'Successfully added new entry', QMessageBox.Ok)
-                self.clearFields()
-                if self.closeAfterAdd:
-                    self.accept()
+            # Check there is at least one piece
+            tabCount = self.ui.tabWidget.count()
+            if tabCount <= 0:
+                QMessageBox.warning(self, 'Missing Piece', 'Entry must have at least 1 piece', QMessageBox.Ok)
             else:
-                QMessageBox.critical(self, 'Add Entry', 'Failed to add new entry\n{0}'.format(result), QMessageBox.Ok)
+                # Check all the pieceWidgets
+                pieces = []
+                for i in xrange(0, tabCount):
+                    pieceWidget = self.ui.tabWidget.widget(i)
+                    fields = pieceWidget.getFields()
+
+                    if fields['title'] is None or fields['title'] == "":
+                        QMessageBox.warning(self, 'Missing Field', 'Piece {0} must have a Title'.format(i+1), QMessageBox.Ok)
+                        break
+                    # Check for valid fields
+                    elif fields['performanceTime'] == "0:00" and QMessageBox.question(self, 'Validate Performance Time', 'Are you sure you want to leave performance time blank? This could cause the scheduling algorithm to make poor choices.', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+                        # Stop here
+                        break
+                    else:
+                        # Piece is good, add it to the list
+                        pieces.append(fields)
+        
+                else:
+                    # Everything is good, add it to the db
+                    self.entry = Entry(participantID, teacherID, discipline, level, classNumber, className, style, instrument, pieces)
+                    result = dbInteractionInstance.addEntry(self.entry)
+                    if result == "":
+                        QMessageBox.information(self, 'Add Entry', 'Successfully added new entry', QMessageBox.Ok)
+                        self.clearFields()
+                        if self.closeAfterAdd:
+                            self.accept()
+                    else:
+                        QMessageBox.critical(self, 'Add Entry', 'Failed to add new entry\n{0}'.format(result), QMessageBox.Ok)
 
     def cancelBtn_clicked(self):
         self.reject()

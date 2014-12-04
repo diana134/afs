@@ -4,24 +4,16 @@ from utilities import requiredFieldIsGood, optionalFieldIsGood
 
 class Entry(object):
     """holds Entry data as strings"""
-    def __init__(self, participantID="", teacherID="", discipline="", level="", classNumber="", className="", title="", performanceTime="", style="", composer="", opus="", no="", movement="", arranger="", artist="", instrument="", author=""):
+    def __init__(self, participantID="", teacherID="", discipline="", level="", classNumber="", className="", style="", instrument="", pieces=None):
         self.participantID = participantID
         self.teacherID = teacherID
         self.discipline = discipline
         self.level = level
         self.classNumber = classNumber
         self.className = className
-        self.title = title
-        self.performanceTime = performanceTime
-        self.style = style
-        self.composer = composer
-        self.opus = opus
-        self.no = no
-        self.movement = movement
-        self.arranger = arranger
-        self.artist = artist
         self.instrument = instrument
-        self.author = author
+        self.style = style
+        self.pieces = pieces if pieces is not None else []
 
     def isEqualTo(self, obj):
         """check if obj is equal to this Entry (test purposes only?)"""
@@ -32,32 +24,17 @@ class Entry(object):
                     optionalFieldIsGood(self.level, obj.level) and
                     requiredFieldIsGood(self.classNumber, obj.classNumber) and
                     requiredFieldIsGood(self.className, obj.className) and
-                    requiredFieldIsGood(self.title, obj.title) and
-                    optionalFieldIsGood(self.performanceTime, obj.performanceTime) and
                     optionalFieldIsGood(self.style, obj.style) and
-                    optionalFieldIsGood(self.composer, obj.composer) and
-                    optionalFieldIsGood(self.opus, obj.opus) and
-                    optionalFieldIsGood(self.no, obj.no) and
-                    optionalFieldIsGood(self.movement, obj.movement) and
-                    optionalFieldIsGood(self.arranger, obj.arranger) and
-                    optionalFieldIsGood(self.artist, obj.artist) and
-                    optionalFieldIsGood(self.instrument, obj.instrument) and
-                    optionalFieldIsGood(self.author, obj.author)):
+                    optionalFieldIsGood(self.instrument, obj.instrument)):
                 return True
             else:
                 return False
         else:
             return False
 
-    # def addToDB(self):
-    #     """add this Entry to the database using connection conn"""
-
-    #     # Very important to send these in the correct order or shit breaks
-    #     result = dbInteractionInstance.addEntry((self.participantID, self.teacherID, self.discipline, self.level, self.classNumber, self.className, self.title, self.performanceTime, self.style, self.composer, self.opus, self.no, self.movement, self.arranger, self.artist, self.instrument, self.author))
-    #     return result
-
     def __str__(self):
-        return self.participantID + self.teacherID + self.discipline + self.level + self.classNumber + self.className + self.title + self.performanceTime + self.style + self.composer + self.opus + self.no + self.movement + self.arranger + self.artist + self.instrument + self.author
+        print "Entry has pieces {0}".format(self.pieces)        
+        return self.participantID + self.teacherID + self.discipline + self.level + self.classNumber + self.className + self.style + self.instrument
         
     @staticmethod
     def getCsvHeader():

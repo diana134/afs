@@ -124,33 +124,75 @@ class DatabaseInteraction(object):
 
     def addEntry(self, entry):
         """Adds a new Entry record to the db"""
+        entryId = None
         try:
             query = QSqlQuery(self.conn)
             query.prepare("INSERT INTO entries \
-                (participant_id, teacher_id, discipline, level, class_number, class_name, title, performance_time, style, composer, opus, no, movement, arranger, artist, instrument, author) \
-                VALUES (:participantID, :teacherID, :discipline, :level, :classNumber, :className, :title, :performanceTime, :style, :composer, :opus, :no, :movement, :arranger, :artist, :instrument, :author)")
+                (participant_id, teacher_id, discipline, level, class_number, class_name, instrument, style) \
+                VALUES (:participantID, :teacherID, :discipline, :level, :classNumber, :className, :instrument, :style)")
             query.bindValue(":participantID", entry.participantID)
             query.bindValue(":teacherID", entry.teacherID)
             query.bindValue(":discipline", entry.discipline)
             query.bindValue(":level", entry.level)
             query.bindValue(":classNumber", entry.classNumber)
             query.bindValue(":className", entry.className)
-            query.bindValue(":title", entry.title)
-            query.bindValue(":performanceTime", entry.performanceTime)
-            query.bindValue(":style", entry.style)
-            query.bindValue(":composer", entry.composer)
-            query.bindValue(":opus", entry.opus)
-            query.bindValue(":no", entry.no)
-            query.bindValue(":movement", entry.movement)
-            query.bindValue(":arranger", entry.arranger)
-            query.bindValue(":artist", entry.artist)
             query.bindValue(":instrument", entry.instrument)
-            query.bindValue(":author", entry.author)
+            query.bindValue(":style", entry.style)
             query.exec_()
+            print "last entry query was {0}".format(query.lastQuery())
+            # get id
+            entryId = self.getLastEntryId()
+            # add pieces to db
+            for piece in entry.pieces:
+                self.addPiece(piece, entryId)
             return ""
         except Exception, e:
+            # If something went wrong adding the pieces, we want to delete the whole entry
+            if entryId != None:
+                self.deleteEntryFromId(entryId)
             # TODO: log this instead of printing to console
             print "addEntry FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            return e
+
+    def addPiece(self, piece, entryId):
+        """Adds a new Piece record to the db"""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("INSERT INTO pieces \
+                (title, performance_time, composer, opus, no, movement, arranger, artist, author, entry_id) \
+                VALUES (:title, :performanceTime, :composer, :opus, :no, :movement, :arranger, :artist, :author, :entryId)")
+            query.bindValue(":title", piece['title'])
+            query.bindValue(":performanceTime", piece['performanceTime'])
+            query.bindValue(":composer", piece['composer'])
+            query.bindValue(":opus", piece['opus'])
+            query.bindValue(":no", piece['no'])
+            query.bindValue(":movement", piece['movement'])
+            query.bindValue(":arranger", piece['arranger'])
+            query.bindValue(":artist", piece['artist'])
+            query.bindValue(":author", piece['author'])
+            query.bindValue(":entryId", entryId)
+            query.exec_()
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "addPiece FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            return e
+
+    #####
+
+    def deleteEntryFromId(self, entryId):
+        try:
+            query = QSqlQuery(self.conn)
+            # Delete the entry
+            query.prepare("DELETE FROM entries WHERE id=:id")
+            query.bindValue(":id", entryId)
+            query.exec_()
+            # Delete its pieces
+            query.prepare("DELETE FROM pieces WHERE entry_id=:id")
+            query.bindValue(":id", entryId)
+            query.exec_()
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "deleteEntryFromId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
             return e
 
     #####
@@ -251,7 +293,8 @@ class DatabaseInteraction(object):
         """Get the id of the most recently added Teacher"""
         try:
             query = QSqlQuery(self.conn)
-            query.prepare("SELECT id from teachers WHERE id=(SELECT MAX(id) FROM teachers)")
+            query.prepare("SELECT MAX(id) FROM teachers")
+            query.exec_()
             query.next()
             teacherId = str(query.value(0).toString())
             return teacherId
@@ -259,7 +302,59 @@ class DatabaseInteraction(object):
             # TODO: log this instead of printing to console
             print "getLastTeacherId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
 
+    def getLastEntryId(self):
+        """Get the id of the most recently added Entry"""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("SELECT MAX(id) FROM entries")
+            query.exec_()
+            query.next()
+            entryId = str(query.value(0).toString())
+            return entryId
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "getLastEntryId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+
+    # def getLastPieceId(self):
+    #     """Get the id of the most recently added Piece"""
+    #     try:
+    #         query = QSqlQuery(self.conn)
+    #         query.prepare("SELECT seq FROM sqlite_sequence WHERE name='pieces'")
+    #         query.next()
+    #         pieceId = str(query.value(0).toString())
+    #         return pieceId
+    #     except Exception, e:
+    #         # TODO: log this instead of printing to console
+    #         print "getLastPieceId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+
     #####
+
+    def getPiecesFromEntryId(self, entryId):
+        """Retrieves all the Pieces associated with the entryId"""
+        pieceList = []
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("SELECT title, performance_time, composer, opus, no, movement, arranger, artist, author \
+                FROM pieces WHERE entry_id=:id")
+            query.bindValue(":id", entryId)
+            query.exec_()
+            while query.next() == True:
+                fields = {}
+                fields['title'] = str(query.value(0).toString())
+                fields['performance_time'] = str(query.value(1).toString())
+                fields['composer'] = str(query.value(2).toString())
+                fields['opus'] = str(query.value(3).toString())
+                fields['no'] = str(query.value(4).toString())
+                fields['movement'] = str(query.value(5).toString())
+                fields['arranger'] = str(query.value(6).toString())
+                fields['artist'] = str(query.value(7).toString())
+                fields['author'] = str(query.value(8).toString())
+                pieceList.append(fields)
+            return pieceList
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "getPiecesFromEntryId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            return e
 
     def getAllEntries(self):
         """Retrieve all the Entries and return them in a list"""
@@ -267,8 +362,7 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.prepare("SELECT participant_id, teacher_id, discipline, level, class_number, \
-                class_name, title, performance_time, style, composer, opus, no, movement, arranger, \
-                artist, instrument, author FROM entries")
+                class_name, style, instrument, id FROM entries")
             query.exec_()
             while query.next() == True:
                 participantID = str(query.value(0).toString())
@@ -277,23 +371,18 @@ class DatabaseInteraction(object):
                 level = str(query.value(3).toString())
                 classNumber = str(query.value(4).toString())
                 className = str(query.value(5).toString())
-                title = str(query.value(6).toString())
-                performanceTime = str(query.value(7).toString())
-                style = str(query.value(8).toString())
-                composer = str(query.value(9).toString())
-                opus = str(query.value(10).toString())
-                no = str(query.value(11).toString())
-                movement = str(query.value(12).toString())
-                arranger = str(query.value(13).toString())
-                artist = str(query.value(14).toString())
-                instrument = str(query.value(15).toString())
-                author = str(query.value(16).toString())
-                ee = Entry(participantID, teacherID, discipline, level, classNumber, className, title, performanceTime, style, composer, opus, no, movement, arranger, artist, instrument, author)
+                style = str(query.value(6).toString())
+                instrument = str(query.value(7).toString())
+                entryId = str(query.value(8).toString())
+                # get associated pieces
+                pieces = self.getPiecesFromEntryId(entryId)
+                ee = Entry(participantID, teacherID, discipline, level, classNumber, className, style, instrument, pieces)
                 entryList.append(ee)
             return entryList
         except Exception, e:
             # TODO: log this instead of printing to console
             print "getAllEntries FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            return e
 
     def getAllEntriesInDiscipline(self, discipline):
         """Returns all the Entries for the given discipline"""
@@ -301,8 +390,7 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.prepare("SELECT participant_id, teacher_id, discipline, level, class_number, \
-                class_name, title, performance_time, style, composer, opus, no, movement, arranger, \
-                artist, instrument, author FROM entries WHERE discipline=:discipline")
+                class_name, style, instrument, id FROM entries WHERE discipline=:discipline")
             query.bindValue(":discipline", discipline)
             query.exec_()
             while query.next() == True:
@@ -312,23 +400,18 @@ class DatabaseInteraction(object):
                 level = str(query.value(3).toString())
                 classNumber = str(query.value(4).toString())
                 className = str(query.value(5).toString())
-                title = str(query.value(6).toString())
-                performanceTime = str(query.value(7).toString())
-                style = str(query.value(8).toString())
-                composer = str(query.value(9).toString())
-                opus = str(query.value(10).toString())
-                no = str(query.value(11).toString())
-                movement = str(query.value(12).toString())
-                arranger = str(query.value(13).toString())
-                artist = str(query.value(14).toString())
-                instrument = str(query.value(15).toString())
-                author = str(query.value(16).toString())
-                ee = Entry(participantID, teacherID, discipline, level, classNumber, className, title, performanceTime, style, composer, opus, no, movement, arranger, artist, instrument, author)
+                style = str(query.value(6).toString())
+                instrument = str(query.value(7).toString())
+                entryId = str(query.value(8).toString())
+                # get associated pieces
+                pieces = self.getPiecesFromEntryId(entryId)
+                ee = Entry(participantID, teacherID, discipline, level, classNumber, className, style, instrument, pieces)
                 entryList.append(ee)
             return entryList
         except Exception, e:
             # TODO: log this instead of printing to console
             print "getAllEntriesInDiscipline FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            return e
 
 # Global variable
 dbInteractionInstance = DatabaseInteraction()

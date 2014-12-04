@@ -102,16 +102,17 @@ class ScheduleDialog(QDialog):
             QMessageBox.information(self, 'Export Schedule', 'Schedule exported to ' + filename, QMessageBox.Ok)
 
     def scheduleUpBtn_clicked(self):
-        # currRow = self.ui.scheduleTableWidget.currentRow()
-        # currCol = self.ui.scheduleTableWidget.currentColumn()
-        # # if selected is not top
-        # if currRow > 0:
-        #     # swap with thing above
-        #     itemAbove = self.ui.scheduleTableWidget.item(currRow+1, currCol)
-        #     currItem = self.ui.scheduleTableWidget.currentItem()
-        #     self.ui.scheduleTableWidget.setItem(currRow, currCol, itemAbove)
-        #     self.ui.scheduleTableWidget.setItem(currRow+1, currCol, currItem)
-        #     self.ui.scheduleTableWidget.setCurrentItem(currItem)
+        currRow = self.ui.scheduleTableWidget.currentRow()
+        currCol = self.ui.scheduleTableWidget.currentColumn()
+        # if selected is not top
+        if currRow > 0:
+            # swap with thing above
+            # TODO make this work
+            itemAbove = self.ui.scheduleTableWidget.item(currRow-1, currCol)
+            currItem = self.ui.scheduleTableWidget.currentItem()
+            self.ui.scheduleTableWidget.setItem(currRow, currCol, itemAbove)
+            self.ui.scheduleTableWidget.setItem(currRow-1, currCol, currItem)
+            self.ui.scheduleTableWidget.setCurrentItem(currItem)
         pass
 
     def scheduleDownBtn_clicked(self):
