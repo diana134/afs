@@ -39,7 +39,7 @@ class Entry(object):
     @staticmethod
     def getCsvHeader():
         """Returns a comma-separated string of column headers for use in a CSV file"""
-        return '"Participant","Teacher","Discipline","Level","Title","Performance Time","Style","Composer","Opus","No.","Movement","Arranger","Artist","Instrument","Author"'
+        return '"Participant","Teacher","Discipline","Level","Title","Style","Instrument","Time","Composer","Opus","No.","Movement","Arranger","Artist","Author"'
         
     def export(self, csvFile, depth=2):
         """Write this entry to a csv file, padded with <depth> empty columns as indentation. \
@@ -54,22 +54,31 @@ class Entry(object):
         for _ in range(depth):
             leadingCommas = leadingCommas+','
             
-        s = '{indent}"{participantName}","{teacherName}","{discipline}","{level}","{title}","{time}","{style}","{composer}","{opus}","{no}","{movement}","{arranger}","{artist}","{instrument}","{author}"\n'.format(
+        s = '{indent}"{participantName}","{teacherName}","{discipline}","{level}","{title}","{style}","{instrument}","{pieces}",'.format(
             indent=leadingCommas,
             participantName=participant,
             teacherName=teacher,
             discipline=self.discipline,
             level=self.level,
             title=self.title,
-            time=self.performanceTime,
             style=self.style,
-            composer=self.composer,
-            opus=self.opus,
-            no=self.no,
-            movement=self.movement,
-            arranger=self.arranger,
-            artist=self.artist,
-            instrument=self.instrument,
-            author=self.author
+            instrument=self.instrument)
         )
+        
+        # instead of duplicating all the entry data just have an indented list of all pieces
+        for i in range(len(self.pieces)):
+            if i!=0:
+                s.append('{indent},,,,,,,,'.format(indent=leadingComas))
+                
+            s.append('"{time}","{composer}","{opus}","{no}","{movement}","{arranger}","{artist}","{author}"\n'.format(
+                time=self.pieces[i]['time'],
+                composer=self.pieces[i]['composer'],
+                opus=self.pieces[i]['opus'],
+                no=self.pieces[i]['no'],
+                movement=self.pieces[i]['movement'],
+                arranger=self.pieces[i]['arranger'],
+                artist=self.pieces[i]['artist'],
+                author=self.pieces[i]['author']
+            ))
+        
         csvFile.write(s)
