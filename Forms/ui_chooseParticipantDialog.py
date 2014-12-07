@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_chooseParticipantDialog.ui'
 #
-# Created: Tue Nov  4 20:19:25 2014
+# Created: Sun Dec  7 17:46:58 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -48,6 +48,9 @@ class Ui_ChooseParticipantDialog(object):
         self.verticalLayout_3 = QtGui.QVBoxLayout(self.soloParticipantsTab)
         self.verticalLayout_3.setObjectName(_fromUtf8("verticalLayout_3"))
         self.soloParticipantTableView = QtGui.QTableView(self.soloParticipantsTab)
+        self.soloParticipantTableView.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
+        self.soloParticipantTableView.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
+        self.soloParticipantTableView.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
         self.soloParticipantTableView.setObjectName(_fromUtf8("soloParticipantTableView"))
         self.verticalLayout_3.addWidget(self.soloParticipantTableView)
         self.participantTypeTabWidget.addTab(self.soloParticipantsTab, _fromUtf8(""))

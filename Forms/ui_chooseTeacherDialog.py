@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_chooseTeacherDialog.ui'
 #
-# Created: Tue Sep 23 01:33:20 2014
+# Created: Sun Dec  7 17:46:58 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -41,6 +41,9 @@ class Ui_ChooseTeacherDialog(object):
         self.horizontalLayout.addWidget(self.pushButton)
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.teacherTableView = QtGui.QTableView(ChooseTeacherDialog)
+        self.teacherTableView.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
+        self.teacherTableView.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
+        self.teacherTableView.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
         self.teacherTableView.setObjectName(_fromUtf8("teacherTableView"))
         self.verticalLayout.addWidget(self.teacherTableView)
         self.btnBox = QtGui.QDialogButtonBox(ChooseTeacherDialog)
