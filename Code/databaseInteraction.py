@@ -139,7 +139,6 @@ class DatabaseInteraction(object):
             query.bindValue(":instrument", entry.instrument)
             query.bindValue(":style", entry.style)
             query.exec_()
-            print "last entry query was {0}".format(query.lastQuery())
             # get id
             entryId = self.getLastEntryId()
             # add pieces to db
