@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addEntryDialog.ui'
 #
-# Created: Sat Dec  6 19:41:38 2014
+# Created: Sun Dec  7 17:21:56 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -157,12 +157,12 @@ class Ui_AddEntryDialog(object):
         AddEntryDialog.setTabOrder(self.classNameLineEdit, self.levelLineEdit)
         AddEntryDialog.setTabOrder(self.levelLineEdit, self.instrumentLineEdit)
         AddEntryDialog.setTabOrder(self.instrumentLineEdit, self.styleLineEdit)
-        AddEntryDialog.setTabOrder(self.styleLineEdit, self.addPieceBtn)
+        AddEntryDialog.setTabOrder(self.styleLineEdit, self.tabWidget)
+        AddEntryDialog.setTabOrder(self.tabWidget, self.addPieceBtn)
         AddEntryDialog.setTabOrder(self.addPieceBtn, self.cancelBtn)
         AddEntryDialog.setTabOrder(self.cancelBtn, self.addEntryBtn)
-        AddEntryDialog.setTabOrder(self.addEntryBtn, self.participantLineEdit)
-        AddEntryDialog.setTabOrder(self.participantLineEdit, self.teacherLineEdit)
-        AddEntryDialog.setTabOrder(self.teacherLineEdit, self.tabWidget)
+        AddEntryDialog.setTabOrder(self.addEntryBtn, self.teacherLineEdit)
+        AddEntryDialog.setTabOrder(self.teacherLineEdit, self.participantLineEdit)
 
     def retranslateUi(self, AddEntryDialog):
         AddEntryDialog.setWindowTitle(_translate("AddEntryDialog", "Add Entry", None))

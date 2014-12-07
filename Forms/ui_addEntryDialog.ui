@@ -291,12 +291,12 @@
   <tabstop>levelLineEdit</tabstop>
   <tabstop>instrumentLineEdit</tabstop>
   <tabstop>styleLineEdit</tabstop>
+  <tabstop>tabWidget</tabstop>
   <tabstop>addPieceBtn</tabstop>
   <tabstop>cancelBtn</tabstop>
   <tabstop>addEntryBtn</tabstop>
-  <tabstop>participantLineEdit</tabstop>
   <tabstop>teacherLineEdit</tabstop>
-  <tabstop>tabWidget</tabstop>
+  <tabstop>participantLineEdit</tabstop>
  </tabstops>
  <resources/>
  <connections/>

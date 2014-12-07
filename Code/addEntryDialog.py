@@ -59,11 +59,17 @@ class AddEntryDialog(QDialog):
         return self.entry
 
     def clearFields(self):
+        self.ui.participantLineEdit.clear()
+        self.ui.teacherLineEdit.clear()
         self.ui.levelLineEdit.clear()
         self.ui.classNumberLineEdit.clear()
         self.ui.classNameLineEdit.clear()
         self.ui.styleLineEdit.clear()
         self.ui.instrumentLineEdit.clear()
+        # Clear all the piecewidgets
+        for i in xrange(0, self.ui.tabWidget.count()):
+            pieceWidget = self.ui.tabWidget.widget(i)
+            pieceWidget.clearFields()
 
     ### Slots ###
 
@@ -212,7 +218,10 @@ class AddEntryDialog(QDialog):
 
     def addPieceBtn_clicked(self):
         tabCount = self.ui.tabWidget.count()
-        self.ui.tabWidget.addTab(PieceWidget(), "Piece {0}".format(tabCount+1))
+        pieceWidget = PieceWidget()
+        self.ui.tabWidget.addTab(pieceWidget, "Piece {0}".format(tabCount+1))
+        # Set appropriate active fields on new widget
+        pieceWidget.changeDiscipline(self.ui.disciplineComboBox.currentText())
 
     def closeTab(self, index):
         self.ui.tabWidget.removeTab(index)
