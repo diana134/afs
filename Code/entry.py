@@ -39,7 +39,7 @@ class Entry(object):
     @staticmethod
     def getCsvHeader():
         """Returns a comma-separated string of column headers for use in a CSV file"""
-        return '"Participant","Teacher","Discipline","Level","Title","Style","Instrument","Time","Composer","Opus","No.","Movement","Arranger","Artist","Author"'
+        return '"Participant","Teacher","Discipline","Level","Style","Instrument","Time","Title","Composer","Opus","No.","Movement","Arranger","Artist","Author"'
         
     def export(self, csvFile, depth=2):
         """Write this entry to a csv file, padded with <depth> empty columns as indentation. \
@@ -67,7 +67,7 @@ class Entry(object):
         # instead of duplicating all the entry data just have an indented list of all pieces
         for i in range(len(self.pieces)):
             if i != 0:
-                s +='{indent},,,,,,,,'.format(indent=leadingCommas)
+                s +='{indent},,,,,,'.format(indent=leadingCommas)
                 
             s += '"{time}","{title}","{composer}","{opus}","{no}","{movement}","{arranger}","{artist}","{author}"\n'.format(
                 time=self.pieces[i]['performanceTime'],
