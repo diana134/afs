@@ -57,7 +57,7 @@ class Session(object):
         csvFile.write(s)
         for i in range(len(self.eventList)):
             e = self.eventList[i]
-            csvFile.write('Event {n}',format(n=i+1))
+            csvFile.write('Event {n},',format(n=i+1))
             e.export(csvFile)
 
 class Schedule(object):
