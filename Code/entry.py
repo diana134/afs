@@ -39,7 +39,7 @@ class Entry(object):
     @staticmethod
     def getCsvHeader():
         """Returns a comma-separated string of column headers for use in a CSV file"""
-        return '"Participant","Teacher","Discipline","Level","Style","Instrument","Title","Time","Composer","Opus","No.","Movement","Arranger","Artist","Author"'
+        return '"Participant","Teacher","Discipline","Level","Style","Instrument","Time","Title","Composer","Opus","No.","Movement","Arranger","Artist","Author"'
         
     def export(self, csvFile, depth=2):
         """Write this entry to a csv file, padded with <depth> empty columns as indentation. \
