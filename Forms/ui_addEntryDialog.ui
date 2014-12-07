@@ -50,7 +50,7 @@
           <bool>true</bool>
          </property>
          <property name="toolTip">
-          <string>TODO</string>
+          <string/>
          </property>
          <property name="text">
           <string>Choose...</string>
@@ -214,7 +214,7 @@
      <property name="tabsClosable">
       <bool>true</bool>
      </property>
-     <widget class="QWidget" name="tabWidgetPage1" native="true">
+     <widget class="QWidget" name="tabWidgetPage1">
       <attribute name="title">
        <string>Piece 1</string>
       </attribute>
@@ -223,8 +223,6 @@
         <widget class="PieceWidget" name="widget" native="true"/>
        </item>
       </layout>
-      <zorder>tabWidget_2</zorder>
-      <zorder>widget</zorder>
      </widget>
     </widget>
    </item>
@@ -281,6 +279,25 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>chooseParticipantBtn</tabstop>
+  <tabstop>createNewSoloParticipantBtn</tabstop>
+  <tabstop>createNewGroupParticipantBtn</tabstop>
+  <tabstop>chooseTeacherBtn</tabstop>
+  <tabstop>createNewTeacherBtn</tabstop>
+  <tabstop>disciplineComboBox</tabstop>
+  <tabstop>classNumberLineEdit</tabstop>
+  <tabstop>classNameLineEdit</tabstop>
+  <tabstop>levelLineEdit</tabstop>
+  <tabstop>instrumentLineEdit</tabstop>
+  <tabstop>styleLineEdit</tabstop>
+  <tabstop>addPieceBtn</tabstop>
+  <tabstop>cancelBtn</tabstop>
+  <tabstop>addEntryBtn</tabstop>
+  <tabstop>participantLineEdit</tabstop>
+  <tabstop>teacherLineEdit</tabstop>
+  <tabstop>tabWidget</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

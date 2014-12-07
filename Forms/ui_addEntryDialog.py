@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addEntryDialog.ui'
 #
-# Created: Sun Nov 30 21:59:53 2014
+# Created: Sat Dec  6 19:41:38 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -46,6 +46,7 @@ class Ui_AddEntryDialog(object):
         self.gridLayout_2.setObjectName(_fromUtf8("gridLayout_2"))
         self.chooseParticipantBtn = QtGui.QPushButton(AddEntryDialog)
         self.chooseParticipantBtn.setEnabled(True)
+        self.chooseParticipantBtn.setToolTip(_fromUtf8(""))
         self.chooseParticipantBtn.setObjectName(_fromUtf8("chooseParticipantBtn"))
         self.gridLayout_2.addWidget(self.chooseParticipantBtn, 0, 0, 1, 1)
         self.createNewSoloParticipantBtn = QtGui.QPushButton(AddEntryDialog)
@@ -146,11 +147,26 @@ class Ui_AddEntryDialog(object):
         self.retranslateUi(AddEntryDialog)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(AddEntryDialog)
+        AddEntryDialog.setTabOrder(self.chooseParticipantBtn, self.createNewSoloParticipantBtn)
+        AddEntryDialog.setTabOrder(self.createNewSoloParticipantBtn, self.createNewGroupParticipantBtn)
+        AddEntryDialog.setTabOrder(self.createNewGroupParticipantBtn, self.chooseTeacherBtn)
+        AddEntryDialog.setTabOrder(self.chooseTeacherBtn, self.createNewTeacherBtn)
+        AddEntryDialog.setTabOrder(self.createNewTeacherBtn, self.disciplineComboBox)
+        AddEntryDialog.setTabOrder(self.disciplineComboBox, self.classNumberLineEdit)
+        AddEntryDialog.setTabOrder(self.classNumberLineEdit, self.classNameLineEdit)
+        AddEntryDialog.setTabOrder(self.classNameLineEdit, self.levelLineEdit)
+        AddEntryDialog.setTabOrder(self.levelLineEdit, self.instrumentLineEdit)
+        AddEntryDialog.setTabOrder(self.instrumentLineEdit, self.styleLineEdit)
+        AddEntryDialog.setTabOrder(self.styleLineEdit, self.addPieceBtn)
+        AddEntryDialog.setTabOrder(self.addPieceBtn, self.cancelBtn)
+        AddEntryDialog.setTabOrder(self.cancelBtn, self.addEntryBtn)
+        AddEntryDialog.setTabOrder(self.addEntryBtn, self.participantLineEdit)
+        AddEntryDialog.setTabOrder(self.participantLineEdit, self.teacherLineEdit)
+        AddEntryDialog.setTabOrder(self.teacherLineEdit, self.tabWidget)
 
     def retranslateUi(self, AddEntryDialog):
         AddEntryDialog.setWindowTitle(_translate("AddEntryDialog", "Add Entry", None))
         self.participantLabel.setText(_translate("AddEntryDialog", "Participant", None))
-        self.chooseParticipantBtn.setToolTip(_translate("AddEntryDialog", "TODO", None))
         self.chooseParticipantBtn.setText(_translate("AddEntryDialog", "Choose...", None))
         self.createNewSoloParticipantBtn.setText(_translate("AddEntryDialog", "Create New &Solo...", None))
         self.createNewGroupParticipantBtn.setText(_translate("AddEntryDialog", "Create New &Group...", None))
