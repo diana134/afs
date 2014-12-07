@@ -67,7 +67,7 @@ class Entry(object):
         # instead of duplicating all the entry data just have an indented list of all pieces
         for i in range(len(self.pieces)):
             if i != 0:
-                s +='{indent},,,,,,,,'.format(indent=leadingCommas)
+                s +='{indent},,,,,,'.format(indent=leadingCommas)
                 
             s += '"{time}","{title}","{composer}","{opus}","{no}","{movement}","{arranger}","{artist}","{author}"\n'.format(
                 time=self.pieces[i]['performanceTime'],
