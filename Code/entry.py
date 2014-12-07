@@ -54,24 +54,24 @@ class Entry(object):
         for _ in range(depth):
             leadingCommas = leadingCommas+','
             
-        s = '{indent}"{participantName}","{teacherName}","{discipline}","{level}","{title}","{style}","{instrument}","{pieces}",'.format(
+        s = '{indent}"{participantName}","{teacherName}","{discipline}","{level}","{style}","{instrument}",'.format(
             indent=leadingCommas,
             participantName=participant,
             teacherName=teacher,
             discipline=self.discipline,
             level=self.level,
-            title=self.title,
             style=self.style,
-            instrument=self.instrument)
+            instrument=self.instrument
         )
         
         # instead of duplicating all the entry data just have an indented list of all pieces
         for i in range(len(self.pieces)):
-            if i!=0:
-                s.append('{indent},,,,,,,,'.format(indent=leadingComas))
+            if i != 0:
+                s +='{indent},,,,,,,,'.format(indent=leadingCommas)
                 
-            s.append('"{time}","{composer}","{opus}","{no}","{movement}","{arranger}","{artist}","{author}"\n'.format(
-                time=self.pieces[i]['time'],
+            s += '"{time}","{title}","{composer}","{opus}","{no}","{movement}","{arranger}","{artist}","{author}"\n'.format(
+                time=self.pieces[i]['performanceTime'],
+                title=self.pieces[i]['title'],
                 composer=self.pieces[i]['composer'],
                 opus=self.pieces[i]['opus'],
                 no=self.pieces[i]['no'],
@@ -79,6 +79,6 @@ class Entry(object):
                 arranger=self.pieces[i]['arranger'],
                 artist=self.pieces[i]['artist'],
                 author=self.pieces[i]['author']
-            ))
+            )
         
         csvFile.write(s)
