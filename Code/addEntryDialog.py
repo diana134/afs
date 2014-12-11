@@ -59,7 +59,7 @@ class AddEntryDialog(QDialog):
         return self.entry
 
     def clearFields(self):
-        self.ui.participantLineEdit.clear()
+        # self.ui.participantLineEdit.clear()
         self.ui.teacherLineEdit.clear()
         self.ui.levelLineEdit.clear()
         self.ui.classNumberLineEdit.clear()
@@ -67,9 +67,11 @@ class AddEntryDialog(QDialog):
         self.ui.styleLineEdit.clear()
         self.ui.instrumentLineEdit.clear()
         # Clear all the piecewidgets
-        for i in xrange(0, self.ui.tabWidget.count()):
-            pieceWidget = self.ui.tabWidget.widget(i)
-            pieceWidget.clearFields()
+        self.ui.tabWidget.widget(0).clearFields()
+        for i in xrange(1, self.ui.tabWidget.count()):
+            self.ui.tabWidget.removeTab(i)
+            # pieceWidget = self.ui.tabWidget.widget(i)
+            # pieceWidget.clearFields()
 
     ### Slots ###
 
