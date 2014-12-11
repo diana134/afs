@@ -1,6 +1,8 @@
 """Deals with Entries"""
 
-from utilities import requiredFieldIsGood, optionalFieldIsGood
+import datetime
+
+from utilities import requiredFieldIsGood, optionalFieldIsGood, convertStringToTimedelta
 
 class Entry(object):
     """holds Entry data as strings"""
@@ -31,6 +33,12 @@ class Entry(object):
                 return False
         else:
             return False
+
+    def totalTime(self):
+        totalTime = datetime.timedelta()
+        for piece in self.pieces:
+            totalTime += convertStringToTimedelta(piece['performanceTime'])
+        return totalTime
 
     def __str__(self):
         print "Entry has pieces {0}".format(self.pieces)        

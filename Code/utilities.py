@@ -1,6 +1,6 @@
 """Some useful functions used by several things"""
 
-import re
+import re, datetime
 
 def optionalFieldIsGood(mine, theirs):
     """check if optional field theirs matches with mine"""
@@ -63,3 +63,15 @@ def stripPostal(postal):
             newPostal += c
 
     return newPostal
+
+def convertTimeToSeconds(timeString):
+    """convert MM:SS to seconds"""
+    tokens = timeString.split(':')
+    return int(tokens[0]) * 60 + int(tokens[1])
+
+def convertStringToTimedelta(timeString):
+    """convert 'M:SS' to timedelta"""
+    tokens = timeString.split(':')
+    minutes = int(tokens[0])
+    seconds = int(tokens[1])
+    return datetime.timedelta(minutes=minutes, seconds=seconds)

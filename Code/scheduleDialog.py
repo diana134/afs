@@ -80,7 +80,18 @@ class ScheduleDialog(QDialog):
             self.ui.entriesTableWidget.setRowCount(len(event.entries))
             for row in xrange(len(event.entries)):
                 entry = event.entries[row]
-                self.ui.entriesTableWidget.setItem(row, 0, QTableWidgetItem(entry.title))
+                if len(entry.pieces) > 1:
+                    self.ui.entriesTableWidget.setItem(row, 0, QTableWidgetItem("<multiple>"))
+                    minutes, seconds = divmod(entry.totalTime().total_seconds(), 60)
+                    self.ui.entriesTableWidget.setItem(row, 2, QTableWidgetItem("{:.0f}:{:02d}".format(minutes, int(seconds))))
+                else:
+                    try:
+                        self.ui.entriesTableWidget.setItem(row, 0, QTableWidgetItem(entry.pieces[0]['title']))
+                        self.ui.entriesTableWidget.setItem(row, 2, QTableWidgetItem(entry.pieces[0]['performanceTime']))
+                    except IndexError: # TODO This is only here because some old test data has no pieces
+                        self.ui.entriesTableWidget.setItem(row, 0, QTableWidgetItem("old test data"))
+                        self.ui.entriesTableWidget.setItem(row, 2, QTableWidgetItem("old test data"))
+                
                 participant = dbInteractionInstance.getParticipantFromId(entry.participantID)
                 name = ""
                 try:
@@ -88,7 +99,6 @@ class ScheduleDialog(QDialog):
                 except AttributeError:
                     name = participant.groupName
                 self.ui.entriesTableWidget.setItem(row, 1, QTableWidgetItem(name))
-                self.ui.entriesTableWidget.setItem(row, 2, QTableWidgetItem(entry.performanceTime))
         else:
             # Clear table
             self.ui.entriesTableWidget.setRowCount(0)

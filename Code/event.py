@@ -9,18 +9,6 @@ from settingsInteraction import settingsInteractionInstance
 # JUDGINGTIMEPERENTRY = datetime.timedelta(seconds=60)
 # FINALADJUDICATIONTIMEPERENTRY = datetime.timedelta(seconds=180)
 
-def convertTimeToSeconds(timeString):
-    """convert MM:SS to seconds"""
-    tokens = timeString.split(':')
-    return int(tokens[0]) * 60 + int(tokens[1])
-
-def convertStringToTimedelta(timeString):
-    """convert 'M:SS' to timedelta"""
-    tokens = timeString.split(':')
-    minutes = int(tokens[0])
-    seconds = int(tokens[1])
-    return datetime.timedelta(minutes=minutes, seconds=seconds)
-
 class Event(object):
     """Used by a Schedule"""
     def __init__(self, classNumber):
@@ -33,8 +21,7 @@ class Event(object):
         """calculate the total time this Event is likely to take"""
         performanceTime = datetime.timedelta()
         for entry in self.entries:
-            for piece in entry.pieces:
-                performanceTime += convertStringToTimedelta(piece['performanceTime'])
+            performanceTime += entry.totalTime()
         # TODO is the following correct for multiple pieces? Fine for now probably.
         judgingTime = settingsInteractionInstance.loadJudgingTimePerEntry() * len(self.entries)
         finalAdjudicationTime = settingsInteractionInstance.loadFinalAdjudicationTime() * len(self.entries)
