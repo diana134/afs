@@ -82,7 +82,7 @@ class AddGroupParticipantDialog(QDialog):
             QMessageBox.warning(self, 'Incorrect Field', 'Group Size must be a number', QMessageBox.Ok)
             return
 
-        if schoolGrade != "" and not schoolGrade.isalphanumeric():
+        if schoolGrade != "" and not schoolGrade.isalnum():
             QMessageBox.warning(self, 'Incorrect Field', 'School Grade must be only letters and numbers', QMessageBox.Ok)
             return
 
