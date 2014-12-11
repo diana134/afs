@@ -207,7 +207,6 @@ class AddEntryDialog(QDialog):
         """changes which fields are enabled based on the selected discipline"""
         if str(text) in self.disciplines:
             self.disciplines[str(text)]()
-            self.clearFields()
             for i in xrange(0, self.ui.tabWidget.count()):
                 pieceWidget = self.ui.tabWidget.widget(i)
                 pieceWidget.changeDiscipline(text)
