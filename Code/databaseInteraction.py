@@ -34,16 +34,19 @@ class DatabaseInteraction(object):
         self.soloParticipantModel = QSqlTableModel(db=self.conn)
         self.soloParticipantModel.setTable("soloparticipants")
         self.soloParticipantModel.select()
+        # TODO set headers
 
         # GroupParticipant
         self.groupParticipantModel = QSqlTableModel(db=self.conn)
         self.groupParticipantModel.setTable("groupparticipants")
         self.groupParticipantModel.select()
+        # TODO set headers
 
         # Teacher
         self.teacherModel = QSqlTableModel(db=self.conn)
         self.teacherModel.setTable("teachers")
         self.teacherModel.select()
+        # TODO set headers
 
     def close(self):
         """Clean everything up and close the connection"""
@@ -71,6 +74,32 @@ class DatabaseInteraction(object):
             query.bindValue(":cell", sp.cell)
             query.bindValue(":email", sp.email)
             query.bindValue(":dob", sp.dob)
+            query.exec_()
+            self.soloParticipantModel.select()
+            return ""
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "addSoloParticipant FAILED\n\tquery: {0}\n\terror: {1}".format(query, e)
+            return e
+
+    def updateSoloParticipant(self, participantId, participant):
+        """Updates a SoloParticipant record"""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("UPDATE soloparticipants \
+                SET first_name=:first, last_name=:last, address=:address, town=:town, postal_code=:postal,\
+                home_phone=:home, cell_phone=:cell, email=:email, date_of_birth=:dob \
+                WHERE id=:id")
+            query.bindValue(":first", participant.first)
+            query.bindValue(":last", participant.last)
+            query.bindValue(":address", participant.address)
+            query.bindValue(":town", participant.town)
+            query.bindValue(":postal", participant.postal)
+            query.bindValue(":home", participant.home)
+            query.bindValue(":cell", participant.cell)
+            query.bindValue(":email", participant.email)
+            query.bindValue(":dob", participant.dob)
+            query.bindValue(":id", participantId)
             query.exec_()
             self.soloParticipantModel.select()
             return ""

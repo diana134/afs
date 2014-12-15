@@ -12,6 +12,10 @@ from addTeacherDialog import AddTeacherDialog
 from addEntryDialog import AddEntryDialog
 from scheduleDialog import ScheduleDialog
 from scheduleOptionsDialog import ScheduleOptionsDialog
+from chooseParticipantDialog import ChooseParticipantDialog
+from editSoloParticipantDialog import EditSoloParticipantDialog
+# from editGroupParticipantDialog import EditGroupParticipantDialog
+
 from databaseInteraction import dbInteractionInstance
 from settingsInteraction import settingsInteractionInstance
 from scheduler import Scheduler
@@ -39,6 +43,7 @@ class MainWindow(QWidget):
         self.ui.addEntryBtn.clicked.connect(self.addEntryBtn_clicked)
         self.ui.makeScheduleBtn.clicked.connect(self.makeScheduleBtn_clicked)
         self.ui.loadScheduleBtn.clicked.connect(self.loadScheduleBtn_clicked)
+        self.ui.editParticipantBtn.clicked.connect(self.editParticipantBtn_clicked)
 
     ###### Slots ######
 
@@ -100,6 +105,24 @@ class MainWindow(QWidget):
                     pass
             except Exception:
                 QMessageBox.critical("Error", "Failed to load schedule.", QMessageBox.Ok)
+
+    def editParticipantBtn_clicked(self):
+        """Opens chooseParticipantDialog then dialog for editing"""
+        dialog = ChooseParticipantDialog()
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            participantId = dialog.getParticipantId()
+            # Open appropriate edit dialog with participant
+            if participantId[0] == 's':
+                dialog = EditSoloParticipantDialog(participantId=participantId)
+                dialog.exec_()
+            # elif type(p) is GroupParticipant:
+            #     dialog = editGroupParticipantDialog(p)
+            #     dialog.exec_()
+            else:
+                QMessageBox.critical("Error", "Unrecognized Participant", QMessageBox.Ok)
 
     ##########
 

@@ -75,3 +75,43 @@ def convertStringToTimedelta(timeString):
     minutes = int(tokens[0])
     seconds = int(tokens[1])
     return datetime.timedelta(minutes=minutes, seconds=seconds)
+
+def humanPostalCodeFormat(postalString):
+    """tries to add a space after 3 characters and returns the string"""
+    result = postalString
+    if len(postalString) > 3:
+        result = postalString[0:3] + " " + postalString[3:]
+    return result
+
+def humanPhoneNumberFormat(phoneString):
+    """tries to add "-" to phoneString, returns result"""
+    result = phoneString
+    extString = ""
+    fourDigit = ""
+    threeDigit = []
+    if 'x' in phoneString:
+        extString = phoneString[phoneString.index('x')+1:]
+        result = phoneString[0:phoneString.index('x')-1]
+
+    if len(result) > 4:
+        fourDigit = result[-4:]
+        result = result[0:-4]
+
+    for i in range(len(result), 0, -3):
+        threeDigit.append(result[i-3:i])
+        result = result[0:i-3]
+
+    # Now put it all back together
+    if result != "":
+        result += "-"
+        
+    for i in xrange(len(threeDigit)-1, -1, -1):
+        result += (threeDigit[i] + "-")
+
+    if fourDigit != "":
+        result += (fourDigit)
+
+    if extString != "":
+        result += (" ext. " + extString)
+
+    return result
