@@ -14,7 +14,7 @@ from scheduleDialog import ScheduleDialog
 from scheduleOptionsDialog import ScheduleOptionsDialog
 from chooseParticipantDialog import ChooseParticipantDialog
 from editSoloParticipantDialog import EditSoloParticipantDialog
-# from editGroupParticipantDialog import EditGroupParticipantDialog
+from editGroupParticipantDialog import EditGroupParticipantDialog
 
 from databaseInteraction import dbInteractionInstance
 from settingsInteraction import settingsInteractionInstance
@@ -118,9 +118,9 @@ class MainWindow(QWidget):
             if participantId[0] == 's':
                 dialog = EditSoloParticipantDialog(participantId=participantId)
                 dialog.exec_()
-            # elif type(p) is GroupParticipant:
-            #     dialog = editGroupParticipantDialog(p)
-            #     dialog.exec_()
+            elif participantId[0] == 'g':
+                dialog = EditGroupParticipantDialog(participantId=participantId)
+                dialog.exec_()
             else:
                 QMessageBox.critical("Error", "Unrecognized Participant", QMessageBox.Ok)
 

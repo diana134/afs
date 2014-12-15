@@ -105,7 +105,7 @@ class DatabaseInteraction(object):
             return ""
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "addSoloParticipant FAILED\n\tquery: {0}\n\terror: {1}".format(query, e)
+            print "updateSoloParticipant FAILED\n\tquery: {0}\n\terror: {1}".format(query, e)
             return e
 
     def addGroupParticipant(self, gp):
@@ -126,6 +126,28 @@ class DatabaseInteraction(object):
         except Exception, e:
             # TODO: log this instead of printing to console
             print "addGroupParticipant FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            return e
+
+    def updateGroupParticipant(self, participantId, participant):
+        """Updates GroupParticipant record"""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("UPDATE groupparticipants \
+                SET group_name=:groupName, group_size=:groupSize, school_grade=:schoolGrade,\
+                average_age=:averageAge, participants=:participants \
+                WHERE id=:id")
+            query.bindValue(":groupName", participant.groupName)
+            query.bindValue(":groupSize", participant.groupSize)
+            query.bindValue(":schoolGrade", participant.schoolGrade)
+            query.bindValue(":averageAge", participant.averageAge)
+            query.bindValue(":participants", participant.participants)
+            query.bindValue(":id", participantId)
+            query.exec_()
+            self.groupParticipantModel.select()
+            return ""
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "updateGroupParticipant FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
             return e
 
     def addTeacher(self, t):
@@ -264,7 +286,7 @@ class DatabaseInteraction(object):
         except Exception, e:
             # TODO: log this instead of printing to console
             print "getParticipantFromId FAILED\n\tquery: {0}\
-                \n\tvalues: {1}\n\terror: {2}".format(query.lastQuery(), numericId, e)
+                \n\terror: {1}".format(query.lastQuery(), e)
 
     def getLastSoloParticipantId(self):
         """Get the id of the most recently added SoloParticipant"""
