@@ -173,6 +173,31 @@ class DatabaseInteraction(object):
             print "addTeacher FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
             return e
 
+    def updateTeacher(self, teacherId, teacher):
+        """Updates a Teacher record"""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("UPDATE teachers \
+                SET first_name=:first, last_name=:last, address=:address, city=:city, postal_code=:postal,\
+                daytime_phone=:daytimePhone, evening_phone=:eveningPhone, email=:email \
+                WHERE id=:id")
+            query.bindValue(":first", teacher.first)
+            query.bindValue(":last", teacher.last)
+            query.bindValue(":address", teacher.address)
+            query.bindValue(":city", teacher.city)
+            query.bindValue(":postal", teacher.postal)
+            query.bindValue(":daytimePhone", teacher.daytimePhone)
+            query.bindValue(":eveningPhone", teacher.eveningPhone)
+            query.bindValue(":email", teacher.email)
+            query.bindValue(":id", teacherId)
+            query.exec_()
+            self.teacherModel.select()
+            return ""
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "updateTeacher FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            return e
+
     def addEntry(self, entry):
         """Adds a new Entry record to the db"""
         entryId = None

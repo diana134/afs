@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Sun Dec 14 16:51:38 2014
+# Created: Sun Dec 14 20:47:39 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -53,6 +53,9 @@ class Ui_MainWindow(object):
         self.editParticipantBtn = QtGui.QPushButton(self.centralwidget)
         self.editParticipantBtn.setObjectName(_fromUtf8("editParticipantBtn"))
         self.gridLayout.addWidget(self.editParticipantBtn, 3, 0, 1, 1)
+        self.editTeacherBtn = QtGui.QPushButton(self.centralwidget)
+        self.editTeacherBtn.setObjectName(_fromUtf8("editTeacherBtn"))
+        self.gridLayout.addWidget(self.editTeacherBtn, 3, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -67,4 +70,5 @@ class Ui_MainWindow(object):
         self.addTeacherBtn.setText(_translate("MainWindow", "Add &Teacher", None))
         self.addGroupParticipantBtn.setText(_translate("MainWindow", "Add &Group Participant", None))
         self.editParticipantBtn.setText(_translate("MainWindow", "E&dit Participant", None))
+        self.editTeacherBtn.setText(_translate("MainWindow", "Ed&it Teacher", None))
 

@@ -15,6 +15,8 @@ from scheduleOptionsDialog import ScheduleOptionsDialog
 from chooseParticipantDialog import ChooseParticipantDialog
 from editSoloParticipantDialog import EditSoloParticipantDialog
 from editGroupParticipantDialog import EditGroupParticipantDialog
+from chooseTeacherDialog import ChooseTeacherDialog
+from editTeacherDialog import EditTeacherDialog
 
 from databaseInteraction import dbInteractionInstance
 from settingsInteraction import settingsInteractionInstance
@@ -44,6 +46,7 @@ class MainWindow(QWidget):
         self.ui.makeScheduleBtn.clicked.connect(self.makeScheduleBtn_clicked)
         self.ui.loadScheduleBtn.clicked.connect(self.loadScheduleBtn_clicked)
         self.ui.editParticipantBtn.clicked.connect(self.editParticipantBtn_clicked)
+        self.ui.editTeacherBtn.clicked.connect(self.editTeacherBtn_clicked)
 
     ###### Slots ######
 
@@ -123,6 +126,18 @@ class MainWindow(QWidget):
                 dialog.exec_()
             else:
                 QMessageBox.critical("Error", "Unrecognized Participant", QMessageBox.Ok)
+
+    def editTeacherBtn_clicked(self):
+        """Opens chooseTeacherDialog then dialog for editing"""
+        dialog = ChooseTeacherDialog()
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            teacherId = dialog.getTeacherId()
+            # Open edit dialog with teacher
+            dialog = EditTeacherDialog(teacherId=teacherId)
+            dialog.exec_()
 
     ##########
 

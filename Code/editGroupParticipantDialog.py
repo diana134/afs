@@ -1,4 +1,4 @@
-"""The form for adding a new GroupParticipant"""
+"""The form for editing a GroupParticipant"""
 
 import sys
 sys.path.insert(0, '../Forms/')
@@ -7,7 +7,6 @@ from PyQt4.QtGui import QDialog, QMessageBox
 from ui_addGroupParticipantDialog import Ui_AddGroupParticipantDialog
 from addSoloParticipantDialog import AddSoloParticipantDialog
 from chooseParticipantDialog import ChooseParticipantDialog
-from participant import GroupParticipant
 from utilities import sanitize, validateName
 from databaseInteraction import dbInteractionInstance
 
