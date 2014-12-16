@@ -46,6 +46,13 @@
       </property>
      </widget>
     </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="editParticipantBtn">
+      <property name="text">
+       <string>E&amp;dit Participant</string>
+      </property>
+     </widget>
+    </item>
     <item row="1" column="0">
      <widget class="QPushButton" name="addTeacherBtn">
       <property name="text">
@@ -60,17 +67,17 @@
       </property>
      </widget>
     </item>
-    <item row="3" column="0">
-     <widget class="QPushButton" name="editParticipantBtn">
-      <property name="text">
-       <string>E&amp;dit Participant</string>
-      </property>
-     </widget>
-    </item>
     <item row="3" column="1">
      <widget class="QPushButton" name="editTeacherBtn">
       <property name="text">
        <string>Ed&amp;it Teacher</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="editEntryBtn">
+      <property name="text">
+       <string>Edit E&amp;ntry</string>
       </property>
      </widget>
     </item>

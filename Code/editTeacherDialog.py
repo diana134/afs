@@ -6,7 +6,6 @@ from PyQt4.QtGui import QDialog, QMessageBox
 
 from ui_addTeacherDialog import Ui_AddTeacherDialog
 from utilities import *
-from teacher import Teacher
 from databaseInteraction import dbInteractionInstance
 
 class EditTeacherDialog(QDialog):

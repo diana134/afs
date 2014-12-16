@@ -17,6 +17,8 @@ from editSoloParticipantDialog import EditSoloParticipantDialog
 from editGroupParticipantDialog import EditGroupParticipantDialog
 from chooseTeacherDialog import ChooseTeacherDialog
 from editTeacherDialog import EditTeacherDialog
+from chooseEntryDialog import ChooseEntryDialog
+from editEntryDialog import EditEntryDialog
 
 from databaseInteraction import dbInteractionInstance
 from settingsInteraction import settingsInteractionInstance
@@ -47,6 +49,7 @@ class MainWindow(QWidget):
         self.ui.loadScheduleBtn.clicked.connect(self.loadScheduleBtn_clicked)
         self.ui.editParticipantBtn.clicked.connect(self.editParticipantBtn_clicked)
         self.ui.editTeacherBtn.clicked.connect(self.editTeacherBtn_clicked)
+        self.ui.editEntryBtn.clicked.connect(self.editEntryBtn_clicked)
 
     ###### Slots ######
 
@@ -137,6 +140,18 @@ class MainWindow(QWidget):
             teacherId = dialog.getTeacherId()
             # Open edit dialog with teacher
             dialog = EditTeacherDialog(teacherId=teacherId)
+            dialog.exec_()
+
+    def editEntryBtn_clicked(self):
+        """Opens chooseEntryDialog then dialog for editing"""
+        dialog = ChooseEntryDialog()
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            entryId = dialog.entryId
+            # Open edit dialog with entry
+            dialog = EditEntryDialog(entryId=entryId)
             dialog.exec_()
 
     ##########

@@ -48,6 +48,12 @@ class DatabaseInteraction(object):
         self.teacherModel.select()
         # TODO set headers
 
+        # Entry
+        self.entryModel = QSqlTableModel(db=self.conn)
+        self.entryModel.setTable("entries")
+        self.entryModel.select()
+        # TODO set headers
+
     def close(self):
         """Clean everything up and close the connection"""
         connName = self.conn.connectionName()
@@ -215,9 +221,44 @@ class DatabaseInteraction(object):
             query.bindValue(":instrument", entry.instrument)
             query.bindValue(":style", entry.style)
             query.exec_()
+            self.entryModel.select()
             # get id
             entryId = self.getLastEntryId()
             # add pieces to db
+            for piece in entry.pieces:
+                self.addPiece(piece, entryId)
+            return ""
+        except Exception, e:
+            # If something went wrong adding the pieces, we want to delete the whole entry
+            if entryId != None:
+                self.deleteEntryFromId(entryId)
+            # TODO: log this instead of printing to console
+            print "addEntry FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            return e
+
+    def updateEntry(self, entryId, entry):
+        """Updates an Entry record"""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("UPDATE entries \
+                SET participant_id=:participantID, teacher_id=:teacherID, discipline=:discipline,\
+                level=:level, class_number=:class_number, class_name=:class_name, instrument=:instrument, \
+                style=:style \
+                WHERE id=:id")
+            query.bindValue(":participantID", entry.participantID)
+            query.bindValue(":teacherID", entry.teacherID)
+            query.bindValue(":discipline", entry.discipline)
+            query.bindValue(":level", entry.level)
+            query.bindValue(":classNumber", entry.classNumber)
+            query.bindValue(":className", entry.className)
+            query.bindValue(":instrument", entry.instrument)
+            query.bindValue(":style", entry.style)
+            query.bindValue(":id", entryId)
+            query.exec_()
+            self.entryModel.select()
+            # delete all pieces associated with this entry (handles deleting pieces during update)
+            self.deletePiecesFromEntryId(entryId)
+            # re-add pieces to db (handles updates and new pieces)
             for piece in entry.pieces:
                 self.addPiece(piece, entryId)
             return ""
@@ -252,6 +293,19 @@ class DatabaseInteraction(object):
             print "addPiece FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
             return e
 
+    def deletePiecesFromEntryId(self, entryId):
+        """Deletes all pieces that reference entryId"""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("DELETE FROM pieces \
+                WHERE entry_id=:id")
+            query.bindValue(":id", entryId)
+            query.exec_()
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "deletePiecesFromEntryId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            return e    
+
     #####
 
     def deleteEntryFromId(self, entryId):
@@ -266,6 +320,7 @@ class DatabaseInteraction(object):
             query.prepare("DELETE FROM pieces WHERE entry_id=:id")
             query.bindValue(":id", entryId)
             query.exec_()
+            self.entryModel.select()
         except Exception, e:
             # TODO: log this instead of printing to console
             print "deleteEntryFromId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
@@ -458,6 +513,33 @@ class DatabaseInteraction(object):
         except Exception, e:
             # TODO: log this instead of printing to console
             print "getAllEntries FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            return e
+
+    def getEntryFromId(self, entryId):
+        """Retrieve Entry from specified id."""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("SELECT participant_id, teacher_id, discipline, level, class_number, \
+                class_name, style, instrument FROM entries \
+                WHERE id=:id")
+            query.bindValue(":id", entryId)
+            query.exec_()
+            query.next()
+            participantID = str(query.value(0).toString())
+            teacherID = str(query.value(1).toString())
+            discipline = str(query.value(2).toString())
+            level = str(query.value(3).toString())
+            classNumber = str(query.value(4).toString())
+            className = str(query.value(5).toString())
+            style = str(query.value(6).toString())
+            instrument = str(query.value(7).toString())
+            # get associated pieces
+            pieces = self.getPiecesFromEntryId(entryId)
+            ee = Entry(participantID, teacherID, discipline, level, classNumber, className, style, instrument, pieces)
+            return ee
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "getEntryFromId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
             return e
 
     def getAllEntriesInDiscipline(self, discipline):

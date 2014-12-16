@@ -9,7 +9,7 @@ from ui_pieceWidget import Ui_PieceWidget
 from utilities import sanitize
 
 class PieceWidget(QWidget):
-    def __init__(self, parent=None):
+    def __init__(self, parent=None, piece=None):
         # Initialize object
         super(PieceWidget, self).__init__(parent)
         self.ui = Ui_PieceWidget()
@@ -24,6 +24,22 @@ class PieceWidget(QWidget):
                                 'Band' : self.band,
                                 'Speech' : self.speech
                             }
+
+        # Initialize ui if piece was given
+        if piece is not None:
+            self.ui.titleLineEdit.setText(piece['title'])
+            self.ui.composerLineEdit.setText(piece['composer'])
+            self.ui.arrangerLineEdit.setText(piece['arranger'])
+            self.ui.artistLineEdit.setText(piece['artist'])
+            self.ui.authorLineEdit.setText(piece['author'])
+            self.ui.opusLineEdit.setText(piece['opus'])
+            self.ui.noLineEdit.setText(piece['no'])
+            self.ui.movementLineEdit.setText(piece['movement'])
+            time = piece['performanceTime']
+            if len(piece['performanceTime']) < 5:
+                # pad with leading 0 
+                time = '0' + time
+            self.ui.performanceTimeEdit.setTime(QTime.fromString(time, "mm:ss"))
 
     def clearFields(self):
         """Clears and resets the fields"""
