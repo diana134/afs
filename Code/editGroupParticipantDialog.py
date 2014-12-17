@@ -26,7 +26,10 @@ class EditGroupParticipantDialog(QDialog):
         else:
             self.participantId = participantId
         self.participant = dbInteractionInstance.getParticipantFromId(participantId)
-        self.participantIds = self.participant.participants.split(',')
+        if len(self.participant.participants) > 0:
+            self.participantIds = self.participant.participants.split(',')
+        else:
+            self.participantIds = []
 
         # Initialize ui with variables
         self.ui.addParticipantBtn.setText("&Update Participant")
@@ -35,6 +38,7 @@ class EditGroupParticipantDialog(QDialog):
         self.ui.groupSizeLineEdit.setText(self.participant.groupSize)
         self.ui.schoolGradeLineEdit.setText(self.participant.schoolGrade)
         self.ui.averageAgeLineEdit.setText(self.participant.averageAge)
+
         if len(self.participantIds) >= 1:
             p = dbInteractionInstance.getParticipantFromId(self.participantIds[0])
             self.ui.p1LineEdit.setText("{0} {1}".format(p.first, p.last))
@@ -99,6 +103,19 @@ class EditGroupParticipantDialog(QDialog):
         if averageAge != "" and not averageAge.isdigit():
             QMessageBox.warning(self, 'Incorrect Field', 'Average Age must be a whole number', QMessageBox.Ok)
             return
+
+        # Check for duplicated participants only if the name has changed
+        if groupName != self.participant.groupName:
+            pList = dbInteractionInstance.getGroupParticipantsWithName(name=groupName)
+            if len(pList) > 0:
+                s = ""
+                for p in pList:
+                    s += "{0}, grade {1}\n".format(p.groupName, p.schoolGrade)
+
+                if QMessageBox.question(self, 'Possible Duplicate', 
+                    'This name exists in the database already:\n{0}\nDo you still want to update this group?'.format(s),
+                    QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+                    return
 
         self.participant.groupName = groupName
         self.participant.groupSize = groupSize

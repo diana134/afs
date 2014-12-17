@@ -112,7 +112,7 @@ class EditSoloParticipantDialog(QDialog):
                     s += "{0} {1}, born {2}\n".format(p.first, p.last, p.dob)
 
                 if QMessageBox.question(self, 'Possible Duplicate', 
-                    'This name exists in the database already:\n{0}\nDo you still want to modify this person?'.format(s),
+                    'This name exists in the database already:\n{0}\nDo you still want to update this person?'.format(s),
                     QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
                     return
 

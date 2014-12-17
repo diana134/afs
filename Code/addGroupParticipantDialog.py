@@ -90,6 +90,18 @@ class AddGroupParticipantDialog(QDialog):
             QMessageBox.warning(self, 'Incorrect Field', 'Average Age must be a whole number', QMessageBox.Ok)
             return
 
+        # Check for duplicated participants
+        pList = dbInteractionInstance.getGroupParticipantsWithName(name=groupName)
+        if len(pList) > 0:
+            s = ""
+            for p in pList:
+                s += "{0}, grade {1}\n".format(p.groupName, p.schoolGrade)
+
+            if QMessageBox.question(self, 'Possible Duplicate', 
+                'This name exists in the database already:\n{0}\nDo you still want to add this group?'.format(s),
+                QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+                return
+
         self.gp = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants)
         result = dbInteractionInstance.addGroupParticipant(self.gp)
         if result == "":

@@ -422,6 +422,26 @@ class DatabaseInteraction(object):
             print "getLastSoloParticipantId FAILED\n\tquery: {0}\
                 \n\terror: {1}".format(query.lastQuery(), e)
 
+    def getGroupParticipantsWithName(self, name):
+        """Looks for group participants with the given name"""
+        pList = []
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("SELECT group_name, group_size, school_grade, average_age, participants \
+                FROM groupparticipants WHERE group_name=:name")
+            query.bindValue(':name', name)
+            query.exec_()
+            while query.next() == True:
+                groupName = str(query.value(0).toString())
+                groupSize = str(query.value(1).toString())
+                schoolGrade = str(query.value(2).toString())
+                averageAge = str(query.value(3).toString())
+                participants = str(query.value(4).toString())
+                pList.append(GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants))
+            return pList
+        except Exception, e:
+            raise e
+
     def getTeacherFromId(self, teacherId):
         """Retrieve the appropriate Teacher from the given id"""
         try:
