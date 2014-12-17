@@ -381,6 +381,34 @@ class DatabaseInteraction(object):
             print "getLastSoloParticipantId FAILED\n\tquery: {0}\
                 \n\terror: {1}".format(query.lastQuery(), e)
 
+    def getSoloParticipantsWithName(self, first, last):
+        """Looks for solo participants with the given name"""
+        pList = []
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("SELECT first_name, last_name, address, town, postal_code, home_phone, \
+                cell_phone, email, date_of_birth \
+                FROM soloparticipants WHERE first_name=:first AND last_name=:last")
+            query.bindValue(":first", first)
+            query.bindValue(":last", last)
+            query.exec_()
+            while query.next() == True:
+                first = str(query.value(0).toString())
+                last = str(query.value(1).toString())
+                address = str(query.value(2).toString())
+                town = str(query.value(3).toString())
+                postal = str(query.value(4).toString())
+                home = str(query.value(5).toString())
+                cell = str(query.value(6).toString())
+                email = str(query.value(7).toString())
+                dob = str(query.value(8).toString())
+                pList.append(SoloParticipant(first, last, address, town, postal, home, cell, email, dob))
+            return pList
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "getLastSoloParticipantId FAILED\n\tquery: {0}\
+                \n\terror: {1}".format(query.lastQuery(), e)
+
     def getLastGroupParticipantId(self):
         """Get the id of the most recently added GroupParticipant"""
         try:

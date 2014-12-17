@@ -103,6 +103,19 @@ class EditSoloParticipantDialog(QDialog):
             if QMessageBox.question(self, 'Validate Last Name', 'Are you sure \'' + last + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
                 return
 
+        # Check for duplicated participants only if the name has changed
+        if first != self.participant.first or last != self.participant.last:
+            pList = dbInteractionInstance.getSoloParticipantsWithName(first=first, last=last)
+            if len(pList) > 0:
+                s = ""
+                for p in pList:
+                    s += "{0} {1}, born {2}\n".format(p.first, p.last, p.dob)
+
+                if QMessageBox.question(self, 'Possible Duplicate', 
+                    'This name exists in the database already:\n{0}\nDo you still want to modify this person?'.format(s),
+                    QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+                    return
+
         self.participant.first = first
         self.participant.last = last
         self.participant.address = address
