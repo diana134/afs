@@ -88,8 +88,11 @@ class AddSoloParticipantDialog(QDialog):
         #     QMessageBox.warning(self, 'Missing Field', 'Participant must have a Date of Birth', QMessageBox.Ok)
         #     return
 
+        if email is None or email == "":
+            if QMessageBox.question(self, 'Missing Email', 'Are you sure you want to leave Email blank?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+                return
         # Check for valid fields
-        if email != "" and validEmail(email) == False:
+        elif validEmail(email) == False:
             QMessageBox.warning(self, 'Invalid Email', email + ' is not a valid email format', QMessageBox.Ok)
             return
 
