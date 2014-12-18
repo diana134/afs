@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_chooseParticipantDialog.ui'
 #
-# Created: Sun Dec 14 16:58:53 2014
+# Created: Wed Dec 17 20:25:31 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -30,17 +30,6 @@ class Ui_ChooseParticipantDialog(object):
         ChooseParticipantDialog.resize(876, 400)
         self.verticalLayout = QtGui.QVBoxLayout(ChooseParticipantDialog)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
-        self.horizontalLayout = QtGui.QHBoxLayout()
-        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
-        self.searchLineEdit = QtGui.QLineEdit(ChooseParticipantDialog)
-        self.searchLineEdit.setEnabled(False)
-        self.searchLineEdit.setObjectName(_fromUtf8("searchLineEdit"))
-        self.horizontalLayout.addWidget(self.searchLineEdit)
-        self.searchBtn = QtGui.QPushButton(ChooseParticipantDialog)
-        self.searchBtn.setEnabled(False)
-        self.searchBtn.setObjectName(_fromUtf8("searchBtn"))
-        self.horizontalLayout.addWidget(self.searchBtn)
-        self.verticalLayout.addLayout(self.horizontalLayout)
         self.participantTypeTabWidget = QtGui.QTabWidget(ChooseParticipantDialog)
         self.participantTypeTabWidget.setObjectName(_fromUtf8("participantTypeTabWidget"))
         self.soloParticipantsTab = QtGui.QWidget()
@@ -77,8 +66,6 @@ class Ui_ChooseParticipantDialog(object):
 
     def retranslateUi(self, ChooseParticipantDialog):
         ChooseParticipantDialog.setWindowTitle(_translate("ChooseParticipantDialog", "Choose Participant", None))
-        self.searchLineEdit.setPlaceholderText(_translate("ChooseParticipantDialog", "Search name...", None))
-        self.searchBtn.setText(_translate("ChooseParticipantDialog", "Search", None))
         self.participantTypeTabWidget.setTabText(self.participantTypeTabWidget.indexOf(self.soloParticipantsTab), _translate("ChooseParticipantDialog", "Individuals", None))
         self.participantTypeTabWidget.setTabText(self.participantTypeTabWidget.indexOf(self.groupParticipantsTab), _translate("ChooseParticipantDialog", "Groups", None))
 

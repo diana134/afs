@@ -18,30 +18,6 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLineEdit" name="searchLineEdit">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="placeholderText">
-        <string>Search name...</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="searchBtn">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="text">
-        <string>Search</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
     <widget class="QTabWidget" name="participantTypeTabWidget">
      <property name="currentIndex">
       <number>0</number>

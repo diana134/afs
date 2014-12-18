@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_chooseTeacherDialog.ui'
 #
-# Created: Sun Dec 14 16:51:38 2014
+# Created: Wed Dec 17 20:25:31 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -29,17 +29,6 @@ class Ui_ChooseTeacherDialog(object):
         ChooseTeacherDialog.resize(875, 397)
         self.verticalLayout = QtGui.QVBoxLayout(ChooseTeacherDialog)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
-        self.horizontalLayout = QtGui.QHBoxLayout()
-        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
-        self.lineEdit = QtGui.QLineEdit(ChooseTeacherDialog)
-        self.lineEdit.setEnabled(False)
-        self.lineEdit.setObjectName(_fromUtf8("lineEdit"))
-        self.horizontalLayout.addWidget(self.lineEdit)
-        self.pushButton = QtGui.QPushButton(ChooseTeacherDialog)
-        self.pushButton.setEnabled(False)
-        self.pushButton.setObjectName(_fromUtf8("pushButton"))
-        self.horizontalLayout.addWidget(self.pushButton)
-        self.verticalLayout.addLayout(self.horizontalLayout)
         self.teacherTableView = QtGui.QTableView(ChooseTeacherDialog)
         self.teacherTableView.setObjectName(_fromUtf8("teacherTableView"))
         self.verticalLayout.addWidget(self.teacherTableView)
@@ -53,5 +42,4 @@ class Ui_ChooseTeacherDialog(object):
 
     def retranslateUi(self, ChooseTeacherDialog):
         ChooseTeacherDialog.setWindowTitle(_translate("ChooseTeacherDialog", "Dialog", None))
-        self.pushButton.setText(_translate("ChooseTeacherDialog", "PushButton", None))
 
