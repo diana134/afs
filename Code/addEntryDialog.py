@@ -225,6 +225,11 @@ class AddEntryDialog(QDialog):
         pieceWidget.changeDiscipline(self.ui.disciplineComboBox.currentText())
 
     def closeTab(self, index):
+        if QMessageBox.warning(self, 'Delete Piece', 
+            'You are about to delete this piece and all the information it contains.\nTHIS CANNOT BE UNDONE!\n\nDo you still want to continue?', 
+            QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+            return
+
         self.ui.tabWidget.removeTab(index)
         # rename tabs
         for i in xrange(0, self.ui.tabWidget.count()):
