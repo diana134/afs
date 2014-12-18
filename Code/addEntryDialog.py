@@ -221,6 +221,8 @@ class AddEntryDialog(QDialog):
         tabCount = self.ui.tabWidget.count()
         pieceWidget = PieceWidget()
         self.ui.tabWidget.addTab(pieceWidget, "Piece {0}".format(tabCount+1))
+        # Set focus to new tab
+        self.ui.tabWidget.setCurrentIndex(tabCount)
         # Set appropriate active fields on new widget
         pieceWidget.changeDiscipline(self.ui.disciplineComboBox.currentText())
 

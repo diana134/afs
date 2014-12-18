@@ -245,6 +245,8 @@ class EditEntryDialog(QDialog):
         tabCount = self.ui.tabWidget.count()
         pieceWidget = PieceWidget()
         self.ui.tabWidget.addTab(pieceWidget, "Piece {0}".format(tabCount+1))
+        # Set focus to new tab
+        self.ui.tabWidget.setCurrentIndex(tabCount)
         # Set appropriate active fields on new widget
         pieceWidget.changeDiscipline(self.ui.disciplineComboBox.currentText())
 
@@ -253,7 +255,7 @@ class EditEntryDialog(QDialog):
             'You are about to delete this piece and all the information it contains.\nTHIS CANNOT BE UNDONE!\n\nDo you still want to continue?', 
             QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
             return
-        
+
         self.ui.tabWidget.removeTab(index)
         # rename tabs
         for i in xrange(0, self.ui.tabWidget.count()):
