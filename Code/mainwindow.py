@@ -101,7 +101,7 @@ class MainWindow(QWidget):
     def loadScheduleBtn_clicked(self):
         """Loads a schedule from file"""
         schedule = Schedule()
-        filename = QFileDialog.getOpenFileName(self, "Load Schedule", "", "Schedule Files (*.sched)")
+        filename = QFileDialog.getOpenFileName(self, "Load Schedule", "../Exports/", "Schedule Files (*.sched)")
         if filename is not None and filename != "":
             try:
                 schedule.load(filename)
