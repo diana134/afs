@@ -1,6 +1,6 @@
 """Creates any necessary directories and the database"""
 
-import os, os.path
+import os
 import errno
 
 def make_sure_path_exists(path):

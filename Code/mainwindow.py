@@ -26,6 +26,7 @@ from scheduler import Scheduler
 from schedule import Schedule
 
 app = QApplication(sys.argv)
+exportsPath = os.path.join("..", "Exports")
 
 class MainWindow(QWidget):
     """The main window of the program"""
@@ -101,7 +102,7 @@ class MainWindow(QWidget):
     def loadScheduleBtn_clicked(self):
         """Loads a schedule from file"""
         schedule = Schedule()
-        filename = QFileDialog.getOpenFileName(self, "Load Schedule", "../Exports/", "Schedule Files (*.sched)")
+        filename = QFileDialog.getOpenFileName(self, "Load Schedule", exportsPath, "Schedule Files (*.sched)")
         if filename is not None and filename != "":
             try:
                 schedule.load(filename)

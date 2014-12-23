@@ -7,6 +7,8 @@ from PyQt4.QtGui import QDialog, QTableWidgetItem, QMessageBox, QFileDialog
 from ui_scheduleDialog import Ui_ScheduleDialog
 from databaseInteraction import dbInteractionInstance
 
+exportsPath = os.path.join("..", "Exports")
+
 class ScheduleDialog(QDialog):
     def __init__(self, parent=None, schedule=None):
         super(ScheduleDialog, self).__init__(parent)
@@ -52,7 +54,7 @@ class ScheduleDialog(QDialog):
 
     def saveBtn_clicked(self):
         """Saves schedule for future use"""
-        filename = QFileDialog.getSaveFileName(self, "Save Schedule", "../Exports/", "Schedule Files (*.sched)")
+        filename = QFileDialog.getSaveFileName(self, "Save Schedule", exportsPath, "Schedule Files (*.sched)")
         if filename is not None and filename != "":
             if filename[-6:] != ".sched":
                 filename += ".sched"
@@ -107,7 +109,7 @@ class ScheduleDialog(QDialog):
 
     def exportScheduleBtn_clicked(self):
         """Exports a schedule to a csv"""
-        filename = QFileDialog.getSaveFileName(self, "Export Schedule", "../Exports/", "CSV Files (*.csv)")
+        filename = QFileDialog.getSaveFileName(self, "Export Schedule", exportsPath, "CSV Files (*.csv)")
         if filename is not None and filename != "":
             if filename[-4:] != ".csv":
                 filename += ".csv"
