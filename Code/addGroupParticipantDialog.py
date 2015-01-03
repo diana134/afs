@@ -1,7 +1,8 @@
 """The form for adding a new GroupParticipant"""
 
 import sys
-sys.path.insert(0, '../Forms/')
+import os.path
+sys.path.insert(0, os.path.join("..", "Forms"))
 from PyQt4.QtGui import QDialog, QMessageBox
 
 from ui_addGroupParticipantDialog import Ui_AddGroupParticipantDialog

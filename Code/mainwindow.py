@@ -1,9 +1,9 @@
 """A scheduling program for the RFOTA"""
 
 import sys
-sys.path.insert(0, '../Forms/')
+import os.path
+sys.path.insert(0, os.path.join("..", "Forms"))
 from PyQt4.QtGui import QApplication, QMainWindow, QWidget, QMessageBox, QFileDialog
-# import datetime
 
 from ui_mainwindow import Ui_MainWindow
 from addSoloParticipantDialog import AddSoloParticipantDialog

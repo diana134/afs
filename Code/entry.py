@@ -90,3 +90,31 @@ class Entry(object):
             )
         
         csvFile.write(s)
+
+    def toWordFile(self, document, p):
+        """Creates a docx for the printer, document is from docx module"""
+        # super hack
+        from databaseInteraction import dbInteractionInstance
+        
+        participant = dbInteractionInstance.getParticipantFromId(self.participantID)
+
+        pString = ""
+        try:
+            pString = "{0} {1}, {2}".format(participant.first, participant.last, participant.town)
+        except Exception:
+            if len(participant.participants) > 0:
+                actualParticipants = []
+                for pId in participant.participants:
+                    actualParticipants.append(dbInteractionInstance.getParticipantFromId(pId))
+                pString = ", ".join(actualParticipants)
+                index = pString.rfind(", ")
+                pString = pString[:index-1] + " & " + pString[index+1:]
+            pString += ", {0}".format(participant.groupName)
+            if participant.schoolGrade != "":
+                pString += ", gr. " + participant.schoolGrade
+
+        p.add_run(pString)
+
+        for i in range(len(self.pieces)):
+            letter = chr(i + ord('a'))
+            p.add_run("\n\t{0}) {1}".format(letter, self.pieces[i]['title']))

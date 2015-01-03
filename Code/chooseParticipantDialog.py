@@ -1,7 +1,8 @@
 """Dialog for choosing an existing Participant"""
 
 import sys
-sys.path.insert(0, '../Forms/')
+import os.path
+sys.path.insert(0, os.path.join("..", "Forms"))
 import traceback
 from PyQt4.QtGui import QDialog, QAbstractItemView, QMessageBox
 

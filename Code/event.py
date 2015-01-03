@@ -11,9 +11,9 @@ from settingsInteraction import settingsInteractionInstance
 
 class Event(object):
     """Used by a Schedule"""
-    def __init__(self, classNumber):
+    def __init__(self, classNumber, className):
         self.classNumber = classNumber
-        self.className = "" # TODO: is this necessary?
+        self.className = className
         self.entries = []
         self.totalTime = datetime.timedelta(seconds=0)
 
@@ -64,3 +64,10 @@ class Event(object):
         
         for e in self.entries:
             e.export(csvFile, depth+1)
+
+    def toWordFile(self, document):
+        """Export to docx for printer, document is from docx module"""
+        for i in range(len(self.entries)):
+            entry = self.entries[i]
+            p = document.add_paragraph("{0}.\t".format(i+1))
+            entry.toWordFile(document, p)

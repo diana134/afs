@@ -4,6 +4,7 @@ import sys
 # from random import randrange, shuffle
 import datetime
 import pickle
+from docx import Document
 
 class Session(object):
     """Part of a Schedule"""
@@ -60,6 +61,19 @@ class Session(object):
             csvFile.write('Event {n},'.format(n=i+1))
             e.export(csvFile)
 
+    def toWordFile(self, document):
+        """Create a docx for the printer, document parameter from docx module"""
+        s = "{0}\n".format(self.startDatetime.strftime('%A, %B %d, %Y %I:%M %p'))
+        p = document.add_paragraph()
+        r = p.add_run(s)
+        r.bold = True
+        r.caps = True
+        for event in self.eventList:
+            eventTitle = "{0}\t{1}".format(event.classNumber, event.className)
+            p = document.add_paragraph()
+            p.add_run(eventTitle).bold = True
+            event.toWordFile(document)
+
 class Schedule(object):
     """Used by the scheduling algorithm"""
     def __init__(self, sessionDatetimes=None):
@@ -99,7 +113,7 @@ class Schedule(object):
         for session in self.sessions:
             s = s + str(session.startDatetime) + '\n'
             for event in session.eventList:
-                s = s + '\t' + event.classNumber + '\n'
+                s = s + '\t' + event.classNumber + '\t' + event.className + '\n'
         return s
 
     def save(self, filename):
@@ -125,3 +139,14 @@ class Schedule(object):
         for s in self.sessions:
             s.export(fout)
         fout.close()
+
+    def toWordFile(self, filename):
+        """Format schedule as a docx to send to the printer"""
+        document = Document()
+        p = document.add_paragraph()
+        discipline = self.sessions[0].eventList[0].entries[0].discipline
+        p.add_run(discipline.upper() + " - ##venue##\n").bold = True
+        p.add_run("Adjudicator - ##adjudicator##\n").bold = True
+        for s in self.sessions:
+            s.toWordFile(document)
+        document.save(filename)

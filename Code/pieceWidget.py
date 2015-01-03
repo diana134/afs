@@ -1,7 +1,8 @@
 """The widget for adding a Piece to an Entry"""
 
 import sys
-sys.path.insert(0, '../Forms/')
+import os.path
+sys.path.insert(0, os.path.join("..", "Forms"))
 from PyQt4.QtGui import QWidget
 from PyQt4.QtCore import QTime
 

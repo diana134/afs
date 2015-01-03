@@ -1,7 +1,8 @@
 """The form for storing scheduling options"""
 
 import sys
-sys.path.insert(0, '../Forms/')
+import os.path
+sys.path.insert(0, os.path.join("..", "Forms"))
 from PyQt4.QtGui import QDialog, QListWidgetItem, QMessageBox
 from PyQt4.QtCore import QDate
 from time import strptime

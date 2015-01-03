@@ -24,7 +24,7 @@ class Scheduler(object):
                     break
             else:
                 # if we get here, there was no Event for that classNumber, so make one
-                newEvent = Event(entry.classNumber)
+                newEvent = Event(entry.classNumber, entry.className)
                 newEvent.addEntry(entry)
                 eventList.append(newEvent)
         eventList.sort(key=lambda x: x.classNumber, reverse=False) # Magic code from stackoverflow

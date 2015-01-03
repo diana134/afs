@@ -209,6 +209,13 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="printScheduleBtn">
+       <property name="text">
+        <string>&amp;Print Schedule</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="exportScheduleBtn">
        <property name="text">
         <string>&amp;Export Schedule</string>

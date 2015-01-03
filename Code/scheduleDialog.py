@@ -1,7 +1,8 @@
 """The UI for viewing and editing a Schedule"""
 
 import sys
-sys.path.insert(0, '../Forms/')
+import os.path
+sys.path.insert(0, os.path.join("..", "Forms"))
 from PyQt4.QtGui import QDialog, QTableWidgetItem, QMessageBox, QFileDialog
 
 from ui_scheduleDialog import Ui_ScheduleDialog
@@ -30,6 +31,7 @@ class ScheduleDialog(QDialog):
         self.ui.btnBox.accepted.connect(self.saveBtn_clicked)
         self.ui.btnBox.rejected.connect(self.cancelBtn_clicked)
         self.ui.exportScheduleBtn.clicked.connect(self.exportScheduleBtn_clicked)
+        self.ui.printScheduleBtn.clicked.connect(self.printScheduleBtn_clicked)
 
     def displaySchedule(self):
         """Displays the schedule in scheduleTableWidget"""
@@ -115,6 +117,15 @@ class ScheduleDialog(QDialog):
                 filename += ".csv"
             self.schedule.export(filename=filename)
             QMessageBox.information(self, 'Export Schedule', 'Schedule exported to ' + filename, QMessageBox.Ok)
+
+    def printScheduleBtn_clicked(self):
+        """Prints a schedule to a docx"""
+        filename = str(QFileDialog.getSaveFileName(self, "Print Schedule", exportsPath, "Word Files (*.docx)"))
+        if filename is not None and filename != "":
+            if filename[-4:] != ".docx":
+                filename += ".docx"
+            self.schedule.toWordFile(filename=filename)
+            QMessageBox.information(self, 'Print Schedule', 'Schedule print file saved to ' + filename, QMessageBox.Ok)
 
     def scheduleUpBtn_clicked(self):
         currRow = self.ui.scheduleTableWidget.currentRow()
