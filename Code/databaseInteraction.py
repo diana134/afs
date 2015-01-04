@@ -69,8 +69,8 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.prepare("INSERT INTO soloparticipants \
-                (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth) \
-                VALUES (:first, :last, :address, :town, :postal, :home, :cell, :email, :dob)")
+                (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth, school_attending, parent) \
+                VALUES (:first, :last, :address, :town, :postal, :home, :cell, :email, :dob, :schoolAttending, :parent)")
             query.bindValue(":first", sp.first)
             query.bindValue(":last", sp.last)
             query.bindValue(":address", sp.address)
@@ -80,6 +80,8 @@ class DatabaseInteraction(object):
             query.bindValue(":cell", sp.cell)
             query.bindValue(":email", sp.email)
             query.bindValue(":dob", sp.dob)
+            query.bindValue(":schoolAttending", sp.schoolAttending)
+            query.bindValue(":parent", sp.parent)
             query.exec_()
             self.soloParticipantModel.select()
             return ""
@@ -94,7 +96,7 @@ class DatabaseInteraction(object):
             query = QSqlQuery(self.conn)
             query.prepare("UPDATE soloparticipants \
                 SET first_name=:first, last_name=:last, address=:address, town=:town, postal_code=:postal,\
-                home_phone=:home, cell_phone=:cell, email=:email, date_of_birth=:dob \
+                home_phone=:home, cell_phone=:cell, email=:email, date_of_birth=:dob, school_attending=:schoolAttending, parent=:parent \
                 WHERE id=:id")
             query.bindValue(":first", participant.first)
             query.bindValue(":last", participant.last)
@@ -105,6 +107,8 @@ class DatabaseInteraction(object):
             query.bindValue(":cell", participant.cell)
             query.bindValue(":email", participant.email)
             query.bindValue(":dob", participant.dob)
+            query.bindValue(":schoolAttending", participant.schoolAttending)
+            query.bindValue(":parent", participant.parent)
             query.bindValue(":id", participantId)
             query.exec_()
             self.soloParticipantModel.select()
@@ -119,13 +123,14 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.prepare("INSERT INTO groupparticipants \
-                (group_name, group_size, school_grade, average_age, participants) \
-                VALUES (:groupName, :groupSize, :schoolGrade, :averageAge, :participants)")
+                (group_name, group_size, school_grade, average_age, participants, contact) \
+                VALUES (:groupName, :groupSize, :schoolGrade, :averageAge, :participants, :contact)")
             query.bindValue(":groupName", gp.groupName)
             query.bindValue(":groupSize", gp.groupSize)
             query.bindValue(":schoolGrade", gp.schoolGrade)
             query.bindValue(":averageAge", gp.averageAge)
             query.bindValue(":participants", gp.participants)
+            query.bindValue(":contact", gp.contact)
             query.exec_()
             self.groupParticipantModel.select()
             return ""
@@ -140,13 +145,14 @@ class DatabaseInteraction(object):
             query = QSqlQuery(self.conn)
             query.prepare("UPDATE groupparticipants \
                 SET group_name=:groupName, group_size=:groupSize, school_grade=:schoolGrade,\
-                average_age=:averageAge, participants=:participants \
+                average_age=:averageAge, participants=:participants, contact=:contact \
                 WHERE id=:id")
             query.bindValue(":groupName", participant.groupName)
             query.bindValue(":groupSize", participant.groupSize)
             query.bindValue(":schoolGrade", participant.schoolGrade)
             query.bindValue(":averageAge", participant.averageAge)
             query.bindValue(":participants", participant.participants)
+            query.bindValue(":contact", participant.contact)
             query.bindValue(":id", participantId)
             query.exec_()
             self.groupParticipantModel.select()
@@ -210,8 +216,8 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.prepare("INSERT INTO entries \
-                (participant_id, teacher_id, discipline, level, class_number, class_name, instrument, style) \
-                VALUES (:participantID, :teacherID, :discipline, :level, :classNumber, :className, :instrument, :style)")
+                (participant_id, teacher_id, discipline, level, class_number, class_name, instrument, years_of_instruction, scheduling_requirements) \
+                VALUES (:participantID, :teacherID, :discipline, :level, :classNumber, :className, :instrument, :yearsOfInstruction, :schedulingRequirements)")
             query.bindValue(":participantID", entry.participantID)
             query.bindValue(":teacherID", entry.teacherID)
             query.bindValue(":discipline", entry.discipline)
@@ -219,17 +225,18 @@ class DatabaseInteraction(object):
             query.bindValue(":classNumber", entry.classNumber)
             query.bindValue(":className", entry.className)
             query.bindValue(":instrument", entry.instrument)
-            query.bindValue(":style", entry.style)
+            query.bindValue(":yearsOfInstruction", entry.yearsOfInstruction)
+            query.bindValue(":schedulingRequirements", entry.schedulingRequirements)
             query.exec_()
             self.entryModel.select()
             # get id
             entryId = self.getLastEntryId()
-            # add pieces to db
-            for piece in entry.pieces:
-                self.addPiece(piece, entryId)
+            # add selections to db
+            for selection in entry.selections:
+                self.addSelection(selection, entryId)
             return ""
         except Exception, e:
-            # If something went wrong adding the pieces, we want to delete the whole entry
+            # If something went wrong adding the selections, we want to delete the whole entry
             if entryId != None:
                 self.deleteEntryFromId(entryId)
             # TODO: log this instead of printing to console
@@ -243,7 +250,7 @@ class DatabaseInteraction(object):
             query.prepare("UPDATE entries \
                 SET participant_id=:participantID, teacher_id=:teacherID, discipline=:discipline,\
                 level=:level, class_number=:class_number, class_name=:class_name, instrument=:instrument, \
-                style=:style \
+                years_of_instruction, scheduling_requirements) \
                 WHERE id=:id")
             query.bindValue(":participantID", entry.participantID)
             query.bindValue(":teacherID", entry.teacherID)
@@ -252,72 +259,68 @@ class DatabaseInteraction(object):
             query.bindValue(":classNumber", entry.classNumber)
             query.bindValue(":className", entry.className)
             query.bindValue(":instrument", entry.instrument)
-            query.bindValue(":style", entry.style)
+            query.bindValue(":yearsOfInstruction", entry.yearsOfInstruction)
+            query.bindValue(":schedulingRequirements", entry.schedulingRequirements)
             query.bindValue(":id", entryId)
             query.exec_()
             self.entryModel.select()
-            # delete all pieces associated with this entry (handles deleting pieces during update)
-            self.deletePiecesFromEntryId(entryId)
-            # re-add pieces to db (handles updates and new pieces)
-            for piece in entry.pieces:
-                self.addPiece(piece, entryId)
+            # delete all selections associated with this entry (handles deleting selections during update)
+            self.deleteSelectionsFromEntryId(entryId)
+            # re-add selections to db (handles updates and new selections)
+            for selection in entry.selections:
+                self.addSelection(selection, entryId)
             return ""
         except Exception, e:
-            # If something went wrong adding the pieces, we want to delete the whole entry
+            # If something went wrong adding the selections, we want to delete the whole entry
             if entryId != None:
                 self.deleteEntryFromId(entryId)
             # TODO: log this instead of printing to console
             print "addEntry FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
             return e
 
-    def addPiece(self, piece, entryId):
-        """Adds a new Piece record to the db"""
+    def addSelection(self, selection, entryId):
+        """Adds a new Selection record to the db"""
         try:
             query = QSqlQuery(self.conn)
-            query.prepare("INSERT INTO pieces \
-                (title, performance_time, composer, opus, no, movement, arranger, artist, author, entry_id) \
-                VALUES (:title, :performanceTime, :composer, :opus, :no, :movement, :arranger, :artist, :author, :entryId)")
-            query.bindValue(":title", piece['title'])
-            query.bindValue(":performanceTime", piece['performanceTime'])
-            query.bindValue(":composer", piece['composer'])
-            query.bindValue(":opus", piece['opus'])
-            query.bindValue(":no", piece['no'])
-            query.bindValue(":movement", piece['movement'])
-            query.bindValue(":arranger", piece['arranger'])
-            query.bindValue(":artist", piece['artist'])
-            query.bindValue(":author", piece['author'])
+            query.prepare("INSERT INTO selections \
+                (title, performance_time, composer_arranger, opus_no, movement, entry_id) \
+                VALUES (:title, :performanceTime, :composerArranger, :opusNo, :movement, :entryId)")
+            query.bindValue(":title", selection['title'])
+            query.bindValue(":performanceTime", selection['performanceTime'])
+            query.bindValue(":composerArranger", selection['composerArranger'])
+            query.bindValue(":opusNo", selection['opusNo'])
+            query.bindValue(":movement", selection['movement'])
             query.bindValue(":entryId", entryId)
             query.exec_()
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "addPiece FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            print "addSelection FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
             return e
 
-    def deletePiecesFromEntryId(self, entryId):
-        """Deletes all pieces that reference entryId"""
+    def deleteSelectionsFromEntryId(self, entryId):
+        """Deletes all selections that reference entryId"""
         try:
             query = QSqlQuery(self.conn)
-            query.prepare("DELETE FROM pieces \
+            query.prepare("DELETE FROM selections \
                 WHERE entry_id=:id")
             query.bindValue(":id", entryId)
             query.exec_()
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "deletePiecesFromEntryId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            print "deleteSelectionsFromEntryId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
             return e    
 
     #####
 
     def deleteEntryFromId(self, entryId):
-        # TODO handle pieces
         try:
             query = QSqlQuery(self.conn)
             # Delete the entry
             query.prepare("DELETE FROM entries WHERE id=:id")
             query.bindValue(":id", entryId)
             query.exec_()
-            # Delete its pieces
-            query.prepare("DELETE FROM pieces WHERE entry_id=:id")
+            # Delete its selections
+            query.prepare("DELETE FROM selections WHERE entry_id=:id")
             query.bindValue(":id", entryId)
             query.exec_()
             self.entryModel.select()
@@ -333,10 +336,10 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             if participantId[0] == 's':
-                query.prepare("SELECT first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth \
+                query.prepare("SELECT first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth, school_attending, parent \
                     FROM soloparticipants WHERE id=:id")
             else:
-                query.prepare("SELECT group_name, group_size, school_grade, average_age, participants \
+                query.prepare("SELECT group_name, group_size, school_grade, average_age, participants, contact \
                     FROM groupparticipants WHERE id=:id")
             numericId = participantId[1:]
             query.bindValue(":id", numericId)
@@ -354,14 +357,17 @@ class DatabaseInteraction(object):
                 cell = str(query.value(6).toString())
                 email = str(query.value(7).toString())
                 dob = str(query.value(8).toString())
-                retrievedParticipant = SoloParticipant(first, last, address, town, postal, home, cell, email, dob)
+                schoolAttending = str(query.value(9).toString())
+                parent = str(query.value(10).toString())
+                retrievedParticipant = SoloParticipant(first, last, address, town, postal, home, cell, email, dob, schoolAttending, parent)
             else:
                 groupName = str(query.value(0).toString())
                 groupSize = str(query.value(1).toString())
                 schoolGrade = str(query.value(2).toString())
                 averageAge = str(query.value(3).toString())
                 participants = str(query.value(4).toString())
-                retrievedParticipant = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants)
+                contact = str(query.value(5).toString())
+                retrievedParticipant = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants, contact)
             return retrievedParticipant
         except Exception, e:
             # TODO: log this instead of printing to console
@@ -387,7 +393,7 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.prepare("SELECT first_name, last_name, address, town, postal_code, home_phone, \
-                cell_phone, email, date_of_birth \
+                cell_phone, email, date_of_birth, school_attending, parent \
                 FROM soloparticipants WHERE first_name=:first AND last_name=:last")
             query.bindValue(":first", first)
             query.bindValue(":last", last)
@@ -402,7 +408,9 @@ class DatabaseInteraction(object):
                 cell = str(query.value(6).toString())
                 email = str(query.value(7).toString())
                 dob = str(query.value(8).toString())
-                pList.append(SoloParticipant(first, last, address, town, postal, home, cell, email, dob))
+                schoolAttending = str(query.value(9).toString())
+                parent = str(query.value(10).toString())
+                pList.append(SoloParticipant(first, last, address, town, postal, home, cell, email, dob, schoolAttending, parent))
             return pList
         except Exception, e:
             # TODO: log this instead of printing to console
@@ -427,7 +435,7 @@ class DatabaseInteraction(object):
         pList = []
         try:
             query = QSqlQuery(self.conn)
-            query.prepare("SELECT group_name, group_size, school_grade, average_age, participants \
+            query.prepare("SELECT group_name, group_size, school_grade, average_age, participants, contact \
                 FROM groupparticipants WHERE group_name=:name")
             query.bindValue(':name', name)
             query.exec_()
@@ -437,7 +445,8 @@ class DatabaseInteraction(object):
                 schoolGrade = str(query.value(2).toString())
                 averageAge = str(query.value(3).toString())
                 participants = str(query.value(4).toString())
-                pList.append(GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants))
+                contact = str(query.value(5).toString())
+                pList.append(GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants, contact))
             return pList
         except Exception, e:
             raise e
@@ -508,31 +517,27 @@ class DatabaseInteraction(object):
 
     #####
 
-    def getPiecesFromEntryId(self, entryId):
-        """Retrieves all the Pieces associated with the entryId"""
-        pieceList = []
+    def getSelectionsFromEntryId(self, entryId):
+        """Retrieves all the Selections associated with the entryId"""
+        selectionList = []
         try:
             query = QSqlQuery(self.conn)
-            query.prepare("SELECT title, performance_time, composer, opus, no, movement, arranger, artist, author \
-                FROM pieces WHERE entry_id=:id")
+            query.prepare("SELECT title, performance_time, composer_arranger, opus_no, movement \
+                FROM selections WHERE entry_id=:id")
             query.bindValue(":id", entryId)
             query.exec_()
             while query.next() == True:
                 fields = {}
                 fields['title'] = str(query.value(0).toString())
                 fields['performanceTime'] = str(query.value(1).toString())
-                fields['composer'] = str(query.value(2).toString())
-                fields['opus'] = str(query.value(3).toString())
-                fields['no'] = str(query.value(4).toString())
-                fields['movement'] = str(query.value(5).toString())
-                fields['arranger'] = str(query.value(6).toString())
-                fields['artist'] = str(query.value(7).toString())
-                fields['author'] = str(query.value(8).toString())
-                pieceList.append(fields)
-            return pieceList
+                fields['composerArranger'] = str(query.value(2).toString())
+                fields['opusNo'] = str(query.value(3).toString())
+                fields['movement'] = str(query.value(4).toString())
+                selectionList.append(fields)
+            return selectionList
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "getPiecesFromEntryId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            print "getSelectionsFromEntryId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
             return e
 
     def getAllEntries(self):
@@ -541,7 +546,7 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.prepare("SELECT participant_id, teacher_id, discipline, level, class_number, \
-                class_name, style, instrument, id FROM entries")
+                class_name, instrument, years_of_instruction, scheduling_requirements, id FROM entries")
             query.exec_()
             while query.next() == True:
                 participantID = str(query.value(0).toString())
@@ -550,12 +555,13 @@ class DatabaseInteraction(object):
                 level = str(query.value(3).toString())
                 classNumber = str(query.value(4).toString())
                 className = str(query.value(5).toString())
-                style = str(query.value(6).toString())
-                instrument = str(query.value(7).toString())
-                entryId = str(query.value(8).toString())
-                # get associated pieces
-                pieces = self.getPiecesFromEntryId(entryId)
-                ee = Entry(participantID, teacherID, discipline, level, classNumber, className, style, instrument, pieces)
+                instrument = str(query.value(6).toString())
+                yearsOfInstruction = str(query.value(7).toString())
+                schedulingRequirements = str(query.value(8).toString())
+                entryId = str(query.value(9).toString())
+                # get associated selections
+                selections = self.getSelectionsFromEntryId(entryId)
+                ee = Entry(participantID, teacherID, discipline, level, yearsOfInstruction, classNumber, className, instrument, selections, schedulingRequirements)
                 entryList.append(ee)
             return entryList
         except Exception, e:
@@ -568,7 +574,7 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.prepare("SELECT participant_id, teacher_id, discipline, level, class_number, \
-                class_name, style, instrument FROM entries \
+                class_name, instrument, years_of_instruction, scheduling_requirements FROM entries \
                 WHERE id=:id")
             query.bindValue(":id", entryId)
             query.exec_()
@@ -579,11 +585,13 @@ class DatabaseInteraction(object):
             level = str(query.value(3).toString())
             classNumber = str(query.value(4).toString())
             className = str(query.value(5).toString())
-            style = str(query.value(6).toString())
-            instrument = str(query.value(7).toString())
-            # get associated pieces
-            pieces = self.getPiecesFromEntryId(entryId)
-            ee = Entry(participantID, teacherID, discipline, level, classNumber, className, style, instrument, pieces)
+            instrument = str(query.value(6).toString())
+            yearsOfInstruction = str(query.value(7).toString())
+            schedulingRequirements = str(query.value(8).toString())
+            entryId = str(query.value(9).toString())
+            # get associated selections
+            selections = self.getSelectionsFromEntryId(entryId)
+            ee = Entry(participantID, teacherID, discipline, level, yearsOfInstruction, classNumber, className, instrument, selections, schedulingRequirements)
             return ee
         except Exception, e:
             # TODO: log this instead of printing to console
@@ -596,7 +604,8 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.prepare("SELECT participant_id, teacher_id, discipline, level, class_number, \
-                class_name, style, instrument, id FROM entries WHERE discipline=:discipline")
+                class_name, instrument, years_of_instruction, scheduling_requirements, id FROM entries \
+                WHERE discipline=:discipline")
             query.bindValue(":discipline", discipline)
             query.exec_()
             while query.next() == True:
@@ -606,12 +615,13 @@ class DatabaseInteraction(object):
                 level = str(query.value(3).toString())
                 classNumber = str(query.value(4).toString())
                 className = str(query.value(5).toString())
-                style = str(query.value(6).toString())
-                instrument = str(query.value(7).toString())
-                entryId = str(query.value(8).toString())
-                # get associated pieces
-                pieces = self.getPiecesFromEntryId(entryId)
-                ee = Entry(participantID, teacherID, discipline, level, classNumber, className, style, instrument, pieces)
+                instrument = str(query.value(6).toString())
+                yearsOfInstruction = str(query.value(7).toString())
+                schedulingRequirements = str(query.value(8).toString())
+                entryId = str(query.value(9).toString())
+                # get associated selections
+                selections = self.getSelectionsFromEntryId(entryId)
+                ee = Entry(participantID, teacherID, discipline, level, yearsOfInstruction, classNumber, className, instrument, selections, schedulingRequirements)
                 entryList.append(ee)
             return entryList
         except Exception, e:

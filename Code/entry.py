@@ -6,16 +6,17 @@ from utilities import requiredFieldIsGood, optionalFieldIsGood, convertStringToT
 
 class Entry(object):
     """holds Entry data as strings"""
-    def __init__(self, participantID="", teacherID="", discipline="", level="", classNumber="", className="", style="", instrument="", pieces=None):
+    def __init__(self, participantID="", teacherID="", discipline="", level="", yearsOfInstruction="", classNumber="", className="", instrument="", selections=None, schedulingRequirements=""):
         self.participantID = participantID
         self.teacherID = teacherID
         self.discipline = discipline
         self.level = level
+        self.yearsOfInstruction = yearsOfInstruction
         self.classNumber = classNumber
         self.className = className
         self.instrument = instrument
-        self.style = style
-        self.pieces = pieces if pieces is not None else []
+        self.selections = selections if selections is not None else []
+        self.schedulingRequirements = schedulingRequirements
 
     def isEqualTo(self, obj):
         """check if obj is equal to this Entry (test purposes only?)"""
@@ -24,9 +25,9 @@ class Entry(object):
                     requiredFieldIsGood(self.teacherID, obj.teacherID) and
                     requiredFieldIsGood(self.discipline, obj.discipline) and
                     optionalFieldIsGood(self.level, obj.level) and
+                    optionalFieldIsGood(self.yearsOfInstruction, obj.yearsOfInstruction) and
                     requiredFieldIsGood(self.classNumber, obj.classNumber) and
                     requiredFieldIsGood(self.className, obj.className) and
-                    optionalFieldIsGood(self.style, obj.style) and
                     optionalFieldIsGood(self.instrument, obj.instrument)):
                 return True
             else:
@@ -36,13 +37,13 @@ class Entry(object):
 
     def totalTime(self):
         totalTime = datetime.timedelta()
-        for piece in self.pieces:
-            totalTime += convertStringToTimedelta(piece['performanceTime'])
+        for selection in self.selections:
+            totalTime += convertStringToTimedelta(selection['performanceTime'])
         return totalTime
 
     def __str__(self):
-        print "Entry has pieces {0}".format(self.pieces)        
-        return self.participantID + self.teacherID + self.discipline + self.level + self.classNumber + self.className + self.style + self.instrument
+        print "Entry has selections {0}".format(self.selections)        
+        return self.participantID + self.teacherID + self.discipline + self.level + self.yearsOfInstruction + self.classNumber + self.className + self.instrument
         
     @staticmethod
     def getCsvHeader():

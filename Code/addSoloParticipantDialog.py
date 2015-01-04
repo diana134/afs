@@ -21,6 +21,8 @@ class AddSoloParticipantDialog(QDialog):
         defaultYear = (QDate.currentDate().addYears(-18)).year()
         self.defaultDate = QDate(defaultYear, 1, 1)
         self.ui.dateOfBirthDateEdit.setDate(self.defaultDate)
+        # Set the age display
+        self.dob_changed()
         # Initialize class variables
         self.testing = testing
         self.closeAfterAdd = closeAfterAdd
@@ -32,6 +34,7 @@ class AddSoloParticipantDialog(QDialog):
         """connect the various ui signals to their slots"""
         self.ui.addParticipantBtn.clicked.connect(self.addParticipantBtn_clicked)
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
+        self.ui.dateOfBirthDateEdit.dateChanged.connect(self.dob_changed)
 
     def getParticipant(self):
         """returns the Participant object created from user data"""
@@ -48,6 +51,8 @@ class AddSoloParticipantDialog(QDialog):
         self.ui.cellPhoneLineEdit.clear()
         self.ui.emailLineEdit.clear()
         self.ui.dateOfBirthDateEdit.setDate(self.defaultDate)
+        self.ui.schoolAttendingLineEdit.clear()
+        self.ui.parent.clear()
 
     ### Slots ###
 
@@ -75,6 +80,10 @@ class AddSoloParticipantDialog(QDialog):
         email = sanitize(email)
         # Don't need to sanitize this one, it can only be a date
         dob = str(self.ui.dateOfBirthDateEdit.date().toString(1)).strip()
+        schoolAttending = str(self.ui.schoolAttendingLineEdit.text()).strip()
+        schoolAttending = sanitize(schoolAttending)
+        parent = str(self.ui.parentLineEdit.text()).strip()
+        parent = sanitize(parent)
 
         # Check for empty fields
         if first is None or first == "":
@@ -117,7 +126,7 @@ class AddSoloParticipantDialog(QDialog):
                 QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
                 return
 
-        self.p = SoloParticipant(first, last, address, city, postal, home, cell, email, dob)
+        self.p = SoloParticipant(first, last, address, city, postal, home, cell, email, dob, schoolAttending, parent)
         result = dbInteractionInstance.addSoloParticipant(self.p)
         if result == "":
             QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
@@ -129,4 +138,9 @@ class AddSoloParticipantDialog(QDialog):
 
     def cancelBtn_clicked(self):
         self.reject()
-        
+
+    def dob_changed(self):
+        dob = self.ui.dateOfBirthDateEdit.date()
+        compareDate = QDate(QDate.currentDate().year(), 1, 1)
+        age = int(dob.daysTo(compareDate) / 365)
+        self.ui.ageLineEdit.setText("{0}".format(age))

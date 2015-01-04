@@ -42,6 +42,11 @@ class EditSoloParticipantDialog(QDialog):
         self.ui.cellPhoneLineEdit.setText(humanPhoneNumberFormat(self.participant.cell))
         self.ui.emailLineEdit.setText(self.participant.email)
         self.ui.dateOfBirthDateEdit.setDate(QDate.fromString(self.participant.dob, "yyyy-MM-dd"))
+        self.ui.schoolAttendingLineEdit.setText(self.participant.schoolAttending)
+        self.ui.parent.setText(self.participant.parent)
+
+        # Set the age display
+        self.dob_changed()
 
         # Make the buttons do things
         self.connectSlots()
@@ -50,6 +55,7 @@ class EditSoloParticipantDialog(QDialog):
         """connect the various ui signals to their slots"""
         self.ui.addParticipantBtn.clicked.connect(self.addParticipantBtn_clicked)
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
+        self.ui.dateOfBirthDateEdit.dateChanged.connect(self.dob_changed)
 
     ### Slots ###
 
@@ -77,6 +83,10 @@ class EditSoloParticipantDialog(QDialog):
         email = sanitize(email)
         # Don't need to sanitize this one, it can only be a date
         dob = str(self.ui.dateOfBirthDateEdit.date().toString(1)).strip()
+        schoolAttending = str(self.ui.schoolAttendingLineEdit.text()).strip()
+        schoolAttending = sanitize(schoolAttending)
+        parent = str(self.ui.parentLineEdit.text()).strip()
+        parent = sanitize(parent)
 
         # Check for empty fields
         if first is None or first == "":
@@ -129,6 +139,8 @@ class EditSoloParticipantDialog(QDialog):
         self.participant.cell = cell
         self.participant.email = email
         self.participant.dob = dob
+        self.participant.schoolAttending = schoolAttending
+        self.participant.parent = parent
         result = dbInteractionInstance.updateSoloParticipant(self.participantId, self.participant)
         if result == "":
             QMessageBox.information(self, 'Edit Participant', 'Successfully updated participant', QMessageBox.Ok)
@@ -138,3 +150,9 @@ class EditSoloParticipantDialog(QDialog):
 
     def cancelBtn_clicked(self):
         self.reject()
+
+    def dob_changed(self):
+        dob = self.ui.dateOfBirthDateEdit.date()
+        compareDate = QDate(QDate.currentDate().year(), 1, 1)
+        age = int(dob.daysTo(compareDate) / 365)
+        self.ui.ageLineEdit.setText("{0}".format(age))

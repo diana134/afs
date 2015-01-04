@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>404</width>
-    <height>291</height>
+    <height>167</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,7 +30,7 @@
    <item row="1" column="0">
     <widget class="QLabel" name="composerLabel">
      <property name="text">
-      <string>Composer</string>
+      <string>Composer/Arranger</string>
      </property>
     </widget>
    </item>
@@ -38,73 +38,33 @@
     <widget class="QLineEdit" name="composerLineEdit"/>
    </item>
    <item row="2" column="0">
-    <widget class="QLabel" name="arrangerLabel">
+    <widget class="QLabel" name="opusLabel">
      <property name="text">
-      <string>Arranger</string>
+      <string>Opus No.</string>
      </property>
     </widget>
    </item>
    <item row="2" column="1">
-    <widget class="QLineEdit" name="arrangerLineEdit"/>
+    <widget class="QLineEdit" name="opusNoLineEdit"/>
    </item>
    <item row="3" column="0">
-    <widget class="QLabel" name="artistLabel">
-     <property name="text">
-      <string>Artist</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="1">
-    <widget class="QLineEdit" name="artistLineEdit"/>
-   </item>
-   <item row="4" column="0">
-    <widget class="QLabel" name="authorLabel">
-     <property name="text">
-      <string>Author</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="1">
-    <widget class="QLineEdit" name="authorLineEdit"/>
-   </item>
-   <item row="5" column="0">
-    <widget class="QLabel" name="opusLabel">
-     <property name="text">
-      <string>Opus</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="1">
-    <widget class="QLineEdit" name="opusLineEdit"/>
-   </item>
-   <item row="6" column="0">
-    <widget class="QLabel" name="noLabel">
-     <property name="text">
-      <string>No.</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="1">
-    <widget class="QLineEdit" name="noLineEdit"/>
-   </item>
-   <item row="7" column="0">
     <widget class="QLabel" name="movementLabel">
      <property name="text">
       <string>Movement</string>
      </property>
     </widget>
    </item>
-   <item row="7" column="1">
+   <item row="3" column="1">
     <widget class="QLineEdit" name="movementLineEdit"/>
    </item>
-   <item row="8" column="0">
+   <item row="4" column="0">
     <widget class="QLabel" name="performanceTimeLabel">
      <property name="text">
       <string>Performance Time (mm:ss)</string>
      </property>
     </widget>
    </item>
-   <item row="8" column="1">
+   <item row="4" column="1">
     <widget class="QTimeEdit" name="performanceTimeEdit">
      <property name="maximumDateTime">
       <datetime>

@@ -20,7 +20,7 @@ class Participant(object):
 
 class SoloParticipant(Participant):
     """Holds participant data (name, address, contact info, etc) as strings"""
-    def __init__(self, first="", last="", address="", town="", postal="", home="", cell="", email="", dob=""):
+    def __init__(self, first="", last="", address="", town="", postal="", home="", cell="", email="", dob="", schoolAttending="", parent=""):
         self.first = first
         self.last = last
         self.address = address
@@ -30,6 +30,8 @@ class SoloParticipant(Participant):
         self.cell = cell
         self.email = email
         self.dob = dob
+        self.schoolAttending = schoolAttending
+        self.parent = parent
 
     def isEqualTo(self, obj):
         """check if obj is equal to this SoloParticipant"""
@@ -42,19 +44,14 @@ class SoloParticipant(Participant):
                     optionalFieldIsGood(self.home, obj.home) and
                     optionalFieldIsGood(self.cell, obj.cell) and
                     optionalFieldIsGood(self.email, obj.email) and
-                    requiredFieldIsGood(self.dob, obj.dob)):
+                    requiredFieldIsGood(self.dob, obj.dob) and
+                    optionalFieldIsGood(self.schoolAttending, obj.schoolAttending) and
+                    optionalFieldIsGood(self.parent, obj.parent)):
                 return True
             else:
                 return False
         else:
             return False
-
-    # def addToDB(self):
-    #     """add this SoloParticipant to the database using DatabaseInteraction db, return the result (i.e. an error)"""
-
-    #     # Very important to send these in the correct order or shit breaks
-    #     result = dbInteractionInstance.addSoloParticipant((self.first, self.last, self.address, self.town, self.postal, self.home, self.cell, self.email, self.dob))
-    #     return result
 
     def __str__(self):
         return '{0} {1}'.format(self.first, self.last)
@@ -62,12 +59,13 @@ class SoloParticipant(Participant):
 
 class GroupParticipant(Participant):
     """Holds GroupParticipant data (name, size, age, etc) as strings"""
-    def __init__(self, groupName="", groupSize="", schoolGrade="", averageAge="", participants=""):
+    def __init__(self, groupName="", groupSize="", schoolGrade="", averageAge="", participants="", contact=""):
         self.groupName = groupName
         self.groupSize = groupSize
         self.schoolGrade = schoolGrade
         self.averageAge = averageAge
         self.participants = participants
+        self.contact = contact
 
     def isEqualTo(self, obj):
         """check if obj is equal to this GroupParticipant"""
@@ -76,19 +74,13 @@ class GroupParticipant(Participant):
                     optionalFieldIsGood(self.groupSize, obj.groupSize) and
                     optionalFieldIsGood(self.schoolGrade, obj.schoolGrade) and
                     optionalFieldIsGood(self.averageAge, obj.averageAge) and
-                    optionalFieldIsGood(self.participants, obj.participants)):
+                    optionalFieldIsGood(self.participants, obj.participants) and
+                    optionalFieldIsGood(self.contact, obj.contact)):
                 return True
             else:
                 return False
         else:
             return False
-        
-    # def addToDB(self):
-    #     """add this GroupParticipant to the database using dbInteractionInstance, return the result (i.e. an error)"""
-
-    #     # Very important to send these in the correct order or shit breaks
-    #     result = dbInteractionInstance.addGroupParticipant((self.groupName, self.groupSize, self.schoolGrade, self.averageAge, self.participants))
-    #     return result
 
     def __str__(self):
         return self.groupName

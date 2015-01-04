@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>326</height>
+    <height>418</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -72,90 +72,90 @@
      <item row="1" column="1">
       <widget class="QLineEdit" name="lastNameLineEdit"/>
      </item>
-     <item row="2" column="0">
+     <item row="3" column="0">
       <widget class="QLabel" name="addressLabel">
        <property name="text">
         <string>Address</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
+     <item row="3" column="1">
       <widget class="QLineEdit" name="addressLineEdit"/>
      </item>
-     <item row="3" column="0">
+     <item row="4" column="0">
       <widget class="QLabel" name="cityLabel">
        <property name="text">
         <string>City</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="1">
+     <item row="4" column="1">
       <widget class="QLineEdit" name="cityLineEdit"/>
      </item>
-     <item row="4" column="0">
+     <item row="5" column="0">
       <widget class="QLabel" name="postalCodeLabel">
        <property name="text">
         <string>Postal Code</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="1">
+     <item row="5" column="1">
       <widget class="QLineEdit" name="postalCodeLineEdit">
        <property name="inputMethodHints">
         <set>Qt::ImhNone</set>
        </property>
       </widget>
      </item>
-     <item row="5" column="0">
+     <item row="6" column="0">
       <widget class="QLabel" name="homePhoneLabel">
        <property name="text">
         <string>Home Phone</string>
        </property>
       </widget>
      </item>
-     <item row="5" column="1">
+     <item row="6" column="1">
       <widget class="QLineEdit" name="homePhoneLineEdit">
        <property name="inputMethodHints">
         <set>Qt::ImhDigitsOnly</set>
        </property>
       </widget>
      </item>
-     <item row="6" column="0">
+     <item row="7" column="0">
       <widget class="QLabel" name="cellPhoneLabel">
        <property name="text">
         <string>Cell Phone</string>
        </property>
       </widget>
      </item>
-     <item row="6" column="1">
+     <item row="7" column="1">
       <widget class="QLineEdit" name="cellPhoneLineEdit">
        <property name="inputMethodHints">
         <set>Qt::ImhDigitsOnly</set>
        </property>
       </widget>
      </item>
-     <item row="7" column="0">
+     <item row="8" column="0">
       <widget class="QLabel" name="emailLabel">
        <property name="text">
         <string>Email</string>
        </property>
       </widget>
      </item>
-     <item row="7" column="1">
+     <item row="8" column="1">
       <widget class="QLineEdit" name="emailLineEdit">
        <property name="inputMethodHints">
         <set>Qt::ImhEmailCharactersOnly</set>
        </property>
       </widget>
      </item>
-     <item row="8" column="0">
+     <item row="9" column="0">
       <widget class="QLabel" name="dateOfBirthLabel">
        <property name="text">
         <string>Date of Birth</string>
        </property>
       </widget>
      </item>
-     <item row="8" column="1">
+     <item row="9" column="1">
       <widget class="QDateEdit" name="dateOfBirthDateEdit">
        <property name="autoFillBackground">
         <bool>false</bool>
@@ -179,6 +179,40 @@
        </property>
        <property name="calendarPopup">
         <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="schoolLabel">
+       <property name="text">
+        <string>School Currently Attending</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QLineEdit" name="schoolLineEdit"/>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="ageLabel">
+       <property name="text">
+        <string>Age as of Jan. 1 </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="parentLabel">
+       <property name="text">
+        <string>Parent</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="parentLineEdit"/>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLineEdit" name="ageLineEdit">
+       <property name="enabled">
+        <bool>false</bool>
        </property>
       </widget>
      </item>

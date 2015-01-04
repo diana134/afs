@@ -9,15 +9,78 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>546</width>
-    <height>508</height>
+    <width>548</width>
+    <height>496</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Add Entry</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0" colspan="4">
+   <item row="2" column="0" colspan="4">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="tabsClosable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="tabWidgetPage1">
+      <attribute name="title">
+       <string>Selection 1</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="PieceWidget" name="widget" native="true"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QPushButton" name="addPieceBtn">
+     <property name="text">
+      <string>Add S&amp;election</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="2">
+    <widget class="QPushButton" name="cancelBtn">
+     <property name="text">
+      <string>&amp;Cancel</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QPushButton" name="addEntryBtn">
+     <property name="text">
+      <string>A&amp;dd Entry</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" rowspan="2" colspan="4">
     <layout class="QFormLayout" name="formLayout_2">
      <property name="sizeConstraint">
       <enum>QLayout::SetMinAndMaxSize</enum>
@@ -154,120 +217,67 @@
        </item>
       </widget>
      </item>
-     <item row="15" column="1">
-      <widget class="QLineEdit" name="styleLineEdit"/>
-     </item>
-     <item row="11" column="1">
-      <widget class="QLineEdit" name="levelLineEdit"/>
-     </item>
-     <item row="7" column="1">
-      <widget class="QLineEdit" name="classNumberLineEdit"/>
-     </item>
-     <item row="7" column="0">
+     <item row="6" column="0">
       <widget class="QLabel" name="classNumberLabel">
        <property name="text">
         <string>Class Number</string>
        </property>
       </widget>
      </item>
-     <item row="12" column="1">
-      <widget class="QLineEdit" name="instrumentLineEdit"/>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="classNumberLineEdit"/>
      </item>
-     <item row="15" column="0">
-      <widget class="QLabel" name="styleLabel">
-       <property name="text">
-        <string>Style</string>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="0">
-      <widget class="QLabel" name="participantLevelGradeLabel">
-       <property name="text">
-        <string>Level/Years of Instruction</string>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="0">
-      <widget class="QLabel" name="instrumentLabel">
-       <property name="text">
-        <string>Instrument</string>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="1">
-      <widget class="QLineEdit" name="classNameLineEdit"/>
-     </item>
-     <item row="9" column="0">
+     <item row="7" column="0">
       <widget class="QLabel" name="classNameLabel">
        <property name="text">
         <string>Class Name</string>
        </property>
       </widget>
      </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="classNameLineEdit"/>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="levelLabel">
+       <property name="text">
+        <string>Level</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="levelLineEdit"/>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="yearsOfInstructionLabel">
+       <property name="text">
+        <string>Years of Instruction</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="yearsOfInstructionLineEdit"/>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="instrumentLabel">
+       <property name="text">
+        <string>Instrument</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLineEdit" name="instrumentLineEdit"/>
+     </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="specialSchedulingRequirementsLabel">
+       <property name="text">
+        <string>Special Scheduling Requirements</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QLineEdit" name="schedulingLineEdit"/>
+     </item>
     </layout>
-   </item>
-   <item row="2" column="0" colspan="4">
-    <widget class="QTabWidget" name="tabWidget">
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <property name="tabsClosable">
-      <bool>true</bool>
-     </property>
-     <widget class="QWidget" name="tabWidgetPage1">
-      <attribute name="title">
-       <string>Piece 1</string>
-      </attribute>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="PieceWidget" name="widget" native="true"/>
-       </item>
-      </layout>
-     </widget>
-    </widget>
-   </item>
-   <item row="3" column="0">
-    <widget class="QPushButton" name="addPieceBtn">
-     <property name="text">
-      <string>Add &amp;Piece</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="1">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="3" column="2">
-    <widget class="QPushButton" name="cancelBtn">
-     <property name="text">
-      <string>&amp;Cancel</string>
-     </property>
-     <property name="autoDefault">
-      <bool>false</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="3">
-    <widget class="QPushButton" name="addEntryBtn">
-     <property name="text">
-      <string>A&amp;dd Entry</string>
-     </property>
-     <property name="autoDefault">
-      <bool>false</bool>
-     </property>
-     <property name="default">
-      <bool>true</bool>
-     </property>
-    </widget>
    </item>
   </layout>
  </widget>
@@ -286,11 +296,6 @@
   <tabstop>chooseTeacherBtn</tabstop>
   <tabstop>createNewTeacherBtn</tabstop>
   <tabstop>disciplineComboBox</tabstop>
-  <tabstop>classNumberLineEdit</tabstop>
-  <tabstop>classNameLineEdit</tabstop>
-  <tabstop>levelLineEdit</tabstop>
-  <tabstop>instrumentLineEdit</tabstop>
-  <tabstop>styleLineEdit</tabstop>
   <tabstop>tabWidget</tabstop>
   <tabstop>addPieceBtn</tabstop>
   <tabstop>cancelBtn</tabstop>
