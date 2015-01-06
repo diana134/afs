@@ -326,6 +326,29 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>groupNameLineEdit</tabstop>
+  <tabstop>groupSizeLineEdit</tabstop>
+  <tabstop>schoolGradeLineEdit</tabstop>
+  <tabstop>averageAgeLineEdit</tabstop>
+  <tabstop>chooseContactBtn</tabstop>
+  <tabstop>createContactBtn</tabstop>
+  <tabstop>chooseP1Btn</tabstop>
+  <tabstop>createNewP1Btn</tabstop>
+  <tabstop>chooseP2Btn</tabstop>
+  <tabstop>createNewP2Btn</tabstop>
+  <tabstop>chooseP3Btn</tabstop>
+  <tabstop>createNewP3Btn</tabstop>
+  <tabstop>chooseP4Btn</tabstop>
+  <tabstop>createNewP4Btn</tabstop>
+  <tabstop>addParticipantBtn</tabstop>
+  <tabstop>cancelBtn</tabstop>
+  <tabstop>p3LineEdit</tabstop>
+  <tabstop>p1LineEdit</tabstop>
+  <tabstop>contactPersonLineEdit</tabstop>
+  <tabstop>p2LineEdit</tabstop>
+  <tabstop>p4LineEdit</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

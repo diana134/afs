@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addEntryDialog.ui'
 #
-# Created: Sat Jan  3 16:06:37 2015
+# Created: Mon Jan  5 21:47:20 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -27,7 +27,7 @@ class Ui_AddEntryDialog(object):
     def setupUi(self, AddEntryDialog):
         AddEntryDialog.setObjectName(_fromUtf8("AddEntryDialog"))
         AddEntryDialog.setWindowModality(QtCore.Qt.ApplicationModal)
-        AddEntryDialog.resize(548, 496)
+        AddEntryDialog.resize(548, 586)
         self.gridLayout = QtGui.QGridLayout(AddEntryDialog)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
         self.tabWidget = QtGui.QTabWidget(AddEntryDialog)
@@ -145,7 +145,8 @@ class Ui_AddEntryDialog(object):
         self.specialSchedulingRequirementsLabel = QtGui.QLabel(AddEntryDialog)
         self.specialSchedulingRequirementsLabel.setObjectName(_fromUtf8("specialSchedulingRequirementsLabel"))
         self.formLayout_2.setWidget(11, QtGui.QFormLayout.LabelRole, self.specialSchedulingRequirementsLabel)
-        self.schedulingLineEdit = QtGui.QLineEdit(AddEntryDialog)
+        self.schedulingLineEdit = QtGui.QTextEdit(AddEntryDialog)
+        self.schedulingLineEdit.setMaximumSize(QtCore.QSize(16777215, 50))
         self.schedulingLineEdit.setObjectName(_fromUtf8("schedulingLineEdit"))
         self.formLayout_2.setWidget(11, QtGui.QFormLayout.FieldRole, self.schedulingLineEdit)
         self.gridLayout.addLayout(self.formLayout_2, 0, 0, 2, 4)
@@ -158,11 +159,17 @@ class Ui_AddEntryDialog(object):
         AddEntryDialog.setTabOrder(self.createNewGroupParticipantBtn, self.chooseTeacherBtn)
         AddEntryDialog.setTabOrder(self.chooseTeacherBtn, self.createNewTeacherBtn)
         AddEntryDialog.setTabOrder(self.createNewTeacherBtn, self.disciplineComboBox)
-        AddEntryDialog.setTabOrder(self.disciplineComboBox, self.tabWidget)
+        AddEntryDialog.setTabOrder(self.disciplineComboBox, self.classNumberLineEdit)
+        AddEntryDialog.setTabOrder(self.classNumberLineEdit, self.classNameLineEdit)
+        AddEntryDialog.setTabOrder(self.classNameLineEdit, self.levelLineEdit)
+        AddEntryDialog.setTabOrder(self.levelLineEdit, self.yearsOfInstructionLineEdit)
+        AddEntryDialog.setTabOrder(self.yearsOfInstructionLineEdit, self.instrumentLineEdit)
+        AddEntryDialog.setTabOrder(self.instrumentLineEdit, self.schedulingLineEdit)
+        AddEntryDialog.setTabOrder(self.schedulingLineEdit, self.tabWidget)
         AddEntryDialog.setTabOrder(self.tabWidget, self.addPieceBtn)
-        AddEntryDialog.setTabOrder(self.addPieceBtn, self.cancelBtn)
-        AddEntryDialog.setTabOrder(self.cancelBtn, self.addEntryBtn)
-        AddEntryDialog.setTabOrder(self.addEntryBtn, self.teacherLineEdit)
+        AddEntryDialog.setTabOrder(self.addPieceBtn, self.addEntryBtn)
+        AddEntryDialog.setTabOrder(self.addEntryBtn, self.cancelBtn)
+        AddEntryDialog.setTabOrder(self.cancelBtn, self.teacherLineEdit)
         AddEntryDialog.setTabOrder(self.teacherLineEdit, self.participantLineEdit)
 
     def retranslateUi(self, AddEntryDialog):
@@ -175,7 +182,7 @@ class Ui_AddEntryDialog(object):
         self.chooseParticipantBtn.setText(_translate("AddEntryDialog", "Choose...", None))
         self.createNewSoloParticipantBtn.setText(_translate("AddEntryDialog", "Create New &Solo...", None))
         self.createNewGroupParticipantBtn.setText(_translate("AddEntryDialog", "Create New &Group...", None))
-        self.teacherLabel.setText(_translate("AddEntryDialog", "Teacher", None))
+        self.teacherLabel.setText(_translate("AddEntryDialog", "Teacher/Contact Person", None))
         self.chooseTeacherBtn.setText(_translate("AddEntryDialog", "Choose...", None))
         self.createNewTeacherBtn.setText(_translate("AddEntryDialog", "Create New...", None))
         self.disciplineLabel.setText(_translate("AddEntryDialog", "Discipline", None))

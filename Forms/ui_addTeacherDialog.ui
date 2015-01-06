@@ -139,6 +139,18 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>firstNameLineEdit</tabstop>
+  <tabstop>lastNameLineEdit</tabstop>
+  <tabstop>addressLineEdit</tabstop>
+  <tabstop>cityLineEdit</tabstop>
+  <tabstop>postalCodeLineEdit</tabstop>
+  <tabstop>daytimePhoneLineEdit</tabstop>
+  <tabstop>eveningPhoneLineEdit</tabstop>
+  <tabstop>emailLineEdit</tabstop>
+  <tabstop>addTeacherBtn</tabstop>
+  <tabstop>cancelBtn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

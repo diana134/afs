@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addSoloParticipantDialog.ui'
 #
-# Created: Sat Jan  3 16:20:50 2015
+# Created: Mon Jan  5 21:47:20 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -107,9 +107,9 @@ class Ui_AddSoloParticipantDialog(object):
         self.schoolLabel = QtGui.QLabel(AddSoloParticipantDialog)
         self.schoolLabel.setObjectName(_fromUtf8("schoolLabel"))
         self.formLayout.setWidget(11, QtGui.QFormLayout.LabelRole, self.schoolLabel)
-        self.schoolLineEdit = QtGui.QLineEdit(AddSoloParticipantDialog)
-        self.schoolLineEdit.setObjectName(_fromUtf8("schoolLineEdit"))
-        self.formLayout.setWidget(11, QtGui.QFormLayout.FieldRole, self.schoolLineEdit)
+        self.schoolAttendingLineEdit = QtGui.QLineEdit(AddSoloParticipantDialog)
+        self.schoolAttendingLineEdit.setObjectName(_fromUtf8("schoolAttendingLineEdit"))
+        self.formLayout.setWidget(11, QtGui.QFormLayout.FieldRole, self.schoolAttendingLineEdit)
         self.ageLabel = QtGui.QLabel(AddSoloParticipantDialog)
         self.ageLabel.setObjectName(_fromUtf8("ageLabel"))
         self.formLayout.setWidget(10, QtGui.QFormLayout.LabelRole, self.ageLabel)
@@ -127,6 +127,19 @@ class Ui_AddSoloParticipantDialog(object):
 
         self.retranslateUi(AddSoloParticipantDialog)
         QtCore.QMetaObject.connectSlotsByName(AddSoloParticipantDialog)
+        AddSoloParticipantDialog.setTabOrder(self.firstNameLineEdit, self.lastNameLineEdit)
+        AddSoloParticipantDialog.setTabOrder(self.lastNameLineEdit, self.parentLineEdit)
+        AddSoloParticipantDialog.setTabOrder(self.parentLineEdit, self.addressLineEdit)
+        AddSoloParticipantDialog.setTabOrder(self.addressLineEdit, self.cityLineEdit)
+        AddSoloParticipantDialog.setTabOrder(self.cityLineEdit, self.postalCodeLineEdit)
+        AddSoloParticipantDialog.setTabOrder(self.postalCodeLineEdit, self.homePhoneLineEdit)
+        AddSoloParticipantDialog.setTabOrder(self.homePhoneLineEdit, self.cellPhoneLineEdit)
+        AddSoloParticipantDialog.setTabOrder(self.cellPhoneLineEdit, self.emailLineEdit)
+        AddSoloParticipantDialog.setTabOrder(self.emailLineEdit, self.dateOfBirthDateEdit)
+        AddSoloParticipantDialog.setTabOrder(self.dateOfBirthDateEdit, self.schoolAttendingLineEdit)
+        AddSoloParticipantDialog.setTabOrder(self.schoolAttendingLineEdit, self.addParticipantBtn)
+        AddSoloParticipantDialog.setTabOrder(self.addParticipantBtn, self.cancelBtn)
+        AddSoloParticipantDialog.setTabOrder(self.cancelBtn, self.ageLineEdit)
 
     def retranslateUi(self, AddSoloParticipantDialog):
         AddSoloParticipantDialog.setWindowTitle(_translate("AddSoloParticipantDialog", "Add Solo Participant", None))

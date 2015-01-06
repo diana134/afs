@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addGroupParticipantDialog.ui'
 #
-# Created: Sat Jan  3 16:06:37 2015
+# Created: Mon Jan  5 21:47:20 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -167,6 +167,26 @@ class Ui_AddGroupParticipantDialog(object):
 
         self.retranslateUi(AddGroupParticipantDialog)
         QtCore.QMetaObject.connectSlotsByName(AddGroupParticipantDialog)
+        AddGroupParticipantDialog.setTabOrder(self.groupNameLineEdit, self.groupSizeLineEdit)
+        AddGroupParticipantDialog.setTabOrder(self.groupSizeLineEdit, self.schoolGradeLineEdit)
+        AddGroupParticipantDialog.setTabOrder(self.schoolGradeLineEdit, self.averageAgeLineEdit)
+        AddGroupParticipantDialog.setTabOrder(self.averageAgeLineEdit, self.chooseContactBtn)
+        AddGroupParticipantDialog.setTabOrder(self.chooseContactBtn, self.createContactBtn)
+        AddGroupParticipantDialog.setTabOrder(self.createContactBtn, self.chooseP1Btn)
+        AddGroupParticipantDialog.setTabOrder(self.chooseP1Btn, self.createNewP1Btn)
+        AddGroupParticipantDialog.setTabOrder(self.createNewP1Btn, self.chooseP2Btn)
+        AddGroupParticipantDialog.setTabOrder(self.chooseP2Btn, self.createNewP2Btn)
+        AddGroupParticipantDialog.setTabOrder(self.createNewP2Btn, self.chooseP3Btn)
+        AddGroupParticipantDialog.setTabOrder(self.chooseP3Btn, self.createNewP3Btn)
+        AddGroupParticipantDialog.setTabOrder(self.createNewP3Btn, self.chooseP4Btn)
+        AddGroupParticipantDialog.setTabOrder(self.chooseP4Btn, self.createNewP4Btn)
+        AddGroupParticipantDialog.setTabOrder(self.createNewP4Btn, self.addParticipantBtn)
+        AddGroupParticipantDialog.setTabOrder(self.addParticipantBtn, self.cancelBtn)
+        AddGroupParticipantDialog.setTabOrder(self.cancelBtn, self.p3LineEdit)
+        AddGroupParticipantDialog.setTabOrder(self.p3LineEdit, self.p1LineEdit)
+        AddGroupParticipantDialog.setTabOrder(self.p1LineEdit, self.contactPersonLineEdit)
+        AddGroupParticipantDialog.setTabOrder(self.contactPersonLineEdit, self.p2LineEdit)
+        AddGroupParticipantDialog.setTabOrder(self.p2LineEdit, self.p4LineEdit)
 
     def retranslateUi(self, AddGroupParticipantDialog):
         AddGroupParticipantDialog.setWindowTitle(_translate("AddGroupParticipantDialog", "Add Group Participant", None))

@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>548</width>
-    <height>496</height>
+    <height>586</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -139,7 +139,7 @@
      <item row="3" column="0">
       <widget class="QLabel" name="teacherLabel">
        <property name="text">
-        <string>Teacher</string>
+        <string>Teacher/Contact Person</string>
        </property>
       </widget>
      </item>
@@ -275,7 +275,14 @@
       </widget>
      </item>
      <item row="11" column="1">
-      <widget class="QLineEdit" name="schedulingLineEdit"/>
+      <widget class="QTextEdit" name="schedulingLineEdit">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>50</height>
+        </size>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -296,10 +303,16 @@
   <tabstop>chooseTeacherBtn</tabstop>
   <tabstop>createNewTeacherBtn</tabstop>
   <tabstop>disciplineComboBox</tabstop>
+  <tabstop>classNumberLineEdit</tabstop>
+  <tabstop>classNameLineEdit</tabstop>
+  <tabstop>levelLineEdit</tabstop>
+  <tabstop>yearsOfInstructionLineEdit</tabstop>
+  <tabstop>instrumentLineEdit</tabstop>
+  <tabstop>schedulingLineEdit</tabstop>
   <tabstop>tabWidget</tabstop>
   <tabstop>addPieceBtn</tabstop>
-  <tabstop>cancelBtn</tabstop>
   <tabstop>addEntryBtn</tabstop>
+  <tabstop>cancelBtn</tabstop>
   <tabstop>teacherLineEdit</tabstop>
   <tabstop>participantLineEdit</tabstop>
  </tabstops>

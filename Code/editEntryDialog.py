@@ -65,10 +65,10 @@ class EditEntryDialog(QDialog):
         self.ui.classNumberLineEdit.setText(self.entry.classNumber)
         self.ui.classNameLineEdit.setText(self.entry.className)
         self.ui.levelLineEdit.setText(self.entry.level)
+        self.ui.yearsOfInstructionLineEdit.setText(self.entry.yearsOfInstruction)
         self.ui.instrumentLineEdit.setText(self.entry.instrument)
-        self.ui.styleLineEdit.setText(self.entry.style)
-        for i in xrange(0, len(self.entry.pieces)):
-            self.ui.tabWidget.addTab(PieceWidget(piece=self.entry.pieces[i]), "Piece {0}".format(i+1))
+        for i in xrange(0, len(self.entry.selections)):
+            self.ui.tabWidget.addTab(PieceWidget(piece=self.entry.selections[i]), "Selection {0}".format(i+1))
         # trigger combobox change to set enabled fields correctly
         # but this may destroy some info if the discipline messed up
         # TODO how to handle that
@@ -99,21 +99,23 @@ class EditEntryDialog(QDialog):
         discipline = str(self.ui.disciplineComboBox.currentText()).strip()
         level = str(self.ui.levelLineEdit.text()).strip()
         level = sanitize(level)
+        yearsOfInstruction = str(self.ui.yearsOfInstructionLineEdit.text()).strip()
+        yearsOfInstruction = sanitize(yearsOfInstruction)
         classNumber = str(self.ui.classNumberLineEdit.text()).strip()
         classNumber = sanitize(classNumber)
         className = str(self.ui.classNameLineEdit.text()).strip()
         className = sanitize(className)
-        style = str(self.ui.styleLineEdit.text()).strip()
-        style = sanitize(style)
         instrument = str(self.ui.instrumentLineEdit.text()).strip()
         instrument = sanitize(instrument)
+        schedulingRequirements = str(self.ui.schedulingLineEdit.text()).strip()
+        schedulingRequirements = sanitize(schedulingRequirements)
 
         # Check for empty fields
         if participantID is None or participantID == "":
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Participant', QMessageBox.Ok)
         elif teacherID is None or teacherID == "":
             # TODO how to handle this for disciplines that don't usually have teachers? (speech)
-            QMessageBox.warning(self, 'Missing Field', 'Entry must have a Teacher', QMessageBox.Ok)
+            QMessageBox.warning(self, 'Missing Field', 'Entry must have a Teacher/Contact Person', QMessageBox.Ok)
         elif discipline is None or discipline == "":
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Discipline', QMessageBox.Ok)
         elif classNumber is None or classNumber == "":
@@ -127,7 +129,7 @@ class EditEntryDialog(QDialog):
                 QMessageBox.warning(self, 'Missing Piece', 'Entry must have at least 1 piece', QMessageBox.Ok)
             else:
                 # Check all the pieceWidgets
-                pieces = []
+                selections = []
                 for i in xrange(0, tabCount):
                     pieceWidget = self.ui.tabWidget.widget(i)
                     fields = pieceWidget.getFields()
@@ -141,20 +143,21 @@ class EditEntryDialog(QDialog):
                         break
                     else:
                         # Piece is good, add it to the list
-                        pieces.append(fields)
+                        selections.append(fields)
         
                 else:
                     # Everything is good, add it to the db
-                    self.entry = Entry(participantID, teacherID, discipline, level, classNumber, className, style, instrument, pieces)
+                    self.entry = Entry(participantID, teacherID, discipline, level, yearsOfInstruction, classNumber, className, instrument, selections, schedulingRequirements)
                     self.entry.participantID = participantID
                     self.entry.teacherID = teacherID
                     self.entry.discipline = discipline
                     self.entry.level = level
+                    self.entry.yearsOfInstruction = yearsOfInstruction
                     self.entry.classNumber = classNumber
                     self.entry.className = className
-                    self.entry.style = style
                     self.entry.instrument = instrument
-                    self.entry.pieces = pieces
+                    self.entry.selections = selections
+                    self.entry.schedulingRequirements = schedulingRequirements
 
                     result = dbInteractionInstance.updateEntry(self.entryId, self.entry)
                     if result == "":
@@ -262,45 +265,36 @@ class EditEntryDialog(QDialog):
         for i in xrange(0, self.ui.tabWidget.count()):
             self.ui.tabWidget.setTabText(i, "Piece {0}".format(i+1))
 
-# TODO clear disabled fields
     def dance(self):
-        self.ui.styleLabel.setEnabled(True)
-        self.ui.styleLineEdit.setEnabled(True)
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
+        self.ui.instrumentLineEdit.clear()
 
     def piano(self):
-        self.ui.styleLabel.setEnabled(False)
-        self.ui.styleLineEdit.setEnabled(False)
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
+        self.ui.instrumentLineEdit.clear()
 
     def choral(self):
-        self.ui.styleLabel.setEnabled(True)
-        self.ui.styleLineEdit.setEnabled(True)
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
+        self.ui.instrumentLineEdit.clear()
 
     def vocal(self):
-        self.ui.styleLabel.setEnabled(True)
-        self.ui.styleLineEdit.setEnabled(True)
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
+        self.ui.instrumentLineEdit.clear()
 
     def instrumental(self):
-        self.ui.styleLabel.setEnabled(False)
-        self.ui.styleLineEdit.setEnabled(False)
         self.ui.instrumentLabel.setEnabled(True)
         self.ui.instrumentLineEdit.setEnabled(True)
 
     def band(self):
-        self.ui.styleLabel.setEnabled(True)
-        self.ui.styleLineEdit.setEnabled(True)
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
+        self.ui.instrumentLineEdit.clear()
 
     def speech(self):
-        self.ui.styleLabel.setEnabled(False)
-        self.ui.styleLineEdit.setEnabled(False)
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
+        self.ui.instrumentLineEdit.clear()

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addTeacherDialog.ui'
 #
-# Created: Thu Nov 20 11:37:09 2014
+# Created: Mon Jan  5 21:47:20 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -95,6 +95,15 @@ class Ui_AddTeacherDialog(object):
 
         self.retranslateUi(AddTeacherDialog)
         QtCore.QMetaObject.connectSlotsByName(AddTeacherDialog)
+        AddTeacherDialog.setTabOrder(self.firstNameLineEdit, self.lastNameLineEdit)
+        AddTeacherDialog.setTabOrder(self.lastNameLineEdit, self.addressLineEdit)
+        AddTeacherDialog.setTabOrder(self.addressLineEdit, self.cityLineEdit)
+        AddTeacherDialog.setTabOrder(self.cityLineEdit, self.postalCodeLineEdit)
+        AddTeacherDialog.setTabOrder(self.postalCodeLineEdit, self.daytimePhoneLineEdit)
+        AddTeacherDialog.setTabOrder(self.daytimePhoneLineEdit, self.eveningPhoneLineEdit)
+        AddTeacherDialog.setTabOrder(self.eveningPhoneLineEdit, self.emailLineEdit)
+        AddTeacherDialog.setTabOrder(self.emailLineEdit, self.addTeacherBtn)
+        AddTeacherDialog.setTabOrder(self.addTeacherBtn, self.cancelBtn)
 
     def retranslateUi(self, AddTeacherDialog):
         AddTeacherDialog.setWindowTitle(_translate("AddTeacherDialog", "Add Teacher", None))
