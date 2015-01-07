@@ -183,7 +183,7 @@
       </widget>
      </item>
      <item row="11" column="0">
-      <widget class="QLabel" name="schoolLabel">
+      <widget class="QLabel" name="schoolAttendingLabel">
        <property name="text">
         <string>School Currently Attending</string>
        </property>
@@ -212,9 +212,19 @@
      <item row="10" column="1">
       <widget class="QLineEdit" name="ageLineEdit">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
       </widget>
+     </item>
+     <item row="12" column="0">
+      <widget class="QLabel" name="schoolGradeLabel">
+       <property name="text">
+        <string>School Grade</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="1">
+      <widget class="QLineEdit" name="schoolGradeLineEdit"/>
      </item>
     </layout>
    </item>

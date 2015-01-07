@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addSoloParticipantDialog.ui'
 #
-# Created: Mon Jan  5 21:47:20 2015
+# Created: Tue Jan  6 21:02:48 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -104,9 +104,9 @@ class Ui_AddSoloParticipantDialog(object):
         self.dateOfBirthDateEdit.setCalendarPopup(True)
         self.dateOfBirthDateEdit.setObjectName(_fromUtf8("dateOfBirthDateEdit"))
         self.formLayout.setWidget(9, QtGui.QFormLayout.FieldRole, self.dateOfBirthDateEdit)
-        self.schoolLabel = QtGui.QLabel(AddSoloParticipantDialog)
-        self.schoolLabel.setObjectName(_fromUtf8("schoolLabel"))
-        self.formLayout.setWidget(11, QtGui.QFormLayout.LabelRole, self.schoolLabel)
+        self.schoolAttendingLabel = QtGui.QLabel(AddSoloParticipantDialog)
+        self.schoolAttendingLabel.setObjectName(_fromUtf8("schoolAttendingLabel"))
+        self.formLayout.setWidget(11, QtGui.QFormLayout.LabelRole, self.schoolAttendingLabel)
         self.schoolAttendingLineEdit = QtGui.QLineEdit(AddSoloParticipantDialog)
         self.schoolAttendingLineEdit.setObjectName(_fromUtf8("schoolAttendingLineEdit"))
         self.formLayout.setWidget(11, QtGui.QFormLayout.FieldRole, self.schoolAttendingLineEdit)
@@ -120,9 +120,15 @@ class Ui_AddSoloParticipantDialog(object):
         self.parentLineEdit.setObjectName(_fromUtf8("parentLineEdit"))
         self.formLayout.setWidget(2, QtGui.QFormLayout.FieldRole, self.parentLineEdit)
         self.ageLineEdit = QtGui.QLineEdit(AddSoloParticipantDialog)
-        self.ageLineEdit.setEnabled(False)
+        self.ageLineEdit.setEnabled(True)
         self.ageLineEdit.setObjectName(_fromUtf8("ageLineEdit"))
         self.formLayout.setWidget(10, QtGui.QFormLayout.FieldRole, self.ageLineEdit)
+        self.schoolGradeLabel = QtGui.QLabel(AddSoloParticipantDialog)
+        self.schoolGradeLabel.setObjectName(_fromUtf8("schoolGradeLabel"))
+        self.formLayout.setWidget(12, QtGui.QFormLayout.LabelRole, self.schoolGradeLabel)
+        self.schoolGradeLineEdit = QtGui.QLineEdit(AddSoloParticipantDialog)
+        self.schoolGradeLineEdit.setObjectName(_fromUtf8("schoolGradeLineEdit"))
+        self.formLayout.setWidget(12, QtGui.QFormLayout.FieldRole, self.schoolGradeLineEdit)
         self.gridLayout.addLayout(self.formLayout, 0, 0, 1, 3)
 
         self.retranslateUi(AddSoloParticipantDialog)
@@ -155,7 +161,8 @@ class Ui_AddSoloParticipantDialog(object):
         self.emailLabel.setText(_translate("AddSoloParticipantDialog", "Email", None))
         self.dateOfBirthLabel.setText(_translate("AddSoloParticipantDialog", "Date of Birth", None))
         self.dateOfBirthDateEdit.setDisplayFormat(_translate("AddSoloParticipantDialog", "yyyy-MM-dd", None))
-        self.schoolLabel.setText(_translate("AddSoloParticipantDialog", "School Currently Attending", None))
+        self.schoolAttendingLabel.setText(_translate("AddSoloParticipantDialog", "School Currently Attending", None))
         self.ageLabel.setText(_translate("AddSoloParticipantDialog", "Age as of Jan. 1 ", None))
         self.parentLabel.setText(_translate("AddSoloParticipantDialog", "Parent", None))
+        self.schoolGradeLabel.setText(_translate("AddSoloParticipantDialog", "School Grade", None))
 

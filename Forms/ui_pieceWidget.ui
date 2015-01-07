@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>404</width>
-    <height>167</height>
+    <height>136</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,43 +28,33 @@
     <widget class="QLineEdit" name="titleLineEdit"/>
    </item>
    <item row="1" column="0">
-    <widget class="QLabel" name="composerLabel">
+    <widget class="QLabel" name="titleOfMusicalLabel">
      <property name="text">
-      <string>Composer/Arranger</string>
+      <string>Title of Musical/Opera/Oratorio</string>
      </property>
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="QLineEdit" name="composerLineEdit"/>
+    <widget class="QLineEdit" name="titleOfMusicalLineEdit"/>
    </item>
    <item row="2" column="0">
-    <widget class="QLabel" name="opusLabel">
+    <widget class="QLabel" name="composerLabel">
      <property name="text">
-      <string>Opus No.</string>
+      <string>Composer/Arranger/Author</string>
      </property>
     </widget>
    </item>
    <item row="2" column="1">
-    <widget class="QLineEdit" name="opusNoLineEdit"/>
+    <widget class="QLineEdit" name="composerLineEdit"/>
    </item>
    <item row="3" column="0">
-    <widget class="QLabel" name="movementLabel">
-     <property name="text">
-      <string>Movement</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="1">
-    <widget class="QLineEdit" name="movementLineEdit"/>
-   </item>
-   <item row="4" column="0">
     <widget class="QLabel" name="performanceTimeLabel">
      <property name="text">
       <string>Performance Time (mm:ss)</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="1">
+   <item row="3" column="1">
     <widget class="QTimeEdit" name="performanceTimeEdit">
      <property name="maximumDateTime">
       <datetime>

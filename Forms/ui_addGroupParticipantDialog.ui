@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>459</width>
-    <height>539</height>
+    <height>601</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -65,7 +65,7 @@
      <item row="1" column="0">
       <widget class="QLabel" name="groupSizeLabel">
        <property name="text">
-        <string>Group Size</string>
+        <string>Number of Participants</string>
        </property>
       </widget>
      </item>
@@ -114,7 +114,56 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="0" colspan="2">
+     <item row="5" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="chooseContactBtn">
+         <property name="text">
+          <string>Choose...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="createContactBtn">
+         <property name="text">
+          <string>Create New...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="earliestPerformanceTimeLabel">
+       <property name="text">
+        <string>Earliest Performance Time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QTimeEdit" name="earliestPerformanceTimeTimeEdit">
+       <property name="time">
+        <time>
+         <hour>9</hour>
+         <minute>0</minute>
+         <second>0</second>
+        </time>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0" colspan="2">
       <widget class="QGroupBox" name="groupBox">
        <property name="title">
         <string>Participants (if 4 or fewer)</string>
@@ -291,36 +340,23 @@
        </layout>
       </widget>
      </item>
-     <item row="5" column="1">
-      <layout class="QHBoxLayout" name="horizontalLayout_9">
-       <item>
-        <spacer name="horizontalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="chooseContactBtn">
-         <property name="text">
-          <string>Choose...</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="createContactBtn">
-         <property name="text">
-          <string>Create New...</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+     <item row="7" column="0">
+      <widget class="QLabel" name="latestPerformanceTimeLabel">
+       <property name="text">
+        <string>Latest Performance Time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QTimeEdit" name="latestPerformanceTimeTimeEdit">
+       <property name="time">
+        <time>
+         <hour>15</hour>
+         <minute>0</minute>
+         <second>0</second>
+        </time>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
