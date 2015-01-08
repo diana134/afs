@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addSoloParticipantDialog.ui'
 #
-# Created: Tue Jan  6 21:02:48 2015
+# Created: Wed Jan  7 20:02:53 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -27,7 +27,7 @@ class Ui_AddSoloParticipantDialog(object):
     def setupUi(self, AddSoloParticipantDialog):
         AddSoloParticipantDialog.setObjectName(_fromUtf8("AddSoloParticipantDialog"))
         AddSoloParticipantDialog.setWindowModality(QtCore.Qt.ApplicationModal)
-        AddSoloParticipantDialog.resize(400, 418)
+        AddSoloParticipantDialog.resize(400, 449)
         self.gridLayout = QtGui.QGridLayout(AddSoloParticipantDialog)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
         self.cancelBtn = QtGui.QPushButton(AddSoloParticipantDialog)
@@ -119,16 +119,16 @@ class Ui_AddSoloParticipantDialog(object):
         self.parentLineEdit = QtGui.QLineEdit(AddSoloParticipantDialog)
         self.parentLineEdit.setObjectName(_fromUtf8("parentLineEdit"))
         self.formLayout.setWidget(2, QtGui.QFormLayout.FieldRole, self.parentLineEdit)
-        self.ageLineEdit = QtGui.QLineEdit(AddSoloParticipantDialog)
-        self.ageLineEdit.setEnabled(True)
-        self.ageLineEdit.setObjectName(_fromUtf8("ageLineEdit"))
-        self.formLayout.setWidget(10, QtGui.QFormLayout.FieldRole, self.ageLineEdit)
         self.schoolGradeLabel = QtGui.QLabel(AddSoloParticipantDialog)
         self.schoolGradeLabel.setObjectName(_fromUtf8("schoolGradeLabel"))
         self.formLayout.setWidget(12, QtGui.QFormLayout.LabelRole, self.schoolGradeLabel)
         self.schoolGradeLineEdit = QtGui.QLineEdit(AddSoloParticipantDialog)
         self.schoolGradeLineEdit.setObjectName(_fromUtf8("schoolGradeLineEdit"))
         self.formLayout.setWidget(12, QtGui.QFormLayout.FieldRole, self.schoolGradeLineEdit)
+        self.ageSpinBox = QtGui.QSpinBox(AddSoloParticipantDialog)
+        self.ageSpinBox.setMinimum(8)
+        self.ageSpinBox.setObjectName(_fromUtf8("ageSpinBox"))
+        self.formLayout.setWidget(10, QtGui.QFormLayout.FieldRole, self.ageSpinBox)
         self.gridLayout.addLayout(self.formLayout, 0, 0, 1, 3)
 
         self.retranslateUi(AddSoloParticipantDialog)
@@ -145,7 +145,6 @@ class Ui_AddSoloParticipantDialog(object):
         AddSoloParticipantDialog.setTabOrder(self.dateOfBirthDateEdit, self.schoolAttendingLineEdit)
         AddSoloParticipantDialog.setTabOrder(self.schoolAttendingLineEdit, self.addParticipantBtn)
         AddSoloParticipantDialog.setTabOrder(self.addParticipantBtn, self.cancelBtn)
-        AddSoloParticipantDialog.setTabOrder(self.cancelBtn, self.ageLineEdit)
 
     def retranslateUi(self, AddSoloParticipantDialog):
         AddSoloParticipantDialog.setWindowTitle(_translate("AddSoloParticipantDialog", "Add Solo Participant", None))

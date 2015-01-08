@@ -20,7 +20,7 @@ class Participant(object):
 
 class SoloParticipant(Participant):
     """Holds participant data (name, address, contact info, etc) as strings"""
-    def __init__(self, first="", last="", address="", town="", postal="", home="", cell="", email="", dob="", schoolAttending="", parent=""):
+    def __init__(self, first="", last="", address="", town="", postal="", home="", cell="", email="", dob="", schoolAttending="", parent="", age="", schoolGrade=""):
         self.first = first
         self.last = last
         self.address = address
@@ -32,6 +32,8 @@ class SoloParticipant(Participant):
         self.dob = dob
         self.schoolAttending = schoolAttending
         self.parent = parent
+        self.age = age
+        self.schoolGrade = schoolGrade
 
     def isEqualTo(self, obj):
         """check if obj is equal to this SoloParticipant"""

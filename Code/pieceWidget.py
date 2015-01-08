@@ -29,9 +29,8 @@ class PieceWidget(QWidget):
         # Initialize ui if piece was given
         if piece is not None:
             self.ui.titleLineEdit.setText(piece['title'])
+            self.ui.titleOfMusicalLineEdit.setText(piece['titleOfMusical'])
             self.ui.composerLineEdit.setText(piece['composerArranger'])
-            self.ui.opusNoLineEdit.setText(piece['opusNo'])
-            self.ui.movementLineEdit.setText(piece['movement'])
             time = piece['performanceTime']
             if len(piece['performanceTime']) < 5:
                 # pad with leading 0 
@@ -41,9 +40,8 @@ class PieceWidget(QWidget):
     def clearFields(self):
         """Clears and resets the fields"""
         self.ui.titleLineEdit.clear()
+        self.ui.titleOfMusicalLineEdit.clear()
         self.ui.composerLineEdit.clear()
-        self.ui.opusNoLineEdit.clear()
-        self.ui.movementLineEdit.clear()
         self.ui.performanceTimeEdit.setTime(QTime(0, 0, 0))
 
     def getFields(self):
@@ -51,12 +49,10 @@ class PieceWidget(QWidget):
         fields = {}
         fields['title'] = str(self.ui.titleLineEdit.text()).strip()
         fields['title'] = sanitize(fields['title'])
+        fields['titleOfMusical'] = str(self.ui.titleOfMusicalLineEdit.text()).strip()
+        fields['titleOfMusical'] = sanitize(fields['titleOfMusical'])
         fields['composerArranger'] = str(self.ui.composerLineEdit.text()).strip()
         fields['composerArranger'] = sanitize(fields['composerArranger'])
-        fields['opusNo'] = str(self.ui.opusNoLineEdit.text()).strip()
-        fields['opusNo'] = sanitize(fields['opusNo'])
-        fields['movement'] = str(self.ui.movementLineEdit.text()).strip()
-        fields['movement'] = sanitize(fields['movement'])
         # Don't need to sanitize a timeEdit
         fields['performanceTime'] = str(self.ui.performanceTimeEdit.time().toString("m:ss"))
 
@@ -115,6 +111,5 @@ class PieceWidget(QWidget):
         self.ui.titleOfMusicalLabel.setEnabled(False)
         self.ui.titleOfMusicalLineEdit.setEnabled(False)
         self.ui.titleOfMusicalLineEdit.clear()
-        self.ui.composerLabel.setEnabled(False)
-        self.ui.composerLineEdit.setEnabled(False)
-        self.ui.composerLineEdit.clear()
+        self.ui.composerLabel.setEnabled(True)
+        self.ui.composerLineEdit.setEnabled(True)

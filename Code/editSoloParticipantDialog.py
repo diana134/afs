@@ -42,8 +42,10 @@ class EditSoloParticipantDialog(QDialog):
         self.ui.cellPhoneLineEdit.setText(humanPhoneNumberFormat(self.participant.cell))
         self.ui.emailLineEdit.setText(self.participant.email)
         self.ui.dateOfBirthDateEdit.setDate(QDate.fromString(self.participant.dob, "yyyy-MM-dd"))
+        self.ui.ageLabel.setText("Age as of Jan. 1 {0}".format(QDate.currentDate().year()))
         self.ui.schoolAttendingLineEdit.setText(self.participant.schoolAttending)
-        self.ui.parent.setText(self.participant.parent)
+        self.ui.parentLineEdit.setText(self.participant.parent)
+        self.ui.schoolGradeLineEdit.setText(self.participant.schoolGrade)
 
         # Set the age display
         self.dob_changed()
@@ -56,6 +58,15 @@ class EditSoloParticipantDialog(QDialog):
         self.ui.addParticipantBtn.clicked.connect(self.addParticipantBtn_clicked)
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
         self.ui.dateOfBirthDateEdit.dateChanged.connect(self.dob_changed)
+
+    def dobValid(self):
+        """checks if the date of birth is valid given the age; if age is blank returns True"""
+        if self.ui.age.text() != "":
+            dob = self.ui.dateOfBirthDateEdit.date()
+            compareDate = QDate(QDate.currentDate().year(), 1, 1)
+            age = int(dob.daysTo(compareDate) / 365)
+            return age == int(self.ui.age.text())
+        return False
 
     ### Slots ###
 
@@ -87,6 +98,15 @@ class EditSoloParticipantDialog(QDialog):
         schoolAttending = sanitize(schoolAttending)
         parent = str(self.ui.parentLineEdit.text()).strip()
         parent = sanitize(parent)
+        # Don't need to sanitize this one, it can only be a number
+        age = str(self.ui.ageLineEdit.cleanText())
+        schoolGrade = str(self.ui.schoolGradeLineEdit.text()).strip()
+        schoolGrade = sanitize(schoolGrade)
+
+        # Check if dob is valid relative to age
+        # if not, we won't save dob
+        if not self.dobValid():
+            dob = ""
 
         # Check for empty fields
         if first is None or first == "":
@@ -141,6 +161,8 @@ class EditSoloParticipantDialog(QDialog):
         self.participant.dob = dob
         self.participant.schoolAttending = schoolAttending
         self.participant.parent = parent
+        self.participant.age = age
+        self.participant.schoolGrade = schoolGrade
         result = dbInteractionInstance.updateSoloParticipant(self.participantId, self.participant)
         if result == "":
             QMessageBox.information(self, 'Edit Participant', 'Successfully updated participant', QMessageBox.Ok)
@@ -155,4 +177,4 @@ class EditSoloParticipantDialog(QDialog):
         dob = self.ui.dateOfBirthDateEdit.date()
         compareDate = QDate(QDate.currentDate().year(), 1, 1)
         age = int(dob.daysTo(compareDate) / 365)
-        self.ui.ageLineEdit.setText("{0}".format(age))
+        self.ui.ageSpinBox.setValue(age)

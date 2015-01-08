@@ -22,6 +22,7 @@ class AddSoloParticipantDialog(QDialog):
         self.defaultDate = QDate(defaultYear, 1, 1)
         self.ui.dateOfBirthDateEdit.setDate(self.defaultDate)
         # Set the age display
+        self.ui.ageLabel.setText("Age as of Jan. 1 {0}".format(QDate.currentDate().year()))
         self.dob_changed()
         # Initialize class variables
         self.testing = testing
@@ -52,7 +53,18 @@ class AddSoloParticipantDialog(QDialog):
         self.ui.emailLineEdit.clear()
         self.ui.dateOfBirthDateEdit.setDate(self.defaultDate)
         self.ui.schoolAttendingLineEdit.clear()
-        self.ui.parent.clear()
+        self.ui.parentLineEdit.clear()
+        self.ui.ageSpinBox.setValue(18)
+        self.ui.schoolGradeLineEdit.clear()
+
+    def dobValid(self):
+        """checks if the date of birth is valid given the age; if age is blank returns True"""
+        if self.ui.age.text() != "":
+            dob = self.ui.dateOfBirthDateEdit.date()
+            compareDate = QDate(QDate.currentDate().year(), 1, 1)
+            age = int(dob.daysTo(compareDate) / 365)
+            return age == int(self.ui.age.text())
+        return False
 
     ### Slots ###
 
@@ -84,6 +96,15 @@ class AddSoloParticipantDialog(QDialog):
         schoolAttending = sanitize(schoolAttending)
         parent = str(self.ui.parentLineEdit.text()).strip()
         parent = sanitize(parent)
+        # Don't need to sanitize this one, it can only be a number
+        age = str(self.ui.ageLineEdit.cleanText())
+        schoolGrade = str(self.ui.schoolGradeLineEdit.text()).strip()
+        schoolGrade = sanitize(schoolGrade)
+
+        # Check if dob is valid relative to age
+        # if not, we won't save dob
+        if not self.dobValid():
+            dob = ""
 
         # Check for empty fields
         if first is None or first == "":
@@ -126,7 +147,7 @@ class AddSoloParticipantDialog(QDialog):
                 QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
                 return
 
-        self.p = SoloParticipant(first, last, address, city, postal, home, cell, email, dob, schoolAttending, parent)
+        self.p = SoloParticipant(first, last, address, city, postal, home, cell, email, dob, schoolAttending, parent, age, schoolGrade)
         result = dbInteractionInstance.addSoloParticipant(self.p)
         if result == "":
             QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
@@ -143,4 +164,4 @@ class AddSoloParticipantDialog(QDialog):
         dob = self.ui.dateOfBirthDateEdit.date()
         compareDate = QDate(QDate.currentDate().year(), 1, 1)
         age = int(dob.daysTo(compareDate) / 365)
-        self.ui.ageLineEdit.setText("{0}".format(age))
+        self.ui.ageSpinBox.setValue(age)

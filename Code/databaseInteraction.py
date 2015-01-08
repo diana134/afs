@@ -69,8 +69,8 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.prepare("INSERT INTO soloparticipants \
-                (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth, school_attending, parent) \
-                VALUES (:first, :last, :address, :town, :postal, :home, :cell, :email, :dob, :schoolAttending, :parent)")
+                (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth, school_attending, parent, age, school_grade) \
+                VALUES (:first, :last, :address, :town, :postal, :home, :cell, :email, :dob, :schoolAttending, :parent, :age, :schoolGrade)")
             query.bindValue(":first", sp.first)
             query.bindValue(":last", sp.last)
             query.bindValue(":address", sp.address)
@@ -82,6 +82,8 @@ class DatabaseInteraction(object):
             query.bindValue(":dob", sp.dob)
             query.bindValue(":schoolAttending", sp.schoolAttending)
             query.bindValue(":parent", sp.parent)
+            query.bindValue(":age", sp.age)
+            query.bindValue(":schoolGrade", sp.schoolGrade)
             query.exec_()
             self.soloParticipantModel.select()
             return ""
@@ -96,7 +98,7 @@ class DatabaseInteraction(object):
             query = QSqlQuery(self.conn)
             query.prepare("UPDATE soloparticipants \
                 SET first_name=:first, last_name=:last, address=:address, town=:town, postal_code=:postal,\
-                home_phone=:home, cell_phone=:cell, email=:email, date_of_birth=:dob, school_attending=:schoolAttending, parent=:parent \
+                home_phone=:home, cell_phone=:cell, email=:email, date_of_birth=:dob, school_attending=:schoolAttending, parent=:parent, age=:age, school_grade=:schoolGrade \
                 WHERE id=:id")
             query.bindValue(":first", participant.first)
             query.bindValue(":last", participant.last)
@@ -109,6 +111,8 @@ class DatabaseInteraction(object):
             query.bindValue(":dob", participant.dob)
             query.bindValue(":schoolAttending", participant.schoolAttending)
             query.bindValue(":parent", participant.parent)
+            query.bindValue(":age", participant.age)
+            query.bindValue(":schoolGrade", participant.schoolGrade)
             query.bindValue(":id", participantId)
             query.exec_()
             self.soloParticipantModel.select()
@@ -283,14 +287,13 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.prepare("INSERT INTO selections \
-                (title, performance_time, composer_arranger, opus_no, movement, entry_id) \
-                VALUES (:title, :performanceTime, :composerArranger, :opusNo, :movement, :entryId)")
+                (title, performance_time, composer_arranger, entry_id, title_of_musical) \
+                VALUES (:title, :performanceTime, :composerArranger, :entryId, :titleOfMusical)")
             query.bindValue(":title", selection['title'])
             query.bindValue(":performanceTime", selection['performanceTime'])
             query.bindValue(":composerArranger", selection['composerArranger'])
-            query.bindValue(":opusNo", selection['opusNo'])
-            query.bindValue(":movement", selection['movement'])
             query.bindValue(":entryId", entryId)
+            query.bindValue(":titleOfMusical", selection['titleOfMusical'])
             query.exec_()
         except Exception, e:
             # TODO: log this instead of printing to console

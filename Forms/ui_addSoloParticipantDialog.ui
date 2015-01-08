@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>418</height>
+    <height>449</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -209,13 +209,6 @@
      <item row="2" column="1">
       <widget class="QLineEdit" name="parentLineEdit"/>
      </item>
-     <item row="10" column="1">
-      <widget class="QLineEdit" name="ageLineEdit">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
      <item row="12" column="0">
       <widget class="QLabel" name="schoolGradeLabel">
        <property name="text">
@@ -225,6 +218,13 @@
      </item>
      <item row="12" column="1">
       <widget class="QLineEdit" name="schoolGradeLineEdit"/>
+     </item>
+     <item row="10" column="1">
+      <widget class="QSpinBox" name="ageSpinBox">
+       <property name="minimum">
+        <number>8</number>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -244,7 +244,6 @@
   <tabstop>schoolAttendingLineEdit</tabstop>
   <tabstop>addParticipantBtn</tabstop>
   <tabstop>cancelBtn</tabstop>
-  <tabstop>ageLineEdit</tabstop>
  </tabstops>
  <resources/>
  <connections/>
