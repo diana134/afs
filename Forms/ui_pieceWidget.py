@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_pieceWidget.ui'
 #
-# Created: Tue Jan  6 21:02:48 2015
+# Created: Thu Jan  8 20:14:00 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!

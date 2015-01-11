@@ -10,43 +10,13 @@
     <x>0</x>
     <y>0</y>
     <width>459</width>
-    <height>601</height>
+    <height>423</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Add Group Participant</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="1" column="2">
-    <widget class="QPushButton" name="addParticipantBtn">
-     <property name="text">
-      <string>A&amp;dd Participant</string>
-     </property>
-     <property name="default">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="cancelBtn">
-     <property name="text">
-      <string>&amp;Cancel</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
    <item row="0" column="0" colspan="3">
     <layout class="QFormLayout" name="formLayout_2">
      <property name="fieldGrowthPolicy">
@@ -163,183 +133,6 @@
        </property>
       </widget>
      </item>
-     <item row="8" column="0" colspan="2">
-      <widget class="QGroupBox" name="groupBox">
-       <property name="title">
-        <string>Participants (if 4 or fewer)</string>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_10">
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_9">
-          <item>
-           <widget class="QLineEdit" name="p1LineEdit">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_8">
-            <item>
-             <spacer name="horizontalSpacer_3">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QPushButton" name="chooseP1Btn">
-              <property name="text">
-               <string>Choose...</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="createNewP1Btn">
-              <property name="text">
-               <string>Create New...</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_8">
-          <item>
-           <widget class="QLineEdit" name="p2LineEdit">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_7">
-            <item>
-             <spacer name="horizontalSpacer_4">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QPushButton" name="chooseP2Btn">
-              <property name="text">
-               <string>Choose...</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="createNewP2Btn">
-              <property name="text">
-               <string>Create New...</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_7">
-          <item>
-           <widget class="QLineEdit" name="p3LineEdit">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
-            <item>
-             <spacer name="horizontalSpacer_5">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QPushButton" name="chooseP3Btn">
-              <property name="text">
-               <string>Choose...</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="createNewP3Btn">
-              <property name="text">
-               <string>Create New...</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_6">
-          <item>
-           <widget class="QLineEdit" name="p4LineEdit">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <item>
-             <spacer name="horizontalSpacer_6">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QPushButton" name="chooseP4Btn">
-              <property name="text">
-               <string>Choose...</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="createNewP4Btn">
-              <property name="text">
-               <string>Create New...</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-     </item>
      <item row="7" column="0">
       <widget class="QLabel" name="latestPerformanceTimeLabel">
        <property name="text">
@@ -360,6 +153,43 @@
      </item>
     </layout>
    </item>
+   <item row="3" column="1">
+    <widget class="QPushButton" name="cancelBtn">
+     <property name="text">
+      <string>&amp;Cancel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="2">
+    <widget class="QPushButton" name="addParticipantBtn">
+     <property name="text">
+      <string>A&amp;dd Participant</string>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QTabWidget" name="participantTabWidget">
+     <property name="currentIndex">
+      <number>-1</number>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <tabstops>
@@ -369,21 +199,9 @@
   <tabstop>averageAgeLineEdit</tabstop>
   <tabstop>chooseContactBtn</tabstop>
   <tabstop>createContactBtn</tabstop>
-  <tabstop>chooseP1Btn</tabstop>
-  <tabstop>createNewP1Btn</tabstop>
-  <tabstop>chooseP2Btn</tabstop>
-  <tabstop>createNewP2Btn</tabstop>
-  <tabstop>chooseP3Btn</tabstop>
-  <tabstop>createNewP3Btn</tabstop>
-  <tabstop>chooseP4Btn</tabstop>
-  <tabstop>createNewP4Btn</tabstop>
   <tabstop>addParticipantBtn</tabstop>
   <tabstop>cancelBtn</tabstop>
-  <tabstop>p3LineEdit</tabstop>
-  <tabstop>p1LineEdit</tabstop>
   <tabstop>contactPersonLineEdit</tabstop>
-  <tabstop>p2LineEdit</tabstop>
-  <tabstop>p4LineEdit</tabstop>
  </tabstops>
  <resources/>
  <connections/>

@@ -91,7 +91,7 @@ class AddEntryDialog(QDialog):
         className = sanitize(className)
         instrument = str(self.ui.instrumentLineEdit.text()).strip()
         instrument = sanitize(instrument)
-        schedulingRequirements = str(self.ui.schedulingLineEdit.text()).strip()
+        schedulingRequirements = str(self.ui.schedulingLineEdit.toPlainText()).strip()
         schedulingRequirements = sanitize(schedulingRequirements)
 
         # Check for empty fields

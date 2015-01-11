@@ -8,6 +8,7 @@ from PyQt4.QtGui import QDialog, QMessageBox
 from ui_addGroupParticipantDialog import Ui_AddGroupParticipantDialog
 from addSoloParticipantDialog import AddSoloParticipantDialog
 from chooseParticipantDialog import ChooseParticipantDialog
+from participantWidget import ParticipantWidget
 from participant import GroupParticipant
 from utilities import sanitize, validateName
 from databaseInteraction import dbInteractionInstance
@@ -23,6 +24,9 @@ class AddGroupParticipantDialog(QDialog):
         self.closeAfterAdd = closeAfterAdd
         self.gp = None
         self.participantIds = []
+        # Set up the widgets
+        for i in xrange(0, 6):
+            self.ui.participantTabWidget.addTab(ParticipantWidget(), "Participant {0}".format(i+1))
         # Make the buttons do things
         self.connectSlots()
 
@@ -30,14 +34,6 @@ class AddGroupParticipantDialog(QDialog):
         """connect the various ui signals to their slots"""
         self.ui.addParticipantBtn.clicked.connect(self.addParticipantBtn_clicked)
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
-        self.ui.chooseP1Btn.clicked.connect(self.chooseP1Btn_clicked)
-        self.ui.chooseP2Btn.clicked.connect(self.chooseP2Btn_clicked)
-        self.ui.chooseP3Btn.clicked.connect(self.chooseP3Btn_clicked)
-        self.ui.chooseP4Btn.clicked.connect(self.chooseP4Btn_clicked)
-        self.ui.createNewP1Btn.clicked.connect(self.createNewP1Btn_clicked)
-        self.ui.createNewP2Btn.clicked.connect(self.createNewP2Btn_clicked)
-        self.ui.createNewP3Btn.clicked.connect(self.createNewP3Btn_clicked)
-        self.ui.createNewP4Btn.clicked.connect(self.createNewP4Btn_clicked)
 
     def getGroupParticipant(self):
         """returns the Participant object created from user data"""
@@ -50,10 +46,9 @@ class AddGroupParticipantDialog(QDialog):
         self.ui.groupSizeLineEdit.clear()
         self.ui.schoolGradeLineEdit.clear()
         self.ui.averageAgeLineEdit.clear()
-        self.ui.p1LineEdit.clear()
-        self.ui.p2LineEdit.clear()
-        self.ui.p3LineEdit.clear()
-        self.ui.p4LineEdit.clear()
+        for i in xrange(self.ui.participantTabWidget.count()):
+            participantWidget = self.ui.participantTabWidget.widget(i)
+            participantWidget.clearFields()
 
     ### Slots ###
 
@@ -67,6 +62,10 @@ class AddGroupParticipantDialog(QDialog):
         schoolGrade = sanitize(schoolGrade)
         averageAge = str(self.ui.averageAgeLineEdit.text()).strip()
         averageAge = sanitize(averageAge)
+        for i in xrange(self.ui.participantTabWidget.count()):
+            participantWidget = self.ui.participantTabWidget.widget(i)
+            if participantWidget.participantId is not None:
+                self.participantIds.append(participantWidget.participantId)
         participants = ','.join(self.participantIds)
         
         # Check for empty fields
@@ -113,60 +112,3 @@ class AddGroupParticipantDialog(QDialog):
 
     def cancelBtn_clicked(self):
         self.reject()
-
-    def chooseBtn_clicked(self, lineToFill):
-        """opens Choose Participant Dialog"""
-        dialog = ChooseParticipantDialog()
-        # For Modal dialog
-        result = dialog.exec_()
-
-        if result == True:
-            pId = dialog.getParticipantId()
-            self.participantIds.append(pId)
-            # Use the id to get the name for display
-            p = dbInteractionInstance.getParticipantFromId(pId)
-            name = p.first + " " + p.last
-            lineToFill.setText(name)
-
-    def createNewBtn_clicked(self, lineToFill):
-        """opens Add Solo Participant Dialog"""
-        dialog = AddSoloParticipantDialog(testing=self.testing, closeAfterAdd=True)
-        # For Modal dialog
-        result = dialog.exec_()
-
-        if result == True:
-            p = dialog.getParticipant()
-            lineToFill.setText(p.first + ' ' + p.last)
-            self.participantIds.append(dbInteractionInstance.getLastSoloParticipantId())
-
-    def chooseP1Btn_clicked(self):
-        """opens Choose Participant Dialog"""
-        self.chooseBtn_clicked(self.ui.p1LineEdit)
-
-    def chooseP2Btn_clicked(self):
-        """opens Choose Participant Dialog"""
-        self.chooseBtn_clicked(self.ui.p2LineEdit)
-
-    def chooseP3Btn_clicked(self):
-        """opens Choose Participant Dialog"""
-        self.chooseBtn_clicked(self.ui.p3LineEdit)
-
-    def chooseP4Btn_clicked(self):
-        """opens Choose Participant Dialog"""
-        self.chooseBtn_clicked(self.ui.p4LineEdit)
-
-    def createNewP1Btn_clicked(self):
-        """opens Add Solo Participant Dialog"""
-        self.createNewBtn_clicked(self.ui.p1LineEdit)
-
-    def createNewP2Btn_clicked(self):
-        """opens Add Solo Participant Dialog"""
-        self.createNewBtn_clicked(self.ui.p2LineEdit)
-
-    def createNewP3Btn_clicked(self):
-        """opens Add Solo Participant Dialog"""
-        self.createNewBtn_clicked(self.ui.p3LineEdit)
-
-    def createNewP4Btn_clicked(self):
-        """opens Add Solo Participant Dialog"""
-        self.createNewBtn_clicked(self.ui.p4LineEdit)
