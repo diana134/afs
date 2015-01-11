@@ -27,6 +27,7 @@ class ParticipantWidget(QWidget):
         """connect the various ui signals to their slots"""
         self.ui.chooseParticipantBtn.clicked.connect(self.chooseParticipantBtn_clicked)
         self.ui.createNewParticipantBtn.clicked.connect(self.createNewParticipantBtn_clicked)
+        self.ui.clearParticipantBtn.clicked.connect(self.clearParticipantBtn_clicked)
 
     def clearFields(self):
         self.ui.participantLineEdit.clear()
@@ -74,3 +75,8 @@ class ParticipantWidget(QWidget):
             p = dialog.getParticipant()
             self.ui.participantLineEdit.setText(p.first + ' ' + p.last)
             self.participantId = dbInteractionInstance.getLastSoloParticipantId()
+
+    def clearParticipantBtn_clicked(self):
+        """Clears the Participant line edit"""
+        self.ui.participantLineEdit.clear()
+        self.participantId = None

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_participantWidget.ui'
 #
-# Created: Sat Jan 10 23:01:34 2015
+# Created: Sun Jan 11 16:57:54 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -37,6 +37,9 @@ class Ui_ParticipantWidget(object):
         self.horizontalLayout_8.setObjectName(_fromUtf8("horizontalLayout_8"))
         spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout_8.addItem(spacerItem)
+        self.clearParticipantBtn = QtGui.QPushButton(ParticipantWidget)
+        self.clearParticipantBtn.setObjectName(_fromUtf8("clearParticipantBtn"))
+        self.horizontalLayout_8.addWidget(self.clearParticipantBtn)
         self.chooseParticipantBtn = QtGui.QPushButton(ParticipantWidget)
         self.chooseParticipantBtn.setObjectName(_fromUtf8("chooseParticipantBtn"))
         self.horizontalLayout_8.addWidget(self.chooseParticipantBtn)
@@ -50,6 +53,7 @@ class Ui_ParticipantWidget(object):
 
     def retranslateUi(self, ParticipantWidget):
         ParticipantWidget.setWindowTitle(_translate("ParticipantWidget", "Form", None))
+        self.clearParticipantBtn.setText(_translate("ParticipantWidget", "Clear", None))
         self.chooseParticipantBtn.setText(_translate("ParticipantWidget", "Choose...", None))
         self.createNewParticipantBtn.setText(_translate("ParticipantWidget", "Create New...", None))
 

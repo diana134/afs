@@ -55,6 +55,7 @@ class AddEntryDialog(QDialog):
         self.ui.disciplineComboBox.currentIndexChanged['QString'].connect(self.disciplineComboBox_changed)
         self.ui.addPieceBtn.clicked.connect(self.addPieceBtn_clicked)
         self.ui.tabWidget.tabCloseRequested['int'].connect(self.closeTab)
+        self.ui.clearTeacherBtn.clicked.connect(self.clearTeacherBtn_clicked)
 
     def getEntry(self):
         return self.entry
@@ -239,6 +240,11 @@ class AddEntryDialog(QDialog):
         # rename tabs
         for i in xrange(0, self.ui.tabWidget.count()):
             self.ui.tabWidget.setTabText(i, "Piece {0}".format(i+1))
+
+    def clearTeacherBtn_clicked(self):
+        """Clears the teacher/contact fields"""
+        self.ui.teacherLineEdit.clear()
+        self.teacherId = None
 
     def dance(self):
         self.ui.levelLabel.setEnabled(False)

@@ -39,6 +39,7 @@ class AddGroupParticipantDialog(QDialog):
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
         self.ui.chooseContactBtn.clicked.connect(self.chooseContactBtn_clicked)
         self.ui.createContactBtn.clicked.connect(self.createContactBtn_clicked)
+        self.ui.clearContactBtn.clicked.connect(self.clearContactBtn_clicked)
 
     def getGroupParticipant(self):
         """returns the Participant object created from user data"""
@@ -148,3 +149,8 @@ class AddGroupParticipantDialog(QDialog):
             t = dialog.getTeacher()
             self.ui.teacherLineEdit.setText(t.first + ' ' + t.last)
             self.contactId = dbInteractionInstance.getLastTeacherId()
+
+    def clearContactBtn_clicked(self):
+        """Clears the contact field"""
+        self.ui.contactPersonLineEdit.clear()
+        self.contactId = None

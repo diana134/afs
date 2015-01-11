@@ -37,6 +37,13 @@
       </spacer>
      </item>
      <item>
+      <widget class="QPushButton" name="clearParticipantBtn">
+       <property name="text">
+        <string>Clear</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="chooseParticipantBtn">
        <property name="text">
         <string>Choose...</string>

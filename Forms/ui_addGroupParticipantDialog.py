@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addGroupParticipantDialog.ui'
 #
-# Created: Sun Jan 11 14:25:41 2015
+# Created: Sun Jan 11 16:44:57 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -70,6 +70,9 @@ class Ui_AddGroupParticipantDialog(object):
         self.horizontalLayout_9.setObjectName(_fromUtf8("horizontalLayout_9"))
         spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout_9.addItem(spacerItem)
+        self.clearContactBtn = QtGui.QPushButton(AddGroupParticipantDialog)
+        self.clearContactBtn.setObjectName(_fromUtf8("clearContactBtn"))
+        self.horizontalLayout_9.addWidget(self.clearContactBtn)
         self.chooseContactBtn = QtGui.QPushButton(AddGroupParticipantDialog)
         self.chooseContactBtn.setObjectName(_fromUtf8("chooseContactBtn"))
         self.horizontalLayout_9.addWidget(self.chooseContactBtn)
@@ -132,6 +135,7 @@ class Ui_AddGroupParticipantDialog(object):
         self.schoolGradeLabel.setText(_translate("AddGroupParticipantDialog", "School Grade", None))
         self.averageAgeLabel.setText(_translate("AddGroupParticipantDialog", "Average Age", None))
         self.contactPersonLabel.setText(_translate("AddGroupParticipantDialog", "Contact Person", None))
+        self.clearContactBtn.setText(_translate("AddGroupParticipantDialog", "Clear", None))
         self.chooseContactBtn.setText(_translate("AddGroupParticipantDialog", "Choose...", None))
         self.createContactBtn.setText(_translate("AddGroupParticipantDialog", "Create New...", None))
         self.timeConstraintsGroupBox.setTitle(_translate("AddGroupParticipantDialog", "Time Constraints", None))

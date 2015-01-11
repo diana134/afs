@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addEntryDialog.ui'
 #
-# Created: Mon Jan  5 21:47:20 2015
+# Created: Sun Jan 11 16:57:54 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -94,10 +94,13 @@ class Ui_AddEntryDialog(object):
         self.chooseTeacherBtn = QtGui.QPushButton(AddEntryDialog)
         self.chooseTeacherBtn.setEnabled(True)
         self.chooseTeacherBtn.setObjectName(_fromUtf8("chooseTeacherBtn"))
-        self.gridLayout_3.addWidget(self.chooseTeacherBtn, 0, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.chooseTeacherBtn, 0, 1, 1, 1)
         self.createNewTeacherBtn = QtGui.QPushButton(AddEntryDialog)
         self.createNewTeacherBtn.setObjectName(_fromUtf8("createNewTeacherBtn"))
-        self.gridLayout_3.addWidget(self.createNewTeacherBtn, 0, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.createNewTeacherBtn, 0, 2, 1, 1)
+        self.clearTeacherBtn = QtGui.QPushButton(AddEntryDialog)
+        self.clearTeacherBtn.setObjectName(_fromUtf8("clearTeacherBtn"))
+        self.gridLayout_3.addWidget(self.clearTeacherBtn, 0, 0, 1, 1)
         self.formLayout_2.setLayout(4, QtGui.QFormLayout.FieldRole, self.gridLayout_3)
         self.disciplineLabel = QtGui.QLabel(AddEntryDialog)
         self.disciplineLabel.setObjectName(_fromUtf8("disciplineLabel"))
@@ -185,6 +188,7 @@ class Ui_AddEntryDialog(object):
         self.teacherLabel.setText(_translate("AddEntryDialog", "Teacher/Contact Person", None))
         self.chooseTeacherBtn.setText(_translate("AddEntryDialog", "Choose...", None))
         self.createNewTeacherBtn.setText(_translate("AddEntryDialog", "Create New...", None))
+        self.clearTeacherBtn.setText(_translate("AddEntryDialog", "Clear", None))
         self.disciplineLabel.setText(_translate("AddEntryDialog", "Discipline", None))
         self.disciplineComboBox.setItemText(0, _translate("AddEntryDialog", "Dance", None))
         self.disciplineComboBox.setItemText(1, _translate("AddEntryDialog", "Piano", None))
