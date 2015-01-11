@@ -4,6 +4,7 @@ import sys
 import os.path
 sys.path.insert(0, os.path.join("..", "Forms"))
 from PyQt4.QtGui import QDialog, QMessageBox
+from PyQt4.QtCore import QTime
 
 from ui_addGroupParticipantDialog import Ui_AddGroupParticipantDialog
 # from addSoloParticipantDialog import AddSoloParticipantDialog
@@ -46,6 +47,10 @@ class EditGroupParticipantDialog(QDialog):
         self.ui.groupSizeLineEdit.setText(self.participant.groupSize)
         self.ui.schoolGradeLineEdit.setText(self.participant.schoolGrade)
         self.ui.averageAgeLineEdit.setText(self.participant.averageAge)
+        if self.participant.earliestPerformanceTime != "":
+            self.ui.timeConstraintsGroupBox.setChecked(True)
+            self.ui.earliestPerformanceTimeTimeEdit.setTime(QTime.fromString(self.participant.earliestPerformanceTime, "h:mm A"))
+            self.ui.latestPerformanceTimeTimeEdit.setTime(QTime.fromString(self.participant.latestPerformanceTime, "h:mm A"))
 
         for i in xrange(len(self.participantIds)):
             # participantWidget = self.ui.participantTabWidget.widget(i)
@@ -83,6 +88,11 @@ class EditGroupParticipantDialog(QDialog):
             if participantWidget.participantId is not None:
                 self.participantIds.append(participantWidget.participantId)
         participants = ','.join(self.participantIds)
+        earliestPerformanceTime = ""
+        latestPerformanceTime = ""
+        if self.ui.timeConstraintsGroupBox.isChecked():
+            earliestPerformanceTime = str(self.ui.earliestPerformanceTimeTimeEdit.time().toString("HH:mm"))
+            latestPerformanceTime = str(self.ui.latestPerformanceTimeTimeEdit.time().toString("HH:mm"))
         
         # Check for empty fields
         if groupName is None or groupName == "":
@@ -125,6 +135,8 @@ class EditGroupParticipantDialog(QDialog):
         self.participant.averageAge = averageAge
         self.participant.participants = participants
         self.participant.contact = self.contactId
+        self.participant.earliestPerformanceTime = earliestPerformanceTime
+        self.participant.latestPerformanceTime = latestPerformanceTime
         result = dbInteractionInstance.updateGroupParticipant(self.participantId, self.participant)
         if result == "":
             QMessageBox.information(self, 'Edit Group Participant', 'Successfully updated group participant', QMessageBox.Ok)

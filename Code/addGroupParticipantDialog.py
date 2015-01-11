@@ -74,6 +74,11 @@ class AddGroupParticipantDialog(QDialog):
             if participantWidget.participantId is not None:
                 self.participantIds.append(participantWidget.participantId)
         participants = ','.join(self.participantIds)
+        earliestPerformanceTime = ""
+        latestPerformanceTime = ""
+        if self.ui.timeConstraintsGroupBox.isChecked():
+            earliestPerformanceTime = str(self.ui.earliestPerformanceTimeTimeEdit.time().toString("HH:mm"))
+            latestPerformanceTime = str(self.ui.latestPerformanceTimeTimeEdit.time().toString("HH:mm"))
         
         # Check for empty fields
         if groupName is None or groupName == "":
@@ -109,7 +114,7 @@ class AddGroupParticipantDialog(QDialog):
                 QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
                 return
 
-        self.gp = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants, self.contactId)
+        self.gp = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants, self.contactId, earliestPerformanceTime, latestPerformanceTime)
         result = dbInteractionInstance.addGroupParticipant(self.gp)
         if result == "":
             QMessageBox.information(self, 'Add Group Participant', 'Successfully added new group participant', QMessageBox.Ok)

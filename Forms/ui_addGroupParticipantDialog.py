@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addGroupParticipantDialog.ui'
 #
-# Created: Sun Jan 11 12:52:13 2015
+# Created: Sun Jan 11 14:25:41 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -77,20 +77,28 @@ class Ui_AddGroupParticipantDialog(object):
         self.createContactBtn.setObjectName(_fromUtf8("createContactBtn"))
         self.horizontalLayout_9.addWidget(self.createContactBtn)
         self.formLayout_2.setLayout(5, QtGui.QFormLayout.FieldRole, self.horizontalLayout_9)
-        self.earliestPerformanceTimeLabel = QtGui.QLabel(AddGroupParticipantDialog)
+        self.timeConstraintsGroupBox = QtGui.QGroupBox(AddGroupParticipantDialog)
+        self.timeConstraintsGroupBox.setFlat(False)
+        self.timeConstraintsGroupBox.setCheckable(True)
+        self.timeConstraintsGroupBox.setChecked(False)
+        self.timeConstraintsGroupBox.setObjectName(_fromUtf8("timeConstraintsGroupBox"))
+        self.formLayout = QtGui.QFormLayout(self.timeConstraintsGroupBox)
+        self.formLayout.setObjectName(_fromUtf8("formLayout"))
+        self.earliestPerformanceTimeLabel = QtGui.QLabel(self.timeConstraintsGroupBox)
         self.earliestPerformanceTimeLabel.setObjectName(_fromUtf8("earliestPerformanceTimeLabel"))
-        self.formLayout_2.setWidget(6, QtGui.QFormLayout.LabelRole, self.earliestPerformanceTimeLabel)
-        self.earliestPerformanceTimeTimeEdit = QtGui.QTimeEdit(AddGroupParticipantDialog)
+        self.formLayout.setWidget(0, QtGui.QFormLayout.LabelRole, self.earliestPerformanceTimeLabel)
+        self.earliestPerformanceTimeTimeEdit = QtGui.QTimeEdit(self.timeConstraintsGroupBox)
         self.earliestPerformanceTimeTimeEdit.setTime(QtCore.QTime(9, 0, 0))
         self.earliestPerformanceTimeTimeEdit.setObjectName(_fromUtf8("earliestPerformanceTimeTimeEdit"))
-        self.formLayout_2.setWidget(6, QtGui.QFormLayout.FieldRole, self.earliestPerformanceTimeTimeEdit)
-        self.latestPerformanceTimeLabel = QtGui.QLabel(AddGroupParticipantDialog)
+        self.formLayout.setWidget(0, QtGui.QFormLayout.FieldRole, self.earliestPerformanceTimeTimeEdit)
+        self.latestPerformanceTimeLabel = QtGui.QLabel(self.timeConstraintsGroupBox)
         self.latestPerformanceTimeLabel.setObjectName(_fromUtf8("latestPerformanceTimeLabel"))
-        self.formLayout_2.setWidget(7, QtGui.QFormLayout.LabelRole, self.latestPerformanceTimeLabel)
-        self.latestPerformanceTimeTimeEdit = QtGui.QTimeEdit(AddGroupParticipantDialog)
+        self.formLayout.setWidget(1, QtGui.QFormLayout.LabelRole, self.latestPerformanceTimeLabel)
+        self.latestPerformanceTimeTimeEdit = QtGui.QTimeEdit(self.timeConstraintsGroupBox)
         self.latestPerformanceTimeTimeEdit.setTime(QtCore.QTime(15, 0, 0))
         self.latestPerformanceTimeTimeEdit.setObjectName(_fromUtf8("latestPerformanceTimeTimeEdit"))
-        self.formLayout_2.setWidget(7, QtGui.QFormLayout.FieldRole, self.latestPerformanceTimeTimeEdit)
+        self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.latestPerformanceTimeTimeEdit)
+        self.formLayout_2.setWidget(6, QtGui.QFormLayout.SpanningRole, self.timeConstraintsGroupBox)
         self.gridLayout.addLayout(self.formLayout_2, 0, 0, 1, 3)
         self.cancelBtn = QtGui.QPushButton(AddGroupParticipantDialog)
         self.cancelBtn.setObjectName(_fromUtf8("cancelBtn"))
@@ -126,6 +134,7 @@ class Ui_AddGroupParticipantDialog(object):
         self.contactPersonLabel.setText(_translate("AddGroupParticipantDialog", "Contact Person", None))
         self.chooseContactBtn.setText(_translate("AddGroupParticipantDialog", "Choose...", None))
         self.createContactBtn.setText(_translate("AddGroupParticipantDialog", "Create New...", None))
+        self.timeConstraintsGroupBox.setTitle(_translate("AddGroupParticipantDialog", "Time Constraints", None))
         self.earliestPerformanceTimeLabel.setText(_translate("AddGroupParticipantDialog", "Earliest Performance Time", None))
         self.latestPerformanceTimeLabel.setText(_translate("AddGroupParticipantDialog", "Latest Performance Time", None))
         self.cancelBtn.setText(_translate("AddGroupParticipantDialog", "&Cancel", None))

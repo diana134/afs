@@ -61,13 +61,15 @@ class SoloParticipant(Participant):
 
 class GroupParticipant(Participant):
     """Holds GroupParticipant data (name, size, age, etc) as strings"""
-    def __init__(self, groupName="", groupSize="", schoolGrade="", averageAge="", participants="", contact=""):
+    def __init__(self, groupName="", groupSize="", schoolGrade="", averageAge="", participants="", contact="", earliestPerformanceTime="", latestPerformanceTime=""):
         self.groupName = groupName
         self.groupSize = groupSize
         self.schoolGrade = schoolGrade
         self.averageAge = averageAge
         self.participants = participants
         self.contact = contact
+        self.earliestPerformanceTime = earliestPerformanceTime
+        self.latestPerformanceTime = latestPerformanceTime
 
     def isEqualTo(self, obj):
         """check if obj is equal to this GroupParticipant"""

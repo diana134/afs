@@ -115,40 +115,66 @@
        </item>
       </layout>
      </item>
-     <item row="6" column="0">
-      <widget class="QLabel" name="earliestPerformanceTimeLabel">
-       <property name="text">
-        <string>Earliest Performance Time</string>
+     <item row="6" column="0" colspan="2">
+      <widget class="QGroupBox" name="timeConstraintsGroupBox">
+       <property name="title">
+        <string>Time Constraints</string>
        </property>
-      </widget>
-     </item>
-     <item row="6" column="1">
-      <widget class="QTimeEdit" name="earliestPerformanceTimeTimeEdit">
-       <property name="time">
-        <time>
-         <hour>9</hour>
-         <minute>0</minute>
-         <second>0</second>
-        </time>
+       <property name="flat">
+        <bool>false</bool>
        </property>
-      </widget>
-     </item>
-     <item row="7" column="0">
-      <widget class="QLabel" name="latestPerformanceTimeLabel">
-       <property name="text">
-        <string>Latest Performance Time</string>
+       <property name="checkable">
+        <bool>true</bool>
        </property>
-      </widget>
-     </item>
-     <item row="7" column="1">
-      <widget class="QTimeEdit" name="latestPerformanceTimeTimeEdit">
-       <property name="time">
-        <time>
-         <hour>15</hour>
-         <minute>0</minute>
-         <second>0</second>
-        </time>
+       <property name="checked">
+        <bool>false</bool>
        </property>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="earliestPerformanceTimeLabel">
+          <property name="text">
+           <string>Earliest Performance Time</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QTimeEdit" name="earliestPerformanceTimeTimeEdit">
+          <property name="time">
+           <time>
+            <hour>9</hour>
+            <minute>0</minute>
+            <second>0</second>
+           </time>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="latestPerformanceTimeLabel">
+          <property name="text">
+           <string>Latest Performance Time</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QTimeEdit" name="latestPerformanceTimeTimeEdit">
+          <property name="time">
+           <time>
+            <hour>15</hour>
+            <minute>0</minute>
+            <second>0</second>
+           </time>
+          </property>
+         </widget>
+        </item>
+       </layout>
+       <zorder>latestPerformanceTimeTimeEdit</zorder>
+       <zorder>earliestPerformanceTimeLabel</zorder>
+       <zorder>latestPerformanceTimeLabel</zorder>
+       <zorder>earliestPerformanceTimeTimeEdit</zorder>
+       <zorder>latestPerformanceTimeTimeEdit</zorder>
+       <zorder>earliestPerformanceTimeLabel</zorder>
+       <zorder>latestPerformanceTimeLabel</zorder>
+       <zorder>earliestPerformanceTimeTimeEdit</zorder>
       </widget>
      </item>
     </layout>

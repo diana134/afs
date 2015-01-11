@@ -127,14 +127,16 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.prepare("INSERT INTO groupparticipants \
-                (group_name, group_size, school_grade, average_age, participants, contact) \
-                VALUES (:groupName, :groupSize, :schoolGrade, :averageAge, :participants, :contact)")
+                (group_name, group_size, school_grade, average_age, participants, contact, earliest_performance_time, latest_performance_time) \
+                VALUES (:groupName, :groupSize, :schoolGrade, :averageAge, :participants, :contact, :earliestPerformanceTime, :latestPerformanceTime)")
             query.bindValue(":groupName", gp.groupName)
             query.bindValue(":groupSize", gp.groupSize)
             query.bindValue(":schoolGrade", gp.schoolGrade)
             query.bindValue(":averageAge", gp.averageAge)
             query.bindValue(":participants", gp.participants)
             query.bindValue(":contact", gp.contact)
+            query.bindValue(":earliestPerformanceTime", gp.earliestPerformanceTime)
+            query.bindValue(":latestPerformanceTime", gp.latestPerformanceTime)
             query.exec_()
             self.groupParticipantModel.select()
             return ""
@@ -149,7 +151,7 @@ class DatabaseInteraction(object):
             query = QSqlQuery(self.conn)
             query.prepare("UPDATE groupparticipants \
                 SET group_name=:groupName, group_size=:groupSize, school_grade=:schoolGrade,\
-                average_age=:averageAge, participants=:participants, contact=:contact \
+                average_age=:averageAge, participants=:participants, contact=:contact, earliest_performance_time=:earliestPerformanceTime, latest_performance_time=:latestPerformanceTime \
                 WHERE id=:id")
             query.bindValue(":groupName", participant.groupName)
             query.bindValue(":groupSize", participant.groupSize)
@@ -157,6 +159,8 @@ class DatabaseInteraction(object):
             query.bindValue(":averageAge", participant.averageAge)
             query.bindValue(":participants", participant.participants)
             query.bindValue(":contact", participant.contact)
+            query.bindValue(":earliestPerformanceTime", participant.earliestPerformanceTime)
+            query.bindValue(":latestPerformanceTime", participant.latestPerformanceTime)
             query.bindValue(":id", participantId)
             query.exec_()
             self.groupParticipantModel.select()
