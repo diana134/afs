@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addTeacherDialog.ui'
 #
-# Created: Mon Jan  5 21:47:20 2015
+# Created: Sun Jan 11 13:50:39 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -106,9 +106,9 @@ class Ui_AddTeacherDialog(object):
         AddTeacherDialog.setTabOrder(self.addTeacherBtn, self.cancelBtn)
 
     def retranslateUi(self, AddTeacherDialog):
-        AddTeacherDialog.setWindowTitle(_translate("AddTeacherDialog", "Add Teacher", None))
+        AddTeacherDialog.setWindowTitle(_translate("AddTeacherDialog", "Add Teacher/Contact", None))
         self.cancelBtn.setText(_translate("AddTeacherDialog", "&Cancel", None))
-        self.addTeacherBtn.setText(_translate("AddTeacherDialog", "A&dd Teacher", None))
+        self.addTeacherBtn.setText(_translate("AddTeacherDialog", "A&dd Teacher/Contact", None))
         self.firstNameLabel.setText(_translate("AddTeacherDialog", "First Name", None))
         self.lastNameLabel.setText(_translate("AddTeacherDialog", "Last Name", None))
         self.addressLabel.setText(_translate("AddTeacherDialog", "Address", None))

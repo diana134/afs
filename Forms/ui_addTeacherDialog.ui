@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Add Teacher</string>
+   <string>Add Teacher/Contact</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="2" column="1">
@@ -27,7 +27,7 @@
    <item row="2" column="2">
     <widget class="QPushButton" name="addTeacherBtn">
      <property name="text">
-      <string>A&amp;dd Teacher</string>
+      <string>A&amp;dd Teacher/Contact</string>
      </property>
      <property name="autoDefault">
       <bool>false</bool>

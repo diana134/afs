@@ -6,8 +6,10 @@ sys.path.insert(0, os.path.join("..", "Forms"))
 from PyQt4.QtGui import QDialog, QMessageBox
 
 from ui_addGroupParticipantDialog import Ui_AddGroupParticipantDialog
-from addSoloParticipantDialog import AddSoloParticipantDialog
-from chooseParticipantDialog import ChooseParticipantDialog
+# from addSoloParticipantDialog import AddSoloParticipantDialog
+# from chooseParticipantDialog import ChooseParticipantDialog
+from chooseTeacherDialog import ChooseTeacherDialog
+from addTeacherDialog import AddTeacherDialog
 from utilities import sanitize, validateName
 from databaseInteraction import dbInteractionInstance
 from participantWidget import ParticipantWidget
@@ -32,6 +34,10 @@ class EditGroupParticipantDialog(QDialog):
             self.participantIds = self.participant.participants.split(',')
         else:
             self.participantIds = []
+        self.contactId = self.participant.contact
+        c = dbInteractionInstance.getTeacherFromId(self.contactId)
+        if c is not None:
+            self.ui.contactPersonLineEdit.setText("{0} {1}".format(c.first, c.last))
 
         # Initialize ui with variables
         self.ui.addParticipantBtn.setText("&Update Participant")
@@ -57,6 +63,8 @@ class EditGroupParticipantDialog(QDialog):
         """connect the various ui signals to their slots"""
         self.ui.addParticipantBtn.clicked.connect(self.addParticipantBtn_clicked)
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
+        self.ui.chooseContactBtn.clicked.connect(self.chooseContactBtn_clicked)
+        self.ui.createContactBtn.clicked.connect(self.createContactBtn_clicked)
 
     ### Slots ###
 
@@ -116,6 +124,7 @@ class EditGroupParticipantDialog(QDialog):
         self.participant.schoolGrade = schoolGrade
         self.participant.averageAge = averageAge
         self.participant.participants = participants
+        self.participant.contact = self.contactId
         result = dbInteractionInstance.updateGroupParticipant(self.participantId, self.participant)
         if result == "":
             QMessageBox.information(self, 'Edit Group Participant', 'Successfully updated group participant', QMessageBox.Ok)
@@ -125,3 +134,27 @@ class EditGroupParticipantDialog(QDialog):
 
     def cancelBtn_clicked(self):
         self.reject()
+
+    def chooseContactBtn_clicked(self):
+        """opens Choose Teacher Dialog"""
+        dialog = ChooseTeacherDialog()
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            self.contactId = dialog.getTeacherId()
+            # Use the id to get the name for display
+            t = dbInteractionInstance.getTeacherFromId(self.contactId)
+            name = name = t.first + " " + t.last
+            self.ui.contactPersonLineEdit.setText(name)
+
+    def createContactBtn_clicked(self):
+        """opens Add Teacher Dialog"""
+        dialog = AddTeacherDialog(testing=self.testing, closeAfterAdd=True)
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            t = dialog.getTeacher()
+            self.ui.teacherLineEdit.setText(t.first + ' ' + t.last)
+            self.contactId = dbInteractionInstance.getLastTeacherId()

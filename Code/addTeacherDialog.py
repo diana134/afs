@@ -69,11 +69,11 @@ class AddTeacherDialog(QDialog):
         
         # Check for empty fields
         if first is None or first == "":
-            QMessageBox.warning(self, 'Missing Field', 'Teacher must have a First Name', QMessageBox.Ok)
+            QMessageBox.warning(self, 'Missing Field', 'Must have a First Name', QMessageBox.Ok)
             return
         
         if last is None or last == "":
-            QMessageBox.warning(self, 'Missing Field', 'Teacher must have a Last Name', QMessageBox.Ok)
+            QMessageBox.warning(self, 'Missing Field', 'Must have a Last Name', QMessageBox.Ok)
             return
 
         if email is None or email == "":
@@ -95,12 +95,12 @@ class AddTeacherDialog(QDialog):
         self.teacher = Teacher(first, last, address, city, postal, daytimePhone, eveningPhone, email)
         result = dbInteractionInstance.addTeacher(self.teacher)
         if result == "":
-            QMessageBox.information(self, 'Add Teacher', 'Successfully added new teacher', QMessageBox.Ok)
+            QMessageBox.information(self, 'Add Teacher/Contact', 'Successfully added new teacher/contact', QMessageBox.Ok)
             self.clearFields()
             if self.closeAfterAdd:
                 self.accept()
         else:
-            QMessageBox.critical(self, 'Add Teacher', 'Failed to add new teacher\n{0}'.format(result), QMessageBox.Ok)
+            QMessageBox.critical(self, 'Add Teacher/Contact', 'Failed to add new teacher/contact\n{0}'.format(result), QMessageBox.Ok)
 
     def cancelBtn_clicked(self):
         self.reject()

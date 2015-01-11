@@ -6,8 +6,10 @@ sys.path.insert(0, os.path.join("..", "Forms"))
 from PyQt4.QtGui import QDialog, QMessageBox
 
 from ui_addGroupParticipantDialog import Ui_AddGroupParticipantDialog
-from addSoloParticipantDialog import AddSoloParticipantDialog
-from chooseParticipantDialog import ChooseParticipantDialog
+# from addSoloParticipantDialog import AddSoloParticipantDialog
+# from chooseParticipantDialog import ChooseParticipantDialog
+from chooseTeacherDialog import ChooseTeacherDialog
+from addTeacherDialog import AddTeacherDialog
 from participantWidget import ParticipantWidget
 from participant import GroupParticipant
 from utilities import sanitize, validateName
@@ -24,6 +26,7 @@ class AddGroupParticipantDialog(QDialog):
         self.closeAfterAdd = closeAfterAdd
         self.gp = None
         self.participantIds = []
+        self.contactId = None
         # Set up the widgets
         for i in xrange(0, 6):
             self.ui.participantTabWidget.addTab(ParticipantWidget(), "Participant {0}".format(i+1))
@@ -34,6 +37,8 @@ class AddGroupParticipantDialog(QDialog):
         """connect the various ui signals to their slots"""
         self.ui.addParticipantBtn.clicked.connect(self.addParticipantBtn_clicked)
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
+        self.ui.chooseContactBtn.clicked.connect(self.chooseContactBtn_clicked)
+        self.ui.createContactBtn.clicked.connect(self.createContactBtn_clicked)
 
     def getGroupParticipant(self):
         """returns the Participant object created from user data"""
@@ -46,6 +51,8 @@ class AddGroupParticipantDialog(QDialog):
         self.ui.groupSizeLineEdit.clear()
         self.ui.schoolGradeLineEdit.clear()
         self.ui.averageAgeLineEdit.clear()
+        self.ui.contactPersonLineEdit.clear()
+        self.contactId = None
         for i in xrange(self.ui.participantTabWidget.count()):
             participantWidget = self.ui.participantTabWidget.widget(i)
             participantWidget.clearFields()
@@ -102,7 +109,7 @@ class AddGroupParticipantDialog(QDialog):
                 QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
                 return
 
-        self.gp = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants)
+        self.gp = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants, self.contactId)
         result = dbInteractionInstance.addGroupParticipant(self.gp)
         if result == "":
             QMessageBox.information(self, 'Add Group Participant', 'Successfully added new group participant', QMessageBox.Ok)
@@ -112,3 +119,27 @@ class AddGroupParticipantDialog(QDialog):
 
     def cancelBtn_clicked(self):
         self.reject()
+
+    def chooseContactBtn_clicked(self):
+        """opens Choose Teacher Dialog"""
+        dialog = ChooseTeacherDialog()
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            self.contactId = dialog.getTeacherId()
+            # Use the id to get the name for display
+            t = dbInteractionInstance.getTeacherFromId(self.contactId)
+            name = name = t.first + " " + t.last
+            self.ui.contactPersonLineEdit.setText(name)
+
+    def createContactBtn_clicked(self):
+        """opens Add Teacher Dialog"""
+        dialog = AddTeacherDialog(testing=self.testing, closeAfterAdd=True)
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            t = dialog.getTeacher()
+            self.ui.teacherLineEdit.setText(t.first + ' ' + t.last)
+            self.contactId = dbInteractionInstance.getLastTeacherId()

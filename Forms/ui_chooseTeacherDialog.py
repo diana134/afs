@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_chooseTeacherDialog.ui'
 #
-# Created: Wed Dec 17 20:25:31 2014
+# Created: Sun Jan 11 13:48:45 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -41,5 +41,5 @@ class Ui_ChooseTeacherDialog(object):
         QtCore.QMetaObject.connectSlotsByName(ChooseTeacherDialog)
 
     def retranslateUi(self, ChooseTeacherDialog):
-        ChooseTeacherDialog.setWindowTitle(_translate("ChooseTeacherDialog", "Dialog", None))
+        ChooseTeacherDialog.setWindowTitle(_translate("ChooseTeacherDialog", "Choose Teacher/Contact", None))
 

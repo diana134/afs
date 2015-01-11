@@ -19,13 +19,13 @@ class EditTeacherDialog(QDialog):
         # Initialize class variables
         self.testing = testing
         if teacherId is None:
-            QMessageBox.critical(self, 'Invalid Teacher', "An invalid teacher was chosen.", QMessageBox.Ok)
+            QMessageBox.critical(self, 'Invalid Teacher/Contact', "An invalid teacher/contact was chosen.", QMessageBox.Ok)
             self.reject()
         self.teacherId = teacherId
         self.teacher = dbInteractionInstance.getTeacherFromId(teacherId)
 
         # Initialize ui with variables
-        self.ui.addTeacherBtn.setText("&Update Teacher")
+        self.ui.addTeacherBtn.setText("&Update Teacher/Contact")
         self.setWindowTitle("Edit Teacher")
         self.ui.firstNameLineEdit.setText(self.teacher.first)
         self.ui.lastNameLineEdit.setText(self.teacher.last)
@@ -70,11 +70,11 @@ class EditTeacherDialog(QDialog):
         
         # Check for empty fields
         if first is None or first == "":
-            QMessageBox.warning(self, 'Missing Field', 'Teacher must have a First Name', QMessageBox.Ok)
+            QMessageBox.warning(self, 'Missing Field', 'Must have a First Name', QMessageBox.Ok)
             return
         
         if last is None or last == "":
-            QMessageBox.warning(self, 'Missing Field', 'Teacher must have a Last Name', QMessageBox.Ok)
+            QMessageBox.warning(self, 'Missing Field', 'Must have a Last Name', QMessageBox.Ok)
             return
 
         if email is None or email == "":
@@ -103,10 +103,10 @@ class EditTeacherDialog(QDialog):
         self.teacher.email = email
         result = dbInteractionInstance.updateTeacher(self.teacherId, self.teacher)
         if result == "":
-            QMessageBox.information(self, 'Edit Teacher', 'Successfully updated teacher', QMessageBox.Ok)
+            QMessageBox.information(self, 'Edit Teacher/Contact', 'Successfully updated teacher/contact', QMessageBox.Ok)
             self.accept()
         else:
-            QMessageBox.critical(self, 'Edit Teacher', 'Failed to update teacher\n{0}'.format(result), QMessageBox.Ok)
+            QMessageBox.critical(self, 'Edit Teacher/Contact', 'Failed to update teacher/contact\n{0}'.format(result), QMessageBox.Ok)
 
     def cancelBtn_clicked(self):
         self.reject()
