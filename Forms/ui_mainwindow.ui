@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>384</width>
-    <height>291</height>
+    <width>526</width>
+    <height>280</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,69 +16,108 @@
   <property name="animated">
    <bool>true</bool>
   </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="title">
+       <string>Entries</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="addEntryBtn">
+         <property name="text">
+          <string>Add &amp;Entry</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="editEntryBtn">
+         <property name="text">
+          <string>Edit E&amp;ntry</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
     <item row="2" column="0">
-     <widget class="QPushButton" name="makeScheduleBtn">
-      <property name="text">
-       <string>&amp;Make Schedule</string>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Participants</string>
       </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QPushButton" name="addSoloParticipantBtn">
-      <property name="text">
-       <string>Add &amp;Solo Participant</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QPushButton" name="addEntryBtn">
-      <property name="text">
-       <string>Add &amp;Entry</string>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="addSoloParticipantBtn">
+         <property name="text">
+          <string>Add &amp;Solo Participant</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="addGroupParticipantBtn">
+         <property name="text">
+          <string>Add &amp;Group Participant</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="editParticipantBtn">
+         <property name="text">
+          <string>E&amp;dit Participant</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QPushButton" name="loadScheduleBtn">
-      <property name="text">
-       <string>&amp;Load Schedule</string>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>Teachers/Contacts</string>
       </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="addTeacherBtn">
+         <property name="text">
+          <string>Add &amp;Teacher/Contact</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="editTeacherBtn">
+         <property name="text">
+          <string>Ed&amp;it Teacher/Contact</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
-    <item row="3" column="0">
-     <widget class="QPushButton" name="editParticipantBtn">
-      <property name="text">
-       <string>E&amp;dit Participant</string>
+    <item row="1" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="title">
+       <string>Schedules</string>
       </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QPushButton" name="addTeacherBtn">
-      <property name="text">
-       <string>Add &amp;Teacher</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QPushButton" name="addGroupParticipantBtn">
-      <property name="text">
-       <string>Add &amp;Group Participant</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QPushButton" name="editTeacherBtn">
-      <property name="text">
-       <string>Ed&amp;it Teacher</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QPushButton" name="editEntryBtn">
-      <property name="text">
-       <string>Edit E&amp;ntry</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="makeScheduleBtn">
+         <property name="text">
+          <string>&amp;Make Schedule</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="loadScheduleBtn">
+         <property name="text">
+          <string>&amp;Load Schedule</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>
