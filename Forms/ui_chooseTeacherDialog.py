@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_chooseTeacherDialog.ui'
 #
-# Created: Sun Jan 11 13:48:45 2015
+# Created: Sun Jan 11 19:07:31 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -30,7 +30,11 @@ class Ui_ChooseTeacherDialog(object):
         self.verticalLayout = QtGui.QVBoxLayout(ChooseTeacherDialog)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
         self.teacherTableView = QtGui.QTableView(ChooseTeacherDialog)
+        self.teacherTableView.setAlternatingRowColors(True)
+        self.teacherTableView.setSortingEnabled(True)
         self.teacherTableView.setObjectName(_fromUtf8("teacherTableView"))
+        self.teacherTableView.horizontalHeader().setSortIndicatorShown(False)
+        self.teacherTableView.verticalHeader().setStretchLastSection(True)
         self.verticalLayout.addWidget(self.teacherTableView)
         self.btnBox = QtGui.QDialogButtonBox(ChooseTeacherDialog)
         self.btnBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)

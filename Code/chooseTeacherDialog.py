@@ -18,6 +18,7 @@ class ChooseTeacherDialog(QDialog):
         self.ui.teacherTableView.setModel(dbInteractionInstance.teacherModel)
         self.ui.teacherTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.teacherTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.ui.teacherTableView.hideColumn(0)
         # Initialize class variables
         self.teacherId = None
         # Make the buttons do things

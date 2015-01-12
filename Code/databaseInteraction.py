@@ -4,6 +4,7 @@ import sys
 import os
 # import sqlite3
 from PyQt4.QtSql import QSqlDatabase, QSqlTableModel, QSqlQuery
+from PyQt4.QtCore import Qt
 
 from participant import SoloParticipant, GroupParticipant
 from teacher import Teacher
@@ -34,25 +35,63 @@ class DatabaseInteraction(object):
         self.soloParticipantModel = QSqlTableModel(db=self.conn)
         self.soloParticipantModel.setTable("soloparticipants")
         self.soloParticipantModel.select()
-        # TODO set headers
+        # set headers
+        self.soloParticipantModel.setHeaderData(0, Qt.Horizontal, "First")
+        self.soloParticipantModel.setHeaderData(1, Qt.Horizontal, "Last")
+        self.soloParticipantModel.setHeaderData(2, Qt.Horizontal, "Address")
+        self.soloParticipantModel.setHeaderData(3, Qt.Horizontal, "Town")
+        self.soloParticipantModel.setHeaderData(4, Qt.Horizontal, "Postal Code")
+        self.soloParticipantModel.setHeaderData(5, Qt.Horizontal, "Home Phone")
+        self.soloParticipantModel.setHeaderData(6, Qt.Horizontal, "Cell Phone")
+        self.soloParticipantModel.setHeaderData(7, Qt.Horizontal, "Email")
+        self.soloParticipantModel.setHeaderData(8, Qt.Horizontal, "Date of Birth")
+        self.soloParticipantModel.setHeaderData(10, Qt.Horizontal, "School Attending")
+        self.soloParticipantModel.setHeaderData(11, Qt.Horizontal, "Parent")
+        self.soloParticipantModel.setHeaderData(12, Qt.Horizontal, "Age")
+        self.soloParticipantModel.setHeaderData(13, Qt.Horizontal, "School Grade")
 
         # GroupParticipant
         self.groupParticipantModel = QSqlTableModel(db=self.conn)
         self.groupParticipantModel.setTable("groupparticipants")
         self.groupParticipantModel.select()
-        # TODO set headers
+        # set headers
+        self.groupParticipantModel.setHeaderData(1, Qt.Horizontal, "Group Name")
+        self.groupParticipantModel.setHeaderData(2, Qt.Horizontal, "Group Size")
+        self.groupParticipantModel.setHeaderData(3, Qt.Horizontal, "School Grade")
+        self.groupParticipantModel.setHeaderData(4, Qt.Horizontal, "Average Age")
+        self.groupParticipantModel.setHeaderData(5, Qt.Horizontal, "Participants")
+        self.groupParticipantModel.setHeaderData(6, Qt.Horizontal, "Contact")
+        self.groupParticipantModel.setHeaderData(7, Qt.Horizontal, "Earliest Performance Time")
+        self.groupParticipantModel.setHeaderData(8, Qt.Horizontal, "Latest Performance Time")
 
         # Teacher
         self.teacherModel = QSqlTableModel(db=self.conn)
         self.teacherModel.setTable("teachers")
         self.teacherModel.select()
-        # TODO set headers
+        # set headers
+        self.teacherModel.setHeaderData(1, Qt.Horizontal, "First")
+        self.teacherModel.setHeaderData(2, Qt.Horizontal, "Last")
+        self.teacherModel.setHeaderData(3, Qt.Horizontal, "Address")
+        self.teacherModel.setHeaderData(4, Qt.Horizontal, "Town")
+        self.teacherModel.setHeaderData(5, Qt.Horizontal, "Postal Code")
+        self.teacherModel.setHeaderData(6, Qt.Horizontal, "Daytime Phone")
+        self.teacherModel.setHeaderData(7, Qt.Horizontal, "Evening Phone")
+        self.teacherModel.setHeaderData(8, Qt.Horizontal, "Email")
 
         # Entry
         self.entryModel = QSqlTableModel(db=self.conn)
         self.entryModel.setTable("entries")
         self.entryModel.select()
-        # TODO set headers
+        # set headers
+        self.entryModel.setHeaderData(1, Qt.Horizontal, "Participant")
+        self.entryModel.setHeaderData(2, Qt.Horizontal, "Teacher")
+        self.entryModel.setHeaderData(3, Qt.Horizontal, "Discipline")
+        self.entryModel.setHeaderData(4, Qt.Horizontal, "Level")
+        self.entryModel.setHeaderData(5, Qt.Horizontal, "Class Number")
+        self.entryModel.setHeaderData(6, Qt.Horizontal, "Class Name")
+        self.entryModel.setHeaderData(7, Qt.Horizontal, "Instrument")
+        self.entryModel.setHeaderData(8, Qt.Horizontal, "Years of Instruction")
+        self.entryModel.setHeaderData(9, Qt.Horizontal, "Scheduling Requirements")
 
     def close(self):
         """Clean everything up and close the connection"""

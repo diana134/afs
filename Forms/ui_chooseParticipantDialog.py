@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_chooseParticipantDialog.ui'
 #
-# Created: Wed Dec 17 20:25:31 2014
+# Created: Sun Jan 11 18:51:20 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -38,9 +38,13 @@ class Ui_ChooseParticipantDialog(object):
         self.verticalLayout_3.setObjectName(_fromUtf8("verticalLayout_3"))
         self.soloParticipantTableView = QtGui.QTableView(self.soloParticipantsTab)
         self.soloParticipantTableView.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
+        self.soloParticipantTableView.setAlternatingRowColors(True)
         self.soloParticipantTableView.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
         self.soloParticipantTableView.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.soloParticipantTableView.setSortingEnabled(True)
         self.soloParticipantTableView.setObjectName(_fromUtf8("soloParticipantTableView"))
+        self.soloParticipantTableView.horizontalHeader().setSortIndicatorShown(True)
+        self.soloParticipantTableView.verticalHeader().setStretchLastSection(True)
         self.verticalLayout_3.addWidget(self.soloParticipantTableView)
         self.participantTypeTabWidget.addTab(self.soloParticipantsTab, _fromUtf8(""))
         self.groupParticipantsTab = QtGui.QWidget()
@@ -49,9 +53,13 @@ class Ui_ChooseParticipantDialog(object):
         self.verticalLayout_4.setObjectName(_fromUtf8("verticalLayout_4"))
         self.groupParticipantTableView = QtGui.QTableView(self.groupParticipantsTab)
         self.groupParticipantTableView.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
+        self.groupParticipantTableView.setAlternatingRowColors(True)
         self.groupParticipantTableView.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
         self.groupParticipantTableView.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.groupParticipantTableView.setSortingEnabled(True)
         self.groupParticipantTableView.setObjectName(_fromUtf8("groupParticipantTableView"))
+        self.groupParticipantTableView.horizontalHeader().setStretchLastSection(False)
+        self.groupParticipantTableView.verticalHeader().setStretchLastSection(True)
         self.verticalLayout_4.addWidget(self.groupParticipantTableView)
         self.participantTypeTabWidget.addTab(self.groupParticipantsTab, _fromUtf8(""))
         self.verticalLayout.addWidget(self.participantTypeTabWidget)

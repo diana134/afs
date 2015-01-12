@@ -18,6 +18,7 @@ class ChooseParticipantDialog(QDialog):
         self.ui.soloParticipantTableView.setModel(dbInteractionInstance.soloParticipantModel)
         self.ui.soloParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.soloParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.ui.soloParticipantTableView.hideColumn(9)
         # if groupParticipantModel is None:
         #     # Disable Groups tab
         #     self.ui.groupParticipantsTab.setEnabled(False)
@@ -25,6 +26,7 @@ class ChooseParticipantDialog(QDialog):
         self.ui.groupParticipantTableView.setModel(dbInteractionInstance.groupParticipantModel)
         self.ui.groupParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.groupParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.ui.groupParticipantTableView.hideColumn(0)
         # Initialize class variables
         self.participantId = -1
         # Make the buttons do things

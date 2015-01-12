@@ -18,6 +18,7 @@ class ChooseEntryDialog(QDialog):
         self.ui.entryTableView.setModel(dbInteractionInstance.entryModel)
         self.ui.entryTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.entryTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.ui.entryTableView.hideColumn(0)
         # Initialize class variables
         self.entryId = None
         # Make the buttons do things
