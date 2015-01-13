@@ -5,6 +5,7 @@ import os.path
 sys.path.insert(0, os.path.join("..", "Forms"))
 import traceback
 from PyQt4.QtGui import QDialog, QAbstractItemView, QMessageBox, QItemSelectionModel
+from PyQt4.QtCore import Qt
 
 from ui_chooseEntryDialog import Ui_ChooseEntryDialog
 from databaseInteraction import dbInteractionInstance
@@ -16,6 +17,7 @@ class ChooseEntryDialog(QDialog):
         self.ui = Ui_ChooseEntryDialog()
         self.ui.setupUi(self)
         self.ui.entryTableView.setModel(dbInteractionInstance.entryModel)
+        self.ui.entryTableView.model().sort(0, Qt.DescendingOrder)
         self.ui.entryTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.entryModel))
         self.ui.entryTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.entryTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)

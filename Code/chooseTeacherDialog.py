@@ -5,6 +5,7 @@ import os.path
 sys.path.insert(0, os.path.join("..", "Forms"))
 import traceback
 from PyQt4.QtGui import QDialog, QAbstractItemView, QMessageBox, QItemSelectionModel
+from PyQt4.QtCore import Qt
 
 from ui_chooseTeacherDialog import Ui_ChooseTeacherDialog
 from databaseInteraction import dbInteractionInstance
@@ -16,6 +17,7 @@ class ChooseTeacherDialog(QDialog):
         self.ui = Ui_ChooseTeacherDialog()
         self.ui.setupUi(self)
         self.ui.teacherTableView.setModel(dbInteractionInstance.teacherModel)
+        self.ui.teacherTableView.model().sort(0, Qt.DescendingOrder)
         self.ui.teacherTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.teacherModel))
         self.ui.teacherTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.teacherTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)

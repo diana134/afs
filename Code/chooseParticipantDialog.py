@@ -5,6 +5,7 @@ import os.path
 sys.path.insert(0, os.path.join("..", "Forms"))
 import traceback
 from PyQt4.QtGui import QDialog, QAbstractItemView, QMessageBox, QItemSelectionModel
+from PyQt4.QtCore import Qt
 
 from ui_chooseParticipantDialog import Ui_ChooseParticipantDialog
 from databaseInteraction import dbInteractionInstance
@@ -16,6 +17,7 @@ class ChooseParticipantDialog(QDialog):
         self.ui = Ui_ChooseParticipantDialog()
         self.ui.setupUi(self)
         self.ui.soloParticipantTableView.setModel(dbInteractionInstance.soloParticipantModel)
+        self.ui.soloParticipantTableView.model().sort(9, Qt.DescendingOrder)
         self.ui.soloParticipantTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.soloParticipantModel))
         self.ui.soloParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.soloParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
@@ -25,6 +27,7 @@ class ChooseParticipantDialog(QDialog):
         #     self.ui.groupParticipantsTab.setEnabled(False)
         # else:
         self.ui.groupParticipantTableView.setModel(dbInteractionInstance.groupParticipantModel)
+        self.ui.groupParticipantTableView.model().sort(0, Qt.DescendingOrder)
         self.ui.groupParticipantTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.groupParticipantModel))
         self.ui.groupParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.groupParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
