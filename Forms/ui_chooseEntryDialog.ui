@@ -31,11 +31,17 @@
      <property name="sortingEnabled">
       <bool>true</bool>
      </property>
-     <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+     <attribute name="horizontalHeaderHighlightSections">
       <bool>true</bool>
      </attribute>
-     <attribute name="verticalHeaderStretchLastSection">
+     <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
       <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderStretchLastSection">
+      <bool>false</bool>
      </attribute>
     </widget>
    </item>

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_chooseTeacherDialog.ui'
 #
-# Created: Mon Jan 12 22:30:04 2015
+# Created: Mon Jan 12 22:43:11 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_ChooseTeacherDialog(object):
     def setupUi(self, ChooseTeacherDialog):
         ChooseTeacherDialog.setObjectName(_fromUtf8("ChooseTeacherDialog"))
-        ChooseTeacherDialog.resize(817, 397)
+        ChooseTeacherDialog.resize(819, 320)
         self.verticalLayout = QtGui.QVBoxLayout(ChooseTeacherDialog)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
         self.teacherTableView = QtGui.QTableView(ChooseTeacherDialog)
@@ -34,7 +34,8 @@ class Ui_ChooseTeacherDialog(object):
         self.teacherTableView.setSortingEnabled(True)
         self.teacherTableView.setObjectName(_fromUtf8("teacherTableView"))
         self.teacherTableView.horizontalHeader().setSortIndicatorShown(False)
-        self.teacherTableView.verticalHeader().setStretchLastSection(True)
+        self.teacherTableView.verticalHeader().setSortIndicatorShown(False)
+        self.teacherTableView.verticalHeader().setStretchLastSection(False)
         self.verticalLayout.addWidget(self.teacherTableView)
         self.btnBox = QtGui.QDialogButtonBox(ChooseTeacherDialog)
         self.btnBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)

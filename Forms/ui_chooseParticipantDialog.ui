@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>876</width>
-    <height>400</height>
+    <width>862</width>
+    <height>320</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -47,8 +47,11 @@
          <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
           <bool>true</bool>
          </attribute>
+         <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+          <bool>false</bool>
+         </attribute>
          <attribute name="verticalHeaderStretchLastSection">
-          <bool>true</bool>
+          <bool>false</bool>
          </attribute>
         </widget>
        </item>

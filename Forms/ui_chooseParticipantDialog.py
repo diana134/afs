@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_chooseParticipantDialog.ui'
 #
-# Created: Sun Jan 11 18:51:20 2015
+# Created: Mon Jan 12 22:43:05 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -27,7 +27,7 @@ class Ui_ChooseParticipantDialog(object):
     def setupUi(self, ChooseParticipantDialog):
         ChooseParticipantDialog.setObjectName(_fromUtf8("ChooseParticipantDialog"))
         ChooseParticipantDialog.setWindowModality(QtCore.Qt.ApplicationModal)
-        ChooseParticipantDialog.resize(876, 400)
+        ChooseParticipantDialog.resize(862, 320)
         self.verticalLayout = QtGui.QVBoxLayout(ChooseParticipantDialog)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
         self.participantTypeTabWidget = QtGui.QTabWidget(ChooseParticipantDialog)
@@ -44,7 +44,8 @@ class Ui_ChooseParticipantDialog(object):
         self.soloParticipantTableView.setSortingEnabled(True)
         self.soloParticipantTableView.setObjectName(_fromUtf8("soloParticipantTableView"))
         self.soloParticipantTableView.horizontalHeader().setSortIndicatorShown(True)
-        self.soloParticipantTableView.verticalHeader().setStretchLastSection(True)
+        self.soloParticipantTableView.verticalHeader().setSortIndicatorShown(False)
+        self.soloParticipantTableView.verticalHeader().setStretchLastSection(False)
         self.verticalLayout_3.addWidget(self.soloParticipantTableView)
         self.participantTypeTabWidget.addTab(self.soloParticipantsTab, _fromUtf8(""))
         self.groupParticipantsTab = QtGui.QWidget()

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_chooseEntryDialog.ui'
 #
-# Created: Sun Jan 11 18:57:04 2015
+# Created: Mon Jan 12 22:43:05 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -36,8 +36,10 @@ class Ui_ChooseEntryDialog(object):
         self.entryTableView.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
         self.entryTableView.setSortingEnabled(True)
         self.entryTableView.setObjectName(_fromUtf8("entryTableView"))
-        self.entryTableView.verticalHeader().setSortIndicatorShown(True)
-        self.entryTableView.verticalHeader().setStretchLastSection(True)
+        self.entryTableView.horizontalHeader().setHighlightSections(True)
+        self.entryTableView.horizontalHeader().setSortIndicatorShown(True)
+        self.entryTableView.verticalHeader().setSortIndicatorShown(False)
+        self.entryTableView.verticalHeader().setStretchLastSection(False)
         self.verticalLayout.addWidget(self.entryTableView)
         self.btnBox = QtGui.QDialogButtonBox(ChooseEntryDialog)
         self.btnBox.setOrientation(QtCore.Qt.Horizontal)

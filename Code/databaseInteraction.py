@@ -34,6 +34,7 @@ class DatabaseInteraction(object):
         # SoloParticipant
         self.soloParticipantModel = QSqlTableModel(db=self.conn)
         self.soloParticipantModel.setTable("soloparticipants")
+        self.soloParticipantModel.setSort(9, Qt.DescendingOrder)
         self.soloParticipantModel.select()
         # set headers
         self.soloParticipantModel.setHeaderData(0, Qt.Horizontal, "First")
@@ -53,6 +54,7 @@ class DatabaseInteraction(object):
         # GroupParticipant
         self.groupParticipantModel = QSqlTableModel(db=self.conn)
         self.groupParticipantModel.setTable("groupparticipants")
+        self.groupParticipantModel.setSort(0, Qt.DescendingOrder)
         self.groupParticipantModel.select()
         # set headers
         self.groupParticipantModel.setHeaderData(1, Qt.Horizontal, "Group Name")
@@ -67,6 +69,7 @@ class DatabaseInteraction(object):
         # Teacher
         self.teacherModel = QSqlTableModel(db=self.conn)
         self.teacherModel.setTable("teachers")
+        self.teacherModel.setSort(0, Qt.DescendingOrder)
         self.teacherModel.select()
         # set headers
         self.teacherModel.setHeaderData(1, Qt.Horizontal, "First")
@@ -81,6 +84,7 @@ class DatabaseInteraction(object):
         # Entry
         self.entryModel = QSqlTableModel(db=self.conn)
         self.entryModel.setTable("entries")
+        self.entryModel.setSort(0, Qt.DescendingOrder)
         self.entryModel.select()
         # set headers
         self.entryModel.setHeaderData(1, Qt.Horizontal, "Participant")
