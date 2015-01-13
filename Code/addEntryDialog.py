@@ -31,7 +31,7 @@ class AddEntryDialog(QDialog):
         self.closeAfterAdd = closeAfterAdd
         self.entry = None
         self.participantId = None
-        self.teacherId = None
+        self.teacherId = ""
         self.disciplines = {'Dance' : self.dance,   # For Pythonic switch-case
                                 'Piano' : self.piano,
                                 'Choral' : self.choral,
@@ -98,9 +98,9 @@ class AddEntryDialog(QDialog):
         # Check for empty fields
         if participantID is None or participantID == "":
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Participant', QMessageBox.Ok)
-        elif teacherID is None or teacherID == "":
-            # TODO how to handle this for disciplines that don't usually have teachers? (speech)
-            QMessageBox.warning(self, 'Missing Field', 'Entry must have a Teacher/Contact Person', QMessageBox.Ok)
+        # elif teacherID is None or teacherID == "":
+        #     # TODO how to handle this for disciplines that don't usually have teachers? (speech)
+        #     QMessageBox.warning(self, 'Missing Field', 'Entry must have a Teacher/Contact Person', QMessageBox.Ok)
         elif discipline is None or discipline == "":
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Discipline', QMessageBox.Ok)
         elif classNumber is None or classNumber == "":

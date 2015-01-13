@@ -114,9 +114,9 @@ class EditEntryDialog(QDialog):
         # Check for empty fields
         if participantID is None or participantID == "":
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Participant', QMessageBox.Ok)
-        elif teacherID is None or teacherID == "":
-            # TODO how to handle this for disciplines that don't usually have teachers? (speech)
-            QMessageBox.warning(self, 'Missing Field', 'Entry must have a Teacher/Contact Person', QMessageBox.Ok)
+        # elif teacherID is None or teacherID == "":
+        #     # TODO how to handle this for disciplines that don't usually have teachers? (speech)
+        #     QMessageBox.warning(self, 'Missing Field', 'Entry must have a Teacher/Contact Person', QMessageBox.Ok)
         elif discipline is None or discipline == "":
             QMessageBox.warning(self, 'Missing Field', 'Entry must have a Discipline', QMessageBox.Ok)
         elif classNumber is None or classNumber == "":

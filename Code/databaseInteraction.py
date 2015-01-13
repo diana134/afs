@@ -287,7 +287,7 @@ class DatabaseInteraction(object):
             if entryId != None:
                 self.deleteEntryFromId(entryId)
             # TODO: log this instead of printing to console
-            print "addEntry FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            print "addEntry FAILED\n\tquery: {0}\n\terror: {1}".format(query.query.lastError().text(), e)
             return e
 
     def updateEntry(self, entryId, entry):

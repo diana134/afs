@@ -60,13 +60,11 @@ class EditSoloParticipantDialog(QDialog):
         self.ui.dateOfBirthDateEdit.dateChanged.connect(self.dob_changed)
 
     def dobValid(self):
-        """checks if the date of birth is valid given the age; if age is blank returns True"""
-        if self.ui.age.text() != "":
-            dob = self.ui.dateOfBirthDateEdit.date()
-            compareDate = QDate(QDate.currentDate().year(), 1, 1)
-            age = int(dob.daysTo(compareDate) / 365)
-            return age == int(self.ui.age.text())
-        return False
+        """checks if the date of birth is valid given the age"""
+        dob = self.ui.dateOfBirthDateEdit.date()
+        compareDate = QDate(QDate.currentDate().year(), 1, 1)
+        age = int(dob.daysTo(compareDate) / 365)
+        return age == int(self.ui.ageSpinBox.value())
 
     ### Slots ###
 
@@ -99,7 +97,7 @@ class EditSoloParticipantDialog(QDialog):
         parent = str(self.ui.parentLineEdit.text()).strip()
         parent = sanitize(parent)
         # Don't need to sanitize this one, it can only be a number
-        age = str(self.ui.ageLineEdit.cleanText())
+        age = str(self.ui.ageSpinBox.value())
         schoolGrade = str(self.ui.schoolGradeLineEdit.text()).strip()
         schoolGrade = sanitize(schoolGrade)
 

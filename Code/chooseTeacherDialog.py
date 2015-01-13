@@ -4,7 +4,7 @@ import sys
 import os.path
 sys.path.insert(0, os.path.join("..", "Forms"))
 import traceback
-from PyQt4.QtGui import QDialog, QAbstractItemView, QMessageBox
+from PyQt4.QtGui import QDialog, QAbstractItemView, QMessageBox, QItemSelectionModel
 
 from ui_chooseTeacherDialog import Ui_ChooseTeacherDialog
 from databaseInteraction import dbInteractionInstance
@@ -16,6 +16,7 @@ class ChooseTeacherDialog(QDialog):
         self.ui = Ui_ChooseTeacherDialog()
         self.ui.setupUi(self)
         self.ui.teacherTableView.setModel(dbInteractionInstance.teacherModel)
+        self.ui.teacherTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.teacherModel))
         self.ui.teacherTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.teacherTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.ui.teacherTableView.hideColumn(0)
@@ -42,7 +43,7 @@ class ChooseTeacherDialog(QDialog):
 
         try:
             # Get which row in view is selected
-            indexList = view.selectedIndexes() # gets all selected cells
+            indexList = view.selectionModel().selectedIndexes() # gets all selected cells
             row = indexList[0].row()
             # Get column id is in
             column = model.fieldIndex("id")

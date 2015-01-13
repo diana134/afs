@@ -4,7 +4,7 @@ import sys
 import os.path
 sys.path.insert(0, os.path.join("..", "Forms"))
 import traceback
-from PyQt4.QtGui import QDialog, QAbstractItemView, QMessageBox
+from PyQt4.QtGui import QDialog, QAbstractItemView, QMessageBox, QItemSelectionModel
 
 from ui_chooseParticipantDialog import Ui_ChooseParticipantDialog
 from databaseInteraction import dbInteractionInstance
@@ -16,6 +16,7 @@ class ChooseParticipantDialog(QDialog):
         self.ui = Ui_ChooseParticipantDialog()
         self.ui.setupUi(self)
         self.ui.soloParticipantTableView.setModel(dbInteractionInstance.soloParticipantModel)
+        self.ui.soloParticipantTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.soloParticipantModel))
         self.ui.soloParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.soloParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.ui.soloParticipantTableView.hideColumn(9)
@@ -24,6 +25,7 @@ class ChooseParticipantDialog(QDialog):
         #     self.ui.groupParticipantsTab.setEnabled(False)
         # else:
         self.ui.groupParticipantTableView.setModel(dbInteractionInstance.groupParticipantModel)
+        self.ui.groupParticipantTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.groupParticipantModel))
         self.ui.groupParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.groupParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.ui.groupParticipantTableView.hideColumn(0)
@@ -62,7 +64,7 @@ class ChooseParticipantDialog(QDialog):
 
         try:
             # Get which row in view is selected
-            indexList = view.selectedIndexes() # gets all selected cells
+            indexList = view.selectionModel().selectedIndexes() # gets all selected cells
             row = indexList[0].row()
             # Get column id is in
             column = model.fieldIndex("id")
