@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>526</width>
-    <height>280</height>
+    <width>407</width>
+    <height>308</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,29 +21,6 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0" colspan="2">
-     <widget class="QGroupBox" name="groupBox_3">
-      <property name="title">
-       <string>Entries</string>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QPushButton" name="addEntryBtn">
-         <property name="text">
-          <string>Add &amp;Entry</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="editEntryBtn">
-         <property name="text">
-          <string>Edit E&amp;ntry</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
     <item row="2" column="0">
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
@@ -71,6 +48,13 @@
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QPushButton" name="deleteParticipantBtn">
+         <property name="text">
+          <string>Delete Participant</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
@@ -94,15 +78,52 @@
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QPushButton" name="deleteTeacherBtn">
+         <property name="text">
+          <string>Delete Teacher/Contact</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
-    <item row="1" column="0" colspan="2">
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="title">
+       <string>Entries</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPushButton" name="addEntryBtn">
+         <property name="text">
+          <string>Add &amp;Entry</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="editEntryBtn">
+         <property name="text">
+          <string>Edit E&amp;ntry</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="deleteEntryBtn">
+         <property name="text">
+          <string>Delete Entry</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
      <widget class="QGroupBox" name="groupBox_4">
       <property name="title">
        <string>Schedules</string>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
         <widget class="QPushButton" name="makeScheduleBtn">
          <property name="text">

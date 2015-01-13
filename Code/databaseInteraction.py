@@ -375,6 +375,45 @@ class DatabaseInteraction(object):
             print "deleteEntryFromId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
             return e
 
+    def deleteSoloParticipantFromId(self, pId):
+        try:
+            query = QSqlQuery(self.conn)
+            # Delete the solo participant
+            query.prepare("DELETE FROM soloparticipants WHERE id=:id")
+            query.bindValue(":id", pId)
+            query.exec_()
+            self.soloParticipantModel.select()
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "deleteSoloParticipantFromId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            return e
+
+    def deleteGroupParticipantFromId(self, pId):
+        try:
+            query = QSqlQuery(self.conn)
+            # Delete the group participant
+            query.prepare("DELETE FROM groupparticipants WHERE id=:id")
+            query.bindValue(":id", pId)
+            query.exec_()
+            self.groupParticipantModel.select()
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "deleteGroupParticipantFromId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            return e
+
+    def deleteTeacherFromId(self, tId):
+        try:
+            query = QSqlQuery(self.conn)
+            # Delete the teacher
+            query.prepare("DELETE FROM teachers WHERE id=:id")
+            query.bindValue(":id", tId)
+            query.exec_()
+            self.teacherModel.select()
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "deleteTeacherFromId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            return e
+
     #####
 
     def getParticipantFromId(self, participantId):

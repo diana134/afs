@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_chooseTeacherDialog.ui'
 #
-# Created: Sun Jan 11 19:07:31 2015
+# Created: Mon Jan 12 22:30:04 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_ChooseTeacherDialog(object):
     def setupUi(self, ChooseTeacherDialog):
         ChooseTeacherDialog.setObjectName(_fromUtf8("ChooseTeacherDialog"))
-        ChooseTeacherDialog.resize(875, 397)
+        ChooseTeacherDialog.resize(817, 397)
         self.verticalLayout = QtGui.QVBoxLayout(ChooseTeacherDialog)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
         self.teacherTableView = QtGui.QTableView(ChooseTeacherDialog)
