@@ -3,6 +3,8 @@
 import sys
 import os
 # import sqlite3
+import shutil
+from datetime import datetime
 from PyQt4.QtSql import QSqlDatabase, QSqlTableModel, QSqlQuery
 from PyQt4.QtCore import Qt
 
@@ -30,7 +32,10 @@ class DatabaseInteraction(object):
             print "Failed to open database " + filename + \
                 " with error: " + self.conn.lastError().text()
             sys.exit(1)
-        
+
+        self.setupModels()
+
+    def setupModels(self):    
         # SoloParticipant
         self.soloParticipantModel = QSqlTableModel(db=self.conn)
         self.soloParticipantModel.setTable("soloparticipants")
@@ -106,6 +111,58 @@ class DatabaseInteraction(object):
         
         global dbInteractionInstance 
         dbInteractionInstance = None
+
+    def backupDb(self):
+        """Copies the current db file to AFS-YYYY-MM-DD-HH-MM-SS.bak; returns error or blank if successful"""
+        source = os.path.join(CONFIG_DATABASE_PATH, CONFIG_DATABASE_NAME)
+        now = datetime.now()
+        outputFileName = "AFS-{year}-{month}-{day}-{hour}-{min}-{sec}.bak".format(
+            year=now.year, month=now.month, day=now.day, hour=now.hour, min=now.minute, sec=now.second)
+        dest = os.path.join(CONFIG_DATABASE_PATH, outputFileName)
+        try:
+            shutil.copyfile(source, dest)
+            return ""
+        except Exception, e:
+            print e
+            return e
+
+    def restoreDb(self):
+        """Grabs the most recent backup, backs up the current db, copies recent backup to current db"""
+        dirs = os.listdir(CONFIG_DATABASE_PATH)
+        if len(dirs) <= 1:
+            return "Nothing to restore."
+        dirs.sort()
+        lastBackup = dirs[-1]
+        print "restoring {0}".format(lastBackup)
+        self.backupDb()
+        # Close db connection in preparation for restoration
+        self.close()
+        source = os.path.join(CONFIG_DATABASE_PATH, lastBackup)
+        dest = os.path.join(CONFIG_DATABASE_PATH, CONFIG_DATABASE_NAME)
+        try:
+            shutil.copyfile(source, dest)
+            return ""
+        except Exception, e:
+            print e
+            return e
+        finally:
+            # Reopen db
+            filename = os.path.join(CONFIG_DATABASE_PATH, CONFIG_DATABASE_NAME)
+            self.conn = QSqlDatabase.addDatabase("QSQLITE")
+            self.conn.setDatabaseName(filename)
+            result = self.conn.open()
+            # Check that the db opened successfully
+            if result == False:
+                errorString = "Failed to open database " + filename + \
+                    " with error: " + self.conn.lastError().text()
+                print errorString
+                # TODO this is bad form, but should be ok since i'm not actually raising things like
+                # I should anyway
+                return errorString
+
+            self.setupModels()
+
+##########
 
     def addSoloParticipant(self, sp):
         """Adds a new SoloParticipant record to the db"""

@@ -3,6 +3,7 @@
 import sys
 import os.path
 sys.path.insert(0, os.path.join("..", "Forms"))
+import shutil
 from PyQt4.QtGui import QApplication, QMainWindow, QWidget, QMessageBox, QFileDialog
 
 from ui_mainwindow import Ui_MainWindow
@@ -27,6 +28,7 @@ from schedule import Schedule
 
 app = QApplication(sys.argv)
 exportsPath = os.path.join("..", "Exports")
+dbPath = os.path.join("..", "Database")
 
 class MainWindow(QWidget):
     """The main window of the program"""
@@ -54,6 +56,9 @@ class MainWindow(QWidget):
         self.ui.deleteParticipantBtn.clicked.connect(self.deleteParticipantBtn_clicked)
         self.ui.deleteTeacherBtn.clicked.connect(self.deleteTeacherBtn_clicked)
         self.ui.deleteEntryBtn.clicked.connect(self.deleteEntryBtn_clicked)
+        self.ui.backupDbBtn.clicked.connect(self.backupDbBtn_clicked)
+        self.ui.restoreDbBtn.clicked.connect(self.restoreDbBtn_clicked)
+        self.ui.createNewDbBtn.clicked.connect(self.createNewDbBtn_clicked)
 
     ###### Slots ######
 
@@ -114,7 +119,7 @@ class MainWindow(QWidget):
                 if result == True:
                     pass
             except Exception:
-                QMessageBox.critical("Error", "Failed to load schedule.", QMessageBox.Ok)
+                QMessageBox.critical(self, "Error", "Failed to load schedule.", QMessageBox.Ok)
 
     def editParticipantBtn_clicked(self):
         """Opens chooseParticipantDialog then dialog for editing"""
@@ -132,7 +137,7 @@ class MainWindow(QWidget):
                 dialog = EditGroupParticipantDialog(participantId=participantId)
                 dialog.exec_()
             else:
-                QMessageBox.critical("Error", "Unrecognized Participant", QMessageBox.Ok)
+                QMessageBox.critical(self, "Error", "Unrecognized Participant", QMessageBox.Ok)
 
     def editTeacherBtn_clicked(self):
         """Opens chooseTeacherDialog then dialog for editing"""
@@ -174,7 +179,7 @@ class MainWindow(QWidget):
                 dialog = EditGroupParticipantDialog(participantId=participantId)
                 dialog.exec_()
             else:
-                QMessageBox.critical("Error", "Unrecognized Participant", QMessageBox.Ok)
+                QMessageBox.critical(self, "Error", "Unrecognized Participant", QMessageBox.Ok)
 
     def deleteTeacherBtn_clicked(self):
         """Opens chooseTeacherDialog for deleting"""
@@ -215,7 +220,28 @@ class MainWindow(QWidget):
                 elif participantId[0] == 'g':
                     dbInteractionInstance.deleteGroupParticipantFromId(participantId[1:])
                 else:
-                    QMessageBox.critical("Error", "Unrecognized Participant", QMessageBox.Ok)
+                    QMessageBox.critical(self, "Error", "Unrecognized Participant", QMessageBox.Ok)
+
+    def backupDbBtn_clicked(self):
+        """Copies the current db file to AFS-YYYY-MM-DD-HH-MM-SS.bak"""
+        result = dbInteractionInstance.backupDb()
+        if result == "":
+            QMessageBox.information(self, "Success", "Database successfully backed up.", QMessageBox.Ok)
+        else:
+            QMessageBox.critical(self, "Failed", "Could not create backup. Aborted with error:\n{0}".format(result))
+
+    def restoreDbBtn_clicked(self):
+        """Grabs the most recent backup, backs up the current db, copies recent backup to current db"""
+        result = dbInteractionInstance.restoreDb()
+        if result == "":
+            QMessageBox.information(self, "Success", "Database successfully restored.", QMessageBox.Ok)
+        else:
+            QMessageBox.critical(self, "Failed", "Could not restore from backup. Aborted with error:\n{0}".format(result))
+
+    def createNewDbBtn_clicked(self):
+        """Backs up current db, then drops and recreates all the tables"""
+        # TODO low priority, probably don't need it until after the festival
+        pass
 
     ##########
 

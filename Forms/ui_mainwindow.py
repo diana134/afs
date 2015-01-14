@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Mon Jan 12 21:54:10 2015
+# Created: Tue Jan 13 20:52:24 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(407, 308)
+        MainWindow.resize(407, 376)
         MainWindow.setAnimated(True)
         MainWindow.setUnifiedTitleAndToolBarOnMac(False)
         self.centralwidget = QtGui.QWidget(MainWindow)
@@ -89,6 +89,21 @@ class Ui_MainWindow(object):
         self.loadScheduleBtn.setObjectName(_fromUtf8("loadScheduleBtn"))
         self.verticalLayout_4.addWidget(self.loadScheduleBtn)
         self.gridLayout.addWidget(self.groupBox_4, 0, 1, 1, 1)
+        self.groupBox_5 = QtGui.QGroupBox(self.centralwidget)
+        self.groupBox_5.setObjectName(_fromUtf8("groupBox_5"))
+        self.horizontalLayout = QtGui.QHBoxLayout(self.groupBox_5)
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+        self.backupDbBtn = QtGui.QPushButton(self.groupBox_5)
+        self.backupDbBtn.setObjectName(_fromUtf8("backupDbBtn"))
+        self.horizontalLayout.addWidget(self.backupDbBtn)
+        self.restoreDbBtn = QtGui.QPushButton(self.groupBox_5)
+        self.restoreDbBtn.setObjectName(_fromUtf8("restoreDbBtn"))
+        self.horizontalLayout.addWidget(self.restoreDbBtn)
+        self.createNewDbBtn = QtGui.QPushButton(self.groupBox_5)
+        self.createNewDbBtn.setEnabled(False)
+        self.createNewDbBtn.setObjectName(_fromUtf8("createNewDbBtn"))
+        self.horizontalLayout.addWidget(self.createNewDbBtn)
+        self.gridLayout.addWidget(self.groupBox_5, 3, 0, 1, 2)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -112,4 +127,8 @@ class Ui_MainWindow(object):
         self.groupBox_4.setTitle(_translate("MainWindow", "Schedules", None))
         self.makeScheduleBtn.setText(_translate("MainWindow", "&Make Schedule", None))
         self.loadScheduleBtn.setText(_translate("MainWindow", "&Load Schedule", None))
+        self.groupBox_5.setTitle(_translate("MainWindow", "Database", None))
+        self.backupDbBtn.setText(_translate("MainWindow", "Backup Database", None))
+        self.restoreDbBtn.setText(_translate("MainWindow", "Restore Database", None))
+        self.createNewDbBtn.setText(_translate("MainWindow", "Create New Database", None))
 

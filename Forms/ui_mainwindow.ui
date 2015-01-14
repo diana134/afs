@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>407</width>
-    <height>308</height>
+    <height>376</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -135,6 +135,39 @@
         <widget class="QPushButton" name="loadScheduleBtn">
          <property name="text">
           <string>&amp;Load Schedule</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="title">
+       <string>Database</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="backupDbBtn">
+         <property name="text">
+          <string>Backup Database</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="restoreDbBtn">
+         <property name="text">
+          <string>Restore Database</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="createNewDbBtn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Create New Database</string>
          </property>
         </widget>
        </item>
