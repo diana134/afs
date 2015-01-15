@@ -102,7 +102,7 @@ class EditTeacherDialog(QDialog):
                     s += "{0} {1}, email: {2}\n".format(t.first, t.last, t.email)
 
                 if QMessageBox.question(self, 'Possible Duplicate', 
-                    'This name exists in the database already:\n{0}\nDo you still want to add this person?'.format(s),
+                    'This name exists in the database already:\n{0}\nDo you still want to update this person?'.format(s),
                     QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
                     return
 
