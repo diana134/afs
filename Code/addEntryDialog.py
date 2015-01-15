@@ -251,6 +251,8 @@ class AddEntryDialog(QDialog):
         """Checks if the class number is valid and fills in the class name"""
         classNumber = str(self.ui.classNumberLineEdit.text()).strip()
         classNumber = sanitize(classNumber)
+        classNumber = classNumber.upper()
+        self.ui.classNumberLineEdit.setText(classNumber)
         result = dbInteractionInstance.findClassName(classNumber)
         if result is not None:
             self.ui.classNameLineEdit.setText(result)

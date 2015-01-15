@@ -22,6 +22,10 @@ class ChooseEntryDialog(QDialog):
         self.ui.entryTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.entryTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.ui.entryTableView.hideColumn(0)
+        # Hide participant and teacher ids for now
+        # TODO show names instead
+        self.ui.entryTableView.hideColumn(1)
+        self.ui.entryTableView.hideColumn(2)
         # Initialize class variables
         self.entryId = None
         # Make the buttons do things

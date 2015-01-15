@@ -32,6 +32,9 @@ class ChooseParticipantDialog(QDialog):
         self.ui.groupParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.groupParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.ui.groupParticipantTableView.hideColumn(0)
+        # Hide participant ids for now
+        # TODO show the names
+        self.ui.groupParticipantTableView.hideColumn(5)
         # Initialize class variables
         self.participantId = -1
         # Make the buttons do things
