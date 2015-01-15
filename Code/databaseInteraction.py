@@ -658,6 +658,33 @@ class DatabaseInteraction(object):
             # TODO: log this instead of printing to console
             print "getLastTeacherId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
 
+    def getTeachersWithName(self, first, last):
+        """Looks for teachers with the given name"""
+        tList = []
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("SELECT first_name, last_name, address, city, postal_code, daytime_phone, \
+                evening_phone, email \
+                FROM teachers WHERE first_name=:first AND last_name=:last")
+            query.bindValue(":first", first)
+            query.bindValue(":last", last)
+            query.exec_()
+            while query.next() == True:
+                first = str(query.value(0).toString())
+                last = str(query.value(1).toString())
+                address = str(query.value(2).toString())
+                city = str(query.value(3).toString())
+                postal = str(query.value(4).toString())
+                daytimePhone = str(query.value(5).toString())
+                eveningPhone = str(query.value(6).toString())
+                email = str(query.value(7).toString())
+                tList.append(Teacher(first, last, address, city, postal, daytimePhone, eveningPhone, email))
+            return tList
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "getLastSoloParticipantId FAILED\n\tquery: {0}\
+                \n\terror: {1}".format(query.lastQuery(), e)
+
     def getLastEntryId(self):
         """Get the id of the most recently added Entry"""
         try:

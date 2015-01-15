@@ -93,6 +93,19 @@ class EditTeacherDialog(QDialog):
             if QMessageBox.question(self, 'Validate Last Name', 'Are you sure \'' + last + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
                 return
 
+        # Check for duplicated teacher only if the name has changed
+        if first != self.teacher.first or last != self.teacher.last:
+            tList = dbInteractionInstance.getTeachersWithName(first=first, last=last)
+            if len(tList) > 0:
+                s = ""
+                for t in tList:
+                    s += "{0} {1}, email: {2}\n".format(t.first, t.last, t.email)
+
+                if QMessageBox.question(self, 'Possible Duplicate', 
+                    'This name exists in the database already:\n{0}\nDo you still want to add this person?'.format(s),
+                    QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+                    return
+
         self.teacher.first = first
         self.teacher.last = last
         self.teacher.address = address
