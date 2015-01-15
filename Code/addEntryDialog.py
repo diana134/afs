@@ -217,8 +217,8 @@ class AddEntryDialog(QDialog):
             for i in xrange(0, self.ui.tabWidget.count()):
                 pieceWidget = self.ui.tabWidget.widget(i)
                 pieceWidget.changeDiscipline(text)
-            self.teacherId = ""
-            self.ui.teacherLineEdit.clear()
+            # self.teacherId = ""
+            # self.ui.teacherLineEdit.clear()
         else:
             QMessageBox.critical(self, 'Invalid Discipline', 'An invalid discipline was selected. Please try again.', QMessageBox.Ok)
 
