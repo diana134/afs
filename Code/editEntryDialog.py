@@ -90,6 +90,7 @@ class EditEntryDialog(QDialog):
         self.ui.addPieceBtn.clicked.connect(self.addPieceBtn_clicked)
         self.ui.tabWidget.tabCloseRequested['int'].connect(self.closeTab)
         self.ui.clearTeacherBtn.clicked.connect(self.clearTeacherBtn_clicked)
+        self.ui.classNumberLineEdit.editingFinished.connect(self.classNumberLineEdit_edited)
 
     ### Slots ###
 
@@ -270,6 +271,16 @@ class EditEntryDialog(QDialog):
         """Clears the teacher/contact fields"""
         self.ui.teacherLineEdit.clear()
         self.teacherId = None
+
+    def classNumberLineEdit_edited(self):
+        """Checks if the class number is valid and fills in the class name"""
+        classNumber = str(self.ui.classNumberLineEdit.text()).strip()
+        classNumber = sanitize(classNumber)
+        result = dbInteractionInstance.findClassName(classNumber)
+        if result is not None:
+            self.ui.classNameLineEdit.setText(result)
+        else:
+            self.ui.classNameLineEdit.clear()
 
     def dance(self):
         self.ui.instrumentLabel.setEnabled(False)

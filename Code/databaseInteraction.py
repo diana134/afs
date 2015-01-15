@@ -15,6 +15,8 @@ from entry import Entry
 CONFIG_DATABASE_PATH = "../Database/"
 CONFIG_TEST_DATABASE_PATH = "../../Database/"
 CONFIG_DATABASE_NAME = "AFS"
+SYLLABUS_PATH = "../Database/Syllabus/"
+SYLLABUS_NAME = "Provincial Syllabus 2015.txt"
 
 class DatabaseInteraction(object):
     """Handles all interactions with the database"""
@@ -161,6 +163,26 @@ class DatabaseInteraction(object):
                 return errorString
 
             self.setupModels()
+
+    def findClassName(self, classNumber):
+        """Search syllabus and return the class name or none if not found"""
+        # Make sure classNumber is formatted as a group of letters, space, group of numbers
+        groups = classNumber.split()
+        if (len(groups) == 2 and
+            groups[0].isalpha() and
+            groups[1].isdigit()):
+            path = os.path.join(SYLLABUS_PATH, SYLLABUS_NAME)
+            with open(path, 'r') as syllabus:
+                for line in syllabus:
+                    if classNumber in line:
+                        # Split line on spaces
+                        tokens = line.split()
+                        # The class number will be the first 2 tokens
+                        # Gather the rest into the class name
+                        className = ' '.join(tokens)
+                        return className
+        # Invalid/Not found
+        return None
 
 ##########
 

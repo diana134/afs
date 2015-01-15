@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addEntryDialog.ui'
 #
-# Created: Sun Jan 11 16:57:54 2015
+# Created: Wed Jan 14 19:42:58 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -125,6 +125,7 @@ class Ui_AddEntryDialog(object):
         self.classNameLabel.setObjectName(_fromUtf8("classNameLabel"))
         self.formLayout_2.setWidget(7, QtGui.QFormLayout.LabelRole, self.classNameLabel)
         self.classNameLineEdit = QtGui.QLineEdit(AddEntryDialog)
+        self.classNameLineEdit.setEnabled(False)
         self.classNameLineEdit.setObjectName(_fromUtf8("classNameLineEdit"))
         self.formLayout_2.setWidget(7, QtGui.QFormLayout.FieldRole, self.classNameLineEdit)
         self.levelLabel = QtGui.QLabel(AddEntryDialog)
