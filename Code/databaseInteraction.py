@@ -179,8 +179,12 @@ class DatabaseInteraction(object):
                         tokens = line.split()
                         # The class number will be the first 2 tokens
                         # Gather the rest into the class name
-                        className = ' '.join(tokens)
-                        return className
+                        if len(tokens) > 2:
+                            className = ' '.join(tokens[2:])
+                            return className
+                        else:
+                            # Class was found but no name
+                            return "N/A"
         # Invalid/Not found
         return None
 
