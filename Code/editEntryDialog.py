@@ -52,7 +52,10 @@ class EditEntryDialog(QDialog):
         self.setWindowTitle("Edit Entry")
         p = dbInteractionInstance.getParticipantFromId(self.participantId)
         if p is not None:
-            self.ui.participantLineEdit.setText("{0} {1}".format(p.first, p.last))
+            try:
+                self.ui.participantLineEdit.setText("{0} {1}".format(p.first, p.last))
+            except Exception:
+                self.ui.participantLineEdit.setText(p.groupName)
         t = dbInteractionInstance.getTeacherFromId(self.teacherId)
         if t is not None:
             self.ui.teacherLineEdit.setText("{0} {1}".format(t.first, t.last))
@@ -128,7 +131,7 @@ class EditEntryDialog(QDialog):
             # Check there is at least one piece
             tabCount = self.ui.tabWidget.count()
             if tabCount <= 0:
-                QMessageBox.warning(self, 'Missing Piece', 'Entry must have at least 1 piece', QMessageBox.Ok)
+                QMessageBox.warning(self, 'Missing Selection', 'Entry must have at least 1 selection', QMessageBox.Ok)
             else:
                 # Check all the pieceWidgets
                 selections = []
@@ -137,7 +140,7 @@ class EditEntryDialog(QDialog):
                     fields = pieceWidget.getFields()
 
                     if fields['title'] is None or fields['title'] == "":
-                        QMessageBox.warning(self, 'Missing Field', 'Piece {0} must have a Title'.format(i+1), QMessageBox.Ok)
+                        QMessageBox.warning(self, 'Missing Field', 'Selection {0} must have a Title'.format(i+1), QMessageBox.Ok)
                         break
                     # Check for valid fields
                     elif fields['performanceTime'] == "0:00" and QMessageBox.question(self, 'Validate Performance Time', 'Are you sure you want to leave performance time blank? This could cause the scheduling algorithm to make poor choices.', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
@@ -250,22 +253,22 @@ class EditEntryDialog(QDialog):
     def addPieceBtn_clicked(self):
         tabCount = self.ui.tabWidget.count()
         pieceWidget = PieceWidget()
-        self.ui.tabWidget.addTab(pieceWidget, "Piece {0}".format(tabCount+1))
+        self.ui.tabWidget.addTab(pieceWidget, "Selection {0}".format(tabCount+1))
         # Set focus to new tab
         self.ui.tabWidget.setCurrentIndex(tabCount)
         # Set appropriate active fields on new widget
         pieceWidget.changeDiscipline(self.ui.disciplineComboBox.currentText())
 
     def closeTab(self, index):
-        if QMessageBox.warning(self, 'Delete Piece', 
-            'You are about to delete this piece and all the information it contains.\nTHIS CANNOT BE UNDONE!\n\nDo you still want to continue?', 
+        if QMessageBox.warning(self, 'Delete Selection', 
+            'You are about to delete this selection and all the information it contains.\nTHIS CANNOT BE UNDONE!\n\nDo you still want to continue?', 
             QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
             return
 
         self.ui.tabWidget.removeTab(index)
         # rename tabs
         for i in xrange(0, self.ui.tabWidget.count()):
-            self.ui.tabWidget.setTabText(i, "Piece {0}".format(i+1))
+            self.ui.tabWidget.setTabText(i, "Selection {0}".format(i+1))
 
     def clearTeacherBtn_clicked(self):
         """Clears the teacher/contact fields"""

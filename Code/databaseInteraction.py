@@ -211,6 +211,9 @@ class DatabaseInteraction(object):
             query.bindValue(":age", sp.age)
             query.bindValue(":schoolGrade", sp.schoolGrade)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             self.soloParticipantModel.select()
             return ""
         except Exception, e:
@@ -241,6 +244,9 @@ class DatabaseInteraction(object):
             query.bindValue(":schoolGrade", participant.schoolGrade)
             query.bindValue(":id", participantId)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             self.soloParticipantModel.select()
             return ""
         except Exception, e:
@@ -264,6 +270,9 @@ class DatabaseInteraction(object):
             query.bindValue(":earliestPerformanceTime", gp.earliestPerformanceTime)
             query.bindValue(":latestPerformanceTime", gp.latestPerformanceTime)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             self.groupParticipantModel.select()
             return ""
         except Exception, e:
@@ -289,6 +298,9 @@ class DatabaseInteraction(object):
             query.bindValue(":latestPerformanceTime", participant.latestPerformanceTime)
             query.bindValue(":id", participantId)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             self.groupParticipantModel.select()
             return ""
         except Exception, e:
@@ -312,6 +324,9 @@ class DatabaseInteraction(object):
             query.bindValue(":eveningPhone", t.eveningPhone)
             query.bindValue(":email", t.email)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             self.teacherModel.select()
             return ""
         except Exception, e:
@@ -337,6 +352,9 @@ class DatabaseInteraction(object):
             query.bindValue(":email", teacher.email)
             query.bindValue(":id", teacherId)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             self.teacherModel.select()
             return ""
         except Exception, e:
@@ -362,19 +380,28 @@ class DatabaseInteraction(object):
             query.bindValue(":yearsOfInstruction", entry.yearsOfInstruction)
             query.bindValue(":schedulingRequirements", entry.schedulingRequirements)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             self.entryModel.select()
             # get id
             entryId = self.getLastEntryId()
             # add selections to db
             for selection in entry.selections:
-                self.addSelection(selection, entryId)
+                result = self.addSelection(selection, entryId)
+                if result != "":
+                    print result
+                    return result
+                    # if entryId != None:
+                    #     self.deleteEntryFromId(entryId)
+                    # return result
             return ""
         except Exception, e:
             # If something went wrong adding the selections, we want to delete the whole entry
             if entryId != None:
                 self.deleteEntryFromId(entryId)
             # TODO: log this instead of printing to console
-            print "addEntry FAILED\n\tquery: {0}\n\terror: {1}".format(query.query.lastError().text(), e)
+            print "addEntry FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastError().text(), e)
             return e
 
     def updateEntry(self, entryId, entry):
@@ -397,12 +424,19 @@ class DatabaseInteraction(object):
             query.bindValue(":schedulingRequirements", entry.schedulingRequirements)
             query.bindValue(":id", entryId)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             self.entryModel.select()
             # delete all selections associated with this entry (handles deleting selections during update)
-            self.deleteSelectionsFromEntryId(entryId)
+            result = self.deleteSelectionsFromEntryId(entryId)
             # re-add selections to db (handles updates and new selections)
             for selection in entry.selections:
-                self.addSelection(selection, entryId)
+                result = self.addSelection(selection, entryId)
+                if result != "":
+                    if entryId != None:
+                        self.deleteEntryFromId(entryId)
+                    return result
             return ""
         except Exception, e:
             # If something went wrong adding the selections, we want to delete the whole entry
@@ -425,9 +459,13 @@ class DatabaseInteraction(object):
             query.bindValue(":entryId", entryId)
             query.bindValue(":titleOfMusical", selection['titleOfMusical'])
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
+            return ""
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "addSelection FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
+            print "addSelection FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastError().text(), e)
             return e
 
     def deleteSelectionsFromEntryId(self, entryId):
@@ -438,6 +476,10 @@ class DatabaseInteraction(object):
                 WHERE entry_id=:id")
             query.bindValue(":id", entryId)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
+            return ""
         except Exception, e:
             # TODO: log this instead of printing to console
             print "deleteSelectionsFromEntryId FAILED\n\tquery: {0}\n\terror: {1}".format(query.lastQuery(), e)
@@ -456,6 +498,9 @@ class DatabaseInteraction(object):
             query.prepare("DELETE FROM selections WHERE entry_id=:id")
             query.bindValue(":id", entryId)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             self.entryModel.select()
         except Exception, e:
             # TODO: log this instead of printing to console
@@ -469,6 +514,9 @@ class DatabaseInteraction(object):
             query.prepare("DELETE FROM soloparticipants WHERE id=:id")
             query.bindValue(":id", pId)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             self.soloParticipantModel.select()
         except Exception, e:
             # TODO: log this instead of printing to console
@@ -482,6 +530,9 @@ class DatabaseInteraction(object):
             query.prepare("DELETE FROM groupparticipants WHERE id=:id")
             query.bindValue(":id", pId)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             self.groupParticipantModel.select()
         except Exception, e:
             # TODO: log this instead of printing to console
@@ -495,6 +546,9 @@ class DatabaseInteraction(object):
             query.prepare("DELETE FROM teachers WHERE id=:id")
             query.bindValue(":id", tId)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             self.teacherModel.select()
         except Exception, e:
             # TODO: log this instead of printing to console
@@ -516,6 +570,9 @@ class DatabaseInteraction(object):
             numericId = participantId[1:]
             query.bindValue(":id", numericId)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             # Now turn it into the appropriate object
             query.next()
             retrievedParticipant = None
@@ -551,6 +608,9 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.exec_("SELECT MAX(id) FROM soloparticipants")
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             query.next()
             participantId = str(query.value(0).toString())
             return "s" + participantId
@@ -570,6 +630,9 @@ class DatabaseInteraction(object):
             query.bindValue(":first", first)
             query.bindValue(":last", last)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             while query.next() == True:
                 first = str(query.value(0).toString())
                 last = str(query.value(1).toString())
@@ -594,6 +657,9 @@ class DatabaseInteraction(object):
         try:
             query = QSqlQuery(self.conn)
             query.exec_("SELECT MAX(id) FROM groupparticipants")
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             query.next()
             participantId = str(query.value(0).toString())
             return "g" + participantId
@@ -611,6 +677,9 @@ class DatabaseInteraction(object):
                 FROM groupparticipants WHERE group_name=:name")
             query.bindValue(':name', name)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             while query.next() == True:
                 groupName = str(query.value(0).toString())
                 groupSize = str(query.value(1).toString())
@@ -632,6 +701,9 @@ class DatabaseInteraction(object):
             numericId = teacherId
             query.bindValue(":id", numericId)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             # Now turn it into the appropriate object
             query.next()
             first = str(query.value(0).toString())
@@ -655,6 +727,9 @@ class DatabaseInteraction(object):
             query = QSqlQuery(self.conn)
             query.prepare("SELECT MAX(id) FROM teachers")
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             query.next()
             teacherId = str(query.value(0).toString())
             return teacherId
@@ -673,6 +748,9 @@ class DatabaseInteraction(object):
             query.bindValue(":first", first)
             query.bindValue(":last", last)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             while query.next() == True:
                 first = str(query.value(0).toString())
                 last = str(query.value(1).toString())
@@ -695,6 +773,9 @@ class DatabaseInteraction(object):
             query = QSqlQuery(self.conn)
             query.prepare("SELECT MAX(id) FROM entries")
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             query.next()
             entryId = str(query.value(0).toString())
             return entryId
@@ -721,17 +802,19 @@ class DatabaseInteraction(object):
         selectionList = []
         try:
             query = QSqlQuery(self.conn)
-            query.prepare("SELECT title, performance_time, composer_arranger, opus_no, movement \
+            query.prepare("SELECT title, performance_time, composer_arranger, title_of_musical\
                 FROM selections WHERE entry_id=:id")
             query.bindValue(":id", entryId)
             query.exec_()
+            if query.isActive() == False:
+                print "DB ERROR: {0}".format(query.lastError().text())
+                return query.lastError().text()
             while query.next() == True:
                 fields = {}
                 fields['title'] = str(query.value(0).toString())
                 fields['performanceTime'] = str(query.value(1).toString())
                 fields['composerArranger'] = str(query.value(2).toString())
-                fields['opusNo'] = str(query.value(3).toString())
-                fields['movement'] = str(query.value(4).toString())
+                fields['titleOfMusical'] = str(query.value(3).toString())
                 selectionList.append(fields)
             return selectionList
         except Exception, e:
@@ -747,6 +830,9 @@ class DatabaseInteraction(object):
             query.prepare("SELECT participant_id, teacher_id, discipline, level, class_number, \
                 class_name, instrument, years_of_instruction, scheduling_requirements, id FROM entries")
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             while query.next() == True:
                 participantID = str(query.value(0).toString())
                 teacherID = str(query.value(1).toString())
@@ -777,6 +863,9 @@ class DatabaseInteraction(object):
                 WHERE id=:id")
             query.bindValue(":id", entryId)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             query.next()
             participantID = str(query.value(0).toString())
             teacherID = str(query.value(1).toString())
@@ -787,7 +876,6 @@ class DatabaseInteraction(object):
             instrument = str(query.value(6).toString())
             yearsOfInstruction = str(query.value(7).toString())
             schedulingRequirements = str(query.value(8).toString())
-            entryId = str(query.value(9).toString())
             # get associated selections
             selections = self.getSelectionsFromEntryId(entryId)
             ee = Entry(participantID, teacherID, discipline, level, yearsOfInstruction, classNumber, className, instrument, selections, schedulingRequirements)
@@ -807,6 +895,9 @@ class DatabaseInteraction(object):
                 WHERE discipline=:discipline")
             query.bindValue(":discipline", discipline)
             query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
             while query.next() == True:
                 participantID = str(query.value(0).toString())
                 teacherID = str(query.value(1).toString())
