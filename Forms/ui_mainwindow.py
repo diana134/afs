@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Tue Jan 13 20:52:24 2015
+# Created: Thu Jan 15 22:14:36 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(407, 376)
+        MainWindow.resize(411, 376)
         MainWindow.setAnimated(True)
         MainWindow.setUnifiedTitleAndToolBarOnMac(False)
         self.centralwidget = QtGui.QWidget(MainWindow)
@@ -110,7 +110,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(_translate("MainWindow", "Arts Festival Scheduler", None))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Arts Festival Scheduler - v1.0", None))
         self.groupBox.setTitle(_translate("MainWindow", "Participants", None))
         self.addSoloParticipantBtn.setText(_translate("MainWindow", "Add &Solo Participant", None))
         self.addGroupParticipantBtn.setText(_translate("MainWindow", "Add &Group Participant", None))

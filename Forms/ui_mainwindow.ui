@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>407</width>
+    <width>411</width>
     <height>376</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Arts Festival Scheduler</string>
+   <string>Arts Festival Scheduler - v1.0</string>
   </property>
   <property name="animated">
    <bool>true</bool>
