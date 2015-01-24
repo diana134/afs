@@ -288,35 +288,73 @@ class EditEntryDialog(QDialog):
             self.ui.classNameLineEdit.clear()
 
     def dance(self):
+        self.ui.levelLabel.setEnabled(False)
+        self.ui.levelLineEdit.setEnabled(False)
+        self.ui.levelLineEdit.clear()
+        self.ui.yearsOfInstructionLabel.setEnabled(True)
+        self.ui.yearsOfInstructionLineEdit.setEnabled(True)
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.instrumentLineEdit.clear()
 
     def piano(self):
+        self.ui.levelLabel.setEnabled(True)
+        self.ui.levelLineEdit.setEnabled(True)
+        self.ui.yearsOfInstructionLabel.setEnabled(True)
+        self.ui.yearsOfInstructionLineEdit.setEnabled(True)
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.instrumentLineEdit.clear()
 
     def choral(self):
+        self.ui.levelLabel.setEnabled(False)
+        self.ui.levelLineEdit.setEnabled(False)
+        self.ui.levelLineEdit.clear()
+        self.ui.yearsOfInstructionLabel.setEnabled(False)
+        self.ui.yearsOfInstructionLineEdit.setEnabled(False)
+        self.ui.yearsOfInstructionLineEdit.clear()
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.instrumentLineEdit.clear()
 
     def vocal(self):
+        self.ui.levelLabel.setEnabled(False)
+        self.ui.levelLineEdit.setEnabled(False)
+        self.ui.levelLineEdit.clear()
+        self.ui.yearsOfInstructionLabel.setEnabled(False)
+        self.ui.yearsOfInstructionLineEdit.setEnabled(False)
+        self.ui.yearsOfInstructionLineEdit.clear()
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.instrumentLineEdit.clear()
 
     def instrumental(self):
+        self.ui.levelLabel.setEnabled(False)
+        self.ui.levelLineEdit.setEnabled(False)
+        self.ui.levelLineEdit.clear()
+        self.ui.yearsOfInstructionLabel.setEnabled(True)
+        self.ui.yearsOfInstructionLineEdit.setEnabled(True)
         self.ui.instrumentLabel.setEnabled(True)
         self.ui.instrumentLineEdit.setEnabled(True)
 
     def band(self):
+        self.ui.levelLabel.setEnabled(False)
+        self.ui.levelLineEdit.setEnabled(False)
+        self.ui.levelLineEdit.clear()
+        self.ui.yearsOfInstructionLabel.setEnabled(False)
+        self.ui.yearsOfInstructionLineEdit.setEnabled(False)
+        self.ui.yearsOfInstructionLineEdit.clear()
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.instrumentLineEdit.clear()
 
     def speech(self):
+        self.ui.levelLabel.setEnabled(False)
+        self.ui.levelLineEdit.setEnabled(False)
+        self.ui.levelLineEdit.clear()
+        self.ui.yearsOfInstructionLabel.setEnabled(False)
+        self.ui.yearsOfInstructionLineEdit.setEnabled(False)
+        self.ui.yearsOfInstructionLineEdit.clear()
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.instrumentLineEdit.clear()

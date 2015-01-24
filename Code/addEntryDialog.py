@@ -263,11 +263,17 @@ class AddEntryDialog(QDialog):
         self.ui.levelLabel.setEnabled(False)
         self.ui.levelLineEdit.setEnabled(False)
         self.ui.levelLineEdit.clear()
+        self.ui.yearsOfInstructionLabel.setEnabled(True)
+        self.ui.yearsOfInstructionLineEdit.setEnabled(True)
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.instrumentLineEdit.clear()
 
     def piano(self):
+        self.ui.levelLabel.setEnabled(True)
+        self.ui.levelLineEdit.setEnabled(True)
+        self.ui.yearsOfInstructionLabel.setEnabled(True)
+        self.ui.yearsOfInstructionLineEdit.setEnabled(True)
         self.ui.instrumentLabel.setEnabled(False)
         self.ui.instrumentLineEdit.setEnabled(False)
         self.ui.instrumentLineEdit.clear()
@@ -298,6 +304,8 @@ class AddEntryDialog(QDialog):
         self.ui.levelLabel.setEnabled(False)
         self.ui.levelLineEdit.setEnabled(False)
         self.ui.levelLineEdit.clear()
+        self.ui.yearsOfInstructionLabel.setEnabled(True)
+        self.ui.yearsOfInstructionLineEdit.setEnabled(True)
         self.ui.instrumentLabel.setEnabled(True)
         self.ui.instrumentLineEdit.setEnabled(True)
 
