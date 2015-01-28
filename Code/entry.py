@@ -48,7 +48,7 @@ class Entry(object):
     @staticmethod
     def getCsvHeader():
         """Returns a comma-separated string of column headers for use in a CSV file"""
-        return '"Participant","Teacher","Discipline","Level","Style","Instrument","Time","Title","Composer","Opus","No.","Movement","Arranger","Artist","Author"'
+        return '"Participant","Teacher","Discipline","Level","Years of Instruction","Instrument","Time","Title","Composer/Arranger/Author","Title of Musical","Scheduling Requirements"'
         
     def export(self, csvFile, depth=2):
         """Write this entry to a csv file, padded with <depth> empty columns as indentation. \
@@ -63,31 +63,27 @@ class Entry(object):
         for _ in range(depth):
             leadingCommas = leadingCommas+','
             
-        s = '{indent}"{participantName}","{teacherName}","{discipline}","{level}","{style}","{instrument}",'.format(
+        s = '{indent}"{participantName}","{teacherName}","{discipline}","{level}","{yearsOfInstruction}","{instrument}","{requirements}'.format(
             indent=leadingCommas,
             participantName=participant,
             teacherName=teacher,
             discipline=self.discipline,
             level=self.level,
-            style=self.style,
-            instrument=self.instrument
+            yearsOfInstruction=self.yearsOfInstruction,
+            instrument=self.instrument,
+            requirements=self.schedulingRequirements
         )
         
-        # instead of duplicating all the entry data just have an indented list of all pieces
-        for i in range(len(self.pieces)):
+        # instead of duplicating all the entry data just have an indented list of all selections
+        for i in range(len(self.selections)):
             if i != 0:
-                s +='{indent},,,,,,'.format(indent=leadingCommas)
+                s += '{indent},,,,,,'.format(indent=leadingCommas)
                 
-            s += '"{time}","{title}","{composer}","{opus}","{no}","{movement}","{arranger}","{artist}","{author}"\n'.format(
-                time=self.pieces[i]['performanceTime'],
-                title=self.pieces[i]['title'],
-                composer=self.pieces[i]['composer'],
-                opus=self.pieces[i]['opus'],
-                no=self.pieces[i]['no'],
-                movement=self.pieces[i]['movement'],
-                arranger=self.pieces[i]['arranger'],
-                artist=self.pieces[i]['artist'],
-                author=self.pieces[i]['author']
+            s += '{time}","{title}","{composer}","{musical}"\n'.format(
+                time=self.selections[i]['performanceTime'],
+                title=self.selections[i]['title'],
+                composer=self.selections[i]['composerArranger'],
+                musical=self.selections[i]['titleOfMusical']
             )
         
         csvFile.write(s)
