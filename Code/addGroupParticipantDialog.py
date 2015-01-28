@@ -82,14 +82,14 @@ class AddGroupParticipantDialog(QDialog):
             latestPerformanceTime = str(self.ui.latestPerformanceTimeTimeEdit.time().toString("HH:mm"))
         
         # Check for empty fields
-        if groupName is None or groupName == "":
-            QMessageBox.warning(self, 'Missing Field', 'Participant must have a Group Name', QMessageBox.Ok)
-            return
+        # if groupName is None or groupName == "":
+        #     QMessageBox.warning(self, 'Missing Field', 'Participant must have a Group Name', QMessageBox.Ok)
+        #     return
 
         # Check for valid fields
-        if validateName(groupName) == False:
-            if QMessageBox.question(self, 'Validate Group Name', 'Are you sure \'' + groupName + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
-                return
+        # if validateName(groupName) == False:
+        #     if QMessageBox.question(self, 'Validate Group Name', 'Are you sure \'' + groupName + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+        #         return
 
         if groupSize != "" and not groupSize.isdigit():
             QMessageBox.warning(self, 'Incorrect Field', 'Group Size must be a number', QMessageBox.Ok)

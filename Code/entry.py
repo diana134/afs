@@ -112,6 +112,6 @@ class Entry(object):
 
         p.add_run(pString)
 
-        for i in range(len(self.pieces)):
+        for i in range(len(self.selections)):
             letter = chr(i + ord('a'))
-            p.add_run("\n\t{0}) {1}".format(letter, self.pieces[i]['title']))
+            p.add_run("\n\t{0}) {1}".format(letter, self.selections[i]['title']))
