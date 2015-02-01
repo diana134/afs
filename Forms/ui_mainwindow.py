@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Thu Jan 15 22:14:36 2015
+# Created: Sun Feb  1 13:24:47 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(411, 376)
+        MainWindow.resize(446, 444)
         MainWindow.setAnimated(True)
         MainWindow.setUnifiedTitleAndToolBarOnMac(False)
         self.centralwidget = QtGui.QWidget(MainWindow)
@@ -104,6 +104,20 @@ class Ui_MainWindow(object):
         self.createNewDbBtn.setObjectName(_fromUtf8("createNewDbBtn"))
         self.horizontalLayout.addWidget(self.createNewDbBtn)
         self.gridLayout.addWidget(self.groupBox_5, 3, 0, 1, 2)
+        self.groupBox_6 = QtGui.QGroupBox(self.centralwidget)
+        self.groupBox_6.setObjectName(_fromUtf8("groupBox_6"))
+        self.horizontalLayout_2 = QtGui.QHBoxLayout(self.groupBox_6)
+        self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
+        self.entriesByDisciplineBtn = QtGui.QPushButton(self.groupBox_6)
+        self.entriesByDisciplineBtn.setObjectName(_fromUtf8("entriesByDisciplineBtn"))
+        self.horizontalLayout_2.addWidget(self.entriesByDisciplineBtn)
+        self.entriesByTeacherBtn = QtGui.QPushButton(self.groupBox_6)
+        self.entriesByTeacherBtn.setObjectName(_fromUtf8("entriesByTeacherBtn"))
+        self.horizontalLayout_2.addWidget(self.entriesByTeacherBtn)
+        self.entriesByGroupBtn = QtGui.QPushButton(self.groupBox_6)
+        self.entriesByGroupBtn.setObjectName(_fromUtf8("entriesByGroupBtn"))
+        self.horizontalLayout_2.addWidget(self.entriesByGroupBtn)
+        self.gridLayout.addWidget(self.groupBox_6, 4, 0, 1, 2)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -131,4 +145,8 @@ class Ui_MainWindow(object):
         self.backupDbBtn.setText(_translate("MainWindow", "Backup Database", None))
         self.restoreDbBtn.setText(_translate("MainWindow", "Restore Database", None))
         self.createNewDbBtn.setText(_translate("MainWindow", "Create New Database", None))
+        self.groupBox_6.setTitle(_translate("MainWindow", "Reports", None))
+        self.entriesByDisciplineBtn.setText(_translate("MainWindow", "Entries By Discipline", None))
+        self.entriesByTeacherBtn.setText(_translate("MainWindow", "Entries By Teacher", None))
+        self.entriesByGroupBtn.setText(_translate("MainWindow", "Entries by School/Group", None))
 

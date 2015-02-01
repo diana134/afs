@@ -59,6 +59,9 @@ class MainWindow(QWidget):
         self.ui.backupDbBtn.clicked.connect(self.backupDbBtn_clicked)
         self.ui.restoreDbBtn.clicked.connect(self.restoreDbBtn_clicked)
         self.ui.createNewDbBtn.clicked.connect(self.createNewDbBtn_clicked)
+        self.ui.entriesByDisciplineBtn.clicked.connect(self.entriesByDisciplineBtn_clicked)
+        self.ui.entriesByTeacherBtn.clicked.connect(self.entriesByTeacherBtn_clicked)
+        self.ui.entriesByGroupBtn.clicked.connect(self.entriesByGroupBtn_clicked)
 
     ###### Slots ######
 
@@ -242,6 +245,48 @@ class MainWindow(QWidget):
         """Backs up current db, then drops and recreates all the tables"""
         # TODO low priority, probably don't need it until after the festival
         pass
+
+    def entriesByDisciplineBtn_clicked(self):
+        """Saves a csv of all the entries sorted by Discipline"""
+        filename = QFileDialog.getSaveFileName(self, "Report Entries by Discipline", exportsPath, "CSV Files (*.csv)")
+        if filename is not None and filename != "":
+            if filename[-4:] != ".csv":
+                filename += ".csv"
+            entries = dbInteractionInstance.getAllEntries()
+            # TODO sort by participant last name
+            entries.sort(key=lambda x: (x.discipline, x.classNumber))
+            for entry in entries:
+                print entry
+            # TODO write csv
+            QMessageBox.information(self, 'Report Entries by Discipline', 'Report saved to ' + filename, QMessageBox.Ok)
+
+    def entriesByTeacherBtn_clicked(self):
+        """Saves a csv of all the entries sorted by Teacher"""
+        filename = QFileDialog.getSaveFileName(self, "Report Entries by Teacher", exportsPath, "CSV Files (*.csv)")
+        if filename is not None and filename != "":
+            if filename[-4:] != ".csv":
+                filename += ".csv"
+            entries = dbInteractionInstance.getAllEntries()
+            # TODO sort by participant last name
+            entries.sort(key=lambda x: (x.teacherId))
+            for entry in entries:
+                print entry
+            # TODO write csv
+            QMessageBox.information(self, 'Report Entries by Teacher', 'Report saved to ' + filename, QMessageBox.Ok)
+
+    def entriesByGroupBtn_clicked(self):
+        """Saves a csv of all the entries sorted by Group"""
+        filename = QFileDialog.getSaveFileName(self, "Report Entries by School/Group", exportsPath, "CSV Files (*.csv)")
+        if filename is not None and filename != "":
+            if filename[-4:] != ".csv":
+                filename += ".csv"
+            entries = dbInteractionInstance.getAllEntries()
+            # TODO sort by school then group name (for group participants only)
+            # entries.sort(key=lambda x: (x.discipline, x.classNumber))
+            for entry in entries:
+                print entry
+            # TODO write csv
+            QMessageBox.information(self, 'Report Entries by School/Group', 'Report saved to ' + filename, QMessageBox.Ok)
 
     ##########
 
