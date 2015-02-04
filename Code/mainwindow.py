@@ -253,8 +253,19 @@ class MainWindow(QWidget):
             if filename[-4:] != ".csv":
                 filename += ".csv"
             entries = dbInteractionInstance.getAllEntries()
-            # TODO sort by participant last name
-            entries.sort(key=lambda x: (x.discipline, x.classNumber))
+            # Get participant and teacher names for entries
+            # Note super bad hack where I replace the ID with a name
+            for entry in entries:
+                participant = dbInteractionInstance.getParticipantFromId(entry.participantID)
+                try:
+                    entry.participantID = "{last}, {first}".format(last=participant.last, first=participant.first)
+                except Exception:
+                    entry.participantID = "{groupName}".format(groupName=participant.groupName)
+
+                teacher = dbInteractionInstance.getTeacherFromId(entry.teacherID)
+                entry.teacherID = "{last}, {first}".format(last=teacher.last, first=teacher.first)
+
+            entries.sort(key=lambda x: (x.discipline, x.classNumber, x.participantID))
             for entry in entries:
                 print entry
             # TODO write csv
@@ -267,8 +278,19 @@ class MainWindow(QWidget):
             if filename[-4:] != ".csv":
                 filename += ".csv"
             entries = dbInteractionInstance.getAllEntries()
-            # TODO sort by participant last name
-            entries.sort(key=lambda x: (x.teacherId))
+            # Get participant and teacher names for entries
+            # Note super bad hack where I replace the ID with a name
+            for entry in entries:
+                participant = dbInteractionInstance.getParticipantFromId(entry.participantID)
+                try:
+                    entry.participantID = "{last}, {first}".format(last=participant.last, first=participant.first)
+                except Exception:
+                    entry.participantID = "{groupName}".format(groupName=participant.groupName)
+
+                teacher = dbInteractionInstance.getTeacherFromId(entry.teacherID)
+                entry.teacherID = "{last}, {first}".format(last=teacher.last, first=teacher.first)
+
+            entries.sort(key=lambda x: (x.teacherID, x.participantID))
             for entry in entries:
                 print entry
             # TODO write csv
