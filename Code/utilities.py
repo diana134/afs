@@ -51,8 +51,11 @@ def stripPhoneNumber(number):
     return newNumber
 
 def validEmail(email):
-    """Returns False if email doesn't follow abc@def.ghj format"""
-    match = re.match("^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$", email)
+    """Returns False if email isn't in valid format"""
+    # match = re.match("^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$", email)
+    match = re.match(
+        r"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?",
+        email)
     return match != None
 
 def stripPostal(postal):
