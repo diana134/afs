@@ -105,7 +105,7 @@ College or University Chorus Classes ............... 150
 Church Choir Classes ........................................ 151
 Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESCHOOL AND COMMUNITY continued
 Community Choir Classes
-Children’s Choir Classes ............................... 151
+Children's Choir Classes ............................... 151
 Youth Choir Classes ...................................... 152
 Adult Choir Classes ....................................... 152
 Service, Fraternal, Commercial, or Barbershop
@@ -143,7 +143,7 @@ General Theatre Arts Regulations ..................... 195
 Drama Classes .................................................. 196
 Puppetry Classes ............................................... 197
 Mime Classes .................................................... 197
-Reader’s Theatre Classes ................................. 198
+Reader's Theatre Classes ................................. 198
 Musical Theatre Classes ................................... 198
 Video and Film Classes ..................................... 198
 DANCE
@@ -200,7 +200,7 @@ Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREABOUT A
 A non-profit, charitable organization, the Associated Manitoba Arts Festivals (AMAF) supports festivals in promoting
 and encouraging the development and growth of the performing and creative arts. AMAF also serves as host of the
 annual Provincial Music & Speech Arts Finals that brings together the winners from local festivals across the
-province and sends some of Manitoba’s most talented senior musicians to the National Music Festival.
+province and sends some of Manitoba's most talented senior musicians to the National Music Festival.
 AMAF is a provincial organization, providing programs, resources and services for affiliated festivals in Manitoba
 including: this Provincial Syllabus; an Index of Arts Specialists, an Adjudicator Training program; Festival Handbook;
 Manitoba Composition Competition. Each year festival representatives from all over Manitoba meet for the AMAF
@@ -219,7 +219,7 @@ STATEMENT OF BELIEF
 to participate in arts activities at any level,
 to experience personal growth
 and to develop their skills and an appreciation for the arts.
-AMAF believes that the arts should be an integral part of a person’s life,
+AMAF believes that the arts should be an integral part of a person's life,
 and that festivals should be a positive developmental experience.”
 Many thanks to the Department of Culture, Heritage,Tourism and Sport
 for their continued support of AMAF and the arts in Manitoba!
@@ -246,7 +246,7 @@ th
 st
 20 /21 Century, Contemporary ........................... 20 /21 Century
 5. FESTIVAL ADDENDUM: An addendum defines what is distinct about a festival: when and where the festival
-will take place, what performance classes from the Provincial Syllabus won’t be included, what classes will be
+will take place, what performance classes from the Provincial Syllabus won't be included, what classes will be
 included that are not in the Provincial Syllabus, what deadline and fees have been set for entries, what system
 of awards will be followed and so on. This document is used in conjunction with the Provincial Syllabus.
 The following information is found in an addendum:
@@ -311,7 +311,7 @@ performers and most outstanding choral entries are eligible to be recommended to
 Festival.
 Each AMAF Affiliated festival is entitled to send participants to represent their community at the Provincial Finals. Participants
 must be recommended by their adjudicator from a Provincial Finals eligible class. Classes eligible for recommendation to the
-Provincial Finals are identified in the Syllabus by a ‘P’ preceding the class number and the class name printed in bold font. Solo
+Provincial Finals are identified in the Syllabus by a ‘P' preceding the class number and the class name printed in bold font. Solo
 and Chamber Music classes are divided into four levels and Speech Arts classes are divided into two levels:
 Music Level
 Vocal
@@ -443,7 +443,7 @@ st
 Provincial Recommendation
 a. All individuals must be recommended to the Provincial Finals following a performance in an eligible class at a local
 festival affiliated with the Associated Manitoba Arts Festivals.
-b. On the adjudicator’s recommendation, each local festival is allowed,
+b. On the adjudicator's recommendation, each local festival is allowed,
 one representative per level in each discipline for solo and chamber group Provincial Finals classes.
 one representative per level for the multi-discipline W.A. Mozart classes.
 one representative per discipline at each level for the multi-discipline Canadian Composer classes.
@@ -7316,21 +7316,21 @@ Two contrasting sacred selections, own choice, any number of parts.
 C 8260 CHURCH CHOIR, OWN CHOICE, ANY COMBINATION OF VOICES
 Two contrasting sacred selections, own choice, any number of parts.
 COMMUNITY CHOIR CLASSES
-CHILDREN’S CHOIR, 12 YEARS AND UNDER
-C 8301 CHILDREN’S CHOIR, OWN CHOICE, 12 YEARS AND UNDER
+CHILDREN'S CHOIR, 12 YEARS AND UNDER
+C 8301 CHILDREN'S CHOIR, OWN CHOICE, 12 YEARS AND UNDER
 Two contrasting selections, own choice, any number of parts.
-C 8302 CHILDREN’S CHOIR, FOLK SONG, 12 YEARS AND UNDER
+C 8302 CHILDREN'S CHOIR, FOLK SONG, 12 YEARS AND UNDER
 Two contrasting selections, own choice, any number of parts.
-C 8303 CHILDREN’S CHOIR, MODERN FOLK SONG, WITHOUT MOVEMENT, 12 YEARS AND UNDER
+C 8303 CHILDREN'S CHOIR, MODERN FOLK SONG, WITHOUT MOVEMENT, 12 YEARS AND UNDER
 Two contrasting selections, own choice, any number of parts.
-C 8304 CHILDREN’S CHOIR, MODERN FOLK SONG, WITH MOVEMENT, 12 YEARS AND UNDER
+C 8304 CHILDREN'S CHOIR, MODERN FOLK SONG, WITH MOVEMENT, 12 YEARS AND UNDER
 Two contrasting selections, own choice, any number of parts.
-C 8305 CHILDREN’S CHOIR, OPERETTA, 12 YEARS AND UNDER
+C 8305 CHILDREN'S CHOIR, OPERETTA, 12 YEARS AND UNDER
 One selection of an excerpt from an operetta or musical, including any optional solo parts, to be acted out as well as sung,
 with participants costumed and using a minimum of stage sets. Preparation and performance time not to exceed 20
 minutes. Any live accompaniment may be used. Speaking parts should be kept to a minimum. It is highly desirable that
 the conductor not be on stage.
-C 8306 CHILDREN’S CHOIR, CONCERT GROUP, 12 YEARS AND UNDER
+C 8306 CHILDREN'S CHOIR, CONCERT GROUP, 12 YEARS AND UNDER
 Three or four contrasting selections by various composers, representing a variety of styles and periods. 20 minute time
 limit. The artistic arrangement of the selections and the quality of the music chosen will be taken into consideration.
 151
@@ -7645,7 +7645,7 @@ Smith, William R. The Scarecrow (B & H)
 Thiman, Eric The Path to the Moon (B & H)
 C 8066 CLASSROOM CHOIR, GRADE 5
 Anderson, W.H. Summer on the Prairie (Leslie)
-Beswick, Aubrey Coconut Man (Pick’n’Choose)
+Beswick, Aubrey Coconut Man (Pick'n'Choose)
 Coghlan, Mira & Michael Inuit Vignette (G.V. Thompson)
 Crawley, Clifford Northward (Songs of the Settlers, Leslie)
 Donnelly, Mary &
@@ -11158,7 +11158,7 @@ McClelland & Stewart
 McClelland & Stewart
 194
 Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARETHEATRE ARTS
-Theatre Arts Classes are divided into the following sections: Drama; Puppetry; Mime; Reader’s
+Theatre Arts Classes are divided into the following sections: Drama; Puppetry; Mime; Reader's
 Theatre; Musical Theatre; Film and Video.
 Please check your local festival addendum for details regarding the Theatre Arts Classes.
 All grade levels in Theatre Arts classes refer to school grade level.
@@ -11287,7 +11287,7 @@ TA 0127 DRAMA, STUDENT DIRECTED SCENE, OWN CHOICE, OPEN
 Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREDRAMATIC MONOLOGUES
 A dramatic monologue is a dramatic piece for a single performer, or a long speech from a play in which a single character
 speaks. The piece will be adjudicated primarily on the strength of the interpretation and the believability of the character.
-Participants are advised to read the whole play and be aware of the character’s role and development throughout the play. It is
+Participants are advised to read the whole play and be aware of the character's role and development throughout the play. It is
 not necessary to use an accent. Monologue classes are also offered under Speech Arts. One selection. Please check your
 local festival addendum for time limits.
 TA 0128 DRAMA, DRAMATIC MONOLOGUE, OWN CHOICE, GRADES 4 - 6
@@ -11331,27 +11331,27 @@ TA 0151 MIME, GRADES 10 - 12
 TA 0152 MIME, ADULT
 TA 0153 MIME, OPEN
 197
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREREADER’S THEATRE CLASSES
-In Reader’s Theatre, scripts are held in the hand, and no attempt is made to approximate entrances, exits, stage movements or
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREREADER'S THEATRE CLASSES
+In Reader's Theatre, scripts are held in the hand, and no attempt is made to approximate entrances, exits, stage movements or
 action, lighting, sets or props. Often the form consists simply of stools on which the readers sit and enough light by which to
-read. Tableaux or slides may sometimes be used to give the audience a visual focus while they listen. Reader’s Theatre is
-similar to radio drama in that audience attention is caught and held through the actor’s involvement in the characters. Not all
-plays are suitable for use in Reader’s Theatre; those which do not require a great deal of visual movement and action to keep the
+read. Tableaux or slides may sometimes be used to give the audience a visual focus while they listen. Reader's Theatre is
+similar to radio drama in that audience attention is caught and held through the actor's involvement in the characters. Not all
+plays are suitable for use in Reader's Theatre; those which do not require a great deal of visual movement and action to keep the
 audience interested work best. Own choice. Please check your local festival addendum for time limits.
 CREATED SCRIPT OR ADAPTATION
-TA 0154 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, KINDERGARTEN - GRADE 3
-TA 0155 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 4 - 6
-TA 0156 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 7 - 9
-TA 0157 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 10 - 12
-TA 0158 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, ADULT
-TA 0159 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, OPEN
+TA 0154 READER'S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, KINDERGARTEN - GRADE 3
+TA 0155 READER'S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 4 - 6
+TA 0156 READER'S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 7 - 9
+TA 0157 READER'S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 10 - 12
+TA 0158 READER'S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, ADULT
+TA 0159 READER'S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, OPEN
 EXCERPT, SCENE OR ONE-ACT PLAY
-TA 0160 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, KINDERGARTEN - GRADE 3
-TA 0161 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 4 - 6
-TA 0162 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 7 - 9
-TA 0163 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 10 - 12
-TA 0164 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, ADULT
-TA 0165 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, OPEN
+TA 0160 READER'S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, KINDERGARTEN - GRADE 3
+TA 0161 READER'S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 4 - 6
+TA 0162 READER'S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 7 - 9
+TA 0163 READER'S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 10 - 12
+TA 0164 READER'S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, ADULT
+TA 0165 READER'S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, OPEN
 MUSICAL THEATRE CLASSES
 Musical Theatre classes are also offered under Dance (Stage Dance with Voice), Vocal and Choral Categories. All selections for
 these classes must be taken from a stage production. Musical Theatre entered in Dance Classes will be judged on dance,
@@ -11793,7 +11793,7 @@ D 0445 MODERN DANCE GROUP, OWN CHOICE, 19 YEARS AND OVER
 D 0446 MODERN DANCE GROUP, OWN CHOICE, MULTIGENERATIONAL
 208
 Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARECREATIVE MOVEMENT CLASSES
-Creative movement is the process of discovering the range of human movement through the body’s use of surrounding space,
+Creative movement is the process of discovering the range of human movement through the body's use of surrounding space,
 efforts (energy release and muscle control) and shapes. Creative movement can explore the movement qualities of human
 emotion and its expression. The dance itself then becomes an expression of the dancer.
 The dance may be narrative (tells a story) or abstract (movement which does not tell a story). The dance may be performed to
@@ -12326,7 +12326,7 @@ D 0885 DANCE, SELF-CHOREOGRAPHY, GROUP, OWN CHOICE, 19 YEARS AND OVER
 D 0886 DANCE, SELF-CHOREOGRAPHY, GROUP, OWN CHOICE, MULTIGENERATIONAL
 HIP HOP CLASSES
 A dance form that is a component of the hip hop cultural movement that began among African-Americans in New York City in the
-early 1970’s. Hip hop is expressed through movements that are strong, energetic, grounded and rhythmic, incorporating various
+early 1970's. Hip hop is expressed through movements that are strong, energetic, grounded and rhythmic, incorporating various
 forms of dance such as; breaking, popping and locking.
 SOLO
 One selection, own choice.
@@ -12378,7 +12378,7 @@ Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREFOLK DA
 KINDERGARTEN - GRADE 1
 The Wheat (Czechoslovakia)
 Chimes of Dunkirk ( France)
-Shoemaker’s Dance (Denmark)
+Shoemaker's Dance (Denmark)
 Carrousel (Sweden)
 Hansel & Gretel (Germany)
 Nixie Polka (Denmark)
@@ -12397,7 +12397,7 @@ Alfredu (Germany)
 Ace of Diamonds (Denmark)
 Crested Hen (Denmark)
 Danish Family Circle (Denmark)
-Gustaf’s Skoal (Sweden)
+Gustaf's Skoal (Sweden)
 Greensleeves (England)
 GRADES 3 - 4
 Kendime (Turkey)
@@ -12436,8 +12436,8 @@ Doudlebska Polka (Czechoslovakia)
 Machar (Israel)
 Okdano (Sweden)
 Patch Tanz (Jewish)
-D’Hammerschmiedgsella (Germany)
-V’David (Israel)
+D'Hammerschmiedgsella (Germany)
+V'David (Israel)
 Waraku Odori (Japan)
 Man in the Hay (Germany)
 Mayim (Israel)
@@ -12459,7 +12459,7 @@ Hora Fetelor (Romania)
 Kohanochka (Russia)
 GRADES 11 - 12
 Shalom Al Israel (Israel)
-Ssulam Ya’Akov (Israel)
+Ssulam Ya'Akov (Israel)
 Setnja (Yugoslavia)
 Yellow Cat Jig (England)
 Tango Poquito (North America)
@@ -12495,10 +12495,10 @@ Mexican Jumping Bean
 GRADES 5 - 6
 Hot Prestzels
 Pata Pata Goofus
-Tippy Toein’ Five Foot Two Mixer
+Tippy Toein' Five Foot Two Mixer
 Glow Worm
 Mexican Mixer
-Bossa Nova Steppin’ Out
+Bossa Nova Steppin' Out
 Limbo Rick
 GRADES 7 - 12
 th
@@ -12560,7 +12560,7 @@ All Visual Arts entries must be clearly labeled. Please see local festival adden
 Original Work
 Original work should be stressed at all times. Patterns, kits, pre-fabricated molds, copies and tracings do not qualify as
 original work. In the case of school entries, teachers may introduce a broad theme but the interpretation of the theme or
-subject should be the student’s. Projects where every student does the same thing with slight variations (e.g. colour),
+subject should be the student's. Projects where every student does the same thing with slight variations (e.g. colour),
 are not classified as original work.
 4.
 Marking
@@ -12587,7 +12587,7 @@ VA 1006 PAINTING, OIL AND ACRYLIC, GRADES 7 - 9
 VA 1007 PAINTING, OIL AND ACRYLIC, GRADES 10 - 12
 VA 1008 PAINTING, OIL AND ACRYLIC, ADULT
 DRAWING CLASSES
-All work to be original. Copies of other artists’ works (paintings, drawings, etc.) or caricatures (eg. Garfield, Peanuts, etc.) are not
+All work to be original. Copies of other artists' works (paintings, drawings, etc.) or caricatures (eg. Garfield, Peanuts, etc.) are not
 acceptable as originality should be stressed at all times.
 DRAWING, COLOURED OR BLACK AND WHITE: CRAYON, PASTEL, CHALK, COLOURED PENCIL, CHARCOAL,
 CONTE, PEN AND INK
@@ -12768,7 +12768,7 @@ VA 1243 ANIMATION, COMPUTER ART, GRADES 7 - 9
 VA 1244 ANIMATION, COMPUTER ART, GRADES 10 - 12
 VA 1245 ANIMATION, COMPUTER ART, ADULT
 CALLIGRAPHY CLASSES
-Participants’ work should display consistency in style and technique, and originality in embellishment and decoration. Personal
+Participants' work should display consistency in style and technique, and originality in embellishment and decoration. Personal
 expression is encouraged.
 VA 1246 CALLIGRAPHY, GRADES 4 - 6
 VA 1247 CALLIGRAPHY, GRADES 7 - 9
@@ -12845,10 +12845,10 @@ will make them consistent with similarly named classes in other instrumental dis
 •
 •
 •
-Classes titled ‘Renaissance’ should read ‘Renaissance/Renaissance Style’
-Classes titled ‘Baroque’ should read ‘Baroque/Baroque Style’
-Classes titled ‘Classical’ should read ‘Classical/Classical Style’
-Classes titled ‘Romantic’ should read ‘Romantic Composers’
+Classes titled ‘Renaissance' should read ‘Renaissance/Renaissance Style'
+Classes titled ‘Baroque' should read ‘Baroque/Baroque Style'
+Classes titled ‘Classical' should read ‘Classical/Classical Style'
+Classes titled ‘Romantic' should read ‘Romantic Composers'
 All other classes remain unchanged.
 The following is a complete list of the classes affected:
 BEGINNER
