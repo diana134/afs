@@ -70,6 +70,7 @@ class EditEntryDialog(QDialog):
         self.ui.levelLineEdit.setText(self.entry.level)
         self.ui.yearsOfInstructionLineEdit.setText(self.entry.yearsOfInstruction)
         self.ui.instrumentLineEdit.setText(self.entry.instrument)
+        self.ui.schedulingLineEdit.setText(self.entry.schedulingRequirements)
         for i in xrange(0, len(self.entry.selections)):
             self.ui.tabWidget.addTab(PieceWidget(piece=self.entry.selections[i]), "Selection {0}".format(i+1))
         # trigger combobox change to set enabled fields correctly

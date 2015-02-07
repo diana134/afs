@@ -69,6 +69,7 @@ class AddEntryDialog(QDialog):
         self.ui.classNumberLineEdit.clear()
         self.ui.classNameLineEdit.clear()
         self.ui.instrumentLineEdit.clear()
+        self.ui.schedulingLineEdit.clear()
         # Clear all the piecewidgets
         self.ui.tabWidget.widget(0).clearFields()
         for i in xrange(1, self.ui.tabWidget.count()):
