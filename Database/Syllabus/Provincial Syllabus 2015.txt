@@ -853,7 +853,8 @@ Composers class.
 2
 V 1152 VOCAL SOLO, CANADIAN COMPOSERS, 12 YEARS AND UNDER
 One selection, own choice. Not an arrangement.
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREV 1153 VOCAL SOLO, SACRED, 12 YEARS AND UNDER
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+V 1153 VOCAL SOLO, SACRED, 12 YEARS AND UNDER
 One selection, own choice. Not contemporary Christian music. Not an aria from a major sacred work.
 V 1154 VOCAL SOLO, FOLK SONG, 12 YEARS AND UNDER
 One selection, own choice. Traditional or traditional style.
@@ -1031,7 +1032,8 @@ V 1366 VOCAL SOLO, GILBERT & SULLIVAN, GRADE B
 One selection, own choice, chosen from any of the operas of Gilbert & Sullivan. Participants may include the spoken or
 musical passages leading up to it and may use hand props, costumes and movement. Not a medley of songs. No chorus.
 6
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREV 1367 VOCAL SOLO, OWN CHOICE, GRADE B
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+V 1367 VOCAL SOLO, OWN CHOICE, GRADE B
 One selection, own choice.
 V 1368 VOCAL SOLO, RECITAL GROUP, GRADE B
 Three selections, own choice, by one or more composers.
@@ -1075,7 +1077,8 @@ One selection, own choice. Traditional or traditional style.
 V 1413 VOCAL SOLO, CONTEMPORARY FOLK/POPULAR MUSIC, GRADE A
 One selection, own choice.
 7
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREV 1414 VOCAL SOLO, MUSICAL THEATRE, UP TEMPO, GRADE A
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+V 1414 VOCAL SOLO, MUSICAL THEATRE, UP TEMPO, GRADE A
 One selection, own choice, chosen from a stage production. Participants may include the spoken passages leading up to it
 and may use hand props, costumes and movement. Not a medley of songs. No chorus.
 V 1415 VOCAL SOLO, MUSICAL THEATRE, BALLAD, GRADE A
@@ -1121,7 +1124,8 @@ One selection, own choice, with recitative where applicable.
 V 1462 VOCAL SOLO, FOLK SONG, HONOURS
 One selection, own choice. Traditional or traditional style.
 8
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREV 1463 VOCAL SOLO, CONTEMPORARY FOLK/POPULAR MUSIC, HONOURS
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+V 1463 VOCAL SOLO, CONTEMPORARY FOLK/POPULAR MUSIC, HONOURS
 One selection, own choice.
 V 1464 VOCAL SOLO, MUSICAL THEATRE, UP TEMPO, HONOURS
 One selection, own choice, chosen from a stage production. Participants may include the spoken passages leading up to it
@@ -1166,7 +1170,8 @@ V 1513 VOCAL SOLO, MUSICAL THEATRE, UP TEMPO, ADULT
 One selection, own choice, chosen from a stage production. Participants may include the spoken passages leading up to it
 and may use hand props, costumes and movement. Not a medley of songs. No chorus.
 9
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREV 1514 VOCAL SOLO, MUSICAL THEATRE, BALLAD, ADULT
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+V 1514 VOCAL SOLO, MUSICAL THEATRE, BALLAD, ADULT
 One selection, own choice, chosen from a stage production. Participants may include the spoken passages leading up to it
 and may use hand props, costumes and movement. Not a medley of songs. No chorus.
 V 1515 VOCAL SOLO, GILBERT & SULLIVAN, ADULT
@@ -1209,7 +1214,8 @@ and may use hand props, costumes and movement. Not a medley of songs. No chorus.
 V 1567 VOCAL QUARTET, OWN CHOICE, 12 YEARS AND UNDER
 One selection, own choice.
 10
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREV 1568 VOCAL QUARTET, MUSICAL THEATRE, 12 YEARS AND UNDER
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+V 1568 VOCAL QUARTET, MUSICAL THEATRE, 12 YEARS AND UNDER
 One selection, own choice, chosen from a stage production. Participants may include the spoken passages leading up to it
 and may use hand props, costumes and movement. Not a medley of songs. No chorus.
 14 YEARS AND UNDER
@@ -1256,7 +1262,8 @@ V 1588 VOCAL TRIO, GILBERT & SULLIVAN, 16 YEARS AND UNDER
 One selection, own choice, chosen from any of the operas of Gilbert & Sullivan. Participants may include the spoken or
 musical passages leading up to it and may use hand props, costumes and movement. Not a medley of songs. No chorus.
 11
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREV 1589 VOCAL QUARTET, OWN CHOICE, 16 YEARS AND UNDER
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+V 1589 VOCAL QUARTET, OWN CHOICE, 16 YEARS AND UNDER
 One selection, own choice.
 V 1590 VOCAL QUARTET, MUSICAL THEATRE, 16 YEARS AND UNDER
 One selection, own choice, chosen from a stage production. Participants may include the spoken passages leading up to it
@@ -1302,7 +1309,8 @@ One selection, own choice, with recitative where applicable.
 V 1623 VOCAL DUET, CONTEMPORARY FOLK/POPULAR MUSIC, GRADE B
 One selection, own choice.
 12
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREV 1624 VOCAL DUET, MUSICAL THEATRE, GRADE B
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+V 1624 VOCAL DUET, MUSICAL THEATRE, GRADE B
 One selection, own choice, chosen from a stage production. Participants may include the spoken passages leading up to it
 and may use hand props, costumes and movement. Not a medley of songs. No chorus.
 V 1625 VOCAL DUET, GILBERT & SULLIVAN, GRADE B
@@ -1351,7 +1359,8 @@ V 1650 VOCAL QUARTET, MUSICAL THEATRE, GRADE A
 One selection, own choice, chosen from a stage production. Participants may include the spoken passages leading up to it
 and may use hand props, costumes and movement. Not a medley of songs. No chorus.
 13
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREV 1651 VOCAL QUARTET, GILBERT & SULLIVAN, GRADE A
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+V 1651 VOCAL QUARTET, GILBERT & SULLIVAN, GRADE A
 One selection, own choice, chosen from any of the operas of Gilbert & Sullivan. Participants may include the spoken or
 musical passages leading up to it and may use hand props, costumes and movement. Not a medley of songs. No chorus.
 HONOURS
@@ -1399,7 +1408,8 @@ musical passages leading up to it and may use hand props, costumes and movement.
 V 1686 VOCAL TRIO, OWN CHOICE, ADULT
 One selection, own choice.
 14
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREV 1687 VOCAL TRIO, MUSICAL THEATRE, ADULT
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+V 1687 VOCAL TRIO, MUSICAL THEATRE, ADULT
 One selection, own choice, chosen from a stage production. Participants may include the spoken passages leading up to it
 and may use hand props, costumes and movement. Not a medley of songs. No chorus.
 V 1688 VOCAL TRIO, GILBERT & SULLIVAN, ADULT
@@ -1497,7 +1507,8 @@ GRADE 1
 K 2051 PIANO SOLO, BAROQUE/BAROQUE STYLE/CLASSICAL/CLASSICAL STYLE, GRADE 1
 One selection, own choice. No sonata or concerto movements.
 17
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREK 2052 PIANO SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE 1
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+K 2052 PIANO SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE 1
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
 Canadian Composers class.
 K 2053 PIANO SOLO, CANADIAN COMPOSERS, GRADE 1
@@ -1587,7 +1598,8 @@ recommendation to the Junior Canadian Composers class at the Provincial Finals.
 PK 2256 PIANO SOLO, SONATA, GRADE 5 (J)
 Own choice, one movement of a sonata.
 19
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREK 2257 PIANO SOLO, STUDY, GRADE 5
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+K 2257 PIANO SOLO, STUDY, GRADE 5
 One selection, own choice. Works from Popular Piano lists must be entered in the Popular class.
 K 2258 PIANO SOLO, POPULAR, GRADE 5
 One selection, own choice.
@@ -1630,7 +1642,8 @@ eligible for recommendation to the Provincial Finals.
 PK 2351 PIANO SOLO, BAROQUE/BAROQUE STYLE, GRADE 7 (I)
 One selection, own choice. No sonata or concerto movements.
 20
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPK 2352 PIANO SOLO, BAROQUE SONATA, GRADE 7 (I)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PK 2352 PIANO SOLO, BAROQUE SONATA, GRADE 7 (I)
 Own choice, one movement of a Baroque sonata.
 PK 2353 PIANO SOLO, CLASSICAL/CLASSICAL STYLE, GRADE 7 (I)
 One selection, own choice. No sonata or concerto movements.
@@ -1676,7 +1689,8 @@ Composers class.
 PK 2408 PIANO SOLO, 19TH/20TH/21ST CENTURY SONATA, GRADE 8 (I)
 Own choice, one movement of a 19th/20th/21st Century sonata.
 21
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPKC 2409 PIANO SOLO, CANADIAN COMPOSERS, GRADE 8 (I)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PKC 2409 PIANO SOLO, CANADIAN COMPOSERS, GRADE 8 (I)
 One selection, own choice. No sonata or concerto movements. This is the only piano class at this level eligible for
 recommendation to the Intermediate Canadian Composers class at the Provincial Finals.
 PK 2410 PIANO SOLO, FRENCH COMPOSERS, GRADE 8 (I)
@@ -1722,7 +1736,8 @@ recommendation to the Advanced Canadian Composers class at the Provincial Finals
 PK 2460 PIANO SOLO, FRENCH COMPOSERS, GRADE 9 (A)
 One selection, own choice. No sonata or concerto movements.
 22
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREK 2461 PIANO SOLO, CONCERTO, GRADE 9
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+K 2461 PIANO SOLO, CONCERTO, GRADE 9
 Own choice, one movement of a concerto. Orchestral part to be played on a second piano.
 K 2462 PIANO SOLO, STUDY, GRADE 9
 One selection, own choice. Works from Popular Piano lists must be entered in the Popular class.
@@ -1858,7 +1873,8 @@ Series Pre-Grade 1 book (CC).
 K 2652 PIANO SOLO, BAROQUE/BAROQUE STYLE, ADULT
 One selection, own choice.
 25
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREK 2653 PIANO SOLO, CLASSICAL, ADULT
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+K 2653 PIANO SOLO, CLASSICAL, ADULT
 One selection, own choice.
 K 2654 PIANO SOLO, ROMANTIC COMPOSERS, ADULT
 One selection, own choice.
@@ -1986,7 +2002,8 @@ One selection, own choice.
 K 2882 ORGAN SOLO, 20TH/21ST CENTURY CHURCH REPERTOIRE, GRADE 8
 One selection, own choice.
 28
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREK 2883 ORGAN SOLO, CLASSICAL, GRADE 8
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+K 2883 ORGAN SOLO, CLASSICAL, GRADE 8
 One selection, own choice, CC syllabus, List B.
 K 2884 ORGAN SOLO, CLASSICAL, OWN CHOICE, GRADE 8
 One selection, own choice.
@@ -2211,7 +2228,8 @@ One selection, own choice. No sonata or concerto movements.
 S 3102 VIOLIN SOLO, CLASSICAL/CLASSICAL STYLE, GRADE 4
 One selection, own choice. No sonata or concerto movements.
 35
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARES 3103 VIOLIN SOLO, ROMANTIC COMPOSERS, GRADE 4
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+S 3103 VIOLIN SOLO, ROMANTIC COMPOSERS, GRADE 4
 One selection, own choice. No sonata or concerto movements.
 S 3104 VIOLIN SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE 4
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
@@ -2254,7 +2272,8 @@ recommendation to the Junior Canadian Composers class at the Provincial Finals.
 S 3129 VIOLIN SOLO, CONCERTO, GRADE 5
 Own choice, one movement of a concerto. Orchestral part to be played on piano.
 36
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARES 3130 VIOLIN SOLO, OWN CHOICE, GRADE 5
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+S 3130 VIOLIN SOLO, OWN CHOICE, GRADE 5
 One selection, own choice.
 S 3131 VIOLIN SOLO, RECITAL GROUP, GRADE 5
 Three selections, own choice, by one or more composers. No sonata or concerto movements.
@@ -2299,7 +2318,8 @@ Own choice, one movement of a Baroque sonata.
 PS 3163 VIOLIN SOLO, CLASSICAL/CLASSICAL STYLE, GRADE 7 (I)
 One selection, own choice. No sonata or concerto movements.
 37
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPS 3164 VIOLIN SOLO, CLASSICAL SONATA, GRADE 7 (I)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PS 3164 VIOLIN SOLO, CLASSICAL SONATA, GRADE 7 (I)
 Own choice, one movement of a Classical sonata.
 PS 3165 VIOLIN SOLO, ROMANTIC COMPOSERS, GRADE 7 (I)
 One selection, own choice. No sonata or concerto movements.
@@ -2343,7 +2363,8 @@ recommendation to the Intermediate Canadian Composers class at the Provincial Fi
 S 3190 VIOLIN SOLO, CONCERTO, GRADE 8
 Own choice, one movement of a concerto. Orchestral part to be played on piano.
 38
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARES 3191 VIOLIN SOLO, OWN CHOICE, GRADE 8
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+S 3191 VIOLIN SOLO, OWN CHOICE, GRADE 8
 One selection, own choice.
 S 3192 VIOLIN SOLO, RECITAL GROUP, GRADE 8
 Three selections, own choice, by one or more composers. No sonata or concerto movements.
@@ -2388,7 +2409,8 @@ One selection, own choice. No sonata or concerto movements.
 PS 3222 VIOLIN SOLO, BAROQUE SONATA, GRADE 10 (A)
 Own choice, one movement of a Baroque sonata.
 39
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPS 3223 VIOLIN SOLO, BAROQUE, J.S. BACH, UNACCOMPANIED, GRADE 10 (A)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PS 3223 VIOLIN SOLO, BAROQUE, J.S. BACH, UNACCOMPANIED, GRADE 10 (A)
 Own choice, one movement of a sonata or partita.
 PS 3224 VIOLIN SOLO, CLASSICAL/CLASSICAL STYLE, GRADE 10 (A)
 One selection, own choice. No sonata or concerto movements.
@@ -2434,7 +2456,8 @@ Own choice, two consecutive movements of a Classical sonata.
 PS 3246 VIOLIN SOLO, ROMANTIC COMPOSERS, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements.
 40
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPS 3247 VIOLIN SOLO, 20TH/21ST CENTURY COMPOSERS, DIPLOMA (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PS 3247 VIOLIN SOLO, 20TH/21ST CENTURY COMPOSERS, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
 Canadian Composers class.
 PS 3248 VIOLIN SOLO, 19TH/20TH/21ST CENTURY SONATA, DIPLOMA (S)
@@ -2525,7 +2548,8 @@ Canadian Composers class.
 S 3315 VIOLA SOLO, CANADIAN COMPOSERS, GRADE 3
 One selection, own choice. No sonata or concerto movements.
 42
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARES 3316 VIOLA SOLO, OWN CHOICE, GRADE 3
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+S 3316 VIOLA SOLO, OWN CHOICE, GRADE 3
 One selection, own choice.
 S 3317 VIOLA SOLO, RECITAL GROUP, GRADE 3
 Three selections, own choice, by one or more composers. No sonata or concerto movements.
@@ -2617,7 +2641,8 @@ PS 3366 VIOLA SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE 7 (I)
 One selection, own choice. No sonata or concerto movements. Works by Canadian Composers must be entered in the
 Canadian Composers class.
 44
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPSC 3367 VIOLA SOLO, CANADIAN COMPOSERS, GRADE 7 (I)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PSC 3367 VIOLA SOLO, CANADIAN COMPOSERS, GRADE 7 (I)
 One selection, own choice. No sonata or concerto movements. This is the only viola class at this level eligible for
 recommendation to the Intermediate Canadian Composers class at the Provincial Finals.
 S 3368 VIOLA SOLO, CONCERTO, GRADE 7
@@ -2701,7 +2726,8 @@ Own choice, one movement of a suite (originally for cello).
 PS 3424 VIOLA SOLO, CLASSICAL/CLASSICAL STYLE, GRADE 10 (A)
 One selection, own choice. No sonata or concerto movements.
 46
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPS 3425 VIOLA SOLO, CLASSICAL SONATA, GRADE 10 (A)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PS 3425 VIOLA SOLO, CLASSICAL SONATA, GRADE 10 (A)
 Own choice, one movement of a Classical sonata.
 PS 3426 VIOLA SOLO, ROMANTIC COMPOSERS, GRADE 10 (A)
 One selection, own choice. No sonata or concerto movements.
@@ -2747,7 +2773,8 @@ One selection, own choice. Works by Canadian composers must be entered in the Ca
 PS 3448 VIOLA SOLO, 19TH/20TH/21ST CENTURY SONATA, DIPLOMA (S)
 Own choice, two consecutive movements of a 19th/20th/21st Century sonata.
 47
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPSC 3449 VIOLA SOLO, CANADIAN COMPOSERS, DIPLOMA (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PSC 3449 VIOLA SOLO, CANADIAN COMPOSERS, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements. This is the only viola class at this level eligible for
 recommendation to the Senior Canadian Composers class at the Provincial Finals.
 S 3450 VIOLA SOLO, CONCERTO, DIPLOMA
@@ -2923,7 +2950,8 @@ Own choice, one movement of a Classical sonata.
 PS 3565 CELLO SOLO, ROMANTIC COMPOSERS, GRADE 7 (I)
 One selection, own choice. No sonatas or concerto movements.
 51
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPS 3566 CELLO SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE 7 (I)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PS 3566 CELLO SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE 7 (I)
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
 Canadian Composers class.
 PS 3567 CELLO SOLO, 19TH/20TH/21ST CENTURY SONATA, GRADE 7 (I)
@@ -3010,7 +3038,8 @@ Own choice, two contrasting movements from Suites no. 1, 2, or 3.
 PS 3624 CELLO SOLO, CLASSICAL/CLASSICAL STYLE, GRADE 10 (A)
 One selection, own choice. No sonatas or concerto movements.
 53
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPS 3625 CELLO SOLO, CLASSICAL SONATA, GRADE 10 (A)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PS 3625 CELLO SOLO, CLASSICAL SONATA, GRADE 10 (A)
 Own choice, one movement of a Classical sonata.
 PS 3626 CELLO SOLO, ROMANTIC COMPOSERS, GRADE 10 (A)
 One selection, own choice. No sonatas or concerto movements.
@@ -3056,7 +3085,8 @@ PS 3647 CELLO SOLO, 20TH/21ST CENTURY COMPOSERS, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
 Canadian Composers class.
 54
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPS 3648 CELLO SOLO, 19TH/20TH/21ST CENTURY SONATA, DIPLOMA (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PS 3648 CELLO SOLO, 19TH/20TH/21ST CENTURY SONATA, DIPLOMA (S)
 Own choice, two consecutive movements of a 19th/20th/21st Century sonata.
 PSC 3649 CELLO SOLO, CANADIAN COMPOSERS, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements. This is the only cello class at this level eligible for
@@ -3145,7 +3175,8 @@ One selection, own choice. No sonata or concerto movements.
 S 3713 DOUBLE BASS SOLO, ROMANTIC COMPOSERS, GRADE 3
 One selection, own choice. No sonata or concerto movements.
 56
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARES 3714 DOUBLE BASS SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE 3
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+S 3714 DOUBLE BASS SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE 3
 One selection, own choice. No sonata or concerto movements. Works by Canadian Composers must be entered in the
 Canadian Composers class.
 S 3715 DOUBLE BASS SOLO, CANADIAN COMPOSERS, GRADE 3
@@ -3190,7 +3221,8 @@ PSC 3735 DOUBLE BASS SOLO, CANADIAN COMPOSERS, GRADE 5 (J)
 One selection, own choice. No sonata or concerto movements. This is the only double bass class at this level eligible for
 recommendation to the Junior Canadian Composers class at the Provincial Finals.
 57
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARES 3736 DOUBLE BASS SOLO, OWN CHOICE, GRADE 5
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+S 3736 DOUBLE BASS SOLO, OWN CHOICE, GRADE 5
 One selection, own choice.
 S 3737 DOUBLE BASS SOLO, RECITAL GROUP, GRADE 5
 Three selections, own choice, by one or more composers. No sonata or concerto movements.
@@ -3234,7 +3266,8 @@ PS 3755 DOUBLE BASS SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE 7 (I)
 One selection, own choice. No sonata or concerto movements. Works by Canadian Composers must be entered in the
 Canadian Composers class.
 58
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPSC 3756 DOUBLE BASS SOLO, CANADIAN COMPOSERS, GRADE 7 (I)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PSC 3756 DOUBLE BASS SOLO, CANADIAN COMPOSERS, GRADE 7 (I)
 One selection, own choice. No sonata or concerto movements. This is the only double bass class at this level eligible for
 recommendation to the Intermediate Canadian Composers class at the Provincial Finals.
 S 3757 DOUBLE BASS SOLO, OWN CHOICE, GRADE 7
@@ -3279,7 +3312,8 @@ Own choice, one movement of a Classical sonata.
 PS 3774 DOUBLE BASS SOLO, ROMANTIC COMPOSERS, GRADE 9 (A)
 One selection, own choice. No sonata or concerto movements.
 59
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPS 3775 DOUBLE BASS SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE 9 (A)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PS 3775 DOUBLE BASS SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE 9 (A)
 One selection, own choice. No sonata or concerto movements. Works by Canadian Composers must be entered in the
 Canadian Composers class.
 PSC 3776 DOUBLE BASS SOLO, CANADIAN COMPOSERS, GRADE 9 (A)
@@ -3363,7 +3397,8 @@ One selection, own choice. No sonata or concerto movements.
 PS 3832 DOUBLE BASS SOLO, BAROQUE SONATA, HONOURS (S)
 Own choice, two consecutive movements of a Baroque sonata.
 61
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPS 3833 DOUBLE BASS SOLO, BAROQUE, J.S. BACH, UNACCOMPANIED, HONOURS (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PS 3833 DOUBLE BASS SOLO, BAROQUE, J.S. BACH, UNACCOMPANIED, HONOURS (S)
 Own choice, two consecutive movements of a Suite.
 PS 3834 DOUBLE BASS SOLO, CLASSICAL/CLASSICAL STYLE, HONOURS (S)
 One selection, own choice. No sonata or concerto movements.
@@ -3409,7 +3444,8 @@ Canadian Composers class.
 62
 S 3864 HARP SOLO, CANADIAN COMPOSERS, GRADES 1 - 2
 One selection, own choice. No sonata or concerto movements.
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARES 3865 HARP SOLO, CELTIC/FOLK MUSIC, GRADES 1 - 2
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+S 3865 HARP SOLO, CELTIC/FOLK MUSIC, GRADES 1 - 2
 One selection, own choice.
 S 3866 HARP SOLO, OWN CHOICE, GRADES 1 - 2
 One selection, own choice.
@@ -3453,7 +3489,8 @@ recommendation to the Junior Canadian Composers class at the Provincial Finals.
 S 3886 HARP SOLO, CELTIC/FOLK MUSIC, GRADES 5 - 6
 One selection, own choice.
 63
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARES 3887 HARP SOLO, OWN CHOICE, GRADES 5 - 6
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+S 3887 HARP SOLO, OWN CHOICE, GRADES 5 - 6
 One selection, own choice.
 S 3888 HARP SOLO, RECITAL GROUP, GRADES 5 - 6
 Three selections, own choice, by one or more composers. No sonata or concerto movements.
@@ -3496,7 +3533,8 @@ One selection, own choice. No sonata or concerto movements.
 PS 3903 HARP SOLO, ROMANTIC COMPOSERS, GRADES 9 - 10 (A)
 One selection, own choice. No sonata or concerto movements.
 64
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPS 3904 HARP SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 9 - 10 (A)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PS 3904 HARP SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 9 - 10 (A)
 One selection, own choice. No sonata or concerto movements. Works by Canadian Composers must be entered in the
 Canadian Composers class.
 PSC 3905 HARP SOLO, CANADIAN COMPOSERS, GRADES 9 - 10 (A)
@@ -3542,7 +3580,8 @@ One selection, own choice.
 S 3928 HARP SOLO, CONCERTO, DIPLOMA
 Own choice, one movement of a concerto. Orchestral part to be played on piano.
 65
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARES 3929 HARP SOLO, OWN CHOICE, DIPLOMA
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+S 3929 HARP SOLO, OWN CHOICE, DIPLOMA
 One selection, own choice.
 S 3930 HARP SOLO, RECITAL GROUP, DIPLOMA
 Three selections, own choice, by one or more composers. No sonata or concerto movements.
@@ -3646,7 +3685,8 @@ One selection, own choice. No sonata or concerto movements.
 G 4103 CLASSICAL GUITAR SOLO, CLASSICAL/CLASSICAL STYLE, BEGINNER
 One selection, own choice. No sonata or concerto movements.
 69
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREG 4104 CLASSICAL GUITAR SOLO, ROMANTIC COMPOSERS, BEGINNER
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+G 4104 CLASSICAL GUITAR SOLO, ROMANTIC COMPOSERS, BEGINNER
 One selection, own choice. No sonata or concerto movements.
 G 4105 CLASSICAL GUITAR SOLO, 20TH/21ST CENTURY COMPOSERS, BEGINNER
 One selection, own choice. Works by Canadian composers must be entered in the Canadian Composers class. No sonata
@@ -3690,7 +3730,8 @@ or concerto movements.
 G 4206 CLASSICAL GUITAR SOLO, CANADIAN COMPOSERS, GRADE 2
 One selection, own choice. No sonata or concerto movements.
 70
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREG 4207 CLASSICAL GUITAR SOLO, ETUDES, GRADE 2
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+G 4207 CLASSICAL GUITAR SOLO, ETUDES, GRADE 2
 One selection, own choice.
 G 4208 CLASSICAL GUITAR SOLO, OWN CHOICE, GRADE 2
 One selection, own choice.
@@ -3735,7 +3776,8 @@ Own choice, one movement of a sonata.
 G 4308 CLASSICAL GUITAR SOLO, ETUDES, GRADE 4
 One selection, own choice.
 71
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREG 4309 CLASSICAL GUITAR SOLO, OWN CHOICE, GRADE 4
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+G 4309 CLASSICAL GUITAR SOLO, OWN CHOICE, GRADE 4
 One selection, own choice.
 G 4310 CLASSICAL GUITAR SOLO, RECITAL GROUP, GRADE 4
 Three selections, own choice, by one or more composers. No sonata or concerto movements.
@@ -3780,7 +3822,8 @@ One selection, own choice. No sonata or concerto movements.
 PG 4403 CLASSICAL GUITAR SOLO, CLASSICAL/CLASSICAL STYLE, GRADE 6 (J)
 One selection, own choice. No sonata or concerto movements.
 72
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPG 4404 CLASSICAL GUITAR SOLO, ROMANTIC COMPOSERS, GRADE 6 (J)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PG 4404 CLASSICAL GUITAR SOLO, ROMANTIC COMPOSERS, GRADE 6 (J)
 One selection, own choice. No sonata or concerto movements.
 PG 4405 CLASSICAL GUITAR SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE 6 (J)
 One selection, own choice. Works by Canadian composers must be entered in the Canadian Composers class. No sonata
@@ -3826,7 +3869,8 @@ Own choice, one movement of a concerto. Orchestral part to be played on piano.
 G 4459 CLASSICAL GUITAR SOLO, ETUDES, GRADE 7
 One selection, own choice.
 73
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREG 4460 CLASSICAL GUITAR SOLO, OWN CHOICE, GRADE 7
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+G 4460 CLASSICAL GUITAR SOLO, OWN CHOICE, GRADE 7
 One selection, own choice.
 G 4461 CLASSICAL GUITAR SOLO, RECITAL GROUP, GRADE 7
 Three selections, own choice, by one or more composers. No sonata or concerto movements.
@@ -3871,7 +3915,8 @@ One selection, own choice. No sonata or concerto movements.
 PG 4553 CLASSICAL GUITAR SOLO, CLASSICAL/CLASSICAL STYLE, GRADE 9 (A)
 One selection, own choice. No sonata or concerto movements.
 74
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPG 4554 CLASSICAL GUITAR SOLO, ROMANTIC COMPOSERS, GRADE 9 (A)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PG 4554 CLASSICAL GUITAR SOLO, ROMANTIC COMPOSERS, GRADE 9 (A)
 One selection, own choice. No sonata or concerto movements.
 PG 4555 CLASSICAL GUITAR SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE 9 (A)
 One selection, own choice. Works by Canadian composers must be entered in the Canadian Composers class. No sonata
@@ -3963,7 +4008,8 @@ One selection, own choice. No sonata or concerto movements.
 PG 4702 CLASSICAL GUITAR SOLO, BAROQUE/BAROQUE STYLE, HONOURS (S)
 One selection, own choice. No sonata or concerto movements.
 76
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPG 4703 CLASSICAL GUITAR SOLO, CLASSICAL/CLASSICAL STYLE, HONOURS (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PG 4703 CLASSICAL GUITAR SOLO, CLASSICAL/CLASSICAL STYLE, HONOURS (S)
 One selection, own choice. No sonata or concerto movements.
 PG 4704 CLASSICAL GUITAR SOLO, ROMANTIC COMPOSERS, HONOURS (S)
 One selection, own choice. No sonata or concerto movements.
@@ -4078,7 +4124,8 @@ Canadian Composers class.
 W 5013 PICCOLO SOLO, CANADIAN COMPOSERS, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements.
 79
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREW 5014 PICCOLO SOLO, SONATA, GRADES 3 - 4
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+W 5014 PICCOLO SOLO, SONATA, GRADES 3 - 4
 Own choice, one movement of a sonata.
 W 5015 PICCOLO SOLO, OWN CHOICE, GRADES 3 - 4
 One selection, own choice.
@@ -4121,7 +4168,8 @@ One selection, own choice. No sonata or concerto movements.
 PW 5033 PICCOLO SOLO, ROMANTIC COMPOSERS, GRADES 7 - 8 (I)
 One selection, own choice. No sonata or concerto movements.
 80
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPW 5034 PICCOLO SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 7 - 8 (I)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PW 5034 PICCOLO SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 7 - 8 (I)
 One selection, own choice. No sonata or concerto movements. Works by Canadian Composers must be entered in the
 Canadian Composers class.
 PWC 5035 PICCOLO SOLO, CANADIAN COMPOSERS, GRADES 7 - 8 (I)
@@ -4208,7 +4256,8 @@ One selection, own choice. No sonata or concerto movements.
 PW 5093 PICCOLO SOLO, ROMANTIC COMPOSERS, HONOURS (S)
 One selection, own choice. No sonata or concerto movements.
 82
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPW 5094 PICCOLO SOLO, 20TH/21ST CENTURY COMPOSERS, HONOURS (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PW 5094 PICCOLO SOLO, 20TH/21ST CENTURY COMPOSERS, HONOURS (S)
 One selection, own choice. No sonata or concerto movements. Works by Canadian Composers must be entered in the
 Canadian Composers class.
 PWC 5095 PICCOLO SOLO, CANADIAN COMPOSERS, HONOURS (S)
@@ -4252,7 +4301,8 @@ Own choice, one movement of a Baroque sonata.
 W 5133 FLUTE SOLO, CLASSICAL/CLASSICAL STYLE, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements.
 83
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREW 5134 FLUTE SOLO, CLASSICAL SONATA, GRADES 3 - 4
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+W 5134 FLUTE SOLO, CLASSICAL SONATA, GRADES 3 - 4
 Own choice, one movement of a Classical sonata.
 W 5135 FLUTE SOLO, ROMANTIC COMPOSERS, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements.
@@ -4339,7 +4389,8 @@ One selection, own choice. No sonata or concerto movements.
 PW 5182 FLUTE SOLO, BAROQUE SONATA, GRADES 9 - 10 (A)
 Own choice, one movement of a Baroque sonata.
 85
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPW 5183 FLUTE SOLO, CLASSICAL/CLASSICAL STYLE, GRADES 9 - 10 (A)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PW 5183 FLUTE SOLO, CLASSICAL/CLASSICAL STYLE, GRADES 9 - 10 (A)
 One selection, own choice. No sonata or concerto movements.
 PW 5184 FLUTE SOLO, CLASSICAL SONATA, GRADES 9 - 10 (A)
 Own choice, one movement of a Classical sonata.
@@ -4384,7 +4435,8 @@ PW 5206 FLUTE SOLO, 20TH/21ST CENTURY COMPOSERS, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
 Canadian Composers class.
 86
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPW 5207 FLUTE SOLO, 19TH/20TH/21ST CENTURY SONATA, DIPLOMA (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PW 5207 FLUTE SOLO, 19TH/20TH/21ST CENTURY SONATA, DIPLOMA (S)
 Own choice, two consecutive movements of a 19th/20th/21st century sonata.
 PWC 5208 FLUTE SOLO, CANADIAN COMPOSERS, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements. This is the only flute class at this level eligible for
@@ -4471,7 +4523,8 @@ One selection, own choice. No sonata or concerto movements.
 PW 5263 OBOE SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 5 - 6 (J)
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
 Canadian Composers class.
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPWC 5264 OBOE SOLO, CANADIAN COMPOSERS, GRADES 5 - 6 (J)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PWC 5264 OBOE SOLO, CANADIAN COMPOSERS, GRADES 5 - 6 (J)
 One selection, own choice. No sonata or concerto movements. This is the only oboe class at this level eligible for
 recommendation to the Junior Canadian Composers class at the Provincial Finals.
 PW 5265 OBOE SOLO, SONATA, GRADES 5 - 6 (J)
@@ -4557,7 +4610,8 @@ meet the National Festival Syllabus requirements.***
 PW 5311 OBOE SOLO, BAROQUE/BAROQUE STYLE, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements.
 90
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPW 5312 OBOE SOLO, BAROQUE SONATA, DIPLOMA (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PW 5312 OBOE SOLO, BAROQUE SONATA, DIPLOMA (S)
 Own choice, two consecutive movements of a Baroque sonata.
 PW 5313 OBOE SOLO, CLASSICAL/CLASSICAL STYLE, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements.
@@ -4604,7 +4658,8 @@ PWC 5338 OBOE SOLO, CANADIAN COMPOSERS, HONOURS (S)
 One selection, own choice. No sonata or concerto movements. This is the only oboe class at this level eligible for
 recommendation to the Senior Canadian Composers class at the Provincial Finals.
 91
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREW 5339 OBOE SOLO, CONCERTO, HONOURS
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+W 5339 OBOE SOLO, CONCERTO, HONOURS
 Own choice, one movement of a concerto. Orchestral part to be played on piano.
 W 5340 OBOE SOLO, OWN CHOICE, HONOURS
 One selection, own choice.
@@ -4684,7 +4739,8 @@ Own choice, one movement of a Classical sonata.
 PW 5385 ENGLISH HORN SOLO, ROMANTIC COMPOSERS, GRADES 7 - 8 (I)
 One selection, own choice. No sonata or concerto movements.
 93
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPW 5386 ENGLISH HORN SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 7 - 8 (I)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PW 5386 ENGLISH HORN SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 7 - 8 (I)
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
 Canadian Composers class.
 PWC 5387 ENGLISH HORN SOLO, CANADIAN COMPOSERS, GRADES 7 - 8 (I)
@@ -4774,7 +4830,8 @@ One selection, own choice. No sonata or concerto movements.
 PW 5442 ENGLISH HORN SOLO, BAROQUE SONATA, HONOURS (S)
 Own choice, two consecutive movements of a Baroque sonata.
 95
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPW 5443 ENGLISH HORN SOLO, CLASSICAL/CLASSICAL STYLE, HONOURS (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PW 5443 ENGLISH HORN SOLO, CLASSICAL/CLASSICAL STYLE, HONOURS (S)
 One selection, own choice. No sonata or concerto movements.
 PW 5444 ENGLISH HORN SOLO, CLASSICAL SONATA, HONOURS (S)
 Own choice, two consecutive movements of a Classical sonata.
@@ -4818,7 +4875,8 @@ One selection, own choice. No sonata or concerto movements.
 W 5473 CLARINET SOLO, ROMANTIC COMPOSERS, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements.
 96
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREW 5474 CLARINET SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 3 - 4
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+W 5474 CLARINET SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
 Canadian Composers class.
 W 5475 CLARINET SOLO, CANADIAN COMPOSERS, GRADES 3 - 4
@@ -4901,7 +4959,8 @@ Own choice, one movement of a Baroque sonata.
 PW 5523 CLARINET SOLO, CLASSICAL/CLASSICAL STYLE, GRADES 9 - 10 (A)
 One selection, own choice. No sonata or concerto movements.
 98
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPW 5524 CLARINET SOLO, CLASSICAL SONATA, GRADES 9 - 10 (A)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PW 5524 CLARINET SOLO, CLASSICAL SONATA, GRADES 9 - 10 (A)
 Own choice, one movement of a Classical sonata.
 PW 5525 CLARINET SOLO, ROMANTIC COMPOSERS, GRADES 9 - 10 (A)
 One selection, own choice. No sonata or concerto movements.
@@ -4946,7 +5005,8 @@ Canadian Composers class.
 PW 5547 CLARINET SOLO, 19TH/20TH/21ST CENTURY SONATA, DIPLOMA (S)
 Own choice, two consecutive movements of a 19th/20th/21st Century sonata.
 99
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPWC 5548 CLARINET SOLO, CANADIAN COMPOSERS, DIPLOMA (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PWC 5548 CLARINET SOLO, CANADIAN COMPOSERS, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements. This is the only clarinet class at this level eligible for
 recommendation to the Senior Canadian Composers class at the Provincial Finals.
 W 5549 CLARINET SOLO, CONCERTO, DIPLOMA
@@ -5036,7 +5096,8 @@ Own choice, one movement of a Classical sonata.
 PW 5605 BASSOON SOLO, ROMANTIC COMPOSERS, GRADES 5 - 6 (J)
 One selection, own choice. No sonata or concerto movements.
 101
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPW 5606 BASSOON SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 5 - 6 (J)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PW 5606 BASSOON SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 5 - 6 (J)
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
 Canadian Composers class.
 PWC 5607 BASSOON SOLO, CANADIAN COMPOSERS, GRADES 5 - 6 (J)
@@ -5125,7 +5186,8 @@ meet the National Festival Syllabus requirements.***
 PW 5661 BASSOON SOLO, BAROQUE/BAROQUE STYLE, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements.
 103
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPW 5662 BASSOON SOLO, BAROQUE SONATA, DIPLOMA (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PW 5662 BASSOON SOLO, BAROQUE SONATA, DIPLOMA (S)
 Own choice, two consecutive movements of a Baroque sonata.
 PW 5663 BASSOON SOLO, CLASSICAL/CLASSICAL STYLE, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements.
@@ -5172,7 +5234,8 @@ PWC 5688 BASSOON SOLO, CANADIAN COMPOSERS, HONOURS (S)
 One selection, own choice. No sonata or concerto movements. This is the only bassoon class at this level eligible for
 recommendation to the Senior Canadian Composers class at the Provincial Finals.
 104
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREW 5689 BASSOON SOLO, CONCERTO, HONOURS
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+W 5689 BASSOON SOLO, CONCERTO, HONOURS
 Own choice, one movement of a concerto. Orchestral part to be played on piano.
 W 5690 BASSOON SOLO, OWN CHOICE, HONOURS
 One selection, own choice.
@@ -5254,7 +5317,8 @@ One selection, own choice. No sonata or concerto movements.
 PW 5744 SAXOPHONE SOLO, ROMANTIC COMPOSERS, GRADES 7 - 8 (I)
 One selection, own choice. No sonata or concerto movements.
 106
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPW 5745 SAXOPHONE SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 7 - 8 (I)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PW 5745 SAXOPHONE SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 7 - 8 (I)
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
 Canadian Composers class.
 PW 5746 SAXOPHONE SOLO, 19TH/20TH/21ST CENTURY SONATA, GRADES 7 - 8 (I)
@@ -5346,7 +5410,8 @@ One selection, own choice. No sonata or concerto movements.
 PW 5802 SAXOPHONE SOLO, BAROQUE SONATA, HONOURS (S)
 Own choice, two consecutive movements of a Baroque sonata.
 108
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPW 5803 SAXOPHONE SOLO, CLASSICAL/CLASSICAL STYLE, HONOURS (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PW 5803 SAXOPHONE SOLO, CLASSICAL/CLASSICAL STYLE, HONOURS (S)
 One selection, own choice. No sonata or concerto movements.
 PW 5804 SAXOPHONE SOLO, CLASSICAL SONATA, HONOURS (S)
 Own choice, two consecutive movements of a Classical sonata.
@@ -5390,7 +5455,8 @@ One selection, own choice. No sonata or concerto movements.
 W 5842 RECORDER SOLO, BAROQUE SONATA, GRADES 3 - 4
 Own choice, one movement of a Baroque sonata.
 109
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREW 5843 RECORDER SOLO, CLASSICAL/CLASSICAL STYLE, GRADES 3 - 4
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+W 5843 RECORDER SOLO, CLASSICAL/CLASSICAL STYLE, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements.
 W 5844 RECORDER SOLO, CLASSICAL SONATA, GRADES 3 - 4
 Own choice, one movement of a Classical sonata.
@@ -5476,7 +5542,8 @@ One selection, own choice. No sonata or concerto movements.
 PW 5894 RECORDER SOLO, CLASSICAL SONATA, GRADES 9 - 10 (A)
 Own choice, one movement of a Classical sonata.
 111
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPW 5895 RECORDER SOLO, ROMANTIC/20TH/21ST CENTURY COMPOSERS, GRADES 9 - 10 (A)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PW 5895 RECORDER SOLO, ROMANTIC/20TH/21ST CENTURY COMPOSERS, GRADES 9 - 10 (A)
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
 Canadian Composers class.
 PW 5896 RECORDER SOLO, 19TH/20TH/21ST CENTURY SONATA, GRADES 9 - 10 (A)
@@ -5520,7 +5587,8 @@ recommendation to the Senior Canadian Composers class at the Provincial Finals.
 W 5918 RECORDER SOLO, CONCERTO, DIPLOMA
 Own choice, one movement of a concerto. Orchestral part to be played on piano.
 112
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREW 5919 RECORDER SOLO, OWN CHOICE, DIPLOMA
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+W 5919 RECORDER SOLO, OWN CHOICE, DIPLOMA
 One selection, own choice.
 W 5920 RECORDER SOLO, RECITAL GROUP, DIPLOMA
 Three selections, own choice, by one or more composers. No sonata or concerto movements.
@@ -5624,7 +5692,8 @@ GRADES 3 - 4
 B 6021 FRENCH HORN SOLO, BAROQUE/BAROQUE STYLE, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements.
 115
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREB 6022 FRENCH HORN SOLO, CLASSICAL/CLASSICAL STYLE, GRADES 3 - 4
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+B 6022 FRENCH HORN SOLO, CLASSICAL/CLASSICAL STYLE, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements.
 B 6023 FRENCH HORN SOLO, ROMANTIC COMPOSERS, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements.
@@ -5710,7 +5779,8 @@ Own choice, one movement of a Baroque sonata.
 PB 6083 FRENCH HORN SOLO, CLASSICAL/CLASSICAL STYLE, GRADES 9 - 10 (A)
 One selection, own choice. No sonata or concerto movements.
 117
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPB 6084 FRENCH HORN SOLO, CLASSICAL SONATA, GRADES 9 - 10 (A)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PB 6084 FRENCH HORN SOLO, CLASSICAL SONATA, GRADES 9 - 10 (A)
 Own choice, one movement of a Classical sonata.
 PB 6085 FRENCH HORN SOLO, ROMANTIC COMPOSERS, GRADES 9 - 10 (A)
 One selection, own choice. No sonata or concerto movements.
@@ -5755,7 +5825,8 @@ Canadian Composers class.
 PB 6107 FRENCH HORN SOLO, 19TH/20TH/21ST CENTURY SONATA, DIPLOMA (S)
 Own choice, two consecutive movements of a 19th/20th/21st century sonata.
 118
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPBC 6108 FRENCH HORN SOLO, CANADIAN COMPOSERS, DIPLOMA (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PBC 6108 FRENCH HORN SOLO, CANADIAN COMPOSERS, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements. This is the only French horn class at this level eligible for
 recommendation to the Senior Canadian Composers class at the Provincial Finals.
 B 6109 FRENCH HORN SOLO, CONCERTO, DIPLOMA
@@ -5876,7 +5947,8 @@ Canadian Composers class.
 PB 6266 TRUMPET SOLO, 19TH/20TH/21ST CENTURY SONATA, GRADES 7 - 8 (I)
 Own choice, one movement of a 19th/20th/21st Century sonata.
 121
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPBC 6267 TRUMPET SOLO, CANADIAN COMPOSERS, GRADES 7 - 8 (I)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PBC 6267 TRUMPET SOLO, CANADIAN COMPOSERS, GRADES 7 - 8 (I)
 One selection, own choice. No sonata or concerto movements. This is the only trumpet class at this level eligible for
 recommendation to the Intermediate Canadian Composers class at the Provincial Finals.
 B 6268 TRUMPET SOLO, OWN CHOICE, GRADES 7 - 8
@@ -5961,7 +6033,8 @@ One selection, own choice. No sonata or concerto movements.
 PB 6322 TRUMPET SOLO, BAROQUE SONATA, HONOURS (S)
 Own choice, two consecutive movements of a Baroque sonata.
 123
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPB 6323 TRUMPET SOLO, CLASSICAL/CLASSICAL STYLE, HONOURS (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PB 6323 TRUMPET SOLO, CLASSICAL/CLASSICAL STYLE, HONOURS (S)
 One selection, own choice. No sonata or concerto movements.
 PB 6324 TRUMPET SOLO, CLASSICAL SONATA, HONOURS (S)
 Own choice, two consecutive movements of a Classical sonata.
@@ -6007,7 +6080,8 @@ One selection, own choice. No sonata or concerto movements.
 B 6422 TROMBONE/EUPHONIUM SOLO, CLASSICAL/CLASSICAL STYLE, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements.
 124
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREB 6423 TROMBONE/EUPHONIUM SOLO, ROMANTIC COMPOSERS, GRADES 3 - 4
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+B 6423 TROMBONE/EUPHONIUM SOLO, ROMANTIC COMPOSERS, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements.
 B 6424 TROMBONE/EUPHONIUM SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
@@ -6051,7 +6125,8 @@ eligible for recommendation to the Provincial Finals.
 PB 6461 TROMBONE/EUPHONIUM SOLO, BAROQUE/BAROQUE STYLE, GRADES 7 - 8 (I)
 One selection, own choice. No sonata or concerto movements.
 125
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPB 6462 TROMBONE/EUPHONIUM SOLO, BAROQUE SONATA, GRADES 7 - 8 (I)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PB 6462 TROMBONE/EUPHONIUM SOLO, BAROQUE SONATA, GRADES 7 - 8 (I)
 Own choice, one movement of a Baroque sonata.
 PB 6463 TROMBONE/EUPHONIUM SOLO, CLASSICAL/CLASSICAL STYLE, GRADES 7 - 8 (I)
 One selection, own choice. No sonata or concerto movements.
@@ -6143,7 +6218,8 @@ Own choice, two consecutive movements of a Baroque sonata.
 PB 6523 TROMBONE/EUPHONIUM SOLO, CLASSICAL/CLASSICAL STYLE, HONOURS (S)
 One selection, own choice. No sonata or concerto movements.
 127
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPB 6524 TROMBONE/EUPHONIUM SOLO, ROMANTIC COMPOSERS, HONOURS (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PB 6524 TROMBONE/EUPHONIUM SOLO, ROMANTIC COMPOSERS, HONOURS (S)
 One selection, own choice. No sonata or concerto movements.
 PB 6525 TROMBONE/EUPHONIUM SOLO, 20TH/21ST CENTURY COMPOSERS, HONOURS (S)
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
@@ -6187,7 +6263,8 @@ B 6624 TUBA SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
 Canadian Composers class.
 128
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREB 6625 TUBA SOLO, CANADIAN COMPOSERS, GRADES 3 - 4
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+B 6625 TUBA SOLO, CANADIAN COMPOSERS, GRADES 3 - 4
 One selection, own choice. No sonata or concerto movements.
 B 6626 TUBA SOLO, OWN CHOICE, GRADES 3 - 4
 One selection, own choice.
@@ -6232,7 +6309,8 @@ One selection, own choice. No sonata or concerto movements.
 PB 6664 TUBA SOLO, ROMANTIC COMPOSERS, GRADES 7 - 8 (I)
 One selection, own choice. No sonata or concerto movements.
 129
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPB 6665 TUBA SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 7 - 8 (I)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PB 6665 TUBA SOLO, 20TH/21ST CENTURY COMPOSERS, GRADES 7 - 8 (I)
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
 Canadian Composers class.
 PBC 6666 TUBA SOLO, CANADIAN COMPOSERS, GRADES 7 - 8 (I)
@@ -6316,7 +6394,8 @@ Own choice, two consecutive movements of a Baroque sonata.
 PB 6723 TUBA SOLO, CLASSICAL/CLASSICAL STYLE, HONOURS (S)
 One selection, own choice. No sonata or concerto movements.
 131
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPB 6724 TUBA SOLO, ROMANTIC COMPOSERS, HONOURS (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PB 6724 TUBA SOLO, ROMANTIC COMPOSERS, HONOURS (S)
 One selection, own choice. No sonata or concerto movements.
 PB 6725 TUBA SOLO, 20TH/21ST CENTURY COMPOSERS, HONOURS (S)
 One selection, own choice. No sonata or concerto movements. Works by Canadian composers must be entered in the
@@ -6406,7 +6485,8 @@ One selection, own choice.
 P 7125 TIMPANI SOLO, OWN CHOICE, GRADES 3 - 4
 One selection, own choice. No multi-movement works.
 133
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREP 7126 TIMPANI SOLO, MULTI-MOVEMENT WORK, GRADES 3 - 4
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+P 7126 TIMPANI SOLO, MULTI-MOVEMENT WORK, GRADES 3 - 4
 One selection, own choice.
 P 7127 MULTIPLE PERCUSSION SOLO, OWN CHOICE, GRADES 3 - 4
 One selection, own choice. No multi-movement works.
@@ -6449,7 +6529,8 @@ One selection, own choice. No multi-movement works.
 PP 7176 TIMPANI SOLO, MULTI-MOVEMENT WORK, GRADES 7 - 8 (I)
 One selection, own choice.
 134
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPP 7177 MULTIPLE PERCUSSION SOLO, OWN CHOICE, GRADES 7 - 8 (I)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PP 7177 MULTIPLE PERCUSSION SOLO, OWN CHOICE, GRADES 7 - 8 (I)
 One selection, own choice. No multi-movement works.
 PP 7178 MULTIPLE PERCUSSION SOLO, MULTI-MOVEMENT WORK, GRADES 7 - 8 (I)
 One selection, own choice.
@@ -6494,7 +6575,8 @@ One selection, own choice. No multi-movement works.
 PP 7216 TIMPANI SOLO, MULTI-MOVEMENT WORK, DIPLOMA (S)
 One selection, own choice.
 135
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPP 7217 MULTIPLE PERCUSSION SOLO, OWN CHOICE, DIPLOMA (S)
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PP 7217 MULTIPLE PERCUSSION SOLO, OWN CHOICE, DIPLOMA (S)
 One selection, own choice. No multi-movement works.
 PP 7218 MULTIPLE PERCUSSION SOLO, MULTI-MOVEMENT WORK, DIPLOMA (S)
 One selection, own choice.
@@ -6541,7 +6623,8 @@ One selection, own choice. No multi-movement works.
 136
 P 7272 SNARE DRUM SOLO, MULTI-MOVEMENT WORK, OPEN
 One selection, own choice.
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREP 7273 MALLET SOLO, OWN CHOICE, OPEN
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+P 7273 MALLET SOLO, OWN CHOICE, OPEN
 One selection, own choice. No multi-movement works.
 P 7274 MALLET SOLO, MULTI-MOVEMENT WORK, OPEN
 One selection, own choice.
@@ -6975,7 +7058,8 @@ C 8057 CLASSROOM CHOIR, GRADE 2
 One selection from the Suggested Repertoire List at the end of this section.
 AND One selection, own choice, any number of parts.
 145
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREC 8058 CLASSROOM CHOIR, OWN CHOICE, GRADE 2
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+C 8058 CLASSROOM CHOIR, OWN CHOICE, GRADE 2
 Two contrasting selections, own choice, any number of parts.
 C 8059 CLASSROOM CHOIR, ACTION SONGS AND SINGING GAMES, GRADE 2
 Two contrasting selections, own choice.
@@ -7063,7 +7147,8 @@ Two contrasting selections, own choice, any number of parts.
 C 8118 SCHOOL CHORUS, OWN CHOICE, GIRLS, KINDERGARTEN - GRADE 6
 Two contrasting selections, own choice, any number of parts.
 147
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREC 8119 SCHOOL CHORUS, OWN CHOICE, BOYS, KINDERGARTEN - GRADE 6
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+C 8119 SCHOOL CHORUS, OWN CHOICE, BOYS, KINDERGARTEN - GRADE 6
 Two contrasting selections, own choice, any number of parts.
 C 8120 SCHOOL CHORUS, SACRED, KINDERGARTEN - GRADE 6
 Two contrasting selections, own choice, any number of parts.
@@ -7111,7 +7196,8 @@ Two contrasting selections, own choice, any number of parts.
 148
 C 8149 SCHOOL CHORUS, OWN CHOICE, BOYS, CHANGED OR CHANGING VOICES, GRADES 5 - 8
 Two contrasting selections, own choice, any number of parts.
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREC 8150 SCHOOL CHORUS, FOLK SONG, GRADES 5 - 8
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+C 8150 SCHOOL CHORUS, FOLK SONG, GRADES 5 - 8
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
 C 8151 SCHOOL CHORUS, FOLK SONG, GIRLS, GRADES 5 - 8
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
@@ -7296,7 +7382,8 @@ Two contrasting selections, own choice, any number of parts.
 152
 C 8332 ADULT CHOIR, OWN CHOICE, FEMALE
 Two contrasting selections, own choice, any number of parts.
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREC 8333 ADULT CHOIR, OWN CHOICE, MALE
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+C 8333 ADULT CHOIR, OWN CHOICE, MALE
 Two contrasting selections, own choice, any number of parts.
 C 8334 ADULT CHOIR, FOLK SONG
 Two contrasting selections, own choice, any number of parts.
@@ -7341,7 +7428,8 @@ Two contrasting selections, own choice.
 SC 8402 SCHOOL ORFF ENSEMBLE, OWN CHOICE, GRADE 2
 Two contrasting selections, own choice.
 153
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESC 8403 SCHOOL ORFF ENSEMBLE, OWN CHOICE, GRADE 3
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SC 8403 SCHOOL ORFF ENSEMBLE, OWN CHOICE, GRADE 3
 Two contrasting selections, own choice.
 SC 8404 SCHOOL ORFF ENSEMBLE, OWN CHOICE, GRADE 4
 Two contrasting selections, own choice.
@@ -7543,7 +7631,8 @@ Telfer, Nancy Lullaby (Leslie)
 Telfer, Nancy If You Should Meet a Crocodile (Leslie)
 Thiman, Eric The Man in the Moon (Curwen)
 158
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREC 8063 CLASSROOM CHOIR, GRADE 4
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+C 8063 CLASSROOM CHOIR, GRADE 4
 Anderson, W.H. See the Cherry Blossoms Swing (Omens of Spring, Leslie)
 Bell, D. Geoffrey Inventions and Machines (Alliance)
 Broughton, Marilyn My Caterpillar (GV Thompson)
@@ -7875,7 +7964,8 @@ One selection, own choice.
 SA 9026 SOLO SPOKEN POETRY, 20 /21
 One selection, own choice.
 164
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9028 SOLO SPOKEN POETRY, CLASSICAL, OWN CHOICE, GRADES 4 - 6
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9028 SOLO SPOKEN POETRY, CLASSICAL, OWN CHOICE, GRADES 4 - 6
 One selection, own choice.
 SA 9030 SOLO SPOKEN POETRY, CANADIAN, OWN CHOICE, GRADES 4 - 6
 One selection, own choice.
@@ -8011,7 +8101,8 @@ One selection, own choice.
 SA 9116 SOLO READING, BIBLE, OWN CHOICE, GRADES 4 - 6
 One selection, own choice. Time limit 3 minutes.
 167
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9117 SOLO READING, HOLY BOOK, OWN CHOICE, GRADES 4 - 6
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9117 SOLO READING, HOLY BOOK, OWN CHOICE, GRADES 4 - 6
 One selection, own choice from a holy book other than the Bible. Time limit 4 minutes.
 SA 9118 SOLO READING, CREATIVE POETRY, OWN CHOICE, GRADES 4 - 6
 One selection, own choice. Time limit 3 minutes.
@@ -8054,7 +8145,8 @@ One selection, own choice from a holy book other than the Bible. Time limit 6 mi
 SA 9131 SOLO READING, POETRY, OWN CHOICE, GRADES 10 - 12
 One selection, own choice. Time limit 5 minutes.
 168
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9133 SOLO READING, PROSE, OWN CHOICE, GRADES 10 - 12
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9133 SOLO READING, PROSE, OWN CHOICE, GRADES 10 - 12
 One selection, own choice.
 SA 9138 SOLO READING, CREATIVE POETRY, OWN CHOICE, GRADES 10 - 12
 One selection, own choice. Time limit 5 minutes.
@@ -8096,7 +8188,8 @@ A poem READ by two, three or four people.
 SA 9161 POETRY READING DUET, TRIO OR QUARTET, GRADE 1
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 169
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9163 POETRY READING DUET, TRIO OR QUARTET, GRADE 2
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9163 POETRY READING DUET, TRIO OR QUARTET, GRADE 2
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 SA 9165 POETRY READING DUET, TRIO OR QUARTET, GRADE 3
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
@@ -8145,7 +8238,8 @@ SA 9187 SPEECH CHOIR, 20 /21 CENTURY, GRADE 3
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND one selection, own choice.
 170
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9189 SPEECH CHOIR, CLASSICAL POETRY, KINDERGARTEN - GRADE 3
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9189 SPEECH CHOIR, CLASSICAL POETRY, KINDERGARTEN - GRADE 3
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND one selection, own choice.
 SA 9191 SPEECH CHOIR, DRAMATIC SPEAKING, KINDERGARTEN - GRADE 3
@@ -8261,7 +8355,8 @@ Two contrasting selections, own choice. Time limit 10 minutes.
 SA 9243 SPEECH CHOIR, CLASSICAL POETRY, OWN CHOICE, ADULT
 Two selections, own choice. Time limit 10 minutes.
 172
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9244 SPEECH CHOIR, CLASSICAL POETRY, OWN CHOICE, OPEN
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9244 SPEECH CHOIR, CLASSICAL POETRY, OWN CHOICE, OPEN
 Open to any age or level of development. Please state level of difficulty on entry form. Poetry may be read.
 Two contrasting selections, own choice. Time limit 10 minutes.
 SA 9245 SPEECH CHOIR, DRAMATIC SPEAKING, OWN CHOICE, ADULT
@@ -8309,7 +8404,8 @@ Entrants will read their own work. Adjudication will be on the basis of reading 
 written work as it pertains to the oral communication, but will not be adjudicated. Original limericks only, must be performed by
 author. TWO selections. A copy of each work must be submitted for the adjudicator.
 173
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9259 LIMERICK READING, ORIGINAL COMPOSITION, GRADES 4 - 6
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9259 LIMERICK READING, ORIGINAL COMPOSITION, GRADES 4 - 6
 SA 9260 LIMERICK READING, ORIGINAL COMPOSITION, GRADES 7 - 9
 SA 9261 LIMERICK READING, ORIGINAL COMPOSITION, GRADES 10 - 12
 SA 9262 LIMERICK READING, ORIGINAL COMPOSITION, ADULT
@@ -8782,7 +8878,8 @@ Contemporary Books
 Scholastic Inc.
 Scholastic Inc.
 177
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9029 SOLO SPOKEN POETRY, CANADIAN, GRADES 4 - 6
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9029 SOLO SPOKEN POETRY, CANADIAN, GRADES 4 - 6
 TITLE
 A Path to the Moon
 And My Heart Soars
@@ -9047,7 +9144,8 @@ McClelland and Stewart
 Tundra Books
 Academic Press
 179
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPSA 9049 SOLO SPOKEN POETRY, CANADIAN, GRADES 7 - 9
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PSA 9049 SOLO SPOKEN POETRY, CANADIAN, GRADES 7 - 9
 TITLE
 The Ships of Yule
 It is Dangerous to Read
@@ -9311,7 +9409,8 @@ Penguin
 Thomas Nelson & Sons
 Nelson Canada
 181
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPSA 9069 SOLO SPOKEN POETRY, CANADIAN, GRADES 10 - 12
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PSA 9069 SOLO SPOKEN POETRY, CANADIAN, GRADES 10 - 12
 TITLE
 The Wind Our Enemy
 The Sculptors AUTHOR
@@ -9443,7 +9542,8 @@ Annick Press
 Orca Book Publishers
 Scholastic Inc.
 182
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9104 SOLO READING, CANADIAN PROSE, GRADES 1 - 3
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9104 SOLO READING, CANADIAN PROSE, GRADES 1 - 3
 TITLE
 Excerpt from: Lazarus Laughs AUTHOR
 Duchesne, Christiane BOOK TITLE
@@ -9572,7 +9672,8 @@ Scholastic Inc.
 Scholastic Inc.
 A.S.E.
 183
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9114 SOLO READING, CANADIAN PROSE, GRADES 4 - 6
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9114 SOLO READING, CANADIAN PROSE, GRADES 4 - 6
 TITLE
 Excerpt from: Island Explorers
 Excerpt from: Aunt Cyrilla‟s Christmas
@@ -9712,7 +9813,8 @@ Doubleday & Co.
 Scholastic
 Dell Laurel Leaf
 184
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPSA 9124 SOLO READING, CANADIAN PROSE, GRADES 7 - 9
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PSA 9124 SOLO READING, CANADIAN PROSE, GRADES 7 - 9
 TITLE
 Excerpt from: Lesia‟s Dream
 Excerpt from: Lost in the Barrens
@@ -9844,7 +9946,8 @@ Random House
 Wordsworth Editions
 St. Martin‟s Press
 185
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREPSA 9134 SOLO READING, CANADIAN PROSE, GRADES 10 - 12
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+PSA 9134 SOLO READING, CANADIAN PROSE, GRADES 10 - 12
 TITLE
 Excerpt from: The Game AUTHOR
 Dryden, Ken BOOK TITLE
@@ -9970,7 +10073,8 @@ Company
 Random House
 Western Publishing
 186
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9163 POETRY READING DUET, TRIO OR QUARTET, GRADE 2
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9163 POETRY READING DUET, TRIO OR QUARTET, GRADE 2
 TITLE
 Daylight Saving Time
 Hey Bug
@@ -10094,7 +10198,8 @@ Random House Book of Poetry for Children
 Random House Book of Poetry for Children Random House
 Random House
 187
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9169 POETRY READING DUET, TRIO, OR QUARTET, GRADE 5
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9169 POETRY READING DUET, TRIO, OR QUARTET, GRADE 5
 TITLE
 The Toad and the Kangaroo
 Daintie Dottie Dee
@@ -10224,7 +10329,8 @@ York
 Nelson Canada
 Golden Books Publ.
 188
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9175 POETRY READING, DUET, TRIO, OR QUARTET, GRADES 10 - 12
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9175 POETRY READING, DUET, TRIO, OR QUARTET, GRADES 10 - 12
 TITLE
 Univac to Univac
 Nightmare AUTHOR
@@ -10500,7 +10606,8 @@ Random House
 Smithmark
 Gage Publishing
 190
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARESA 9191 SPEECH CHOIR, DRAMATIC SPEAKING, KINDERGARTEN - GRADE 3
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+SA 9191 SPEECH CHOIR, DRAMATIC SPEAKING, KINDERGARTEN - GRADE 3
 TITLE
 Picture Puzzle Piece
 No Difference
@@ -11412,7 +11519,8 @@ D 0220 FOLK DANCE TRIO, OWN CHOICE, 6 YEARS AND UNDER
 D 0221 FOLK DANCE TRIO, OWN CHOICE, 8 YEARS AND UNDER
 D 0222 FOLK DANCE TRIO, OWN CHOICE, 10 YEARS AND UNDER
 202
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARED 0223 FOLK DANCE TRIO, OWN CHOICE, 12 YEARS AND UNDER
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+D 0223 FOLK DANCE TRIO, OWN CHOICE, 12 YEARS AND UNDER
 D 0224 FOLK DANCE TRIO, OWN CHOICE, 14 YEARS AND UNDER
 D 0225 FOLK DANCE TRIO, OWN CHOICE, 16 YEARS AND UNDER
 D 0226 FOLK DANCE TRIO, OWN CHOICE, 18 YEARS AND UNDER
@@ -11503,7 +11611,8 @@ D 0294 BALLET TRIO, OWN CHOICE, 14 YEARS AND UNDER
 D 0295 BALLET TRIO, OWN CHOICE, 16 YEARS AND UNDER
 D 0296 BALLET TRIO, OWN CHOICE, 18 YEARS AND UNDER
 204
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARED 0297 BALLET TRIO, OWN CHOICE, 19 YEARS AND OVER
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+D 0297 BALLET TRIO, OWN CHOICE, 19 YEARS AND OVER
 D 0298 BALLET TRIO, OWN CHOICE, MULTIGENERATIONAL
 COMMUNITY GROUP
 One selection, own choice.
@@ -11730,7 +11839,8 @@ D 0481 CREATIVE MOVEMENT COMMUNITY GROUP, OWN CHOICE, 8 YEARS AND UNDER
 D 0482 CREATIVE MOVEMENT COMMUNITY GROUP, OWN CHOICE, 10 YEARS AND UNDER
 D 0483 CREATIVE MOVEMENT COMMUNITY GROUP, OWN CHOICE, 12 YEARS AND UNDER
 209
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARED 0484 CREATIVE MOVEMENT COMMUNITY GROUP, OWN CHOICE, 14 YEARS AND UNDER
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+D 0484 CREATIVE MOVEMENT COMMUNITY GROUP, OWN CHOICE, 14 YEARS AND UNDER
 D 0485 CREATIVE MOVEMENT COMMUNITY GROUP, OWN CHOICE, 16 YEARS AND UNDER
 D 0486 CREATIVE MOVEMENT COMMUNITY GROUP, OWN CHOICE, 18 YEARS AND UNDER
 D 0487 CREATIVE MOVEMENT COMMUNITY GROUP, OWN CHOICE, 19 YEARS AND OVER
@@ -11872,7 +11982,8 @@ D 0602 STAGE DANCE TRIO WITH VOICE, TRADITIONAL MUSICAL, OWN CHOICE, 10 YEARS AN
 D 0603 STAGE DANCE TRIO WITH VOICE, TRADITIONAL MUSICAL, OWN CHOICE, 12 YEARS AND UNDER
 D 0604 STAGE DANCE TRIO WITH VOICE, TRADITIONAL MUSICAL, OWN CHOICE, 14 YEARS AND UNDER
 212
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARED 0605 STAGE DANCE TRIO WITH VOICE, TRADITIONAL MUSICAL, OWN CHOICE, 16 YEARS AND UNDER
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+D 0605 STAGE DANCE TRIO WITH VOICE, TRADITIONAL MUSICAL, OWN CHOICE, 16 YEARS AND UNDER
 D 0606 STAGE DANCE TRIO WITH VOICE, TRADITIONAL MUSICAL, OWN CHOICE, 18 YEARS AND UNDER
 D 0607 STAGE DANCE TRIO WITH VOICE, TRADITIONAL MUSICAL, OWN CHOICE, 19 YEARS AND OVER
 D 0608 STAGE DANCE TRIO WITH VOICE, TRADITIONAL MUSICAL, OWN CHOICE, MULTIGENERATIONAL
@@ -12010,7 +12121,8 @@ D 0714 STAGE DANCE GROUP WITHOUT VOICE, OWN CHOICE, 14 YEARS AND UNDER
 D 0715 STAGE DANCE GROUP WITHOUT VOICE, OWN CHOICE, 16 YEARS AND UNDER
 D 0716 STAGE DANCE GROUP WITHOUT VOICE, OWN CHOICE, 18 YEARS AND UNDER
 215
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARED 0717 STAGE DANCE GROUP WITHOUT VOICE, OWN CHOICE, 19 YEARS AND OVER
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+D 0717 STAGE DANCE GROUP WITHOUT VOICE, OWN CHOICE, 19 YEARS AND OVER
 D 0718 STAGE DANCE GROUP WITHOUT VOICE, OWN CHOICE, MULTIGENERATIONAL
 SCHOOL/CLASSROOM GROUP
 One selection, own choice.
@@ -12057,7 +12169,8 @@ D 0754 RHYTHMIC MOVEMENT TRIO, GYMNASTICS, OWN CHOICE, 14 YEARS AND UNDER
 D 0755 RHYTHMIC MOVEMENT TRIO, GYMNASTICS, OWN CHOICE, 16 YEARS AND UNDER
 D 0756 RHYTHMIC MOVEMENT TRIO, GYMNASTICS, OWN CHOICE, 18 YEARS AND UNDER
 216
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARED 0757 RHYTHMIC MOVEMENT TRIO, GYMNASTICS, OWN CHOICE, 19 YEARS AND OVER
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+D 0757 RHYTHMIC MOVEMENT TRIO, GYMNASTICS, OWN CHOICE, 19 YEARS AND OVER
 D 0758 RHYTHMIC MOVEMENT TRIO, GYMNASTICS, OWN CHOICE, MULTIGENERATIONAL
 GROUP
 One selection, own choice.
@@ -12103,7 +12216,8 @@ D 0793 RHYTHMIC MOVEMENT DUO, BATON, OWN CHOICE, 12 YEARS AND UNDER
 D 0794 RHYTHMIC MOVEMENT DUO, BATON, OWN CHOICE, 14 YEARS AND UNDER
 D 0795 RHYTHMIC MOVEMENT DUO, BATON, OWN CHOICE, 16 YEARS AND UNDER
 217
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARED 0796 RHYTHMIC MOVEMENT DUO, BATON, OWN CHOICE, 18 YEARS AND UNDER
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+D 0796 RHYTHMIC MOVEMENT DUO, BATON, OWN CHOICE, 18 YEARS AND UNDER
 D 0797 RHYTHMIC MOVEMENT DUO, BATON, OWN CHOICE, 19 YEARS AND OVER
 D 0798 RHYTHMIC MOVEMENT DUO, BATON, OWN CHOICE, MULTIGENERATIONAL
 TRIO
@@ -12504,7 +12618,8 @@ VA 1040 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, GRADES 2 - 3
 VA 1041 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, GRADES 4 - 6
 VA 1042 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, GRADES 7 - 9
 226
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREVA 1043 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, GRADES 10 - 12
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+VA 1043 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, GRADES 10 - 12
 VA 1044 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, ADULT
 OWN THEME: INDIVIDUAL
 VA 1050 POSTER DESIGN, INDIVIDUAL WORK, OWN THEME, GRADES 2 - 3
@@ -12548,7 +12663,8 @@ VA 1101 SCULPTURE, GRADES 2 - 3
 VA 1102 SCULPTURE, GRADES 4 - 6
 VA 1103 SCULPTURE, GRADES 7 - 9
 227
-Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHAREVA 1104 SCULPTURE, GRADES 10 - 12
+Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
+VA 1104 SCULPTURE, GRADES 10 - 12
 VA 1105 SCULPTURE, ADULT
 CERAMICS/POTTERY CLASSES
 HAND-BUILT: UNFIRED OR FIRED
@@ -12661,8 +12777,8 @@ VA 1249 CALLIGRAPHY, ADULT
 230
 Purchased for use by Rockwood Festival of the Arts - DO NOT COPY OR SHARE
 K 2000 ORIGINAL COMPOSITION
-V1057 VOCAL SOLO, MUSICAL THEATRE - 8 YEARS AND UNDER
-V1107 VOCAL SOLO, MUSICAL THEATRE - 10 YEARS AND UNDER
+V 1057 VOCAL SOLO, MUSICAL THEATRE - 8 YEARS AND UNDER
+V 1107 VOCAL SOLO, MUSICAL THEATRE - 10 YEARS AND UNDER
 LD 0410 LYRICAL DANCE SOLO, OWN CHOICE, 10 YEARS AND UNDER
 LD 0411 LYRICAL DANCE SOLO, OWN CHOICE, 12 YEARS AND UNDER
 LD 0412 LYRICAL DANCE SOLO, OWN CHOICE, 14 YEARS AND UNDER
@@ -14742,7 +14858,8 @@ PW 5915D RECORDER SOLO, 20TH/21ST CENTURY COMPOSERS SONATA, DIPLOMA (S)
 Own choice, two consecutive movements of a sonata. Works by Canadian composers must be entered in the
 Canadian Composers Sonata class.
 PW 5916 RECORDER SOLO, 19TH/20TH/21ST CENTURY SONATA, DIPLOMA (S)
-Own choice, two consecutive movements of a sonata.PWC 5917A RECORDER SOLO, CANADIAN COMPOSERS, DIPLOMA (S)
+Own choice, two consecutive movements of a sonata.
+PWC 5917A RECORDER SOLO, CANADIAN COMPOSERS, DIPLOMA (S)
 One selection, own choice. No sonata or concerto movements. This is the only recorder class at this level eligible for
 recommendation to the Senior Canadian Composers class at the Provincial Finals.
 PW 5917B RECORDER SOLO, CANADIAN COMPOSERS SONATA, DIPLOMA (S)
