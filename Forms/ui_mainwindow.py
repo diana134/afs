@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Sun Feb  8 13:54:35 2015
+# Created: Sun Feb  8 14:05:45 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -121,7 +121,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(_translate("MainWindow", "Arts Festival Scheduler - v1.0", None))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Arts Festival Scheduler - v1.1", None))
         self.groupBox.setTitle(_translate("MainWindow", "Participants", None))
         self.addSoloParticipantBtn.setText(_translate("MainWindow", "Add &Solo Participant", None))
         self.addGroupParticipantBtn.setText(_translate("MainWindow", "Add &Group Participant", None))

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Arts Festival Scheduler - v1.0</string>
+   <string>Arts Festival Scheduler - v1.1</string>
   </property>
   <property name="animated">
    <bool>true</bool>
