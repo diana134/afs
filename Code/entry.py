@@ -128,6 +128,46 @@ class Entry(object):
         
         csvFile.write(s)
 
+    @staticmethod
+    def reportByTeacherHeader():
+        """Returns a comma-separated string of column headers for use in a CSV file"""
+        return '"Teacher","Participant","Discipline","Class Number","Class Name","Level","Years of Instruction","Instrument","Scheduling Requirements","Time","Title","Composer/Arranger/Author","Title of Musical"\n'
+
+    def reportByTeacher(self, csvFile, depth=0):
+        """Write this entry to a csv file, padded with <depth> empty columns as indentation. \
+        csvFile must be an open file with write permissions."""
+        
+        leadingCommas = ''
+        for _ in range(depth):
+            leadingCommas = leadingCommas+','
+            
+        s = '{indent}"{teacherName}","{participantName}","{discipline}","{classNumber}","{className}","{level}","{yearsOfInstruction}","{instrument}","{requirements}",'.format(
+            indent=leadingCommas,
+            teacherName=self.teacherID,
+            participantName=self.participantID,
+            discipline=self.discipline,
+            classNumber=self.classNumber,
+            className=self.className,
+            level=self.level,
+            yearsOfInstruction=self.yearsOfInstruction,
+            instrument=self.instrument,
+            requirements=self.schedulingRequirements
+        )
+        
+        # instead of duplicating all the entry data just have an indented list of all selections
+        for i in range(len(self.selections)):
+            if i != 0:
+                s += '{indent},,,,,,,,,'.format(indent=leadingCommas)
+                
+            s += '"{time}","{title}","{composer}","{musical}"\n'.format(
+                time=self.selections[i]['performanceTime'],
+                title=self.selections[i]['title'],
+                composer=self.selections[i]['composerArranger'],
+                musical=self.selections[i]['titleOfMusical']
+            )
+        
+        csvFile.write(s)
+
     def toWordFile(self, document, p):
         """Creates a docx for the printer, document is from docx module"""
         # super hack

@@ -62,7 +62,7 @@ class MainWindow(QWidget):
         self.ui.createNewDbBtn.clicked.connect(self.createNewDbBtn_clicked)
         self.ui.entriesByDisciplineBtn.clicked.connect(self.entriesByDisciplineBtn_clicked)
         self.ui.entriesByTeacherBtn.clicked.connect(self.entriesByTeacherBtn_clicked)
-        self.ui.entriesByGroupBtn.clicked.connect(self.entriesByGroupBtn_clicked)
+        # self.ui.entriesByGroupBtn.clicked.connect(self.entriesByGroupBtn_clicked)
 
     ###### Slots ######
 
@@ -271,7 +271,6 @@ class MainWindow(QWidget):
             fout = open(filename, 'w')
             fout.write(Entry.reportByDisciplineHeader())
             for entry in entries:
-                print entry
                 entry.reportByDiscipline(fout)
             fout.close()
             QMessageBox.information(self, 'Report Entries by Discipline', 'Report saved to ' + filename, QMessageBox.Ok)
@@ -292,13 +291,16 @@ class MainWindow(QWidget):
                 except Exception:
                     entry.participantID = "{groupName}".format(groupName=participant.groupName)
 
-                teacher = dbInteractionInstance.getTeacherFromId(entry.teacherID)
-                entry.teacherID = "{last}, {first}".format(last=teacher.last, first=teacher.first)
+                if entry.teacherID != "":
+                    teacher = dbInteractionInstance.getTeacherFromId(entry.teacherID)
+                    entry.teacherID = "{last}, {first}".format(last=teacher.last, first=teacher.first)
 
-            entries.sort(key=lambda x: (x.teacherID, x.participantID))
+            entries.sort(key=lambda x: (x.teacherID, x.participantID, x.discipline, x.classNumber))
+            fout = open(filename, 'w')
+            fout.write(Entry.reportByTeacherHeader())
             for entry in entries:
-                print entry
-            # TODO write csv
+                entry.reportByTeacher(fout)
+            fout.close()
             QMessageBox.information(self, 'Report Entries by Teacher', 'Report saved to ' + filename, QMessageBox.Ok)
 
     def entriesByGroupBtn_clicked(self):

@@ -194,13 +194,6 @@
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QPushButton" name="entriesByGroupBtn">
-         <property name="text">
-          <string>Entries by School/Group</string>
-         </property>
-        </widget>
-       </item>
       </layout>
      </widget>
     </item>
