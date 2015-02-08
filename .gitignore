@@ -1,2 +1,8 @@
 *.pyc
 *.pdf
+*.docx
+*.bak
+*.csv
+*.zip
+*.sched
+*.odt#
