@@ -25,6 +25,7 @@ from databaseInteraction import dbInteractionInstance
 from settingsInteraction import settingsInteractionInstance
 from scheduler import Scheduler
 from schedule import Schedule
+from entry import Entry
 
 app = QApplication(sys.argv)
 exportsPath = os.path.join("..", "Exports")
@@ -262,13 +263,17 @@ class MainWindow(QWidget):
                 except Exception:
                     entry.participantID = "{groupName}".format(groupName=participant.groupName)
 
-                teacher = dbInteractionInstance.getTeacherFromId(entry.teacherID)
-                entry.teacherID = "{last}, {first}".format(last=teacher.last, first=teacher.first)
+                if entry.teacherID != "":
+                    teacher = dbInteractionInstance.getTeacherFromId(entry.teacherID)
+                    entry.teacherID = "{last}, {first}".format(last=teacher.last, first=teacher.first)
 
             entries.sort(key=lambda x: (x.discipline, x.classNumber, x.participantID))
+            fout = open(filename, 'w')
+            fout.write(Entry.reportByDisciplineHeader())
             for entry in entries:
                 print entry
-            # TODO write csv
+                entry.reportByDiscipline(fout)
+            fout.close()
             QMessageBox.information(self, 'Report Entries by Discipline', 'Report saved to ' + filename, QMessageBox.Ok)
 
     def entriesByTeacherBtn_clicked(self):
