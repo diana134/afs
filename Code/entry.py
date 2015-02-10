@@ -3,6 +3,7 @@
 import datetime
 
 from utilities import requiredFieldIsGood, optionalFieldIsGood, convertStringToTimedelta
+from participant import SoloParticipant
 
 class Entry(object):
     """holds Entry data as strings"""
@@ -164,6 +165,120 @@ class Entry(object):
                 title=self.selections[i]['title'],
                 composer=self.selections[i]['composerArranger'],
                 musical=self.selections[i]['titleOfMusical']
+            )
+        
+        csvFile.write(s)
+
+    @staticmethod
+    def dumpHeader():
+        """Returns a comma-separated string of column headers for use in a CSV file"""
+        return '"Class Number","Class Name","Discipline","Level","Years of Instruction","Instrument","Scheduling Requirements",\
+        "Time","Title","Composer/Arranger/Author","Title of Musical",\
+        "Participant First Name","Participant Last Name","Participant Address","Participant Town","Participant Postal Code","Participant Home Phone","Participant Cell Phone","Participant Email","Participant Date of Birth","Participant School","Participant Parent","Participant Age","Participant Grade",\
+        "Group Name","Group Size","Group Grade","Group Age","Group Participants","Earliest Performance Time","Latest Performance Time",\
+        "Teacher/Contact First Name","Teacher/Contact Last Name","Teacher/Contact Address","Teacher/Contact City","Teacher/Contact Postal Code","Teacher/Contact Daytime Phone","Teacher/Contact Evening Phone","Teacher/Contact Email",\
+        \n'
+
+    def dump(self, csvFile):
+        """Write this entry to a csv file, csvFile must be an open file with write permissions."""
+            
+        # super hack
+        from databaseInteraction import dbInteractionInstance
+        
+        participant = dbInteractionInstance.getParticipantFromId(self.participantID)
+
+        # Entry data
+        s = '"{classNumber}","{className}","{discipline}","{level}","{yearsOfInstruction}","{instrument}","{requirements}",'.format(
+            classNumber=self.classNumber,
+            className=self.className,
+            discipline=self.discipline,
+            level=self.level,
+            yearsOfInstruction=self.yearsOfInstruction,
+            instrument=self.instrument,
+            requirements=self.schedulingRequirements
+        )
+
+        # selection data
+        # separated with slashes in each field
+        time = ""
+        title = ""
+        composer = ""
+        musical = ""
+        for i in range(len(self.selections)):
+            time += self.selections[i]['performanceTime']
+            title += self.selections[i]['title']
+            composer += self.selections[i]['composerArranger']
+            musical += self.selections[i]['titleOfMusical']
+
+            if i < len(self.selections)-1:
+                time += '/'
+                title += '/'
+                composer += '/'
+                musical += '/'
+                
+        s += '"{time}","{title}","{composer}","{musical}",'.format(
+            time=time,
+            title=title,
+            composer=composer,
+            musical=musical
+        )
+
+        # Participant data, solo then group
+        if type(participant) is SoloParticipant:
+            s += '"{first}","{last}","{address}","{town}","{postal}","{home}","{cell}","{email}","{dob}","{school}","{parent}","{age}","{grade}",'.format(
+                first=participant.first,
+                last=participant.last,
+                address=participant.address,
+                town=participant.town,
+                postal=participant.postal,
+                home=participant.home,
+                cell=participant.cell,
+                email=participant.email,
+                dob=participant.dob,
+                school=participant.schoolAttending,
+                parent=participant.parent,
+                age=participant.age,
+                grade=participant.schoolGrade
+            )
+            s += ',,,,,,,'
+        else:
+            participants = ""
+            for index in participant.participants:
+                sp = dbInteractionInstance.getParticipantFromId(index)
+                participants += "{first} {last}".format(first=sp.first, last=sp.last)
+                if sp.age != "":
+                    participants += "{age}".format(age=sp.age)
+                participants += ", "
+            if participants != "":
+                # remove final comma space
+                participants = participants[:-2]
+
+            s += ',,,,,,,,,,,,,'
+
+            s += '"{name}","{size}","{grade}","{age}","{participants}","{early}","{late}",'.format(
+                name=participant.groupName,
+                size=participant.groupSize,
+                grade=participant.schoolGrade,
+                age=participant.averageAge,
+                participants=participants,
+                early=participant.earliestPerformanceTime,
+                late=participant.latestPerformanceTime
+            )
+
+        # contact/teacher info
+        try:
+            person = dbInteractionInstance.getTeacherFromId(participant.contact)
+        except Exception:
+            person = dbInteractionInstance.getTeacherFromId(self.teacherID)
+        s += '"{first}","{last}","{address}","{city}","{postal}","{daytimePhone}","{eveningPhone}","{email}"\n'.format(
+                first=person.first,
+                last=person.last,
+                address=person.address,
+                city=person.city,
+                postal=person.postal,
+                daytimePhone=person.daytimePhone,
+                eveningPhone=person.eveningPhone,
+                email=person.email
             )
         
         csvFile.write(s)

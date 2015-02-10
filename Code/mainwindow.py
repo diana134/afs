@@ -63,6 +63,7 @@ class MainWindow(QWidget):
         self.ui.entriesByDisciplineBtn.clicked.connect(self.entriesByDisciplineBtn_clicked)
         self.ui.entriesByTeacherBtn.clicked.connect(self.entriesByTeacherBtn_clicked)
         # self.ui.entriesByGroupBtn.clicked.connect(self.entriesByGroupBtn_clicked)
+        self.ui.dumpBtn.clicked.connect(self.dumpBtn_clicked)
 
     ###### Slots ######
 
@@ -316,6 +317,21 @@ class MainWindow(QWidget):
                 print entry
             # TODO write csv
             QMessageBox.information(self, 'Report Entries by School/Group', 'Report saved to ' + filename, QMessageBox.Ok)
+
+    def dumpBtn_clicked(self):
+        """Saves a csv of all the data so they can do what they want with it"""
+        filename = QFileDialog.getSaveFileName(self, "Database Dump", exportsPath, "CSV Files (*.csv)")
+        if filename is not None and filename != "":
+            if filename[-4:] != ".csv":
+                filename += ".csv"
+
+            entries = dbInteractionInstance.getAllEntries()
+            fout = open(filename, 'w')
+            fout.write(Entry.dumpHeader())
+            for entry in entries:
+                entry.dump(fout)
+            fout.close()
+            QMessageBox.information(self, 'Database Dump', 'Data saved to ' + filename, QMessageBox.Ok)
 
     ##########
 

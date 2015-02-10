@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Sun Feb  8 14:05:45 2015
+# Created: Mon Feb  9 23:18:50 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -114,6 +114,9 @@ class Ui_MainWindow(object):
         self.entriesByTeacherBtn = QtGui.QPushButton(self.groupBox_6)
         self.entriesByTeacherBtn.setObjectName(_fromUtf8("entriesByTeacherBtn"))
         self.horizontalLayout_2.addWidget(self.entriesByTeacherBtn)
+        self.dumpBtn = QtGui.QPushButton(self.groupBox_6)
+        self.dumpBtn.setObjectName(_fromUtf8("dumpBtn"))
+        self.horizontalLayout_2.addWidget(self.dumpBtn)
         self.gridLayout.addWidget(self.groupBox_6, 4, 0, 1, 2)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -145,4 +148,5 @@ class Ui_MainWindow(object):
         self.groupBox_6.setTitle(_translate("MainWindow", "Reports", None))
         self.entriesByDisciplineBtn.setText(_translate("MainWindow", "Entries By Discipline", None))
         self.entriesByTeacherBtn.setText(_translate("MainWindow", "Entries By Teacher", None))
+        self.dumpBtn.setText(_translate("MainWindow", "Everything", None))
 
