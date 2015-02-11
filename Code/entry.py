@@ -242,16 +242,18 @@ class Entry(object):
             )
             s += ',,,,,,,'
         else:
-            participants = ""
-            for index in participant.participants:
-                sp = dbInteractionInstance.getParticipantFromId(index)
-                participants += "{first} {last}".format(first=sp.first, last=sp.last)
-                if sp.age != "":
-                    participants += "{age}".format(age=sp.age)
-                participants += ", "
-            if participants != "":
-                # remove final comma space
-                participants = participants[:-2]
+            pString = ""
+            tokens = participant.participants.split(',')
+            if tokens[0] != "":
+                for index in tokens:
+                    sp = dbInteractionInstance.getParticipantFromId(index)
+                    pString += "{first} {last}".format(first=sp.first, last=sp.last)
+                    if sp.age != "":
+                        pString += "{age}".format(age=sp.age)
+                    pString += ", "
+                if pString != "":
+                    # remove final comma space
+                    pString = pString[:-2]
 
             s += ',,,,,,,,,,,,,'
 
@@ -260,7 +262,7 @@ class Entry(object):
                 size=participant.groupSize,
                 grade=participant.schoolGrade,
                 age=participant.averageAge,
-                participants=participants,
+                participants=pString,
                 early=participant.earliestPerformanceTime,
                 late=participant.latestPerformanceTime
             )
