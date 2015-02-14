@@ -35,6 +35,10 @@ class ScheduleDialog(QDialog):
 
     def displaySchedule(self):
         """Displays the schedule in scheduleTableWidget"""
+
+        # start by clearing everything
+        self.ui.scheduleTableWidget.clear()
+
         self.ui.scheduleTableWidget.setColumnCount(len(self.schedule.sessions))
 
         tableHeader = []
@@ -71,11 +75,12 @@ class ScheduleDialog(QDialog):
 
     def scheduleTableWidget_itemSelectionChanged(self):
         """Displays the entries of the selected event in entriesTableWidget"""
-        # Get which Event is selected
-        eventTableItem = self.ui.scheduleTableWidget.currentItem()
-        if eventTableItem is not None:
-            col = self.ui.scheduleTableWidget.column(eventTableItem)
-            event = next(x for x in self.schedule.sessions[col].eventList if x.classNumber == eventTableItem.text())
+        # Make sure something is selected
+        if self.ui.scheduleTableWidget.selectedIndexes() is not None:
+            # Get which Event is selected
+            col = self.ui.scheduleTableWidget.currentColumn()
+            eventIndex = self.ui.scheduleTableWidget.currentRow()
+            event = self.schedule.sessions[col].eventList[eventIndex]
 
             # Set up columns
             self.ui.entriesTableWidget.setColumnCount(3)
@@ -128,36 +133,147 @@ class ScheduleDialog(QDialog):
             QMessageBox.information(self, 'Print Schedule', 'Schedule print file saved to ' + filename, QMessageBox.Ok)
 
     def scheduleUpBtn_clicked(self):
-        currRow = self.ui.scheduleTableWidget.currentRow()
-        currCol = self.ui.scheduleTableWidget.currentColumn()
+        # make sure something is selected
+        if self.ui.scheduleTableWidget.selectedIndexes() is None:
+            return
+
+        # get indexes
+        eventIndex = self.ui.scheduleTableWidget.currentRow()
+        sessionIndex = self.ui.scheduleTableWidget.currentColumn()
+
         # if selected is not top
-        if currRow > 0:
+        if eventIndex > 0:
             # swap with thing above
-            # TODO make this work
-            itemAbove = self.ui.scheduleTableWidget.item(currRow-1, currCol)
-            currItem = self.ui.scheduleTableWidget.currentItem()
-            self.ui.scheduleTableWidget.setItem(currRow, currCol, itemAbove)
-            self.ui.scheduleTableWidget.setItem(currRow-1, currCol, currItem)
-            self.ui.scheduleTableWidget.setCurrentItem(currItem)
-        pass
+            self.schedule.sessions[sessionIndex].eventList[eventIndex], \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex-1] = \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex-1], \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex]
+            
+            # clear selection
+            self.ui.scheduleTableWidget.clearSelection()
+            self.displaySchedule()
+            # reset selection
+            index = self.ui.scheduleTableWidget.model().index(eventIndex-1, sessionIndex)
+            self.ui.scheduleTableWidget.setCurrentIndex(index)
 
     def scheduleDownBtn_clicked(self):
+        # make sure something is selected
+        if self.ui.scheduleTableWidget.selectedIndexes() is None:
+            return
+
+        # get indexes
+        eventIndex = self.ui.scheduleTableWidget.currentRow()
+        sessionIndex = self.ui.scheduleTableWidget.currentColumn()
+
         # if selected is not bottom
+        if eventIndex <= self.ui.scheduleTableWidget.rowCount():
             # swap with thing below
-        pass
+            self.schedule.sessions[sessionIndex].eventList[eventIndex], \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex+1] = \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex+1], \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex]
+            
+            # clear selection
+            self.ui.scheduleTableWidget.clearSelection()
+            self.displaySchedule()
+            # reset selection
+            index = self.ui.scheduleTableWidget.model().index(eventIndex+1, sessionIndex)
+            self.ui.scheduleTableWidget.setCurrentIndex(index)
 
     def scheduleLeftBtn_clicked(self):
+        # make sure something is selected
+        if self.ui.scheduleTableWidget.selectedIndexes() is None:
+            return
+
+        # get indexes
+        eventIndex = self.ui.scheduleTableWidget.currentRow()
+        sessionIndex = self.ui.scheduleTableWidget.currentColumn()
+
         # if selected is not furthest left
-            # add to bottom of next left column
-        pass
+        if sessionIndex > 0:
+            # insert to the left
+            self.schedule.sessions[sessionIndex-1].eventList.insert(eventIndex, \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex])
+            # and remove it from where it was
+            self.schedule.sessions[sessionIndex].eventList.pop(eventIndex)
+            
+            # clear selection
+            self.ui.scheduleTableWidget.clearSelection()
+            self.displaySchedule()
+            # reset selection
+            index = self.ui.scheduleTableWidget.model().index(eventIndex, sessionIndex-1)
+            self.ui.scheduleTableWidget.setCurrentIndex(index)
 
     def scheduleRightBtn_clicked(self):
+        # make sure something is selected
+        if self.ui.scheduleTableWidget.selectedIndexes() is None:
+            return
+
+        # get indexes
+        eventIndex = self.ui.scheduleTableWidget.currentRow()
+        sessionIndex = self.ui.scheduleTableWidget.currentColumn()
+
         # if selected is not furthest right
-            # add to bottom of next right column
-        pass
+        if sessionIndex <= self.ui.scheduleTableWidget.columnCount():
+            # insert to the right
+            self.schedule.sessions[sessionIndex+1].eventList.insert(eventIndex, \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex])
+            # and remove it from where it was
+            self.schedule.sessions[sessionIndex].eventList.pop(eventIndex)
+            
+            # clear selection
+            self.ui.scheduleTableWidget.clearSelection()
+            self.displaySchedule()
+            # reset selection
+            index = self.ui.scheduleTableWidget.model().index(eventIndex, sessionIndex+1)
+            self.ui.scheduleTableWidget.setCurrentIndex(index)
 
     def entriesUpBtn_clicked(self):
-        pass
+        # make sure something is selected
+        if self.ui.entriesTableWidget.selectedIndexes() is None:
+            return
+
+        # get indexes
+        entryIndex = self.ui.entriesTableWidget.currentRow()
+        eventIndex = self.ui.scheduleTableWidget.currentRow()
+        sessionIndex = self.ui.scheduleTableWidget.currentColumn()
+
+        # if selected is not top
+        if entryIndex > 0:
+            # swap with thing above
+            self.schedule.sessions[sessionIndex].eventList[eventIndex].entries[entryIndex], \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex].entries[entryIndex-1] = \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex].entries[entryIndex-1], \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex].entries[entryIndex]
+            
+            # clear selection
+            self.ui.entriesTableWidget.clearSelection()
+            self.scheduleTableWidget_itemSelectionChanged()
+            # reset selection
+            index = self.ui.entriesTableWidget.model().index(entryIndex-1, 0)
+            self.ui.entriesTableWidget.setCurrentIndex(index)
 
     def entriesDownBtn_clicked(self):
-        pass
+        # make sure something is selected
+        if self.ui.entriesTableWidget.selectedIndexes() is None:
+            return
+
+        # get indexes
+        entryIndex = self.ui.entriesTableWidget.currentRow()
+        eventIndex = self.ui.scheduleTableWidget.currentRow()
+        sessionIndex = self.ui.scheduleTableWidget.currentColumn()
+
+        # if selected is not bottom
+        if entryIndex <= self.ui.entriesTableWidget.rowCount():
+            # swap with thing below
+            self.schedule.sessions[sessionIndex].eventList[eventIndex].entries[entryIndex], \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex].entries[entryIndex+1] = \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex].entries[entryIndex+1], \
+            self.schedule.sessions[sessionIndex].eventList[eventIndex].entries[entryIndex]
+            
+            # clear selection
+            self.ui.entriesTableWidget.clearSelection()
+            self.scheduleTableWidget_itemSelectionChanged()
+            # reset selection
+            index = self.ui.entriesTableWidget.model().index(entryIndex+1, 0)
+            self.ui.entriesTableWidget.setCurrentIndex(index)

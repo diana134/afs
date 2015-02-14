@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_scheduleDialog.ui'
 #
-# Created: Fri Jan  2 15:24:27 2015
+# Created: Sat Feb 14 15:39:27 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -81,6 +81,7 @@ class Ui_ScheduleDialog(object):
         self.entriesTableWidget = QtGui.QTableWidget(self.verticalLayoutWidget_2)
         self.entriesTableWidget.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
         self.entriesTableWidget.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
+        self.entriesTableWidget.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
         self.entriesTableWidget.setObjectName(_fromUtf8("entriesTableWidget"))
         self.entriesTableWidget.setColumnCount(0)
         self.entriesTableWidget.setRowCount(0)
