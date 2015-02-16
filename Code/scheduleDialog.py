@@ -4,9 +4,11 @@ import sys
 import os.path
 sys.path.insert(0, os.path.join("..", "Forms"))
 from PyQt4.QtGui import QDialog, QTableWidgetItem, QMessageBox, QFileDialog
+import datetime
 
 from ui_scheduleDialog import Ui_ScheduleDialog
 from databaseInteraction import dbInteractionInstance
+from settingsInteraction import settingsInteractionInstance
 
 exportsPath = os.path.join("..", "Exports")
 
@@ -32,6 +34,7 @@ class ScheduleDialog(QDialog):
         self.ui.btnBox.rejected.connect(self.cancelBtn_clicked)
         self.ui.exportScheduleBtn.clicked.connect(self.exportScheduleBtn_clicked)
         self.ui.printScheduleBtn.clicked.connect(self.printScheduleBtn_clicked)
+        self.ui.validateBtn.clicked.connect(self.validateBtn_clicked)
 
     def displaySchedule(self):
         """Displays the schedule in scheduleTableWidget"""
@@ -131,6 +134,21 @@ class ScheduleDialog(QDialog):
                 filename += ".docx"
             self.schedule.toWordFile(filename=filename)
             QMessageBox.information(self, 'Print Schedule', 'Schedule print file saved to ' + filename, QMessageBox.Ok)
+
+    def validateBtn_clicked(self):
+        """checks that the schedule has everything from the db and nothing goes overtime"""
+        valid = True
+        # check that no sessions go overtime
+        for session in self.schedule.sessions:
+            overtime = session.emptyTime() + settingsInteractionInstance.loadTolerance()
+            if overtime < datetime.timedelta():
+                valid = False
+                QMessageBox.warning(self, 'Session Overtime', 'Session beginning at {0} runs {1} overtime, taking adjudication time and tolerance for overtime into account.'.format(session.startDatetime, overtime), QMessageBox.Ok)
+
+        if valid:
+            QMessageBox.information(self, 'Valid Schedule', 'Everything checks out. Nothing runs overtime.', QMessageBox.Ok)
+
+        # TODO check has everything from db (in case maybe this schedule was loaded from memory after changes were made)
 
     def scheduleUpBtn_clicked(self):
         # make sure something is selected

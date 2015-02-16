@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_scheduleDialog.ui'
 #
-# Created: Sat Feb 14 15:39:27 2015
+# Created: Mon Feb 16 13:43:45 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -107,7 +107,7 @@ class Ui_ScheduleDialog(object):
         spacerItem4 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem4)
         self.validateBtn = QtGui.QPushButton(ScheduleDialog)
-        self.validateBtn.setEnabled(False)
+        self.validateBtn.setEnabled(True)
         self.validateBtn.setObjectName(_fromUtf8("validateBtn"))
         self.horizontalLayout.addWidget(self.validateBtn)
         self.printScheduleBtn = QtGui.QPushButton(ScheduleDialog)

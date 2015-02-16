@@ -30,10 +30,10 @@ class Scheduler(object):
         eventList.sort(key=lambda x: x.classNumber, reverse=False) # Magic code from stackoverflow
         return eventList
 
-    def process(self, entriesInDiscipline, sessionDatetimes):
+    def process(self, entriesInDiscipline, commentsTime, adjudicationTime, sessionDatetimes):
         """Starts a backtracking search for a solution, returns a valid Schedule or None if no solution exists"""
         print "Working..."
-        schedule = Schedule(sessionDatetimes)
+        schedule = Schedule(commentsTime, adjudicationTime, sessionDatetimes)
         self.possibleEvents = self.sortEntriesByClass(entriesInDiscipline)
 
         result = self.recursiveProcess(schedule)

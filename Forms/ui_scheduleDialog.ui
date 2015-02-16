@@ -204,7 +204,7 @@
      <item>
       <widget class="QPushButton" name="validateBtn">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="text">
         <string>&amp;Validate Schedule</string>
