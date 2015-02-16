@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_scheduleOptionsDialog.ui'
 #
-# Created: Fri Nov 28 14:04:37 2014
+# Created: Mon Feb 16 15:56:04 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -123,13 +123,13 @@ class Ui_ScheduleOptionsDialog(object):
         self.groupBox_2.setTitle(_translate("ScheduleOptionsDialog", "Timing Options", None))
         self.timeToWriteCommentsLabel.setToolTip(_translate("ScheduleOptionsDialog", "The time between entries in a class while the adjudicator writes comments.", None))
         self.timeToWriteCommentsLabel.setText(_translate("ScheduleOptionsDialog", "Time to Write Comments Per Entry (mm:ss)", None))
-        self.commentsTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "HH:mm", None))
+        self.commentsTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "mm:ss", None))
         self.adjudicationTimePerEntryLabel.setToolTip(_translate("ScheduleOptionsDialog", "The time at the end of the class to adjudicate each of the entries.", None))
         self.adjudicationTimePerEntryLabel.setText(_translate("ScheduleOptionsDialog", "Adjudication Time Per Entry (mm:ss)", None))
-        self.adjudicationTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "HH:mm", None))
+        self.adjudicationTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "mm:ss", None))
         self.toleranceForOvertimeLabel.setToolTip(_translate("ScheduleOptionsDialog", "The time past the end of the session entries can be allowed to run.", None))
         self.toleranceForOvertimeLabel.setText(_translate("ScheduleOptionsDialog", "Tolerance for Overtime (mm:ss)", None))
-        self.toleranceTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "HH:mm", None))
+        self.toleranceTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "mm:ss", None))
         self.groupBox_3.setTitle(_translate("ScheduleOptionsDialog", "Other Options", None))
         self.disciplineLabel.setText(_translate("ScheduleOptionsDialog", "Discipline", None))
         self.disciplineComboBox.setItemText(0, _translate("ScheduleOptionsDialog", "Dance", None))

@@ -36,7 +36,7 @@
       <item row="0" column="1">
        <widget class="QTimeEdit" name="commentsTimeEdit">
         <property name="displayFormat">
-         <string>HH:mm</string>
+         <string>mm:ss</string>
         </property>
        </widget>
       </item>
@@ -53,7 +53,7 @@
       <item row="1" column="1">
        <widget class="QTimeEdit" name="adjudicationTimeEdit">
         <property name="displayFormat">
-         <string>HH:mm</string>
+         <string>mm:ss</string>
         </property>
        </widget>
       </item>
@@ -70,7 +70,7 @@
       <item row="2" column="1">
        <widget class="QTimeEdit" name="toleranceTimeEdit">
         <property name="displayFormat">
-         <string>HH:mm</string>
+         <string>mm:ss</string>
         </property>
        </widget>
       </item>

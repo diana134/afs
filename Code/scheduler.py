@@ -75,8 +75,7 @@ class Scheduler(object):
     def satisfiesContraints(session, event):
         """Returns true if adding this event to this session is valid"""
         valid = True
-
-        # Check that there is time for this event, within a tolerance
+        
         if event.totalTime > session.emptyTime() + settingsInteractionInstance.loadTolerance():
             valid = False
 

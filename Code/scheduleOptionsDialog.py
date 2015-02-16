@@ -54,7 +54,6 @@ class ScheduleOptionsDialog(QDialog):
     def okBtn_clicked(self):
         """stores the selected settings and closes the dialog"""
         sessionDatetimes = []
-
         settingsInteractionInstance.storeJudgingTimePerEntry(str(self.ui.commentsTimeEdit.time().toString("mm:ss")))
         settingsInteractionInstance.storeFinalAdjudicationTime(str(self.ui.adjudicationTimeEdit.time().toString("mm:ss")))
         settingsInteractionInstance.storeTolerance(str(self.ui.toleranceTimeEdit.time().toString("mm:ss")))

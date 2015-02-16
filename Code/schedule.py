@@ -51,8 +51,8 @@ class Session(object):
     def export(self, csvFile):
         """Export this session to a csv.  The csvFile parameter must be a file with write permissions"""
         s = '"{startDate}","{endDate}","{numEvents} events"\n'.format(
-            startDate=self.startDatetime.strftime('%Y/%M/%d %H:%M %p'),
-            endDate=self.endDatetime.strftime('%Y/%M/%d %H:%M %p'),
+            startDate=self.startDatetime.strftime('%Y/%M/%d %I:%M %p'),
+            endDate=self.endDatetime.strftime('%Y/%M/%d %I:%M %p'),
             numEvents=len(self.eventList)
         )
         csvFile.write(s)
