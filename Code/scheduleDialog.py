@@ -76,7 +76,7 @@ class ScheduleDialog(QDialog):
     def scheduleTableWidget_itemSelectionChanged(self):
         """Displays the entries of the selected event in entriesTableWidget"""
         # Make sure something is selected
-        if self.ui.scheduleTableWidget.selectedIndexes() is not None:
+        if self.ui.scheduleTableWidget.selectedItems() is not None:
             # Get which Event is selected
             col = self.ui.scheduleTableWidget.currentColumn()
             eventIndex = self.ui.scheduleTableWidget.currentRow()
@@ -134,7 +134,7 @@ class ScheduleDialog(QDialog):
 
     def scheduleUpBtn_clicked(self):
         # make sure something is selected
-        if self.ui.scheduleTableWidget.selectedIndexes() is None:
+        if self.ui.scheduleTableWidget.selectedItems() is None:
             return
 
         # get indexes
@@ -158,7 +158,7 @@ class ScheduleDialog(QDialog):
 
     def scheduleDownBtn_clicked(self):
         # make sure something is selected
-        if self.ui.scheduleTableWidget.selectedIndexes() is None:
+        if self.ui.scheduleTableWidget.selectedItems() is None:
             return
 
         # get indexes
@@ -182,7 +182,7 @@ class ScheduleDialog(QDialog):
 
     def scheduleLeftBtn_clicked(self):
         # make sure something is selected
-        if self.ui.scheduleTableWidget.selectedIndexes() is None:
+        if self.ui.scheduleTableWidget.selectedItems() is None:
             return
 
         # get indexes
@@ -206,7 +206,7 @@ class ScheduleDialog(QDialog):
 
     def scheduleRightBtn_clicked(self):
         # make sure something is selected
-        if self.ui.scheduleTableWidget.selectedIndexes() is None:
+        if self.ui.scheduleTableWidget.selectedItems() is None:
             return
 
         # get indexes
@@ -230,7 +230,7 @@ class ScheduleDialog(QDialog):
 
     def entriesUpBtn_clicked(self):
         # make sure something is selected
-        if self.ui.entriesTableWidget.selectedIndexes() is None:
+        if self.ui.entriesTableWidget.selectedItems() is None:
             return
 
         # get indexes
@@ -255,7 +255,7 @@ class ScheduleDialog(QDialog):
 
     def entriesDownBtn_clicked(self):
         # make sure something is selected
-        if self.ui.entriesTableWidget.selectedIndexes() is None:
+        if self.ui.entriesTableWidget.selectedItems() is None:
             return
 
         # get indexes
