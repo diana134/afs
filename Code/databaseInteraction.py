@@ -411,7 +411,7 @@ class DatabaseInteraction(object):
             query.prepare("UPDATE entries \
                 SET participant_id=:participantID, teacher_id=:teacherID, discipline=:discipline,\
                 level=:level, class_number=:classNumber, class_name=:className, instrument=:instrument, \
-                years_of_instruction, scheduling_requirements) \
+                years_of_instruction=:yearsOfInstruction, scheduling_requirements=:schedulingRequirements) \
                 WHERE id=:id")
             query.bindValue(":participantID", entry.participantID)
             query.bindValue(":teacherID", entry.teacherID)
