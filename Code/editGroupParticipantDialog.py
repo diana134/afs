@@ -84,11 +84,14 @@ class EditGroupParticipantDialog(QDialog):
         schoolGrade = sanitize(schoolGrade)
         averageAge = str(self.ui.averageAgeLineEdit.text()).strip()
         averageAge = sanitize(averageAge)
+
+        self.participantIds = []
         for i in xrange(self.ui.participantTabWidget.count()):
             participantWidget = self.ui.participantTabWidget.widget(i)
             if participantWidget.participantId is not None:
                 self.participantIds.append(participantWidget.participantId)
         participants = ','.join(self.participantIds)
+        
         earliestPerformanceTime = ""
         latestPerformanceTime = ""
         if self.ui.timeConstraintsGroupBox.isChecked():

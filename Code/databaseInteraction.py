@@ -411,7 +411,7 @@ class DatabaseInteraction(object):
             query.prepare("UPDATE entries \
                 SET participant_id=:participantID, teacher_id=:teacherID, discipline=:discipline,\
                 level=:level, class_number=:classNumber, class_name=:className, instrument=:instrument, \
-                years_of_instruction=:yearsOfInstruction, scheduling_requirements=:schedulingRequirements) \
+                years_of_instruction=:yearsOfInstruction, scheduling_requirements=:schedulingRequirements \
                 WHERE id=:id")
             query.bindValue(":participantID", entry.participantID)
             query.bindValue(":teacherID", entry.teacherID)
@@ -426,6 +426,7 @@ class DatabaseInteraction(object):
             query.exec_()
             if query.isActive() == False:
                 print query.lastError().text()
+                print query.lastQuery()
                 return query.lastError().text()
             self.entryModel.select()
             # delete all selections associated with this entry (handles deleting selections during update)
