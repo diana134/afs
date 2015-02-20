@@ -67,7 +67,8 @@ class Event(object):
 
     def toWordFile(self, document):
         """Export to docx for printer, document is from docx module"""
+        # Number the entries like 1.
         for i in range(len(self.entries)):
             entry = self.entries[i]
             p = document.add_paragraph("{0}.\t".format(i+1))
-            entry.toWordFile(document, p)
+            entry.toWordFile(p)

@@ -51,8 +51,8 @@ class Session(object):
     def export(self, csvFile):
         """Export this session to a csv.  The csvFile parameter must be a file with write permissions"""
         s = '"{startDate}","{endDate}","{numEvents} events"\n'.format(
-            startDate=self.startDatetime.strftime('%Y/%M/%d %I:%M %p'),
-            endDate=self.endDatetime.strftime('%Y/%M/%d %I:%M %p'),
+            startDate=self.startDatetime.strftime('%Y/%m/%d %I:%M %p'),
+            endDate=self.endDatetime.strftime('%Y/%m/%d %I:%M %p'),
             numEvents=len(self.eventList)
         )
         csvFile.write(s)
@@ -63,13 +63,15 @@ class Session(object):
 
     def toWordFile(self, document):
         """Create a docx for the printer, document parameter from docx module"""
-        s = "{0}\n".format(self.startDatetime.strftime('%A, %B %d, %Y %I:%M %p'))
+        # Session start time (weekday, month day, year, hour:minute am/pm)
+        s = "{0}".format(self.startDatetime.strftime('%A, %B %d, %Y %I:%M %p'))
         p = document.add_paragraph()
         r = p.add_run(s)
         r.bold = True
         r.caps = True
         for event in self.eventList:
-            eventTitle = "{0}\t{1}".format(event.classNumber, event.className)
+            # event title (class number and name)
+            eventTitle = "{0}    {1}".format(event.classNumber.replace(" ", ""), event.className)
             p = document.add_paragraph()
             p.add_run(eventTitle).bold = True
             event.toWordFile(document)
@@ -145,6 +147,8 @@ class Schedule(object):
         document = Document()
         p = document.add_paragraph()
         discipline = self.sessions[0].eventList[0].entries[0].discipline
+        # Schedule details (DISCIPLINE - ##venue## \n Adjudicator - ##adjudicator##)
+        # "##" fields denote things filled in by the user after the fact
         p.add_run(discipline.upper() + " - ##venue##\n").bold = True
         p.add_run("Adjudicator - ##adjudicator##\n").bold = True
         for s in self.sessions:

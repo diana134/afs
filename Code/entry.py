@@ -293,30 +293,69 @@ class Entry(object):
         
         csvFile.write(s)
 
-    def toWordFile(self, document, p):
+    def toWordFile(self, p):
         """Creates a docx for the printer, document is from docx module"""
         # super hack
         from databaseInteraction import dbInteractionInstance
         
         participant = dbInteractionInstance.getParticipantFromId(self.participantID)
-
         pString = ""
         try:
-            pString = "{0} {1}, {2}".format(participant.first, participant.last, participant.town)
+            # Print soloist name
+            pString = "{0} {1}, ".format(participant.first, participant.last)
+            if participant.schoolAttending != "":
+                pString += participant.schoolAttending
+            else:
+                pString += participant.town
         except Exception:
+            # Print list of participants in group
             if len(participant.participants) > 0:
                 actualParticipants = []
-                for pId in participant.participants:
-                    actualParticipants.append(dbInteractionInstance.getParticipantFromId(pId))
+                tokens = participant.participants.split(',')
+                if tokens[0] != "":
+                    for index in tokens:
+                        sp = dbInteractionInstance.getParticipantFromId(index)
+                        if sp.first != "":
+                            actualParticipants.append("{0} {1}".format(sp.first, sp.last))
+
+                # Correctly "comma-ify" the list of names
                 pString = ", ".join(actualParticipants)
                 index = pString.rfind(", ")
-                pString = pString[:index-1] + " & " + pString[index+1:]
-            pString += ", {0}".format(participant.groupName)
+                if index > -1:
+                    pString = pString[:index-1] + " &" + pString[index+1:]
+                pString += ", "
+
+            # Print the group name
+            pString += "{0}".format(participant.groupName)
+            # Print the grade
             if participant.schoolGrade != "":
                 pString += ", gr. " + participant.schoolGrade
 
         p.add_run(pString)
 
-        for i in range(len(self.selections)):
-            letter = chr(i + ord('a'))
-            p.add_run("\n\t{0}) {1}".format(letter, self.selections[i]['title']))
+        # Don't number if only one selection
+        # TODO composer etc.
+        if len(self.selections) == 1:
+            pString = "\n\t\t{0}".format(self.selections[0]['title'])
+
+            if self.selections[0]['titleOfMusical'] != "":
+                pString += " ({0})".format(self.selections[0]['titleOfMusical'])
+
+            if self.selections[0]['composerArranger'] != "":
+                pString += " - {0}".format(self.selections[0]['composerArranger'])
+
+            p.add_run(pString)
+
+        else:
+            # Number selections like a)
+            for i in range(len(self.selections)):
+                letter = chr(i + ord('a')) # get the choresponding letter from the index
+                pString = ("\n\t\t{0}) {1}".format(letter, self.selections[i]['title']))
+
+                if self.selections[0]['titleOfMusical'] != "":
+                    pString += " ({0})".format(self.selections[0]['titleOfMusical'])
+
+                if self.selections[0]['composerArranger'] != "":
+                    pString += " - {0}".format(self.selections[0]['composerArranger'])
+
+                p.add_run(pString)

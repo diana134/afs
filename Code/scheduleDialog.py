@@ -130,7 +130,7 @@ class ScheduleDialog(QDialog):
         """Prints a schedule to a docx"""
         filename = str(QFileDialog.getSaveFileName(self, "Print Schedule", exportsPath, "Word Files (*.docx)"))
         if filename is not None and filename != "":
-            if filename[-4:] != ".docx":
+            if filename[-5:] != ".docx":
                 filename += ".docx"
             self.schedule.toWordFile(filename=filename)
             QMessageBox.information(self, 'Print Schedule', 'Schedule print file saved to ' + filename, QMessageBox.Ok)
