@@ -77,7 +77,7 @@ class EditSoloParticipantDialog(QDialog):
         last = sanitize(last)
         address = str(self.ui.addressLineEdit.text()).strip()
         address = sanitize(address)
-        city = str(self.ui.cityLineEdit.text()).strip().capitalize()
+        city = str(self.ui.cityLineEdit.text()).strip()
         city = sanitize(city)
         postal = str(self.ui.postalCodeLineEdit.text()).replace(" ", "")
         postal = sanitize(postal)
