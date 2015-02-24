@@ -323,10 +323,15 @@ class Entry(object):
                 index = pString.rfind(", ")
                 if index > -1:
                     pString = pString[:index-1] + " &" + pString[index+1:]
-                pString += ", "
 
             # Print the group name
-            pString += "{0}".format(participant.groupName)
+            if self.discipline in ["Choral", "Band", "Dance"]:
+                if len(participant.participants) > 0:
+                    pString += ", "
+                pString += "{0}".format(participant.groupName)
+            elif self.discipline == "Speech" and len(participant.participants) == 0:
+                pString += "{0}".format(participant.groupName)
+            
             # Print the grade
             if participant.schoolGrade != "":
                 pString += ", gr. " + participant.schoolGrade
@@ -334,7 +339,6 @@ class Entry(object):
         p.add_run(pString)
 
         # Don't number if only one selection
-        # TODO composer etc.
         if len(self.selections) == 1:
             pString = "\n\t\t{0}".format(self.selections[0]['title'])
 

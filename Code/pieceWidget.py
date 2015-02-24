@@ -89,7 +89,6 @@ class PieceWidget(QWidget):
     def vocal(self):
         self.ui.titleOfMusicalLabel.setEnabled(True)
         self.ui.titleOfMusicalLineEdit.setEnabled(True)
-        self.ui.titleOfMusicalLineEdit.clear()
         self.ui.composerLabel.setEnabled(True)
         self.ui.composerLineEdit.setEnabled(True)
 

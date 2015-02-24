@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_pieceWidget.ui'
 #
-# Created: Thu Jan  8 20:14:00 2015
+# Created: Sat Feb 21 21:10:10 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -39,9 +39,6 @@ class Ui_PieceWidget(object):
         self.titleOfMusicalLabel = QtGui.QLabel(PieceWidget)
         self.titleOfMusicalLabel.setObjectName(_fromUtf8("titleOfMusicalLabel"))
         self.formLayout.setWidget(1, QtGui.QFormLayout.LabelRole, self.titleOfMusicalLabel)
-        self.titleOfMusicalLineEdit = QtGui.QLineEdit(PieceWidget)
-        self.titleOfMusicalLineEdit.setObjectName(_fromUtf8("titleOfMusicalLineEdit"))
-        self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.titleOfMusicalLineEdit)
         self.composerLabel = QtGui.QLabel(PieceWidget)
         self.composerLabel.setObjectName(_fromUtf8("composerLabel"))
         self.formLayout.setWidget(2, QtGui.QFormLayout.LabelRole, self.composerLabel)
@@ -55,6 +52,9 @@ class Ui_PieceWidget(object):
         self.performanceTimeEdit.setMaximumDateTime(QtCore.QDateTime(QtCore.QDate(2000, 1, 1), QtCore.QTime(1, 59, 59)))
         self.performanceTimeEdit.setObjectName(_fromUtf8("performanceTimeEdit"))
         self.formLayout.setWidget(3, QtGui.QFormLayout.FieldRole, self.performanceTimeEdit)
+        self.titleOfMusicalLineEdit = QtGui.QLineEdit(PieceWidget)
+        self.titleOfMusicalLineEdit.setObjectName(_fromUtf8("titleOfMusicalLineEdit"))
+        self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.titleOfMusicalLineEdit)
 
         self.retranslateUi(PieceWidget)
         QtCore.QMetaObject.connectSlotsByName(PieceWidget)
