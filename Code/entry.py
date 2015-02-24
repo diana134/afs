@@ -306,7 +306,11 @@ class Entry(object):
             if participant.schoolAttending != "":
                 pString += participant.schoolAttending
             else:
-                pString += participant.town
+                index = participant.town.find(",")
+                if index > -1:
+                    pString += participant.town[:index]
+                else:
+                    pString += participant.town
         except Exception:
             # Print list of participants in group
             if len(participant.participants) > 0:
