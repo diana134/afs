@@ -7,6 +7,7 @@ from PyQt4.QtGui import QDialog, QTableWidgetItem, QMessageBox, QFileDialog
 import datetime
 
 from ui_scheduleDialog import Ui_ScheduleDialog
+from adjudicationOptionsDialog import AdjudicationOptionsDialog
 from databaseInteraction import dbInteractionInstance
 from settingsInteraction import settingsInteractionInstance
 
@@ -35,6 +36,7 @@ class ScheduleDialog(QDialog):
         self.ui.exportScheduleBtn.clicked.connect(self.exportScheduleBtn_clicked)
         self.ui.printScheduleBtn.clicked.connect(self.printScheduleBtn_clicked)
         self.ui.validateBtn.clicked.connect(self.validateBtn_clicked)
+        self.ui.printAdjudicationSheetsBtn.clicked.connect(self.printAdjudicationSheetsBtn_clicked)
 
     def displaySchedule(self):
         """Displays the schedule in scheduleTableWidget"""
@@ -149,6 +151,19 @@ class ScheduleDialog(QDialog):
             QMessageBox.information(self, 'Valid Schedule', 'Everything checks out. Nothing runs overtime.', QMessageBox.Ok)
 
         # TODO check has everything from db (in case maybe this schedule was loaded from memory after changes were made)
+
+    def printAdjudicationSheetsBtn_clicked(self):
+        """Brings up the adjudication options dialog and prints the sheets"""
+        adjudicationOptionsDialog = AdjudicationOptionsDialog()
+        result = adjudicationOptionsDialog.exec_()
+        if result == True:
+            # Print the sheets with the given options
+            filename = str(QFileDialog.getSaveFileName(self, "Print Adjudication Sheets", exportsPath, "Word Files (*.docx)"))
+            if filename is not None and filename != "":
+                if filename[-5:] != ".docx":
+                    filename += ".docx"
+                self.schedule.printAdjudicationSheets(filename=filename, location=adjudicationOptionsDialog.location, year=adjudicationOptionsDialog.year, adjudicator=adjudicationOptionsDialog.adjudicator)
+                QMessageBox.information(self, 'Print Adjudication Sheets', 'Adjudication sheets print file saved to ' + filename, QMessageBox.Ok)
 
     def scheduleUpBtn_clicked(self):
         # make sure something is selected

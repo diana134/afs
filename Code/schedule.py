@@ -6,6 +6,9 @@ import datetime
 import pickle
 from docx import Document
 
+from databaseInteraction import dbInteractionInstance
+# from scheduler import Scheduler
+
 class Session(object):
     """Part of a Schedule"""
     def __init__(self, startDatetime=None, endDatetime=None):
@@ -154,3 +157,21 @@ class Schedule(object):
         for s in self.sessions:
             s.toWordFile(document)
         document.save(filename)
+
+    # def refresh(self):
+    #     """Re-get all the entries from the db to refresh any changes"""
+    #     entries = dbInteractionInstance.getAllEntriesInDiscipline(self.sessions[0].eventList[0].entries[0].discipline)
+    #     newEventList = Scheduler.sortEntriesByClass(entries)
+
+    #     for session in self.sessions:
+    #         for event in session.eventList:
+    #             for newEvent in newEventList:
+    #                 # Find same events
+    #                 if event.classNumber == newEvent.classNumber:
+    #                     # TODO this destroys order inside events
+    #                     # figure out how to preserve this (probably requires entries to store their db id's)
+    #                     event.entries = newEvent.entries
+
+    def printAdjudicationSheets(self, filename, location, year, adjudicator):
+        """Creates a docx of all the adjudication sheets for the schedule"""
+        print "PRINTING ADJUDICATION SHEETS"
