@@ -176,7 +176,7 @@ class Schedule(object):
     #                     # figure out how to preserve this (probably requires entries to store their db id's)
     #                     event.entries = newEvent.entries
 
-    def printAdjudicationSheets(self, filename, location, year, adjudicator):
+    def printAdjudicationSheets(self, filename, adjudicator):
         """Creates a docx of all the adjudication sheets for the schedule"""
         print "PRINTING ADJUDICATION SHEETS"
         document = Document()

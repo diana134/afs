@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_adjudicationOptionsDialog.ui'
 #
-# Created: Sun Mar 29 15:04:25 2015
+# Created: Thu Apr  2 21:57:07 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -36,15 +36,19 @@ class Ui_AdjudicationOptionsDialog(object):
         self.formLayout = QtGui.QFormLayout()
         self.formLayout.setObjectName(_fromUtf8("formLayout"))
         self.locationLabel = QtGui.QLabel(AdjudicationOptionsDialog)
+        self.locationLabel.setEnabled(False)
         self.locationLabel.setObjectName(_fromUtf8("locationLabel"))
         self.formLayout.setWidget(0, QtGui.QFormLayout.LabelRole, self.locationLabel)
         self.locationLineEdit = QtGui.QLineEdit(AdjudicationOptionsDialog)
+        self.locationLineEdit.setEnabled(False)
         self.locationLineEdit.setObjectName(_fromUtf8("locationLineEdit"))
         self.formLayout.setWidget(0, QtGui.QFormLayout.FieldRole, self.locationLineEdit)
         self.yearLabel = QtGui.QLabel(AdjudicationOptionsDialog)
+        self.yearLabel.setEnabled(False)
         self.yearLabel.setObjectName(_fromUtf8("yearLabel"))
         self.formLayout.setWidget(1, QtGui.QFormLayout.LabelRole, self.yearLabel)
         self.yearLineEdit = QtGui.QLineEdit(AdjudicationOptionsDialog)
+        self.yearLineEdit.setEnabled(False)
         self.yearLineEdit.setObjectName(_fromUtf8("yearLineEdit"))
         self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.yearLineEdit)
         self.adjudicatorLabel = QtGui.QLabel(AdjudicationOptionsDialog)

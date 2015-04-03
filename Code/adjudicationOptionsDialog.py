@@ -31,16 +31,16 @@ class AdjudicationOptionsDialog(QDialog):
     def okBtn_clicked(self):
         """Makes sure no fields are blank and hangs on to them for printing"""
 
-        self.location = self.ui.locationLineEdit.text()
-        self.year = self.ui.yearLineEdit.text()
+        # self.location = self.ui.locationLineEdit.text()
+        # self.year = self.ui.yearLineEdit.text()
         self.adjudicator = self.ui.adjudicatorLineEdit.text()
 
         # Check for empty fields
-        if self.location == "":
-            QMessageBox.warning(self, 'Missing Field', 'Need a location', QMessageBox.Ok)
-        elif self.year == "":
-            QMessageBox.warning(self, 'Missing Field', 'Need a year', QMessageBox.Ok)
-        elif self.adjudicator == "":
+        # if self.location == "":
+        #     QMessageBox.warning(self, 'Missing Field', 'Need a location', QMessageBox.Ok)
+        # elif self.year == "":
+        #     QMessageBox.warning(self, 'Missing Field', 'Need a year', QMessageBox.Ok)
+        if self.adjudicator == "":
             QMessageBox.warning(self, 'Missing Field', 'Need an adjudicator', QMessageBox.Ok)
         else:
             # All good

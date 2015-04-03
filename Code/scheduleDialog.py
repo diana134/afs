@@ -162,7 +162,7 @@ class ScheduleDialog(QDialog):
             if filename is not None and filename != "":
                 if filename[-5:] != ".docx":
                     filename += ".docx"
-                self.schedule.printAdjudicationSheets(filename=filename, location=adjudicationOptionsDialog.location, year=adjudicationOptionsDialog.year, adjudicator=adjudicationOptionsDialog.adjudicator)
+                self.schedule.printAdjudicationSheets(filename=filename, adjudicator=adjudicationOptionsDialog.adjudicator)
                 QMessageBox.information(self, 'Print Adjudication Sheets', 'Adjudication sheets print file saved to ' + filename, QMessageBox.Ok)
 
     def scheduleUpBtn_clicked(self):
