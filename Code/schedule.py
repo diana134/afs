@@ -5,6 +5,10 @@ import sys
 import datetime
 import pickle
 from docx import Document
+from docx.shared import Inches, Pt
+# from docx.enum.text import WD_ALIGN_PARAGRAPH
+# from docx.enum.style import WD_STYLE
+# from docx.enum.style import WD_STYLE_TYPE
 
 from databaseInteraction import dbInteractionInstance
 # from scheduler import Scheduler
@@ -175,3 +179,104 @@ class Schedule(object):
     def printAdjudicationSheets(self, filename, location, year, adjudicator):
         """Creates a docx of all the adjudication sheets for the schedule"""
         print "PRINTING ADJUDICATION SHEETS"
+        document = Document()
+
+        for session in self.sessions:
+            for event in session.eventList:
+                classNumber = event.classNumber
+                className = event.className.title()
+                for entry in event.entries:
+                    # Header
+                    document.add_picture('2015header.jpg')
+                    # header = document.add_paragraph()
+                    # header.add_run().add_picture('logo.jpg', width=Inches(0.8))
+                    # run = header.add_run('Rockwood Festival of the Arts\n')
+                    # run.bold = True
+                    # run.font.size = Pt(24)
+                    # run = header.add_run('\t\t\t{location} - {year} Festival'.format(location=location, year=year))
+                    # run.bold = True
+                    # run.font.size = Pt(16)
+
+                    # document.add_picture('logo.jpg', width=Inches(1.25))
+                    # document.add_heading('Rockwood Festival of the Arts', 0)
+                    # document.add_heading('{location} - {year} Festival'.format(location=location, year=year), level=1)
+                    
+                    # Entry information
+                    participant = dbInteractionInstance.getParticipantFromId(entry.participantID)
+                    pString = ""
+                    try:
+                        # Print soloist name
+                        pString = "{0} {1}".format(participant.first, participant.last)
+                    except Exception:
+                        # Print list of participants in group
+                        if len(participant.participants) > 0:
+                            actualParticipants = []
+                            tokens = participant.participants.split(',')
+                            if tokens[0] != "":
+                                for index in tokens:
+                                    sp = dbInteractionInstance.getParticipantFromId(index)
+                                    if sp.first != "":
+                                        actualParticipants.append("{0} {1}".format(sp.first, sp.last))
+
+                            # Correctly "comma-ify" the list of names
+                            pString = ", ".join(actualParticipants)
+                            index = pString.rfind(", ")
+                            if index > -1:
+                                pString = pString[:index] + " &" + pString[index+1:]
+                        else:
+                            # Print group name
+                            pString = "{0}".format(participant.groupName)
+
+                    selString = ""
+                    for selection in entry.selections:
+                        selString += "{0}".format(selection['title'])
+                        if selection['titleOfMusical'] != "":
+                            selString += " ({0})".format(selection['titleOfMusical'])
+                        if selection['composerArranger'] != "":
+                            selString += " - {0}".format(selection['composerArranger'])
+                        selString += ", "
+                    # Cut off last comma
+                    index = selString.rfind(", ")
+                    if index > -1:
+                        selString = selString[:index]
+
+                    info = document.add_paragraph()
+                    # TODO fake some horizontal lines (maybe can do with custom style in ms word?)
+                    run = info.add_run("\tClass: {0} {1}\n".format(classNumber, className))
+                    run.bold = True
+                    run.font.size = Pt(12)
+                    run = info.add_run("\tParticipant(s): {0}\n".format(pString))
+                    run.bold = True
+                    run.font.size = Pt(16)
+                    run = info.add_run("\tSelection(s): {0}\n".format(selString))
+                    run.bold = True
+                    run.font.size = Pt(16)
+
+                    # Marking scale
+                    marks = document.add_paragraph()
+                    # marks.alignment = WD_ALIGN_PARAGRAPH.LEFT
+                    run = marks.add_run("STANDARD SCALE OF MARKS\n75 represents a performance which is good.\n80 represent Merit.\n85 represents Distinction. \n90 represents Honours.")
+                    run.font.size = Pt(8)
+
+                    markLine = document.add_paragraph()
+                    # markLine.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+                    markLine.add_run("\nMark : ").font.size = Pt(8)
+                    run = markLine.add_run(" "*30)
+                    run.underline = True
+                    run.font.size = Pt(8)
+
+                    # Adjudicator
+                    # footerStyle = document.styles["Footer"]
+                    # adj = document.add_paragraph(style=footerStyle)
+                    adj = document.add_paragraph()
+                    # adj.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+                    adj.add_run("\n"*20)
+                    run = adj.add_run(" "*100 + "\n")
+                    run.underline = True
+                    run.font.size = Pt(8)
+                    run = adj.add_run("{adjudicator} - Adjudicator".format(adjudicator=adjudicator))
+                    run.font.size = Pt(8)
+
+                    document.add_page_break()
+
+        document.save(filename)
