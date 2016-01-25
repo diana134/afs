@@ -261,8 +261,8 @@ class Schedule(object):
                     markLine = document.add_paragraph()
                     # markLine.alignment = WD_ALIGN_PARAGRAPH.RIGHT
                     markLine.add_run("\nMark : ").font.size = Pt(8)
-                    run = markLine.add_run(" "*30)
-                    run.underline = True
+                    run = markLine.add_run("_"*30)
+                    # run.underline = True
                     run.font.size = Pt(8)
 
                     # Adjudicator
@@ -271,8 +271,8 @@ class Schedule(object):
                     adj = document.add_paragraph()
                     # adj.alignment = WD_ALIGN_PARAGRAPH.RIGHT
                     adj.add_run("\n"*20)
-                    run = adj.add_run(" "*100 + "\n")
-                    run.underline = True
+                    run = adj.add_run("_"*100 + "\n")
+                    # run.underline = True
                     run.font.size = Pt(8)
                     run = adj.add_run("{adjudicator} - Adjudicator".format(adjudicator=adjudicator))
                     run.font.size = Pt(8)

@@ -6,206 +6,605 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>446</width>
-    <height>444</height>
+    <width>1321</width>
+    <height>777</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Arts Festival Scheduler - v1.1</string>
-  </property>
-  <property name="animated">
-   <bool>true</bool>
-  </property>
-  <property name="unifiedTitleAndToolBarOnMac">
-   <bool>false</bool>
+   <string>Arts Festival Organizer</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="2" column="0">
-     <widget class="QGroupBox" name="groupBox">
-      <property name="title">
-       <string>Participants</string>
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <widget class="QSplitter" name="splitter_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QPushButton" name="addSoloParticipantBtn">
-         <property name="text">
-          <string>Add &amp;Solo Participant</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="addGroupParticipantBtn">
-         <property name="text">
-          <string>Add &amp;Group Participant</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="editParticipantBtn">
-         <property name="text">
-          <string>E&amp;dit Participant</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="deleteParticipantBtn">
-         <property name="text">
-          <string>Delete Participant</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QGroupBox" name="groupBox_2">
-      <property name="title">
-       <string>Teachers/Contacts</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QPushButton" name="addTeacherBtn">
-         <property name="text">
-          <string>Add &amp;Teacher/Contact</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="editTeacherBtn">
-         <property name="text">
-          <string>Ed&amp;it Teacher/Contact</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="deleteTeacherBtn">
-         <property name="text">
-          <string>Delete Teacher/Contact</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QGroupBox" name="groupBox_3">
-      <property name="title">
-       <string>Entries</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <widget class="QPushButton" name="addEntryBtn">
-         <property name="text">
-          <string>Add &amp;Entry</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="editEntryBtn">
-         <property name="text">
-          <string>Edit E&amp;ntry</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="deleteEntryBtn">
-         <property name="text">
-          <string>Delete Entry</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QGroupBox" name="groupBox_4">
-      <property name="title">
-       <string>Schedules</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <item>
-        <widget class="QPushButton" name="makeScheduleBtn">
-         <property name="text">
-          <string>&amp;Make Schedule</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="loadScheduleBtn">
-         <property name="text">
-          <string>&amp;Load Schedule</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="3" column="0" colspan="2">
-     <widget class="QGroupBox" name="groupBox_5">
-      <property name="title">
-       <string>Database</string>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QPushButton" name="backupDbBtn">
-         <property name="text">
-          <string>Backup Database</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="restoreDbBtn">
-         <property name="text">
-          <string>Restore Database</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="createNewDbBtn">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="text">
-          <string>Create New Database</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="4" column="0" colspan="2">
-     <widget class="QGroupBox" name="groupBox_6">
-      <property name="title">
-       <string>Reports</string>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="QPushButton" name="entriesByDisciplineBtn">
-         <property name="text">
-          <string>Entries By Discipline</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="entriesByTeacherBtn">
-         <property name="text">
-          <string>Entries By Teacher</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="dumpBtn">
-         <property name="text">
-          <string>Everything</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <widget class="QSplitter" name="splitter">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Participants</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="participantTableWidget">
+           <row>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>First Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Last Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Group Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Group Piece Title</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Date of Birth</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Age as of Jan. 1</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Avg. Age/Level/Grade</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>List of Particpants</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Mailing Address</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Home Phone</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Cell Phone</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Email</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>Diana</string>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>Carrier</string>
+            </property>
+           </item>
+           <item row="0" column="2">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="0" column="3">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="0" column="4">
+            <property name="text">
+             <string>11/03/1991</string>
+            </property>
+           </item>
+           <item row="0" column="5">
+            <property name="text">
+             <string>24</string>
+            </property>
+           </item>
+           <item row="0" column="6">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="0" column="7">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="0" column="8">
+            <property name="text">
+             <string>Box 1946, Stonewall, MB, R0C 2Z0</string>
+            </property>
+           </item>
+           <item row="0" column="9">
+            <property name="text">
+             <string>467-5761</string>
+            </property>
+           </item>
+           <item row="0" column="10">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="0" column="11">
+            <property name="text">
+             <string>umcarr77@gmail.com</string>
+            </property>
+           </item>
+           <item row="1" column="2">
+            <property name="text">
+             <string>SCI High School Band</string>
+            </property>
+           </item>
+           <item row="1" column="3">
+            <property name="text">
+             <string>Take Five</string>
+            </property>
+           </item>
+           <item row="1" column="4">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="1" column="5">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="1" column="6">
+            <property name="text">
+             <string>12</string>
+            </property>
+           </item>
+           <item row="1" column="7">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="1" column="8">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="1" column="9">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="1" column="10">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="1" column="11">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_2">
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Teachers</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="teacherTableWidget">
+           <row>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>First Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Last Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Mailing Address</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Daytime Phone</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Evening Phone</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Email</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>May</string>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>Dupname</string>
+            </property>
+           </item>
+           <item row="0" column="2">
+            <property name="text">
+             <string>123 Somewhere St., Stonewall, MB. R0C 2Z0</string>
+            </property>
+           </item>
+           <item row="0" column="3">
+            <property name="text">
+             <string>555-1234</string>
+            </property>
+           </item>
+           <item row="0" column="4">
+            <property name="text">
+             <string>555-4321</string>
+            </property>
+           </item>
+           <item row="0" column="5">
+            <property name="text">
+             <string>may.dupname@gmail.com</string>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>Don</string>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string>Horbas</string>
+            </property>
+           </item>
+           <item row="1" column="2">
+            <property name="text">
+             <string>Somewhere</string>
+            </property>
+           </item>
+           <item row="1" column="3">
+            <property name="text">
+             <string>555-1234</string>
+            </property>
+           </item>
+           <item row="1" column="4">
+            <property name="text">
+             <string>5555-4321</string>
+            </property>
+           </item>
+           <item row="1" column="5">
+            <property name="text">
+             <string>you.get@the.idea</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QSplitter" name="splitter_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QWidget" name="verticalLayoutWidget_4">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Entries</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="entryTableWidget">
+           <row>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Participant</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Teacher</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Discipline</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Class Number</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Class Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Instrument</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Special Scheduling Requirements</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>Diana Carrier</string>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>May Dupname</string>
+            </property>
+           </item>
+           <item row="0" column="2">
+            <property name="text">
+             <string>Instrumental</string>
+            </property>
+           </item>
+           <item row="0" column="3">
+            <property name="text">
+             <string>AB 1234</string>
+            </property>
+           </item>
+           <item row="0" column="4">
+            <property name="text">
+             <string>Trumpet Solo</string>
+            </property>
+           </item>
+           <item row="0" column="5">
+            <property name="text">
+             <string>Trumpet</string>
+            </property>
+           </item>
+           <item row="0" column="6">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>SCI High School Band</string>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string>Don Horbas</string>
+            </property>
+           </item>
+           <item row="1" column="2">
+            <property name="text">
+             <string>Band</string>
+            </property>
+           </item>
+           <item row="1" column="3">
+            <property name="text">
+             <string>BA 1234</string>
+            </property>
+           </item>
+           <item row="1" column="4">
+            <property name="text">
+             <string>Something Jazzy</string>
+            </property>
+           </item>
+           <item row="1" column="5">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="1" column="6">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_3">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Pieces</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="pieceTableWidget">
+           <row>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Title</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Title of Musical/Opera/Oratorio</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Composter/Arranger/Author</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Performance Time</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>Take Five</string>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="0" column="2">
+            <property name="text">
+             <string>Some Guy</string>
+            </property>
+           </item>
+           <item row="0" column="3">
+            <property name="text">
+             <string>2:00</string>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>Children of Sanchez</string>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="1" column="2">
+            <property name="text">
+             <string>Some Otherguy</string>
+            </property>
+           </item>
+           <item row="1" column="3">
+            <property name="text">
+             <string>2:30</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
      </widget>
     </item>
    </layout>
   </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1321</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionE_xit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Schedule">
+    <property name="title">
+     <string>&amp;Schedule</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_Database">
+    <property name="title">
+     <string>&amp;Database</string>
+    </property>
+    <addaction name="action_Create_Backup"/>
+    <addaction name="action_Load_Backup"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Schedule"/>
+   <addaction name="menu_Database"/>
+  </widget>
+  <action name="action_Create_Backup">
+   <property name="text">
+    <string>&amp;Create Backup</string>
+   </property>
+  </action>
+  <action name="action_Load_Backup">
+   <property name="text">
+    <string>&amp;Load Backup</string>
+   </property>
+  </action>
+  <action name="actionE_xit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
