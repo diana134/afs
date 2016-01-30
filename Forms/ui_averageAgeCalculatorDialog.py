@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_averageAgeCalculatorDialog.ui'
 #
-# Created: Sat Jan 30 00:54:51 2016
+# Created: Sat Jan 30 01:42:40 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -71,7 +71,8 @@ class Ui_AverageAgeCalculatorDialog(object):
         self.label.setObjectName(_fromUtf8("label"))
         self.horizontalLayout_2.addWidget(self.label)
         self.averageAgeLineEdit = QtGui.QLineEdit(AverageAgeCalculatorDialog)
-        self.averageAgeLineEdit.setEnabled(False)
+        self.averageAgeLineEdit.setEnabled(True)
+        self.averageAgeLineEdit.setReadOnly(True)
         self.averageAgeLineEdit.setObjectName(_fromUtf8("averageAgeLineEdit"))
         self.horizontalLayout_2.addWidget(self.averageAgeLineEdit)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
