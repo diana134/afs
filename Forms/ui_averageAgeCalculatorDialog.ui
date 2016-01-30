@@ -31,6 +31,9 @@
        <property name="buttonSymbols">
         <enum>QAbstractSpinBox::UpDownArrows</enum>
        </property>
+       <property name="displayFormat">
+        <string>dd/MM/yyyy</string>
+       </property>
        <property name="calendarPopup">
         <bool>true</bool>
        </property>
@@ -88,7 +91,7 @@
         </date>
        </property>
        <property name="displayFormat">
-        <string>d/M/yy</string>
+        <string>dd/MM/yyyy</string>
        </property>
        <property name="calendarPopup">
         <bool>true</bool>
@@ -121,7 +124,7 @@
    <item>
     <widget class="QDialogButtonBox" name="btnBox">
      <property name="standardButtons">
-      <set>QDialogButtonBox::Ok</set>
+      <set>QDialogButtonBox::Close</set>
      </property>
     </widget>
    </item>

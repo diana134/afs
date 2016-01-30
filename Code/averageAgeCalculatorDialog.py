@@ -24,12 +24,13 @@ class AverageAgeCalculatorDialog(QDialog):
         self.ui.addBirthdateBtn.clicked.connect(self.addBirthdateBtn_clicked)
         self.ui.deleteBirthdateBtn.clicked.connect(self.deleteBirthdateBtn_clicked)
         self.ui.asOfDateEdit.dateChanged.connect(self.asOfDate_changed)
-        self.ui.btnBox.accepted.connect(self.okBtn_clicked)
+        self.ui.btnBox.rejected.connect(self.closeBtn_clicked)
 
     def averageDates(self):
         """Calculates and displays the average age"""
         ages = []
         asOfDate = self.ui.asOfDateEdit.date()
+        averageAge = 0
 
         for row in range(self.ui.birthdateListWidget.count()):
             text = str(self.ui.birthdateListWidget.item(row).text())
@@ -37,7 +38,9 @@ class AverageAgeCalculatorDialog(QDialog):
             age = int(date.daysTo(asOfDate) / 365)
             ages.append(age)
 
-        averageAge = float(sum(ages)/len(ages))
+        if len(ages) > 0:
+            averageAge = sum(ages)/float(len(ages))
+
         self.ui.averageAgeLineEdit.setText(str(averageAge))
 
     ######
@@ -53,6 +56,9 @@ class AverageAgeCalculatorDialog(QDialog):
         # Re-average the dates
         self.averageDates()
 
+        # Set focus back to date edit
+        self.ui.birthdateDateEdit.setFocus()
+
     def deleteBirthdateBtn_clicked(self):
         """Removes the selected birthdate from the list widget"""
         if self.ui.birthdateListWidget.currentRow() >= 0:
@@ -65,6 +71,6 @@ class AverageAgeCalculatorDialog(QDialog):
         """Calls for a re-averaging"""
         self.averageDates()
 
-    def okBtn_clicked(self):
+    def closeBtn_clicked(self):
         """closes the dialog"""
         self.accept()

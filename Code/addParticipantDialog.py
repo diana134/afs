@@ -218,6 +218,5 @@ class AddParticipantDialog(QDialog):
 
     def calculateAverageAgeBtn_clicked(self):
         """Shows the average age calculator"""
-        print "show average age calculator"
         dialog = AverageAgeCalculatorDialog(self) # Note: "self" is very important, won't show otherwise
         dialog.show()

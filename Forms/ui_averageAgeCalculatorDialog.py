@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_averageAgeCalculatorDialog.ui'
 #
-# Created: Sat Jan 30 01:42:40 2016
+# Created: Sat Jan 30 12:45:08 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -77,7 +77,7 @@ class Ui_AverageAgeCalculatorDialog(object):
         self.horizontalLayout_2.addWidget(self.averageAgeLineEdit)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.btnBox = QtGui.QDialogButtonBox(AverageAgeCalculatorDialog)
-        self.btnBox.setStandardButtons(QtGui.QDialogButtonBox.Ok)
+        self.btnBox.setStandardButtons(QtGui.QDialogButtonBox.Close)
         self.btnBox.setObjectName(_fromUtf8("btnBox"))
         self.verticalLayout.addWidget(self.btnBox)
 
@@ -87,9 +87,10 @@ class Ui_AverageAgeCalculatorDialog(object):
     def retranslateUi(self, AverageAgeCalculatorDialog):
         AverageAgeCalculatorDialog.setWindowTitle(_translate("AverageAgeCalculatorDialog", "Average Age Calculator", None))
         self.label_2.setText(_translate("AverageAgeCalculatorDialog", "Birthdate", None))
+        self.birthdateDateEdit.setDisplayFormat(_translate("AverageAgeCalculatorDialog", "dd/MM/yyyy", None))
         self.addBirthdateBtn.setText(_translate("AverageAgeCalculatorDialog", "&Add Birthdate", None))
         self.deleteBirthdateBtn.setText(_translate("AverageAgeCalculatorDialog", "&Delete Birthdate", None))
         self.label_3.setText(_translate("AverageAgeCalculatorDialog", "As of:", None))
-        self.asOfDateEdit.setDisplayFormat(_translate("AverageAgeCalculatorDialog", "d/M/yy", None))
+        self.asOfDateEdit.setDisplayFormat(_translate("AverageAgeCalculatorDialog", "dd/MM/yyyy", None))
         self.label.setText(_translate("AverageAgeCalculatorDialog", "Average Age:", None))
 
