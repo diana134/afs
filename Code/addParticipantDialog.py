@@ -7,6 +7,9 @@ from PyQt4.QtGui import QDialog, QMessageBox
 from PyQt4.QtCore import QDate
 
 from ui_addParticipantDialog import Ui_AddParticipantDialog
+from chooseTeacherDialog import ChooseTeacherDialog
+from addTeacherDialog import AddTeacherDialog
+from participantWidget import ParticipantWidget
 from participant import SoloParticipant
 from utilities import *
 from databaseInteraction import dbInteractionInstance
@@ -14,7 +17,7 @@ from databaseInteraction import dbInteractionInstance
 class AddParticipantDialog(QDialog):
     def __init__(self, parent=None, testing=False, closeAfterAdd=False):
         # Initialize object using ui_addSoloParticipant
-        super(AddSoloParticipantDialog, self).__init__(parent)
+        super(AddParticipantDialog, self).__init__(parent)
         self.ui = Ui_AddParticipantDialog()
         self.ui.setupUi(self)
         # Set default date to January 1 18 years ago
@@ -28,6 +31,11 @@ class AddParticipantDialog(QDialog):
         self.testing = testing
         self.closeAfterAdd = closeAfterAdd
         self.p = None
+        self.participantIds = []
+        self.contactId = None
+        # Set up the widgets
+        for i in xrange(0, 6):
+            self.ui.participantTabWidget.addTab(ParticipantWidget(), "Participant {0}".format(i+1))
         # Make the buttons do things
         self.connectSlots()
 
@@ -36,6 +44,9 @@ class AddParticipantDialog(QDialog):
         self.ui.addParticipantBtn.clicked.connect(self.addParticipantBtn_clicked)
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
         self.ui.dateOfBirthDateEdit.dateChanged.connect(self.dob_changed)
+        self.ui.chooseContactBtn.clicked.connect(self.chooseContactBtn_clicked)
+        self.ui.createContactBtn.clicked.connect(self.createContactBtn_clicked)
+        self.ui.clearContactBtn.clicked.connect(self.clearContactBtn_clicked)
 
     def getParticipant(self):
         """returns the Participant object created from user data"""
@@ -56,6 +67,16 @@ class AddParticipantDialog(QDialog):
         self.ui.parentLineEdit.clear()
         self.ui.ageSpinBox.setValue(18)
         self.ui.schoolGradeLineEdit.clear()
+        self.participantIds = []
+        self.ui.groupNameLineEdit.clear()
+        self.ui.groupSizeLineEdit.clear()
+        self.ui.schoolGradeLineEdit.clear()
+        self.ui.averageAgeLineEdit.clear()
+        self.ui.contactPersonLineEdit.clear()
+        self.contactId = None
+        for i in xrange(self.ui.participantTabWidget.count()):
+            participantWidget = self.ui.participantTabWidget.widget(i)
+            participantWidget.clearFields()
 
     def dobValid(self):
         """checks if the date of birth is valid given the age"""
@@ -163,3 +184,33 @@ class AddParticipantDialog(QDialog):
         compareDate = QDate(QDate.currentDate().year(), 1, 1)
         age = int(dob.daysTo(compareDate) / 365)
         self.ui.ageSpinBox.setValue(age)
+
+    def chooseContactBtn_clicked(self):
+        """opens Choose Teacher Dialog"""
+        dialog = ChooseTeacherDialog()
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            self.contactId = dialog.getTeacherId()
+            # Use the id to get the name for display
+            t = dbInteractionInstance.getTeacherFromId(self.contactId)
+            name = name = t.first + " " + t.last
+            self.ui.contactPersonLineEdit.setText(name)
+
+    def createContactBtn_clicked(self):
+        """opens Add Teacher Dialog"""
+        dialog = AddTeacherDialog(testing=self.testing, closeAfterAdd=True)
+        # For Modal dialog
+        result = dialog.exec_()
+
+        if result == True:
+            t = dialog.getTeacher()
+            self.ui.teacherLineEdit.setText(t.first + ' ' + t.last)
+            self.contactId = dbInteractionInstance.getLastTeacherId()
+
+    def clearContactBtn_clicked(self):
+        """Clears the contact field"""
+        self.ui.contactPersonLineEdit.clear()
+        self.contactId = None
+       

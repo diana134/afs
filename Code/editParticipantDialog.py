@@ -18,7 +18,7 @@ class EditParticipantDialog(QDialog):
         super(EditParticipantDialog, self).__init__(parent)
         self.ui = Ui_AddParticipantDialog()
         self.ui.setupUi(self)
-       
+
         # Initialize class variables
         self.testing = testing
         if participantId is None:
@@ -143,7 +143,7 @@ class EditParticipantDialog(QDialog):
                 for p in pList:
                     s += "{0} {1}, born {2}\n".format(p.first, p.last, p.dob)
 
-                if QMessageBox.question(self, 'Possible Duplicate', 
+                if QMessageBox.question(self, 'Possible Duplicate',
                     'This name exists in the database already:\n{0}\nDo you still want to update this person?'.format(s),
                     QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
                     return
