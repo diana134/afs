@@ -61,7 +61,31 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="0" colspan="2">
+      <item row="3" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="calculateAverageAgeBtn">
+          <property name="text">
+           <string>Calculate Average Age</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="5" column="0" colspan="2">
        <widget class="QGroupBox" name="timeConstraintsGroupBox">
         <property name="title">
          <string>Time Constraints</string>
@@ -115,7 +139,7 @@
         </layout>
        </widget>
       </item>
-      <item row="4" column="0" colspan="2">
+      <item row="6" column="0" colspan="2">
        <widget class="QTabWidget" name="participantTabWidget">
         <property name="currentIndex">
          <number>-1</number>
@@ -131,6 +155,7 @@
      <zorder>groupNameLineEdit</zorder>
      <zorder>timeConstraintsGroupBox</zorder>
      <zorder>participantTabWidget</zorder>
+     <zorder>horizontalLayoutWidget</zorder>
     </widget>
    </item>
    <item row="0" column="0">

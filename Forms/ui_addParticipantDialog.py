@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addParticipantDialog.ui'
 #
-# Created: Fri Jan 29 22:57:12 2016
+# Created: Sat Jan 30 00:59:24 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -54,6 +54,14 @@ class Ui_AddParticipantDialog(object):
         self.averageAgeLineEdit.setInputMethodHints(QtCore.Qt.ImhDigitsOnly)
         self.averageAgeLineEdit.setObjectName(_fromUtf8("averageAgeLineEdit"))
         self.formLayout.setWidget(2, QtGui.QFormLayout.FieldRole, self.averageAgeLineEdit)
+        self.horizontalLayout_3 = QtGui.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(_fromUtf8("horizontalLayout_3"))
+        spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem)
+        self.calculateAverageAgeBtn = QtGui.QPushButton(self.groupBox_2)
+        self.calculateAverageAgeBtn.setObjectName(_fromUtf8("calculateAverageAgeBtn"))
+        self.horizontalLayout_3.addWidget(self.calculateAverageAgeBtn)
+        self.formLayout.setLayout(3, QtGui.QFormLayout.FieldRole, self.horizontalLayout_3)
         self.timeConstraintsGroupBox = QtGui.QGroupBox(self.groupBox_2)
         self.timeConstraintsGroupBox.setFlat(False)
         self.timeConstraintsGroupBox.setCheckable(True)
@@ -75,10 +83,10 @@ class Ui_AddParticipantDialog(object):
         self.latestPerformanceTimeTimeEdit.setTime(QtCore.QTime(15, 0, 0))
         self.latestPerformanceTimeTimeEdit.setObjectName(_fromUtf8("latestPerformanceTimeTimeEdit"))
         self.formLayout_3.setWidget(1, QtGui.QFormLayout.FieldRole, self.latestPerformanceTimeTimeEdit)
-        self.formLayout.setWidget(3, QtGui.QFormLayout.SpanningRole, self.timeConstraintsGroupBox)
+        self.formLayout.setWidget(5, QtGui.QFormLayout.SpanningRole, self.timeConstraintsGroupBox)
         self.participantTabWidget = QtGui.QTabWidget(self.groupBox_2)
         self.participantTabWidget.setObjectName(_fromUtf8("participantTabWidget"))
-        self.formLayout.setWidget(4, QtGui.QFormLayout.SpanningRole, self.participantTabWidget)
+        self.formLayout.setWidget(6, QtGui.QFormLayout.SpanningRole, self.participantTabWidget)
         self.gridLayout.addWidget(self.groupBox_2, 0, 2, 1, 1)
         self.groupBox = QtGui.QGroupBox(AddParticipantDialog)
         self.groupBox.setObjectName(_fromUtf8("groupBox"))
@@ -199,8 +207,8 @@ class Ui_AddParticipantDialog(object):
         self.gridLayout.addWidget(self.groupBox_3, 0, 1, 1, 1)
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
-        spacerItem = QtGui.QSpacerItem(167, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem)
+        spacerItem1 = QtGui.QSpacerItem(167, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem1)
         self.cancelBtn = QtGui.QPushButton(AddParticipantDialog)
         self.cancelBtn.setObjectName(_fromUtf8("cancelBtn"))
         self.horizontalLayout.addWidget(self.cancelBtn)
@@ -219,6 +227,7 @@ class Ui_AddParticipantDialog(object):
         self.groupNameLabel.setText(_translate("AddParticipantDialog", "Group Name", None))
         self.groupSizeLabel.setText(_translate("AddParticipantDialog", "Number of Participants", None))
         self.averageAgeLabel.setText(_translate("AddParticipantDialog", "Average Age", None))
+        self.calculateAverageAgeBtn.setText(_translate("AddParticipantDialog", "Calculate Average Age", None))
         self.timeConstraintsGroupBox.setTitle(_translate("AddParticipantDialog", "Time Constraints", None))
         self.earliestPerformanceTimeLabel_2.setText(_translate("AddParticipantDialog", "Earliest Performance Time", None))
         self.latestPerformanceTimeLabel_2.setText(_translate("AddParticipantDialog", "Latest Performance Time", None))

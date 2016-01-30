@@ -10,6 +10,7 @@ from ui_addParticipantDialog import Ui_AddParticipantDialog
 from chooseTeacherDialog import ChooseTeacherDialog
 from addTeacherDialog import AddTeacherDialog
 from participantWidget import ParticipantWidget
+from averageAgeCalculatorDialog import AverageAgeCalculatorDialog
 from participant import SoloParticipant
 from utilities import *
 from databaseInteraction import dbInteractionInstance
@@ -47,6 +48,7 @@ class AddParticipantDialog(QDialog):
         self.ui.chooseContactBtn.clicked.connect(self.chooseContactBtn_clicked)
         self.ui.createContactBtn.clicked.connect(self.createContactBtn_clicked)
         self.ui.clearContactBtn.clicked.connect(self.clearContactBtn_clicked)
+        self.ui.calculateAverageAgeBtn.clicked.connect(self.calculateAverageAgeBtn_clicked)
 
     def getParticipant(self):
         """returns the Participant object created from user data"""
@@ -213,4 +215,9 @@ class AddParticipantDialog(QDialog):
         """Clears the contact field"""
         self.ui.contactPersonLineEdit.clear()
         self.contactId = None
-       
+
+    def calculateAverageAgeBtn_clicked(self):
+        """Shows the average age calculator"""
+        print "show average age calculator"
+        dialog = AverageAgeCalculatorDialog(self) # Note: "self" is very important, won't show otherwise
+        dialog.show()
