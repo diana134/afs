@@ -119,105 +119,55 @@ class MainWindow(QWidget):
                 QMessageBox.critical(self, "Error", "Failed to load schedule.", QMessageBox.Ok)
 
     def editParticipantBtn_clicked(self):
-        """Opens chooseParticipantDialog then dialog for editing"""
-        dialog = ChooseParticipantDialog()
+        """Opens the dialog for editing"""
+        # TODO get participant id
+        participantId = 0
+        dialog = EditParticipantDialog(participantId=participantId)
         # For Modal dialog
-        result = dialog.exec_()
-
-        if result == True:
-            participantId = dialog.getParticipantId()
-            # Open appropriate edit dialog with participant
-            if participantId[0] == 's':
-                # dialog = EditSoloParticipantDialog(participantId=participantId)
-                dialog.exec_()
-            elif participantId[0] == 'g':
-                # dialog = EditGroupParticipantDialog(participantId=participantId)
-                dialog.exec_()
-            else:
-                QMessageBox.critical(self, "Error", "Unrecognized Participant", QMessageBox.Ok)
+        dialog.exec_()
 
     def editTeacherBtn_clicked(self):
-        """Opens chooseTeacherDialog then dialog for editing"""
-        dialog = ChooseTeacherDialog()
+        """Opens dialog for editing"""
+        # TODO get teacher id
+        teacherId = 0
+        dialog = EditTeacherDialog(teacherId=teacherId)
         # For Modal dialog
-        result = dialog.exec_()
-
-        if result == True:
-            teacherId = dialog.getTeacherId()
-            # Open edit dialog with teacher
-            dialog = EditTeacherDialog(teacherId=teacherId)
-            dialog.exec_()
+        dialog.exec_()
 
     def editEntryBtn_clicked(self):
-        """Opens chooseEntryDialog then dialog for editing"""
-        dialog = ChooseEntryDialog()
+        """Opens dialog for editing"""
+        # TODO get entry id
+        entryId = 0
+        dialog = EditEntryDialog(entryId=entryId)
         # For Modal dialog
-        result = dialog.exec_()
-
-        if result == True:
-            entryId = dialog.entryId
-            # Open edit dialog with entry
-            dialog = EditEntryDialog(entryId=entryId)
-            dialog.exec_()
-
-    def editParticipantBtn_clicked(self):
-        """Opens chooseParticipantDialog then dialog for editing"""
-        dialog = ChooseParticipantDialog()
-        # For Modal dialog
-        result = dialog.exec_()
-
-        if result == True:
-            participantId = dialog.getParticipantId()
-            # Open appropriate edit dialog with participant
-            if participantId[0] == 's':
-                # dialog = EditSoloParticipantDialog(participantId=participantId)
-                dialog.exec_()
-            elif participantId[0] == 'g':
-                # dialog = EditGroupParticipantDialog(participantId=participantId)
-                dialog.exec_()
-            else:
-                QMessageBox.critical(self, "Error", "Unrecognized Participant", QMessageBox.Ok)
+        dialog.exec_()
 
     def deleteTeacherBtn_clicked(self):
-        """Opens chooseTeacherDialog for deleting"""
-        dialog = ChooseTeacherDialog()
-        # For Modal dialog
-        result = dialog.exec_()
+        """Deletes selected teacher"""
+         # TODO get teacher id
+        teacherId = 0
 
-        if result == True:
-            teacherId = dialog.getTeacherId()
-            if QMessageBox.question(self, "Cannot be undone!", "Warning! This action cannot be undone. \nAre you sure you want to delete this teacher/contact?", QMessageBox.Yes|QMessageBox.No) == QMessageBox.Yes:
-                # Delete the teacher
-                dbInteractionInstance.deleteTeacherFromId(teacherId)
+        if QMessageBox.question(self, "Cannot be undone!", "Warning! This action cannot be undone. \nAre you sure you want to delete this teacher/contact?", QMessageBox.Yes|QMessageBox.No) == QMessageBox.Yes:
+            # Delete the teacher
+            dbInteractionInstance.deleteTeacherFromId(teacherId)
 
     def deleteEntryBtn_clicked(self):
-        """Opens chooseEntryDialog for deleting"""
-        dialog = ChooseEntryDialog()
-        # For Modal dialog
-        result = dialog.exec_()
+        """Deletes selected entry"""
+         # TODO get entry id
+        entryId = 0
 
-        if result == True:
-            entryId = dialog.entryId
-            if QMessageBox.question(self, "Cannot be undone!", "Warning! This action cannot be undone. \nAre you sure you want to delete this entry?", QMessageBox.Yes|QMessageBox.No) == QMessageBox.Yes:
-                # Delete the entry
-                dbInteractionInstance.deleteEntryFromId(entryId)
+        if QMessageBox.question(self, "Cannot be undone!", "Warning! This action cannot be undone. \nAre you sure you want to delete this entry?", QMessageBox.Yes|QMessageBox.No) == QMessageBox.Yes:
+            # Delete the entry
+            dbInteractionInstance.deleteEntryFromId(entryId)
 
     def deleteParticipantBtn_clicked(self):
-        """Opens chooseParticipantDialog for deleting"""
-        dialog = ChooseParticipantDialog()
-        # For Modal dialog
-        result = dialog.exec_()
+        """Deletes selected participant"""
+         # TODO get participant id
+        participantId = 0
 
-        if result == True:
-            participantId = dialog.getParticipantId()
-            if QMessageBox.question(self, "Cannot be undone!", "Warning! This action cannot be undone. \nAre you sure you want to delete this participant?", QMessageBox.Yes|QMessageBox.No) == QMessageBox.Yes:
-                # Call appropriate delete
-                if participantId[0] == 's':
-                    dbInteractionInstance.deleteSoloParticipantFromId(participantId[1:])
-                elif participantId[0] == 'g':
-                    dbInteractionInstance.deleteGroupParticipantFromId(participantId[1:])
-                else:
-                    QMessageBox.critical(self, "Error", "Unrecognized Participant", QMessageBox.Ok)
+        if QMessageBox.question(self, "Cannot be undone!", "Warning! This action cannot be undone. \nAre you sure you want to delete this participant?", QMessageBox.Yes|QMessageBox.No) == QMessageBox.Yes:
+            # Delete the participant
+            dbInteractionInstance.deleteParticipantFromId(participantId[1:])
 
     def backupDbBtn_clicked(self):
         """Copies the current db file to AFS-YYYY-MM-DD-HH-MM-SS.bak"""
