@@ -7,13 +7,15 @@ import shutil
 from PyQt4.QtGui import QApplication, QMainWindow, QWidget, QMessageBox, QFileDialog
 
 from ui_mainwindow import Ui_MainWindow
-from addParticipantDialog import AddParticipantDialog
+from addSoloParticipantDialog import AddSoloParticipantDialog
+from addGroupParticipantDialog import AddGroupParticipantDialog
 from addTeacherDialog import AddTeacherDialog
 from addEntryDialog import AddEntryDialog
 from scheduleDialog import ScheduleDialog
 from scheduleOptionsDialog import ScheduleOptionsDialog
 from chooseParticipantDialog import ChooseParticipantDialog
-from editParticipantDialog import EditParticipantDialog
+from editSoloParticipantDialog import EditSoloParticipantDialog
+from editGroupParticipantDialog import EditGroupParticipantDialog
 from chooseTeacherDialog import ChooseTeacherDialog
 from editTeacherDialog import EditTeacherDialog
 from chooseEntryDialog import ChooseEntryDialog
@@ -43,29 +45,35 @@ class MainWindow(QWidget):
 
     def connectSlots(self):
         """connect the various ui signals to their slots"""
-        self.ui.addParticipantBtn.clicked.connect(self.addParticipantBtn_clicked)
+        self.ui.addSoloParticipantBtn.clicked.connect(self.addSoloParticipantBtn_clicked)
+        self.ui.addGroupParticipantBtn.clicked.connect(self.addGroupParticipantBtn_clicked)
         self.ui.addTeacherBtn.clicked.connect(self.addTeacherBtn_clicked)
         self.ui.addEntryBtn.clicked.connect(self.addEntryBtn_clicked)
-        # self.ui.makeScheduleBtn.clicked.connect(self.makeScheduleBtn_clicked)
-        # self.ui.loadScheduleBtn.clicked.connect(self.loadScheduleBtn_clicked)
+        self.ui.makeScheduleBtn.clicked.connect(self.makeScheduleBtn_clicked)
+        self.ui.loadScheduleBtn.clicked.connect(self.loadScheduleBtn_clicked)
         self.ui.editParticipantBtn.clicked.connect(self.editParticipantBtn_clicked)
         self.ui.editTeacherBtn.clicked.connect(self.editTeacherBtn_clicked)
         self.ui.editEntryBtn.clicked.connect(self.editEntryBtn_clicked)
-        # self.ui.deleteParticipantBtn.clicked.connect(self.deleteParticipantBtn_clicked)
-        # self.ui.deleteTeacherBtn.clicked.connect(self.deleteTeacherBtn_clicked)
-        # self.ui.deleteEntryBtn.clicked.connect(self.deleteEntryBtn_clicked)
-        # self.ui.backupDbBtn.clicked.connect(self.backupDbBtn_clicked)
-        # self.ui.restoreDbBtn.clicked.connect(self.restoreDbBtn_clicked)
-        # self.ui.createNewDbBtn.clicked.connect(self.createNewDbBtn_clicked)
-        # self.ui.entriesByDisciplineBtn.clicked.connect(self.entriesByDisciplineBtn_clicked)
-        # self.ui.entriesByTeacherBtn.clicked.connect(self.entriesByTeacherBtn_clicked)
+        self.ui.deleteParticipantBtn.clicked.connect(self.deleteParticipantBtn_clicked)
+        self.ui.deleteTeacherBtn.clicked.connect(self.deleteTeacherBtn_clicked)
+        self.ui.deleteEntryBtn.clicked.connect(self.deleteEntryBtn_clicked)
+        self.ui.backupDbBtn.clicked.connect(self.backupDbBtn_clicked)
+        self.ui.restoreDbBtn.clicked.connect(self.restoreDbBtn_clicked)
+        self.ui.createNewDbBtn.clicked.connect(self.createNewDbBtn_clicked)
+        self.ui.entriesByDisciplineBtn.clicked.connect(self.entriesByDisciplineBtn_clicked)
+        self.ui.entriesByTeacherBtn.clicked.connect(self.entriesByTeacherBtn_clicked)
         # self.ui.entriesByGroupBtn.clicked.connect(self.entriesByGroupBtn_clicked)
-        # self.ui.dumpBtn.clicked.connect(self.dumpBtn_clicked)
+        self.ui.dumpBtn.clicked.connect(self.dumpBtn_clicked)
 
     ###### Slots ######
 
-    def addParticipantBtn_clicked(self):
-        dialog = AddParticipantDialog(testing=self.testing)
+    def addSoloParticipantBtn_clicked(self):
+        dialog = AddSoloParticipantDialog(testing=self.testing)
+        # For Modal dialog
+        dialog.exec_()
+
+    def addGroupParticipantBtn_clicked(self):
+        dialog = AddGroupParticipantDialog(testing=self.testing)
         # For Modal dialog
         dialog.exec_()
 
@@ -128,10 +136,10 @@ class MainWindow(QWidget):
             participantId = dialog.getParticipantId()
             # Open appropriate edit dialog with participant
             if participantId[0] == 's':
-                # dialog = EditSoloParticipantDialog(participantId=participantId)
+                dialog = EditSoloParticipantDialog(participantId=participantId)
                 dialog.exec_()
             elif participantId[0] == 'g':
-                # dialog = EditGroupParticipantDialog(participantId=participantId)
+                dialog = EditGroupParticipantDialog(participantId=participantId)
                 dialog.exec_()
             else:
                 QMessageBox.critical(self, "Error", "Unrecognized Participant", QMessageBox.Ok)
@@ -170,10 +178,10 @@ class MainWindow(QWidget):
             participantId = dialog.getParticipantId()
             # Open appropriate edit dialog with participant
             if participantId[0] == 's':
-                # dialog = EditSoloParticipantDialog(participantId=participantId)
+                dialog = EditSoloParticipantDialog(participantId=participantId)
                 dialog.exec_()
             elif participantId[0] == 'g':
-                # dialog = EditGroupParticipantDialog(participantId=participantId)
+                dialog = EditGroupParticipantDialog(participantId=participantId)
                 dialog.exec_()
             else:
                 QMessageBox.critical(self, "Error", "Unrecognized Participant", QMessageBox.Ok)

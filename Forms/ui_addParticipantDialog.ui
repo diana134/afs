@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddParticipantDialog</class>
+ <widget class="QDialog" name="AddParticipantDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>492</width>
+    <height>849</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="3">
+    <layout class="QFormLayout" name="formLayout">
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="firstNameLabel">
+       <property name="text">
+        <string>First Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="firstNameLineEdit"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="lastNameLabel">
+       <property name="text">
+        <string>Last Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lastNameLineEdit"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="parentLabel">
+       <property name="text">
+        <string>Parent</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="parentLineEdit"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="addressLabel">
+       <property name="text">
+        <string>Address</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="addressLineEdit"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="cityLabel">
+       <property name="text">
+        <string>City</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="cityLineEdit"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="postalCodeLabel">
+       <property name="text">
+        <string>Postal Code</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="postalCodeLineEdit">
+       <property name="inputMethodHints">
+        <set>Qt::ImhNone</set>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="homePhoneLabel">
+       <property name="text">
+        <string>Home Phone</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="homePhoneLineEdit">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="cellPhoneLabel">
+       <property name="text">
+        <string>Cell Phone</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="cellPhoneLineEdit">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="emailLabel">
+       <property name="text">
+        <string>Email</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="emailLineEdit">
+       <property name="inputMethodHints">
+        <set>Qt::ImhEmailCharactersOnly</set>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="dateOfBirthLabel">
+       <property name="text">
+        <string>Date of Birth</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QDateEdit" name="dateOfBirthDateEdit">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="date">
+        <date>
+         <year>1996</year>
+         <month>1</month>
+         <day>1</day>
+        </date>
+       </property>
+       <property name="minimumDate">
+        <date>
+         <year>1900</year>
+         <month>1</month>
+         <day>1</day>
+        </date>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy-MM-dd</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="ageLabel">
+       <property name="text">
+        <string>Age as of Jan. 1 </string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QSpinBox" name="ageSpinBox">
+       <property name="minimum">
+        <number>8</number>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="schoolAttendingLabel">
+       <property name="text">
+        <string>School Currently Attending</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QLineEdit" name="schoolAttendingLineEdit"/>
+     </item>
+     <item row="12" column="0">
+      <widget class="QLabel" name="schoolGradeLabel">
+       <property name="text">
+        <string>School Grade</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="1">
+      <widget class="QLineEdit" name="schoolGradeLineEdit"/>
+     </item>
+     <item row="13" column="0">
+      <widget class="QLabel" name="groupNameLabel">
+       <property name="text">
+        <string>Group Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="0">
+      <widget class="QLabel" name="groupSizeLabel">
+       <property name="text">
+        <string>Number of Participants</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="1">
+      <widget class="QLineEdit" name="groupSizeLineEdit">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="0">
+      <widget class="QLabel" name="averageAgeLabel">
+       <property name="text">
+        <string>Average Age</string>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="1">
+      <widget class="QLineEdit" name="averageAgeLineEdit">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="0">
+      <widget class="QLabel" name="contactPersonLabel">
+       <property name="text">
+        <string>Contact Person</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="1">
+      <widget class="QLineEdit" name="contactPersonLineEdit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="clearContactBtn_2">
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="chooseContactBtn_2">
+         <property name="text">
+          <string>Choose...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="createContactBtn_2">
+         <property name="text">
+          <string>Create New...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="18" column="0" colspan="2">
+      <widget class="QGroupBox" name="timeConstraintsGroupBox">
+       <property name="title">
+        <string>Time Constraints</string>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <layout class="QFormLayout" name="formLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="earliestPerformanceTimeLabel_2">
+          <property name="text">
+           <string>Earliest Performance Time</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QTimeEdit" name="earliestPerformanceTimeTimeEdit_2">
+          <property name="time">
+           <time>
+            <hour>9</hour>
+            <minute>0</minute>
+            <second>0</second>
+           </time>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="latestPerformanceTimeLabel_2">
+          <property name="text">
+           <string>Latest Performance Time</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QTimeEdit" name="latestPerformanceTimeTimeEdit_2">
+          <property name="time">
+           <time>
+            <hour>15</hour>
+            <minute>0</minute>
+            <second>0</second>
+           </time>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="13" column="1">
+      <widget class="QLineEdit" name="groupNameLineEdit"/>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <widget class="QTabWidget" name="participantTabWidget">
+     <property name="currentIndex">
+      <number>-1</number>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>167</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>&amp;Cancel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>A&amp;dd Participant</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
