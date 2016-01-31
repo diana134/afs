@@ -4,7 +4,8 @@ import sys
 import os.path
 sys.path.insert(0, os.path.join("..", "Forms"))
 import shutil
-from PyQt4.QtGui import QApplication, QMainWindow, QWidget, QMessageBox, QFileDialog
+from PyQt4.QtGui import QApplication, QMainWindow, QWidget, QMessageBox, QFileDialog, QItemSelectionModel, QAbstractItemView
+from PyQt4.QtCore import Qt
 
 from ui_mainwindow import Ui_MainWindow
 from addParticipantDialog import AddParticipantDialog
@@ -61,6 +62,35 @@ class MainWindow(QWidget):
         # self.ui.entriesByTeacherBtn.clicked.connect(self.entriesByTeacherBtn_clicked)
         # self.ui.entriesByGroupBtn.clicked.connect(self.entriesByGroupBtn_clicked)
         # self.ui.dumpBtn.clicked.connect(self.dumpBtn_clicked)
+
+        self.ui.participantTableView.setModel(dbInteractionInstance.participantModel)
+        self.ui.participantTableView.model().sort(9, Qt.DescendingOrder)
+        self.ui.participantTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.participantModel))
+        self.ui.participantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.participantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.ui.participantTableView.hideColumn(9) # id
+
+        self.ui.teacherTableView.setModel(dbInteractionInstance.teacherModel)
+        self.ui.teacherTableView.model().sort(0, Qt.DescendingOrder)
+        self.ui.teacherTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.teacherModel))
+        self.ui.teacherTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.teacherTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.ui.teacherTableView.hideColumn(0) # id
+
+        self.ui.entryTableView.setModel(dbInteractionInstance.entryModel)
+        self.ui.entryTableView.model().sort(0, Qt.DescendingOrder)
+        self.ui.entryTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.entryModel))
+        self.ui.entryTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.entryTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.ui.entryTableView.hideColumn(0) # id
+
+        self.ui.pieceTableView.setModel(dbInteractionInstance.pieceModel)
+        self.ui.pieceTableView.model().sort(0, Qt.DescendingOrder)
+        self.ui.pieceTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.pieceModel))
+        self.ui.pieceTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.pieceTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.ui.pieceTableView.hideColumn(0) # id
+        self.ui.pieceTableView.hideColumn(4) # entryId
 
     ###### Slots ######
 

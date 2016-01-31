@@ -8,7 +8,7 @@ from datetime import datetime
 from PyQt4.QtSql import QSqlDatabase, QSqlTableModel, QSqlQuery
 from PyQt4.QtCore import Qt
 
-from participant import SoloParticipant, GroupParticipant
+from participant import Participant
 from teacher import Teacher
 from entry import Entry
 
@@ -37,41 +37,32 @@ class DatabaseInteraction(object):
 
         self.setupModels()
 
-    def setupModels(self):    
-        # SoloParticipant
-        self.soloParticipantModel = QSqlTableModel(db=self.conn)
-        self.soloParticipantModel.setTable("soloparticipants")
-        self.soloParticipantModel.setSort(9, Qt.DescendingOrder)
-        self.soloParticipantModel.select()
+    def setupModels(self):
+        # Participant
+        self.participantModel = QSqlTableModel(db=self.conn)
+        self.participantModel.setTable("participants")
+        self.participantModel.setSort(9, Qt.DescendingOrder)
+        self.participantModel.select()
         # set headers
-        self.soloParticipantModel.setHeaderData(0, Qt.Horizontal, "First")
-        self.soloParticipantModel.setHeaderData(1, Qt.Horizontal, "Last")
-        self.soloParticipantModel.setHeaderData(2, Qt.Horizontal, "Address")
-        self.soloParticipantModel.setHeaderData(3, Qt.Horizontal, "Town")
-        self.soloParticipantModel.setHeaderData(4, Qt.Horizontal, "Postal Code")
-        self.soloParticipantModel.setHeaderData(5, Qt.Horizontal, "Home Phone")
-        self.soloParticipantModel.setHeaderData(6, Qt.Horizontal, "Cell Phone")
-        self.soloParticipantModel.setHeaderData(7, Qt.Horizontal, "Email")
-        self.soloParticipantModel.setHeaderData(8, Qt.Horizontal, "Date of Birth")
-        self.soloParticipantModel.setHeaderData(10, Qt.Horizontal, "School Attending")
-        self.soloParticipantModel.setHeaderData(11, Qt.Horizontal, "Parent")
-        self.soloParticipantModel.setHeaderData(12, Qt.Horizontal, "Age")
-        self.soloParticipantModel.setHeaderData(13, Qt.Horizontal, "School Grade")
-
-        # GroupParticipant
-        self.groupParticipantModel = QSqlTableModel(db=self.conn)
-        self.groupParticipantModel.setTable("groupparticipants")
-        self.groupParticipantModel.setSort(0, Qt.DescendingOrder)
-        self.groupParticipantModel.select()
-        # set headers
-        self.groupParticipantModel.setHeaderData(1, Qt.Horizontal, "Group Name")
-        self.groupParticipantModel.setHeaderData(2, Qt.Horizontal, "Group Size")
-        self.groupParticipantModel.setHeaderData(3, Qt.Horizontal, "School Grade")
-        self.groupParticipantModel.setHeaderData(4, Qt.Horizontal, "Average Age")
-        self.groupParticipantModel.setHeaderData(5, Qt.Horizontal, "Participants")
-        self.groupParticipantModel.setHeaderData(6, Qt.Horizontal, "Contact")
-        self.groupParticipantModel.setHeaderData(7, Qt.Horizontal, "Earliest Performance Time")
-        self.groupParticipantModel.setHeaderData(8, Qt.Horizontal, "Latest Performance Time")
+        self.participantModel.setHeaderData(0, Qt.Horizontal, "First")
+        self.participantModel.setHeaderData(1, Qt.Horizontal, "Last")
+        self.participantModel.setHeaderData(2, Qt.Horizontal, "Address")
+        self.participantModel.setHeaderData(3, Qt.Horizontal, "Town")
+        self.participantModel.setHeaderData(4, Qt.Horizontal, "Postal Code")
+        self.participantModel.setHeaderData(5, Qt.Horizontal, "Home Phone")
+        self.participantModel.setHeaderData(6, Qt.Horizontal, "Cell Phone")
+        self.participantModel.setHeaderData(7, Qt.Horizontal, "Email")
+        self.participantModel.setHeaderData(8, Qt.Horizontal, "Date of Birth")
+        self.participantModel.setHeaderData(10, Qt.Horizontal, "School Attending")
+        self.participantModel.setHeaderData(11, Qt.Horizontal, "Parent")
+        self.participantModel.setHeaderData(12, Qt.Horizontal, "School Grade")
+        self.participantModel.setHeaderData(13, Qt.Horizontal, "Group Name")
+        self.participantModel.setHeaderData(14, Qt.Horizontal, "Group Size")
+        self.participantModel.setHeaderData(15, Qt.Horizontal, "Earliest Performance Time")
+        self.participantModel.setHeaderData(16, Qt.Horizontal, "Latest Performance Time")
+        self.participantModel.setHeaderData(17, Qt.Horizontal, "Participants") # TODO display names
+        self.participantModel.setHeaderData(18, Qt.Horizontal, "Average Age")
+        self.participantModel.setHeaderData(19, Qt.Horizontal, "Contact") # TODO display name
 
         # Teacher
         self.teacherModel = QSqlTableModel(db=self.conn)
@@ -94,8 +85,8 @@ class DatabaseInteraction(object):
         self.entryModel.setSort(0, Qt.DescendingOrder)
         self.entryModel.select()
         # set headers
-        self.entryModel.setHeaderData(1, Qt.Horizontal, "Participant")
-        self.entryModel.setHeaderData(2, Qt.Horizontal, "Teacher")
+        self.entryModel.setHeaderData(1, Qt.Horizontal, "Participant") # TODO display name
+        self.entryModel.setHeaderData(2, Qt.Horizontal, "Teacher") # TODO display name
         self.entryModel.setHeaderData(3, Qt.Horizontal, "Discipline")
         self.entryModel.setHeaderData(4, Qt.Horizontal, "Level")
         self.entryModel.setHeaderData(5, Qt.Horizontal, "Class Number")
@@ -103,6 +94,17 @@ class DatabaseInteraction(object):
         self.entryModel.setHeaderData(7, Qt.Horizontal, "Instrument")
         self.entryModel.setHeaderData(8, Qt.Horizontal, "Years of Instruction")
         self.entryModel.setHeaderData(9, Qt.Horizontal, "Scheduling Requirements")
+
+        # Piece
+        self.pieceModel = QSqlTableModel(db=self.conn)
+        self.pieceModel.setTable("selections")
+        self.pieceModel.setSort(0, Qt.DescendingOrder)
+        self.pieceModel.select()
+        # set headers
+        self.pieceModel.setHeaderData(1, Qt.Horizontal, "Title")
+        self.pieceModel.setHeaderData(2, Qt.Horizontal, "Performance Time")
+        self.pieceModel.setHeaderData(3, Qt.Horizontal, "Composer/Arranger")
+        self.pieceModel.setHeaderData(5, Qt.Horizontal, "Title of Musical")
 
     def close(self):
         """Clean everything up and close the connection"""
