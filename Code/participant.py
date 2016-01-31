@@ -6,25 +6,25 @@ from utilities import requiredFieldIsGood, optionalFieldIsGood
 
 class Participant(object):
     """Super class to hopefully make organizing things easier later"""
-    __metaclass__ = ABCMeta
-    
-    @abstractmethod
-    def isEqualTo(self, obj):
-        """check if obj is equal to this Participant"""
-        pass
+    # __metaclass__ = ABCMeta
+
+    # @abstractmethod
+    # def isEqualTo(self, obj):
+    #     """check if obj is equal to this Participant"""
+    #     pass
 
     # @abstractmethod
     # def addToDB(self):
     #     """add this thing to the database"""
     #     pass
 
-class SoloParticipant(Participant):
+# class SoloParticipant(Participant):
     """Holds participant data (name, address, contact info, etc) as strings"""
-    def __init__(self, first="", last="", address="", town="", postal="", home="", cell="", email="", dob="", schoolAttending="", parent="", age="", schoolGrade=""):
+    def __init__(self, first="", last="", address="", city="", postal="", home="", cell="", email="", dob="", schoolAttending="", parent="", age="", schoolGrade="", groupName="", numberParticipants="", averageAge="", participants="", contact="", earliestPerformanceTime="", latestPerformanceTime=""):
         self.first = first
         self.last = last
         self.address = address
-        self.town = town
+        self.city = city
         self.postal = postal
         self.home = home
         self.cell = cell
@@ -34,14 +34,21 @@ class SoloParticipant(Participant):
         self.parent = parent
         self.age = age
         self.schoolGrade = schoolGrade
+        self.groupName = groupName
+        self.numberParticipants = numberParticipants
+        self.averageAge = averageAge
+        self.participants = participants
+        self.contact = contact
+        self.earliestPerformanceTime = earliestPerformanceTime
+        self.latestPerformanceTime = latestPerformanceTime
 
     def isEqualTo(self, obj):
         """check if obj is equal to this SoloParticipant"""
-        if isinstance(obj, SoloParticipant):
+        if isinstance(obj, Participant):
             if (requiredFieldIsGood(self.first, obj.first) and
                     requiredFieldIsGood(self.last, obj.last) and
                     optionalFieldIsGood(self.address, obj.address) and
-                    optionalFieldIsGood(self.town, obj.town) and
+                    optionalFieldIsGood(self.city, obj.city) and
                     optionalFieldIsGood(self.postal, obj.postal) and
                     optionalFieldIsGood(self.home, obj.home) and
                     optionalFieldIsGood(self.cell, obj.cell) and
@@ -58,7 +65,10 @@ class SoloParticipant(Participant):
     def __str__(self):
         return '{0} {1}'.format(self.first, self.last)
 
+class SoloParticipant(Participant):
+    """Only here to prevent compile errors"""
 
+# leave this for now to prevent compile errors
 class GroupParticipant(Participant):
     """Holds GroupParticipant data (name, size, age, etc) as strings"""
     def __init__(self, groupName="", groupSize="", schoolGrade="", averageAge="", participants="", contact="", earliestPerformanceTime="", latestPerformanceTime=""):

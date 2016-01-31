@@ -41,7 +41,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="groupSizeLineEdit">
+       <widget class="QLineEdit" name="numberParticipantsLineEdit">
         <property name="inputMethodHints">
          <set>Qt::ImhDigitsOnly</set>
         </property>
@@ -139,23 +139,27 @@
         </layout>
        </widget>
       </item>
-      <item row="6" column="0" colspan="2">
-       <widget class="QTabWidget" name="participantTabWidget">
-        <property name="currentIndex">
-         <number>-1</number>
+      <item row="6" column="1">
+       <widget class="QTextEdit" name="participantsTextEdit"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Participant Names</string>
         </property>
        </widget>
       </item>
      </layout>
      <zorder>groupNameLabel</zorder>
      <zorder>groupSizeLabel</zorder>
-     <zorder>groupSizeLineEdit</zorder>
+     <zorder>numberParticipantsLineEdit</zorder>
      <zorder>averageAgeLabel</zorder>
      <zorder>averageAgeLineEdit</zorder>
      <zorder>groupNameLineEdit</zorder>
      <zorder>timeConstraintsGroupBox</zorder>
-     <zorder>participantTabWidget</zorder>
      <zorder>horizontalLayoutWidget</zorder>
+     <zorder>participantsTextEdit</zorder>
+     <zorder>label</zorder>
     </widget>
    </item>
    <item row="0" column="0">
@@ -443,13 +447,13 @@
   <tabstop>chooseContactBtn</tabstop>
   <tabstop>createContactBtn</tabstop>
   <tabstop>groupNameLineEdit</tabstop>
-  <tabstop>groupSizeLineEdit</tabstop>
+  <tabstop>numberParticipantsLineEdit</tabstop>
   <tabstop>averageAgeLineEdit</tabstop>
   <tabstop>calculateAverageAgeBtn</tabstop>
   <tabstop>timeConstraintsGroupBox</tabstop>
   <tabstop>earliestPerformanceTimeTimeEdit</tabstop>
   <tabstop>latestPerformanceTimeTimeEdit</tabstop>
-  <tabstop>participantTabWidget</tabstop>
+  <tabstop>participantsTextEdit</tabstop>
   <tabstop>addParticipantBtn</tabstop>
   <tabstop>cancelBtn</tabstop>
   <tabstop>contactPersonLineEdit</tabstop>

@@ -9,9 +9,9 @@ from PyQt4.QtCore import QDate
 from ui_addParticipantDialog import Ui_AddParticipantDialog
 from chooseTeacherDialog import ChooseTeacherDialog
 from addTeacherDialog import AddTeacherDialog
-from participantWidget import ParticipantWidget
+# from participantWidget import ParticipantWidget
 from averageAgeCalculatorDialog import AverageAgeCalculatorDialog
-from participant import SoloParticipant
+from participant import Participant
 from utilities import *
 from databaseInteraction import dbInteractionInstance
 
@@ -32,11 +32,11 @@ class AddParticipantDialog(QDialog):
         self.testing = testing
         self.closeAfterAdd = closeAfterAdd
         self.p = None
-        self.participantIds = []
+        # self.participantIds = []
         self.contactId = None
         # Set up the widgets
-        for i in xrange(0, 6):
-            self.ui.participantTabWidget.addTab(ParticipantWidget(), "Participant {0}".format(i+1))
+        # for i in xrange(0, 6):
+        #     self.ui.participantTabWidget.addTab(ParticipantWidget(), "Participant {0}".format(i+1))
         # Make the buttons do things
         self.connectSlots()
 
@@ -69,16 +69,19 @@ class AddParticipantDialog(QDialog):
         self.ui.parentLineEdit.clear()
         self.ui.ageSpinBox.setValue(18)
         self.ui.schoolGradeLineEdit.clear()
-        self.participantIds = []
+        # self.participantIds = []
         self.ui.groupNameLineEdit.clear()
         self.ui.groupSizeLineEdit.clear()
         self.ui.schoolGradeLineEdit.clear()
         self.ui.averageAgeLineEdit.clear()
         self.ui.contactPersonLineEdit.clear()
         self.contactId = None
-        for i in xrange(self.ui.participantTabWidget.count()):
-            participantWidget = self.ui.participantTabWidget.widget(i)
-            participantWidget.clearFields()
+        self.ui.numberParticipantsLineEdit.clear()
+        self.ui.averageAgeLineEdit.clear()
+        self.ui.participantsTextEdit.clear()
+        # for i in xrange(self.ui.participantTabWidget.count()):
+        #     participantWidget = self.ui.participantTabWidget.widget(i)
+        #     participantWidget.clearFields()
 
     def dobValid(self):
         """checks if the date of birth is valid given the age"""
@@ -122,54 +125,87 @@ class AddParticipantDialog(QDialog):
         schoolGrade = str(self.ui.schoolGradeLineEdit.text()).strip()
         schoolGrade = sanitize(schoolGrade)
 
+        groupName = str(self.ui.groupNameLineEdit.text()).strip()
+        groupName = sanitize(groupName)
+        numberParticipants = str(self.ui.numberParticipantsLineEdit.text()).strip()
+        numberParticipants = sanitize(numberParticipants)
+        averageAge = str(self.ui.averageAgeLineEdit.text()).strip()
+        averageAge = sanitize(averageAge)
+        # for i in xrange(self.ui.participantTabWidget.count()):
+        #     participantWidget = self.ui.participantTabWidget.widget(i)
+        #     if participantWidget.participantId is not None:
+        #         self.participantIds.append(participantWidget.participantId)
+        # participants = ','.join(self.participantIds)
+        participants = str(self.ui.participantsTextEdit.toPlainText()).strip()
+        participants = sanitize(participants)
+        earliestPerformanceTime = ""
+        latestPerformanceTime = ""
+        if self.ui.timeConstraintsGroupBox.isChecked():
+            earliestPerformanceTime = str(self.ui.earliestPerformanceTimeTimeEdit.time().toString("HH:mm"))
+            latestPerformanceTime = str(self.ui.latestPerformanceTimeTimeEdit.time().toString("HH:mm"))
+
         # Check if dob is valid relative to age
         # if not, we won't save dob
         if not self.dobValid():
             dob = ""
 
         # Check for empty fields
-        if first is None or first == "":
-            QMessageBox.warning(self, 'Missing Field', 'Participant must have a First Name', QMessageBox.Ok)
-            return
-        
-        if last is None or last == "":
-            QMessageBox.warning(self, 'Missing Field', 'Participant must have a Last Name', QMessageBox.Ok)
-            return
-        
+        # if first is None or first == "":
+        #     QMessageBox.warning(self, 'Missing Field', 'Participant must have a First Name', QMessageBox.Ok)
+        #     return
+
+        # if last is None or last == "":
+        #     QMessageBox.warning(self, 'Missing Field', 'Participant must have a Last Name', QMessageBox.Ok)
+        #     return
+
         # if dob is None or dob == "1900-01-01":
         #     QMessageBox.warning(self, 'Missing Field', 'Participant must have a Date of Birth', QMessageBox.Ok)
         #     return
 
-        if email is None or email == "":
-            if QMessageBox.question(self, 'Missing Email', 'Are you sure you want to leave Email blank?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
-                return
+        # if email is None or email == "":
+        #     if QMessageBox.question(self, 'Missing Email', 'Are you sure you want to leave Email blank?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+        #         return
         # Check for valid fields
-        elif validEmail(email) == False:
+        if (email is not None or email != "") and validEmail(email) == False:
             QMessageBox.warning(self, 'Invalid Email', email + ' is not a valid email format', QMessageBox.Ok)
             return
 
-        if validateName(first) == False:
+        if (first is not None or first != "") and validateName(first) == False:
             if QMessageBox.question(self, 'Validate First Name', 'Are you sure \'' + first + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
                 return
 
-        if validateName(last) == False:
+        if (last is not None or last != "") and validateName(last) == False:
             if QMessageBox.question(self, 'Validate Last Name', 'Are you sure \'' + last + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
                 return
 
+        if numberParticipants != "" and not numberParticipants.isdigit():
+            QMessageBox.warning(self, 'Incorrect Field', 'Group Size must be a number', QMessageBox.Ok)
+            return
+
+        if schoolGrade != "" and not schoolGrade.isalnum():
+            QMessageBox.warning(self, 'Incorrect Field', 'School Grade must be only letters and numbers', QMessageBox.Ok)
+            return
+
+        if averageAge != "" and not averageAge.isdigit():
+            QMessageBox.warning(self, 'Incorrect Field', 'Average Age must be a whole number', QMessageBox.Ok)
+            return
+
         # Check for duplicated participants
-        pList = dbInteractionInstance.getSoloParticipantsWithName(first=first, last=last)
-        if len(pList) > 0:
-            s = ""
-            for p in pList:
-                s += "{0} {1}, born {2}\n".format(p.first, p.last, p.dob)
+        # pList = dbInteractionInstance.getParticipantsWithName(first=first, last=last)
+        # print pList
+        # if len(pList) > 0:
+        #     s = ""
+        #     for p in pList:
+        #         print p
+        #         s += "{0} {1}, born {2}\n".format(p.first, p.last, p.dob)
 
-            if QMessageBox.question(self, 'Possible Duplicate', 
-                'This name exists in the database already:\n{0}\nDo you still want to add this person?'.format(s),
-                QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
-                return
+        #     if QMessageBox.question(self, 'Possible Duplicate',
+        #         'This name exists in the database already:\n{0}\nDo you still want to add this person?'.format(s),
+        #         QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+        #         return
 
-        self.p = SoloParticipant(first, last, address, city, postal, home, cell, email, dob, schoolAttending, parent, age, schoolGrade)
-        result = dbInteractionInstance.addSoloParticipant(self.p)
+        self.p = Participant(first, last, address, city, postal, home, cell, email, dob, schoolAttending, parent, age, schoolGrade, groupName, numberParticipants, averageAge, participants, self.contactId, earliestPerformanceTime, latestPerformanceTime)
+        result = dbInteractionInstance.addParticipant(self.p)
         if result == "":
             QMessageBox.information(self, 'Add Participant', 'Successfully added new participant', QMessageBox.Ok)
             self.clearFields()

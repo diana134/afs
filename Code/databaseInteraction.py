@@ -113,7 +113,7 @@ class DatabaseInteraction(object):
         self.conn.close()
         self.conn = QSqlDatabase()
         self.conn.removeDatabase(connName)
-        
+
         global dbInteractionInstance 
         dbInteractionInstance = None
 
@@ -193,17 +193,17 @@ class DatabaseInteraction(object):
 
 ##########
 
-    def addSoloParticipant(self, sp):
-        """Adds a new SoloParticipant record to the db"""
+    def addParticipant(self, sp):
+        """Adds a new Participant record to the db"""
         try:
             query = QSqlQuery(self.conn)
-            query.prepare("INSERT INTO soloparticipants \
-                (first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth, school_attending, parent, age, school_grade) \
-                VALUES (:first, :last, :address, :town, :postal, :home, :cell, :email, :dob, :schoolAttending, :parent, :age, :schoolGrade)")
+            query.prepare("INSERT INTO participants \
+                (first_name, last_name, address, city, postal_code, home_phone, cell_phone, email, date_of_birth, school_attending, parent, age, school_grade, group_name, number_participants, earliest_time, latest_time, group_participants, average_age, contact) \
+                VALUES (:first, :last, :address, :city, :postal, :home, :cell, :email, :dob, :schoolAttending, :parent, :age, :schoolGrade, :groupName, :numberParticipants, :earliestTime, :latestTime, :groupParticipants, :averageAge, :contact)")
             query.bindValue(":first", sp.first)
             query.bindValue(":last", sp.last)
             query.bindValue(":address", sp.address)
-            query.bindValue(":town", sp.town)
+            query.bindValue(":city", sp.city)
             query.bindValue(":postal", sp.postal)
             query.bindValue(":home", sp.home)
             query.bindValue(":cell", sp.cell)
@@ -213,15 +213,22 @@ class DatabaseInteraction(object):
             query.bindValue(":parent", sp.parent)
             query.bindValue(":age", sp.age)
             query.bindValue(":schoolGrade", sp.schoolGrade)
+            query.bindValue(":groupName", sp.groupName)
+            query.bindValue(":numberParticipants", sp.numberParticipants)
+            query.bindValue(":earliestTime", sp.earliestPerformanceTime)
+            query.bindValue(":latestTime", sp.latestPerformanceTime)
+            query.bindValue(":groupParticipants", sp.participants)
+            query.bindValue(":averageAge", sp.averageAge)
+            query.bindValue(":contact", sp.contact)
             query.exec_()
             if query.isActive() == False:
                 print query.lastError().text()
                 return query.lastError().text()
-            self.soloParticipantModel.select()
+            self.participantModel.select()
             return ""
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "addSoloParticipant FAILED\n\tquery: {0}\n\terror: {1}".format(query, e)
+            print "addParticipant FAILED\n\tquery: {0}\n\terror: {1}".format(query, e)
             return e
 
     def updateSoloParticipant(self, participantId, participant):
@@ -607,11 +614,11 @@ class DatabaseInteraction(object):
             print "getParticipantFromId FAILED\n\tquery: {0}\
                 \n\terror: {1}".format(query.lastQuery(), e)
 
-    def getLastSoloParticipantId(self):
-        """Get the id of the most recently added SoloParticipant"""
+    def getLastParticipantId(self):
+        """Get the id of the most recently added Participant"""
         try:
             query = QSqlQuery(self.conn)
-            query.exec_("SELECT MAX(id) FROM soloparticipants")
+            query.exec_("SELECT MAX(id) FROM participants")
             if query.isActive() == False:
                 print query.lastError().text()
                 return query.lastError().text()
@@ -620,11 +627,11 @@ class DatabaseInteraction(object):
             return "s" + participantId
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "getLastSoloParticipantId FAILED\n\tquery: {0}\
+            print "getLastParticipantId FAILED\n\tquery: {0}\
                 \n\terror: {1}".format(query.lastQuery(), e)
 
-    def getSoloParticipantsWithName(self, first, last):
-        """Looks for solo participants with the given name"""
+    def getParticipantsWithName(self, first, last):
+        """Looks for participants with the given name"""
         pList = []
         try:
             query = QSqlQuery(self.conn)
@@ -649,7 +656,7 @@ class DatabaseInteraction(object):
                 dob = str(query.value(8).toString())
                 schoolAttending = str(query.value(9).toString())
                 parent = str(query.value(10).toString())
-                pList.append(SoloParticipant(first, last, address, town, postal, home, cell, email, dob, schoolAttending, parent))
+                pList.append(Participant(first, last, address, town, postal, home, cell, email, dob, schoolAttending, parent))
             return pList
         except Exception, e:
             # TODO: log this instead of printing to console

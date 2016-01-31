@@ -3,7 +3,7 @@
 import datetime
 
 from utilities import requiredFieldIsGood, optionalFieldIsGood, convertStringToTimedelta
-from participant import SoloParticipant
+from participant import Participant
 
 class Entry(object):
     """holds Entry data as strings"""

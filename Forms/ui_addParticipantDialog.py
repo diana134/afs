@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addParticipantDialog.ui'
 #
-# Created: Sun Jan 31 00:30:08 2016
+# Created: Sun Jan 31 02:43:20 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -43,10 +43,10 @@ class Ui_AddParticipantDialog(object):
         self.groupSizeLabel = QtGui.QLabel(self.groupBox_2)
         self.groupSizeLabel.setObjectName(_fromUtf8("groupSizeLabel"))
         self.formLayout.setWidget(1, QtGui.QFormLayout.LabelRole, self.groupSizeLabel)
-        self.groupSizeLineEdit = QtGui.QLineEdit(self.groupBox_2)
-        self.groupSizeLineEdit.setInputMethodHints(QtCore.Qt.ImhDigitsOnly)
-        self.groupSizeLineEdit.setObjectName(_fromUtf8("groupSizeLineEdit"))
-        self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.groupSizeLineEdit)
+        self.numberParticipantsLineEdit = QtGui.QLineEdit(self.groupBox_2)
+        self.numberParticipantsLineEdit.setInputMethodHints(QtCore.Qt.ImhDigitsOnly)
+        self.numberParticipantsLineEdit.setObjectName(_fromUtf8("numberParticipantsLineEdit"))
+        self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.numberParticipantsLineEdit)
         self.averageAgeLabel = QtGui.QLabel(self.groupBox_2)
         self.averageAgeLabel.setObjectName(_fromUtf8("averageAgeLabel"))
         self.formLayout.setWidget(2, QtGui.QFormLayout.LabelRole, self.averageAgeLabel)
@@ -84,9 +84,12 @@ class Ui_AddParticipantDialog(object):
         self.latestPerformanceTimeTimeEdit.setObjectName(_fromUtf8("latestPerformanceTimeTimeEdit"))
         self.formLayout_3.setWidget(1, QtGui.QFormLayout.FieldRole, self.latestPerformanceTimeTimeEdit)
         self.formLayout.setWidget(5, QtGui.QFormLayout.SpanningRole, self.timeConstraintsGroupBox)
-        self.participantTabWidget = QtGui.QTabWidget(self.groupBox_2)
-        self.participantTabWidget.setObjectName(_fromUtf8("participantTabWidget"))
-        self.formLayout.setWidget(6, QtGui.QFormLayout.SpanningRole, self.participantTabWidget)
+        self.participantsTextEdit = QtGui.QTextEdit(self.groupBox_2)
+        self.participantsTextEdit.setObjectName(_fromUtf8("participantsTextEdit"))
+        self.formLayout.setWidget(6, QtGui.QFormLayout.FieldRole, self.participantsTextEdit)
+        self.label = QtGui.QLabel(self.groupBox_2)
+        self.label.setObjectName(_fromUtf8("label"))
+        self.formLayout.setWidget(6, QtGui.QFormLayout.LabelRole, self.label)
         self.gridLayout.addWidget(self.groupBox_2, 0, 2, 1, 1)
         self.groupBox = QtGui.QGroupBox(AddParticipantDialog)
         self.groupBox.setObjectName(_fromUtf8("groupBox"))
@@ -218,7 +221,6 @@ class Ui_AddParticipantDialog(object):
         self.gridLayout.addLayout(self.horizontalLayout, 1, 2, 1, 1)
 
         self.retranslateUi(AddParticipantDialog)
-        self.participantTabWidget.setCurrentIndex(-1)
         QtCore.QMetaObject.connectSlotsByName(AddParticipantDialog)
         AddParticipantDialog.setTabOrder(self.firstNameLineEdit, self.lastNameLineEdit)
         AddParticipantDialog.setTabOrder(self.lastNameLineEdit, self.dateOfBirthDateEdit)
@@ -236,14 +238,14 @@ class Ui_AddParticipantDialog(object):
         AddParticipantDialog.setTabOrder(self.clearContactBtn, self.chooseContactBtn)
         AddParticipantDialog.setTabOrder(self.chooseContactBtn, self.createContactBtn)
         AddParticipantDialog.setTabOrder(self.createContactBtn, self.groupNameLineEdit)
-        AddParticipantDialog.setTabOrder(self.groupNameLineEdit, self.groupSizeLineEdit)
-        AddParticipantDialog.setTabOrder(self.groupSizeLineEdit, self.averageAgeLineEdit)
+        AddParticipantDialog.setTabOrder(self.groupNameLineEdit, self.numberParticipantsLineEdit)
+        AddParticipantDialog.setTabOrder(self.numberParticipantsLineEdit, self.averageAgeLineEdit)
         AddParticipantDialog.setTabOrder(self.averageAgeLineEdit, self.calculateAverageAgeBtn)
         AddParticipantDialog.setTabOrder(self.calculateAverageAgeBtn, self.timeConstraintsGroupBox)
         AddParticipantDialog.setTabOrder(self.timeConstraintsGroupBox, self.earliestPerformanceTimeTimeEdit)
         AddParticipantDialog.setTabOrder(self.earliestPerformanceTimeTimeEdit, self.latestPerformanceTimeTimeEdit)
-        AddParticipantDialog.setTabOrder(self.latestPerformanceTimeTimeEdit, self.participantTabWidget)
-        AddParticipantDialog.setTabOrder(self.participantTabWidget, self.addParticipantBtn)
+        AddParticipantDialog.setTabOrder(self.latestPerformanceTimeTimeEdit, self.participantsTextEdit)
+        AddParticipantDialog.setTabOrder(self.participantsTextEdit, self.addParticipantBtn)
         AddParticipantDialog.setTabOrder(self.addParticipantBtn, self.cancelBtn)
         AddParticipantDialog.setTabOrder(self.cancelBtn, self.contactPersonLineEdit)
 
@@ -257,6 +259,7 @@ class Ui_AddParticipantDialog(object):
         self.timeConstraintsGroupBox.setTitle(_translate("AddParticipantDialog", "Time Constraints", None))
         self.earliestPerformanceTimeLabel_2.setText(_translate("AddParticipantDialog", "Earliest Performance Time", None))
         self.latestPerformanceTimeLabel_2.setText(_translate("AddParticipantDialog", "Latest Performance Time", None))
+        self.label.setText(_translate("AddParticipantDialog", "Participant Names", None))
         self.groupBox.setTitle(_translate("AddParticipantDialog", "Solo", None))
         self.firstNameLabel.setText(_translate("AddParticipantDialog", "First Name", None))
         self.lastNameLabel.setText(_translate("AddParticipantDialog", "Last Name", None))
