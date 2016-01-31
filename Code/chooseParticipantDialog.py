@@ -16,25 +16,25 @@ class ChooseParticipantDialog(QDialog):
         super(ChooseParticipantDialog, self).__init__(parent)
         self.ui = Ui_ChooseParticipantDialog()
         self.ui.setupUi(self)
-        self.ui.soloParticipantTableView.setModel(dbInteractionInstance.soloParticipantModel)
-        self.ui.soloParticipantTableView.model().sort(9, Qt.DescendingOrder)
-        self.ui.soloParticipantTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.soloParticipantModel))
-        self.ui.soloParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
-        self.ui.soloParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.ui.soloParticipantTableView.hideColumn(9)
+        self.ui.participantTableView.setModel(dbInteractionInstance.participantModel)
+        self.ui.participantTableView.model().sort(9, Qt.DescendingOrder)
+        self.ui.participantTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.participantModel))
+        self.ui.participantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.participantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.ui.participantTableView.hideColumn(9)
         # if groupParticipantModel is None:
         #     # Disable Groups tab
         #     self.ui.groupParticipantsTab.setEnabled(False)
         # else:
-        self.ui.groupParticipantTableView.setModel(dbInteractionInstance.groupParticipantModel)
-        self.ui.groupParticipantTableView.model().sort(0, Qt.DescendingOrder)
-        self.ui.groupParticipantTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.groupParticipantModel))
-        self.ui.groupParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
-        self.ui.groupParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.ui.groupParticipantTableView.hideColumn(0)
+        # self.ui.groupParticipantTableView.setModel(dbInteractionInstance.groupParticipantModel)
+        # self.ui.groupParticipantTableView.model().sort(0, Qt.DescendingOrder)
+        # self.ui.groupParticipantTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.groupParticipantModel))
+        # self.ui.groupParticipantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
+        # self.ui.groupParticipantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        # self.ui.groupParticipantTableView.hideColumn(0)
         # Hide participant ids for now
         # TODO show the names
-        self.ui.groupParticipantTableView.hideColumn(5)
+        # self.ui.groupParticipantTableView.hideColumn(5)
         # Initialize class variables
         self.participantId = -1
         # Make the buttons do things
@@ -55,18 +55,18 @@ class ChooseParticipantDialog(QDialog):
         # Get which tab we're on so we know which table to reference
         model = None
         view = None
-        prefix = None
+        # prefix = None
 
-        if self.ui.participantTypeTabWidget.currentIndex() == 0:
+        # if self.ui.participantTypeTabWidget.currentIndex() == 0:
             # Do Solo Participant stuff
-            model = dbInteractionInstance.soloParticipantModel
-            view = self.ui.soloParticipantTableView
-            prefix = "s"
-        else:
-            # Do Group Participant stuff
-            model = dbInteractionInstance.groupParticipantModel
-            view = self.ui.groupParticipantTableView
-            prefix = "g"
+        model = dbInteractionInstance.participantModel
+        view = self.ui.participantTableView
+        #     prefix = "s"
+        # else:
+        #     # Do Group Participant stuff
+        #     model = dbInteractionInstance.groupParticipantModel
+        #     view = self.ui.groupParticipantTableView
+        #     prefix = "g"
 
         try:
             # Get which row in view is selected
@@ -80,7 +80,7 @@ class ChooseParticipantDialog(QDialog):
             data = model.data(modelIndex)
             participantId = str(data.toString())
             # Add appropriate prefix (so we know which table the index is from)
-            participantId = prefix + participantId
+            # participantId = prefix + participantId
             # And store it for retrieval
             self.participantId = participantId
 
@@ -92,4 +92,3 @@ class ChooseParticipantDialog(QDialog):
 
     def cancelBtn_clicked(self):
         self.reject()
-    

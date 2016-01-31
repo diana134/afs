@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Sat Jan 30 23:22:41 2016
+# Created: Sun Jan 31 03:23:09 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -37,7 +37,13 @@ class Ui_MainWindow(object):
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.verticalLayout.addWidget(self.label_2)
         self.participantTableView = QtGui.QTableView(self.centralwidget)
+        self.participantTableView.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
+        self.participantTableView.setAlternatingRowColors(True)
+        self.participantTableView.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
+        self.participantTableView.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.participantTableView.setSortingEnabled(True)
         self.participantTableView.setObjectName(_fromUtf8("participantTableView"))
+        self.participantTableView.horizontalHeader().setSortIndicatorShown(True)
         self.verticalLayout.addWidget(self.participantTableView)
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
@@ -57,6 +63,11 @@ class Ui_MainWindow(object):
         self.label_3.setObjectName(_fromUtf8("label_3"))
         self.verticalLayout_2.addWidget(self.label_3)
         self.teacherTableView = QtGui.QTableView(self.centralwidget)
+        self.teacherTableView.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
+        self.teacherTableView.setAlternatingRowColors(True)
+        self.teacherTableView.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
+        self.teacherTableView.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.teacherTableView.setSortingEnabled(True)
         self.teacherTableView.setObjectName(_fromUtf8("teacherTableView"))
         self.verticalLayout_2.addWidget(self.teacherTableView)
         self.horizontalLayout_4 = QtGui.QHBoxLayout()
@@ -83,6 +94,11 @@ class Ui_MainWindow(object):
         self.label_4.setObjectName(_fromUtf8("label_4"))
         self.verticalLayout_4.addWidget(self.label_4)
         self.entryTableView = QtGui.QTableView(self.verticalLayoutWidget_4)
+        self.entryTableView.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
+        self.entryTableView.setAlternatingRowColors(True)
+        self.entryTableView.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
+        self.entryTableView.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.entryTableView.setSortingEnabled(True)
         self.entryTableView.setObjectName(_fromUtf8("entryTableView"))
         self.verticalLayout_4.addWidget(self.entryTableView)
         self.horizontalLayout_3 = QtGui.QHBoxLayout()
@@ -105,6 +121,11 @@ class Ui_MainWindow(object):
         self.label.setObjectName(_fromUtf8("label"))
         self.verticalLayout_3.addWidget(self.label)
         self.pieceTableView = QtGui.QTableView(self.verticalLayoutWidget_3)
+        self.pieceTableView.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
+        self.pieceTableView.setAlternatingRowColors(True)
+        self.pieceTableView.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
+        self.pieceTableView.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.pieceTableView.setSortingEnabled(True)
         self.pieceTableView.setObjectName(_fromUtf8("pieceTableView"))
         self.verticalLayout_3.addWidget(self.pieceTableView)
         self.gridLayout.addWidget(self.splitter_2, 1, 0, 1, 2)

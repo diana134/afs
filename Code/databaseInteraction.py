@@ -572,14 +572,16 @@ class DatabaseInteraction(object):
         """Retrieve the appropriate Participant from the given id"""
         try:
             query = QSqlQuery(self.conn)
-            if participantId[0] == 's':
-                query.prepare("SELECT first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth, school_attending, parent \
-                    FROM soloparticipants WHERE id=:id")
-            else:
-                query.prepare("SELECT group_name, group_size, school_grade, average_age, participants, contact \
-                    FROM groupparticipants WHERE id=:id")
-            numericId = participantId[1:]
-            query.bindValue(":id", numericId)
+            # if participantId[0] == 's':
+            #     query.prepare("SELECT first_name, last_name, address, town, postal_code, home_phone, cell_phone, email, date_of_birth, school_attending, parent \
+            #         FROM soloparticipants WHERE id=:id")
+            # else:
+            #     query.prepare("SELECT group_name, group_size, school_grade, average_age, participants, contact \
+            #         FROM groupparticipants WHERE id=:id")
+            query.prepare("SELECT first_name, last_name, group_name \
+                FROM participants WHERE id=:id")
+            # numericId = participantId[1:]
+            query.bindValue(":id", participantId)
             query.exec_()
             if query.isActive() == False:
                 print query.lastError().text()
@@ -587,27 +589,28 @@ class DatabaseInteraction(object):
             # Now turn it into the appropriate object
             query.next()
             retrievedParticipant = None
-            if participantId[0] == 's':
-                first = str(query.value(0).toString())
-                last = str(query.value(1).toString())
-                address = str(query.value(2).toString())
-                town = str(query.value(3).toString())
-                postal = str(query.value(4).toString())
-                home = str(query.value(5).toString())
-                cell = str(query.value(6).toString())
-                email = str(query.value(7).toString())
-                dob = str(query.value(8).toString())
-                schoolAttending = str(query.value(9).toString())
-                parent = str(query.value(10).toString())
-                retrievedParticipant = SoloParticipant(first, last, address, town, postal, home, cell, email, dob, schoolAttending, parent)
-            else:
-                groupName = str(query.value(0).toString())
-                groupSize = str(query.value(1).toString())
-                schoolGrade = str(query.value(2).toString())
-                averageAge = str(query.value(3).toString())
-                participants = str(query.value(4).toString())
-                contact = str(query.value(5).toString())
-                retrievedParticipant = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants, contact)
+            # if participantId[0] == 's':
+            first = str(query.value(0).toString())
+            last = str(query.value(1).toString())
+            address = str(query.value(2).toString())
+            town = str(query.value(3).toString())
+            postal = str(query.value(4).toString())
+            home = str(query.value(5).toString())
+            cell = str(query.value(6).toString())
+            email = str(query.value(7).toString())
+            dob = str(query.value(8).toString())
+            schoolAttending = str(query.value(9).toString())
+            parent = str(query.value(10).toString())
+                # retrievedParticipant = SoloParticipant(first, last, address, town, postal, home, cell, email, dob, schoolAttending, parent)
+            # else:
+            groupName = str(query.value(0).toString())
+            groupSize = str(query.value(1).toString())
+            schoolGrade = str(query.value(2).toString())
+            averageAge = str(query.value(3).toString())
+            participants = str(query.value(4).toString())
+            contact = str(query.value(5).toString())
+                # retrievedParticipant = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants, contact)
+            retrievedParticipant = Participant(first, last, address, town, postal, home, cell, email, dob, schoolAttending, parent, groupName, groupSize, schoolGrade, averageAge, participants, contact)
             return retrievedParticipant
         except Exception, e:
             # TODO: log this instead of printing to console

@@ -6,8 +6,8 @@ sys.path.insert(0, os.path.join("..", "Forms"))
 from PyQt4.QtGui import QDialog, QMessageBox
 
 from ui_addEntryDialog import Ui_AddEntryDialog
-from addSoloParticipantDialog import AddSoloParticipantDialog
-from addGroupParticipantDialog import AddGroupParticipantDialog
+from addParticipantDialog import AddParticipantDialog
+# from addGroupParticipantDialog import AddGroupParticipantDialog
 from addTeacherDialog import AddTeacherDialog
 from chooseParticipantDialog import ChooseParticipantDialog
 from chooseTeacherDialog import ChooseTeacherDialog
@@ -49,8 +49,8 @@ class AddEntryDialog(QDialog):
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
         self.ui.chooseParticipantBtn.clicked.connect(self.chooseParticipantBtn_clicked)
         self.ui.chooseTeacherBtn.clicked.connect(self.chooseTeacherBtn_clicked)
-        self.ui.createNewSoloParticipantBtn.clicked.connect(self.createNewSoloParticipantBtn_clicked)
-        self.ui.createNewGroupParticipantBtn.clicked.connect(self.createNewGroupParticipantBtn_clicked)
+        self.ui.createNewParticipantBtn.clicked.connect(self.createNewParticipantBtn_clicked)
+        # self.ui.createNewGroupParticipantBtn.clicked.connect(self.createNewGroupParticipantBtn_clicked)
         self.ui.createNewTeacherBtn.clicked.connect(self.createNewTeacherBtn_clicked)
         self.ui.disciplineComboBox.currentIndexChanged['QString'].connect(self.disciplineComboBox_changed)
         self.ui.addPieceBtn.clicked.connect(self.addPieceBtn_clicked)
@@ -178,27 +178,27 @@ class AddEntryDialog(QDialog):
             name = name = t.first + " " + t.last
             self.ui.teacherLineEdit.setText(name)
 
-    def createNewSoloParticipantBtn_clicked(self):
-        """opens Add Solo Participant Dialog"""
-        dialog = AddSoloParticipantDialog(testing=self.testing, closeAfterAdd=True)
+    def createNewParticipantBtn_clicked(self):
+        """opens Add Participant Dialog"""
+        dialog = AddParticipantDialog(testing=self.testing, closeAfterAdd=True)
         # For Modal dialog
         result = dialog.exec_()
 
         if result == True:
             p = dialog.getParticipant()
             self.ui.participantLineEdit.setText(p.first + ' ' + p.last)
-            self.participantId = dbInteractionInstance.getLastSoloParticipantId()
+            self.participantId = dbInteractionInstance.getLastParticipantId()
 
-    def createNewGroupParticipantBtn_clicked(self):
-        """opens Add Group Participant Dialog"""
-        dialog = AddGroupParticipantDialog(testing=self.testing, closeAfterAdd=True)
-        # For Modal dialog
-        result = dialog.exec_()
+    # def createNewGroupParticipantBtn_clicked(self):
+    #     """opens Add Group Participant Dialog"""
+    #     dialog = AddGroupParticipantDialog(testing=self.testing, closeAfterAdd=True)
+    #     # For Modal dialog
+    #     result = dialog.exec_()
 
-        if result == True:
-            gp = dialog.getGroupParticipant()
-            self.ui.participantLineEdit.setText(gp.groupName)
-            self.participantId = dbInteractionInstance.getLastGroupParticipantId()
+    #     if result == True:
+    #         gp = dialog.getGroupParticipant()
+    #         self.ui.participantLineEdit.setText(gp.groupName)
+    #         self.participantId = dbInteractionInstance.getLastGroupParticipantId()
 
     def createNewTeacherBtn_clicked(self):
         """opens Add Teacher Dialog"""

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addEntryDialog.ui'
 #
-# Created: Wed Jan 14 20:21:05 2015
+# Created: Sun Jan 31 03:02:21 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -75,12 +75,9 @@ class Ui_AddEntryDialog(object):
         self.chooseParticipantBtn.setToolTip(_fromUtf8(""))
         self.chooseParticipantBtn.setObjectName(_fromUtf8("chooseParticipantBtn"))
         self.gridLayout_2.addWidget(self.chooseParticipantBtn, 0, 0, 1, 1)
-        self.createNewSoloParticipantBtn = QtGui.QPushButton(AddEntryDialog)
-        self.createNewSoloParticipantBtn.setObjectName(_fromUtf8("createNewSoloParticipantBtn"))
-        self.gridLayout_2.addWidget(self.createNewSoloParticipantBtn, 0, 1, 1, 1)
-        self.createNewGroupParticipantBtn = QtGui.QPushButton(AddEntryDialog)
-        self.createNewGroupParticipantBtn.setObjectName(_fromUtf8("createNewGroupParticipantBtn"))
-        self.gridLayout_2.addWidget(self.createNewGroupParticipantBtn, 0, 2, 1, 1)
+        self.createNewParticipantBtn = QtGui.QPushButton(AddEntryDialog)
+        self.createNewParticipantBtn.setObjectName(_fromUtf8("createNewParticipantBtn"))
+        self.gridLayout_2.addWidget(self.createNewParticipantBtn, 0, 1, 1, 1)
         self.formLayout_2.setLayout(2, QtGui.QFormLayout.FieldRole, self.gridLayout_2)
         self.teacherLabel = QtGui.QLabel(AddEntryDialog)
         self.teacherLabel.setObjectName(_fromUtf8("teacherLabel"))
@@ -160,9 +157,8 @@ class Ui_AddEntryDialog(object):
         self.retranslateUi(AddEntryDialog)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(AddEntryDialog)
-        AddEntryDialog.setTabOrder(self.chooseParticipantBtn, self.createNewSoloParticipantBtn)
-        AddEntryDialog.setTabOrder(self.createNewSoloParticipantBtn, self.createNewGroupParticipantBtn)
-        AddEntryDialog.setTabOrder(self.createNewGroupParticipantBtn, self.chooseTeacherBtn)
+        AddEntryDialog.setTabOrder(self.chooseParticipantBtn, self.createNewParticipantBtn)
+        AddEntryDialog.setTabOrder(self.createNewParticipantBtn, self.chooseTeacherBtn)
         AddEntryDialog.setTabOrder(self.chooseTeacherBtn, self.createNewTeacherBtn)
         AddEntryDialog.setTabOrder(self.createNewTeacherBtn, self.disciplineComboBox)
         AddEntryDialog.setTabOrder(self.disciplineComboBox, self.classNumberLineEdit)
@@ -186,8 +182,7 @@ class Ui_AddEntryDialog(object):
         self.addEntryBtn.setText(_translate("AddEntryDialog", "A&dd Entry", None))
         self.participantLabel.setText(_translate("AddEntryDialog", "Participant", None))
         self.chooseParticipantBtn.setText(_translate("AddEntryDialog", "Choose...", None))
-        self.createNewSoloParticipantBtn.setText(_translate("AddEntryDialog", "Create New &Solo...", None))
-        self.createNewGroupParticipantBtn.setText(_translate("AddEntryDialog", "Create New &Group...", None))
+        self.createNewParticipantBtn.setText(_translate("AddEntryDialog", "Create New...", None))
         self.teacherLabel.setText(_translate("AddEntryDialog", "Teacher/Contact Person", None))
         self.chooseTeacherBtn.setText(_translate("AddEntryDialog", "Choose...", None))
         self.createNewTeacherBtn.setText(_translate("AddEntryDialog", "Create New...", None))
