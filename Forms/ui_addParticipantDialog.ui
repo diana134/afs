@@ -425,6 +425,35 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>firstNameLineEdit</tabstop>
+  <tabstop>lastNameLineEdit</tabstop>
+  <tabstop>dateOfBirthDateEdit</tabstop>
+  <tabstop>ageSpinBox</tabstop>
+  <tabstop>parentLineEdit</tabstop>
+  <tabstop>homePhoneLineEdit</tabstop>
+  <tabstop>cellPhoneLineEdit</tabstop>
+  <tabstop>emailLineEdit</tabstop>
+  <tabstop>addressLineEdit</tabstop>
+  <tabstop>cityLineEdit</tabstop>
+  <tabstop>postalCodeLineEdit</tabstop>
+  <tabstop>schoolAttendingLineEdit</tabstop>
+  <tabstop>schoolGradeLineEdit</tabstop>
+  <tabstop>clearContactBtn</tabstop>
+  <tabstop>chooseContactBtn</tabstop>
+  <tabstop>createContactBtn</tabstop>
+  <tabstop>groupNameLineEdit</tabstop>
+  <tabstop>groupSizeLineEdit</tabstop>
+  <tabstop>averageAgeLineEdit</tabstop>
+  <tabstop>calculateAverageAgeBtn</tabstop>
+  <tabstop>timeConstraintsGroupBox</tabstop>
+  <tabstop>earliestPerformanceTimeTimeEdit</tabstop>
+  <tabstop>latestPerformanceTimeTimeEdit</tabstop>
+  <tabstop>participantTabWidget</tabstop>
+  <tabstop>addParticipantBtn</tabstop>
+  <tabstop>cancelBtn</tabstop>
+  <tabstop>contactPersonLineEdit</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

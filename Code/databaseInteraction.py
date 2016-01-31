@@ -63,6 +63,7 @@ class DatabaseInteraction(object):
         self.participantModel.setHeaderData(17, Qt.Horizontal, "Participants") # TODO display names
         self.participantModel.setHeaderData(18, Qt.Horizontal, "Average Age")
         self.participantModel.setHeaderData(19, Qt.Horizontal, "Contact") # TODO display name
+        # TODO display first piece title for groups
 
         # Teacher
         self.teacherModel = QSqlTableModel(db=self.conn)

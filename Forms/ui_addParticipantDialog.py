@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addParticipantDialog.ui'
 #
-# Created: Sat Jan 30 00:59:24 2016
+# Created: Sun Jan 31 00:30:08 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -220,6 +220,32 @@ class Ui_AddParticipantDialog(object):
         self.retranslateUi(AddParticipantDialog)
         self.participantTabWidget.setCurrentIndex(-1)
         QtCore.QMetaObject.connectSlotsByName(AddParticipantDialog)
+        AddParticipantDialog.setTabOrder(self.firstNameLineEdit, self.lastNameLineEdit)
+        AddParticipantDialog.setTabOrder(self.lastNameLineEdit, self.dateOfBirthDateEdit)
+        AddParticipantDialog.setTabOrder(self.dateOfBirthDateEdit, self.ageSpinBox)
+        AddParticipantDialog.setTabOrder(self.ageSpinBox, self.parentLineEdit)
+        AddParticipantDialog.setTabOrder(self.parentLineEdit, self.homePhoneLineEdit)
+        AddParticipantDialog.setTabOrder(self.homePhoneLineEdit, self.cellPhoneLineEdit)
+        AddParticipantDialog.setTabOrder(self.cellPhoneLineEdit, self.emailLineEdit)
+        AddParticipantDialog.setTabOrder(self.emailLineEdit, self.addressLineEdit)
+        AddParticipantDialog.setTabOrder(self.addressLineEdit, self.cityLineEdit)
+        AddParticipantDialog.setTabOrder(self.cityLineEdit, self.postalCodeLineEdit)
+        AddParticipantDialog.setTabOrder(self.postalCodeLineEdit, self.schoolAttendingLineEdit)
+        AddParticipantDialog.setTabOrder(self.schoolAttendingLineEdit, self.schoolGradeLineEdit)
+        AddParticipantDialog.setTabOrder(self.schoolGradeLineEdit, self.clearContactBtn)
+        AddParticipantDialog.setTabOrder(self.clearContactBtn, self.chooseContactBtn)
+        AddParticipantDialog.setTabOrder(self.chooseContactBtn, self.createContactBtn)
+        AddParticipantDialog.setTabOrder(self.createContactBtn, self.groupNameLineEdit)
+        AddParticipantDialog.setTabOrder(self.groupNameLineEdit, self.groupSizeLineEdit)
+        AddParticipantDialog.setTabOrder(self.groupSizeLineEdit, self.averageAgeLineEdit)
+        AddParticipantDialog.setTabOrder(self.averageAgeLineEdit, self.calculateAverageAgeBtn)
+        AddParticipantDialog.setTabOrder(self.calculateAverageAgeBtn, self.timeConstraintsGroupBox)
+        AddParticipantDialog.setTabOrder(self.timeConstraintsGroupBox, self.earliestPerformanceTimeTimeEdit)
+        AddParticipantDialog.setTabOrder(self.earliestPerformanceTimeTimeEdit, self.latestPerformanceTimeTimeEdit)
+        AddParticipantDialog.setTabOrder(self.latestPerformanceTimeTimeEdit, self.participantTabWidget)
+        AddParticipantDialog.setTabOrder(self.participantTabWidget, self.addParticipantBtn)
+        AddParticipantDialog.setTabOrder(self.addParticipantBtn, self.cancelBtn)
+        AddParticipantDialog.setTabOrder(self.cancelBtn, self.contactPersonLineEdit)
 
     def retranslateUi(self, AddParticipantDialog):
         AddParticipantDialog.setWindowTitle(_translate("AddParticipantDialog", "Dialog", None))
