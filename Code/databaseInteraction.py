@@ -52,7 +52,7 @@ class DatabaseInteraction(object):
         self.participantModel.setHeaderData(5, Qt.Horizontal, "Home Phone")
         self.participantModel.setHeaderData(6, Qt.Horizontal, "Cell Phone")
         self.participantModel.setHeaderData(7, Qt.Horizontal, "Email")
-        self.participantModel.setHeaderData(8, Qt.Horizontal, "Date of Birth")
+        self.participantModel.setHeaderData(9, Qt.Horizontal, "Date of Birth")
         self.participantModel.setHeaderData(10, Qt.Horizontal, "School Attending")
         self.participantModel.setHeaderData(11, Qt.Horizontal, "Parent")
         self.participantModel.setHeaderData(12, Qt.Horizontal, "School Grade")
@@ -60,9 +60,9 @@ class DatabaseInteraction(object):
         self.participantModel.setHeaderData(14, Qt.Horizontal, "Group Size")
         self.participantModel.setHeaderData(15, Qt.Horizontal, "Earliest Performance Time")
         self.participantModel.setHeaderData(16, Qt.Horizontal, "Latest Performance Time")
-        self.participantModel.setHeaderData(17, Qt.Horizontal, "Participants") # TODO display names
+        self.participantModel.setHeaderData(17, Qt.Horizontal, "Participants")  # TODO display names
         self.participantModel.setHeaderData(18, Qt.Horizontal, "Average Age")
-        self.participantModel.setHeaderData(19, Qt.Horizontal, "Contact") # TODO display name
+        self.participantModel.setHeaderData(19, Qt.Horizontal, "Contact")  # TODO display name
         # TODO display first piece title for groups
 
         # Teacher
@@ -86,8 +86,8 @@ class DatabaseInteraction(object):
         self.entryModel.setSort(0, Qt.DescendingOrder)
         self.entryModel.select()
         # set headers
-        self.entryModel.setHeaderData(1, Qt.Horizontal, "Participant") # TODO display name
-        self.entryModel.setHeaderData(2, Qt.Horizontal, "Teacher") # TODO display name
+        self.entryModel.setHeaderData(1, Qt.Horizontal, "Participant")  # TODO display name
+        self.entryModel.setHeaderData(2, Qt.Horizontal, "Teacher")  # TODO display name
         self.entryModel.setHeaderData(3, Qt.Horizontal, "Discipline")
         self.entryModel.setHeaderData(4, Qt.Horizontal, "Level")
         self.entryModel.setHeaderData(5, Qt.Horizontal, "Class Number")
@@ -231,18 +231,38 @@ class DatabaseInteraction(object):
             print "addParticipant FAILED\n\tquery: {0}\n\terror: {1}".format(query, e)
             return e
 
-    def updateSoloParticipant(self, participantId, participant):
-        """Updates a SoloParticipant record"""
+    def updateParticipant(self, participantId, participant):
+        """Updates a Participant record"""
         try:
             query = QSqlQuery(self.conn)
-            query.prepare("UPDATE soloparticipants \
-                SET first_name=:first, last_name=:last, address=:address, town=:town, postal_code=:postal,\
-                home_phone=:home, cell_phone=:cell, email=:email, date_of_birth=:dob, school_attending=:schoolAttending, parent=:parent, age=:age, school_grade=:schoolGrade \
-                WHERE id=:id")
+            query.prepare("""UPDATE participants
+                SET 
+                    first_name=:first,
+                    last_name=:last,
+                    address=:address,
+                    city=:city,
+                    postal_code=:postal,
+                    home_phone=:home,
+                    cell_phone=:cell,
+                    email=:email,
+                    date_of_birth=:dob,
+                    school_attending=:schoolAttending,
+                    parent=:parent,
+                    age=:age,
+                    school_grade=:schoolGrade,
+                    group_name=:groupName,
+                    number_participants=:numberParticipants,
+                    earliest_time=:earliestTime,
+                    latest_time=:latestTime,
+                    group_participants=:groupParticipants,
+                    average_age=:averageAge,
+                    contact=:contact
+                WHERE 
+                    id=:id""")
             query.bindValue(":first", participant.first)
             query.bindValue(":last", participant.last)
             query.bindValue(":address", participant.address)
-            query.bindValue(":town", participant.town)
+            query.bindValue(":city", participant.city)
             query.bindValue(":postal", participant.postal)
             query.bindValue(":home", participant.home)
             query.bindValue(":cell", participant.cell)
@@ -252,16 +272,23 @@ class DatabaseInteraction(object):
             query.bindValue(":parent", participant.parent)
             query.bindValue(":age", participant.age)
             query.bindValue(":schoolGrade", participant.schoolGrade)
+            query.bindValue(":groupName", participant.groupName)
+            query.bindValue(":numberParticipants", participant.numberParticipants)
+            query.bindValue(":earliestTime", participant.earliestPerformanceTime)
+            query.bindValue(":latestTime", participant.latestPerformanceTime)
+            query.bindValue(":groupParticipants", participant.participants)
+            query.bindValue(":averageAge", participant.averageAge)
+            query.bindValue(":contact", participant.contact)
             query.bindValue(":id", participantId)
             query.exec_()
             if query.isActive() == False:
                 print query.lastError().text()
                 return query.lastError().text()
-            self.soloParticipantModel.select()
+            self.participantModel.select()
             return ""
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "updateSoloParticipant FAILED\n\tquery: {0}\n\terror: {1}".format(query, e)
+            print "updateParticipant FAILED\n\tquery: {0}\n\terror: {1}".format(query, e)
             return e
 
     def addGroupParticipant(self, gp):
@@ -578,7 +605,7 @@ class DatabaseInteraction(object):
             # else:
             #     query.prepare("SELECT group_name, group_size, school_grade, average_age, participants, contact \
             #         FROM groupparticipants WHERE id=:id")
-            query.prepare("SELECT first_name, last_name, group_name \
+            query.prepare("SELECT first_name, last_name, address, city, postal_code, home_phone, cell_phone, email, date_of_birth, school_attending, parent, age, school_grade, group_name, number_participants, earliest_time, latest_time, group_participants, average_age, contact \
                 FROM participants WHERE id=:id")
             # numericId = participantId[1:]
             query.bindValue(":id", participantId)
@@ -593,7 +620,7 @@ class DatabaseInteraction(object):
             first = str(query.value(0).toString())
             last = str(query.value(1).toString())
             address = str(query.value(2).toString())
-            town = str(query.value(3).toString())
+            city = str(query.value(3).toString())
             postal = str(query.value(4).toString())
             home = str(query.value(5).toString())
             cell = str(query.value(6).toString())
@@ -603,14 +630,20 @@ class DatabaseInteraction(object):
             parent = str(query.value(10).toString())
                 # retrievedParticipant = SoloParticipant(first, last, address, town, postal, home, cell, email, dob, schoolAttending, parent)
             # else:
-            groupName = str(query.value(0).toString())
-            groupSize = str(query.value(1).toString())
-            schoolGrade = str(query.value(2).toString())
-            averageAge = str(query.value(3).toString())
-            participants = str(query.value(4).toString())
-            contact = str(query.value(5).toString())
+            age = str(query.value(11).toString())
+            schoolGrade = str(query.value(12).toString())
+            groupName = str(query.value(13).toString())
+            groupSize = str(query.value(14).toString())
+            earliestTime = str(query.value(15).toString())
+            latestTime = str(query.value(16).toString())
+            participants = str(query.value(17).toString())            
+            averageAge = str(query.value(18).toString())
+            contact = str(query.value(19).toString())
                 # retrievedParticipant = GroupParticipant(groupName, groupSize, schoolGrade, averageAge, participants, contact)
-            retrievedParticipant = Participant(first, last, address, town, postal, home, cell, email, dob, schoolAttending, parent, groupName, groupSize, schoolGrade, averageAge, participants, contact)
+            retrievedParticipant = Participant(first=first, last=last, address=address, city=city, postal=postal, home=home,
+                cell=cell, email=email, dob=dob, schoolAttending=schoolAttending, parent=parent, age=age, schoolGrade=schoolGrade,
+                groupName=groupName, numberParticipants=groupSize, averageAge=averageAge, participants=participants, contact=contact,
+                earliestPerformanceTime=earliestTime, latestPerformanceTime=latestTime)
             return retrievedParticipant
         except Exception, e:
             # TODO: log this instead of printing to console

@@ -4,6 +4,7 @@ import sys
 import os.path
 sys.path.insert(0, os.path.join("..", "Forms"))
 import shutil
+import traceback
 from PyQt4.QtGui import QApplication, QMainWindow, QWidget, QMessageBox, QFileDialog, QItemSelectionModel, QAbstractItemView
 from PyQt4.QtCore import Qt
 
@@ -64,11 +65,11 @@ class MainWindow(QWidget):
         # self.ui.dumpBtn.clicked.connect(self.dumpBtn_clicked)
 
         self.ui.participantTableView.setModel(dbInteractionInstance.participantModel)
-        self.ui.participantTableView.model().sort(9, Qt.DescendingOrder)
+        self.ui.participantTableView.model().sort(8, Qt.DescendingOrder)
         self.ui.participantTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.participantModel))
         self.ui.participantTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.participantTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.ui.participantTableView.hideColumn(9) # id
+        self.ui.participantTableView.hideColumn(8) # id
 
         self.ui.teacherTableView.setModel(dbInteractionInstance.teacherModel)
         self.ui.teacherTableView.model().sort(0, Qt.DescendingOrder)
@@ -91,6 +92,23 @@ class MainWindow(QWidget):
         self.ui.pieceTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.ui.pieceTableView.hideColumn(0) # id
         self.ui.pieceTableView.hideColumn(4) # entryId
+
+    def getSelectedId(self, model, view):
+        """Get the id for the selected row given the model and view"""
+        try:
+            # Get which row in view is selected
+            indexList = view.selectionModel().selectedIndexes()  # gets all selected cells
+            row = indexList[0].row()
+            # Get column id is in
+            column = model.fieldIndex("id")
+            # Get QModelIndex of id
+            modelIndex = [i for i in indexList if i.row() == row and i.column() == column][0]
+            # Get id of selected object
+            data = model.data(modelIndex)
+            return str(data.toString())
+        except Exception, e:
+            print traceback.format_exc()
+            QMessageBox.critical(self, 'Choose Participant', 'Error reading database\n{0}'.format(e), QMessageBox.Ok)
 
     ###### Slots ######
 
@@ -124,7 +142,7 @@ class MainWindow(QWidget):
         if result == True:
             entries = dbInteractionInstance.getAllEntriesInDiscipline(settingsInteractionInstance.loadDiscipline())
             solution = self.scheduler.process(entries, settingsInteractionInstance.loadSessionDatetimes())
-            print solution            
+            print solution
             if solution is None:
                 QMessageBox.warning(self, 'No schedule found', 'No schedule was found for the specified parameters. Try increasing tolerance for overtime or making the sessions longer.', 
                     QMessageBox.Ok)
@@ -150,11 +168,11 @@ class MainWindow(QWidget):
 
     def editParticipantBtn_clicked(self):
         """Opens the dialog for editing"""
-        # TODO get participant id
-        participantId = 0
-        dialog = EditParticipantDialog(participantId=participantId)
-        # For Modal dialog
-        dialog.exec_()
+        participantId = self.getSelectedId(model=dbInteractionInstance.participantModel, view=self.ui.participantTableView)
+        if participantId:
+            dialog = EditParticipantDialog(participantId=participantId)
+            # For Modal dialog
+            dialog.exec_()
 
     def editTeacherBtn_clicked(self):
         """Opens dialog for editing"""
