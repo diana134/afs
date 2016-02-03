@@ -176,11 +176,11 @@ class MainWindow(QWidget):
 
     def editTeacherBtn_clicked(self):
         """Opens dialog for editing"""
-        # TODO get teacher id
-        teacherId = 0
-        dialog = EditTeacherDialog(teacherId=teacherId)
-        # For Modal dialog
-        dialog.exec_()
+        teacherId = self.getSelectedId(model=dbInteractionInstance.teacherModel, view=self.ui.teacherTableView)
+        if teacherId:
+            dialog = EditTeacherDialog(teacherId=teacherId)
+            # For Modal dialog
+            dialog.exec_()
 
     def editEntryBtn_clicked(self):
         """Opens dialog for editing"""
