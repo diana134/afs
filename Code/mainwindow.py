@@ -53,9 +53,9 @@ class MainWindow(QWidget):
         self.ui.editParticipantBtn.clicked.connect(self.editParticipantBtn_clicked)
         self.ui.editTeacherBtn.clicked.connect(self.editTeacherBtn_clicked)
         self.ui.editEntryBtn.clicked.connect(self.editEntryBtn_clicked)
-        # self.ui.deleteParticipantBtn.clicked.connect(self.deleteParticipantBtn_clicked)
-        # self.ui.deleteTeacherBtn.clicked.connect(self.deleteTeacherBtn_clicked)
-        # self.ui.deleteEntryBtn.clicked.connect(self.deleteEntryBtn_clicked)
+        self.ui.deleteParticipantBtn.clicked.connect(self.deleteParticipantBtn_clicked)
+        self.ui.deleteTeacherBtn.clicked.connect(self.deleteTeacherBtn_clicked)
+        self.ui.deleteEntryBtn.clicked.connect(self.deleteEntryBtn_clicked)
         # self.ui.backupDbBtn.clicked.connect(self.backupDbBtn_clicked)
         # self.ui.restoreDbBtn.clicked.connect(self.restoreDbBtn_clicked)
         # self.ui.createNewDbBtn.clicked.connect(self.createNewDbBtn_clicked)
@@ -192,8 +192,7 @@ class MainWindow(QWidget):
 
     def deleteTeacherBtn_clicked(self):
         """Deletes selected teacher"""
-         # TODO get teacher id
-        teacherId = 0
+        teacherId = self.getSelectedId(model=dbInteractionInstance.teacherModel, view=self.ui.teacherTableView)
 
         if QMessageBox.question(self, "Cannot be undone!", "Warning! This action cannot be undone. \nAre you sure you want to delete this teacher/contact?", QMessageBox.Yes|QMessageBox.No) == QMessageBox.Yes:
             # Delete the teacher
@@ -201,8 +200,7 @@ class MainWindow(QWidget):
 
     def deleteEntryBtn_clicked(self):
         """Deletes selected entry"""
-         # TODO get entry id
-        entryId = 0
+        entryId = self.getSelectedId(model=dbInteractionInstance.entryModel, view=self.ui.entryTableView)
 
         if QMessageBox.question(self, "Cannot be undone!", "Warning! This action cannot be undone. \nAre you sure you want to delete this entry?", QMessageBox.Yes|QMessageBox.No) == QMessageBox.Yes:
             # Delete the entry
@@ -210,12 +208,11 @@ class MainWindow(QWidget):
 
     def deleteParticipantBtn_clicked(self):
         """Deletes selected participant"""
-         # TODO get participant id
-        participantId = 0
+        participantId = self.getSelectedId(model=dbInteractionInstance.participantModel, view=self.ui.participantTableView)
 
         if QMessageBox.question(self, "Cannot be undone!", "Warning! This action cannot be undone. \nAre you sure you want to delete this participant?", QMessageBox.Yes|QMessageBox.No) == QMessageBox.Yes:
             # Delete the participant
-            dbInteractionInstance.deleteParticipantFromId(participantId[1:])
+            dbInteractionInstance.deleteParticipantFromId(participantId)
 
     def backupDbBtn_clicked(self):
         """Copies the current db file to AFS-YYYY-MM-DD-HH-MM-SS.bak"""

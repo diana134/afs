@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Sun Jan 31 03:23:09 2016
+# Created: Tue Feb  2 21:08:24 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -55,6 +55,9 @@ class Ui_MainWindow(object):
         self.editParticipantBtn = QtGui.QPushButton(self.centralwidget)
         self.editParticipantBtn.setObjectName(_fromUtf8("editParticipantBtn"))
         self.horizontalLayout.addWidget(self.editParticipantBtn)
+        self.deleteParticipantBtn = QtGui.QPushButton(self.centralwidget)
+        self.deleteParticipantBtn.setObjectName(_fromUtf8("deleteParticipantBtn"))
+        self.horizontalLayout.addWidget(self.deleteParticipantBtn)
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
         self.verticalLayout_2 = QtGui.QVBoxLayout()
@@ -80,6 +83,9 @@ class Ui_MainWindow(object):
         self.editTeacherBtn = QtGui.QPushButton(self.centralwidget)
         self.editTeacherBtn.setObjectName(_fromUtf8("editTeacherBtn"))
         self.horizontalLayout_4.addWidget(self.editTeacherBtn)
+        self.deleteTeacherBtn = QtGui.QPushButton(self.centralwidget)
+        self.deleteTeacherBtn.setObjectName(_fromUtf8("deleteTeacherBtn"))
+        self.horizontalLayout_4.addWidget(self.deleteTeacherBtn)
         self.verticalLayout_2.addLayout(self.horizontalLayout_4)
         self.gridLayout.addLayout(self.verticalLayout_2, 0, 1, 1, 1)
         self.splitter_2 = QtGui.QSplitter(self.centralwidget)
@@ -111,6 +117,9 @@ class Ui_MainWindow(object):
         self.editEntryBtn = QtGui.QPushButton(self.verticalLayoutWidget_4)
         self.editEntryBtn.setObjectName(_fromUtf8("editEntryBtn"))
         self.horizontalLayout_3.addWidget(self.editEntryBtn)
+        self.deleteEntryBtn = QtGui.QPushButton(self.verticalLayoutWidget_4)
+        self.deleteEntryBtn.setObjectName(_fromUtf8("deleteEntryBtn"))
+        self.horizontalLayout_3.addWidget(self.deleteEntryBtn)
         self.verticalLayout_4.addLayout(self.horizontalLayout_3)
         self.verticalLayoutWidget_3 = QtGui.QWidget(self.splitter_2)
         self.verticalLayoutWidget_3.setObjectName(_fromUtf8("verticalLayoutWidget_3"))
@@ -161,12 +170,15 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "Participants", None))
         self.addParticipantBtn.setText(_translate("MainWindow", "Add New Participant", None))
         self.editParticipantBtn.setText(_translate("MainWindow", "Edit Participant", None))
+        self.deleteParticipantBtn.setText(_translate("MainWindow", "Delete Participant", None))
         self.label_3.setText(_translate("MainWindow", "Teachers", None))
         self.addTeacherBtn.setText(_translate("MainWindow", "Add New Teacher", None))
         self.editTeacherBtn.setText(_translate("MainWindow", "Edit Teacher", None))
+        self.deleteTeacherBtn.setText(_translate("MainWindow", "Delete Teacher", None))
         self.label_4.setText(_translate("MainWindow", "Entries", None))
         self.addEntryBtn.setText(_translate("MainWindow", "Add New Entry", None))
         self.editEntryBtn.setText(_translate("MainWindow", "Edit Entry", None))
+        self.deleteEntryBtn.setText(_translate("MainWindow", "Delete Entry", None))
         self.label.setText(_translate("MainWindow", "Pieces", None))
         self.menu_File.setTitle(_translate("MainWindow", "&File", None))
         self.menu_Schedule.setTitle(_translate("MainWindow", "&Schedule", None))

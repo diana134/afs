@@ -75,6 +75,13 @@
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QPushButton" name="deleteParticipantBtn">
+          <property name="text">
+           <string>Delete Participant</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
      </layout>
@@ -133,6 +140,13 @@
          <widget class="QPushButton" name="editTeacherBtn">
           <property name="text">
            <string>Edit Teacher</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="deleteTeacherBtn">
+          <property name="text">
+           <string>Delete Teacher</string>
           </property>
          </widget>
         </item>
@@ -199,6 +213,13 @@
            <widget class="QPushButton" name="editEntryBtn">
             <property name="text">
              <string>Edit Entry</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="deleteEntryBtn">
+            <property name="text">
+             <string>Delete Entry</string>
             </property>
            </widget>
           </item>
