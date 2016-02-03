@@ -5,6 +5,7 @@
 from schedule import Schedule
 from event import Event
 from settingsInteraction import settingsInteractionInstance
+import datetime
 
 # TOLERANCE = datetime.timedelta(minutes=10)
 
@@ -36,7 +37,16 @@ class Scheduler(object):
         schedule = Schedule(sessionDatetimes)
         self.possibleEvents = self.sortEntriesByClass(entriesInDiscipline)
 
-        result = self.recursiveProcess(schedule)
+        # Check that there is enough time in the schedule to fit all the events
+        eventTime = datetime.timedelta(seconds=0)
+        for event in self.possibleEvents:
+            event.calculateTotalTime()
+            eventTime += event.totalTime
+
+        if eventTime <= schedule.totalAvailableTime():
+            result = self.recursiveProcess(schedule)
+        else:
+            result = None
         print "Finished"
         return result
 

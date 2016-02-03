@@ -48,7 +48,7 @@ class MainWindow(QWidget):
         self.ui.addParticipantBtn.clicked.connect(self.addParticipantBtn_clicked)
         self.ui.addTeacherBtn.clicked.connect(self.addTeacherBtn_clicked)
         self.ui.addEntryBtn.clicked.connect(self.addEntryBtn_clicked)
-        # self.ui.makeScheduleBtn.clicked.connect(self.makeScheduleBtn_clicked)
+        self.ui.runSchedulerAction.triggered.connect(self.runSchedulerAction_triggered)
         # self.ui.loadScheduleBtn.clicked.connect(self.loadScheduleBtn_clicked)
         self.ui.editParticipantBtn.clicked.connect(self.editParticipantBtn_clicked)
         self.ui.editTeacherBtn.clicked.connect(self.editTeacherBtn_clicked)
@@ -127,7 +127,7 @@ class MainWindow(QWidget):
         # For Modal dialog
         dialog.exec_()
 
-    def makeScheduleBtn_clicked(self):
+    def runSchedulerAction_triggered(self):
         ### Test Code ###
         # s1Start = datetime.datetime(2014, 4, 7, 9)
         # s1End = datetime.datetime(2014, 4, 7, 12)

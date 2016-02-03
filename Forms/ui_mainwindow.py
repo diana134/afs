@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Tue Feb  2 21:08:24 2016
+# Created: Tue Feb  2 21:22:33 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -149,15 +149,20 @@ class Ui_MainWindow(object):
         self.menu_Database = QtGui.QMenu(self.menubar)
         self.menu_Database.setObjectName(_fromUtf8("menu_Database"))
         MainWindow.setMenuBar(self.menubar)
-        self.action_Create_Backup = QtGui.QAction(MainWindow)
-        self.action_Create_Backup.setObjectName(_fromUtf8("action_Create_Backup"))
+        self.createBackupAction = QtGui.QAction(MainWindow)
+        self.createBackupAction.setObjectName(_fromUtf8("createBackupAction"))
         self.action_Load_Backup = QtGui.QAction(MainWindow)
         self.action_Load_Backup.setObjectName(_fromUtf8("action_Load_Backup"))
-        self.actionE_xit = QtGui.QAction(MainWindow)
-        self.actionE_xit.setObjectName(_fromUtf8("actionE_xit"))
-        self.menu_File.addAction(self.actionE_xit)
-        self.menu_Database.addAction(self.action_Create_Backup)
-        self.menu_Database.addAction(self.action_Load_Backup)
+        self.exitAction = QtGui.QAction(MainWindow)
+        self.exitAction.setObjectName(_fromUtf8("exitAction"))
+        self.runSchedulerAction = QtGui.QAction(MainWindow)
+        self.runSchedulerAction.setObjectName(_fromUtf8("runSchedulerAction"))
+        self.exportAction = QtGui.QAction(MainWindow)
+        self.exportAction.setObjectName(_fromUtf8("exportAction"))
+        self.menu_File.addAction(self.exitAction)
+        self.menu_Schedule.addAction(self.runSchedulerAction)
+        self.menu_Database.addAction(self.createBackupAction)
+        self.menu_Database.addAction(self.exportAction)
         self.menubar.addAction(self.menu_File.menuAction())
         self.menubar.addAction(self.menu_Schedule.menuAction())
         self.menubar.addAction(self.menu_Database.menuAction())
@@ -183,7 +188,9 @@ class Ui_MainWindow(object):
         self.menu_File.setTitle(_translate("MainWindow", "&File", None))
         self.menu_Schedule.setTitle(_translate("MainWindow", "&Schedule", None))
         self.menu_Database.setTitle(_translate("MainWindow", "&Database", None))
-        self.action_Create_Backup.setText(_translate("MainWindow", "&Create Backup", None))
+        self.createBackupAction.setText(_translate("MainWindow", "&Create Backup", None))
         self.action_Load_Backup.setText(_translate("MainWindow", "&Load Backup", None))
-        self.actionE_xit.setText(_translate("MainWindow", "E&xit", None))
+        self.exitAction.setText(_translate("MainWindow", "E&xit", None))
+        self.runSchedulerAction.setText(_translate("MainWindow", "Run Scheduler...", None))
+        self.exportAction.setText(_translate("MainWindow", "Export to CSV", None))
 

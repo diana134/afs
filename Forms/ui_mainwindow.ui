@@ -274,25 +274,26 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <addaction name="actionE_xit"/>
+    <addaction name="exitAction"/>
    </widget>
    <widget class="QMenu" name="menu_Schedule">
     <property name="title">
      <string>&amp;Schedule</string>
     </property>
+    <addaction name="runSchedulerAction"/>
    </widget>
    <widget class="QMenu" name="menu_Database">
     <property name="title">
      <string>&amp;Database</string>
     </property>
-    <addaction name="action_Create_Backup"/>
-    <addaction name="action_Load_Backup"/>
+    <addaction name="createBackupAction"/>
+    <addaction name="exportAction"/>
    </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Schedule"/>
    <addaction name="menu_Database"/>
   </widget>
-  <action name="action_Create_Backup">
+  <action name="createBackupAction">
    <property name="text">
     <string>&amp;Create Backup</string>
    </property>
@@ -302,9 +303,19 @@
     <string>&amp;Load Backup</string>
    </property>
   </action>
-  <action name="actionE_xit">
+  <action name="exitAction">
    <property name="text">
     <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="runSchedulerAction">
+   <property name="text">
+    <string>Run Scheduler...</string>
+   </property>
+  </action>
+  <action name="exportAction">
+   <property name="text">
+    <string>Export to CSV</string>
    </property>
   </action>
  </widget>

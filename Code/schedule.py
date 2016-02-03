@@ -28,6 +28,10 @@ class Session(object):
         """Remove an event from this session"""
         self.eventList.remove(event)
 
+    def duration(self):
+        """Returns the length of the session"""
+        return self.endDatetime - self.startDatetime
+
     def filledTime(self):
         """Returns how much time is filled by the events"""
         filledTime = datetime.timedelta()
@@ -54,7 +58,7 @@ class Session(object):
             return True
         else:
             return False
-            
+
     def export(self, csvFile):
         """Export this session to a csv.  The csvFile parameter must be a file with write permissions"""
         s = '"{startDate}","{endDate}","{numEvents} events"\n'.format(
@@ -90,6 +94,13 @@ class Schedule(object):
         if sessionDatetimes is not None:
             for startDatetime, endDatetime in sessionDatetimes:
                 self.sessions.append(Session(startDatetime, endDatetime))
+
+    def totalAvailableTime(self):
+        """Returns the total duration of all the sessions"""
+        totalTime = datetime.timedelta(seconds=0)
+        for session in self.sessions:
+            totalTime += session.duration()
+        return totalTime
 
     def findNextFit(self, durationToFit):
         """Returns the chronologically first session that isn't full, or None if they're all full"""
@@ -130,18 +141,18 @@ class Schedule(object):
         fout = open(filename, 'w')
         pickle.dump(self, fout)
         fout.close()
-        
+
     def load(self, filename):
         """Load the schedule from a pickled blob"""
         fin = open(filename, 'r')
         loaded = pickle.load(fin)
         fin.close()
-        
+
         # copy the data we loaded into self
         self.sessions = []
         for s in loaded.sessions:
             self.sessions.append(s)
-            
+
     def export(self, filename):
         """Export the schedule as a reasonably-nicely formatted .csv file so they can play around with in in Excel"""
         fout = open(filename, 'w')
