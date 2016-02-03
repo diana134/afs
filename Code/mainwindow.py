@@ -48,21 +48,22 @@ class MainWindow(QWidget):
         self.ui.addParticipantBtn.clicked.connect(self.addParticipantBtn_clicked)
         self.ui.addTeacherBtn.clicked.connect(self.addTeacherBtn_clicked)
         self.ui.addEntryBtn.clicked.connect(self.addEntryBtn_clicked)
+
         self.ui.runSchedulerAction.triggered.connect(self.runSchedulerAction_triggered)
-        # self.ui.loadScheduleBtn.clicked.connect(self.loadScheduleBtn_clicked)
+        self.ui.loadScheduleAction.triggered.connect(self.loadScheduleAction_triggered)
+
         self.ui.editParticipantBtn.clicked.connect(self.editParticipantBtn_clicked)
         self.ui.editTeacherBtn.clicked.connect(self.editTeacherBtn_clicked)
         self.ui.editEntryBtn.clicked.connect(self.editEntryBtn_clicked)
+
         self.ui.deleteParticipantBtn.clicked.connect(self.deleteParticipantBtn_clicked)
         self.ui.deleteTeacherBtn.clicked.connect(self.deleteTeacherBtn_clicked)
         self.ui.deleteEntryBtn.clicked.connect(self.deleteEntryBtn_clicked)
-        # self.ui.backupDbBtn.clicked.connect(self.backupDbBtn_clicked)
+
+        self.ui.createBackupAction.triggered.connect(self.createBackupAction_triggered)
         # self.ui.restoreDbBtn.clicked.connect(self.restoreDbBtn_clicked)
         # self.ui.createNewDbBtn.clicked.connect(self.createNewDbBtn_clicked)
-        # self.ui.entriesByDisciplineBtn.clicked.connect(self.entriesByDisciplineBtn_clicked)
-        # self.ui.entriesByTeacherBtn.clicked.connect(self.entriesByTeacherBtn_clicked)
-        # self.ui.entriesByGroupBtn.clicked.connect(self.entriesByGroupBtn_clicked)
-        # self.ui.dumpBtn.clicked.connect(self.dumpBtn_clicked)
+        self.ui.exportAction.triggered.connect(self.exportAction_triggered)
 
         self.ui.participantTableView.setModel(dbInteractionInstance.participantModel)
         self.ui.participantTableView.model().sort(8, Qt.DescendingOrder)
@@ -152,7 +153,7 @@ class MainWindow(QWidget):
             if result == True:
                 pass
 
-    def loadScheduleBtn_clicked(self):
+    def loadScheduleAction_triggered(self):
         """Loads a schedule from file"""
         schedule = Schedule()
         filename = QFileDialog.getOpenFileName(self, "Load Schedule", exportsPath, "Schedule Files (*.sched)")
@@ -214,7 +215,7 @@ class MainWindow(QWidget):
             # Delete the participant
             dbInteractionInstance.deleteParticipantFromId(participantId)
 
-    def backupDbBtn_clicked(self):
+    def createBackupAction_triggered(self):
         """Copies the current db file to AFS-YYYY-MM-DD-HH-MM-SS.bak"""
         result = dbInteractionInstance.backupDb()
         if result == "":
@@ -305,7 +306,7 @@ class MainWindow(QWidget):
             # TODO write csv
             QMessageBox.information(self, 'Report Entries by School/Group', 'Report saved to ' + filename, QMessageBox.Ok)
 
-    def dumpBtn_clicked(self):
+    def exportAction_triggered(self):
         """Saves a csv of all the data so they can do what they want with it"""
         filename = QFileDialog.getSaveFileName(self, "Database Dump", exportsPath, "CSV Files (*.csv)")
         if filename is not None and filename != "":

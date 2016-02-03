@@ -281,6 +281,7 @@
      <string>&amp;Schedule</string>
     </property>
     <addaction name="runSchedulerAction"/>
+    <addaction name="loadScheduleAction"/>
    </widget>
    <widget class="QMenu" name="menu_Database">
     <property name="title">
@@ -310,12 +311,17 @@
   </action>
   <action name="runSchedulerAction">
    <property name="text">
-    <string>Run Scheduler...</string>
+    <string>Create Schedule...</string>
    </property>
   </action>
   <action name="exportAction">
    <property name="text">
     <string>Export to CSV</string>
+   </property>
+  </action>
+  <action name="loadScheduleAction">
+   <property name="text">
+    <string>Load Schedule...</string>
    </property>
   </action>
  </widget>

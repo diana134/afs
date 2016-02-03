@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Tue Feb  2 21:22:33 2016
+# Created: Tue Feb  2 21:51:14 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -159,8 +159,11 @@ class Ui_MainWindow(object):
         self.runSchedulerAction.setObjectName(_fromUtf8("runSchedulerAction"))
         self.exportAction = QtGui.QAction(MainWindow)
         self.exportAction.setObjectName(_fromUtf8("exportAction"))
+        self.loadScheduleAction = QtGui.QAction(MainWindow)
+        self.loadScheduleAction.setObjectName(_fromUtf8("loadScheduleAction"))
         self.menu_File.addAction(self.exitAction)
         self.menu_Schedule.addAction(self.runSchedulerAction)
+        self.menu_Schedule.addAction(self.loadScheduleAction)
         self.menu_Database.addAction(self.createBackupAction)
         self.menu_Database.addAction(self.exportAction)
         self.menubar.addAction(self.menu_File.menuAction())
@@ -191,6 +194,7 @@ class Ui_MainWindow(object):
         self.createBackupAction.setText(_translate("MainWindow", "&Create Backup", None))
         self.action_Load_Backup.setText(_translate("MainWindow", "&Load Backup", None))
         self.exitAction.setText(_translate("MainWindow", "E&xit", None))
-        self.runSchedulerAction.setText(_translate("MainWindow", "Run Scheduler...", None))
+        self.runSchedulerAction.setText(_translate("MainWindow", "Create Schedule...", None))
         self.exportAction.setText(_translate("MainWindow", "Export to CSV", None))
+        self.loadScheduleAction.setText(_translate("MainWindow", "Load Schedule...", None))
 

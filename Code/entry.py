@@ -183,7 +183,7 @@ class Entry(object):
         return '"Class Number","Class Name","Discipline","Level","Years of Instruction","Instrument","Scheduling Requirements",\
         "Time","Title","Composer/Arranger/Author","Title of Musical",\
         "Participant First Name","Participant Last Name","Participant Address","Participant Town","Participant Postal Code","Participant Home Phone","Participant Cell Phone","Participant Email","Participant Date of Birth","Participant School","Participant Parent","Participant Age","Participant Grade",\
-        "Group Name","Group Size","Group Grade","Group Age","Group Participants","Earliest Performance Time","Latest Performance Time",\
+        "Group Name","Group Size","Average Age","Group Participants","Earliest Performance Time","Latest Performance Time",\
         "Teacher/Contact First Name","Teacher/Contact Last Name","Teacher/Contact Address","Teacher/Contact City","Teacher/Contact Postal Code","Teacher/Contact Daytime Phone","Teacher/Contact Evening Phone","Teacher/Contact Email",\
         \n'
 
@@ -231,66 +231,73 @@ class Entry(object):
             musical=musical
         )
 
-        # Participant data, solo then group
-        if type(participant) is SoloParticipant:
-            s += '"{first}","{last}","{address}","{town}","{postal}","{home}","{cell}","{email}","{dob}","{school}","{parent}","{age}","{grade}",'.format(
-                first=participant.first,
-                last=participant.last,
-                address=participant.address,
-                town=participant.town,
-                postal=participant.postal,
-                home=participant.home,
-                cell=participant.cell,
-                email=participant.email,
-                dob=participant.dob,
-                school=participant.schoolAttending,
-                parent=participant.parent,
-                age=participant.age,
-                grade=participant.schoolGrade
-            )
-            s += ',,,,,,,'
-        else:
-            pString = ""
-            tokens = participant.participants.split(',')
-            if tokens[0] != "":
-                for index in tokens:
-                    sp = dbInteractionInstance.getParticipantFromId(index)
-                    pString += "{first} {last}".format(first=sp.first, last=sp.last)
-                    if sp.age != "":
-                        pString += "{age}".format(age=sp.age)
-                    pString += ", "
-                if pString != "":
-                    # remove final comma space
-                    pString = pString[:-2]
+        # Participant data
+        # if type(participant) is SoloParticipant:
+        s += '"{first}","{last}","{address}","{city}","{postal}","{home}","{cell}","{email}","{dob}","{school}","{parent}","{age}","{grade}","{group_name}","{size}","{average_age}","{participants}","{early}","{late}",'.format(
+            first=participant.first,
+            last=participant.last,
+            address=participant.address,
+            city=participant.city,
+            postal=participant.postal,
+            home=participant.home,
+            cell=participant.cell,
+            email=participant.email,
+            dob=participant.dob,
+            school=participant.schoolAttending,
+            parent=participant.parent,
+            age=participant.age,
+            grade=participant.schoolGrade,
+            group_name=participant.groupName,
+            size=participant.numberParticipants,
+            average_age=participant.averageAge,
+            participants=participant.participants,
+            early=participant.earliestPerformanceTime,
+            late=participant.latestPerformanceTime
+        )
+        s += ',,,,,,,'
+        # else:
+            # pString = ""
+            # tokens = participant.participants.split(',')
+            # if tokens[0] != "":
+            #     for index in tokens:
+            #         sp = dbInteractionInstance.getParticipantFromId(index)
+            #         pString += "{first} {last}".format(first=sp.first, last=sp.last)
+            #         if sp.age != "":
+            #             pString += "{age}".format(age=sp.age)
+            #         pString += ", "
+            #     if pString != "":
+            #         # remove final comma space
+            #         pString = pString[:-2]
 
-            s += ',,,,,,,,,,,,,'
+            # s += ',,,,,,,,,,,,,'
 
-            s += '"{name}","{size}","{grade}","{age}","{participants}","{early}","{late}",'.format(
-                name=participant.groupName,
-                size=participant.groupSize,
-                grade=participant.schoolGrade,
-                age=participant.averageAge,
-                participants=pString,
-                early=participant.earliestPerformanceTime,
-                late=participant.latestPerformanceTime
-            )
+            # s += '"{name}","{size}","{grade}","{age}","{participants}","{early}","{late}",'.format(
+            #     name=participant.groupName,
+            #     size=participant.groupSize,
+            #     grade=participant.schoolGrade,
+            #     age=participant.averageAge,
+            #     participants=pString,
+            #     early=participant.earliestPerformanceTime,
+            #     late=participant.latestPerformanceTime
+            # )
 
         # contact/teacher info
         try:
             person = dbInteractionInstance.getTeacherFromId(participant.contact)
         except Exception:
             person = dbInteractionInstance.getTeacherFromId(self.teacherID)
+        print person
         s += '"{first}","{last}","{address}","{city}","{postal}","{daytimePhone}","{eveningPhone}","{email}"\n'.format(
-                first=person.first,
-                last=person.last,
-                address=person.address,
-                city=person.city,
-                postal=person.postal,
-                daytimePhone=person.daytimePhone,
-                eveningPhone=person.eveningPhone,
-                email=person.email
+            first=person.first,
+            last=person.last,
+            address=person.address,
+            city=person.city,
+            postal=person.postal,
+            daytimePhone=person.daytimePhone,
+            eveningPhone=person.eveningPhone,
+            email=person.email
             )
-        
+
         csvFile.write(s)
 
     def toWordFile(self, p):
@@ -306,11 +313,11 @@ class Entry(object):
             if participant.schoolAttending != "":
                 pString += participant.schoolAttending
             else:
-                index = participant.town.find(",")
+                index = participant.city.find(",")
                 if index > -1:
-                    pString += participant.town[:index]
+                    pString += participant.city[:index]
                 else:
-                    pString += participant.town
+                    pString += participant.city
         except Exception:
             # Print list of participants in group
             if len(participant.participants) > 0:
