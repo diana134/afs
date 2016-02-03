@@ -159,9 +159,9 @@ class AddEntryDialog(QDialog):
             p = dbInteractionInstance.getParticipantFromId(self.participantId)
             name = ""
             # Deal with it whether it's a solo or group
-            try:
+            if len(p.first) > 0:
                 name = p.first + " " + p.last
-            except AttributeError:
+            else:
                 name = p.groupName
             self.ui.participantLineEdit.setText(name)
 
@@ -173,7 +173,7 @@ class AddEntryDialog(QDialog):
 
         if result == True:
             self.teacherId = dialog.getTeacherId()
-            # Use the id to get the name for display
+            # Use the id to get the name for displaychoose
             t = dbInteractionInstance.getTeacherFromId(self.teacherId)
             name = name = t.first + " " + t.last
             self.ui.teacherLineEdit.setText(name)

@@ -184,11 +184,11 @@ class MainWindow(QWidget):
 
     def editEntryBtn_clicked(self):
         """Opens dialog for editing"""
-        # TODO get entry id
-        entryId = 0
-        dialog = EditEntryDialog(entryId=entryId)
-        # For Modal dialog
-        dialog.exec_()
+        entryId = self.getSelectedId(model=dbInteractionInstance.entryModel, view=self.ui.entryTableView)
+        if entryId:
+            dialog = EditEntryDialog(entryId=entryId)
+            # For Modal dialog
+            dialog.exec_()
 
     def deleteTeacherBtn_clicked(self):
         """Deletes selected teacher"""

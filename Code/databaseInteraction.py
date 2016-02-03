@@ -500,6 +500,7 @@ class DatabaseInteraction(object):
             if query.isActive() == False:
                 print query.lastError().text()
                 return query.lastError().text()
+            self.pieceModel.select()
             return ""
         except Exception, e:
             # TODO: log this instead of printing to console
@@ -696,7 +697,7 @@ class DatabaseInteraction(object):
             return pList
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "getLastSoloParticipantId FAILED\n\tquery: {0}\
+            print "getParticipantsWithName FAILED\n\tquery: {0}\
                 \n\terror: {1}".format(query.lastQuery(), e)
 
     def getLastGroupParticipantId(self):
@@ -712,7 +713,7 @@ class DatabaseInteraction(object):
             return "g" + participantId
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "getLastSoloParticipantId FAILED\n\tquery: {0}\
+            print "getLastGroupParticipantId FAILED\n\tquery: {0}\
                 \n\terror: {1}".format(query.lastQuery(), e)
 
     def getGroupParticipantsWithName(self, name):
@@ -811,7 +812,7 @@ class DatabaseInteraction(object):
             return tList
         except Exception, e:
             # TODO: log this instead of printing to console
-            print "getLastSoloParticipantId FAILED\n\tquery: {0}\
+            print "getTeachersWithName FAILED\n\tquery: {0}\
                 \n\terror: {1}".format(query.lastQuery(), e)
 
     def getLastEntryId(self):

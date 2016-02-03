@@ -6,8 +6,8 @@ sys.path.insert(0, os.path.join("..", "Forms"))
 from PyQt4.QtGui import QDialog, QMessageBox
 
 from ui_addEntryDialog import Ui_AddEntryDialog
-from addSoloParticipantDialog import AddSoloParticipantDialog
-from addGroupParticipantDialog import AddGroupParticipantDialog
+from addParticipantDialog import AddParticipantDialog
+# from addGroupParticipantDialog import AddGroupParticipantDialog
 from addTeacherDialog import AddTeacherDialog
 from chooseParticipantDialog import ChooseParticipantDialog
 from chooseTeacherDialog import ChooseTeacherDialog
@@ -27,7 +27,7 @@ class EditEntryDialog(QDialog):
         # HACK Make the PieceWidget in the first tab work right
         self.ui.tabWidget.removeTab(0)
         # self.ui.tabWidget.addTab(PieceWidget(), "Piece 1")
-        
+
         # Initialize class variables
         self.testing = testing
         if entryId is None:
@@ -38,23 +38,24 @@ class EditEntryDialog(QDialog):
         self.participantId = self.entry.participantID
         self.teacherId = self.entry.teacherID
 
-        self.disciplines = {'Dance' : self.dance,   # For Pythonic switch-case
-                                'Piano' : self.piano,
-                                'Choral' : self.choral,
-                                'Vocal' : self.vocal,
-                                'Instrumental' : self.instrumental,
-                                'Band' : self.band,
-                                'Speech' : self.speech
+        self.disciplines = {'Dance': self.dance,   # For Pythonic switch-case
+                            'Piano': self.piano,
+                            'Choral': self.choral,
+                            'Vocal': self.vocal,
+                            'Instrumental': self.instrumental,
+                            'Band': self.band,
+                            'Speech': self.speech
                             }
 
         # Initialize the ui with variables
         self.ui.addEntryBtn.setText("&Update Entry")
         self.setWindowTitle("Edit Entry")
         p = dbInteractionInstance.getParticipantFromId(self.participantId)
+        # TODO this may not work quite right!!!
         if p is not None:
-            try:
+            if len(p.first) > 0:
                 self.ui.participantLineEdit.setText("{0} {1}".format(p.first, p.last))
-            except Exception:
+            else:
                 self.ui.participantLineEdit.setText(p.groupName)
         t = dbInteractionInstance.getTeacherFromId(self.teacherId)
         if t is not None:
@@ -87,8 +88,8 @@ class EditEntryDialog(QDialog):
         self.ui.cancelBtn.clicked.connect(self.cancelBtn_clicked)
         self.ui.chooseParticipantBtn.clicked.connect(self.chooseParticipantBtn_clicked)
         self.ui.chooseTeacherBtn.clicked.connect(self.chooseTeacherBtn_clicked)
-        self.ui.createNewSoloParticipantBtn.clicked.connect(self.createNewSoloParticipantBtn_clicked)
-        self.ui.createNewGroupParticipantBtn.clicked.connect(self.createNewGroupParticipantBtn_clicked)
+        self.ui.createNewParticipantBtn.clicked.connect(self.createNewParticipantBtn_clicked)
+        # self.ui.createNewGroupParticipantBtn.clicked.connect(self.createNewGroupParticipantBtn_clicked)
         self.ui.createNewTeacherBtn.clicked.connect(self.createNewTeacherBtn_clicked)
         self.ui.disciplineComboBox.currentIndexChanged['QString'].connect(self.disciplineComboBox_changed)
         self.ui.addPieceBtn.clicked.connect(self.addPieceBtn_clicked)
@@ -150,7 +151,7 @@ class EditEntryDialog(QDialog):
                     else:
                         # Piece is good, add it to the list
                         selections.append(fields)
-        
+
                 else:
                     # Everything is good, add it to the db
                     self.entry = Entry(participantID, teacherID, discipline, level, yearsOfInstruction, classNumber, className, instrument, selections, schedulingRequirements)
@@ -187,9 +188,9 @@ class EditEntryDialog(QDialog):
             p = dbInteractionInstance.getParticipantFromId(self.participantId)
             name = ""
             # Deal with it whether it's a solo or group
-            try:
+            if len(p.first) > 0:
                 name = p.first + " " + p.last
-            except AttributeError:
+            else:
                 name = p.groupName
             self.ui.participantLineEdit.setText(name)
 
@@ -206,27 +207,27 @@ class EditEntryDialog(QDialog):
             name = name = t.first + " " + t.last
             self.ui.teacherLineEdit.setText(name)
 
-    def createNewSoloParticipantBtn_clicked(self):
-        """opens Add Solo Participant Dialog"""
-        dialog = AddSoloParticipantDialog(testing=self.testing, closeAfterAdd=True)
+    def createNewParticipantBtn_clicked(self):
+        """opens Add Participant Dialog"""
+        dialog = AddParticipantDialog(testing=self.testing, closeAfterAdd=True)
         # For Modal dialog
         result = dialog.exec_()
 
         if result == True:
             p = dialog.getParticipant()
             self.ui.participantLineEdit.setText(p.first + ' ' + p.last)
-            self.participantId = dbInteractionInstance.getLastSoloParticipantId()
+            self.participantId = dbInteractionInstance.getLastParticipantId()
 
-    def createNewGroupParticipantBtn_clicked(self):
-        """opens Add Group Participant Dialog"""
-        dialog = AddGroupParticipantDialog(testing=self.testing, closeAfterAdd=True)
-        # For Modal dialog
-        result = dialog.exec_()
+    # def createNewGroupParticipantBtn_clicked(self):
+    #     """opens Add Group Participant Dialog"""
+    #     dialog = AddGroupParticipantDialog(testing=self.testing, closeAfterAdd=True)
+    #     # For Modal dialog
+    #     result = dialog.exec_()
 
-        if result == True:
-            gp = dialog.getGroupParticipant()
-            self.ui.participantLineEdit.setText(gp.groupName)
-            self.participantId = dbInteractionInstance.getLastGroupParticipantId()
+    #     if result == True:
+    #         gp = dialog.getGroupParticipant()
+    #         self.ui.participantLineEdit.setText(gp.groupName)
+    #         self.participantId = dbInteractionInstance.getLastGroupParticipantId()
 
     def createNewTeacherBtn_clicked(self):
         """opens Add Teacher Dialog"""
