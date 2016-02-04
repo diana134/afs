@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addParticipantDialog.ui'
 #
-# Created: Sun Jan 31 02:43:20 2016
+# Created: Wed Feb  3 20:48:26 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -264,7 +264,7 @@ class Ui_AddParticipantDialog(object):
         self.firstNameLabel.setText(_translate("AddParticipantDialog", "First Name", None))
         self.lastNameLabel.setText(_translate("AddParticipantDialog", "Last Name", None))
         self.dateOfBirthLabel.setText(_translate("AddParticipantDialog", "Date of Birth", None))
-        self.dateOfBirthDateEdit.setDisplayFormat(_translate("AddParticipantDialog", "yyyy-MM-dd", None))
+        self.dateOfBirthDateEdit.setDisplayFormat(_translate("AddParticipantDialog", "d-M-yyyy", None))
         self.ageLabel.setText(_translate("AddParticipantDialog", "Age as of Jan. 1 ", None))
         self.parentLabel.setText(_translate("AddParticipantDialog", "Parent", None))
         self.homePhoneLabel.setText(_translate("AddParticipantDialog", "Home Phone", None))

@@ -163,7 +163,7 @@
            </date>
           </property>
           <property name="displayFormat">
-           <string>yyyy/M/d h:mm AP</string>
+           <string>d/M/yyyy h:mm AP</string>
           </property>
           <property name="calendarPopup">
            <bool>true</bool>
@@ -190,7 +190,7 @@
            </date>
           </property>
           <property name="displayFormat">
-           <string>yyyy/M/d h:mm AP</string>
+           <string>d/M/yyyy h:mm AP</string>
           </property>
           <property name="calendarPopup">
            <bool>true</bool>

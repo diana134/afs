@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_scheduleOptionsDialog.ui'
 #
-# Created: Sat Jan 30 00:13:44 2016
+# Created: Wed Feb  3 20:45:35 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -141,9 +141,9 @@ class Ui_ScheduleOptionsDialog(object):
         self.disciplineComboBox.setItemText(6, _translate("ScheduleOptionsDialog", "Speech", None))
         self.groupBox.setTitle(_translate("ScheduleOptionsDialog", "Session Dates and Times", None))
         self.label.setText(_translate("ScheduleOptionsDialog", "Start", None))
-        self.sessionStartDateTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "yyyy/M/d h:mm AP", None))
+        self.sessionStartDateTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "d/M/yyyy h:mm AP", None))
         self.label_2.setText(_translate("ScheduleOptionsDialog", "End", None))
-        self.sessionEndDateTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "yyyy/M/d h:mm AP", None))
+        self.sessionEndDateTimeEdit.setDisplayFormat(_translate("ScheduleOptionsDialog", "d/M/yyyy h:mm AP", None))
         self.addSessionBtn.setText(_translate("ScheduleOptionsDialog", "&Add Session", None))
         self.deleteSessionBtn.setText(_translate("ScheduleOptionsDialog", "&Delete Session", None))
 

@@ -164,18 +164,18 @@ class EditParticipantDialog(QDialog):
         # if email is None or email == "":
         #     if QMessageBox.question(self, 'Missing Email', 'Are you sure you want to leave Email blank?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
         #         return
-        # Check for valid fields64
-        if (email is not None or email != "") and validEmail(email) == False:
-            QMessageBox.warning(self, 'Invalid Email', email + ' is not a valid email format', QMessageBox.Ok)
-            return
+        # Check for valid fields
+        # if (email is not None or email != "") and validEmail(email) == False:
+        #     QMessageBox.warning(self, 'Invalid Email', email + ' is not a valid email format', QMessageBox.Ok)
+        #     return
 
-        if (first is not None or first != "") and validateName(first) == False:
-            if QMessageBox.question(self, 'Validate First Name', 'Are you sure \'' + first + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
-                return
+        # if (first is not None or first != "") and validateName(first) == False:
+        #     if QMessageBox.question(self, 'Validate First Name', 'Are you sure \'' + first + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+        #         return
 
-        if (last is not None or last != "") and validateName(last) == False:
-            if QMessageBox.question(self, 'Validate Last Name', 'Are you sure \'' + last + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
-                return
+        # if (last is not None or last != "") and validateName(last) == False:
+        #     if QMessageBox.question(self, 'Validate Last Name', 'Are you sure \'' + last + '\' is correct?', QMessageBox.Yes|QMessageBox.No) == QMessageBox.No:
+        #         return
 
         if numberParticipants != "" and not numberParticipants.isdigit():
             QMessageBox.warning(self, 'Incorrect Field', 'Group Size must be a number', QMessageBox.Ok)

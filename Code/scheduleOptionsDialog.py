@@ -41,8 +41,8 @@ class ScheduleOptionsDialog(QDialog):
         if startDatetime >= endDatetime:
             QMessageBox.warning(self, 'Invalid Session Times', 'A session must start before it ends.', QMessageBox.Ok)
             return
-        startDatetimeString = str(startDatetime.toString("yyyy/M/d h:mm AP"))
-        endDatetimeString = str(endDatetime.toString("yyyy/M/d h:mm AP"))
+        startDatetimeString = str(startDatetime.toString("d/M/yyyy h:mm AP"))
+        endDatetimeString = str(endDatetime.toString("d/M/yyyy h:mm AP"))
         listWidgetString = startDatetimeString + " ==> " + endDatetimeString
         QListWidgetItem(listWidgetString, self.ui.sessionListWidget)
 
