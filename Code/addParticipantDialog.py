@@ -71,17 +71,12 @@ class AddParticipantDialog(QDialog):
         self.ui.schoolGradeLineEdit.clear()
         # self.participantIds = []
         self.ui.groupNameLineEdit.clear()
-        self.ui.groupSizeLineEdit.clear()
-        self.ui.schoolGradeLineEdit.clear()
+        self.ui.numberParticipantsLineEdit.clear()
         self.ui.averageAgeLineEdit.clear()
         self.ui.contactPersonLineEdit.clear()
         self.contactId = None
-        self.ui.numberParticipantsLineEdit.clear()
-        self.ui.averageAgeLineEdit.clear()
         self.ui.participantsTextEdit.clear()
-        # for i in xrange(self.ui.participantTabWidget.count()):
-        #     participantWidget = self.ui.participantTabWidget.widget(i)
-        #     participantWidget.clearFields()
+        self.ui.timeConstraintsGroupBox.setChecked(False)
 
     def dobValid(self):
         """checks if the date of birth is valid given the age"""
@@ -179,7 +174,7 @@ class AddParticipantDialog(QDialog):
         #         return
 
         if numberParticipants != "" and not numberParticipants.isdigit():
-            QMessageBox.warning(self, 'Incorrect Field', 'Group Size must be a number', QMessageBox.Ok)
+            QMessageBox.warning(self, 'Incorrect Field', 'Number of Participants must be a number', QMessageBox.Ok)
             return
 
         if schoolGrade != "" and not schoolGrade.isalnum():
