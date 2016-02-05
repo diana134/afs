@@ -507,41 +507,41 @@ One selection, own choice from a beginner method book or a pre-grade/level book 
 K 2004 PIANO SOLO, BEGINNER, OWN CHOICE, OPEN
 One selection, own choice from a beginner method book or a pre-grade/level book (RCM/CC).
 
-K 2004-P PIANO SOLO, BEGINNER, OWN CHOICE, OPEN
+K 2004-A PIANO SOLO, BEGINNER, OWN CHOICE, OPEN
 One selection, own choice from a beginner method book or a pre-grade/level book (RCM/CC).
-K 2004-L1 PIANO SOLO, BEGINNER, OWN CHOICE, OPEN
+K 2004-B PIANO SOLO, BEGINNER, OWN CHOICE, OPEN
 One selection, own choice from a beginner method book or a pre-grade/level book (RCM/CC).
-K 2004-L2 PIANO SOLO, BEGINNER, OWN CHOICE, OPEN
+K 2004-C PIANO SOLO, BEGINNER, OWN CHOICE, OPEN
 One selection, own choice from a beginner method book or a pre-grade/level book (RCM/CC).
 
 K 2005 PIANO SOLO, CANADIAN COMPOSERS, BEGINNER
 One selection, own choice.
 
-K 2005-P PIANO SOLO, CANADIAN COMPOSERS, BEGINNER
+K 2005-A PIANO SOLO, CANADIAN COMPOSERS, BEGINNER
 One selection, own choice.
-K 2005-L1 PIANO SOLO, CANADIAN COMPOSERS, BEGINNER
+K 2005-B PIANO SOLO, CANADIAN COMPOSERS, BEGINNER
 One selection, own choice.
-K 2005-L2 PIANO SOLO, CANADIAN COMPOSERS, BEGINNER
+K 2005-C PIANO SOLO, CANADIAN COMPOSERS, BEGINNER
 One selection, own choice.
 
 K 2006 PIANO SOLO, POPULAR, BEGINNER
 One selection, own choice.
 
-K 2006-P PIANO SOLO, POPULAR, BEGINNER
+K 2006-A PIANO SOLO, POPULAR, BEGINNER
 One selection, own choice.
-K 2006-L1 PIANO SOLO, POPULAR, BEGINNER
+K 2006-B PIANO SOLO, POPULAR, BEGINNER
 One selection, own choice.
-K 2006-L2 PIANO SOLO, POPULAR, BEGINNER
+K 2006-C PIANO SOLO, POPULAR, BEGINNER
 One selection, own choice.
 
 K 2007 PIANO SOLO, OWN CHOICE, BEGINNER
 One selection, own choice. The selection need not be from a beginner method book or a pre-grade/level book (RCM/CC).
 
-K 2007-P PIANO SOLO, OWN CHOICE, BEGINNER
+K 2007-A PIANO SOLO, OWN CHOICE, BEGINNER
 One selection, own choice. The selection need not be from a beginner method book or a pre-grade/level book (RCM/CC).
-K 2007-L1 PIANO SOLO, OWN CHOICE, BEGINNER
+K 2007-B PIANO SOLO, OWN CHOICE, BEGINNER
 One selection, own choice. The selection need not be from a beginner method book or a pre-grade/level book (RCM/CC).
-K 2007-L2 PIANO SOLO, OWN CHOICE, BEGINNER
+K 2007-C PIANO SOLO, OWN CHOICE, BEGINNER
 One selection, own choice. The selection need not be from a beginner method book or a pre-grade/level book (RCM/CC).
 
 K 2008-LA BEGINNER PREPARATORY
