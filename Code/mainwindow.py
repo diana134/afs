@@ -79,12 +79,14 @@ class MainWindow(QWidget):
         self.ui.teacherTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.ui.teacherTableView.hideColumn(0) # id
 
+        entrySelectionModel = QItemSelectionModel(dbInteractionInstance.entryModel)
         self.ui.entryTableView.setModel(dbInteractionInstance.entryModel)
         self.ui.entryTableView.model().sort(0, Qt.DescendingOrder)
-        self.ui.entryTableView.setSelectionModel(QItemSelectionModel(dbInteractionInstance.entryModel))
+        self.ui.entryTableView.setSelectionModel(entrySelectionModel)
         self.ui.entryTableView.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.ui.entryTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.ui.entryTableView.hideColumn(0) # id
+        entrySelectionModel.selectionChanged.connect(self.entrySelected)
 
         self.ui.pieceTableView.setModel(dbInteractionInstance.pieceModel)
         self.ui.pieceTableView.model().sort(0, Qt.DescendingOrder)
@@ -109,7 +111,7 @@ class MainWindow(QWidget):
             return str(data.toString())
         except Exception, e:
             print traceback.format_exc()
-            QMessageBox.critical(self, 'Choose Participant', 'Error reading database\n{0}'.format(e), QMessageBox.Ok)
+            QMessageBox.critical(self, 'No Row Selected', 'Please select a row.', QMessageBox.Ok)
 
     ###### Slots ######
 
@@ -320,6 +322,28 @@ class MainWindow(QWidget):
                 entry.dump(fout)
             fout.close()
             QMessageBox.information(self, 'Database Dump', 'Data saved to ' + filename, QMessageBox.Ok)
+
+    def entrySelected(self, selected):
+        """Selects associated teachers and participants for the selected entry"""
+        model = dbInteractionInstance.entryModel
+        view = self.ui.entryTableView
+
+        try:
+            # Get which row in view is selected
+            indexList = view.selectionModel().selectedIndexes()  # gets all selected cells
+            row = indexList[0].row()
+            # Get column id is in
+            column = model.fieldIndex("id")
+            teacherIndex = model.fieldIndex("teacher")
+            participantIndex = model.fieldIndex("participant")
+            # Get QModelIndex of id
+            modelIndex = [i for i in indexList if i.row() == row and i.column() == column][0]
+            # Get id of selected object
+            data = model.data(modelIndex)
+            return str(data.toString())
+        except Exception, e:
+            print traceback.format_exc()
+            QMessageBox.critical(self, 'No Row Selected', 'Please select a row.', QMessageBox.Ok)
 
     ##########
 
