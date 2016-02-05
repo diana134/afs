@@ -107,9 +107,9 @@ class MainWindow(QWidget):
             # Get id of selected object
             data = model.data(modelIndex)
             return str(data.toString())
-        except Exception, e:
+        except Exception:
             print traceback.format_exc()
-            QMessageBox.critical(self, 'Choose Participant', 'Error reading database\n{0}'.format(e), QMessageBox.Ok)
+            QMessageBox.critical(self, 'No Row Selected', 'Please select a row.', QMessageBox.Ok)
 
     ###### Slots ######
 
