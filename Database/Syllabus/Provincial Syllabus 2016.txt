@@ -478,7 +478,7 @@ Piano classes with bolded titles and preceded by:
 PK are eligible for recommendation to Piano classes at the Provincial Festival
 PK-C are eligible for recommendation to Canadian Composers classes at the Provincial Festival
 NK is eligible for recommendation to the National Piano class at the Provincial Festival
-Provincial Festival eligibility begins with the PRELIMINARY (RCM/CC Grades/Levels 3 – 4) classes.
+Provincial Festival eligibility begins with the PRELIMINARY (RCM/CC Grades/Levels 3 - 4) classes.
 Please refer to the Definitions and Music Regulations section at the beginning of the Syllabus.
 PIANO NOTES
 The following notes are intended to clarify the classes that follow.
@@ -582,7 +582,7 @@ K 2106 PIANO SOLO, POPULAR, GRADE/LEVEL 2
 One selection, own choice.
 K 2107 PIANO SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Piano classes with bolded titles and preceded by:
 PK are eligible for recommendation to the Preliminary Piano class at the Provincial Festival
 PK-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -638,7 +638,7 @@ One selection, own choice.
 K 2224 PIANO SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
 15
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Piano classes with bolded titles and preceded by:
 PK are eligible for recommendation to the Junior Piano class at the Provincial Festival
 PK-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -693,7 +693,7 @@ K 2323 PIANO SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 K 2324 PIANO SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Piano classes with bolded titles and preceded by:
 PK are eligible for recommendation to the Intermediate Piano class at the Provincial Festival
 PK-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -769,7 +769,7 @@ One selection, own choice.
 K 2425 PIANO SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
 18
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Piano classes with bolded titles and preceded by:
 PK are eligible for recommendation to the Advanced Piano class at the Provincial Festival
 PK-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -963,35 +963,35 @@ One selection, own choice.
 K 2660 PIANO SOLO, RECITAL GROUP, ADULT
 Three selections, own choice, by one or more composers.
 23
-DUET CLASSES – ONE PIANO, FOUR HANDS
+DUET CLASSES - ONE PIANO, FOUR HANDS
 One selection, own choice.
 K 2701 PIANO DUET, OWN CHOICE, BEGINNER
-K 2702 PIANO DUET, OWN CHOICE, GRADES/LEVELS 1 – 2
-K 2703 PIANO DUET, OWN CHOICE, GRADES/LEVELS 3 – 4
-K 2704 PIANO DUET, OWN CHOICE, GRADES/LEVELS 5 – 6
-K 2705 PIANO DUET, OWN CHOICE, GRADES/LEVELS 7 – 8
-K 2706 PIANO DUET, OWN CHOICE, GRADES/LEVELS 9 – 10
-K 2707 PIANO DUET, OWN CHOICE, DIPLOMA – HONOURS
+K 2702 PIANO DUET, OWN CHOICE, GRADES/LEVELS 1 - 2
+K 2703 PIANO DUET, OWN CHOICE, GRADES/LEVELS 3 - 4
+K 2704 PIANO DUET, OWN CHOICE, GRADES/LEVELS 5 - 6
+K 2705 PIANO DUET, OWN CHOICE, GRADES/LEVELS 7 - 8
+K 2706 PIANO DUET, OWN CHOICE, GRADES/LEVELS 9 - 10
+K 2707 PIANO DUET, OWN CHOICE, DIPLOMA - HONOURS
 K 2708 PIANO DUET, OWN CHOICE, OPEN
 K 2709 PIANO DUET, OWN CHOICE, MULTI-GENERATIONAL
 Please refer to the MULTI-DISCIPLINE/SPECIAL section of the syllabus for Mixed Instrument Duets.
-DUO CLASSES – TWO PIANOS, FOUR HANDS
+DUO CLASSES - TWO PIANOS, FOUR HANDS
 One selection, own choice.
-K 2721 PIANO DUO, OWN CHOICE, GRADES/LEVELS 5 – 6
-K 2722 PIANO DUO, OWN CHOICE, GRADES/LEVELS 7 – 9
-K 2723 PIANO DUO, OWN CHOICE, GRADE/LEVEL 10 – HONOURS
+K 2721 PIANO DUO, OWN CHOICE, GRADES/LEVELS 5 - 6
+K 2722 PIANO DUO, OWN CHOICE, GRADES/LEVELS 7 - 9
+K 2723 PIANO DUO, OWN CHOICE, GRADE/LEVEL 10 - HONOURS
 K 2724 PIANO DUO, OWN CHOICE, OPEN
 ONE PIANO, SIX HANDS CLASSES
 One selection, own choice.
-K 2741 ONE PIANO, SIX HANDS, OWN CHOICE, BEGINNER – GRADE/LEVEL 3
-K 2742 ONE PIANO, SIX HANDS, OWN CHOICE, GRADES/LEVELS 4 – 6
-K 2743 ONE PIANO, SIX HANDS, OWN CHOICE, GRADE/LEVEL 7 – HONOURS
+K 2741 ONE PIANO, SIX HANDS, OWN CHOICE, BEGINNER - GRADE/LEVEL 3
+K 2742 ONE PIANO, SIX HANDS, OWN CHOICE, GRADES/LEVELS 4 - 6
+K 2743 ONE PIANO, SIX HANDS, OWN CHOICE, GRADE/LEVEL 7 - HONOURS
 K 2744 ONE PIANO, SIX HANDS, OWN CHOICE, OPEN
 TWO PIANOS, EIGHT HANDS CLASSES
 One selection, own choice.
-K 2761 TWO PIANOS, EIGHT HANDS, OWN CHOICE, BEGINNER – GRADE/LEVEL 3
-K 2762 TWO PIANOS, EIGHT HANDS, OWN CHOICE, GRADES/LEVELS 4 – 6
-K 2763 TWO PIANOS, EIGHT HANDS, OWN CHOICE, GRADE/LEVEL 7 – HONOURS
+K 2761 TWO PIANOS, EIGHT HANDS, OWN CHOICE, BEGINNER - GRADE/LEVEL 3
+K 2762 TWO PIANOS, EIGHT HANDS, OWN CHOICE, GRADES/LEVELS 4 - 6
+K 2763 TWO PIANOS, EIGHT HANDS, OWN CHOICE, GRADE/LEVEL 7 - HONOURS
 K 2764 TWO PIANOS, EIGHT HANDS, OWN CHOICE, OPEN
 ELECTRONIC PIANO CLASSES
 One selection, own choice.
@@ -1159,7 +1159,7 @@ Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to Strings classes at the Provincial Festival
 PS-C are eligible for recommendation to Canadian Composers classes at the Provincial Festival
 NS is eligible for recommendation to the National Strings class at the Provincial Festival
-Provincial Festival eligibility begins with the PRELIMINARY (RCM/CC Grades/Levels 3 – 4) classes.
+Provincial Festival eligibility begins with the PRELIMINARY (RCM/CC Grades/Levels 3 - 4) classes.
 Please refer to the Definitions and Music Regulations at the beginning of the Syllabus.
 SUZUKI STRINGS NOTES
 Suzuki classes are intended for Suzuki students, but anyone may enter.
@@ -1589,7 +1589,7 @@ One selection, own choice.
 S 3255 VIOLA SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
 38
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Preliminary Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -1642,7 +1642,7 @@ S 3287 VIOLA SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 S 3288 VIOLA SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Junior Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -1695,7 +1695,7 @@ S 3317 VIOLA SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 S 3318 VIOLA SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Intermediate Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -1758,7 +1758,7 @@ S 3355 VIOLA SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 S 3356 VIOLA SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Advanced Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -1928,7 +1928,7 @@ S 3454 CELLO SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
 One selection, own choice.
 S 3455 CELLO SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Preliminary Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -1981,7 +1981,7 @@ S 3487 CELLO SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 S 3488 CELLO SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Junior Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -2034,7 +2034,7 @@ S 3515 CELLO SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 S 3516 CELLO SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Intermediate Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -2098,7 +2098,7 @@ S 3555 CELLO SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 S 3556 CELLO SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Advanced Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -2268,7 +2268,7 @@ One selection, own choice.
 S 3655 DOUBLE BASS SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
 53
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Preliminary Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -2321,7 +2321,7 @@ S 3687 DOUBLE BASS SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 S 3688 DOUBLE BASS SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Junior Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -2374,7 +2374,7 @@ S 3715 DOUBLE BASS SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 S 3716 DOUBLE BASS SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Intermediate Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -2437,7 +2437,7 @@ S 3755 DOUBLE BASS SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 S 3756 DOUBLE BASS SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Advanced Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -2613,7 +2613,7 @@ S 3855-2 HARP SOLO, CELTIC/FOLK MUSIC, GRADE/LEVEL 2
 One selection, own choice.
 S 3856-2 HARP SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Preliminary Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -2671,7 +2671,7 @@ One selection, own choice.
 S 3874-4 HARP SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
 62
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Junior Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -2728,7 +2728,7 @@ S 3886-6 HARP SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 S 3887-6 HARP SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Intermediate Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -2785,7 +2785,7 @@ S 3903-8 HARP SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 S 3904-8 HARP SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Strings classes with bolded titles and preceded by:
 PS are eligible for recommendation to the Advanced Strings class at the Provincial Festival
 PS-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -2968,7 +2968,7 @@ Classical Guitar classes with bolded titles and preceded by:
 PG are eligible for recommendation to Classical Guitar classes at the Provincial Festival
 PG-C are eligible for recommendation to Canadian Composers classes at the Provincial Festival
 NG is eligible for recommendation to the National Classical Guitar class at the Provincial Festival
-Provincial Festival eligibility begins with the PRELIMINARY (RCM/CC Grades 3 – 4) classes.
+Provincial Festival eligibility begins with the PRELIMINARY (RCM/CC Grades 3 - 4) classes.
 Please refer to the Definitions and Music Regulations at the beginning of the Syllabus.
 SUZUKI GUITAR NOTES
 Suzuki classes are intended for Suzuki students, but anyone may enter.
@@ -3052,7 +3052,7 @@ G 4207 CLASSICAL GUITAR SOLO, STUDY/ETUDE, GRADE/LEVEL 2
 One selection, own choice.
 G 4208 CLASSICAL GUITAR SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Classical Guitar classes with bolded titles and preceded by:
 PG are eligible for recommendation to the Preliminary Classical Guitar class at the Provincial Festival
 PG-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -3107,7 +3107,7 @@ G 4315 CLASSICAL GUITAR SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 G 4316 CLASSICAL GUITAR SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Classical Guitar classes with bolded titles and preceded by:
 PG are eligible for recommendation to the Junior Classical Guitar class at the Provincial Festival
 PG-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -3168,7 +3168,7 @@ G 4416 CLASSICAL GUITAR SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 G 4417 CLASSICAL GUITAR SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Classical Guitar classes with bolded titles and preceded by:
 PG are eligible for recommendation to the Intermediate Classical Guitar class at the Provincial Festival
 PG-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -3236,7 +3236,7 @@ G 4516 CLASSICAL GUITAR SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 G 4517 CLASSICAL GUITAR SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Classical Guitar classes with bolded titles and preceded by:
 PG are eligible for recommendation to the Advanced Classical Guitar class at the Provincial Festival
 PG-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -3406,11 +3406,11 @@ Three selections, own choice, by one or more composers.
 CLASSICAL GUITAR DUET CLASSES
 One selection, own choice.
 G 4771 CLASSICAL GUITAR DUET, OWN CHOICE, BEGINNER
-G 4772 CLASSICAL GUITAR DUET, OWN CHOICE, GRADES/LEVELS 1 – 2
-G 4773 CLASSICAL GUITAR DUET, OWN CHOICE, GRADES/LEVELS 3 – 4
-G 4774 CLASSICAL GUITAR DUET, OWN CHOICE, GRADES/LEVELS 5 – 6
-G 4775 CLASSICAL GUITAR DUET, OWN CHOICE, GRADES/LEVELS 7 – 8
-G 4776 CLASSICAL GUITAR DUET, OWN CHOICE, GRADES/LEVELS 9 – 10
+G 4772 CLASSICAL GUITAR DUET, OWN CHOICE, GRADES/LEVELS 1 - 2
+G 4773 CLASSICAL GUITAR DUET, OWN CHOICE, GRADES/LEVELS 3 - 4
+G 4774 CLASSICAL GUITAR DUET, OWN CHOICE, GRADES/LEVELS 5 - 6
+G 4775 CLASSICAL GUITAR DUET, OWN CHOICE, GRADES/LEVELS 7 - 8
+G 4776 CLASSICAL GUITAR DUET, OWN CHOICE, GRADES/LEVELS 9 - 10
 G 4777 CLASSICAL GUITAR DUET, OWN CHOICE, DIPLOMA
 G 4778 CLASSICAL GUITAR DUET, OWN CHOICE, HONOURS
 G 4779 CLASSICAL GUITAR DUET, OWN CHOICE, OPEN
@@ -3420,11 +3420,11 @@ CLASSICAL GUITAR ENSEMBLE CLASSES
 Three or more guitars, generally more than one person to a part, with or without piano accompaniment.
 One selection, own choice.
 G 4791 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, BEGINNER
-G 4792 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, GRADES/LEVELS 1 – 2
-G 4793 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, GRADES/LEVELS 3 – 4
-G 4794 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, GRADES/LEVELS 5 – 6
-G 4795 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, GRADES/LEVELS 7 – 8
-G 4796 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, GRADES/LEVELS 9 – 10
+G 4792 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, GRADES/LEVELS 1 - 2
+G 4793 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, GRADES/LEVELS 3 - 4
+G 4794 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, GRADES/LEVELS 5 - 6
+G 4795 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, GRADES/LEVELS 7 - 8
+G 4796 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, GRADES/LEVELS 9 - 10
 G 4797 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, DIPLOMA
 G 4798 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, HONOURS
 G 4799 CLASSICAL GUITAR ENSEMBLE, OWN CHOICE, OPEN
@@ -3460,7 +3460,7 @@ Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to Woodwinds classes at the Provincial Festival
 PW-C are eligible for recommendation to Canadian Composers classes at the Provincial Festival
 NW is eligible for recommendation to the National Woodwinds class at the Provincial Festival
-Provincial Festival eligibility begins with the PRELIMINARY (RCM/CC Grades/Levels 3 – 4) classes.
+Provincial Festival eligibility begins with the PRELIMINARY (RCM/CC Grades/Levels 3 - 4) classes.
 Please refer to the Definitions and Music Regulations at the beginning of the Syllabus.
 WOODWINDS NOTES
 The following AMAF notes are intended to clarify the classes that follow.
@@ -3503,7 +3503,7 @@ W 5007-2 PICCOLO SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
 One selection, own choice.
 W 5008-2 PICCOLO SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Preliminary Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -3550,7 +3550,7 @@ W 5021-4 PICCOLO SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 W 5022-4 PICCOLO SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Junior Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -3603,7 +3603,7 @@ W 5037-6 PICCOLO SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 W 5038-6 PICCOLO SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Intermediate Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -3662,7 +3662,7 @@ W 5052-8 PICCOLO SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 W 5053-8 PICCOLO SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Advanced Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -3824,7 +3824,7 @@ W 5110-2 FLUTE SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
 One selection, own choice.
 W 5111-2 FLUTE SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Preliminary Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -3871,7 +3871,7 @@ W 5126-4 FLUTE SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 W 5127-4 FLUTE SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES 5/LEVELS – 6)
+JUNIOR (RCM/CC GRADES 5/LEVELS - 6)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Junior Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -3924,7 +3924,7 @@ W 5142-6 FLUTE SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 W 5143-6 FLUTE SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Intermediate Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -3983,7 +3983,7 @@ W 5162-8 FLUTE SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 W 5163-8 FLUTE SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Advanced Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -4145,7 +4145,7 @@ W 5230-2 OBOE SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
 One selection, own choice.
 W 5231-2 OBOE SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Preliminary Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -4192,7 +4192,7 @@ W 5246-4 OBOE SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 W 5247-4 OBOE SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Junior Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -4245,7 +4245,7 @@ W 5262-6 OBOE SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 W 5263-6 OBOE SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Intermediate Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -4304,7 +4304,7 @@ W 5277-8 OBOE SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 W 5278-8 OBOE SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Advanced Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -4466,7 +4466,7 @@ W 5335-2 ENGLISH HORN SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
 One selection, own choice.
 W 5336-2 ENGLISH HORN SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Preliminary Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -4513,7 +4513,7 @@ W 5351-4 ENGLISH HORN SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 W 5352-4 ENGLISH HORN SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Junior Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -4566,7 +4566,7 @@ W 5367-6 ENGLISH HORN SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 W 5368-6 ENGLISH HORN SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Intermediate Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -4625,7 +4625,7 @@ W 5385-8 ENGLISH HORN SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 W 5386-8 ENGLISH HORN SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES 9 – 10)
+ADVANCED (RCM/CC GRADES 9 - 10)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Advanced Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -4787,7 +4787,7 @@ W 5460-2 CLARINET SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
 One selection, own choice.
 W 5461-2 CLARINET SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Preliminary Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -4834,7 +4834,7 @@ W 5476-4 CLARINET SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 W 5477-4 CLARINET SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Junior Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -4887,7 +4887,7 @@ W 5492-6 CLARINET SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 W 5493-6 CLARINET SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Intermediate Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -4946,7 +4946,7 @@ W 5507-8 CLARINET SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 W 5508-8 CLARINET SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Advanced Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -5108,7 +5108,7 @@ W 5565-2 BASSOON SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
 One selection, own choice.
 W 5566-2 BASSOON SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Preliminary Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -5155,7 +5155,7 @@ W 5581-4 BASSOON SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 W 5582-4 BASSOON SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Junior Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -5208,7 +5208,7 @@ W 5597-6 BASSOON SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 W 5598-6 BASSOON SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Intermediate Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -5267,7 +5267,7 @@ W 5612-8 BASSOON SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 W 5613-8 BASSOON SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Advanced Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -5429,7 +5429,7 @@ W 5670-2 SAXOPHONE SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
 One selection, own choice.
 W 5671-2 SAXOPHONE SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Preliminary Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -5476,7 +5476,7 @@ W 5686-4 SAXOPHONE SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 W 5687-4 SAXOPHONE SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Junior Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -5529,7 +5529,7 @@ W 5702-6 SAXOPHONE SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 W 5703-6 SAXOPHONE SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Intermediate Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -5588,7 +5588,7 @@ W 5717-8 SAXOPHONE SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 W 5718-8 SAXOPHONE SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Advanced Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -5750,7 +5750,7 @@ W 5780-2 RECORDER SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
 One selection, own choice.
 W 5781-2 RECORDER SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Preliminary Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -5797,7 +5797,7 @@ W 5796-4 RECORDER SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 W 5797-4 RECORDER SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Junior Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -5850,7 +5850,7 @@ W 5812-6 RECORDER SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 W 5813-6 RECORDER SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Intermediate Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -5909,7 +5909,7 @@ W 5827-8 RECORDER SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 W 5828-8 RECORDER SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Woodwinds classes with bolded titles and preceded by:
 PW are eligible for recommendation to the Advanced Woodwinds class at the Provincial Festival
 PW-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -6093,7 +6093,7 @@ Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to Brass classes at the Provincial Festival
 PB-C are eligible for recommendation to Canadian Composers classes at the Provincial Festival
 NB is eligible for recommendation to the National Brass class at the Provincial Festival
-Provincial Festival eligibility begins with the PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4) classes.
+Provincial Festival eligibility begins with the PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4) classes.
 Please refer to the Definitions and Music Regulations at the beginning of the Syllabus.
 BRASS NOTES
 The following AMAF notes are intended to clarify the classes that follow.
@@ -6144,7 +6144,7 @@ B 6025 FRENCH HORN SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
 One selection, own choice.
 B 6026 FRENCH HORN SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Preliminary Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -6185,7 +6185,7 @@ B 6064 FRENCH HORN SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 B 6065 FRENCH HORN SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Junior Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -6238,7 +6238,7 @@ B 6105 FRENCH HORN SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 B 6106 FRENCH HORN SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Intermediate Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial
@@ -6298,7 +6298,7 @@ B 6145 FRENCH HORN SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 B 6146 FRENCH HORN SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Advanced Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -6460,7 +6460,7 @@ B 6255 TRUMPET SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
 One selection, own choice.
 B 6256 TRUMPET SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Preliminary Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -6501,7 +6501,7 @@ B 6294 TRUMPET SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 B 6295 TRUMPET SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Junior Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -6554,7 +6554,7 @@ B 6335 TRUMPET SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 B 6336 TRUMPET SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Intermediate Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -6613,7 +6613,7 @@ B 6375 TRUMPET SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 B 6376 TRUMPET SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Advanced Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -6775,7 +6775,7 @@ B 6485 TROMBONE/EUPHONIUM SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
 One selection, own choice.
 B 6486 TROMBONE/EUPHONIUM SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Preliminary Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -6816,7 +6816,7 @@ B 6524 TROMBONE/EUPHONIUM SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 B 6525 TROMBONE/EUPHONIUM SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Junior Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -6869,7 +6869,7 @@ B 6565 TROMBONE/EUPHONIUM SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 B 6566 TROMBONE/EUPHONIUM SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Intermediate Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -6928,7 +6928,7 @@ B 6605 TROMBONE/EUPHONIUM SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 B 6606 TROMBONE/EUPHONIUM SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Advanced Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -7090,7 +7090,7 @@ B 6715 TUBA SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
 One selection, own choice.
 B 6716 TUBA SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Preliminary Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Preliminary Canadian Composers class at the Provincial Festival
@@ -7131,7 +7131,7 @@ B 6754 TUBA SOLO, OWN CHOICE, GRADE/LEVEL 4
 One selection, own choice.
 B 6755 TUBA SOLO, RECITAL GROUP, GRADE/LEVEL 4
 Three selections, own choice, by one or more composers.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Junior Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Junior Canadian Composers class at the Provincial Festival
@@ -7184,7 +7184,7 @@ B 6795 TUBA SOLO, OWN CHOICE, GRADE/LEVEL 6
 One selection, own choice.
 B 6796 TUBA SOLO, RECITAL GROUP, GRADE/LEVEL 6
 Three selections, own choice, by one or more composers.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Intermediate Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Intermediate Canadian Composers class at the Provincial Festival
@@ -7243,7 +7243,7 @@ B 6835 TUBA SOLO, OWN CHOICE, GRADE/LEVEL 8
 One selection, own choice.
 B 6836 TUBA SOLO, RECITAL GROUP, GRADE/LEVEL 8
 Three selections, own choice, by one or more composers.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Brass classes with bolded titles and preceded by:
 PB are eligible for recommendation to the Advanced Brass class at the Provincial Festival
 PB-C are eligible for recommendation to the Advanced Canadian Composers class at the Provincial Festival
@@ -7425,7 +7425,7 @@ PERCUSSION
 Percussion classes with bolded titles and preceded by:
 PP are eligible for recommendation to Percussion classes at the Provincial Festival
 NP is eligible for recommendation to the National Percussion class at the Provincial Festival
-Provincial Festival eligibility begins with the PRELIMINARY level (RCM/CC Grades/Levels 3 – 4) classes.
+Provincial Festival eligibility begins with the PRELIMINARY level (RCM/CC Grades/Levels 3 - 4) classes.
 Please refer to the Definitions and Music Regulations at the beginning of the Syllabus.
 PERCUSSION SOLO CLASSES
 BEGINNER
@@ -7467,7 +7467,7 @@ P 7125 MULTIPLE PERCUSSION SOLO, OWN CHOICE, GRADE/LEVEL 2
 One selection, own choice. No multi-movement works.
 P 7126 MULTIPLE PERCUSSION SOLO, MULTI-MOVEMENT WORK, GRADE/LEVEL 2
 One selection, own choice.
-PRELIMINARY (RCM/CC GRADES/LEVELS 3 – 4)
+PRELIMINARY (RCM/CC GRADES/LEVELS 3 - 4)
 Percussion classes with bolded titles and preceded by:
 
 PP are eligible for recommendation to the Preliminary Percussion class at the Provincial Festival
@@ -7505,7 +7505,7 @@ PP 7147 MULTIPLE PERCUSSION SOLO, OWN CHOICE, GRADE/LEVEL 4 (P)
 One selection, own choice. No multi-movement works.
 PP 7148 MULTIPLE PERCUSSION SOLO, MULTI-MOVEMENT WORK, GRADE/LEVEL 4 (P)
 One selection, own choice.
-JUNIOR (RCM/CC GRADES/LEVELS 5 – 6)
+JUNIOR (RCM/CC GRADES/LEVELS 5 - 6)
 Percussion classes with bolded titles and preceded by:
 
 PP are eligible for recommendation to the Junior Percussion class at the Provincial Festival
@@ -7543,7 +7543,7 @@ PP 7167 MULTIPLE PERCUSSION SOLO, OWN CHOICE, GRADE/LEVEL 6 (J)
 One selection, own choice. No multi-movement works.
 PP 7168 MULTIPLE PERCUSSION SOLO, MULTI-MOVEMENT WORK, GRADE/LEVEL 6 (J)
 One selection, own choice.
-INTERMEDIATE (RCM/CC GRADES/LEVELS 7 – 8)
+INTERMEDIATE (RCM/CC GRADES/LEVELS 7 - 8)
 Percussion classes with bolded titles and preceded by:
 
 PP are eligible for recommendation to the Intermediate Percussion class at the Provincial Festival
@@ -7581,7 +7581,7 @@ PP 7187 MULTIPLE PERCUSSION SOLO, OWN CHOICE, GRADE/LEVEL 8 (I)
 One selection, own choice. No multi-movement works.
 PP 7188 MULTIPLE PERCUSSION SOLO, MULTI-MOVEMENT WORK, GRADE/LEVEL 8 (I)
 One selection, own choice.
-ADVANCED (RCM/CC GRADES/LEVELS 9 – 10)
+ADVANCED (RCM/CC GRADES/LEVELS 9 - 10)
 Percussion classes with bolded titles and preceded by:
 
 PP are eligible for recommendation to the Advanced Percussion class at the Provincial Festival
@@ -7697,12 +7697,12 @@ PERCUSSION ENSEMBLE CLASSES
 Three or more percussion instruments, generally more than one person to a part, with or without piano accompaniment.
 One selection, own choice.
 P 7291 PERCUSSION ENSEMBLE, OWN CHOICE, BEGINNER
-P 7292 PERCUSSION ENSEMBLE, OWN CHOICE, GRADES/LEVELS 1 – 2
-P 7293 PERCUSSION ENSEMBLE, OWN CHOICE, GRADES/LEVELS 3 – 4
-P 7294 PERCUSSION ENSEMBLE, OWN CHOICE, GRADES/LEVELS 5 – 6
-P 7295 PERCUSSION ENSEMBLE, OWN CHOICE, GRADES/LEVELS 7 – 8
-P 7296 PERCUSSION ENSEMBLE, OWN CHOICE, GRADES/LEVELS 9 – 10
-P 7297 PERCUSSION ENSEMBLE, OWN CHOICE, DIPLOMA – HONOURS
+P 7292 PERCUSSION ENSEMBLE, OWN CHOICE, GRADES/LEVELS 1 - 2
+P 7293 PERCUSSION ENSEMBLE, OWN CHOICE, GRADES/LEVELS 3 - 4
+P 7294 PERCUSSION ENSEMBLE, OWN CHOICE, GRADES/LEVELS 5 - 6
+P 7295 PERCUSSION ENSEMBLE, OWN CHOICE, GRADES/LEVELS 7 - 8
+P 7296 PERCUSSION ENSEMBLE, OWN CHOICE, GRADES/LEVELS 9 - 10
+P 7297 PERCUSSION ENSEMBLE, OWN CHOICE, DIPLOMA - HONOURS
 P 7298 PERCUSSION ENSEMBLE, OWN CHOICE, OPEN
 P 7299 PERCUSSION ENSEMBLE, OWN CHOICE, MULTI-GENERATIONAL
 PERCUSSION CHAMBER GROUP CLASSES
@@ -7711,7 +7711,7 @@ CHAMBER GROUP
 Chamber Group classes with bolded titles and preceded by:
 PCH are eligible for recommendation to Chamber Group classes at the Provincial Festival
 NCH are eligible for recommendation to the National Chamber group class at the Provincial Festival
-Provincial Festival eligibility begins with the PRELIMINARY (RCM/CC Grades/Levels 3 – 4) classes.
+Provincial Festival eligibility begins with the PRELIMINARY (RCM/CC Grades/Levels 3 - 4) classes.
 Please refer to the Definitions and Music Regulations at the beginning of the Syllabus.
 STRING CHAMBER GROUP CLASSES
 A String Chamber Group is a combination of string instruments with or without piano, with a minimum of three to a maximum of
@@ -7720,12 +7720,12 @@ If piano is used, the pianist must be an eligible member of the group and must n
 reduction.
 One selection, own choice.
 CH 8801 STRING CHAMBER GROUP, OWN CHOICE, BEGINNER
-CH 8802 STRING CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 1 – 2
-PCH 8803 STRING CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 3 – 4 (P)
-PCH 8804 STRING CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 5 – 6 (J)
-PCH 8805 STRING CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 7 – 8 (I)
-PCH 8806 STRING CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 9 – 10 (A)
-PCH 8807 STRING CHAMBER GROUP, OWN CHOICE, DIPLOMA – HONOURS (S)
+CH 8802 STRING CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 1 - 2
+PCH 8803 STRING CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 3 - 4 (P)
+PCH 8804 STRING CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 5 - 6 (J)
+PCH 8805 STRING CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 7 - 8 (I)
+PCH 8806 STRING CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 9 - 10 (A)
+PCH 8807 STRING CHAMBER GROUP, OWN CHOICE, DIPLOMA - HONOURS (S)
 CH 8808 STRING CHAMBER GROUP, OWN CHOICE, OPEN
 CH 8809 STRING CHAMBER GROUP, OWN CHOICE, MULTI-GENERATIONAL
 NCH 8 NATIONAL CHAMBER GROUP CLASS, DIPLOMA/HONOURS (N)
@@ -7737,12 +7737,12 @@ maximum of six performers, with one performer to a part. Each performer plays a 
 pianist must be an eligible member of the group and must not be playing an accompaniment or orchestral reduction.
 One selection, own choice.
 CH 8811 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, BEGINNER
-CH 8812 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 1 – 2
-PCH 8813 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 3 – 4 (P)
-PCH 8814 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 5 – 6 (J)
-PCH 8815 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 7 – 8 (I)
-PCH 8816 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 9 – 10 (A)
-PCH 8817 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, DIPLOMA – HONOURS (S)
+CH 8812 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 1 - 2
+PCH 8813 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 3 - 4 (P)
+PCH 8814 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 5 - 6 (J)
+PCH 8815 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 7 - 8 (I)
+PCH 8816 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 9 - 10 (A)
+PCH 8817 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, DIPLOMA - HONOURS (S)
 CH 8818 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, OPEN
 CH 8819 CLASSICAL GUITAR CHAMBER GROUP, OWN CHOICE, MULTI-GENERATIONAL
 NCH 8 NATIONAL CHAMBER GROUP CLASS, DIPLOMA/HONOURS (N)
@@ -7755,12 +7755,12 @@ instrument. If piano is used, the pianist must be an eligible member of the grou
 orchestral reduction.
 One selection, own choice.
 CH 8821 WOODWIND CHAMBER GROUP, OWN CHOICE, BEGINNER
-CH 8822 WOODWIND CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 1 – 2
-PCH 8823 WOODWIND CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 3 – 4 (P)
-PCH 8824 WOODWIND CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 5 – 6 (J)
-PCH 8825 WOODWIND CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 7 – 8 (I)
-PCH 8826 WOODWIND CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 9 – 10 (A)
-PCH 8827 WOODWIND CHAMBER GROUP, OWN CHOICE, DIPLOMA – HONOURS (S)
+CH 8822 WOODWIND CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 1 - 2
+PCH 8823 WOODWIND CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 3 - 4 (P)
+PCH 8824 WOODWIND CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 5 - 6 (J)
+PCH 8825 WOODWIND CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 7 - 8 (I)
+PCH 8826 WOODWIND CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 9 - 10 (A)
+PCH 8827 WOODWIND CHAMBER GROUP, OWN CHOICE, DIPLOMA - HONOURS (S)
 CH 8828 WOODWIND CHAMBER GROUP, OWN CHOICE, OPEN
 CH 8829 WOODWIND CHAMBER GROUP, OWN CHOICE, MULTI-GENERATIONAL
 NCH 8 NATIONAL CHAMBER GROUP CLASS, DIPLOMA/HONOURS (N)
@@ -7773,12 +7773,12 @@ If piano is used, the pianist must be an eligible member of the group and must n
 reduction.
 One selection, own choice.
 CH 8831 BRASS CHAMBER GROUP, OWN CHOICE, BEGINNER
-CH 8832 BRASS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 1 – 2
-PCH 8833 BRASS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 3 – 4 (P)
-PCH 8834 BRASS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 5 – 6 (J)
-PCH 8835 BRASS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 7 – 8 (I)
-PCH 8836 BRASS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 9 – 10 (A)
-PCH 8837 BRASS CHAMBER GROUP, OWN CHOICE, DIPLOMA – HONOURS (S)
+CH 8832 BRASS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 1 - 2
+PCH 8833 BRASS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 3 - 4 (P)
+PCH 8834 BRASS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 5 - 6 (J)
+PCH 8835 BRASS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 7 - 8 (I)
+PCH 8836 BRASS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 9 - 10 (A)
+PCH 8837 BRASS CHAMBER GROUP, OWN CHOICE, DIPLOMA - HONOURS (S)
 CH 8838 BRASS CHAMBER GROUP, OWN CHOICE, OPEN
 CH 8839 BRASS CHAMBER GROUP, OWN CHOICE, MULTI-GENERATIONAL
 NCH 8 NATIONAL CHAMBER GROUP CLASS, DIPLOMA/HONOURS LEVEL (N)
@@ -7791,12 +7791,12 @@ different instrument. If piano is used, the pianist must be an eligible member o
 accompaniment or orchestral reduction.
 One selection, own choice.
 CH 8841 PERCUSSION CHAMBER GROUP, OWN CHOICE, BEGINNER
-CH 8842 PERCUSSION CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 1 – 2
-PCH 8843 PERCUSSION CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 3 – 4 (P)
-PCH 8844 PERCUSSION CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 5 – 6 (J)
-PCH 8845 PERCUSSION CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 7 – 8 (I)
-PCH 8846 PERCUSSION CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 9 – 10 (A)
-PCH 8847 PERCUSSION CHAMBER GROUP, OWN CHOICE, DIPLOMA – HONOURS (S)
+CH 8842 PERCUSSION CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 1 - 2
+PCH 8843 PERCUSSION CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 3 - 4 (P)
+PCH 8844 PERCUSSION CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 5 - 6 (J)
+PCH 8845 PERCUSSION CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 7 - 8 (I)
+PCH 8846 PERCUSSION CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 9 - 10 (A)
+PCH 8847 PERCUSSION CHAMBER GROUP, OWN CHOICE, DIPLOMA - HONOURS (S)
 CH 8848 PERCUSSION CHAMBER GROUP, OWN CHOICE, OPEN
 CH 8849 PERCUSSION CHAMBER GROUP, OWN CHOICE, MULTI-GENERATIONAL
 NCH 8 NATIONAL CHAMBER GROUP CLASS, DIPLOMA/HONOURS LEVEL (N)
@@ -7809,11 +7809,11 @@ and individual instrument. Each performer plays a different line of music and ge
 used, the pianist must be an eligible member of the group and must not be playing an accompaniment or orchestral reduction.
 One selection, own choice.
 CH 8851 MIXED INSTRUMENTS CHAMBER GROUP, OWN CHOICE, BEGINNER
-CH 8852 MIXED INSTRUMENTS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 1 – 2
-PCH 8853 MIXED INSTRUMENTS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 3 – 4 (P)
-PCH 8855 MIXED INSTRUMENTS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 7 – 8 (I)
-PCH 8856 MIXED INSTRUMENTS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 9 – 10 (A)
-PCH 8857 MIXED INSTRUMENTS CHAMBER GROUP, OWN CHOICE, DIPLOMA – HONOURS (S)
+CH 8852 MIXED INSTRUMENTS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 1 - 2
+PCH 8853 MIXED INSTRUMENTS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 3 - 4 (P)
+PCH 8855 MIXED INSTRUMENTS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 7 - 8 (I)
+PCH 8856 MIXED INSTRUMENTS CHAMBER GROUP, OWN CHOICE, GRADES/LEVELS 9 - 10 (A)
+PCH 8857 MIXED INSTRUMENTS CHAMBER GROUP, OWN CHOICE, DIPLOMA - HONOURS (S)
 CH 8858 MIXED INSTRUMENTS CHAMBER GROUP, OWN CHOICE, OPEN
 CH 8859 MIXED INSTRUMENTS CHAMBER GROUP, OWN CHOICE, MULTI-GENERATIONAL
 NCH 8 NATIONAL CHAMBER GROUP CLASS, DIPLOMA/HONOURS (N)
@@ -7976,12 +7976,12 @@ MIXED INSTRUMENTS
 MIXED INSTRUMENTS DUET CLASSES
 A combination of any two recognized orchestral instruments from two different disciplines.
 One selection, own choice.
-SP 7721 MIXED INSTRUMENTS DUET, OWN CHOICE, GRADES/LEVELS 1 – 2
-SP 7722 MIXED INSTRUMENTS DUET, OWN CHOICE, GRADES/LEVELS 3 – 4
-SP 7723 MIXED INSTRUMENTS DUET, OWN CHOICE, GRADES/LEVELS 5 – 6
-SP 7724 MIXED INSTRUMENTS DUET, OWN CHOICE, GRADES/LEVELS 7 – 8
-SP 7725 MIXED INSTRUMENTS DUET, OWN CHOICE, GRADES/LEVELS 9 – 10
-SP 7726 MIXED INSTRUMENTS DUET, OWN CHOICE, DIPLOMA – HONOURS
+SP 7721 MIXED INSTRUMENTS DUET, OWN CHOICE, GRADES/LEVELS 1 - 2
+SP 7722 MIXED INSTRUMENTS DUET, OWN CHOICE, GRADES/LEVELS 3 - 4
+SP 7723 MIXED INSTRUMENTS DUET, OWN CHOICE, GRADES/LEVELS 5 - 6
+SP 7724 MIXED INSTRUMENTS DUET, OWN CHOICE, GRADES/LEVELS 7 - 8
+SP 7725 MIXED INSTRUMENTS DUET, OWN CHOICE, GRADES/LEVELS 9 - 10
+SP 7726 MIXED INSTRUMENTS DUET, OWN CHOICE, DIPLOMA - HONOURS
 SP 7727 MIXED INSTRUMENTS DUET, OWN CHOICE, OPEN
 MIXED INSTRUMENTS CHAMBER GROUP CLASSES
 Please see Chamber Music section.
@@ -8050,7 +8050,7 @@ each of these classes is listed below.
 number, age and gender of the choir members must meet the National Music Festival Syllabus requirements
 (online at www.fcmf.org).***
 ENSEMBLE (limited to 8 to 12 singers):
-NC 104 – The Richard W. Cooke Choral
+NC 104 - The Richard W. Cooke Choral
 
 must be an ensemble
 
@@ -8059,50 +8059,50 @@ one selection, in three or more parts
 one selection must be a madrigal, which may be a contemporary madrigal
 SCHOOL CHOIR (minimum of 13 singers):
 The members of a school choir must all be from the same school. Only one folk song is permitted.
-NC 103 – Paul J. Bourret Choral
+NC 103 - Paul J. Bourret Choral
 
 singers, 19 years of age and under
 
 at least one selection, sung in three or more parts
-NC 106 – David Ouchterlony Choral
+NC 106 - David Ouchterlony Choral
 
 singers, 16 years of age and under
 
 at least one selection, sung in two or more parts
-NC 108 – Florine Després Choral
+NC 108 - Florine Després Choral
 
 singers, 12 years of age and under
 
 at least one selection, sung in two or more parts
 COMMUNITY CHOIR (minimum of 13 singers):
 Only one folk song is permitted.
-NC 100 – The Honourable Barbara A. Hagerman Choral
+NC 100 - The Honourable Barbara A. Hagerman Choral
 
 the majority of members, 19 years of age or over
 
 at least one selection, sung in three or more parts
-NC 102 – George S. Mathieson Choral
+NC 102 - George S. Mathieson Choral
 
 singers, 19 years of age and under
 
 at least one selection, sung in three or more parts
-NC 105 – Dr. & Mrs. J.F.K. English Choral
+NC 105 - Dr. & Mrs. J.F.K. English Choral
 
 singers, 16 years of age and under
 
 at least one selection, sung in three or more parts
-NC 107 – Margaret Wharton Choral
+NC 107 - Margaret Wharton Choral
 
 singers, 12 years of age and under
 
 at least one selection, sung in two or more parts
-NC 109 – Barbara Clark Choral
+NC 109 - Barbara Clark Choral
 
 singers, 25 years of age and under
 
 at least one selection, sung in three or more parts
 MALE CHOIR:
-NC 101 – The City of Lincoln Choral
+NC 101 - The City of Lincoln Choral
 
 restricted to male singers (no age limitation)
 
@@ -8208,153 +8208,153 @@ GRADE 12
 SCH 8077 SCHOOL CLASSROOM CHOIR, OWN CHOICE, GRADE 12
 Two contrasting selections, own choice, any number of parts.
 SCHOOL CHORUS CLASSES
-GRADES K – 3
-SCH 8101 SCHOOL CHORUS, KINDERGARTEN – GRADE 3
+GRADES K - 3
+SCH 8101 SCHOOL CHORUS, KINDERGARTEN - GRADE 3
 One selection from the Suggested Repertoire List at the end of this section.
 AND One selection, own choice, any number of parts.
-SCH 8102 SCHOOL CHORUS, OWN CHOICE, KINDERGARTEN – GRADE 3
+SCH 8102 SCHOOL CHORUS, OWN CHOICE, KINDERGARTEN - GRADE 3
 Two contrasting selections, own choice, any number of parts.
-SCH 8103 SCHOOL CHORUS, OWN CHOICE, GIRLS, KINDERGARTEN – GRADE 3
+SCH 8103 SCHOOL CHORUS, OWN CHOICE, GIRLS, KINDERGARTEN - GRADE 3
 Two contrasting selections, own choice, any number of parts.
-SCH 8104 SCHOOL CHORUS, OWN CHOICE, BOYS, KINDERGARTEN – GRADE 3
+SCH 8104 SCHOOL CHORUS, OWN CHOICE, BOYS, KINDERGARTEN - GRADE 3
 Two contrasting selections, own choice, any number of parts.
-SCH 8105 SCHOOL CHORUS, SACRED, KINDERGARTEN – GRADE 3
+SCH 8105 SCHOOL CHORUS, SACRED, KINDERGARTEN - GRADE 3
 Two contrasting selections, own choice, any number of parts.
-SCH 8106 SCHOOL CHORUS, FOLK SONG, KINDERGARTEN – GRADE 3
+SCH 8106 SCHOOL CHORUS, FOLK SONG, KINDERGARTEN - GRADE 3
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
-SCH 8107 SCHOOL CHORUS, CONTEMPORARY FOLK/POPULAR MUSIC, KINDERGARTEN – GRADE 3
+SCH 8107 SCHOOL CHORUS, CONTEMPORARY FOLK/POPULAR MUSIC, KINDERGARTEN - GRADE 3
 Two contrasting selections, own choice, any number of parts.
-SCH 8108 SCHOOL CHORUS, SONGS WITH MOVEMENT, KINDERGARTEN – GRADE 3
+SCH 8108 SCHOOL CHORUS, SONGS WITH MOVEMENT, KINDERGARTEN - GRADE 3
 Two contrasting selections, own choice, any number of parts.
-SCH 8109 SCHOOL CHORUS, OPERETTA/MUSICAL THEATRE EXCERPTS, KINDERGARTEN – GRADE 3
+SCH 8109 SCHOOL CHORUS, OPERETTA/MUSICAL THEATRE EXCERPTS, KINDERGARTEN - GRADE 3
 One selection of an excerpt from an operetta or musical, including any optional solo parts, to be acted out as well as sung,
 with participants costumed and using a minimum of stage sets. Preparation and performance time not to exceed 10
 minutes. Any live accompaniment may be used. Speaking parts should be kept to a minimum. It is highly desirable that
 the conductor not be on stage.
-GRADES K – 6
-SCH 8116 SCHOOL CHORUS, KINDERGARTEN – GRADE 6
+GRADES K - 6
+SCH 8116 SCHOOL CHORUS, KINDERGARTEN - GRADE 6
 One selection from the Suggested Repertoire List at the end of this section.
 AND One selection, own choice, any number of parts.
 187
-SCH 8117 SCHOOL CHORUS, OWN CHOICE, KINDERGARTEN – GRADE 6
+SCH 8117 SCHOOL CHORUS, OWN CHOICE, KINDERGARTEN - GRADE 6
 Two contrasting selections, own choice, any number of parts.
-SCH 8118 SCHOOL CHORUS, OWN CHOICE, GIRLS, KINDERGARTEN – GRADE 6
+SCH 8118 SCHOOL CHORUS, OWN CHOICE, GIRLS, KINDERGARTEN - GRADE 6
 Two contrasting selections, own choice, any number of parts.
-SCH 8119 SCHOOL CHORUS, OWN CHOICE, BOYS, KINDERGARTEN – GRADE 6
+SCH 8119 SCHOOL CHORUS, OWN CHOICE, BOYS, KINDERGARTEN - GRADE 6
 Two contrasting selections, own choice, any number of parts.
-SCH 8120 SCHOOL CHORUS, SACRED, KINDERGARTEN – GRADE 6
+SCH 8120 SCHOOL CHORUS, SACRED, KINDERGARTEN - GRADE 6
 Two contrasting selections, own choice, any number of parts.
-SCH 8121 SCHOOL CHORUS, FOLK SONG, KINDERGARTEN – GRADE 6
+SCH 8121 SCHOOL CHORUS, FOLK SONG, KINDERGARTEN - GRADE 6
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
-SCH 8122 SCHOOL CHORUS, CONTEMPORARY FOLK/POPULAR MUSIC, KINDERGARTEN – GRADE 6
+SCH 8122 SCHOOL CHORUS, CONTEMPORARY FOLK/POPULAR MUSIC, KINDERGARTEN - GRADE 6
 Two contrasting selections, own choice, any number of parts.
-SCH 8123 SCHOOL CHORUS, SONGS WITH MOVEMENT, KINDERGARTEN – GRADE 6
+SCH 8123 SCHOOL CHORUS, SONGS WITH MOVEMENT, KINDERGARTEN - GRADE 6
 Two contrasting selections, own choice, any number of parts.
-SCH 8124 SCHOOL CHORUS, OPERETTA/MUSICAL THEATRE EXCERPTS, KINDERGARTEN – GRADE 6
+SCH 8124 SCHOOL CHORUS, OPERETTA/MUSICAL THEATRE EXCERPTS, KINDERGARTEN - GRADE 6
 One selection of an excerpt from an operetta or musical, including any optional solo parts, to be acted out as well as sung,
 with participants costumed and using a minimum of stage sets. Preparation and performance time not to exceed 10
 minutes. Any live accompaniment may be used. Speaking parts should be kept to a minimum. It is highly desirable that
 the conductor not be on stage.
-GRADES 4 – 6
-SCH 8131 SCHOOL CHORUS, GRADES 4 – 6
+GRADES 4 - 6
+SCH 8131 SCHOOL CHORUS, GRADES 4 - 6
 One selection from the Suggested Repertoire List at the end of this section.
 AND One selection, own choice, any number of parts.
-SCH 8132 SCHOOL CHORUS, OWN CHOICE, GRADES 4 – 6
+SCH 8132 SCHOOL CHORUS, OWN CHOICE, GRADES 4 - 6
 Two contrasting selections, own choice, any number of parts.
-SCH 8133 SCHOOL CHORUS, OWN CHOICE, GIRLS, GRADES 4 – 6
+SCH 8133 SCHOOL CHORUS, OWN CHOICE, GIRLS, GRADES 4 - 6
 Two contrasting selections, own choice, any number of parts.
-SCH 8134 SCHOOL CHORUS, OWN CHOICE, BOYS, GRADES 4 – 6
+SCH 8134 SCHOOL CHORUS, OWN CHOICE, BOYS, GRADES 4 - 6
 Two contrasting selections, own choice, any number of parts.
-SCH 8135 SCHOOL CHORUS, SACRED, GRADES 4 – 6
+SCH 8135 SCHOOL CHORUS, SACRED, GRADES 4 - 6
 Two contrasting selections, own choice, any number of parts.
-SCH 8136 SCHOOL CHORUS, FOLK SONG, GRADES 4 – 6
+SCH 8136 SCHOOL CHORUS, FOLK SONG, GRADES 4 - 6
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
-SCH 8137 SCHOOL CHORUS, CONTEMPORARY FOLK/POPULAR MUSIC, GRADES 4 – 6
+SCH 8137 SCHOOL CHORUS, CONTEMPORARY FOLK/POPULAR MUSIC, GRADES 4 - 6
 Two contrasting selections, own choice, any number of parts.
-SCH 8138 SCHOOL CHORUS, SONGS WITH MOVEMENT, GRADES 4 – 6
+SCH 8138 SCHOOL CHORUS, SONGS WITH MOVEMENT, GRADES 4 - 6
 Two contrasting selections, own choice, any number of parts.
-SCH 8139 SCHOOL CHORUS, OPERETTA/MUSICAL THEATRE EXCERPTS, GRADES 4 – 6
+SCH 8139 SCHOOL CHORUS, OPERETTA/MUSICAL THEATRE EXCERPTS, GRADES 4 - 6
 One selection of an excerpt from an operetta or musical, including any optional solo parts, to be acted out as well as sung,
 with participants costumed and using a minimum of stage sets. Preparation and performance time not to exceed 10
 minutes. Any live accompaniment may be used. Speaking parts should be kept to a minimum. It is highly desirable that
 the conductor not be on stage.
-GRADES 5 – 8
-SCH 8146 SCHOOL CHORUS, OWN CHOICE, GRADES 5 – 8
+GRADES 5 - 8
+SCH 8146 SCHOOL CHORUS, OWN CHOICE, GRADES 5 - 8
 Two contrasting selections, own choice, any number of parts.
-SCH 8147 SCHOOL CHORUS, OWN CHOICE, GIRLS, GRADES 5 – 8
+SCH 8147 SCHOOL CHORUS, OWN CHOICE, GIRLS, GRADES 5 - 8
 Two contrasting selections, own choice, any number of parts.
 188
-SCH 8148 SCHOOL CHORUS, OWN CHOICE, BOYS, UNCHANGED VOICES, GRADES 5 – 8
+SCH 8148 SCHOOL CHORUS, OWN CHOICE, BOYS, UNCHANGED VOICES, GRADES 5 - 8
 Two contrasting selections, own choice, any number of parts.
-SCH 8149 SCHOOL CHORUS, OWN CHOICE, BOYS, CHANGED OR CHANGING VOICES, GRADES 5 – 8
+SCH 8149 SCHOOL CHORUS, OWN CHOICE, BOYS, CHANGED OR CHANGING VOICES, GRADES 5 - 8
 Two contrasting selections, own choice, any number of parts.
-SCH 8150 SCHOOL CHORUS, FOLK SONG, GRADES 5 – 8
+SCH 8150 SCHOOL CHORUS, FOLK SONG, GRADES 5 - 8
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
-SCH 8151 SCHOOL CHORUS, FOLK SONG, GIRLS, GRADES 5 – 8
+SCH 8151 SCHOOL CHORUS, FOLK SONG, GIRLS, GRADES 5 - 8
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
-SCH 8152 SCHOOL CHORUS, FOLK SONG, BOYS, UNCHANGED VOICES, GRADES 5 – 8
+SCH 8152 SCHOOL CHORUS, FOLK SONG, BOYS, UNCHANGED VOICES, GRADES 5 - 8
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
-SCH 8153 SCHOOL CHORUS, FOLK SONG, BOYS, CHANGED OR CHANGING VOICES, GRADES 5 – 8
+SCH 8153 SCHOOL CHORUS, FOLK SONG, BOYS, CHANGED OR CHANGING VOICES, GRADES 5 - 8
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
-SCH 8154 SCHOOL CHORUS, CONTEMPORARY FOLK/POPULAR MUSIC, GRADES 5 – 8
+SCH 8154 SCHOOL CHORUS, CONTEMPORARY FOLK/POPULAR MUSIC, GRADES 5 - 8
 Two contrasting selections, own choice, any number of parts.
-SCH 8155 SCHOOL CHORUS, OPERETTA/MUSICAL THEATRE EXCERPTS, GRADES 5 – 8
+SCH 8155 SCHOOL CHORUS, OPERETTA/MUSICAL THEATRE EXCERPTS, GRADES 5 - 8
 One selection of an excerpt from an operetta or musical, including any optional solo parts, to be acted out as well as sung,
 with participants costumed and using a minimum of stage sets. Preparation and performance time not to exceed 20
 minutes. Any live accompaniment may be used. Speaking parts should be kept to a minimum. It is highly desirable that
 the conductor not be on stage.
-SCH 8156 SCHOOL CHORUS, CONCERT GROUP, GRADES 5 – 8
+SCH 8156 SCHOOL CHORUS, CONCERT GROUP, GRADES 5 - 8
 Three or four contrasting selections by various composers, representing a variety of styles and periods. 20 minute time
 limit. The artistic arrangement of the selections and the quality of the music chosen will be taken into consideration.
-GRADES 7 – 9
-SCH 8161 SCHOOL CHORUS, OWN CHOICE, GRADES 7 – 9
+GRADES 7 - 9
+SCH 8161 SCHOOL CHORUS, OWN CHOICE, GRADES 7 - 9
 Two contrasting selections, own choice, any number of parts.
-SCH 8162 SCHOOL CHORUS, OWN CHOICE, GIRLS, GRADES 7 – 9
+SCH 8162 SCHOOL CHORUS, OWN CHOICE, GIRLS, GRADES 7 - 9
 Two contrasting selections, own choice, any number of parts.
-SCH 8163 SCHOOL CHORUS, OWN CHOICE, BOYS, UNCHANGED VOICES, GRADES 7 – 9
+SCH 8163 SCHOOL CHORUS, OWN CHOICE, BOYS, UNCHANGED VOICES, GRADES 7 - 9
 Two contrasting selections, own choice, any number of parts.
-SCH 8164 SCHOOL CHORUS, OWN CHOICE, BOYS, CHANGED OR CHANGING VOICES, GRADES 7 – 9
+SCH 8164 SCHOOL CHORUS, OWN CHOICE, BOYS, CHANGED OR CHANGING VOICES, GRADES 7 - 9
 Two contrasting selections, own choice, any number of parts.
-SCH 8165 SCHOOL CHORUS, FOLK SONG, GRADES 7 – 9
+SCH 8165 SCHOOL CHORUS, FOLK SONG, GRADES 7 - 9
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
-SCH 8166 SCHOOL CHORUS, FOLK SONG, GIRLS, GRADES 7 – 9
+SCH 8166 SCHOOL CHORUS, FOLK SONG, GIRLS, GRADES 7 - 9
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
-SCH 8167 SCHOOL CHORUS, FOLK SONG, BOYS, UNCHANGED VOICES, GRADES 7 – 9
+SCH 8167 SCHOOL CHORUS, FOLK SONG, BOYS, UNCHANGED VOICES, GRADES 7 - 9
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
-SCH 8168 SCHOOL CHORUS, FOLK SONG, BOYS, CHANGED OR CHANGING VOICES, GRADES 7 – 9
+SCH 8168 SCHOOL CHORUS, FOLK SONG, BOYS, CHANGED OR CHANGING VOICES, GRADES 7 - 9
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
-SCH 8169 SCHOOL CHORUS, CONTEMPORARY FOLK/POPULAR MUSIC, GRADES 7 – 9
+SCH 8169 SCHOOL CHORUS, CONTEMPORARY FOLK/POPULAR MUSIC, GRADES 7 - 9
 Two contrasting selections, own choice, any number of parts.
-SCH 8170 SCHOOL CHORUS, JAZZ OR SWING, GRADES 7 – 9
+SCH 8170 SCHOOL CHORUS, JAZZ OR SWING, GRADES 7 - 9
 Two contrasting selections, own choice, any number of parts.
 189
-SCH 8171 SCHOOL CHORUS, OPERETTA/MUSICAL THEATRE EXCERPTS, GRADES 7 – 9
+SCH 8171 SCHOOL CHORUS, OPERETTA/MUSICAL THEATRE EXCERPTS, GRADES 7 - 9
 One selection of an excerpt from an operetta or musical, including any optional solo parts, to be acted out as well as sung,
 with participants costumed and using a minimum of stage sets. Preparation and performance time not to exceed 20
 minutes. Any live accompaniment may be used. Speaking parts should be kept to a minimum. It is highly desirable that
 the conductor not be on stage.
-SCH 8172 SCHOOL CHORUS, CONCERT GROUP, GRADES 7 – 9
+SCH 8172 SCHOOL CHORUS, CONCERT GROUP, GRADES 7 - 9
 Three or four contrasting selections by various composers, representing a variety of styles and periods. 20 minute time
 limit. The artistic arrangement of the selections and the quality of the music chosen will be taken into consideration.
-GRADES 9 – 12
-SCH 8176 SCHOOL CHORUS, OWN CHOICE, GRADES 9 – 12
+GRADES 9 - 12
+SCH 8176 SCHOOL CHORUS, OWN CHOICE, GRADES 9 - 12
 Two contrasting selections, own choice, any number of parts.
-SCH 8177 SCHOOL CHORUS, OWN CHOICE, GIRLS, GRADES 9 – 12
+SCH 8177 SCHOOL CHORUS, OWN CHOICE, GIRLS, GRADES 9 - 12
 Two contrasting selections, own choice, any number of parts.
-SCH 8178 SCHOOL CHORUS, OWN CHOICE, BOYS, GRADES 9 – 12
+SCH 8178 SCHOOL CHORUS, OWN CHOICE, BOYS, GRADES 9 - 12
 Two contrasting selections, own choice, any number of parts.
-SCH 8179 SCHOOL CHORUS, FOLK SONG, GRADES 9 – 12
+SCH 8179 SCHOOL CHORUS, FOLK SONG, GRADES 9 - 12
 Two contrasting selections, own choice, traditional or traditional style, any number of parts.
-SCH 8180 SCHOOL CHORUS, CONTEMPORARY FOLK/POPULAR MUSIC, GRADES 9 – 12
+SCH 8180 SCHOOL CHORUS, CONTEMPORARY FOLK/POPULAR MUSIC, GRADES 9 - 12
 Two contrasting selections, own choice, any number of parts.
-SCH 8181 SCHOOL CHORUS, JAZZ OR SWING, GRADES 9 – 12
+SCH 8181 SCHOOL CHORUS, JAZZ OR SWING, GRADES 9 - 12
 Two contrasting selections, own choice, two or more parts.
-SCH 8182 SCHOOL CHORUS, OPERETTA/MUSICAL THEATRE EXCERPTS, GRADES 9 – 12
+SCH 8182 SCHOOL CHORUS, OPERETTA/MUSICAL THEATRE EXCERPTS, GRADES 9 - 12
 One selection of an excerpt from an operetta or musical, including any optional solo parts, to be acted out as well as sung,
 with participants costumed and using a minimum of stage sets. Preparation and performance time not to exceed 20
 minutes. Any live accompaniment may be used. Speaking parts should be kept to a minimum. It is highly desirable that
 the conductor not be on stage.
-SCH 8183 SCHOOL CHORUS, CONCERT GROUP, GRADES 9 – 12
+SCH 8183 SCHOOL CHORUS, CONCERT GROUP, GRADES 9 - 12
 Three or four contrasting selections by various composers, representing a variety of styles and periods. 20 minute time
 limit. The artistic arrangement of the selections and the quality of the music chosen will be taken into consideration.
 ANY OTHER GRADE COMBINATION
@@ -8393,96 +8393,96 @@ SCH 8405 SCHOOL ORFF ENSEMBLE, OWN CHOICE, GRADE 5
 Two contrasting selections, own choice.
 SCH 8406 SCHOOL ORFF ENSEMBLE, OWN CHOICE, GRADE 6
 Two contrasting selections, own choice.
-SCH 8407 SCHOOL ORFF ENSEMBLE, OWN CHOICE, ANY COMBINATION OF GRADES 1 – 3
+SCH 8407 SCHOOL ORFF ENSEMBLE, OWN CHOICE, ANY COMBINATION OF GRADES 1 - 3
 Two contrasting selections, own choice.
-SCH 8408 SCHOOL ORFF ENSEMBLE, OWN CHOICE, ANY COMBINATION OF GRADES 4 – 6
+SCH 8408 SCHOOL ORFF ENSEMBLE, OWN CHOICE, ANY COMBINATION OF GRADES 4 - 6
 Two contrasting selections, own choice.
 SCH 8409 SCHOOL ORFF ENSEMBLE, OWN CHOICE, ANY OTHER GRADE COMBINATION
 Two contrasting selections, own choice.
 SCHOOL GUITAR ENSEMBLE CLASSES
 Two contrasting selections, own choice.
-SCH 8451 SCHOOL GUITAR ENSEMBLE, OWN CHOICE, GRADES 4 – 6
-SCH 8452 SCHOOL GUITAR ENSEMBLE, OWN CHOICE, GRADES 7 – 9
-SCH 8453 SCHOOL GUITAR ENSEMBLE, OWN CHOICE, GRADES 10 – 12
+SCH 8451 SCHOOL GUITAR ENSEMBLE, OWN CHOICE, GRADES 4 - 6
+SCH 8452 SCHOOL GUITAR ENSEMBLE, OWN CHOICE, GRADES 7 - 9
+SCH 8453 SCHOOL GUITAR ENSEMBLE, OWN CHOICE, GRADES 10 - 12
 SCH 8454 SCHOOL GUITAR ENSEMBLE, OWN CHOICE, ANY OTHER GRADE COMBINATION
 SCHOOL RECORDER CLASSES
 RECORDER SOLOS FOR SCHOOL GROUP-INSTRUCTED STUDENTS
 It is recommended that these classes be for adjudication only. Two contrasting selections, own choice.
-SCH 8501 SCHOOL RECORDER SOLO, OWN CHOICE, SOPRANO, BEGINNER GRADES 1 – 6, 1 ST YEAR OF INSTRUCTION
-SCH 8502 SCHOOL RECORDER SOLO, OWN CHOICE, ALTO, BEGINNER GRADES 1 – 6, 1 ST YEAR OF INSTRUCTION
-SCH 8503 SCHOOL RECORDER SOLO, OWN CHOICE, SOPRANO, JUNIOR GRADES 1 – 6, 2 ND YEAR OF INSTRUCTION
-SCH 8504 SCHOOL RECORDER SOLO, OWN CHOICE, ALTO, JUNIOR GRADES 1 – 6, 2 ND YEAR OF INSTRUCTION
-SCH 8505 SCHOOL RECORDER SOLO, OWN CHOICE, SOPRANO, INTERMEDIATE GRADES 1 – 6,
+SCH 8501 SCHOOL RECORDER SOLO, OWN CHOICE, SOPRANO, BEGINNER GRADES 1 - 6, 1 ST YEAR OF INSTRUCTION
+SCH 8502 SCHOOL RECORDER SOLO, OWN CHOICE, ALTO, BEGINNER GRADES 1 - 6, 1 ST YEAR OF INSTRUCTION
+SCH 8503 SCHOOL RECORDER SOLO, OWN CHOICE, SOPRANO, JUNIOR GRADES 1 - 6, 2 ND YEAR OF INSTRUCTION
+SCH 8504 SCHOOL RECORDER SOLO, OWN CHOICE, ALTO, JUNIOR GRADES 1 - 6, 2 ND YEAR OF INSTRUCTION
+SCH 8505 SCHOOL RECORDER SOLO, OWN CHOICE, SOPRANO, INTERMEDIATE GRADES 1 - 6,
 TWO OR MORE YEARS OF INSTRUCTION
-SCH 8506 SCHOOL RECORDER SOLO, OWN CHOICE, ALTO, INTERMEDIATE GRADES 1 – 6,
+SCH 8506 SCHOOL RECORDER SOLO, OWN CHOICE, ALTO, INTERMEDIATE GRADES 1 - 6,
 TWO OR MORE YEARS OF INSTRUCTION
 191
 RECORDER DUET CLASSES FOR SCHOOL GROUP-INSTRUCTED STUDENTS
 Two contrasting selections, own choice.
-SCH 8511 SCHOOL RECORDER DUET, OWN CHOICE, SOPRANO, BEGINNER GRADES 1 – 6, 1 ST YEAR OF INSTRUCTION
-SCH 8512 SCHOOL RECORDER DUET, OWN CHOICE, SOPRANO, JUNIOR GRADES 1 – 6,
+SCH 8511 SCHOOL RECORDER DUET, OWN CHOICE, SOPRANO, BEGINNER GRADES 1 - 6, 1 ST YEAR OF INSTRUCTION
+SCH 8512 SCHOOL RECORDER DUET, OWN CHOICE, SOPRANO, JUNIOR GRADES 1 - 6,
 2 ND YEAR OF INSTRUCTION
-SCH 8513 SCHOOL RECORDER DUET, OWN CHOICE, SOPRANO, INTERMEDIATE GRADES 1 – 6,
+SCH 8513 SCHOOL RECORDER DUET, OWN CHOICE, SOPRANO, INTERMEDIATE GRADES 1 - 6,
 TWO OR MORE YEARS OF INSTRUCTION
 SCHOOL RECORDER CONSORTS
 No fewer than three and no more than eight performers. These classes may include any combination of recorders, including
 sopranino, as well as other appropriate instruments.
-SCH 8521 SCHOOL RECORDER CONSORT, GRADES 4 – 6
+SCH 8521 SCHOOL RECORDER CONSORT, GRADES 4 - 6
 First year of instruction. Any combination of soprano, alto, tenor and bass recorders.
 Two contrasting selections, own choice, suitable for the level of the performers and the instrumentation.
-SCH 8522 SCHOOL RECORDER CONSORT, GRADES 7 – 12
+SCH 8522 SCHOOL RECORDER CONSORT, GRADES 7 - 12
 First year of instruction. Any combination of soprano, alto, tenor and bass recorders.
 Two contrasting selections, own choice, suitable for the level of the performers and the instrumentation.
-SCH 8523 SCHOOL RECORDER CONSORT, GRADES 4 – 6
+SCH 8523 SCHOOL RECORDER CONSORT, GRADES 4 - 6
 One or more years of instruction. Any combination of sopranino, soprano, alto, tenor and bass recorders.
 Two contrasting selections, own choice, suitable for the level of the performers and the instrumentation.
-SCH 8524 SCHOOL RECORDER CONSORT, GRADES 7 – 12
+SCH 8524 SCHOOL RECORDER CONSORT, GRADES 7 - 12
 One or more years of instruction. Any combination of sopranino, soprano, alto, tenor and bass recorders.
 Two contrasting selections, own choice, suitable for the level of the performers and the instrumentation.
 SCHOOL RECORDER ENSEMBLES
 No limit on number of performers. One or more years of instruction. Any combination of soprano, alto, tenor and bass recorders.
 Two contrasting selections, own choice, suitable for the level of the performers and the instrumentation.
-SCH 8531 SCHOOL RECORDER ENSEMBLE, OWN CHOICE, BEGINNER, GRADES 1 – 6,
+SCH 8531 SCHOOL RECORDER ENSEMBLE, OWN CHOICE, BEGINNER, GRADES 1 - 6,
 1 ST YEAR OF INSTRUCTION
-SCH 8532 SCHOOL RECORDER ENSEMBLE, OWN CHOICE, JUNIOR, GRADES 1 – 6, 2 ND YEAR OF INSTRUCTION
-SCH 8533 SCHOOL RECORDER ENSEMBLE, OWN CHOICE, INTERMEDIATE, GRADES 1 – 6,
+SCH 8532 SCHOOL RECORDER ENSEMBLE, OWN CHOICE, JUNIOR, GRADES 1 - 6, 2 ND YEAR OF INSTRUCTION
+SCH 8533 SCHOOL RECORDER ENSEMBLE, OWN CHOICE, INTERMEDIATE, GRADES 1 - 6,
 TWO OR MORE YEARS OF INSTRUCTION
-SCH 8534 SCHOOL RECORDER ENSEMBLE, OWN CHOICE, BEGINNER, GRADES 7 – 12, 1 ST YEAR OF INSTRUCTION
-SCH 8535 SCHOOL RECORDER ENSEMBLE, OWN CHOICE, JUNIOR, GRADES 7 – 12, 2 ND YEAR OF INSTRUCTION
-SCH 8536 SCHOOL RECORDER ENSEMBLE, OWN CHOICE, INTERMEDIATE, GRADES 7 – 12,
+SCH 8534 SCHOOL RECORDER ENSEMBLE, OWN CHOICE, BEGINNER, GRADES 7 - 12, 1 ST YEAR OF INSTRUCTION
+SCH 8535 SCHOOL RECORDER ENSEMBLE, OWN CHOICE, JUNIOR, GRADES 7 - 12, 2 ND YEAR OF INSTRUCTION
+SCH 8536 SCHOOL RECORDER ENSEMBLE, OWN CHOICE, INTERMEDIATE, GRADES 7 - 12,
 TWO OR MORE YEARS OF INSTRUCTION
 SCH 8537 SCHOOL RECORDER ENSEMBLE, OWN CHOICE, ANY GRADE COMBINATION
 SCHOOL WOODWIND CLASSES
 WOODWIND SOLOS FOR SCHOOL INSTRUCTED STUDENTS
 It is recommended that these classes be for adjudication only. Two contrasting selections, own choice.
-SCH 8551 SCHOOL WOODWIND SOLO, OWN CHOICE, GRADES 5 – 8, 1 ST YEAR OF INSTRUCTION
-Grades 5 – 6 may enter this level for two years.
-SCH 8552 SCHOOL WOODWIND SOLO, OWN CHOICE, GRADES 7 – 8, 2 ND YEAR OF INSTRUCTION
-SCH 8553 SCHOOL WOODWIND SOLO, OWN CHOICE, GRADES 9 – 10
-SCH 8554 SCHOOL WOODWIND SOLO, OWN CHOICE, GRADES 11 – 12
+SCH 8551 SCHOOL WOODWIND SOLO, OWN CHOICE, GRADES 5 - 8, 1 ST YEAR OF INSTRUCTION
+Grades 5 - 6 may enter this level for two years.
+SCH 8552 SCHOOL WOODWIND SOLO, OWN CHOICE, GRADES 7 - 8, 2 ND YEAR OF INSTRUCTION
+SCH 8553 SCHOOL WOODWIND SOLO, OWN CHOICE, GRADES 9 - 10
+SCH 8554 SCHOOL WOODWIND SOLO, OWN CHOICE, GRADES 11 - 12
 192
 SCHOOL BRASS CLASSES
 BRASS SOLOS FOR SCHOOL INSTRUCTED STUDENTS
 It is recommended that these classes be for adjudication only. Two contrasting selections, own choice.
-SCH 8601 SCHOOL BRASS SOLO, OWN CHOICE, GRADES 5 – 8, 1 ST YEAR OF INSTRUCTION
-Grades 5 – 6 may enter this level for two years.
-SCH 8602 SCHOOL BRASS SOLO, OWN CHOICE, GRADES 7 – 8, 2 ND YEAR OF INSTRUCTION
-SCH 8603 SCHOOL BRASS SOLO, OWN CHOICE, GRADES 9 – 10
-SCH 8604 SCHOOL BRASS SOLO, OWN CHOICE, GRADES 11 – 12
+SCH 8601 SCHOOL BRASS SOLO, OWN CHOICE, GRADES 5 - 8, 1 ST YEAR OF INSTRUCTION
+Grades 5 - 6 may enter this level for two years.
+SCH 8602 SCHOOL BRASS SOLO, OWN CHOICE, GRADES 7 - 8, 2 ND YEAR OF INSTRUCTION
+SCH 8603 SCHOOL BRASS SOLO, OWN CHOICE, GRADES 9 - 10
+SCH 8604 SCHOOL BRASS SOLO, OWN CHOICE, GRADES 11 - 12
 SCHOOL HANDBELL CLASSES
 SCHOOL HANDBELL CHOIRS
 Two contrasting selections, own choice.
-SCH 8651 SCHOOL HANDBELL CHOIR, OWN CHOICE, GRADES 1 – 6
-SCH 8652 SCHOOL HANDBELL CHOIR, OWN CHOICE, GRADES 7 – 9
-SCH 8653 SCHOOL HANDBELL CHOIR, OWN CHOICE, GRADES 10 – 12
+SCH 8651 SCHOOL HANDBELL CHOIR, OWN CHOICE, GRADES 1 - 6
+SCH 8652 SCHOOL HANDBELL CHOIR, OWN CHOICE, GRADES 7 - 9
+SCH 8653 SCHOOL HANDBELL CHOIR, OWN CHOICE, GRADES 10 - 12
 SCH 8654 SCHOOL HANDBELL CHOIR, OWN CHOICE, ANY OTHER GRADE COMBINATION
 SCHOOL BAND CLASSES
 SCHOOL RHYTHM BANDS
 Any combination of percussion instruments. Piano is optional. Two contrasting selections, own choice.
 SCH 8701 SCHOOL RHYTHM BAND, OWN CHOICE, KINDERGARTEN
-SCH 8702 SCHOOL RHYTHM BAND, OWN CHOICE, GRADES 1 – 2
-SCH 8703 SCHOOL RHYTHM BAND, OWN CHOICE, GRADES 3 – 4
-SCH 8704 SCHOOL RHYTHM BAND, OWN CHOICE, GRADES 5 – 6
+SCH 8702 SCHOOL RHYTHM BAND, OWN CHOICE, GRADES 1 - 2
+SCH 8703 SCHOOL RHYTHM BAND, OWN CHOICE, GRADES 3 - 4
+SCH 8704 SCHOOL RHYTHM BAND, OWN CHOICE, GRADES 5 - 6
 SCH 8705 SCHOOL RHYTHM BAND, OWN CHOICE, ANY OTHER GRADE COMBINATION
 SCHOOL BAND
 SCH 8711 SCHOOL BAND, OWN CHOICE, BEGINNER
@@ -8815,7 +8815,7 @@ The Love of the Sea (Leslie 5034)
 Music Alone Shall Live (Heritage Music Press LO.H5842)
 199
 SCHOOL CHORUS
-SCH 8101 SCHOOL CHORUS, KINDERGARTEN – GRADE 3
+SCH 8101 SCHOOL CHORUS, KINDERGARTEN - GRADE 3
 Anderson, W.H.
 Baynon, Arthur
 Belyea, W.H.
@@ -8834,7 +8834,7 @@ We Love to Sing (Leslie 1129)
 Little Birch Tree (Boosey & Hawkes HL.48003970)
 Catch a Little Sunbeam (Leslie 1189)
 Lullaby (Leslie 1146)
-SCH 8116 SCHOOL CHORUS, KINDERGARTEN – GRADE 6
+SCH 8116 SCHOOL CHORUS, KINDERGARTEN - GRADE 6
 Bertaux, Betty (arr.)
 Bisbee, B. Wayne
 Clark, Henry A.
@@ -8853,7 +8853,7 @@ Wind on the Hill (Boosey & Hawkes HL.48004289)
 Blossom Snow (Leslie 1086)
 One-Legged Sam (Willis Music HL.415249)
 If You Should Meet a Crocodile (Leslie 1145)
-SCH 8131 SCHOOL CHORUS, GRADES 4 – 6
+SCH 8131 SCHOOL CHORUS, GRADES 4 - 6
 Cassils, Craig
 Crawley, Clifford
 Dolloff, Lori-Anne
@@ -9006,7 +9006,7 @@ Public Speaking performers must provide a typed or neatly printed copy of their 
 The winner(s) in each category, at the discretion of the adjudicator, will receive a scholarship.
 202
 SOLO SPOKEN POETRY CLASSES
-KINDERGARTEN – GRADE 3
+KINDERGARTEN - GRADE 3
 Suggested Repertoire List selections are published in and can be photocopied from the AMAF Speech Arts Manual volumes.
 SA 9001 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, KINDERGARTEN
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
@@ -9016,7 +9016,7 @@ SA 9005 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, GRADE 2
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 SA 9007 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, GRADE 3
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-SA 9010 SOLO SPOKEN POETRY, CLASSICAL, GRADES 1 – 3
+SA 9010 SOLO SPOKEN POETRY, CLASSICAL, GRADES 1 - 3
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 SA 9002 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, OWN CHOICE, KINDERGARTEN
 One selection, own choice.
@@ -9026,15 +9026,15 @@ SA 9006 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 2
 One selection, own choice.
 SA 9008 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 3
 One selection, own choice.
-SA 9009 SOLO SPOKEN POETRY, MULTILINGUAL, OWN CHOICE, KINDERGARTEN – GRADE 3
+SA 9009 SOLO SPOKEN POETRY, MULTILINGUAL, OWN CHOICE, KINDERGARTEN - GRADE 3
 One selection, own choice. An English translation must be provided. Time limit 2 minutes
-SA 9011 SOLO SPOKEN POETRY, CLASSICAL, OWN CHOICE, GRADES 1 – 3
+SA 9011 SOLO SPOKEN POETRY, CLASSICAL, OWN CHOICE, GRADES 1 - 3
 One selection, own choice.
 SCHOOL GRADES 4 - 6
 Speech Arts classes with bolded titles and preceded by:
 
-PSA are eligible for recommendation to the Grades 4 – 6 Poetry and Prose class at the Provincial Festival
-GRADES 4 – 6
+PSA are eligible for recommendation to the Grades 4 - 6 Poetry and Prose class at the Provincial Festival
+GRADES 4 - 6
 Suggested Repertoire List selections are published in and can be photocopied from the AMAF Speech Arts Manual volumes.
 PSA 9021 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, GRADE 4
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
@@ -9042,14 +9042,14 @@ PSA 9023 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, GRADE 5
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 PSA 9025 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, GRADE 6
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9027 SOLO SPOKEN POETRY, CLASSICAL, GRADES 4 – 6
+PSA 9027 SOLO SPOKEN POETRY, CLASSICAL, GRADES 4 - 6
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9029 SOLO SPOKEN POETRY, CANADIAN, GRADES 4 – 6
+PSA 9029 SOLO SPOKEN POETRY, CANADIAN, GRADES 4 - 6
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9031 SOLO SPOKEN POETRY, MANITOBAN, GRADES 4 – 6
+PSA 9031 SOLO SPOKEN POETRY, MANITOBAN, GRADES 4 - 6
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 203
-PSA 9033 SOLO SPOKEN POETRY, MULTILINGUAL, OWN CHOICE, GRADES 4 – 6
+PSA 9033 SOLO SPOKEN POETRY, MULTILINGUAL, OWN CHOICE, GRADES 4 - 6
 One selection, own choice. An English translation must be provided. Time limit 3 minutes.
 SA 9022 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 4
 One selection, own choice.
@@ -9057,17 +9057,17 @@ SA 9024 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 5
 One selection, own choice.
 SA 9026 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 6
 One selection, own choice.
-SA 9028 SOLO SPOKEN POETRY, CLASSICAL, OWN CHOICE, GRADES 4 – 6
+SA 9028 SOLO SPOKEN POETRY, CLASSICAL, OWN CHOICE, GRADES 4 - 6
 One selection, own choice.
-SA 9030 SOLO SPOKEN POETRY, CANADIAN, OWN CHOICE, GRADES 4 – 6
+SA 9030 SOLO SPOKEN POETRY, CANADIAN, OWN CHOICE, GRADES 4 - 6
 One selection, own choice.
-SA 9032 SOLO SPOKEN POETRY, MANITOBAN, OWN CHOICE, GRADES 4 – 6
+SA 9032 SOLO SPOKEN POETRY, MANITOBAN, OWN CHOICE, GRADES 4 - 6
 One selection, own choice.
 SCHOOL GRADES 7 - 9
 Speech Arts classes with bolded titles and preceded by:
 
 PSA are eligible for recommendation to the Grades 7 - 9 Poetry and Prose class at the Provincial Festival
-GRADES 7 – 9
+GRADES 7 - 9
 Suggested Repertoire List selections are published in and can be photocopied from the AMAF Speech Arts Manual volumes.
 PSA 9041 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, GRADE 7
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
@@ -9075,13 +9075,13 @@ PSA 9043 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, GRADE 8
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 PSA 9045 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, GRADE 9
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9047 SOLO SPOKEN POETRY, CLASSICAL, GRADES 7 – 9
+PSA 9047 SOLO SPOKEN POETRY, CLASSICAL, GRADES 7 - 9
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9049 SOLO SPOKEN POETRY, CANADIAN, GRADES 7 – 9
+PSA 9049 SOLO SPOKEN POETRY, CANADIAN, GRADES 7 - 9
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9051 SOLO SPOKEN POETRY, MANITOBAN, GRADES 7 – 9
+PSA 9051 SOLO SPOKEN POETRY, MANITOBAN, GRADES 7 - 9
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9053 SOLO SPOKEN POETRY, MULTILINGUAL, OWN CHOICE, GRADES 7 – 9
+PSA 9053 SOLO SPOKEN POETRY, MULTILINGUAL, OWN CHOICE, GRADES 7 - 9
 One selection, own choice. An English translation must be provided. Time limit 4 minutes.
 SA 9042 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 7
 One selection, own choice.
@@ -9089,18 +9089,18 @@ SA 9044 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 8
 One selection, own choice.
 SA 9046 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 9
 One selection, own choice.
-SA 9048 SOLO SPOKEN POETRY, CLASSICAL, OWN CHOICE, GRADES 7 – 9
+SA 9048 SOLO SPOKEN POETRY, CLASSICAL, OWN CHOICE, GRADES 7 - 9
 One selection, own choice.
-SA 9050 SOLO SPOKEN POETRY, CANADIAN, OWN CHOICE, GRADES 7 – 9
+SA 9050 SOLO SPOKEN POETRY, CANADIAN, OWN CHOICE, GRADES 7 - 9
 One selection, own choice.
 204
-SA 9052 SOLO SPOKEN POETRY, MANITOBAN, OWN CHOICE, GRADES 7 – 9
+SA 9052 SOLO SPOKEN POETRY, MANITOBAN, OWN CHOICE, GRADES 7 - 9
 One selection, own choice.
 SCHOOL GRADES 10 - 12
 Speech Arts classes with bolded titles and preceded by:
 
 PSA are eligible for recommendation to the Grades 10 - 12 Poetry and Prose class at the Provincial Festival
-GRADES 10 – 12
+GRADES 10 - 12
 Suggested Repertoire List selections are published in and can be photocopied from the AMAF Speech Arts Manual volumes.
 PSA 9061 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, GRADE 10
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
@@ -9108,13 +9108,13 @@ PSA 9063 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, GRADE 11
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 PSA 9065 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, GRADE 12
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9067 SOLO SPOKEN POETRY, CLASSICAL, GRADES 10 – 12
+PSA 9067 SOLO SPOKEN POETRY, CLASSICAL, GRADES 10 - 12
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9069 SOLO SPOKEN POETRY, CANADIAN, GRADES 10 – 12
+PSA 9069 SOLO SPOKEN POETRY, CANADIAN, GRADES 10 - 12
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9071 SOLO SPOKEN POETRY, MANITOBAN, GRADES 10 – 12
+PSA 9071 SOLO SPOKEN POETRY, MANITOBAN, GRADES 10 - 12
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9073 SOLO SPOKEN POETRY, MULTILINGUAL, OWN CHOICE, GRADES 10 – 12
+PSA 9073 SOLO SPOKEN POETRY, MULTILINGUAL, OWN CHOICE, GRADES 10 - 12
 One selection, own choice. An English translation must be provided. Time limit 5 minutes.
 SA 9062 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 10
 One selection, own choice.
@@ -9122,11 +9122,11 @@ SA 9064 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 11
 One selection, own choice.
 SA 9066 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 12
 One selection, own choice.
-SA 9068 SOLO SPOKEN POETRY, CLASSICAL, OWN CHOICE, GRADES 10 – 12
+SA 9068 SOLO SPOKEN POETRY, CLASSICAL, OWN CHOICE, GRADES 10 - 12
 One selection, own choice.
-SA 9070 SOLO SPOKEN POETRY, CANADIAN, OWN CHOICE, GRADES 10 – 12
+SA 9070 SOLO SPOKEN POETRY, CANADIAN, OWN CHOICE, GRADES 10 - 12
 One selection, own choice.
-SA 9072 SOLO SPOKEN POETRY, MANITOBAN, OWN CHOICE, GRADES 10 – 12
+SA 9072 SOLO SPOKEN POETRY, MANITOBAN, OWN CHOICE, GRADES 10 - 12
 One selection, own choice.
 ADULT
 SA 9081 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, OWN CHOICE, ADULT
@@ -9141,108 +9141,108 @@ One selection, own choice. Time limit 5 minutes.
 SA 9085 SOLO SPOKEN POETRY, MULTILINGUAL, OWN CHOICE, ADULT
 One selection, own choice. An English translation must be provided. Time limit 5 minutes.
 MONOLOGUE CLASSES
-SA 9091 MONOLOGUE, OWN CHOICE, GRADES 4 – 6
+SA 9091 MONOLOGUE, OWN CHOICE, GRADES 4 - 6
 One selection, own choice. Time limit 3 minutes.
-SA 9092 MONOLOGUE, OWN CHOICE, GRADES 7 – 9
+SA 9092 MONOLOGUE, OWN CHOICE, GRADES 7 - 9
 One selection, own choice. Time limit 4 minutes.
-SA 9093 MONOLOGUE, OWN CHOICE, GRADES 10 – 12
+SA 9093 MONOLOGUE, OWN CHOICE, GRADES 10 - 12
 One selection, own choice. Time limit 5 minutes.
 SA 9094 MONOLOGUE, OWN CHOICE, ADULT
 One selection, own choice. Time limit 5 minutes.
 SOLO READING CLASSES
-GRADES 1 – 3
+GRADES 1 - 3
 Suggested Repertoire List selections are published in and can be photocopied from the AMAF Speech Arts Manual volumes.
-SA 9102 SOLO READING, PROSE, GRADES 1 – 3
+SA 9102 SOLO READING, PROSE, GRADES 1 - 3
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-SA 9104 SOLO READING, CANADIAN PROSE, GRADES 1 – 3
+SA 9104 SOLO READING, CANADIAN PROSE, GRADES 1 - 3
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-SA 9105 SOLO READING, MANITOBAN PROSE, GRADES 1 – 3
+SA 9105 SOLO READING, MANITOBAN PROSE, GRADES 1 - 3
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-SA 9101 SOLO READING, POETRY, OWN CHOICE, GRADES 1 – 3
+SA 9101 SOLO READING, POETRY, OWN CHOICE, GRADES 1 - 3
 One selection, own choice. Time limit 2 minutes.
-SA 9103 SOLO READING, PROSE, OWN CHOICE, GRADES 1 – 3
+SA 9103 SOLO READING, PROSE, OWN CHOICE, GRADES 1 - 3
 One selection, own choice.
-SA 9106 SOLO READING, BIBLE, OWN CHOICE, GRADES 1 – 3
+SA 9106 SOLO READING, BIBLE, OWN CHOICE, GRADES 1 - 3
 One selection, own choice. Time limit 3 minutes.
-SA 9107 SOLO READING, HOLY BOOK, OWN CHOICE, GRADES 1 – 3
+SA 9107 SOLO READING, HOLY BOOK, OWN CHOICE, GRADES 1 - 3
 One selection, own choice from a holy book other than the Bible. Time limit 3 minutes.
-SA 9108 SOLO READING, CREATIVE POETRY, OWN CHOICE, GRADES 1 – 3
+SA 9108 SOLO READING, CREATIVE POETRY, OWN CHOICE, GRADES 1 - 3
 One selection, own choice. Time limit 2 minutes.
-SA 9109 SOLO READING, CREATIVE PROSE, OWN CHOICE, GRADES 1 – 3
+SA 9109 SOLO READING, CREATIVE PROSE, OWN CHOICE, GRADES 1 - 3
 One selection, own choice. Time limit 3 minutes.
 SCHOOL GRADES 4 - 6
 Speech Arts classes with bolded titles and preceded by:
 
 PSA are eligible for recommendation to the Grades 4 - 6 Poetry and Prose class at the Provincial Festival
-GRADES 4 – 6
+GRADES 4 - 6
 Suggested Repertoire List selections are published in and can be photocopied from the AMAF Speech Arts Manual volumes.
-PSA 9112 SOLO READING, PROSE, GRADES 4 – 6
+PSA 9112 SOLO READING, PROSE, GRADES 4 - 6
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9114 SOLO READING, CANADIAN PROSE, GRADES 4 – 6
+PSA 9114 SOLO READING, CANADIAN PROSE, GRADES 4 - 6
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 206
-PSA 9115 SOLO READING, MANITOBAN PROSE, GRADES 4 – 6
+PSA 9115 SOLO READING, MANITOBAN PROSE, GRADES 4 - 6
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9116 SOLO READING, BIBLE, OWN CHOICE, GRADES 4 – 6
+PSA 9116 SOLO READING, BIBLE, OWN CHOICE, GRADES 4 - 6
 One selection, own choice. Time limit 3 minutes.
-PSA 9117 SOLO READING, HOLY BOOK, OWN CHOICE, GRADES 4 – 6
+PSA 9117 SOLO READING, HOLY BOOK, OWN CHOICE, GRADES 4 - 6
 One selection, own choice from a holy book other than the Bible. Time limit 4 minutes.
-SA 9111 SOLO READING, POETRY, OWN CHOICE, GRADES 4 – 6
+SA 9111 SOLO READING, POETRY, OWN CHOICE, GRADES 4 - 6
 One selection, own choice. Time limit 3 minutes.
-PSA 9113 SOLO READING, PROSE, OWN CHOICE, GRADES 4 – 6
+PSA 9113 SOLO READING, PROSE, OWN CHOICE, GRADES 4 - 6
 One selection, own choice.
-SA 9118 SOLO READING, CREATIVE POETRY, OWN CHOICE, GRADES 4 – 6
+SA 9118 SOLO READING, CREATIVE POETRY, OWN CHOICE, GRADES 4 - 6
 One selection, own choice. Time limit 3 minutes.
-SA 9119 SOLO READING, CREATIVE PROSE, OWN CHOICE, GRADES 4 – 6
+SA 9119 SOLO READING, CREATIVE PROSE, OWN CHOICE, GRADES 4 - 6
 One selection, own choice. Time limit 4 minutes.
 SCHOOL GRADES 7 - 9
 Speech Arts classes with bolded titles and preceded by:
 
 PSA are eligible for recommendation to the Grades 7 - 9 Poetry and Prose class at the Provincial Festival
-GRADES 7 – 9
+GRADES 7 - 9
 Suggested Repertoire List selections are published in and can be photocopied from the AMAF Speech Arts Manual volumes.
-PSA 9122 SOLO READING, PROSE, GRADES 7 – 9
+PSA 9122 SOLO READING, PROSE, GRADES 7 - 9
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9124 SOLO READING, CANADIAN PROSE, GRADES 7 – 9
+PSA 9124 SOLO READING, CANADIAN PROSE, GRADES 7 - 9
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9125 SOLO READING, MANITOBAN PROSE, GRADES 7 – 9
+PSA 9125 SOLO READING, MANITOBAN PROSE, GRADES 7 - 9
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9126 SOLO READING, BIBLE, OWN CHOICE, GRADES 7 – 9
+PSA 9126 SOLO READING, BIBLE, OWN CHOICE, GRADES 7 - 9
 One selection, own choice. Time limit 5 minutes.
-PSA 9127 SOLO READING, HOLY BOOK, OWN CHOICE, GRADES 7 – 9
+PSA 9127 SOLO READING, HOLY BOOK, OWN CHOICE, GRADES 7 - 9
 One selection, own choice from a holy book other than the Bible. Time limit 5 minutes.
-SA 9121 SOLO READING, POETRY, OWN CHOICE, GRADES 7 – 9
+SA 9121 SOLO READING, POETRY, OWN CHOICE, GRADES 7 - 9
 One selection, own choice. Time limit 4 minutes.
-SA 9123 SOLO READING, PROSE, OWN CHOICE, GRADES 7 – 9
+SA 9123 SOLO READING, PROSE, OWN CHOICE, GRADES 7 - 9
 One selection, own choice.
-SA 9128 SOLO READING, CREATIVE POETRY, OWN CHOICE, GRADES 7 – 9
+SA 9128 SOLO READING, CREATIVE POETRY, OWN CHOICE, GRADES 7 - 9
 One selection, own choice. Time limit 4 minutes.
-SA 9129 SOLO READING, CREATIVE PROSE, OWN CHOICE, GRADES 7 – 9
+SA 9129 SOLO READING, CREATIVE PROSE, OWN CHOICE, GRADES 7 - 9
 One selection, own choice. Time limit 5 minutes.
 207
 SCHOOL GRADES 10 - 12
 Speech Arts classes with bolded titles and preceded by:
 
 PSA are eligible for recommendation to the Grades 10 - 12 Poetry and Prose class at the Provincial Festival
-GRADES 10 – 12
+GRADES 10 - 12
 Suggested Repertoire List selections are published in and can be photocopied from the AMAF Speech Arts Manual volumes.
-PSA 9132 SOLO READING, PROSE, GRADES 10 – 12
+PSA 9132 SOLO READING, PROSE, GRADES 10 - 12
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9134 SOLO READING, CANADIAN PROSE, GRADES 10 – 12
+PSA 9134 SOLO READING, CANADIAN PROSE, GRADES 10 - 12
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9135 SOLO READING, MANITOBAN PROSE, GRADES 10 – 12
+PSA 9135 SOLO READING, MANITOBAN PROSE, GRADES 10 - 12
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-PSA 9136 SOLO READING, BIBLE, OWN CHOICE, GRADES 10 – 12
+PSA 9136 SOLO READING, BIBLE, OWN CHOICE, GRADES 10 - 12
 One selection, own choice. Time limit 6 minutes.
-PSA 9137 SOLO READING, HOLY BOOK, OWN CHOICE, GRADES 10 – 12
+PSA 9137 SOLO READING, HOLY BOOK, OWN CHOICE, GRADES 10 - 12
 One selection, own choice from a holy book other than the Bible. Time limit 6 minutes.
-SA 9131 SOLO READING, POETRY, OWN CHOICE, GRADES 10 – 12
+SA 9131 SOLO READING, POETRY, OWN CHOICE, GRADES 10 - 12
 One selection, own choice. Time limit 5 minutes.
-SA 9133 SOLO READING, PROSE, OWN CHOICE, GRADES 10 – 12
+SA 9133 SOLO READING, PROSE, OWN CHOICE, GRADES 10 - 12
 One selection, own choice.
-SA 9138 SOLO READING, CREATIVE POETRY, OWN CHOICE, GRADES 10 – 12
+SA 9138 SOLO READING, CREATIVE POETRY, OWN CHOICE, GRADES 10 - 12
 One selection, own choice. Time limit 5 minutes.
-SA 9139 SOLO READING, CREATIVE PROSE, OWN CHOICE, GRADES 10 – 12
+SA 9139 SOLO READING, CREATIVE PROSE, OWN CHOICE, GRADES 10 - 12
 One selection, own choice. Time limit 6 minutes.
 ADULT
 SA 9141 SOLO READING, POETRY, OWN CHOICE, ADULT
@@ -9264,13 +9264,13 @@ One selection, own choice. Time limit 6 minutes.
 208
 SPOKEN POETRY DUET, TRIO OR QUARTET CLASSES
 A poem RECITED from memory by two, three or four people.
-SA 9151 SPOKEN POETRY DUET, TRIO OR QUARTET, OWN CHOICE, GRADES 1 – 3
+SA 9151 SPOKEN POETRY DUET, TRIO OR QUARTET, OWN CHOICE, GRADES 1 - 3
 One selection, own choice. Time limit 2 minutes.
-SA 9152 SPOKEN POETRY DUET, TRIO OR QUARTET, OWN CHOICE, GRADES 4 – 6
+SA 9152 SPOKEN POETRY DUET, TRIO OR QUARTET, OWN CHOICE, GRADES 4 - 6
 One selection, own choice. Time limit 3 minutes.
-SA 9153 SPOKEN POETRY DUET, TRIO OR QUARTET, OWN CHOICE, GRADES 7 – 9
+SA 9153 SPOKEN POETRY DUET, TRIO OR QUARTET, OWN CHOICE, GRADES 7 - 9
 One selection, own choice. Time limit 4 minutes.
-SA 9154 SPOKEN POETRY DUET, TRIO OR QUARTET, OWN CHOICE, GRADES 10 – 12
+SA 9154 SPOKEN POETRY DUET, TRIO OR QUARTET, OWN CHOICE, GRADES 10 - 12
 One selection, own choice. Time limit 5 minutes.
 SA 9155 SPOKEN POETRY DUET, TRIO OR QUARTET, OWN CHOICE, ADULT
 One selection, own choice. Time limit 5 minutes.
@@ -9291,9 +9291,9 @@ SA 9169 POETRY READING DUET, TRIO OR QUARTET, GRADE 5
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 SA 9171 POETRY READING DUET, TRIO OR QUARTET, GRADE 6
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-SA 9173 POETRY READING DUET, TRIO OR QUARTET, GRADES 7 – 9
+SA 9173 POETRY READING DUET, TRIO OR QUARTET, GRADES 7 - 9
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
-SA 9175 POETRY READING DUET, TRIO OR QUARTET, GRADES 10 – 12
+SA 9175 POETRY READING DUET, TRIO OR QUARTET, GRADES 10 - 12
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 SA 9162 POETRY READING DUET, TRIO OR QUARTET, OWN CHOICE, GRADE 1
 One selection, own choice.
@@ -9308,9 +9308,9 @@ SA 9170 POETRY READING DUET, TRIO OR QUARTET, OWN CHOICE, GRADE 5
 One selection, own choice.
 SA 9172 POETRY READING DUET, TRIO OR QUARTET, OWN CHOICE, GRADE 6
 One selection, own choice.
-SA 9174 POETRY READING DUET, TRIO OR QUARTET, OWN CHOICE, GRADES 7 – 9
+SA 9174 POETRY READING DUET, TRIO OR QUARTET, OWN CHOICE, GRADES 7 - 9
 One selection, own choice.
-SA 9176 POETRY READING DUET, TRIO OR QUARTET, OWN CHOICE, GRADES 10 – 12
+SA 9176 POETRY READING DUET, TRIO OR QUARTET, OWN CHOICE, GRADES 10 - 12
 One selection, own choice.
 SPEECH CHOIR CLASSES
 KINDERGARTEN-GRADE 3
@@ -9327,10 +9327,10 @@ AND one selection, own choice.
 SA 9187 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADE 3
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND one selection, own choice.
-SA 9189 SPEECH CHOIR, CLASSICAL POETRY, KINDERGARTEN – GRADE 3
+SA 9189 SPEECH CHOIR, CLASSICAL POETRY, KINDERGARTEN - GRADE 3
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND one selection, own choice.
-SA 9191 SPEECH CHOIR, DRAMATIC SPEAKING, KINDERGARTEN – GRADE 3
+SA 9191 SPEECH CHOIR, DRAMATIC SPEAKING, KINDERGARTEN - GRADE 3
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND one selection, own choice.
 SA 9182 SPEECH CHOIR, 20 TH /21 ST CENTURY, OWN CHOICE, KINDERGARTEN
@@ -9341,14 +9341,14 @@ SA 9186 SPEECH CHOIR, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 2
 Two selections, own choice.
 SA 9188 SPEECH CHOIR, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 3
 Two selections, own choice.
-SA 9190 SPEECH CHOIR, CLASSICAL POETRY, OWN CHOICE, KINDERGARTEN – GRADE 3
+SA 9190 SPEECH CHOIR, CLASSICAL POETRY, OWN CHOICE, KINDERGARTEN - GRADE 3
 Two selections, own choice.
-SA 9192 SPEECH CHOIR, DRAMATIC SPEAKING, OWN CHOICE, KINDERGARTEN – GRADE 3
+SA 9192 SPEECH CHOIR, DRAMATIC SPEAKING, OWN CHOICE, KINDERGARTEN - GRADE 3
 Two selections, own choice.
-SA 9193 SPEECH CHOIR, MULTILINGUAL, OWN CHOICE, KINDERGARTEN – GRADE 3
+SA 9193 SPEECH CHOIR, MULTILINGUAL, OWN CHOICE, KINDERGARTEN - GRADE 3
 Two selections, own choice. An English translation must be provided. Time limit 4 minutes.
 210
-GRADES 4 – 6
+GRADES 4 - 6
 Suggested Repertoire List selections are published in and can be photocopied from the AMAF Speech Arts Manual volumes.
 SA 9201 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADE 4
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
@@ -9359,10 +9359,10 @@ AND One selection, own choice.
 SA 9205 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADE 6
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND One selection, own choice.
-SA 9207 SPEECH CHOIR, CLASSICAL POETRY, GRADES 4 – 6
+SA 9207 SPEECH CHOIR, CLASSICAL POETRY, GRADES 4 - 6
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND One selection, own choice.
-SA 9209 SPEECH CHOIR, DRAMATIC SPEAKING, GRADES 4 – 6
+SA 9209 SPEECH CHOIR, DRAMATIC SPEAKING, GRADES 4 - 6
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND One selection, own choice.
 SA 9202 SPEECH CHOIR, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 4
@@ -9371,50 +9371,50 @@ SA 9204 SPEECH CHOIR, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 5
 Two selections, own choice.
 SA 9206 SPEECH CHOIR, 20 TH /21 ST CENTURY, OWN CHOICE, GRADE 6
 Two selections, own choice.
-SA 9208 SPEECH CHOIR, CLASSICAL POETRY, OWN CHOICE, GRADES 4 – 6
+SA 9208 SPEECH CHOIR, CLASSICAL POETRY, OWN CHOICE, GRADES 4 - 6
 Two selections, own choice.
-SA 9210 SPEECH CHOIR, DRAMATIC SPEAKING, OWN CHOICE, GRADES 4 – 6
+SA 9210 SPEECH CHOIR, DRAMATIC SPEAKING, OWN CHOICE, GRADES 4 - 6
 Two selections, own choice.
-SA 9211 SPEECH CHOIR, MULTILINGUAL, OWN CHOICE, GRADES 4 – 6
+SA 9211 SPEECH CHOIR, MULTILINGUAL, OWN CHOICE, GRADES 4 - 6
 Two selections, own choice. An English translation must be provided. Time limit 6 minutes.
-GRADES 7 – 9
+GRADES 7 - 9
 Suggested Repertoire List selections are published in and can be photocopied from the AMAF Speech Arts Manual volumes.
-SA 9221 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADES 7 – 9
+SA 9221 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADES 7 - 9
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND one selection, own choice.
-SA 9223 SPEECH CHOIR, CLASSICAL POETRY, GRADES 7 – 9
+SA 9223 SPEECH CHOIR, CLASSICAL POETRY, GRADES 7 - 9
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND One selection, own choice.
-SA 9225 SPEECH CHOIR, DRAMATIC SPEAKING, GRADES 7 – 9
+SA 9225 SPEECH CHOIR, DRAMATIC SPEAKING, GRADES 7 - 9
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND One selection, own choice.
-SA 9222 SPEECH CHOIR, 20 TH /21 ST CENTURY, OWN CHOICE, GRADES 7 – 9
+SA 9222 SPEECH CHOIR, 20 TH /21 ST CENTURY, OWN CHOICE, GRADES 7 - 9
 Two selections, own choice.
-SA 9224 SPEECH CHOIR, CLASSICAL POETRY, OWN CHOICE, GRADES 7 – 9
+SA 9224 SPEECH CHOIR, CLASSICAL POETRY, OWN CHOICE, GRADES 7 - 9
 Two selections, own choice.
-SA 9226 SPEECH CHOIR, DRAMATIC SPEAKING, OWN CHOICE, GRADES 7 – 9
+SA 9226 SPEECH CHOIR, DRAMATIC SPEAKING, OWN CHOICE, GRADES 7 - 9
 Two selections, own choice.
 211
-SA 9227 SPEECH CHOIR, MULTILINGUAL, OWN CHOICE, GRADES 7 – 9
+SA 9227 SPEECH CHOIR, MULTILINGUAL, OWN CHOICE, GRADES 7 - 9
 Two selections, own choice. An English translation must be provided. Time limit 8 minutes.
-GRADES 10 – 12
+GRADES 10 - 12
 Suggested Repertoire List selections are published in and can be photocopied from the AMAF Speech Arts Manual volumes.
-SA 9231 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADES 10 – 12
+SA 9231 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADES 10 - 12
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND one selection, own choice.
-SA 9233 SPEECH CHOIR, CLASSICAL POETRY, GRADES 10 – 12
+SA 9233 SPEECH CHOIR, CLASSICAL POETRY, GRADES 10 - 12
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND One selection, own choice.
-SA 9235 SPEECH CHOIR, DRAMATIC SPEAKING, GRADES 10 – 12
+SA 9235 SPEECH CHOIR, DRAMATIC SPEAKING, GRADES 10 - 12
 One selection, own choice, from the Suggested Repertoire List at the end of this section.
 AND One selection, own choice.
-SA 9232 SPEECH CHOIR, 20 TH /21 ST CENTURY, OWN CHOICE, GRADES 10 – 12
+SA 9232 SPEECH CHOIR, 20 TH /21 ST CENTURY, OWN CHOICE, GRADES 10 - 12
 Two selections, own choice.
-SA 9234 SPEECH CHOIR, CLASSICAL POETRY, OWN CHOICE, GRADES 10 – 12
+SA 9234 SPEECH CHOIR, CLASSICAL POETRY, OWN CHOICE, GRADES 10 - 12
 Two selections, own choice.
-SA 9236 SPEECH CHOIR, DRAMATIC SPEAKING, OWN CHOICE, GRADES 10 – 12
+SA 9236 SPEECH CHOIR, DRAMATIC SPEAKING, OWN CHOICE, GRADES 10 - 12
 Two selections, own choice.
-SA 9237 SPEECH CHOIR, MULTILINGUAL, OWN CHOICE, GRADES 10 – 12
+SA 9237 SPEECH CHOIR, MULTILINGUAL, OWN CHOICE, GRADES 10 - 12
 Two selections, own choice. An English translation must be provided. Time limit 10 minutes.
 ADULT & OPEN
 SA 9241 SPEECH CHOIR, 20 TH /21 ST CENTURY, OWN CHOICE, ADULT
@@ -9444,13 +9444,13 @@ In these classes, entrants will adapt a traditional story, folk tale, family tal
 own words. Sounds, props and movement may be incorporated into the performance. No notes may be used. An
 outline/map of the story must be provided for the adjudicator. Suggestions may be made concerning written work as it
 pertains to the oral communication, but will not be adjudicated.
-SA 9251 STORYTELLING, OWN CHOICE, GRADES 1 – 3
+SA 9251 STORYTELLING, OWN CHOICE, GRADES 1 - 3
 The entrant may choose to tell a fairy tale from any time or place (not entrant’s original work). One selection, own choice.
 Time limit 3 minutes.
-SA 9252 STORYTELLING, OWN CHOICE, GRADES 4 – 6
+SA 9252 STORYTELLING, OWN CHOICE, GRADES 4 - 6
 The entrant may choose to tell a legend or myth from any country (not entrant’s original work). One selection, own choice.
 Time limit 4 minutes.
-SA 9253 STORYTELLING, OWN CHOICE, GRADES 7 – 12
+SA 9253 STORYTELLING, OWN CHOICE, GRADES 7 - 12
 The entrant may choose from any published or unpublished work (not entrant’s original work). One selection, own choice.
 Time limit 6 minutes.
 SA 9254 STORYTELLING, OWN CHOICE, ADULT
@@ -9462,11 +9462,11 @@ the audience. Action and gesture should not overwhelm the story. It may be the s
 imaginary one. The aim of the classes is to celebrate the art of storytelling. No notes may be used. An outline/map of the
 work must be submitted for the adjudicator. Suggestions may be made concerning written work as it pertains to the oral
 communication, but will not be adjudicated.
-SA 9255 CREATIVE STORYTELLING, OWN CHOICE, GRADES 1 – 3
+SA 9255 CREATIVE STORYTELLING, OWN CHOICE, GRADES 1 - 3
 Entrant tells own story. Time limit 3 minutes.
-SA 9256 CREATIVE STORYTELLING, OWN CHOICE, GRADES 4 – 6
+SA 9256 CREATIVE STORYTELLING, OWN CHOICE, GRADES 4 - 6
 Entrant tells own story. Time limit 4 minutes.
-SA 9257 CREATIVE STORYTELLING, OWN CHOICE, GRADES 7 – 12
+SA 9257 CREATIVE STORYTELLING, OWN CHOICE, GRADES 7 - 12
 Entrant tells own story. Time limit 6 minutes.
 SA 9258 CREATIVE STORYTELLING, OWN CHOICE, ADULT
 Entrant tells own story. Time limit 6 minutes.
@@ -9474,15 +9474,15 @@ LIMERICKS
 Entrants will read their own work. Adjudication will be on the basis of reading skills. Suggestions may be made concerning
 written work as it pertains to the oral communication, but will not be adjudicated. Original limericks only, must be performed by
 author. TWO selections. A copy of each work must be submitted for the adjudicator.
-SA 9259 LIMERICK READING, ORIGINAL COMPOSITION, GRADES 4 – 6
-SA 9260 LIMERICK READING, ORIGINAL COMPOSITION, GRADES 7 – 9
-SA 9261 LIMERICK READING, ORIGINAL COMPOSITION, GRADES 10 – 12
+SA 9259 LIMERICK READING, ORIGINAL COMPOSITION, GRADES 4 - 6
+SA 9260 LIMERICK READING, ORIGINAL COMPOSITION, GRADES 7 - 9
+SA 9261 LIMERICK READING, ORIGINAL COMPOSITION, GRADES 10 - 12
 SA 9262 LIMERICK READING, ORIGINAL COMPOSITION, ADULT
 FROM YOUTH TO YOUTH
 In these classes entrants are required to read selections of poetry written by junior and senior high school students. Entrants
 may not perform their own work.
-SA 9263 POETRY READING, FROM YOUTH TO YOUTH, OWN CHOICE, GRADES 7 – 9
-SA 9264 POETRY READING, FROM YOUTH TO YOUTH, OWN CHOICE, GRADES 10 – 12
+SA 9263 POETRY READING, FROM YOUTH TO YOUTH, OWN CHOICE, GRADES 7 - 9
+SA 9264 POETRY READING, FROM YOUTH TO YOUTH, OWN CHOICE, GRADES 10 - 12
 213
 PUBLIC SPEAKING CLASSES
 PREPARED SPEECHES
@@ -9499,12 +9499,12 @@ SCHOOL GRADES 4 - 12
 Speech Arts classes with bolded titles and preceded by:
 
 PSA are eligible for recommendation to the Public Speaking classes at the Provincial Festival
-PSA 9272 PUBLIC SPEAKING, PREPARED SPEECH, NARRATIVE, EXPOSITORY OR PERSUASIVE, GRADES 4 – 6
+PSA 9272 PUBLIC SPEAKING, PREPARED SPEECH, NARRATIVE, EXPOSITORY OR PERSUASIVE, GRADES 4 - 6
 Speeches are to be narrative or expository. Own subject. Time limit 4 minutes.
-PSA 9273 PUBLIC SPEAKING, PREPARED SPEECH, PERSUASIVE, GRADES 7 – 9
+PSA 9273 PUBLIC SPEAKING, PREPARED SPEECH, PERSUASIVE, GRADES 7 - 9
 Speeches should be persuasive. The entrant should be trying to persuade the audience to do (or not to do) a particular
 action or support an idea or group. Own subject. Time limit 5 minutes.
-PSA 9274 PUBLIC SPEAKING, PREPARED SPEECH, PERSUASIVE, GRADES 10 – 12
+PSA 9274 PUBLIC SPEAKING, PREPARED SPEECH, PERSUASIVE, GRADES 10 - 12
 Speeches should be persuasive. The entrant should be trying to persuade the audience to do (or not to do) a particular
 action or support an idea or group. Own subject. Time limit 5 minutes.
 SA 9275 PUBLIC SPEAKING, PREPARED SPEECH, OWN CHOICE, ADULT
@@ -9517,11 +9517,11 @@ SCHOOL GRADES 4 - 12
 Speech Arts classes with bolded titles and preceded by:
 
 PSA are eligible for recommendation to the Public Speaking classes at the Provincial Festival
-PSA 9276 PUBLIC SPEAKING, IMPROMPTU SPEECH, GRADES 4 – 6
+PSA 9276 PUBLIC SPEAKING, IMPROMPTU SPEECH, GRADES 4 - 6
 Topic to be given by adjudicator. Time limit 3 minutes.
-PSA 9277 PUBLIC SPEAKING, IMPROMPTU SPEECH, GRADES 7 – 9
+PSA 9277 PUBLIC SPEAKING, IMPROMPTU SPEECH, GRADES 7 - 9
 Topic to be given by adjudicator. Time limit 4 minutes.
-PSA 9278 PUBLIC SPEAKING, IMPROMPTU SPEECH, GRADES 10 – 12
+PSA 9278 PUBLIC SPEAKING, IMPROMPTU SPEECH, GRADES 10 - 12
 Topic to be given by adjudicator. Time limit 5 minutes.
 SA 9279 PUBLIC SPEAKING, IMPROMPTU SPEECH, ADULT
 Topic to be given by adjudicator. Time limit 5 minutes.
@@ -9642,7 +9642,7 @@ Silverstein, Shel
 BOOK TITLE
 Fathers, Mothers, Sisters, Brothers
 Something BIG Has Been Here
-Secret Places – Charlotte Huck
+Secret Places - Charlotte Huck
 Time for Poetry
 Fifty-One New Nursery Rhymes
 Time for Poetry
@@ -9707,7 +9707,7 @@ Kids Can Press
 Kids Can Press
 Random House
 King Fisher Books
-SA 9010 SOLO SPOKEN POETRY, CLASSICAL, GRADES 1 – 3
+SA 9010 SOLO SPOKEN POETRY, CLASSICAL, GRADES 1 - 3
 TITLE
 Cats AUTHOR
 Farjeon, Eleanor
@@ -9746,7 +9746,7 @@ The World of Christopher Robin
 Childcraft, Vol. 1 McClelland & Stewart
 Beacon Press
 McClelland & Stewart
-World Book – Childcraft
+World Book - Childcraft
 Int.
 Random House
 Random House
@@ -9885,7 +9885,7 @@ Scott, Forsman & Co.
 Random House
 Farrar, Straus & Giroux
 Scholastic Inc.
-PSA 9027 SOLO SPOKEN POETRY, CLASSICAL, GRADES 4 – 6
+PSA 9027 SOLO SPOKEN POETRY, CLASSICAL, GRADES 4 - 6
 TITLE
 My Shadow
 The Lamplighter
@@ -9930,7 +9930,7 @@ Contemporary Books
 Scholastic Inc.
 Scholastic Inc.
 217
-PSA 9029 SOLO SPOKEN POETRY, CANADIAN, GRADES 4 – 6
+PSA 9029 SOLO SPOKEN POETRY, CANADIAN, GRADES 4 - 6
 TITLE
 A Path to the Moon
 And My Heart Soars
@@ -9974,7 +9974,7 @@ Annic Press
 Houghton Mifflin
 Oxford University Press
 Oxford University Press
-PSA 9031 SOLO SPOKEN POETRY, MANITOBAN, GRADES 4 – 6
+PSA 9031 SOLO SPOKEN POETRY, MANITOBAN, GRADES 4 - 6
 TITLE
 From Death Unto Life
 BOOK TITLE
@@ -10142,7 +10142,7 @@ Thomas Nelson & Sons
 Little, Brown and
 Company
 Harcourt Brace
-PSA 9047 SOLO SPOKEN POETRY, CLASSICAL, GRADES 7 – 9
+PSA 9047 SOLO SPOKEN POETRY, CLASSICAL, GRADES 7 - 9
 TITLE
 London, 1802
 Abou Ben Adhem
@@ -10153,7 +10153,7 @@ Bugle
 Because I Could Not Stop for
 Death
 High Flight
-Wander – Thirst
+Wander - Thirst
 Annabel Lee
 Ozymandias
 AUTHOR
@@ -10187,7 +10187,7 @@ Doubleday & Company
 Tundra Books
 Academic Press
 219
-PSA 9049 SOLO SPOKEN POETRY, CANADIAN, GRADES 7 – 9
+PSA 9049 SOLO SPOKEN POETRY, CANADIAN, GRADES 7 - 9
 TITLE
 The Ships of Yule
 It is Dangerous to Read
@@ -10223,7 +10223,7 @@ Poetry of Manitoba
 The Art of Poetry Ryerson MacMillan
 Province of Manitoba
 McClelland & Stewart
-PSA 9051 SOLO SPOKEN POETRY, MANITOBAN, GRADES 7 – 9
+PSA 9051 SOLO SPOKEN POETRY, MANITOBAN, GRADES 7 - 9
 TITLE
 The Danger of Merely Living
 Prairie Crocus
@@ -10248,7 +10248,7 @@ Christie, Norma G.
 Livesay, Dorothy
 BOOK TITLE
 20th Century Poetry & Poetics
-Beyond the Lakes – Selected Poems
+Beyond the Lakes - Selected Poems
 Rural Writings May 1983 #3
 Collected Poems
 www.cici.mb.ca/athorleif
@@ -10272,7 +10272,7 @@ PSA 9061 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, GRADE 10
 TITLE
 Disembarking at Quebec
 Jazz Concert
-To L.H.B. (1894 – 1915)
+To L.H.B. (1894 - 1915)
 The Bear on the Delhi Road
 Warty Bliggens the Toad
 I, Icarus
@@ -10298,7 +10298,7 @@ Faber Book of War Poetry
 Selected Poems By Earle Birney
 Archy and Mehitabel
 Bread Wine and Salt
-Connections 2 – Relating
+Connections 2 - Relating
 Words on Wings, Book 1
 Collected Poems 1917-1982
 Poetry of our Time
@@ -10346,7 +10346,7 @@ Collected Poems
 Theme & Image: An Anthology of Poetry
 Theme & Image: An Anthology of Poetry
 Theme & Image: An Anthology of Poetry
-Connections 3 – Discovering
+Connections 3 - Discovering
 Poetry for Young People
 Globe Modern
 Curriculum Press
@@ -10401,7 +10401,7 @@ Scholastic
 Thomas Nelson
 Thomas Nelson
 Oxford University Press
-PSA 9067 SOLO SPOKEN POETRY, CLASSICAL, GRADES 10 – 12
+PSA 9067 SOLO SPOKEN POETRY, CLASSICAL, GRADES 10 - 12
 TITLE
 Brave New World
 Silences
@@ -10411,7 +10411,7 @@ Mourning
 Vestigia
 A Description of Love
 Charge of the Light Brigade
-Home – Thoughts, from Abroad
+Home - Thoughts, from Abroad
 The Lady of Shalott
 The Tyger
 AUTHOR
@@ -10444,7 +10444,7 @@ Penguin
 Thomas Nelson & Sons
 Nelson Canada
 221
-PSA 9069 SOLO SPOKEN POETRY, CANADIAN, GRADES 10 – 12
+PSA 9069 SOLO SPOKEN POETRY, CANADIAN, GRADES 10 - 12
 TITLE
 The Wind Our Enemy
 The Sculptors AUTHOR
@@ -10483,7 +10483,7 @@ McGraw-Hill
 Oxford University Press
 McGraw-Hill Ryerson
 Imprimerie Gagne Ltée.
-PSA 9071 SOLO SPOKEN POETRY, MANITOBAN, GRADES 10 – 12
+PSA 9071 SOLO SPOKEN POETRY, MANITOBAN, GRADES 10 - 12
 TITLE
 Without Benefit of Tape
 Lynx in Winnipeg
@@ -10529,7 +10529,7 @@ Country Quills
 Compascar, Manitoba
 Compascar, Manitoba
 SOLO READING
-SA 9102 SOLO READING, PROSE, GRADES 1 – 3
+SA 9102 SOLO READING, PROSE, GRADES 1 - 3
 TITLE
 Excerpt from: Watch Out for Lions AUTHOR
 Kleitsch, Christel
@@ -10574,7 +10574,7 @@ World Book Publ.
 Kids Can Press
 Annick Press
 Orca Book Publishers
-Scholastic Inc.SA 9104 SOLO READING, CANADIAN PROSE, GRADES 1 – 3
+Scholastic Inc.SA 9104 SOLO READING, CANADIAN PROSE, GRADES 1 - 3
 TITLE
 Excerpt from: Lazarus Laughs AUTHOR
 Duchesne, Christiane BOOK TITLE
@@ -10616,7 +10616,7 @@ Annick Press
 North Winds
 Scholastic
 Pemmican Publ. Inc.
-SA 9105 SOLO READING, MANITOBA PROSE, GRADES 1 – 3
+SA 9105 SOLO READING, MANITOBA PROSE, GRADES 1 - 3
 TITLE
 Excerpt from: Six Darn Cows
 Excerpt from: Nobody
@@ -10678,7 +10678,7 @@ A.S.E.
 From Anna
 Ticket to Curlew Harper Collins Publ.
 Groundwood Books
-PSA 9112 SOLO READING, PROSE, GRADES 4 – 6
+PSA 9112 SOLO READING, PROSE, GRADES 4 - 6
 TITLE
 Excerpt from: Charlotte’s Web
 Excerpt from: Charlie and the Chocolate
@@ -10704,7 +10704,7 @@ Hodgson
 Little, Jean
 Lottridge, Celia Barker
 223
-PSA 9114 SOLO READING, CANADIAN PROSE, GRADES 4 – 6
+PSA 9114 SOLO READING, CANADIAN PROSE, GRADES 4 - 6
 TITLE
 Excerpt from: Island Explorers
 Excerpt from: Aunt Cyrilla’s Christmas
@@ -10806,7 +10806,7 @@ Pachano, J.
 Hurtig Publ.
 Little, Brown & Co.
 Malcolm Lester
-PSA 9115 SOLO READING, MANITOBA PROSE, GRADES 4 – 6
+PSA 9115 SOLO READING, MANITOBA PROSE, GRADES 4 - 6
 TITLE
 Excerpt from: The New Teacher
 Excerpt from: Silver Birch Has a Dream
@@ -10824,7 +10824,7 @@ Excerpt from: The Empty House
 Hutsell-Manning, Linda
 Gamache, Donna
 Coteau Books
-PSA 9122 SOLO READING, PROSE, GRADES 7 – 9
+PSA 9122 SOLO READING, PROSE, GRADES 7 - 9
 TITLE
 Excerpt from: The Adventures of Tom
 Sawyer
@@ -10844,7 +10844,7 @@ Twain, Mark
 Rowling, J.K.
 224
 
-ScholasticPSA 9124 SOLO READING, CANADIAN PROSE, GRADES 7 – 9
+ScholasticPSA 9124 SOLO READING, CANADIAN PROSE, GRADES 7 - 9
 TITLE
 Excerpt from: Lesia’s Dream
 Excerpt from: Lost in the Barrens
@@ -10892,7 +10892,7 @@ Scholastic
 McClelland & Stewart
 McClelland & Stewart
 Puffin Books
-PSA 9125 SOLO READING, MANITOBAN PROSE, GRADES 7 – 9
+PSA 9125 SOLO READING, MANITOBAN PROSE, GRADES 7 - 9
 TITLE
 Excerpt from: Mother Knew a Few Tricks
 Too
@@ -10934,7 +10934,7 @@ Turnstone Press
 Winnipeg Free Press
 Scholastic
 Kids Can Press Ltd.
-PSA 9132 SOLO READING, PROSE, GRADES 10 – 12
+PSA 9132 SOLO READING, PROSE, GRADES 10 - 12
 TITLE
 Excerpt from: The Diamond Necklace AUTHOR
 De Maupassant, Guy Excerpt from: Tess of the D’Urbervilles
@@ -10976,7 +10976,7 @@ Random House
 Wordsworth Editions
 St. Martin’s Press
 225
-PSA 9134 SOLO READING, CANADIAN PROSE, GRADES 10 – 12
+PSA 9134 SOLO READING, CANADIAN PROSE, GRADES 10 - 12
 TITLE
 Excerpt from: The Game AUTHOR
 Dryden, Ken BOOK TITLE
@@ -11020,7 +11020,7 @@ Western Producer
 Prairie Books
 Groundswood
 Ryerson Press
-PSA 9135 SOLO READING, MANITOBAN PROSE, GRADES 10 – 12
+PSA 9135 SOLO READING, MANITOBAN PROSE, GRADES 10 - 12
 TITLE
 Excerpt from: The Stone Angel
 Excerpt from: Wild Geese
@@ -11310,7 +11310,7 @@ Spencer Press
 Random House
 Random House
 Dr. Seuss Random House Book of Poetry for Children Random House
-SA 9173 POETRY READING DUET, TRIO, OR QUARTET, GRADES 7 – 9
+SA 9173 POETRY READING DUET, TRIO, OR QUARTET, GRADES 7 - 9
 TITLE
 Oh Who is that Young Sinner
 How Do You Grow a Poet
@@ -11361,7 +11361,7 @@ Golden Books Publ.
 Harper & Brothers, New
 York
 Nelson Canada
-Golden Books Publ.SA 9175 POETRY READING, DUET, TRIO, OR QUARTET, GRADES 10 – 12
+Golden Books Publ.SA 9175 POETRY READING, DUET, TRIO, OR QUARTET, GRADES 10 - 12
 TITLE
 Univac to Univac
 Nightmare AUTHOR
@@ -11439,13 +11439,13 @@ Secret Places PUBLISHER
 Random House
 Scholastic Inc.
 Scholastic Inc.
-World Book – Childcraft
+World Book - Childcraft
 Int.
-World Book – Childcraft
+World Book - Childcraft
 Int.
-World Book – Childcraft
+World Book - Childcraft
 Int.
-World Book – Childcraft
+World Book - Childcraft
 Int.
 Greenwillow
 Poems to Read to the Very Young
@@ -11584,7 +11584,7 @@ The New Kid on the Block
 Random House Book of Poetry for Children Kids Can Press
 Greenwillow
 Random House
-SA 9189 SPEECH CHOIR, CLASSICAL POETRY, KINDERGARTEN – GRADE 3
+SA 9189 SPEECH CHOIR, CLASSICAL POETRY, KINDERGARTEN - GRADE 3
 TITLE
 Some One
 Something Told the Wild
@@ -11625,7 +11625,7 @@ Random House
 Smithmark
 Gage Publishing
 230
-SA 9191 SPEECH CHOIR, DRAMATIC SPEAKING, KINDERGARTEN – GRADE 3
+SA 9191 SPEECH CHOIR, DRAMATIC SPEAKING, KINDERGARTEN - GRADE 3
 TITLE
 Picture Puzzle Piece
 No Difference
@@ -11796,7 +11796,7 @@ The Viking Press
 Brimax Books
 McGraw-Hill Ryerson
 Scott Forsman & Co.
-SA 9207 SPEECH CHOIR, CLASSICAL POETRY, GRADES 4 – 6
+SA 9207 SPEECH CHOIR, CLASSICAL POETRY, GRADES 4 - 6
 TITLE
 Dream-Song
 The House with Nobody
@@ -11841,7 +11841,7 @@ Gage Publishing
 Ryerson Press
 McClelland & Stewart
 Scholastic
-SA 9209 SPEECH CHOIR, DRAMATIC SPEAKING, GRADES 4 – 6
+SA 9209 SPEECH CHOIR, DRAMATIC SPEAKING, GRADES 4 - 6
 TITLE
 Davy Duff
 Five Fat Fleas
@@ -11889,7 +11889,7 @@ Oxford
 Gage Publ.
 Random House Book of Poetry for Children Random House
 232
-SA 9221 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADES 7 – 9
+SA 9221 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADES 7 - 9
 TITLE
 Dulce et Decorum est
 A Mad Poem Addressed to
@@ -11932,7 +11932,7 @@ Addison Wesley
 Addison Wesley
 English Universities
 Press
-SA 9223 SPEECH CHOIR, CLASSICAL POETRY, GRADES 7 – 9
+SA 9223 SPEECH CHOIR, CLASSICAL POETRY, GRADES 7 - 9
 TITLE
 To Autumn
 The Way Through the Woods
@@ -11980,7 +11980,7 @@ Houghton-Mifflin
 Riverside Press
 Golden Books Publ. Co.
 W.W. Norton & Co.
-SA 9225 SPEECH CHOIR, DRAMATIC SPEAKING, GRADES 7 – 9
+SA 9225 SPEECH CHOIR, DRAMATIC SPEAKING, GRADES 7 - 9
 TITLE
 Curiosity
 Albert and the Lion
@@ -12027,7 +12027,7 @@ Perspectives 2 Harcourt Brace
 Jovanovich
 Thomas Nelson & Sons
 233
-SA 9231 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADES 10 – 12
+SA 9231 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADES 10 - 12
 TITLE
 The Express AUTHOR
 Spender, Stephen
@@ -12070,7 +12070,7 @@ Charles Scribner’s Sons
 Thomas Nelson
 Peguis
 McGraw Hill
-SA 9233 SPEECH CHOIR, CLASSICAL POETRY, GRADES 10 – 12
+SA 9233 SPEECH CHOIR, CLASSICAL POETRY, GRADES 10 - 12
 TITLE
 Anthem for Doomed Youth AUTHOR
 Owen, Wilfred BOOK TITLE
@@ -12110,9 +12110,9 @@ Poetry Oxford University Press
 Nelson Canada
 Golden Books Publ.
 O Captain! My Captain!
-“Out, Out – “
+“Out, Out - “
 Destruction of Sennacherib
-SA 9235 SPEECH CHOIR, DRAMATIC SPEAKING, GRADES 10 – 12
+SA 9235 SPEECH CHOIR, DRAMATIC SPEAKING, GRADES 10 - 12
 TITLE
 THE Ballad of the Oysterman
 Bushed
@@ -12229,46 +12229,46 @@ this category may have either a script or a story outline. The characters and th
 work, but are created from scratch through improvisation and rehearsal. An exception to this would be documentary drama, in
 which historical, political, or social themes and their characters and situations may be pulled from “real life” and incorporated into
 a play, for example, a play about the history of the City of Dauphin, or a play about old age.
-TA 0100 DRAMA, CREATED SCRIPT, KINDERGARTEN – GRADE 3
+TA 0100 DRAMA, CREATED SCRIPT, KINDERGARTEN - GRADE 3
 235
-TA 0101 DRAMA, CREATED SCRIPT, GRADES 4 – 6
-TA 0102 DRAMA, CREATED SCRIPT, GRADES 7 – 9
-TA 0103 DRAMA, CREATED SCRIPT, GRADES 10 – 12
+TA 0101 DRAMA, CREATED SCRIPT, GRADES 4 - 6
+TA 0102 DRAMA, CREATED SCRIPT, GRADES 7 - 9
+TA 0103 DRAMA, CREATED SCRIPT, GRADES 10 - 12
 TA 0104 DRAMA, CREATED SCRIPT, ADULT
 TA 0105 DRAMA, CREATED SCRIPT, OPEN
 ADAPTATION
 These plays should have been adapted from sources other than theatre, such as short stories, novels, myths and legends,
 poems and songs. Some of the simplest adaptions may be developed from short stories which contain much dialogue.
-TA 0106 DRAMA, ADAPTATION, OWN CHOICE, KINDERGARTEN – GRADE 3
-TA 0107 DRAMA, ADAPTATION, OWN CHOICE, GRADES 4 – 6
-TA 0108 DRAMA, ADAPTATION, OWN CHOICE, GRADES 7 – 9
-TA 0109 DRAMA, ADAPTATION, OWN CHOICE, GRADES 10 – 12
+TA 0106 DRAMA, ADAPTATION, OWN CHOICE, KINDERGARTEN - GRADE 3
+TA 0107 DRAMA, ADAPTATION, OWN CHOICE, GRADES 4 - 6
+TA 0108 DRAMA, ADAPTATION, OWN CHOICE, GRADES 7 - 9
+TA 0109 DRAMA, ADAPTATION, OWN CHOICE, GRADES 10 - 12
 TA 0110 DRAMA, ADAPTATION, OWN CHOICE, ADULT
 TA 0111 DRAMA, ADAPTATION, OWN CHOICE, OPEN
 EXCERPT OR SCENE FOR TWO CHARACTERS
 Excerpts or scenes for two characters are taken from an existing play. Own choice. Please check your local festival addendum
 for time limits.
-TA 0112 DRAMA, EXCERPT FOR TWO CHARACTERS, OWN CHOICE, KINDERGARTEN – GRADE 3
-TA 0113 DRAMA, EXCERPT FOR TWO CHARACTERS, OWN CHOICE, GRADES 4 – 6
-TA 0114 DRAMA, EXCERPT FOR TWO CHARACTERS, OWN CHOICE, GRADES 7 – 9
-TA 0115 DRAMA, EXCERPT FOR TWO CHARACTERS, OWN CHOICE, GRADES 10 – 12
+TA 0112 DRAMA, EXCERPT FOR TWO CHARACTERS, OWN CHOICE, KINDERGARTEN - GRADE 3
+TA 0113 DRAMA, EXCERPT FOR TWO CHARACTERS, OWN CHOICE, GRADES 4 - 6
+TA 0114 DRAMA, EXCERPT FOR TWO CHARACTERS, OWN CHOICE, GRADES 7 - 9
+TA 0115 DRAMA, EXCERPT FOR TWO CHARACTERS, OWN CHOICE, GRADES 10 - 12
 TA 0116 DRAMA, EXCERPT FOR TWO CHARACTERS, OWN CHOICE, ADULT
 TA 0117 DRAMA, EXCERPT FOR TWO CHARACTERS, OWN CHOICE, OPEN
 EXCERPT OR SCENE FOR THREE OR MORE CHARACTERS
 Excerpts or scenes for three or more characters may be taken from a play, either a one-act or full-length play. Own choice.
 Please check your local festival addendum for time limits.
 TA 0118 DRAMA, EXCERPT FOR THREE OR MORE CHARACTERS, OWN CHOICE, KINDERGARTEN - GRADE 3
-TA 0119 DRAMA, EXCERPT FOR THREE OR MORE CHARACTERS, OWN CHOICE, GRADES 4 – 6
-TA 0120 DRAMA, EXCERPT FOR THREE OR MORE CHARACTERS, OWN CHOICE, GRADES 7 – 9
-TA 0121 DRAMA, EXCERPT FOR THREE OR MORE CHARACTERS, OWN CHOICE, GRADES 10 – 12
+TA 0119 DRAMA, EXCERPT FOR THREE OR MORE CHARACTERS, OWN CHOICE, GRADES 4 - 6
+TA 0120 DRAMA, EXCERPT FOR THREE OR MORE CHARACTERS, OWN CHOICE, GRADES 7 - 9
+TA 0121 DRAMA, EXCERPT FOR THREE OR MORE CHARACTERS, OWN CHOICE, GRADES 10 - 12
 TA 0122 DRAMA, EXCERPT FOR THREE OR MORE CHARACTERS, OWN CHOICE, ADULT
 TA 0123 DRAMA, EXCERPT FOR THREE OR MORE CHARACTERS, OWN CHOICE, OPEN
 STUDENT DIRECTED SCENE
 In this category, scenes are directed by a student in the same group as the students who are performing the scene. Scenes may
 be for two or more characters. Own choice. Please check your local festival addendum for time limits.
-TA 0124 DRAMA, STUDENT DIRECTED SCENE, OWN CHOICE, GRADES 4 – 6
-TA 0125 DRAMA, STUDENT DIRECTED SCENE, OWN CHOICE, GRADES 7 – 9
-TA 0126 DRAMA, STUDENT DIRECTED SCENE, OWN CHOICE, GRADES 10 – 12
+TA 0124 DRAMA, STUDENT DIRECTED SCENE, OWN CHOICE, GRADES 4 - 6
+TA 0125 DRAMA, STUDENT DIRECTED SCENE, OWN CHOICE, GRADES 7 - 9
+TA 0126 DRAMA, STUDENT DIRECTED SCENE, OWN CHOICE, GRADES 10 - 12
 TA 0127 DRAMA, STUDENT DIRECTED SCENE, OWN CHOICE, OPEN
 DRAMATIC MONOLOGUES
 A dramatic monologue is a dramatic piece for a single performer, or a long speech from a play in which a single character
@@ -12277,16 +12277,16 @@ adjudicated primarily on the strength of the interpretation and the believabilit
 the whole play and be aware of the character’s role and development throughout the play. It is not necessary to use an accent.
 Monologue classes are also offered under Speech Arts. One selection. Please check your local festival addendum for time
 limits.
-TA 0128 DRAMA, DRAMATIC MONOLOGUE, OWN CHOICE, GRADES 4 – 6
-TA 0129 DRAMA, DRAMATIC MONOLOGUE, OWN CHOICE, GRADES 7 – 9
+TA 0128 DRAMA, DRAMATIC MONOLOGUE, OWN CHOICE, GRADES 4 - 6
+TA 0129 DRAMA, DRAMATIC MONOLOGUE, OWN CHOICE, GRADES 7 - 9
 236
-TA 0130 DRAMA, DRAMATIC MONOLOGUE, OWN CHOICE, GRADES 10 – 12
+TA 0130 DRAMA, DRAMATIC MONOLOGUE, OWN CHOICE, GRADES 10 - 12
 TA 0131 DRAMA, DRAMATIC MONOLOGUE, OWN CHOICE, ADULT
 FULL-LENGTH PLAYS
 Full-length plays are those whose length and structure require some kind of intermission. Original full-length plays written by one
 person belong in this category. It is not deemed advisable for Kindergarten to Grade 6 to present full-length plays.
-TA 0132 DRAMA, FULL LENGTH PLAY, OWN CHOICE, GRADES 7 – 9
-TA 0133 DRAMA, FULL LENGTH PLAY, OWN CHOICE, GRADES 10 – 12
+TA 0132 DRAMA, FULL LENGTH PLAY, OWN CHOICE, GRADES 7 - 9
+TA 0133 DRAMA, FULL LENGTH PLAY, OWN CHOICE, GRADES 10 - 12
 TA 0134 DRAMA, FULL LENGTH PLAY, OWN CHOICE, ADULT
 TA 0135 DRAMA, FULL LENGTH PLAY, OWN CHOICE, OPEN
 PUPPETRY CLASSES
@@ -12295,27 +12295,27 @@ drama, and puppets entered in Visual Arts will be judged on visual effects and i
 entered in both Visual Arts and Theatre Arts, if desired.
 CREATED SCRIPT OR ADAPTATION
 See definitions under Drama classes.
-TA 0136 PUPPETRY, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, KINDERGARTEN – GRADE 3
-TA 0137 PUPPETRY, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 4 – 6
-TA 0138 PUPPETRY, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 7 – 9
-TA 0139 PUPPETRY, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 10 – 12
+TA 0136 PUPPETRY, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, KINDERGARTEN - GRADE 3
+TA 0137 PUPPETRY, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 4 - 6
+TA 0138 PUPPETRY, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 7 - 9
+TA 0139 PUPPETRY, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 10 - 12
 TA 0140 PUPPETRY, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, ADULT
 TA 0141 PUPPETRY, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, OPEN
 EXCERPT, SCENE OR ONE-ACT PLAY
 See definitions under Drama classes.
-TA 0142 PUPPETRY, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, KINDERGARTEN – GRADE 3
-TA 0143 PUPPETRY, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 4 – 6
-TA 0144 PUPPETRY, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 7 – 9
-TA 0145 PUPPETRY, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 10 – 12
+TA 0142 PUPPETRY, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, KINDERGARTEN - GRADE 3
+TA 0143 PUPPETRY, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 4 - 6
+TA 0144 PUPPETRY, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 7 - 9
+TA 0145 PUPPETRY, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 10 - 12
 TA 0146 PUPPETRY, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, ADULT
 TA 0147 PUPPETRY, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, OPEN
 MIME CLASSES
 In Mime, the performers communicate through movement, without speech. Music or sound may be used to accompany the
 performance. Mime may be presented by one or more participants. Please check your local festival addendum for time limits.
-TA 0148 MIME, KINDERGARTEN – GRADE 3
-TA 0149 MIME, GRADES 4 – 6
-TA 0150 MIME, GRADES 7 – 9
-TA 0151 MIME, GRADES 10 – 12
+TA 0148 MIME, KINDERGARTEN - GRADE 3
+TA 0149 MIME, GRADES 4 - 6
+TA 0150 MIME, GRADES 7 - 9
+TA 0151 MIME, GRADES 10 - 12
 TA 0152 MIME, ADULT
 TA 0153 MIME, OPEN
 READER’S THEATRE CLASSES
@@ -12328,17 +12328,17 @@ interested work best. Prose pieces can be adapted for these classes. Own choice.
 for time limits.
 237
 CREATED SCRIPT OR ADAPTATION
-TA 0154 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, KINDERGARTEN – GRADE 3
-TA 0155 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 4 – 6
-TA 0156 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 7 – 9
-TA 0157 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 10 – 12
+TA 0154 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, KINDERGARTEN - GRADE 3
+TA 0155 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 4 - 6
+TA 0156 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 7 - 9
+TA 0157 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 10 - 12
 TA 0158 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, ADULT
 TA 0159 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, OPEN
 EXCERPT, SCENE OR ONE-ACT PLAY
-TA 0160 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, KINDERGARTEN – GRADE 3
-TA 0161 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 4 – 6
-TA 0162 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 7 – 9
-TA 0163 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 10 – 12
+TA 0160 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, KINDERGARTEN - GRADE 3
+TA 0161 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 4 - 6
+TA 0162 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 7 - 9
+TA 0163 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 10 - 12
 TA 0164 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, ADULT
 TA 0165 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, OPEN
 MUSICAL THEATRE CLASSES
@@ -12346,10 +12346,10 @@ Musical Theatre classes are also offered under Dance (Stage Dance with Voice), V
 these classes must be taken from a stage production. Musical Theatre entered in Dance Classes will be judged on dance,
 Musical Theatre entered in Vocal and Choral classes will be judged on music and Musical Theatre entered in Theatre classes will
 be judged on dramatic presentation.
-TA 0166 MUSICAL THEATRE, OWN CHOICE, KINDERGARTEN – GRADE 3
-TA 0167 MUSICAL THEATRE, OWN CHOICE, GRADES 4 – 6
-TA 0168 MUSICAL THEATRE, OWN CHOICE, GRADES 7 – 9
-TA 0169 MUSICAL THEATRE, OWN CHOICE, GRADES 10 – 12
+TA 0166 MUSICAL THEATRE, OWN CHOICE, KINDERGARTEN - GRADE 3
+TA 0167 MUSICAL THEATRE, OWN CHOICE, GRADES 4 - 6
+TA 0168 MUSICAL THEATRE, OWN CHOICE, GRADES 7 - 9
+TA 0169 MUSICAL THEATRE, OWN CHOICE, GRADES 10 - 12
 TA 0170 MUSICAL THEATRE, OWN CHOICE, ADULT
 TA 0171 MUSICAL THEATRE, OWN CHOICE, OPEN
 VIDEO AND FILM CLASSES
@@ -12361,26 +12361,26 @@ FILM: SUPER 8
 Acceptable media formats (VHS tape, playable DVD,
 miniDV, video file on DVD, e.g. .mov, .avi) to be determined
 by the local festival.
-TA 0172 VIDEO, GRADES 4 – 6
-TA 0173 VIDEO, GRADES 7 – 9
-TA 0174 VIDEO, GRADES 10 – 12
+TA 0172 VIDEO, GRADES 4 - 6
+TA 0173 VIDEO, GRADES 7 - 9
+TA 0174 VIDEO, GRADES 10 - 12
 TA 0175 VIDEO, ADULT
 TA 0176 VIDEO, OPEN
 FILM: 16MM
-TA 0177 FILM, SUPER 8, GRADES 4 – 6
-TA 0178 FILM, SUPER 8, GRADES 7 – 9
-TA 0179 FILM, SUPER 8, GRADES 10 – 12
+TA 0177 FILM, SUPER 8, GRADES 4 - 6
+TA 0178 FILM, SUPER 8, GRADES 7 - 9
+TA 0179 FILM, SUPER 8, GRADES 10 - 12
 TA 0180 FILM, SUPER 8, ADULT
 TA 0181 FILM, SUPER 8, OPEN
 FILM: 35MM
-TA 0182 FILM, 16MM, GRADES 4 – 6
-TA 0183 FILM, 16MM, GRADES 7 – 9
-TA 0184 FILM, 16MM, GRADES 10 – 12
+TA 0182 FILM, 16MM, GRADES 4 - 6
+TA 0183 FILM, 16MM, GRADES 7 - 9
+TA 0184 FILM, 16MM, GRADES 10 - 12
 TA 0185 FILM, 16MM, ADULT
 TA 0186 FILM, 16MM, OPEN
-TA 0187 FILM, 35MM, GRADES 4 – 6
-TA 0188 FILM, 35MM, GRADES 7 – 9
-TA 0189 FILM, 35MM, GRADES 10 – 12
+TA 0187 FILM, 35MM, GRADES 4 - 6
+TA 0188 FILM, 35MM, GRADES 7 - 9
+TA 0189 FILM, 35MM, GRADES 10 - 12
 TA 0190 FILM, 35MM, ADULT
 TA 0191 FILM, 35MM, OPEN
 238
@@ -12428,7 +12428,7 @@ participants should not be penalized for lack of costumes.
 DANCE INFORMATION: If dance depicts a story, theme or message, any pertinent information regarding source or
 region of material should accompany the entry form.
 GROUP SIZE: A group is defined as four or more performers. The local festival may wish to differentiate between small
-group (4 – 12 performers) and large group (13 or more performers).
+group (4 - 12 performers) and large group (13 or more performers).
 NOVICE CLASS: A novice dancer is one who has studied dance two years or less and is performing for the first time in
 the dance festival.
 DANCE REGULATIONS
@@ -12545,13 +12545,13 @@ D 0246 FOLK DANCE, SCHOOL/CLASSROOM GROUP, OWN CHOICE, GRADES 11 - 12
 D 0247 FOLK DANCE, SCHOOL/CLASSROOM GROUP, OWN CHOICE, ANY OTHER GRADE COMBINATION
 AMERICAN NOVELTY DANCE CLASSES
 The American Novelty Dance Suggested Repertoire List can be found at the end of the dance section of this syllabus.
-D 0250 AMERICAN NOVELTY DANCE, SCHOOL OR CLASSROOM GROUP, OWN CHOICE, KINDERGARTEN – GRADES 2
+D 0250 AMERICAN NOVELTY DANCE, SCHOOL OR CLASSROOM GROUP, OWN CHOICE, KINDERGARTEN - GRADES 2
 One dance from the Suggested Repertoire Lists OR one selection, own choice.
-D 0251 AMERICAN NOVELTY DANCE, SCHOOL OR CLASSROOM GROUP, OWN CHOICE, GRADES 3 – 4
+D 0251 AMERICAN NOVELTY DANCE, SCHOOL OR CLASSROOM GROUP, OWN CHOICE, GRADES 3 - 4
 One dance from the Suggested Repertoire Lists OR one selection, own choice.
-D 0252 AMERICAN NOVELTY DANCE, SCHOOL OR CLASSROOM GROUP, OWN CHOICE, GRADES 5 – 6
+D 0252 AMERICAN NOVELTY DANCE, SCHOOL OR CLASSROOM GROUP, OWN CHOICE, GRADES 5 - 6
 One dance from the Suggested Repertoire Lists OR one selection, own choice.
-D 0253 AMERICAN NOVELTY DANCE, SCHOOL OR CLASSROOM GROUP, OWN CHOICE, GRADES 7 – 12
+D 0253 AMERICAN NOVELTY DANCE, SCHOOL OR CLASSROOM GROUP, OWN CHOICE, GRADES 7 - 12
 One dance from the Suggested Repertoire Lists OR one selection, own choice.
 D 0254 AMERICAN NOVELTY DANCE, OWN CHOICE, ADULT GROUP
 One dance, own choice.
@@ -12562,9 +12562,9 @@ SQUARE DANCE CLASSES
 If possible, entrants should state style, for example, North America, New England, Mid-Western, Californian or Big Circle on entry
 form. Square Dances may be choreographed and called to fit the dance skills of the age group.
 One selection, own choice.
-D 0260 SQUARE DANCE GROUP, OWN CHOICE, GRADES 1 – 3
-D 0261 SQUARE DANCE GROUP, OWN CHOICE, GRADES 4 – 6
-D 0262 SQUARE DANCE GROUP, OWN CHOICE, GRADES 7 – 9
+D 0260 SQUARE DANCE GROUP, OWN CHOICE, GRADES 1 - 3
+D 0261 SQUARE DANCE GROUP, OWN CHOICE, GRADES 4 - 6
+D 0262 SQUARE DANCE GROUP, OWN CHOICE, GRADES 7 - 9
 D 0263 SQUARE DANCE GROUP, OWN CHOICE, GRADES 10 -12
 D 0264 SQUARE DANCE GROUP, OWN CHOICE, ADULT, BEGINNER
 D 0265 SQUARE DANCE GROUP, OWN CHOICE, ADULT, INTERMEDIATE
@@ -12839,9 +12839,9 @@ D 0487 CREATIVE MOVEMENT COMMUNITY GROUP, OWN CHOICE, 19 YEARS AND OVER
 D 0488 CREATIVE MOVEMENT COMMUNITY GROUP, OWN CHOICE, MULTIGENERATIONAL
 SCHOOL/CLASSROOM GROUP
 One selection, own choice.
-D 0490 CREATIVE MOVEMENT SCHOOL/CLASSROOM GROUP, OWN CHOICE, KINDERGARTEN – GRADE 1
-D 0491 CREATIVE MOVEMENT SCHOOL/CLASSROOM GROUP, OWN CHOICE, GRADES 2 – 3
-D 0492 CREATIVE MOVEMENT SCHOOL/CLASSROOM GROUP, OWN CHOICE, KINDERGARTEN – GRADE 3
+D 0490 CREATIVE MOVEMENT SCHOOL/CLASSROOM GROUP, OWN CHOICE, KINDERGARTEN - GRADE 1
+D 0491 CREATIVE MOVEMENT SCHOOL/CLASSROOM GROUP, OWN CHOICE, GRADES 2 - 3
+D 0492 CREATIVE MOVEMENT SCHOOL/CLASSROOM GROUP, OWN CHOICE, KINDERGARTEN - GRADE 3
 JAZZ CLASSES
 A dance form using modern jazz rhythms and techniques including dance combinations set to current popular music. Movement
 should be appropriate to the music selected.
@@ -12991,10 +12991,10 @@ D 0617 STAGE DANCE GROUP WITH VOICE, MUSICAL THEATRE, OWN CHOICE, 19 YEARS AND O
 D 0618 STAGE DANCE GROUP WITH VOICE, MUSICAL THEATRE, OWN CHOICE, MULTIGENERATIONAL
 SCHOOL/CLASSROOM GROUP
 One selection, own choice.
-D 0620 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MUSICAL THEATRE, OWN CHOICE, GRADES 1 – 3
-D 0621 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MUSICAL THEATRE, OWN CHOICE, GRADES 4 – 6
-D 0622 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MUSICAL THEATRE, OWN CHOICE, GRADES 7 – 9
-D 0623 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MUSICAL THEATRE, OWN CHOICE, GRADES 10 – 12
+D 0620 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MUSICAL THEATRE, OWN CHOICE, GRADES 1 - 3
+D 0621 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MUSICAL THEATRE, OWN CHOICE, GRADES 4 - 6
+D 0622 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MUSICAL THEATRE, OWN CHOICE, GRADES 7 - 9
+D 0623 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MUSICAL THEATRE, OWN CHOICE, GRADES 10 - 12
 D 0624 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MUSICAL THEATRE, OWN CHOICE, ANY
 OTHER CLASSROOM/GRADE COMBINATION
 STAGE DANCE WITH VOICE CLASSES (MOVIE MUSICAL)
@@ -13049,10 +13049,10 @@ D 0667 STAGE DANCE GROUP WITH VOICE, MOVIE MUSICAL, OWN CHOICE, 19 YEARS AND OVE
 D 0668 STAGE DANCE GROUP WITH VOICE, MOVIE MUSICAL, OWN CHOICE, MULTIGENERATIONAL
 SCHOOL/CLASSROOM GROUP
 One selection, own choice.
-D 0670 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MOVIE MUSICAL, OWN CHOICE, GRADES 1 – 3
-D 0671 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MOVIE MUSICAL, OWN CHOICE, GRADES 4 – 6
-D 0672 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MOVIE MUSICAL, OWN CHOICE, GRADES 7 – 9
-D 0673 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MOVIE MUSICAL, OWN CHOICE, GRADES 10 – 12
+D 0670 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MOVIE MUSICAL, OWN CHOICE, GRADES 1 - 3
+D 0671 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MOVIE MUSICAL, OWN CHOICE, GRADES 4 - 6
+D 0672 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MOVIE MUSICAL, OWN CHOICE, GRADES 7 - 9
+D 0673 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MOVIE MUSICAL, OWN CHOICE, GRADES 10 - 12
 D 0674 STAGE DANCE SCHOOL/CLASSROOM GROUP WITH VOICE, MOVIE MUSICAL, OWN CHOICE,
 ANY OTHER CLASSROOM/GRADE COMBINATION
 252
@@ -13107,10 +13107,10 @@ D 0717 STAGE DANCE GROUP WITHOUT VOICE, OWN CHOICE, 19 YEARS AND OVER
 D 0718 STAGE DANCE GROUP WITHOUT VOICE, OWN CHOICE, MULTIGENERATIONAL
 SCHOOL/CLASSROOM GROUP
 One selection, own choice.
-D 0720 STAGE DANCE SCHOOL/CLASSROOM GROUP WITHOUT VOICE, OWN CHOICE, GRADES 1 – 3
-D 0721 STAGE DANCE SCHOOL/CLASSROOM GROUP WITHOUT VOICE, OWN CHOICE, GRADES 4 – 6
-D 0722 STAGE DANCE SCHOOL/CLASSROOM GROUP WITHOUT VOICE, OWN CHOICE, GRADES 7 – 9
-D 0723 STAGE DANCE SCHOOL/CLASSROOM GROUP WITHOUT VOICE, OWN CHOICE, GRADES 10 – 12
+D 0720 STAGE DANCE SCHOOL/CLASSROOM GROUP WITHOUT VOICE, OWN CHOICE, GRADES 1 - 3
+D 0721 STAGE DANCE SCHOOL/CLASSROOM GROUP WITHOUT VOICE, OWN CHOICE, GRADES 4 - 6
+D 0722 STAGE DANCE SCHOOL/CLASSROOM GROUP WITHOUT VOICE, OWN CHOICE, GRADES 7 - 9
+D 0723 STAGE DANCE SCHOOL/CLASSROOM GROUP WITHOUT VOICE, OWN CHOICE, GRADES 10 - 12
 D 0724 STAGE DANCE SCHOOL/CLASSROOM GROUP WITHOUT VOICE, OWN CHOICE, ANY OTHER
 CLASSROOM/GRADE COMBINATION
 RHYTHMIC MOVEMENT: GYMNASTICS CLASSES
@@ -13165,11 +13165,11 @@ D 0767 RHYTHMIC MOVEMENT GROUP, GYMNASTICS, OWN CHOICE, 19 YEARS AND OVER
 D 0768 RHYTHMIC MOVEMENT GROUP, GYMNASTICS, OWN CHOICE, MULTIGENERATIONAL
 SCHOOL/CLASSROOM GROUP
 One selection, own choice.
-D 0770 RHYTHMIC MOVEMENT SCHOOL/CLASSROOM GROUP, GYMNASTICS, OWN CHOICE, KINDERGARTEN – GRADE 1
-D 0771 RHYTHMIC MOVEMENT SCHOOL/CLASSROOM GROUP, GYMNASTICS, OWN CHOICE, GRADES 2 – 3
-D 0772 RHYTHMIC MOVEMENT SCHOOL/CLASSROOM GROUP, GYMNASTICS, OWN CHOICE, GRADES 4 – 6
-D 0773 RHYTHMIC MOVEMENT SCHOOL/CLASSROOM GROUP, GYMNASTICS, OWN CHOICE, GRADES 7 – 9
-D 0774 RHYTHMIC MOVEMENT SCHOOL/CLASSROOM GROUP, GYMNASTICS, OWN CHOICE, GRADES 10 – 12
+D 0770 RHYTHMIC MOVEMENT SCHOOL/CLASSROOM GROUP, GYMNASTICS, OWN CHOICE, KINDERGARTEN - GRADE 1
+D 0771 RHYTHMIC MOVEMENT SCHOOL/CLASSROOM GROUP, GYMNASTICS, OWN CHOICE, GRADES 2 - 3
+D 0772 RHYTHMIC MOVEMENT SCHOOL/CLASSROOM GROUP, GYMNASTICS, OWN CHOICE, GRADES 4 - 6
+D 0773 RHYTHMIC MOVEMENT SCHOOL/CLASSROOM GROUP, GYMNASTICS, OWN CHOICE, GRADES 7 - 9
+D 0774 RHYTHMIC MOVEMENT SCHOOL/CLASSROOM GROUP, GYMNASTICS, OWN CHOICE, GRADES 10 - 12
 D 0775 RHYTHMIC MOVEMENT SCHOOL/CLASSROOM GROUP, GYMNASTICS, OWN CHOICE, ANY OTHER
 CLASSROOM/GRADE COMBINATION
 RHYTHMIC MOVEMENT: BATON CLASSES
@@ -13401,7 +13401,7 @@ D 0967 LYRICAL DANCE GROUP, OWN CHOICE, 19 YEARS AND OVER
 D 0968 LYRICAL DANCE GROUP, OWN CHOICE, MULTIGENERATIONAL
 260
 FOLK DANCE SUGGESTED REPERTOIRE LISTS
-KINDERGARTEN – GRADE 1
+KINDERGARTEN - GRADE 1
 The Wheat (Czechoslovakia)
 Chimes of Dunkirk ( France)
 Shoemaker’s Dance (Denmark)
@@ -13414,7 +13414,7 @@ How Do You Do, My Partner (Sweden)
 I See You (Sweden)
 Kinderpolka (Germany)
 Seven Jumps (Denmark)
-GRADES 1 – 2
+GRADES 1 - 2
 Csebogar (Hungary)
 Bridge of Avignon (France)
 Noriu Miego (Lithuania)
@@ -13425,7 +13425,7 @@ Crested Hen (Denmark)
 Danish Family Circle (Denmark)
 Gustaf’s Skoal (Sweden)
 Greensleeves (England)
-GRADES 3 – 4
+GRADES 3 - 4
 Kendime (Turkey)
 Maple Leaf (French Canada)
 Ais Giogis (Greece)
@@ -13434,13 +13434,13 @@ La Bastringue (French Canada)
 La Raspa (Mexico)
 Zigeuner Polka (Germany)
 Tanko Bushi (Japan)
-GRADES 3 – 5
+GRADES 3 - 5
 Ersko Kolo (Yugoslavia)
 Cherkessia (Russia)
 Kalvelis (Lithuania)
 Napoleon (Denmark)
 Yan Petit (France)
-GRADES 5 – 6
+GRADES 5 - 6
 Sicilian Tarantella (Italy)
 Kuma Echa (Israel)
 Korobushka (Russia)
@@ -13449,7 +13449,7 @@ Carnavalio (Bolivia)
 La Cucaracha (Mexico)
 Troika (Russia)
 Wooden Shoes (Lithuania)
-GRADES 6 – 9
+GRADES 6 - 9
 Alunelul (Romania)
 Brandy Rump Bump (Quebec)
 Debka Kafrit (Israel)
@@ -13468,7 +13468,7 @@ Waraku Odori (Japan)
 Man in the Hay (Germany)
 Mayim (Israel)
 Triolett (Germany)
-GRADES 7 – 8
+GRADES 7 - 8
 Miserlou (Greece)
 Shibolet Basadeh (Israel)
 Das fenster (Germany)
@@ -13476,14 +13476,14 @@ The Thief (French Canada)
 Katia (Russia)
 Fado Blanquita (Spain)
 261
-GRADES 9 – 10
+GRADES 9 - 10
 Corrido (Mexico)
-Sharm – Ascheikh (Israel)
+Sharm - Ascheikh (Israel)
 Levi Jackson Rag (England)
 Srpkinja Kolo (Yugoslavia/Serbia)
 Hora Fetelor (Romania)
 Kohanochka (Russia)
-GRADES 11 – 12
+GRADES 11 - 12
 Shalom Al Israel (Israel)
 Ssulam Ya’Akov (Israel)
 Setnja (Yugoslavia)
@@ -13508,17 +13508,17 @@ Tarina De La Abrud (Romania)
 Toting (Denmark)
 Totur (Denmark)
 AMERICAN NOVELTY DANCE RESOURCE LIST
-KINDERGARTEN – GRADE 2
+KINDERGARTEN - GRADE 2
 Bunny Hop
 Hickory Dickory Dock Teddy Bear Mixer
 Bingo (Scotland/North America) Hokey Pokey
 Paw Paw Patch
-GRADES 3 – 4
+GRADES 3 - 4
 Popcorn
 Fjaskern Turkey in the Straw
 Tennessee Wigwalk Ding Dong Daddy
 Mexican Jumping Bean
-GRADES 5 – 6
+GRADES 5 - 6
 Hot Pretzels
 Pata Pata Goofus
 Tippy Toein’ Five Foot Two Mixer
@@ -13526,7 +13526,7 @@ Glow Worm
 Mexican Mixer
 Bossa Nova Steppin’ Out
 Limbo Rick
-GRADES 7 – 12
+GRADES 7 - 12
 12 th Street Rag
 Snoopy
 Salty Dog Rag
@@ -13566,7 +13566,7 @@ category in which he or she is competing;
 
 one who does not hold a diploma, degree, etc. in fine or applied art;
 
-one who does not teach or has not taught art in an art school – fine or applied art;
+one who does not teach or has not taught art in an art school - fine or applied art;
 
 one who does not exhibit work frequently;
 
@@ -13600,14 +13600,14 @@ new classes to accommodate entries not eligible in existing classes.
 PAINTING CLASSES
 TEMPERA AND WATER COLOUR
 VA 1000 PAINTING, TEMPERA AND WATER COLOUR, KINDERGARTEN - GRADE 1
-VA 1001 PAINTING, TEMPERA AND WATER COLOUR, GRADES 2 – 3
-VA 1002 PAINTING, TEMPERA AND WATER COLOUR, GRADES 4 – 6
-VA 1003 PAINTING, TEMPERA AND WATER COLOUR, GRADES 7 – 9
+VA 1001 PAINTING, TEMPERA AND WATER COLOUR, GRADES 2 - 3
+VA 1002 PAINTING, TEMPERA AND WATER COLOUR, GRADES 4 - 6
+VA 1003 PAINTING, TEMPERA AND WATER COLOUR, GRADES 7 - 9
 VA 1004 PAINTING, TEMPERA AND WATER COLOUR, GRADES 10 - 12
 VA 1005 PAINTING, TEMPERA AND WATER COLOUR, ADULT
 OIL AND ACRYLIC
-VA 1006 PAINTING, OIL AND ACRYLIC, GRADES 7 – 9
-VA 1007 PAINTING, OIL AND ACRYLIC, GRADES 10 – 12
+VA 1006 PAINTING, OIL AND ACRYLIC, GRADES 7 - 9
+VA 1007 PAINTING, OIL AND ACRYLIC, GRADES 10 - 12
 VA 1008 PAINTING, OIL AND ACRYLIC, ADULT
 DRAWING CLASSES
 All work to be original. Copies of other artists’ works (paintings, drawings, etc.) or caricatures (e.g. Garfield, Peanuts, etc.) are
@@ -13615,91 +13615,91 @@ not acceptable as originality should be stressed at all times.
 DRAWING, COLOURED OR BLACK AND WHITE: CRAYON, PASTEL, CHALK, COLOURED PENCIL, CHARCOAL,
 CONTE, PEN AND INK
 VA 1010 DRAWING, KINDERGARTEN - GRADE 1
-VA 1011 DRAWING, GRADES 2 – 3
-VA 1012 DRAWING, GRADES 4 – 6
-VA 1013 DRAWING, GRADES 7 – 9
-VA 1014 DRAWING, GRADES 10 – 12
+VA 1011 DRAWING, GRADES 2 - 3
+VA 1012 DRAWING, GRADES 4 - 6
+VA 1013 DRAWING, GRADES 7 - 9
+VA 1014 DRAWING, GRADES 10 - 12
 VA 1015 DRAWING, ADULT
 CARTOONING CLASSES
 A cartoon is a humorous or satirical drawing or series of caricatures for the purpose of entertainment, politics or social
-commentary. The characters and copy must be original – tracings or copied material or characters are unacceptable as
+commentary. The characters and copy must be original - tracings or copied material or characters are unacceptable as
 originality and creativity should be stressed at all times.
-VA 1020 CARTOONING, GRADES 7 – 9
-VA 1021 CARTOONING, GRADES 10 – 12
+VA 1020 CARTOONING, GRADES 7 - 9
+VA 1021 CARTOONING, GRADES 10 - 12
 VA 1022 CARTOONING, ADULT
 POSTER CLASSES
 Posters are generally made for the purpose of advertising an event or selling a product and contain combination of picture and
 lettering.
 THEME: LOCAL ARTS FESTIVAL - INDIVIDUAL
-VA 1030 POSTER DESIGN, INDIVIDUAL WORK, LOCAL ARTS FESTIVAL THEME, GRADES 2 – 3
-VA 1031 POSTER DESIGN, INDIVIDUAL WORK, LOCAL ARTS FESTIVAL THEME, GRADES 4 – 6
-VA 1032 POSTER DESIGN, INDIVIDUAL WORK, LOCAL ARTS FESTIVAL THEME, GRADES 7 – 9
-VA 1033 POSTER DESIGN, INDIVIDUAL WORK, LOCAL ARTS FESTIVAL THEME, GRADES 10 – 12
+VA 1030 POSTER DESIGN, INDIVIDUAL WORK, LOCAL ARTS FESTIVAL THEME, GRADES 2 - 3
+VA 1031 POSTER DESIGN, INDIVIDUAL WORK, LOCAL ARTS FESTIVAL THEME, GRADES 4 - 6
+VA 1032 POSTER DESIGN, INDIVIDUAL WORK, LOCAL ARTS FESTIVAL THEME, GRADES 7 - 9
+VA 1033 POSTER DESIGN, INDIVIDUAL WORK, LOCAL ARTS FESTIVAL THEME, GRADES 10 - 12
 VA 1034 POSTER DESIGN, INDIVIDUAL WORK, LOCAL ARTS FESTIVAL THEME, ADULT
 264
-THEME: LOCAL ARTS FESTIVAL – GROUP WORK
-VA 1040 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, GRADES 2 – 3
-VA 1041 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, GRADES 4 – 6
-VA 1042 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, GRADES 7 – 9
-VA 1043 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, GRADES 10 – 12
+THEME: LOCAL ARTS FESTIVAL - GROUP WORK
+VA 1040 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, GRADES 2 - 3
+VA 1041 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, GRADES 4 - 6
+VA 1042 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, GRADES 7 - 9
+VA 1043 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, GRADES 10 - 12
 VA 1044 POSTER DESIGN, GROUP WORK, LOCAL ARTS FESTIVAL THEME, ADULT
 OWN THEME: INDIVIDUAL
-VA 1050 POSTER DESIGN, INDIVIDUAL WORK, OWN THEME, GRADES 2 – 3
-VA 1051 POSTER DESIGN, INDIVIDUAL WORK, OWN THEME, GRADES 4 – 6
-VA 1052 POSTER DESIGN, INDIVIDUAL WORK, OWN THEME, GRADES 7 – 9
-VA 1053 POSTER DESIGN, INDIVIDUAL WORK, OWN THEME, GRADES 10 – 12
+VA 1050 POSTER DESIGN, INDIVIDUAL WORK, OWN THEME, GRADES 2 - 3
+VA 1051 POSTER DESIGN, INDIVIDUAL WORK, OWN THEME, GRADES 4 - 6
+VA 1052 POSTER DESIGN, INDIVIDUAL WORK, OWN THEME, GRADES 7 - 9
+VA 1053 POSTER DESIGN, INDIVIDUAL WORK, OWN THEME, GRADES 10 - 12
 VA 1054 POSTER DESIGN, INDIVIDUAL WORK, OWN THEME, ADULT
 OWN THEME: GROUP WORK
-VA 1060 POSTER DESIGN, GROUP WORK, OWN THEME, GRADES 2 – 3
-VA 1061 POSTER DESIGN, GROUP WORK, OWN THEME, GRADES 4 – 6
-VA 1062 POSTER DESIGN, GROUP WORK, OWN THEME, GRADES 7 – 9
-VA 1063 POSTER DESIGN, GROUP WORK, OWN THEME, GRADES 10 – 12
+VA 1060 POSTER DESIGN, GROUP WORK, OWN THEME, GRADES 2 - 3
+VA 1061 POSTER DESIGN, GROUP WORK, OWN THEME, GRADES 4 - 6
+VA 1062 POSTER DESIGN, GROUP WORK, OWN THEME, GRADES 7 - 9
+VA 1063 POSTER DESIGN, GROUP WORK, OWN THEME, GRADES 10 - 12
 VA 1064 POSTER DESIGN, GROUP WORK, OWN THEME, ADULT
 MURAL AND COLLAGE CLASSES
 INDIVIDUALS
-VA 1070 MURAL AND COLLAGE, INDIVIDUAL WORK, GRADES 2 – 3
-VA 1071 MURAL AND COLLAGE, INDIVIDUAL WORK, GRADES 4 – 6
-VA 1072 MURAL AND COLLAGE, INDIVIDUAL WORK, GRADES 7 – 9
-VA 1073 MURAL AND COLLAGE, INDIVIDUAL WORK, GRADES 10 – 12
+VA 1070 MURAL AND COLLAGE, INDIVIDUAL WORK, GRADES 2 - 3
+VA 1071 MURAL AND COLLAGE, INDIVIDUAL WORK, GRADES 4 - 6
+VA 1072 MURAL AND COLLAGE, INDIVIDUAL WORK, GRADES 7 - 9
+VA 1073 MURAL AND COLLAGE, INDIVIDUAL WORK, GRADES 10 - 12
 VA 1074 MURAL AND COLLAGE, INDIVIDUAL WORK, ADULT
 GROUP WORK
 VA 1080 MURAL AND COLLAGE, GROUP WORK, KINDERGARTEN - GRADE 1
-VA 1081 MURAL AND COLLAGE, GROUP WORK, GRADES 2 – 3
-VA 1082 MURAL AND COLLAGE, GROUP WORK, GRADES 4 – 6
-VA 1083 MURAL AND COLLAGE, GROUP WORK, GRADES 7 – 9
-VA 1084 MURAL AND COLLAGE, GROUP WORK, GRADES 10 – 12
+VA 1081 MURAL AND COLLAGE, GROUP WORK, GRADES 2 - 3
+VA 1082 MURAL AND COLLAGE, GROUP WORK, GRADES 4 - 6
+VA 1083 MURAL AND COLLAGE, GROUP WORK, GRADES 7 - 9
+VA 1084 MURAL AND COLLAGE, GROUP WORK, GRADES 10 - 12
 VA 1085 MURAL AND COLLAGE, GROUP WORK, ADULT
 MIXED MEDIA CLASSES
 A combination of different media and techniques, for example, paint/collage, paint/modeling paste, or wood/wire.
 INDIVIDUALS
-VA 1090 MIXED MEDIA, GRADES 2 – 3
-VA 1091 MIXED MEDIA, GRADES 4 – 6
-VA 1092 MIXED MEDIA, GRADES 7 – 9
-VA 1093 MIXED MEDIA, GRADES 10 – 12
+VA 1090 MIXED MEDIA, GRADES 2 - 3
+VA 1091 MIXED MEDIA, GRADES 4 - 6
+VA 1092 MIXED MEDIA, GRADES 7 - 9
+VA 1093 MIXED MEDIA, GRADES 10 - 12
 VA 1094 MIXED MEDIA, ADULT
 265
 SCULPTURE CLASSES
 Sculpture materials can be clay, paper maché, modeling dough, mobiles, mixed media, paper, wire, plaster, soapstone, wood, etc.
 VA 1100 SCULPTURE, KINDERGARTEN - GRADE 1
-VA 1101 SCULPTURE, GRADES 2 – 3
-VA 1102 SCULPTURE, GRADES 4 – 6
-VA 1103 SCULPTURE, GRADES 7 – 9
-VA 1104 SCULPTURE, GRADES 10 – 12
+VA 1101 SCULPTURE, GRADES 2 - 3
+VA 1102 SCULPTURE, GRADES 4 - 6
+VA 1103 SCULPTURE, GRADES 7 - 9
+VA 1104 SCULPTURE, GRADES 10 - 12
 VA 1105 SCULPTURE, ADULT
 CERAMICS/POTTERY CLASSES
 HAND-BUILT: UNFIRED OR FIRED
-VA 1110 CERAMICS/POTTERY, HAND BUILT, UNFIRED OR FIRED, GRADES 2 – 3
-VA 1111 CERAMICS/POTTERY, HAND BUILT, UNFIRED OR FIRED, GRADES 4 – 6
-VA 1112 CERAMICS/POTTERY, HAND BUILT, UNFIRED OR FIRED, GRADES 7 – 9
-VA 1113 CERAMICS/POTTERY, HAND BUILT, UNFIRED OR FIRED, GRADES 10 – 12
+VA 1110 CERAMICS/POTTERY, HAND BUILT, UNFIRED OR FIRED, GRADES 2 - 3
+VA 1111 CERAMICS/POTTERY, HAND BUILT, UNFIRED OR FIRED, GRADES 4 - 6
+VA 1112 CERAMICS/POTTERY, HAND BUILT, UNFIRED OR FIRED, GRADES 7 - 9
+VA 1113 CERAMICS/POTTERY, HAND BUILT, UNFIRED OR FIRED, GRADES 10 - 12
 VA 1114 CERAMICS/POTTERY, HAND BUILT, UNFIRED OR FIRED, ADULT
 WHEEL-THROWN: UNFIRED OR FIRED
-VA 1120 CERAMICS/POTTERY, WHEEL THROWN, UNFIRED OR FIRED, GRADES 7 – 9
-VA 1121 CERAMICS/POTTERY, WHEEL THROWN, UNFIRED OR FIRED, GRADES 10 – 12
+VA 1120 CERAMICS/POTTERY, WHEEL THROWN, UNFIRED OR FIRED, GRADES 7 - 9
+VA 1121 CERAMICS/POTTERY, WHEEL THROWN, UNFIRED OR FIRED, GRADES 10 - 12
 VA 1122 CERAMICS/POTTERY, WHEEL THROWN, UNFIRED OR FIRED, ADULT
 MOLD
-VA 1130 CERAMICS/POTTERY, MOLD, GRADES 7 – 9
-VA 1131 CERAMICS/POTTERY, MOLD, GRADES 10 – 12
+VA 1130 CERAMICS/POTTERY, MOLD, GRADES 7 - 9
+VA 1131 CERAMICS/POTTERY, MOLD, GRADES 10 - 12
 VA 1132 CERAMICS/POTTERY, MOLD, ADULT
 PRINTMAKING CLASSES
 Printmaking may be defined as the various reproduction processes by which original prints are created, for example, lithography,
@@ -13708,22 +13708,22 @@ GADGET PRINTS, VEGETABLE PRINTS, STENCIL, STYROFOAM, STRING AND MIXED MEDIA
 VA 1140 PRINT MAKING, GADGET PRINTS, VEGETABLE PRINTS, STENCIL, STYROFOAM, STRING OR MIXED
 MEDIA, KINDERGARTEN - GRADE 1
 VA 1141 PRINT MAKING, GADGET PRINTS, VEGETABLE PRINTS, STENCIL, STYROFOAM, STRING OR MIXED
-MEDIA, GRADES 2 – 3
+MEDIA, GRADES 2 - 3
 VA 1142 PRINT MAKING, GADGET PRINTS, VEGETABLE PRINTS, STENCIL, STYROFOAM, STRING OR MIXED
-MEDIA, GRADES 4 – 6
+MEDIA, GRADES 4 - 6
 LINOLEUM, WOODCUTS, SILK SCREEN, INTAGLIO, MIXED MEDIA
-VA 1150 PRINT MAKING, LINOLEUM, WOODCUTS, SILK SCREEN, INTAGLIO OR MIXED MEDIA, GRADES 7 – 9
-VA 1151 PRINT MAKING, LINOLEUM, WOODCUTS, SILK SCREEN, INTAGLIO OR MIXED MEDIA, GRADES 10 – 12
+VA 1150 PRINT MAKING, LINOLEUM, WOODCUTS, SILK SCREEN, INTAGLIO OR MIXED MEDIA, GRADES 7 - 9
+VA 1151 PRINT MAKING, LINOLEUM, WOODCUTS, SILK SCREEN, INTAGLIO OR MIXED MEDIA, GRADES 10 - 12
 VA 1152 PRINT MAKING, LINOLEUM, WOODCUTS, SILK SCREEN, INTAGLIO OR MIXED MEDIA, ADULT
 266
 FIBRE ARTS CLASSES
 The use of kits or purchased patterns is not acceptable as creativity and originality should be stressed at all times.
 STITCHERY (FOR EXAMPLE, NEEDLEPOINT OR EMBROIDERY), TIE-DYE, BATIK, PRINTING ON FABRICS, WEAVING,
 QUILTING, APPLIQUE, MIXED MEDIA
-VA 1160 FIBRE ARTS, GRADES 2 – 3
-VA 1161 FIBRE ARTS, GRADES 4 – 6
-VA 1162 FIBRE ARTS, GRADES 7 – 9
-VA 1163 FIBRE ARTS, GRADES 10 – 12
+VA 1160 FIBRE ARTS, GRADES 2 - 3
+VA 1161 FIBRE ARTS, GRADES 4 - 6
+VA 1162 FIBRE ARTS, GRADES 7 - 9
+VA 1163 FIBRE ARTS, GRADES 10 - 12
 VA 1164 FIBRE ARTS, ADULT
 PUPPETRY CLASSES
 Puppetry classes are offered under both Theatre Arts and Visual Arts. Puppets entered in Theatre Arts will be judged on drama,
@@ -13732,66 +13732,66 @@ Theatre Arts and Visual Arts, if desired. The skit may be original or it may be 
 PUPPETRY WITH THREE-MINUTE SKIT: CLOTH SOCK, PAPER BAGS, PAPER, FINGER PUPPETS, PAPIER MACHÉ,
 CLAY, WOOD, MODELING, MIXED MEDIA
 VA 1170 PUPPETRY WITH THREE MINUTE SKIT, KINDERGARTEN - GRADE 1
-VA 1171 PUPPETRY WITH THREE MINUTE SKIT, GRADES 2 – 3
-VA 1172 PUPPETRY WITH THREE MINUTE SKIT, GRADES 4 – 6
-VA 1173 PUPPETRY WITH THREE MINUTE SKIT, GRADES 7 – 9
-VA 1174 PUPPETRY WITH THREE MINUTE SKIT, GRADES 10 – 12
+VA 1171 PUPPETRY WITH THREE MINUTE SKIT, GRADES 2 - 3
+VA 1172 PUPPETRY WITH THREE MINUTE SKIT, GRADES 4 - 6
+VA 1173 PUPPETRY WITH THREE MINUTE SKIT, GRADES 7 - 9
+VA 1174 PUPPETRY WITH THREE MINUTE SKIT, GRADES 10 - 12
 VA 1175 PUPPETRY WITH THREE MINUTE SKIT, ADULT
 PUPPETRY WITHOUT SKIT: CLOTH SOCK, PAPER BAGS, PAPER, FINGER PUPPETS, PAPIER MACHÉ, CLAY, WOOD,
 MODELING, MIXED MEDIA
 VA 1180 PUPPETRY WITHOUT SKIT, KINDERGARTEN - GRADE 1
-VA 1181 PUPPETRY WITHOUT SKIT, GRADES 2 – 3
-VA 1182 PUPPETRY WITHOUT SKIT, GRADES 4 – 6
-VA 1183 PUPPETRY WITHOUT SKIT, GRADES 7 – 9
-VA 1184 PUPPETRY WITHOUT SKIT, GRADES 10 – 12
+VA 1181 PUPPETRY WITHOUT SKIT, GRADES 2 - 3
+VA 1182 PUPPETRY WITHOUT SKIT, GRADES 4 - 6
+VA 1183 PUPPETRY WITHOUT SKIT, GRADES 7 - 9
+VA 1184 PUPPETRY WITHOUT SKIT, GRADES 10 - 12
 VA 1185 PUPPETRY WITHOUT SKIT, ADULT
 PHOTOGRAPHY CLASSES
 BLACK AND WHITE: OWN DEVELOPING
-VA 1190 PHOTOGRAPHY, BLACK AND WHITE, OWN DEVELOPING, GRADES 7 – 9
-VA 1191 PHOTOGRAPHY, BLACK AND WHITE, OWN DEVELOPING, GRADES 10 – 12
+VA 1190 PHOTOGRAPHY, BLACK AND WHITE, OWN DEVELOPING, GRADES 7 - 9
+VA 1191 PHOTOGRAPHY, BLACK AND WHITE, OWN DEVELOPING, GRADES 10 - 12
 VA 1192 PHOTOGRAPHY, BLACK AND WHITE, OWN DEVELOPING, ADULT
 BLACK AND WHITE: PROFESSIONAL DEVELOPING
-VA 1200 PHOTOGRAPHY, BLACK AND WHITE, PROFESSIONAL DEVELOPING, GRADES 2 – 3
-VA 1201 PHOTOGRAPHY, BLACK AND WHITE, PROFESSIONAL DEVELOPING, GRADES 4 – 6
-VA 1202 PHOTOGRAPHY, BLACK AND WHITE, PROFESSIONAL DEVELOPING, GRADES 7 – 9
-VA 1203 PHOTOGRAPHY, BLACK AND WHITE, PROFESSIONAL DEVELOPING, GRADES 10 – 12
+VA 1200 PHOTOGRAPHY, BLACK AND WHITE, PROFESSIONAL DEVELOPING, GRADES 2 - 3
+VA 1201 PHOTOGRAPHY, BLACK AND WHITE, PROFESSIONAL DEVELOPING, GRADES 4 - 6
+VA 1202 PHOTOGRAPHY, BLACK AND WHITE, PROFESSIONAL DEVELOPING, GRADES 7 - 9
+VA 1203 PHOTOGRAPHY, BLACK AND WHITE, PROFESSIONAL DEVELOPING, GRADES 10 - 12
 VA 1204 PHOTOGRAPHY, BLACK AND WHITE, PROFESSIONAL DEVELOPING, ADULT
 267
 COLOUR: OWN DEVELOPING
-VA 1210 PHOTOGRAPHY, COLOUR, OWN DEVELOPING, GRADES 7 – 9
-VA 1211 PHOTOGRAPHY, COLOUR, OWN DEVELOPING, GRADES 10 – 12
+VA 1210 PHOTOGRAPHY, COLOUR, OWN DEVELOPING, GRADES 7 - 9
+VA 1211 PHOTOGRAPHY, COLOUR, OWN DEVELOPING, GRADES 10 - 12
 VA 1212 PHOTOGRAPHY, COLOUR, OWN DEVELOPING, ADULT
 COLOUR: PROFESSIONAL DEVELOPING
-VA 1213 PHOTOGRAPHY, COLOUR, PROFESSIONAL DEVELOPING, GRADES 2 – 3
-VA 1214 PHOTOGRAPHY, COLOUR, PROFESSIONAL DEVELOPING, GRADES 4 – 6
-VA 1215 PHOTOGRAPHY, COLOUR, PROFESSIONAL DEVELOPING, GRADES 7 – 9
-VA 1216 PHOTOGRAPHY, COLOUR, PROFESSIONAL DEVELOPING, GRADES 10 – 12
+VA 1213 PHOTOGRAPHY, COLOUR, PROFESSIONAL DEVELOPING, GRADES 2 - 3
+VA 1214 PHOTOGRAPHY, COLOUR, PROFESSIONAL DEVELOPING, GRADES 4 - 6
+VA 1215 PHOTOGRAPHY, COLOUR, PROFESSIONAL DEVELOPING, GRADES 7 - 9
+VA 1216 PHOTOGRAPHY, COLOUR, PROFESSIONAL DEVELOPING, GRADES 10 - 12
 VA 1217 PHOTOGRAPHY, COLOUR, PROFESSIONAL DEVELOPING, ADULT
 DIGITAL
-VA 1218 PHOTOGRAPHY, DIGITAL, GRADES 7 – 9
-VA 1219 PHOTOGRAPHY, DIGITAL, GRADES 10 – 12
+VA 1218 PHOTOGRAPHY, DIGITAL, GRADES 7 - 9
+VA 1219 PHOTOGRAPHY, DIGITAL, GRADES 10 - 12
 VA 1220 PHOTOGRAPHY, DIGITAL, ADULT
 FILM, VIDEO OR ANIMATION CLASSES
 Filmmaking classes are offered under both Theatre Arts and Visual Arts. Films entered in Theatre Arts will be judged on
 dramatic presentation, and films entered in Visual Arts will be judged on photography, editing and visual effect. The same film
 may be entered in both Visual Arts and Theatre Arts.
 FILM AND VIDEO
-VA 1231 ANIMATION, FILM AND VIDEO, GRADES 1 – 3
-VA 1232 ANIMATION, FILM AND VIDEO, GRADES 4 – 6
-VA 1233 ANIMATION, FILM AND VIDEO, GRADES 7 – 9
-VA 1234 ANIMATION, FILM AND VIDEO, GRADES 10 – 12
+VA 1231 ANIMATION, FILM AND VIDEO, GRADES 1 - 3
+VA 1232 ANIMATION, FILM AND VIDEO, GRADES 4 - 6
+VA 1233 ANIMATION, FILM AND VIDEO, GRADES 7 - 9
+VA 1234 ANIMATION, FILM AND VIDEO, GRADES 10 - 12
 VA 1235 ANIMATION, FILM AND VIDEO, ADULT
 COMPUTER ART
-VA 1241 ANIMATION, COMPUTER ART, GRADES 1 – 3
-VA 1242 ANIMATION, COMPUTER ART, GRADES 4 – 6
-VA 1243 ANIMATION, COMPUTER ART, GRADES 7 – 9
-VA 1244 ANIMATION, COMPUTER ART, GRADES 10 – 12
+VA 1241 ANIMATION, COMPUTER ART, GRADES 1 - 3
+VA 1242 ANIMATION, COMPUTER ART, GRADES 4 - 6
+VA 1243 ANIMATION, COMPUTER ART, GRADES 7 - 9
+VA 1244 ANIMATION, COMPUTER ART, GRADES 10 - 12
 VA 1245 ANIMATION, COMPUTER ART, ADULT
 CALLIGRAPHY CLASSES
 Participants’ work should display consistency in style and technique, and originality in embellishment and decoration. Personal
 expression is encouraged.
-VA 1246 CALLIGRAPHY, GRADES 4 – 6
-VA 1247 CALLIGRAPHY, GRADES 7 – 9
-VA 1248 CALLIGRAPHY, GRADES 10 – 12
+VA 1246 CALLIGRAPHY, GRADES 4 - 6
+VA 1247 CALLIGRAPHY, GRADES 7 - 9
+VA 1248 CALLIGRAPHY, GRADES 10 - 12
 VA 1249 CALLIGRAPHY, ADULT
 268
