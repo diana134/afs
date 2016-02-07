@@ -107,12 +107,14 @@ class ScheduleDialog(QDialog):
                     except IndexError: # TODO This is only here because some old test data has no selections
                         self.ui.entriesTableWidget.setItem(row, 0, QTableWidgetItem("old test data"))
                         self.ui.entriesTableWidget.setItem(row, 2, QTableWidgetItem("old test data"))
-                
+
                 participant = dbInteractionInstance.getParticipantFromId(entry.participantID)
                 name = ""
-                try:
+                if len(participant.first) > 0:
                     name = participant.first + " " + participant.last
-                except AttributeError:
+                elif len(participant.participants) > 0:
+                    name = participant.participants
+                else:
                     name = participant.groupName
                 self.ui.entriesTableWidget.setItem(row, 1, QTableWidgetItem(name))
         else:
