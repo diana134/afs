@@ -66,8 +66,8 @@ class SettingsInteraction(object):
         tokens = str(self.settings.value("scheduleOptions/sessionDatetimes").toString()).split(", ")
         result = []
         for i in xrange(0, len(tokens), 2):
-            start = datetime.datetime.fromtimestamp(mktime(strptime(tokens[i], "%Y/%m/%d %I:%M %p")))
-            end = datetime.datetime.fromtimestamp(mktime(strptime(tokens[i+1], "%Y/%m/%d %I:%M %p")))
+            start = datetime.datetime.fromtimestamp(mktime(strptime(tokens[i], "%d/%m/%Y %I:%M %p")))
+            end = datetime.datetime.fromtimestamp(mktime(strptime(tokens[i+1], "%d/%m/%Y %I:%M %p")))
             result.append((start, end))
         print "***loaded session datetimes: "
         print result

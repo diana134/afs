@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_addParticipantDialog.ui'
 #
-# Created: Wed Feb  3 20:48:26 2016
+# Created: Sun Feb  7 13:11:34 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -122,7 +122,7 @@ class Ui_AddParticipantDialog(object):
         self.ageLabel.setObjectName(_fromUtf8("ageLabel"))
         self.formLayout_2.setWidget(3, QtGui.QFormLayout.LabelRole, self.ageLabel)
         self.ageSpinBox = QtGui.QSpinBox(self.groupBox)
-        self.ageSpinBox.setMinimum(8)
+        self.ageSpinBox.setMinimum(0)
         self.ageSpinBox.setObjectName(_fromUtf8("ageSpinBox"))
         self.formLayout_2.setWidget(3, QtGui.QFormLayout.FieldRole, self.ageSpinBox)
         self.parentLabel = QtGui.QLabel(self.groupBox)

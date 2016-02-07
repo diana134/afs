@@ -304,10 +304,10 @@ class Entry(object):
         """Creates a docx for the printer, document is from docx module"""
         # super hack
         from databaseInteraction import dbInteractionInstance
-        
+
         participant = dbInteractionInstance.getParticipantFromId(self.participantID)
         pString = ""
-        try:
+        if len(participant.first) > 0:
             # Print soloist name
             pString = "{0} {1}, ".format(participant.first, participant.last)
             if participant.schoolAttending != "":
@@ -318,22 +318,23 @@ class Entry(object):
                     pString += participant.city[:index]
                 else:
                     pString += participant.city
-        except Exception:
+        else:
             # Print list of participants in group
-            if len(participant.participants) > 0:
-                actualParticipants = []
-                tokens = participant.participants.split(',')
-                if tokens[0] != "":
-                    for index in tokens:
-                        sp = dbInteractionInstance.getParticipantFromId(index)
-                        if sp.first != "":
-                            actualParticipants.append("{0} {1}".format(sp.first, sp.last))
+            # if len(participant.participants) > 0:
+            #     actualParticipants = []
+            #     tokens = participant.participants.split(',')
+            #     if tokens[0] != "":
+            #         for index in tokens:
+            #             sp = dbInteractionInstance.getParticipantFromId(index)
+            #             if sp.first != "":
+            #                 actualParticipants.append("{0} {1}".format(sp.first, sp.last))
 
-                # Correctly "comma-ify" the list of names
-                pString = ", ".join(actualParticipants)
-                index = pString.rfind(", ")
-                if index > -1:
-                    pString = pString[:index-1] + " &" + pString[index+1:]
+            #     # Correctly "comma-ify" the list of names
+            #     pString = ", ".join(actualParticipants)
+            #     index = pString.rfind(", ")
+            #     if index > -1:
+            #         pString = pString[:index-1] + " &" + pString[index+1:]
+            pString = participant.participants
 
             # Print the group name
             if self.discipline in ["Choral", "Band", "Dance"]:
@@ -342,7 +343,7 @@ class Entry(object):
                 pString += "{0}".format(participant.groupName)
             elif self.discipline == "Speech" and len(participant.participants) == 0:
                 pString += "{0}".format(participant.groupName)
-            
+
             # Print the grade
             if participant.schoolGrade != "":
                 pString += ", gr. " + participant.schoolGrade
