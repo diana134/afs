@@ -500,10 +500,23 @@ K 2000 ORIGINAL COMPOSITION
 One selection written for piano in which the composer may conduct or perform. A copy of the composition must be filed with the entry. The Adjudicator will judge the composition and the performance independently.
 K 2001 PIANO SOLO, BEGINNER, OWN CHOICE, 6 YEARS AND UNDER
 One selection, own choice from a beginner method book or a pre-grade/level book (RCM/CC).
+
 K 2002 PIANO SOLO, BEGINNER, OWN CHOICE, 7 AND 8 YEARS
 One selection, own choice from a beginner method book or a pre-grade/level book (RCM/CC).
+
+K 2002-A PIANO SOLO, BEGINNER, OWN CHOICE, 7 AND 8 YEARS
+One selection, own choice from a beginner method book or a pre-grade/level book (RCM/CC).
+K 2002-B PIANO SOLO, BEGINNER, OWN CHOICE, 7 AND 8 YEARS
+One selection, own choice from a beginner method book or a pre-grade/level book (RCM/CC).
+
 K 2003 PIANO SOLO, BEGINNER, OWN CHOICE, 9 AND 10 YEARS
 One selection, own choice from a beginner method book or a pre-grade/level book (RCM/CC).
+
+K 2003-A PIANO SOLO, BEGINNER, OWN CHOICE, 9 AND 10 YEARS
+One selection, own choice from a beginner method book or a pre-grade/level book (RCM/CC).
+K 2003-B PIANO SOLO, BEGINNER, OWN CHOICE, 9 AND 10 YEARS
+One selection, own choice from a beginner method book or a pre-grade/level book (RCM/CC).
+
 K 2004 PIANO SOLO, BEGINNER, OWN CHOICE, OPEN
 One selection, own choice from a beginner method book or a pre-grade/level book (RCM/CC).
 
@@ -544,8 +557,8 @@ One selection, own choice. The selection need not be from a beginner method book
 K 2007-C PIANO SOLO, OWN CHOICE, BEGINNER
 One selection, own choice. The selection need not be from a beginner method book or a pre-grade/level book (RCM/CC).
 
-K 2008-LA BEGINNER PREPARATORY
-K 2008-LB BEGINNER PREPARATORY
+K 2008-A BEGINNER PREPARATORY
+K 2008-B BEGINNER PREPARATORY
 
 K 2009 BEGINNER, 15 AND OVER
 
