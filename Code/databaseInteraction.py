@@ -171,7 +171,9 @@ class DatabaseInteraction(object):
         """Search syllabus and return the class name or none if not found"""
         # Make sure classNumber is formatted as a group of letters, space, group of numbers
         groups = classNumber.split()
-        if (len(groups) == 2) and groups[0].isalpha():  # TODO check for second part having numbers, and maybe - followed by letters and a number
+        if len(groups) == 2:
+        # TODO check for part having a -
+        # TODO check for second part having numbers, and maybe - followed by letters and a number
             path = os.path.join(SYLLABUS_PATH, SYLLABUS_NAME)
             with open(path, 'r') as syllabus:
                 for line in syllabus:
