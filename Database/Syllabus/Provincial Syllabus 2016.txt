@@ -77,7 +77,7 @@ PV 1201 VOCAL SOLO, GERMAN LIEDER, 14 YEARS AND UNDER (P)
 One selection, own choice. Must be sung in German.
 PV 1202 VOCAL SOLO, ITALIAN ART SONG, 14 YEARS AND UNDER (P)
 One selection, own choice. Must be sung in Italian.
-PV 1203 VOCAL SOLO, FRENCH MÉLODIE, 14 YEARS AND UNDER (P)
+PV 1203 VOCAL SOLO, FRENCH MELODIE, 14 YEARS AND UNDER (P)
 One selection, own choice. Must be sung in French.
 PV 1204 VOCAL SOLO, SPANISH ART SONG, 14 YEARS AND UNDER (P)
 One selection, own choice. Must be sung in Spanish.
@@ -117,7 +117,7 @@ PV 1251 VOCAL SOLO, GERMAN LIEDER, 16 YEARS AND UNDER (J)
 One selection, own choice. Must be sung in German.
 PV 1252 VOCAL SOLO, ITALIAN ART SONG, 16 YEARS AND UNDER (J)
 One selection, own choice. Must be sung in Italian.
-PV 1253 VOCAL SOLO, FRENCH MÉLODIE, 16 YEARS AND UNDER (J)
+PV 1253 VOCAL SOLO, FRENCH MELODIE, 16 YEARS AND UNDER (J)
 One selection, own choice. Must be sung in French.
 PV 1254 VOCAL SOLO, SPANISH ART SONG, 16 YEARS AND UNDER (J)
 One selection, own choice. Must be sung in Spanish.
@@ -160,7 +160,7 @@ PV 1301 VOCAL SOLO, GERMAN LIEDER, 18 YEARS AND UNDER (I)
 One selection, own choice. Must be sung in German.
 PV 1302 VOCAL SOLO, ITALIAN ART SONG, 18 YEARS AND UNDER (I)
 One selection, own choice. Must be sung in Italian.
-PV 1303 VOCAL SOLO, FRENCH MÉLODIE, 18 YEARS AND UNDER (I)
+PV 1303 VOCAL SOLO, FRENCH MELODIE, 18 YEARS AND UNDER (I)
 One selection, own choice. Must be sung in French.
 PV 1304 VOCAL SOLO, SPANISH ART SONG, 18 YEARS AND UNDER (I)
 One selection, own choice. Must be sung in Spanish.
@@ -203,7 +203,7 @@ PV 1351 VOCAL SOLO, GERMAN LIEDER, GRADE B (A)
 One selection, own choice. Must be sung in German.
 PV 1352 VOCAL SOLO, ITALIAN ART SONG, GRADE B (A)
 One selection, own choice. Must be sung in Italian.
-PV 1353 VOCAL SOLO, FRENCH MÉLODIE, GRADE B (A)
+PV 1353 VOCAL SOLO, FRENCH MELODIE, GRADE B (A)
 One selection, own choice. Must be sung in French.
 PV 1354 VOCAL SOLO, SPANISH ART SONG, GRADE B (A)
 One selection, own choice. Must be sung in Spanish.
@@ -255,7 +255,7 @@ PV 1401 VOCAL SOLO, GERMAN LIEDER, GRADE A (S)
 One selection, own choice. Must be sung in German.
 PV 1402 VOCAL SOLO, ITALIAN ART SONG, GRADE A (S)
 One selection, own choice. Must be sung in Italian.
-PV 1403 VOCAL SOLO, FRENCH MÉLODIE, GRADE A (S)
+PV 1403 VOCAL SOLO, FRENCH MELODIE, GRADE A (S)
 One selection, own choice. Must be sung in French.
 PV 1404 VOCAL SOLO, SPANISH ART SONG, GRADE A (S)
 One selection, own choice. Must be sung in Spanish.
@@ -300,7 +300,7 @@ PV 1451 VOCAL SOLO, GERMAN LIEDER, HONOURS (S)
 One selection, own choice. Must be sung in German.
 PV 1452 VOCAL SOLO, ITALIAN ART SONG, HONOURS (S)
 One selection, own choice. Must be sung in Italian.
-PV 1453 VOCAL SOLO, FRENCH MÉLODIE, HONOURS (S)
+PV 1453 VOCAL SOLO, FRENCH MELODIE, HONOURS (S)
 One selection, own choice. Must be sung in French.
 PV 1454 VOCAL SOLO, SPANISH ART SONG, HONOURS (S)
 One selection, own choice. Must be sung in Spanish.
@@ -341,7 +341,7 @@ V 1501 VOCAL SOLO, GERMAN LIEDER, ADULT
 One selection, own choice. Must be sung in German.
 V 1502 VOCAL SOLO, ITALIAN ART SONG, ADULT
 One selection, own choice. Must be sung in Italian.
-V 1503 VOCAL SOLO, FRENCH MÉLODIE, ADULT
+V 1503 VOCAL SOLO, FRENCH MELODIE, ADULT
 One selection, own choice. Must be sung in French.
 V 1504 VOCAL SOLO, SPANISH ART SONG, ADULT
 One selection, own choice. Must be sung in Spanish.
@@ -898,7 +898,7 @@ Sonata #3), the entire work should be performed. This is the only piano class at
 sonata by a Romantic, 20 th /21 st Century, French or Canadian composer may be played.
 PK 2559 PIANO SOLO, FRENCH COMPOSERS, DIPLOMA (S)
 One selection, own choice.
-PK 2560 PIANO SOLO, CONCERT ÉTUDE, DIPLOMA (S)
+PK 2560 PIANO SOLO, CONCERT ETUDE, DIPLOMA (S)
 One selection, own choice.
 PK-C 2561 PIANO SOLO, CANADIAN COMPOSERS, DIPLOMA (S)
 One selection, own choice. This is the only piano class at this grade/level eligible for recommendation to the Senior
@@ -13742,7 +13742,7 @@ PUPPETRY CLASSES
 Puppetry classes are offered under both Theatre Arts and Visual Arts. Puppets entered in Theatre Arts will be judged on drama,
 and puppets entered in Visual Arts will be judged on visual effect and imagination. The same skit or play may be entered in both
 Theatre Arts and Visual Arts, if desired. The skit may be original or it may be an interpretation of a fairy tale of other story.
-PUPPETRY WITH THREE-MINUTE SKIT: CLOTH SOCK, PAPER BAGS, PAPER, FINGER PUPPETS, PAPIER MACHÉ,
+PUPPETRY WITH THREE-MINUTE SKIT: CLOTH SOCK, PAPER BAGS, PAPER, FINGER PUPPETS, PAPIER MACHE,
 CLAY, WOOD, MODELING, MIXED MEDIA
 VA 1170 PUPPETRY WITH THREE MINUTE SKIT, KINDERGARTEN - GRADE 1
 VA 1171 PUPPETRY WITH THREE MINUTE SKIT, GRADES 2 - 3
@@ -13750,7 +13750,7 @@ VA 1172 PUPPETRY WITH THREE MINUTE SKIT, GRADES 4 - 6
 VA 1173 PUPPETRY WITH THREE MINUTE SKIT, GRADES 7 - 9
 VA 1174 PUPPETRY WITH THREE MINUTE SKIT, GRADES 10 - 12
 VA 1175 PUPPETRY WITH THREE MINUTE SKIT, ADULT
-PUPPETRY WITHOUT SKIT: CLOTH SOCK, PAPER BAGS, PAPER, FINGER PUPPETS, PAPIER MACHÉ, CLAY, WOOD,
+PUPPETRY WITHOUT SKIT: CLOTH SOCK, PAPER BAGS, PAPER, FINGER PUPPETS, PAPIER MACHE, CLAY, WOOD,
 MODELING, MIXED MEDIA
 VA 1180 PUPPETRY WITHOUT SKIT, KINDERGARTEN - GRADE 1
 VA 1181 PUPPETRY WITHOUT SKIT, GRADES 2 - 3
