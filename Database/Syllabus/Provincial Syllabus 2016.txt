@@ -489,7 +489,7 @@ syllabi. Ungraded repertoire should be equal in difficulty to graded repertoire 
 3. RECITAL GROUP: Three selections by one or more composers. Participants will be adjudicated on the
 selection of the group; technique, style and interpretation. The purpose of this class is to provide an opportunity
 for students to prepare and perform a recital program in public.
-4. SELECTION: Unless otherwise indicated in THIS syllabus, the word ‘selection’ refers to ONE piece by a
+4. SELECTION: Unless otherwise indicated in THIS syllabus, the word ‘selection' refers to ONE piece by a
 composer, and not two or more short pieces from a collection or cycle.
 5. SONATA: Sonata classes are understood to include sonata, sonatina and divertimento. Movements from these
 works must be entered in Sonata classes.
@@ -1222,7 +1222,7 @@ class(es).
 3. RECITAL GROUP: Three selections by one or more composers. Participants will be adjudicated on the
 selection of the group; technique, style, and interpretation. The purpose of this class is to provide an opportunity
 for students to prepare and perform a recital program in public.
-4. SELECTION: Unless otherwise indicated in THIS syllabus, the word ‘selection’ refers to ONE piece by a
+4. SELECTION: Unless otherwise indicated in THIS syllabus, the word ‘selection' refers to ONE piece by a
 composer and not two or more short pieces from a collection or cycle.
 5. SONATA: Sonata classes are understood to include sonata, sonatina and divertimento. Movements from these
 works must be entered in Sonata classes.
@@ -3004,7 +3004,7 @@ Ungraded repertoire should be equal in difficulty to graded repertoire performed
 3. RECITAL GROUP: Three selections by one or more composers. Participants will be adjudicated on the
 selection of the group; technique, style, and interpretation. The purpose of this class is to provide an opportunity
 for students to prepare and perform a recital program in public.
-4. SELECTION: Unless otherwise indicated in THIS syllabus, the word ‘selection’ refers to ONE piece by a
+4. SELECTION: Unless otherwise indicated in THIS syllabus, the word ‘selection' refers to ONE piece by a
 composer, and not two or more short pieces from a collection or cycle.
 5. SONATA: Sonata classes are understood to include sonata, sonatina and divertimento. Movements from these
 works must be entered in Sonata classes.
@@ -3484,7 +3484,7 @@ syllabi. Ungraded repertoire should be equal in difficulty to graded repertoire 
 3. RECITAL GROUP: Three selections by one or more composers. Participants will be adjudicated on the
 selection of the group; technique, style, and interpretation. The purpose of this class is to provide an opportunity
 for students to prepare and perform a recital program in public.
-4. SELECTION: Unless otherwise indicated in THIS syllabus, the word ‘selection’ refers to ONE piece by a
+4. SELECTION: Unless otherwise indicated in THIS syllabus, the word ‘selection' refers to ONE piece by a
 composer, and not two or more short pieces from a collection or cycle.
 5. SONATA: Sonata classes are understood to include sonata, sonatina and divertimento. Movements from these
 works must be entered in Sonata classes.
@@ -5416,11 +5416,11 @@ One selection, own choice.
 GRADE/LEVEL 1
 Please read the NOTES at the beginning of the WOODWINDS section for clarification of class requirements.
 W 5666-1 SAXOPHONE SOLO, BAROQUE COMPOSERS, GRADE/LEVEL 1
-One selection, own choice. May be transcription of a Baroque composer’s work.
+One selection, own choice. May be transcription of a Baroque composer's work.
 W 5667-1 SAXOPHONE SOLO, CLASSICAL COMPOSERS, GRADE/LEVEL 1
-One selection, own choice. May be transcription of a Classical composer’s work.
+One selection, own choice. May be transcription of a Classical composer's work.
 W 5668-1 SAXOPHONE SOLO, ROMANTIC COMPOSERS, GRADE/LEVEL 1
-One selection, own choice. May be transcription of a Romantic composer’s work.
+One selection, own choice. May be transcription of a Romantic composer's work.
 W 5669-1 SAXOPHONE SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE/LEVEL 1
 One selection, own choice. Works by Canadian composers must be entered in the Canadian Composers class.
 W 5670-1 SAXOPHONE SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 1
@@ -5431,11 +5431,11 @@ One selection, own choice.
 GRADE/LEVEL 2
 Please read the NOTES at the beginning of the WOODWINDS section for clarification of class requirements.
 W 5666-2 SAXOPHONE SOLO, BAROQUE COMPOSERS, GRADE/LEVEL 2
-One selection, own choice. May be transcription of a Baroque composer’s work.
+One selection, own choice. May be transcription of a Baroque composer's work.
 W 5667-2 SAXOPHONE SOLO, CLASSICAL COMPOSERS, GRADE/LEVEL 2
-One selection, own choice. May be transcription of a Classical composer’s work.
+One selection, own choice. May be transcription of a Classical composer's work.
 W 5668-2 SAXOPHONE SOLO, ROMANTIC COMPOSERS, GRADE/LEVEL 2
-One selection, own choice. May be transcription of a Romantic composer’s work.
+One selection, own choice. May be transcription of a Romantic composer's work.
 W 5669-2 SAXOPHONE SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE/LEVEL 2
 One selection, own choice. Works by Canadian composers must be entered in the Canadian Composers class.
 W 5670-2 SAXOPHONE SOLO, CANADIAN COMPOSERS, GRADE/LEVEL 2
@@ -5450,11 +5450,11 @@ GRADE/LEVEL 3
 Please read the NOTES at the beginning of the WOODWINDS section for clarification of class requirements.
 Please refer to the Multi-Discipline section for W.A. Mozart classes eligible for the Provincial Festival.
 PW 5676-3 SAXOPHONE SOLO, BAROQUE COMPOSERS, GRADE/LEVEL 3 (P)
-One selection, own choice. May be transcription of a Baroque composer’s work.
+One selection, own choice. May be transcription of a Baroque composer's work.
 PW 5677-3 SAXOPHONE SOLO, CLASSICAL COMPOSERS, GRADE/LEVEL 3 (P)
-One selection, own choice. May be transcription of a Classical composer’s work.
+One selection, own choice. May be transcription of a Classical composer's work.
 PW 5678-3 SAXOPHONE SOLO, ROMANTIC COMPOSERS, GRADE/LEVEL 3 (P)
-One selection, own choice. May be transcription of a Romantic composer’s work.
+One selection, own choice. May be transcription of a Romantic composer's work.
 PW 5679-3 SAXOPHONE SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE/LEVEL 3 (P)
 One selection, own choice. Works by Canadian composers must be entered in the Canadian Composers class.
 PW 5680-3 SAXOPHONE SOLO, SONATA, GRADE/LEVEL 3 (P)
@@ -5471,12 +5471,12 @@ GRADE/LEVEL 4
 Please read the NOTES at the beginning of the WOODWINDS section for clarification of class requirements.
 Please refer to the Multi-Discipline section for W.A. Mozart classes eligible for the Provincial Festival.
 PW 5676-4 SAXOPHONE SOLO, BAROQUE COMPOSERS, GRADE/LEVEL 4 (P)
-One selection, own choice. May be transcription of a Baroque composer’s work.
+One selection, own choice. May be transcription of a Baroque composer's work.
 126
 PW 5677-4 SAXOPHONE SOLO, CLASSICAL COMPOSERS, GRADE/LEVEL 4 (P)
-One selection, own choice. May be transcription of a Classical composer’s work.
+One selection, own choice. May be transcription of a Classical composer's work.
 PW 5678-4 SAXOPHONE SOLO, ROMANTIC COMPOSERS, GRADE/LEVEL 4 (P)
-One selection, own choice. May be transcription of a Romantic composer’s work.
+One selection, own choice. May be transcription of a Romantic composer's work.
 PW 5679-4 SAXOPHONE SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE/LEVEL 4 (P)
 One selection, own choice. Works by Canadian composers must be entered in the Canadian Composers class.
 PW 5680-4 SAXOPHONE SOLO, SONATA, GRADE/LEVEL 4 (P)
@@ -5497,11 +5497,11 @@ GRADE/LEVEL 5
 Please read the NOTES at the beginning of the WOODWINDS section for clarification of class requirements.
 Please refer to the Multi-Discipline section for W.A. Mozart classes eligible for the Provincial Festival.
 PW 5691-5 SAXOPHONE SOLO, BAROQUE COMPOSERS, GRADE/LEVEL 5 (J)
-One selection, own choice. May be transcription of a Baroque composer’s work.
+One selection, own choice. May be transcription of a Baroque composer's work.
 PW 5692-5 SAXOPHONE SOLO, CLASSICAL COMPOSERS, GRADE/LEVEL 5 (J)
-One selection, own choice. May be transcription of a Classical composer’s work.
+One selection, own choice. May be transcription of a Classical composer's work.
 PW 5693-5 SAXOPHONE SOLO, ROMANTIC COMPOSERS, GRADE/LEVEL 5 (J)
-One selection, own choice. May be transcription of a Romantic composer’s work.
+One selection, own choice. May be transcription of a Romantic composer's work.
 PW 5694-5 SAXOPHONE SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE/LEVEL 5 (J)
 One selection, own choice. Works by Canadian composers must be entered in the Canadian Composers class.
 PW 5695-5 SAXOPHONE SOLO, SONATA, GRADE/LEVEL 5 (J)
@@ -5522,11 +5522,11 @@ GRADE/LEVEL 6
 Please read the NOTES at the beginning of the WOODWINDS section for clarification of class requirements.
 Please refer to the Multi-Discipline section for W.A. Mozart classes eligible for the Provincial Festival.
 PW 5691-6 SAXOPHONE SOLO, BAROQUE COMPOSERS, GRADE/LEVEL 6 (J)
-One selection, own choice. May be transcription of a Baroque composer’s work.
+One selection, own choice. May be transcription of a Baroque composer's work.
 PW 5692-6 SAXOPHONE SOLO, CLASSICAL COMPOSERS, GRADE/LEVEL 6 (J)
-One selection, own choice. May be transcription of a Classical composer’s work.
+One selection, own choice. May be transcription of a Classical composer's work.
 PW 5693-6 SAXOPHONE SOLO, ROMANTIC COMPOSERS, GRADE/LEVEL 6 (J)
-One selection, own choice. May be transcription of a Romantic composer’s work.
+One selection, own choice. May be transcription of a Romantic composer's work.
 PW 5694-6 SAXOPHONE SOLO, 20TH/21ST CENTURY COMPOSERS, GRADE/LEVEL 6 (J)
 One selection, own choice. Works by Canadian composers must be entered in the Canadian Composers class.
 PW 5695-6 SAXOPHONE SOLO, SONATA, GRADE/LEVEL 6 (J)
@@ -5550,11 +5550,11 @@ GRADE/LEVEL 7
 Please read the NOTES at the beginning of the WOODWINDS section for clarification of class requirements.
 Please refer to the Multi-Discipline section for W.A. Mozart classes eligible for the Provincial Festival.
 PW 5706-7 SAXOPHONE SOLO, BAROQUE COMPOSERS, GRADE/LEVEL 7 (I)
-One selection, own choice. May be transcription of a Baroque composer’s work.
+One selection, own choice. May be transcription of a Baroque composer's work.
 PW 5707-7 SAXOPHONE SOLO, CLASSICAL COMPOSERS, GRADE/LEVEL 7 (I)
-One selection, own choice. May be transcription of a Classical composer’s work.
+One selection, own choice. May be transcription of a Classical composer's work.
 PW 5708-7 SAXOPHONE SOLO, ROMANTIC COMPOSERS, GRADE/LEVEL 7 (I)
-One selection, own choice. May be transcription of a Romantic composer’s work.
+One selection, own choice. May be transcription of a Romantic composer's work.
 PW 5709-7 SAXOPHONE SOLO, BAROQUE, CLASSICAL OR ROMANTIC SONATA, GRADE/LEVEL 7 (I)
 Own choice, one movement of a sonata. This is the only saxophone class at this grade/level in which a sonata movement
 by a Baroque, Classical or Romantic composer may be played.
@@ -5578,11 +5578,11 @@ GRADE/LEVEL 8
 Please read the NOTES at the beginning of the WOODWINDS section for clarification of class requirements.
 Please refer to the Multi-Discipline section for W.A. Mozart classes eligible for the Provincial Festival.
 PW 5706-8 SAXOPHONE SOLO, BAROQUE COMPOSERS, GRADE/LEVEL 8 (I)
-One selection, own choice. May be transcription of a Baroque composer’s work.
+One selection, own choice. May be transcription of a Baroque composer's work.
 PW 5707-8 SAXOPHONE SOLO, CLASSICAL COMPOSERS, GRADE/LEVEL 8 (I)
-One selection, own choice. May be transcription of a Classical composer’s work.
+One selection, own choice. May be transcription of a Classical composer's work.
 PW 5708-8 SAXOPHONE SOLO, ROMANTIC COMPOSERS, GRADE/LEVEL 8 (I)
-One selection, own choice. May be transcription of a Romantic composer’s work.
+One selection, own choice. May be transcription of a Romantic composer's work.
 PW 5709-8 SAXOPHONE SOLO, BAROQUE, CLASSICAL OR ROMANTIC SONATA, GRADE/LEVEL 8 (I)
 Own choice, one movement of a sonata. This is the only saxophone class at this grade/level in which a sonata movement
 by a Baroque, Classical or Romantic composer may be played.
@@ -5609,12 +5609,12 @@ GRADE/LEVEL 9
 Please read the NOTES at the beginning of the WOODWINDS section for clarification of class requirements.
 Please refer to the Multi-Discipline section for W.A. Mozart classes eligible for the Provincial Festival.
 PW 5721-9 SAXOPHONE SOLO, BAROQUE COMPOSERS, GRADE/LEVEL 9 (A)
-One selection, own choice. May be transcription of a Baroque composer’s work.
+One selection, own choice. May be transcription of a Baroque composer's work.
 129
 PW 5722-9 SAXOPHONE SOLO, CLASSICAL COMPOSERS, GRADE/LEVEL 9 (A)
-One selection, own choice. May be transcription of a Classical composer’s work.
+One selection, own choice. May be transcription of a Classical composer's work.
 PW 5723-9 SAXOPHONE SOLO, ROMANTIC COMPOSERS, GRADE/LEVEL 9 (A)
-One selection, own choice. May be transcription of a Romantic composer’s work.
+One selection, own choice. May be transcription of a Romantic composer's work.
 PW 5724-9 SAXOPHONE SOLO, BAROQUE, CLASSICAL OR ROMANTIC SONATA, GRADE/LEVEL 9 (A)
 Own choice, one movement of a sonata. This is the only saxophone class at this grade/level in which a sonata movement
 by a Baroque, Classical or Romantic composer may be played.
@@ -5637,11 +5637,11 @@ GRADE/LEVEL 10
 Please read the NOTES at the beginning of the WOODWINDS section for clarification of class requirements.
 Please refer to the Multi-Discipline section for W.A. Mozart classes eligible for the Provincial Festival.
 PW 5721-10 SAXOPHONE SOLO, BAROQUE COMPOSERS, GRADE/LEVEL 10 (A)
-One selection, own choice. May be transcription of a Baroque composer’s work.
+One selection, own choice. May be transcription of a Baroque composer's work.
 PW 5722-10 SAXOPHONE SOLO, CLASSICAL COMPOSERS, GRADE/LEVEL 10 (A)
-One selection, own choice. May be transcription of a Classical composer’s work.
+One selection, own choice. May be transcription of a Classical composer's work.
 PW 5723-10 SAXOPHONE SOLO, ROMANTIC COMPOSERS, GRADE/LEVEL 10 (A)
-One selection, own choice. May be transcription of a Romantic composer’s work.
+One selection, own choice. May be transcription of a Romantic composer's work.
 PW 5724-10 SAXOPHONE SOLO, BAROQUE, CLASSICAL OR ROMANTIC SONATA, GRADE/LEVEL 10 (A)
 Own choice, one movement of a sonata. This is the only saxophone class at this grade/level in which a sonata movement
 by a Baroque, Classical or Romantic composer may be played.
@@ -5673,11 +5673,11 @@ NW 5 NATIONAL WOODWIND SOLO CLASS, DIPLOMA/HONOURS (N)
 ***Please contact the AMAF office for the most current information for this class. Repertoire selections for this class must
 meet the National Music Festival Syllabus requirements (online at www.fcmf.org).***
 PW 5741 SAXOPHONE SOLO, BAROQUE COMPOSERS, DIPLOMA (S)
-One selection, own choice. May be transcription of a Baroque composer’s work.
+One selection, own choice. May be transcription of a Baroque composer's work.
 PW 5742 SAXOPHONE SOLO, CLASSICAL COMPOSERS, DIPLOMA (S)
-One selection, own choice. May be transcription of a Classical composer’s work.
+One selection, own choice. May be transcription of a Classical composer's work.
 PW 5743 SAXOPHONE SOLO, ROMANTIC COMPOSERS, DIPLOMA (S)
-One selection, own choice. May be transcription of a Romantic composer’s work.
+One selection, own choice. May be transcription of a Romantic composer's work.
 PW 5744 SAXOPHONE SOLO, BAROQUE, CLASSICAL OR ROMANTIC SONATA, DIPLOMA (S)
 Own choice, two consecutive movements of a sonata. This is the only saxophone class at this grade/level in which sonata
 movements by a Baroque, Classical or Romantic composer may be played.
@@ -5703,12 +5703,12 @@ NW 5 NATIONAL WOODWIND SOLO CLASS, DIPLOMA/HONOURS (N)
 ***Please contact the AMAF office for the most current information for this class. Repertoire selections for this class must
 meet the National Music Festival Syllabus requirements (online at www.fcmf.org).***
 PW 5756 SAXOPHONE SOLO, BAROQUE COMPOSERS, HONOURS (S)
-One selection, own choice. May be transcription of a Baroque composer’s work.
+One selection, own choice. May be transcription of a Baroque composer's work.
 131
 PW 5757 SAXOPHONE SOLO, CLASSICAL COMPOSERS, HONOURS (S)
-One selection, own choice. May be transcription of a Classical composer’s work.
+One selection, own choice. May be transcription of a Classical composer's work.
 PW 5758 SAXOPHONE SOLO, ROMANTIC COMPOSERS, HONOURS (S)
-One selection, own choice. May be transcription of a Romantic composer’s work.
+One selection, own choice. May be transcription of a Romantic composer's work.
 PW 5759 SAXOPHONE SOLO, BAROQUE, CLASSICAL OR ROMANTIC SONATA, HONOURS (S)
 Own choice, two consecutive movements of a sonata. This is the only saxophone class at this grade/level in which sonata
 movements by a Baroque, Classical or Romantic composer may be played.
@@ -6117,7 +6117,7 @@ syllabi. Ungraded repertoire should be equal in difficulty to graded repertoire 
 3. RECITAL GROUP: Three selections by one or more composers. Participants will be adjudicated on the
 selection of the group; technique, style, and interpretation. The purpose of this class is to provide an opportunity
 for students to prepare and perform a recital program in public.
-4. SELECTION: Unless otherwise indicated in THIS syllabus, the word ‘selection’ refers to ONE piece by a
+4. SELECTION: Unless otherwise indicated in THIS syllabus, the word ‘selection' refers to ONE piece by a
 composer, and not two or more short pieces from a collection or cycle.
 5. SONATA: Sonata classes are understood to include sonata, sonatina and divertimento. Movements from these
 works must be entered in Sonata classes.
@@ -7955,19 +7955,19 @@ In order to receive a recommendation to the multi-discipline W.A. Mozart classes
 a Provincial Festival eligible Multi-Discipline W.A. Mozart class at your local festival. The following classes only are eligible
 for recommendation to the Multi-Discipline W.A. Mozart classes at the Provincial Festival.
 PMZ 7700 MULTI-DISCIPLINE W.A. MOZART, OWN CHOICE, PRELIMINARY
-One selection, own choice. May be a transcription of W.A. Mozart’s work. Time limit 6 minutes. No piano concertos.
+One selection, own choice. May be a transcription of W.A. Mozart's work. Time limit 6 minutes. No piano concertos.
 Instrumental sonatas, one movement only.
 PMZ 7701 MULTI-DISCIPLINE W.A. MOZART, OWN CHOICE, JUNIOR
-One selection, own choice. May be a transcription of W.A. Mozart’s work. Time limit 8 minutes. No piano concertos.
+One selection, own choice. May be a transcription of W.A. Mozart's work. Time limit 8 minutes. No piano concertos.
 Instrumental sonatas, one movement only.
 PMZ 7702 MULTI-DISCIPLINE W.A. MOZART, OWN CHOICE, INTERMEDIATE
-One selection, own choice. May be a transcription of W.A. Mozart’s work. Time limit 8 minutes. No piano concertos.
+One selection, own choice. May be a transcription of W.A. Mozart's work. Time limit 8 minutes. No piano concertos.
 Instrumental sonatas, one movement only.
 PMZ 7703 MULTI-DISCIPLINE W.A. MOZART, OWN CHOICE, ADVANCED
-One selection, own choice. May be a transcription of W.A. Mozart’s work. Time limit 10 minutes. No piano concertos.
+One selection, own choice. May be a transcription of W.A. Mozart's work. Time limit 10 minutes. No piano concertos.
 Instrumental sonatas, one movement only.
 PMZ 7704 MULTI-DISCIPLINE W.A. MOZART, OWN CHOICE, SENIOR
-One selection, own choice. May be a transcription of W.A. Mozart’s work. Time limit 10 minutes. No piano concertos.
+One selection, own choice. May be a transcription of W.A. Mozart's work. Time limit 10 minutes. No piano concertos.
 Instrumental sonatas, one movement only.
 181
 SPECIAL
@@ -8036,14 +8036,14 @@ music.
 9. SCHOOL CHORUS: A School Chorus may be composed of one grade or a combination of grades. In chorus
 classes, it is not necessary to include students representing every grade specified in the class description.
 School choirs that contain grade combinations other than those specified in particular classes in the syllabus
-should enter the ‘ANY OTHER GRADE COMBINATION’ class.
+should enter the ‘ANY OTHER GRADE COMBINATION' class.
 10. SCHOOL CONTEMPORARY FOLK SONG/POPULAR MUSIC CHORUS: Contemporary folk music is most
 often performed by experts and is transmitted in organized performances and commercially distributed
 recordings (for example Joni Mitchell, Gordon Lightfoot, etc.) while popular music is of any genre of music with
 current wide appeal and distribution (for example Amy Grant, Diana Krall, Josh Groban, etc.).
 11. SUGGESTED REPERTOIRE LISTS: When reference is made to the Suggested Repertoire List for choral
-classes, participants MUST choose a selection from the AMAF ‘Choral Suggested Repertoire List’ which can be
-found at the end of this section. This repertoire can also be used as ‘own choice’ selections.
+classes, participants MUST choose a selection from the AMAF ‘Choral Suggested Repertoire List' which can be
+found at the end of this section. This repertoire can also be used as ‘own choice' selections.
 12. TRANSPOSITION: Transpositions will be allowed one tone or semitone up or down.
 13. TWO-PART SONGS: Two-part songs are those that require a significant part of the song to be sung in two-part
 harmony.
@@ -8579,21 +8579,21 @@ Two contrasting sacred selections, own choice, any number of parts.
 COM 8265 CHURCH CHOIR, OWN CHOICE, ANY COMBINATION OF VOICES
 Two contrasting sacred selections, own choice, any number of parts.
 COMMUNITY CHOIR CLASSES
-COMMUNITY CHILDREN’S CHOIR, 12 YEARS AND UNDER
-COM 8301 COMMUNITY CHILDREN’S CHOIR, OWN CHOICE, 12 YEARS AND UNDER
+COMMUNITY CHILDREN'S CHOIR, 12 YEARS AND UNDER
+COM 8301 COMMUNITY CHILDREN'S CHOIR, OWN CHOICE, 12 YEARS AND UNDER
 Two contrasting selections, own choice, any number of parts.
-COM 8302 COMMUNITY CHILDREN’S CHOIR, FOLK SONG, 12 YEARS AND UNDER
+COM 8302 COMMUNITY CHILDREN'S CHOIR, FOLK SONG, 12 YEARS AND UNDER
 Two contrasting selections, own choice, any number of parts.
-COM 8303 COMMUNITY CHILDREN’S CHOIR, MODERN FOLK SONG, WITHOUT MOVEMENT, 12 YEARS AND UNDER
+COM 8303 COMMUNITY CHILDREN'S CHOIR, MODERN FOLK SONG, WITHOUT MOVEMENT, 12 YEARS AND UNDER
 Two contrasting selections, own choice, any number of parts.
-COM 8304 COMMUNITY CHILDREN’S CHOIR, MODERN FOLK SONG, WITH MOVEMENT, 12 YEARS AND UNDER
+COM 8304 COMMUNITY CHILDREN'S CHOIR, MODERN FOLK SONG, WITH MOVEMENT, 12 YEARS AND UNDER
 Two contrasting selections, own choice, any number of parts.
-COM 8305 COMMUNITY CHILDREN’S CHOIR, OPERETTA, 12 YEARS AND UNDER
+COM 8305 COMMUNITY CHILDREN'S CHOIR, OPERETTA, 12 YEARS AND UNDER
 One selection of an excerpt from an operetta or musical, including any optional solo parts, to be acted out as well as sung,
 with participants costumed and using a minimum of stage sets. Preparation and performance time not to exceed 20
 minutes. Any live accompaniment may be used. Speaking parts should be kept to a minimum. It is highly desirable that
 the conductor not be on stage.
-COM 8306 COMMUNITY CHILDREN’S CHOIR, CONCERT GROUP, 12 YEARS AND UNDER
+COM 8306 COMMUNITY CHILDREN'S CHOIR, CONCERT GROUP, 12 YEARS AND UNDER
 Three or four contrasting selections by various composers, representing a variety of styles and periods. 20 minute time
 limit. The artistic arrangement of the selections and the quality of the music chosen will be taken into consideration.
 COMMUNITY YOUTH CHOIR, 16 YEARS AND UNDER
@@ -8798,7 +8798,7 @@ One Wish (BriLee Music CF.BL192)
 The Path to the Moon (Boosey & Hawkes HL.48003957)
 SCH 8066 CLASSROOM CHOIR, GRADE 5
 Anderson, W.H. Summer on the Prairie (4 Seasonal Songs, Leslie 1125)
-Beswick, Aubrey Coconut Man (Pick’n’Choose, PR.UE016393)
+Beswick, Aubrey Coconut Man (Pick'n'Choose, PR.UE016393)
 Coghlan, Mira & Michael Inuit Vignette (Alfred Music AP-VG1008)
 Crawley, Clifford Northward (Songs of the Settlers, Leslie 1144)
 Donnelly, Mary & Strid, George L.O. The Rainbow (The Rain and the Rainbow, Hal Leonard HL.138732)
@@ -8901,15 +8901,15 @@ classroom. This rule does not apply to non-competitive choirs.
 be on the basis of reading/recitative skills. The selection may be fiction or non-fiction. A copy of the work must
 accompany the entry form. Participants performing from memory must indicate this clearly on their entry forms as the
 local festival organization may wish to separate these entries from the reading entries.
-4. CREATIVE STORYTELLING: Creative storytelling involves telling the entrant’s own story in a style that demands
+4. CREATIVE STORYTELLING: Creative storytelling involves telling the entrant's own story in a style that demands
 direct and lively communication with the audience. Action and gesture should not overwhelm the story. It may be the
 story of a real experience or an imaginary one. The aim of the classes is to celebrate the art of storytelling. No notes
 may be used. An outline/map of the work must be submitted for the adjudicator. Suggestions may be made
 concerning written work as it pertains to the oral communication, but will not be adjudicated.
 5. DRAMATIC CHORAL SPEAKING: Work in this category can have body movement, gestures and some staging. If
-props, costumes or scenery are used they must be minimal and/or of a ‘suggestive’ nature only. Participants will be
-allowed no more than five minutes ‘set-up’ time. Work may be humorous or serious. It will be judged at the
-adjudicator’s discretion on the basis of technical and artistic merit, degree of difficulty and suitability for the ages
+props, costumes or scenery are used they must be minimal and/or of a ‘suggestive' nature only. Participants will be
+allowed no more than five minutes ‘set-up' time. Work may be humorous or serious. It will be judged at the
+adjudicator's discretion on the basis of technical and artistic merit, degree of difficulty and suitability for the ages
 involved.
 6. HOLY BOOK OTHER THAN BIBLE: May be from such Holy books as the Talmud and the Koran. If the selection is
 read in a language other than English, a translation must be provided for the adjudicator.
@@ -8980,8 +8980,8 @@ PROVINCIAL SPEECH ARTS CLASSES
 POETRY OR PROSE CLASSES
 Provincial Festival Solo Speech Arts Class competitors are required to perform TWO selections:
 i)
-The ‘recommended’ selection.
-ii) One ‘own choice’ selection.
+The ‘recommended' selection.
+ii) One ‘own choice' selection.
 Own choice selections must be chosen from among the following poetry/prose class categories.
 Suggested Repertoire List may be used as own choice selections.
 
@@ -9458,19 +9458,19 @@ own words. Sounds, props and movement may be incorporated into the performance. 
 outline/map of the story must be provided for the adjudicator. Suggestions may be made concerning written work as it
 pertains to the oral communication, but will not be adjudicated.
 SA 9251 STORYTELLING, OWN CHOICE, GRADES 1 - 3
-The entrant may choose to tell a fairy tale from any time or place (not entrant’s original work). One selection, own choice.
+The entrant may choose to tell a fairy tale from any time or place (not entrant's original work). One selection, own choice.
 Time limit 3 minutes.
 SA 9252 STORYTELLING, OWN CHOICE, GRADES 4 - 6
-The entrant may choose to tell a legend or myth from any country (not entrant’s original work). One selection, own choice.
+The entrant may choose to tell a legend or myth from any country (not entrant's original work). One selection, own choice.
 Time limit 4 minutes.
 SA 9253 STORYTELLING, OWN CHOICE, GRADES 7 - 12
-The entrant may choose from any published or unpublished work (not entrant’s original work). One selection, own choice.
+The entrant may choose from any published or unpublished work (not entrant's original work). One selection, own choice.
 Time limit 6 minutes.
 SA 9254 STORYTELLING, OWN CHOICE, ADULT
-Open to any entrant beyond Grade 12. One selection, own choice, from any published or unpublished work (not entrant’s
+Open to any entrant beyond Grade 12. One selection, own choice, from any published or unpublished work (not entrant's
 original work). Time limit 6 minutes.
 CREATIVE STORYTELLING
-Creative storytelling involves telling the entrant’s own story in a style that demands direct and lively communication with
+Creative storytelling involves telling the entrant's own story in a style that demands direct and lively communication with
 the audience. Action and gesture should not overwhelm the story. It may be the story of a real experience or an
 imaginary one. The aim of the classes is to celebrate the art of storytelling. No notes may be used. An outline/map of the
 work must be submitted for the adjudicator. Suggestions may be made concerning written work as it pertains to the oral
@@ -9503,11 +9503,11 @@ Entrants must present persuasive, informative or entertaining speeches that they
 need not be memorized; participants are encouraged to use notes (preferably on small, numbered cards). Participants will,
 however, be penalized for excessive reading. Speech entrants will be judged on such details as research (if applicable),
 organization, language, all aspects of delivery, and appeal to the audience. Topics will be own choice provided that they focus
-on Canada or some aspect of Canadian life or experience. Speeches may also be about the participant’s own life or experience.
+on Canada or some aspect of Canadian life or experience. Speeches may also be about the participant's own life or experience.
 One mark will be lost per minute if the participant exceeds the time limit.
 SA 9271 PUBLIC SPEAKING, PREPARED SPEECH, NARRATIVE OR EXPOSITORY, GRADE 3
 Speeches are to be narrative or expository. They may explain some idea or process or they may narrate an experience.
-Subject is participant’s own choice. Time limit 3 minutes.
+Subject is participant's own choice. Time limit 3 minutes.
 SCHOOL GRADES 4 - 12
 Speech Arts classes with bolded titles and preceded by:
 
@@ -9566,7 +9566,7 @@ BOOK TITLE
 Falling Up
 Read Aloud Rhymes for the Very Young
 Read Aloud Rhymes for the Very Young
-A Child’s Treasury of Animal Verse
+A Child's Treasury of Animal Verse
 Time for Poetry
 Time for Poetry
 Time for Poetry
@@ -9638,7 +9638,7 @@ Bingo Has an Enemy
 Mice
 Automobile Mechanics
 Spiders
-Jonathan’s Farm
+Jonathan's Farm
 Camping
 The Loser
 AUTHOR
@@ -9690,14 +9690,14 @@ Roethke, Theodore
 Today is Very Boring
 Under the Ground
 Sea Cliff
-Fishes’ Evening Song Prelutsky, Jack
+Fishes' Evening Song Prelutsky, Jack
 Bacmeister, Rhoda W.
 Smith, A.J.M.
 Ipcar, Dahlov
 Spaghetti Flynn, Frank
 BOOK TITLE
 Around My Room
-Auntie’s Knitting a Baby
+Auntie's Knitting a Baby
 New Kid on the Block
 Sea Poems
 The Collected Poems of Theodore
@@ -9707,7 +9707,7 @@ Voices on the Wind
 Til All the Stars Have Fallen
 Random House Book of Poetry for
 Children
-The King Fisher Book of Children’s
+The King Fisher Book of Children's
 Poetry
 PUBLISHER
 Farrar, Straus & Giroux
@@ -9748,11 +9748,11 @@ Random House Book of Poetry for
 Children
 Random House Book of Poetry for
 Children
-A Child’s Garden of Verses PUBLISHER
+A Child's Garden of Verses PUBLISHER
 Random House
 Random House Book of Poetry for
 Children
-A Child’s Garden of Verses Random House
+A Child's Garden of Verses Random House
 When We Were Very Young
 Poems to Grow On
 The World of Christopher Robin
@@ -9774,7 +9774,7 @@ Kredenser, Gail
 Homework Yolen, Jane
 Messy Room
 Unscratchable Itch
-Lately I’ve Been Late
+Lately I've Been Late
 No Girls Allowed Silverstein, Shel
 Silverstein, Shel
 Lesynski, Loris
@@ -9863,7 +9863,7 @@ Prelutsky, Jack
 Cary, Phoebe
 Kipling, Rudyard
 The Puzzle
-It Couldn’t Be Done
+It Couldn't Be Done
 Polar Bear Snow
 The Runaway
 The Marrog Lee, Dennis
@@ -9877,11 +9877,11 @@ Prelutsky, Jack
 BOOK TITLE
 New Kid on the Block
 Family Album of Favorite Poems
-The New Oxford Book of Children’s
+The New Oxford Book of Children's
 Verse
 Jelly Belly
 Family Album of Favorite Poems
-Don’t Eat Spiders
+Don't Eat Spiders
 Time for Poetry
 Random House Book of Poetry for
 Children
@@ -9927,18 +9927,18 @@ Wordsworth, William
 BOOK TITLE
 Time for Poetry PUBLISHER
 W.J. Gage & Company
-A Child’s Garden of Verses Gollancz
-A Child’s Anthology of Poetry
+A Child's Garden of Verses Gollancz
+A Child's Anthology of Poetry
 The Oxford Book of Canadian Verse
-The Canadian Children’s Treasury
+The Canadian Children's Treasury
 All Sails Set Scholastic Inc.
 Oxford University Press
 Key Porter Books
 Copp Clark Publ.
 All Sails Set
 101 Famous Poems
-A Child’s Anthology of Poetry
-A Child’s Anthology of Poetry Copp Clark Publ.
+A Child's Anthology of Poetry
+A Child's Anthology of Poetry Copp Clark Publ.
 Contemporary Books
 Scholastic Inc.
 Scholastic Inc.
@@ -10024,9 +10024,9 @@ Province of Manitoba
 Compascor Manitoba
 Province of Manitoba
 Pemmican Publications
-Dennis County Writers’
+Dennis County Writers'
 Group
-Dennis County Writers’
+Dennis County Writers'
 Group
 PSA 9041 SOLO SPOKEN POETRY, 20 TH /21 ST CENTURY, GRADE 7
 TITLE
@@ -10051,7 +10051,7 @@ In Between Banks, Lisa
 BOOK TITLE
 Falling Up
 Through the Open Window
-Who’s Been Sleeping in My Porridge?
+Who's Been Sleeping in My Porridge?
 Of the Jigsaw
 Angle of Ascent, New and Selected
 Poems
@@ -10187,7 +10187,7 @@ McClelland and Stewart
 Dickinson, Emily Poems Houghton, Mifflin
 Magee, John Gillespie
 Gould, Gerald The Golden Caravan
-The Arbuthnot Anthology of Children’s
+The Arbuthnot Anthology of Children's
 Literature
 Annabel Lee
 Sound and Sense Ryerson Press
@@ -10354,7 +10354,7 @@ Stephens, James
 Binyan, Lawrence
 Frost, Robert
 Nowlan, Alden
-Sandburg, Carl It’s Not Always a Game
+Sandburg, Carl It's Not Always a Game
 Collected Poems
 Theme & Image: An Anthology of Poetry
 Theme & Image: An Anthology of Poetry
@@ -10481,7 +10481,7 @@ Woman by the Shore Birney, Earle
 Stewart, Brenda The New Oxford Book of Canadian
 Verse
 20th Century Poetry and Poetics
-It’s Not Always a Game Oxford University Press
+It's Not Always a Game Oxford University Press
 All About Us Books
 Crozier, Lorna
 Cohen, Leonard
@@ -10547,11 +10547,11 @@ TITLE
 Excerpt from: Watch Out for Lions AUTHOR
 Kleitsch, Christel
 Excerpt from: Who Lives There? Hawkinson, John
-The Teddy Bears’ Picnic
-Excerpt from: Soup’s Goat
-Excerpt from: Grampa’s Cat
+The Teddy Bears' Picnic
+Excerpt from: Soup's Goat
+Excerpt from: Grampa's Cat
 Excerpt from: The Dove and the Ant
-Excerpt from: At Grandpa’s Sugar Bush
+Excerpt from: At Grandpa's Sugar Bush
 Excerpt from: Pigs
 Excerpt from: the Prairie Fire
 Excerpt from: Stone Fox Kennedy, Jimmy
@@ -10567,11 +10567,11 @@ A Bear with Electric Hair
 (Journeys)
 A Bear with Electric Hair
 (Journeys)
-The Teddy Bears’ Picnic
-Soup’s Goat
-Grampa’s Cat
+The Teddy Bears' Picnic
+Soup's Goat
+Grampa's Cat
 Childcraft, Vol. 2
-At Grandpa’s Sugar Bush
+At Grandpa's Sugar Bush
 Pigs
 The Prairie Fire
 Stone Fox
@@ -10634,7 +10634,7 @@ TITLE
 Excerpt from: Six Darn Cows
 Excerpt from: Nobody
 Excerpt from: How Bluebell Came to Be
-Excerpt from: Murdo’s Story AUTHOR
+Excerpt from: Murdo's Story AUTHOR
 Laurence, Margaret
 Zola, M. And Dereume,
 A.
@@ -10644,7 +10644,7 @@ BOOK TITLE
 Six Darn Cows
 Nobody
 Pieces
-Murdo’s Story Excerpt from: The Birth of Nanabosho McLellan, Joseph The Birth of Nanabosho Excerpt from: Why Rabbits Have Long
+Murdo's Story Excerpt from: The Birth of Nanabosho McLellan, Joseph The Birth of Nanabosho Excerpt from: Why Rabbits Have Long
 Ears
 Excerpt from: The Gift of the Frost Fairy
 Excerpt from: Would they Love a Lion
@@ -10671,14 +10671,14 @@ Kingfisher
 Kids Can Press
 Compascor
 BOOK TITLE
-Charlotte’s Web
+Charlotte's Web
 Charlie and the Chocolate
 Factory
 The Olden Days Coat
 The Phantom Tollbooth
 Alice in Wonderland
 The Summer of the Swans
-Nobody’s Dog
+Nobody's Dog
 The Secret Garden PUBLISHER
 Harper Trophy
 Puffin Books
@@ -10693,14 +10693,14 @@ Ticket to Curlew Harper Collins Publ.
 Groundwood Books
 PSA 9112 SOLO READING, PROSE, GRADES 4 - 6
 TITLE
-Excerpt from: Charlotte’s Web
+Excerpt from: Charlotte's Web
 Excerpt from: Charlie and the Chocolate
 Factory
 Excerpt from: The Olden Days Coat
 Excerpt from: The Phantom Toolbooth
 Excerpt from: Alice in Wonderland
 Excerpt from: The Summer of the Swans
-Excerpt from: Nobody’s Dog
+Excerpt from: Nobody's Dog
 Excerpt from: The Secret Garden
 Excerpt from: From Anna
 Excerpt from: Ticket to Curlew
@@ -10720,9 +10720,9 @@ Lottridge, Celia Barker
 PSA 9114 SOLO READING, CANADIAN PROSE, GRADES 4 - 6
 TITLE
 Excerpt from: Island Explorers
-Excerpt from: Aunt Cyrilla’s Christmas
+Excerpt from: Aunt Cyrilla's Christmas
 Basket
-Excerpt from: The Magician’s Revenge
+Excerpt from: The Magician's Revenge
 Excerpt from: Morning at Green Gables
 Excerpt from: The Silence
 Excerpt from: Caught Between Fire and
@@ -10764,7 +10764,7 @@ Froese, Deborah
 Sigurdson, Paul A.
 Cann, Kendra
 Ferguson, John BOOK TITLE
-Kid’s World Dec. 1994
+Kid's World Dec. 1994
 Of the Jigsaw
 The Wise Wisherman
 Pieces
@@ -10782,7 +10782,7 @@ The White Stone Castle
 Wall
 Jason and the Wonder Horn Hyperion Press
 Tundra Books
-Kid’s World March/April
+Kid's World March/April
 1994 Permission of author
 PUBLISHER
 Scholastic
@@ -10791,11 +10791,11 @@ Smucker, Barbara
 Gray, Elizabeth Janet
 Kipling, Rudyard
 Korman, Gordon
-O’Dell, Scott BOOK TITLE
+O'Dell, Scott BOOK TITLE
 The Adventures of Tom
 Sawyer
 Harry Potter and the
-Sorcerer’s Stone
+Sorcerer's Stone
 Lyddie
 Underground to Canada
 Adam of the Road
@@ -10842,7 +10842,7 @@ TITLE
 Excerpt from: The Adventures of Tom
 Sawyer
 Excerpt from: Harry Potter and the
-Sorcerer’s Stone
+Sorcerer's Stone
 Excerpt from: Lyddie
 Excerpt from: Underground to Canada
 Excerpt from: Adam of the Road
@@ -10859,7 +10859,7 @@ Rowling, J.K.
 
 ScholasticPSA 9124 SOLO READING, CANADIAN PROSE, GRADES 7 - 9
 TITLE
-Excerpt from: Lesia’s Dream
+Excerpt from: Lesia's Dream
 Excerpt from: Lost in the Barrens
 Excerpt from: Nesting Canada
 Geese
@@ -10879,7 +10879,7 @@ Excerpt from: Trapped in Ice Walter, Eric
 Montgomery, L.M.
 Hoogstraten, Vinia
 BOOK TITLE
-Lesia’s Dream
+Lesia's Dream
 Lost in the Barrens
 A Century of Canadian
 Literature
@@ -10909,7 +10909,7 @@ PSA 9125 SOLO READING, MANITOBAN PROSE, GRADES 7 - 9
 TITLE
 Excerpt from: Mother Knew a Few Tricks
 Too
-Excerpt from: Gramma’s People AUTHOR
+Excerpt from: Gramma's People AUTHOR
 Broadfoot, Barry BOOK TITLE
 The Pioneer Years
 Schneider, Carmel Manitoba Myriad
@@ -10936,11 +10936,11 @@ Who Is Frances Rain?
 PUBLISHER
 Robert Garbutt
 Productions
-Dennis County Writers’
+Dennis County Writers'
 Guild
 Key Porter Books
 Compascor
-Dennis County Writers’
+Dennis County Writers'
 Guild
 Coteau Books
 Turnstone Press
@@ -10950,7 +10950,7 @@ Kids Can Press Ltd.
 PSA 9132 SOLO READING, PROSE, GRADES 10 - 12
 TITLE
 Excerpt from: The Diamond Necklace AUTHOR
-De Maupassant, Guy Excerpt from: Tess of the D’Urbervilles
+De Maupassant, Guy Excerpt from: Tess of the D'Urbervilles
 Excerpt from: A Tale of Two Cities
 Excerpt from: A Visit from Mr. Lucifer
 “Rodger”
@@ -10965,7 +10965,7 @@ Dickens, Charles
 Lemma, Don BOOK TITLE
 Short Stories of De
 Maupassant
-Tess of the D’Urbervilles
+Tess of the D'Urbervilles
 A Tale of Two Cities
 A Visit from Mr. Lucifer
 PUBLISHER
@@ -10987,7 +10987,7 @@ David Copperfield
 The Best of James Herriot Penguin
 Random House
 Wordsworth Editions
-St. Martin’s Press
+St. Martin's Press
 225
 PSA 9134 SOLO READING, CANADIAN PROSE, GRADES 10 - 12
 TITLE
@@ -10997,7 +10997,7 @@ Canadian Content
 Excerpt from: The Stone Diaries
 Excerpt from: The Wars
 Excerpt from: Who Has Seen the Wind?
-Excerpt from: The Dog Who Wouldn’t Be
+Excerpt from: The Dog Who Wouldn't Be
 Excerpt from: The Stone Angel
 Excerpt from: Small Ceremonies
 “February”
@@ -11012,7 +11012,7 @@ Laurence, Margaret
 Sheilds, Carol The Stone Diaries
 The Wars
 Who Has Seen The Wind?
-The Dog Who Wouldn’t Be
+The Dog Who Wouldn't Be
 The Stone Angel
 Small Ceremonies
 Lemma, Don A Visit from Mr. Lucifer
@@ -11063,10 +11063,10 @@ McClelland & Stewart
 McClelland & Stewart
 Vintage Canada
 Turnstone Press
-Denis County Writers’
+Denis County Writers'
 Guild
 McClelland & Stewart
-Dennis County Writers’
+Dennis County Writers'
 Guild
 Harcourt, Brace,
 Jovanovich
@@ -11087,7 +11087,7 @@ Milne, A.A.
 Tippett, James S.
 Prelutsky, Jack
 Ciardi, John BOOK TITLE
-It’s Snowing! It’s Snowing!
+It's Snowing! It's Snowing!
 Random House Book of Poetry for Children
 Random House Book of Poetry for Children
 Random House Book of Poetry for Children
@@ -11129,7 +11129,7 @@ Herford, Oliver
 Bates, Clara Doty BOOK TITLE
 Random House Book of Poetry for Children
 Random House Book of Poetry for Children
-Thomas Kincade: A Child’s Garden of
+Thomas Kincade: A Child's Garden of
 Verses
 Time for Poetry
 Time for Poetry
@@ -11137,12 +11137,12 @@ The Golden Book of Poetry
 When Tillie Ate the Chili
 Bear in There
 Where Go the Boats
-Grandpa Bear’s Lullaby Prelutsky, Jack
+Grandpa Bear's Lullaby Prelutsky, Jack
 Silverstein, Shel
 Stevenson, R.L.
 Yolen, Jane The New Kid on the Block
 A Light in the Attic
-Leaves from a Child’s Garden of Verses
+Leaves from a Child's Garden of Verses
 Random House Book of Poetry for Children
 PUBLISHER
 Random House
@@ -11168,7 +11168,7 @@ The Troll
 The Mysterious Cat
 I Collect, Do You?
 Polka Dot Pajamas
-On Mother’s Day
+On Mother's Day
 Sing a Song of People
 AUTHOR
 Prelutsky, Jack BOOK TITLE
@@ -11269,7 +11269,7 @@ The New Kid on the Block
 The New Kid on the Block
 The Word Party
 Random House Book of Poetry for Children
-Children’s Hour Best Loved Poems
+Children's Hour Best Loved Poems
 Poetry Plus
 Random House Book of Poetry for Children PUBLISHER
 Harper Collins
@@ -11291,7 +11291,7 @@ The Ants at the Olympics
 The Duel
 The Sounds in the Evening
 The Old Gumbie Cat
-The Camel’s Complaint
+The Camel's Complaint
 The Twins
 The Story of Augustus Who
 Would Not Have Any Soup
@@ -11311,9 +11311,9 @@ Carryl, Charles E.
 Leigh, Henry S.
 Hoffman, Heinrich Random House Book of Poetry for Children
 Random House Book of Poetry for Children
-The Children’s Bells
+The Children's Bells
 Tickle the Sun
-Children’s Hour Best Loved Poems
+Children's Hour Best Loved Poems
 Random House Book of Poetry for Children
 Random House Book of Poetry for Children Random House
 Random House
@@ -11329,7 +11329,7 @@ Oh Who is that Young Sinner
 How Do You Grow a Poet
 The Quality of Light
 The Owl Critic
-Mr. Artesian’s
+Mr. Artesian's
 Conscientiousness
 The Night Wind
 Griselda
@@ -11381,7 +11381,7 @@ Nightmare AUTHOR
 Saloman, Louis
 Gilbert, W. S.
 Hold Fast Your Dreams Driscoll Louise
-The Touch of the Master’s
+The Touch of the Master's
 Hand
 My Hand bag and I
 Sam
@@ -11467,7 +11467,7 @@ Scholastic
 Poems and Rhymes Childcraft, Vol. 1
 SA 9183 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADE 1
 TITLE
-It’s Dark in Here
+It's Dark in Here
 Bedtime
 Wind Song
 Exactly Right
@@ -11513,7 +11513,7 @@ Scholastic Inc.
 229
 SA 9185 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADE 2
 TITLE
-Mother Doesn’t Want a Dog
+Mother Doesn't Want a Dog
 Baloney
 Apology
 Here Comes the Witch
@@ -11521,7 +11521,7 @@ Licorice
 I Meant to do My Work Today
 Magic Old and New
 Windy Word
-I Won’t Hatch
+I Won't Hatch
 October Nights
 AUTHOR
 Viorst, Judith
@@ -11557,7 +11557,7 @@ Harper Row
 Kids Can Press
 SA 9187 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADE 3
 TITLE
-Eating An Alligator Isn’t Quite
+Eating An Alligator Isn't Quite
 the Thing
 Rain Sizes
 Just Before Springtime
@@ -11588,7 +11588,7 @@ Heidbreder, Robert
 Prelutsky, Jack
 Thompson, Dorothy
 Brown Random House Book of Poetry for Children
-Who Shrank My Grandmother’s House
+Who Shrank My Grandmother's House
 For Laughing Out Loud Random House
 Harper Collins
 Alfred A. Knopf
@@ -11609,7 +11609,7 @@ Walking
 The Best Game the Fairies
 Play
 Silver
-If We Didn’t Have Birthdays
+If We Didn't Have Birthdays
 Bed in Summer
 Hiding
 AUTHOR
@@ -11632,7 +11632,7 @@ Dr. Seuss
 Stevenson, R.L.
 Aldis, Dorothy Time for Poetry
 Random House Book of Poetry for Children
-Leaves from a Child’s Garden of Verse
+Leaves from a Child's Garden of Verse
 Time for Poetry Gage Publishing
 Random House
 Smithmark
@@ -11642,7 +11642,7 @@ SA 9191 SPEECH CHOIR, DRAMATIC SPEAKING, KINDERGARTEN - GRADE 3
 TITLE
 Picture Puzzle Piece
 No Difference
-The Crocodile’s Toothache
+The Crocodile's Toothache
 The Owl and the Pussy-Cat
 What is Orange?
 Wrimples
@@ -11654,7 +11654,7 @@ Silverstein, Shel
 Silverstein, Shel
 Silverstein, Shel
 Lear, Edward
-O’Neill, Mary
+O'Neill, Mary
 Prelutsky, Jack
 Noyes, Alfred
 Burnham, Maude
@@ -11687,13 +11687,13 @@ SA 9201 SPEECH CHOIR, 20 TH /21 ST CENTURY, GRADE 4
 TITLE
 The Shark
 Sugar Weather
-Pumberly Pott’s
+Pumberly Pott's
 Unpredictable Niece
 The Wolf
-Who’s Who
+Who's Who
 The Waves
 Ballad of a Boneless Chicken
-Toad’s Song
+Toad's Song
 Spring
 Sigh...lence
 AUTHOR
@@ -11750,7 +11750,7 @@ Garrard
 Simmie, Lois
 Lee, Dennis
 Glen, Rita
-Gotlieb, Phyllis Auntie’s Knitting a Baby
+Gotlieb, Phyllis Auntie's Knitting a Baby
 Garbage Delight
 Round Slice of Moon
 The Wind has Wings Prairie Books
@@ -11798,7 +11798,7 @@ Another Second Poetry Book
 Childcraft, Vol 3.
 Collections 2
 A Book of Animal Poems
-Children’s Book of Verse
+Children's Book of Verse
 Nineteenth Moon
 Time for Poetry Annic Press
 Annic Press
@@ -11834,15 +11834,15 @@ Milne, A.A.
 McCrae, John
 BOOK TITLE
 Best Loved Poems
-A Child’s Anthology of Poetry
+A Child's Anthology of Poetry
 Til All the Stars Have Fallen
 All Sails Set
-A Child’s Anthology of Poetry
+A Child's Anthology of Poetry
 Oxford Treasury of Childrens Poems
 Time for Poetry
 Life and Adventure
 The World of Christopher Robin
-A Child’s Anthology of Poetry
+A Child's Anthology of Poetry
 PUBLISHER
 Spencer Press
 Scholastic
@@ -11871,7 +11871,7 @@ Johnson, E Pauline
 The Pirate Don Durk of
 Dundee
 Doh-Si-Doh
-Two’s Company
+Two's Company
 It Is Raining Meigs, Mildred Plew
 The Flattered Flying Fish
 Lee, Dennis
@@ -11880,7 +11880,7 @@ Mitchell, Lucy
 Sprague
 Rieu, E.V.
 BOOK TITLE
-Who’s Been Sleeping in My Porridge?
+Who's Been Sleeping in My Porridge?
 Jelly Belly
 Do Whales Jump at Night?
 Time For Poetry
@@ -12021,7 +12021,7 @@ Rosen, Michael
 BOOK TITLE
 Sound and Sense, 2nd Ed.
 Words on Wings, Book I
-God’s Tombstones PUBLISHER
+God's Tombstones PUBLISHER
 Harcourt Brace
 Thomas Nelson & Sons
 Penguin Books
@@ -12049,7 +12049,7 @@ Fifteen
 We Have Been Called
 A Supermaket in California Nash, Ogden
 The Dying Eagle
-It’s Hot in the City
+It's Hot in the City
 The Two Little Skeezuks
 The Winter Scene
 Black Rook in Rainy Weather
@@ -12079,7 +12079,7 @@ McGraw Hill
 A.A. Knopf
 MacMillan
 McGraw Hill
-Charles Scribner’s Sons
+Charles Scribner's Sons
 Thomas Nelson
 Peguis
 McGraw Hill
@@ -12093,7 +12093,7 @@ The Warden of the Cinque
 Ports
 Macavity: the Mystery Cat
 The Universal Soldier
-God’s Grandeur Scott, Sir Walter
+God's Grandeur Scott, Sir Walter
 Tennyson, Alfred L.
 Longfellow, Henry
 Wadsworth
@@ -12130,7 +12130,7 @@ TITLE
 THE Ballad of the Oysterman
 Bushed
 Christ Climbed Down
-The Witches’ Chant
+The Witches' Chant
 A Ballad of John Silver
 Wilderness
 To a Young Friend
@@ -12163,7 +12163,7 @@ Fire & Ice
 Words on Wings, Book 2
 I am a Sensation
 Words on Wings, Book 1
-The New Oxford Book of Children’s Verse Methuen and Co. Ltd.
+The New Oxford Book of Children's Verse Methuen and Co. Ltd.
 R.J. McMaster
 Thomas Nelson & Sons
 McClelland & Stewart
@@ -12173,7 +12173,7 @@ Oxford University Press
 
 PUBLISHER
 Random HouseTHEATRE ARTS
-Theatre Arts Classes are divided into the following sections: Drama; Puppetry; Mime; Reader’s Theatre;
+Theatre Arts Classes are divided into the following sections: Drama; Puppetry; Mime; Reader's Theatre;
 Musical Theatre; Film and Video.
 Please check your local festival addendum for details regarding the Theatre Arts Classes.
 All grade levels in Theatre Arts refer to school grades.
@@ -12287,7 +12287,7 @@ DRAMATIC MONOLOGUES
 A dramatic monologue is a dramatic piece for a single performer, or a long speech from a play in which a single character
 speaks. The scene may be staged with movement along with use of simple set pieces, costumes and props. The piece will be
 adjudicated primarily on the strength of the interpretation and the believability of the character. Participants are advised to read
-the whole play and be aware of the character’s role and development throughout the play. It is not necessary to use an accent.
+the whole play and be aware of the character's role and development throughout the play. It is not necessary to use an accent.
 Monologue classes are also offered under Speech Arts. One selection. Please check your local festival addendum for time
 limits.
 TA 0128 DRAMA, DRAMATIC MONOLOGUE, OWN CHOICE, GRADES 4 - 6
@@ -12331,29 +12331,29 @@ TA 0150 MIME, GRADES 7 - 9
 TA 0151 MIME, GRADES 10 - 12
 TA 0152 MIME, ADULT
 TA 0153 MIME, OPEN
-READER’S THEATRE CLASSES
-In Reader’s Theatre, scripts are handheld. Creative methods may be used to approximate entrances, exits, stage movements or
+READER'S THEATRE CLASSES
+In Reader's Theatre, scripts are handheld. Creative methods may be used to approximate entrances, exits, stage movements or
 action, lighting, sets or props. Often the form consists simply of stools on which the readers sit with minimal light by which to
-read. Tableaux or slides may be used to give the audience a visual focus while they listen. Reader’s Theatre is similar to radio
-drama in that audience attention is caught and held through the actor’s involvement in the characters. Not all plays are suitable
-for use in Reader’s Theatre; those which do not require a great deal of visual movement and action to keep the audience
+read. Tableaux or slides may be used to give the audience a visual focus while they listen. Reader's Theatre is similar to radio
+drama in that audience attention is caught and held through the actor's involvement in the characters. Not all plays are suitable
+for use in Reader's Theatre; those which do not require a great deal of visual movement and action to keep the audience
 interested work best. Prose pieces can be adapted for these classes. Own choice. Please check your local festival addendum
 for time limits.
 237
 CREATED SCRIPT OR ADAPTATION
-TA 0154 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, KINDERGARTEN - GRADE 3
-TA 0155 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 4 - 6
-TA 0156 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 7 - 9
-TA 0157 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 10 - 12
-TA 0158 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, ADULT
-TA 0159 READER’S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, OPEN
+TA 0154 READER'S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, KINDERGARTEN - GRADE 3
+TA 0155 READER'S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 4 - 6
+TA 0156 READER'S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 7 - 9
+TA 0157 READER'S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, GRADES 10 - 12
+TA 0158 READER'S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, ADULT
+TA 0159 READER'S THEATRE, CREATED SCRIPT OR ADAPTATION, OWN CHOICE, OPEN
 EXCERPT, SCENE OR ONE-ACT PLAY
-TA 0160 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, KINDERGARTEN - GRADE 3
-TA 0161 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 4 - 6
-TA 0162 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 7 - 9
-TA 0163 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 10 - 12
-TA 0164 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, ADULT
-TA 0165 READER’S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, OPEN
+TA 0160 READER'S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, KINDERGARTEN - GRADE 3
+TA 0161 READER'S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 4 - 6
+TA 0162 READER'S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 7 - 9
+TA 0163 READER'S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, GRADES 10 - 12
+TA 0164 READER'S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, ADULT
+TA 0165 READER'S THEATRE, EXCERPT SCENE OR ONE ACT PLAY, OWN CHOICE, OPEN
 MUSICAL THEATRE CLASSES
 Musical Theatre classes are also offered under Dance (Stage Dance with Voice), Vocal and Choral Categories. All selections for
 these classes must be taken from a stage production. Musical Theatre entered in Dance Classes will be judged on dance,
@@ -12799,7 +12799,7 @@ D 0444 MODERN DANCE GROUP, OWN CHOICE, 18 YEARS AND UNDER
 D 0445 MODERN DANCE GROUP, OWN CHOICE, 19 YEARS AND OVER
 D 0446 MODERN DANCE GROUP, OWN CHOICE, MULTIGENERATIONAL
 CREATIVE MOVEMENT CLASSES
-Creative movement is the process of discovering the range of human movement through the body’s use of surrounding space,
+Creative movement is the process of discovering the range of human movement through the body's use of surrounding space,
 efforts (energy release and muscle control) and shapes. Creative movement can explore the movement qualities of human
 emotion and its expression. The dance itself then becomes an expression of the dancer.
 The dance may be narrative (tells a story) or abstract (movement which does not tell a story). The dance may be performed to
@@ -13317,7 +13317,7 @@ D 0885 DANCE, SELF-CHOREOGRAPHY, GROUP, OWN CHOICE, 19 YEARS AND OVER
 D 0886 DANCE, SELF-CHOREOGRAPHY, GROUP, OWN CHOICE, MULTIGENERATIONAL
 HIP HOP CLASSES
 A dance form that is a component of the hip hop cultural movement that began among African-Americans in New York City in the
-early 1970’s. Hip hop is expressed through movements that are strong, energetic, grounded and rhythmic, incorporating various
+early 1970's. Hip hop is expressed through movements that are strong, energetic, grounded and rhythmic, incorporating various
 forms of dance such as; breaking, popping and locking.
 SOLO
 One selection, own choice.
@@ -13417,7 +13417,7 @@ FOLK DANCE SUGGESTED REPERTOIRE LISTS
 KINDERGARTEN - GRADE 1
 The Wheat (Czechoslovakia)
 Chimes of Dunkirk ( France)
-Shoemaker’s Dance (Denmark)
+Shoemaker's Dance (Denmark)
 Carrousel (Sweden)
 Hansel & Gretel (Germany)
 Nixie Polka (Denmark)
@@ -13436,7 +13436,7 @@ Alfredu (Germany)
 Ace of Diamonds (Denmark)
 Crested Hen (Denmark)
 Danish Family Circle (Denmark)
-Gustaf’s Skoal (Sweden)
+Gustaf's Skoal (Sweden)
 Greensleeves (England)
 GRADES 3 - 4
 Kendime (Turkey)
@@ -13475,8 +13475,8 @@ Doudlebska Polka (Czechoslovakia)
 Machar (Israel)
 Okdano (Sweden)
 Patch Tanz (Jewish)
-D’Hammerschmiedgsella (Germany)
-V’David (Israel)
+D'Hammerschmiedgsella (Germany)
+V'David (Israel)
 Waraku Odori (Japan)
 Man in the Hay (Germany)
 Mayim (Israel)
@@ -13498,7 +13498,7 @@ Hora Fetelor (Romania)
 Kohanochka (Russia)
 GRADES 11 - 12
 Shalom Al Israel (Israel)
-Ssulam Ya’Akov (Israel)
+Ssulam Ya'Akov (Israel)
 Setnja (Yugoslavia)
 Yellow Cat Jig (England)
 Tango Poquito (North America)
@@ -13534,10 +13534,10 @@ Mexican Jumping Bean
 GRADES 5 - 6
 Hot Pretzels
 Pata Pata Goofus
-Tippy Toein’ Five Foot Two Mixer
+Tippy Toein' Five Foot Two Mixer
 Glow Worm
 Mexican Mixer
-Bossa Nova Steppin’ Out
+Bossa Nova Steppin' Out
 Limbo Rick
 GRADES 7 - 12
 12 th Street Rag
@@ -13596,7 +13596,7 @@ All Visual Arts entries must be clearly labeled. Please see local festival adden
 Original Work
 Original work should be stressed at all times. Patterns, kits, pre-fabricated molds, copies and tracings do not qualify as
 original work. In the case of school entries, teachers may introduce a broad theme but the interpretation of the theme or
-subject should be the student’s. Projects where every student does the same thing with slight variations (e.g. colour),
+subject should be the student's. Projects where every student does the same thing with slight variations (e.g. colour),
 are not classified as original work.
 4.
 Marking
@@ -13623,7 +13623,7 @@ VA 1006 PAINTING, OIL AND ACRYLIC, GRADES 7 - 9
 VA 1007 PAINTING, OIL AND ACRYLIC, GRADES 10 - 12
 VA 1008 PAINTING, OIL AND ACRYLIC, ADULT
 DRAWING CLASSES
-All work to be original. Copies of other artists’ works (paintings, drawings, etc.) or caricatures (e.g. Garfield, Peanuts, etc.) are
+All work to be original. Copies of other artists' works (paintings, drawings, etc.) or caricatures (e.g. Garfield, Peanuts, etc.) are
 not acceptable as originality should be stressed at all times.
 DRAWING, COLOURED OR BLACK AND WHITE: CRAYON, PASTEL, CHALK, COLOURED PENCIL, CHARCOAL,
 CONTE, PEN AND INK
@@ -13801,7 +13801,7 @@ VA 1243 ANIMATION, COMPUTER ART, GRADES 7 - 9
 VA 1244 ANIMATION, COMPUTER ART, GRADES 10 - 12
 VA 1245 ANIMATION, COMPUTER ART, ADULT
 CALLIGRAPHY CLASSES
-Participants’ work should display consistency in style and technique, and originality in embellishment and decoration. Personal
+Participants' work should display consistency in style and technique, and originality in embellishment and decoration. Personal
 expression is encouraged.
 VA 1246 CALLIGRAPHY, GRADES 4 - 6
 VA 1247 CALLIGRAPHY, GRADES 7 - 9
