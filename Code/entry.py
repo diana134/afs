@@ -337,7 +337,12 @@ class Entry(object):
             pString = participant.participants
 
             # Print the group name
-            if self.discipline in ["Choral", "Band", "Dance"]:
+            if self.discipline == "Dance":
+                if len(participant.participants) > 0:
+                    pString += ", {0}".format(participant.schoolAttending)
+                else:
+                    pString += "{0}".format(participant.groupName)
+            elif self.discipline in ["Choral", "Band"]:
                 if len(participant.participants) > 0:
                     pString += ", "
                 pString += "{0}".format(participant.groupName)

@@ -267,7 +267,7 @@
      <x>0</x>
      <y>0</y>
      <width>1370</width>
-     <height>25</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -289,6 +289,7 @@
     </property>
     <addaction name="createBackupAction"/>
     <addaction name="exportAction"/>
+    <addaction name="createNewDatabaseAction"/>
    </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Schedule"/>
@@ -322,6 +323,11 @@
   <action name="loadScheduleAction">
    <property name="text">
     <string>Load Schedule...</string>
+   </property>
+  </action>
+  <action name="createNewDatabaseAction">
+   <property name="text">
+    <string>Create New Database</string>
    </property>
   </action>
  </widget>

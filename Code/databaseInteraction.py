@@ -167,6 +167,44 @@ class DatabaseInteraction(object):
 
             self.setupModels()
 
+    def cleanDb(self):
+        """Drops all records"""
+        try:
+            query = QSqlQuery(self.conn)
+            query.prepare("DELETE FROM participants")
+            query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
+            self.participantModel.select()
+
+            query.prepare("DELETE FROM teachers")
+            query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
+            self.teacherModel.select()
+
+            query.prepare("DELETE FROM entries")
+            query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
+            self.entryModel.select()
+
+            query.prepare("DELETE FROM selections")
+            query.exec_()
+            if query.isActive() == False:
+                print query.lastError().text()
+                return query.lastError().text()
+            self.pieceModel.select()
+
+            return ""
+        except Exception, e:
+            # TODO: log this instead of printing to console
+            print "cleanDb FAILED\n\tquery: {0}\n\terror: {1}".format(query, e)
+            return e 
+
     def findClassName(self, classNumber):
         """Search syllabus and return the class name or none if not found"""
         # Make sure classNumber is formatted as a group of letters, space, group of numbers

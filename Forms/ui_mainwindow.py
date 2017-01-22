@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_mainwindow.ui'
 #
-# Created: Tue Feb  2 21:51:14 2016
+# Created: Sun Jan 22 13:03:41 2017
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -140,7 +140,7 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.splitter_2, 1, 0, 1, 2)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1370, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1370, 22))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menu_File = QtGui.QMenu(self.menubar)
         self.menu_File.setObjectName(_fromUtf8("menu_File"))
@@ -161,11 +161,14 @@ class Ui_MainWindow(object):
         self.exportAction.setObjectName(_fromUtf8("exportAction"))
         self.loadScheduleAction = QtGui.QAction(MainWindow)
         self.loadScheduleAction.setObjectName(_fromUtf8("loadScheduleAction"))
+        self.createNewDatabaseAction = QtGui.QAction(MainWindow)
+        self.createNewDatabaseAction.setObjectName(_fromUtf8("createNewDatabaseAction"))
         self.menu_File.addAction(self.exitAction)
         self.menu_Schedule.addAction(self.runSchedulerAction)
         self.menu_Schedule.addAction(self.loadScheduleAction)
         self.menu_Database.addAction(self.createBackupAction)
         self.menu_Database.addAction(self.exportAction)
+        self.menu_Database.addAction(self.createNewDatabaseAction)
         self.menubar.addAction(self.menu_File.menuAction())
         self.menubar.addAction(self.menu_Schedule.menuAction())
         self.menubar.addAction(self.menu_Database.menuAction())
@@ -197,4 +200,5 @@ class Ui_MainWindow(object):
         self.runSchedulerAction.setText(_translate("MainWindow", "Create Schedule...", None))
         self.exportAction.setText(_translate("MainWindow", "Export to CSV", None))
         self.loadScheduleAction.setText(_translate("MainWindow", "Load Schedule...", None))
+        self.createNewDatabaseAction.setText(_translate("MainWindow", "Create New Database", None))
 

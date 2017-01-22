@@ -63,6 +63,7 @@ class MainWindow(QWidget):
         self.ui.createBackupAction.triggered.connect(self.createBackupAction_triggered)
         # self.ui.restoreDbBtn.clicked.connect(self.restoreDbBtn_clicked)
         # self.ui.createNewDbBtn.clicked.connect(self.createNewDbBtn_clicked)
+        self.ui.createNewDatabaseAction.triggered.connect(self.createNewDatabaseAction_triggered)
         self.ui.exportAction.triggered.connect(self.exportAction_triggered)
 
         self.ui.participantTableView.setModel(dbInteractionInstance.participantModel)
@@ -231,10 +232,20 @@ class MainWindow(QWidget):
         else:
             QMessageBox.critical(self, "Failed", "Could not restore from backup. Aborted with error:\n{0}".format(result))
 
-    def createNewDbBtn_clicked(self):
-        """Backs up current db, then drops and recreates all the tables"""
-        # TODO low priority, probably don't need it until after the festival
-        pass
+    # def createNewDbBtn_clicked(self):
+    #     """Backs up current db, then drops and recreates all the tables"""
+    #     # TODO low priority, probably don't need it until after the festival
+    #     pass
+
+    def createNewDatabaseAction_triggered(self):
+        """Backs up current db, then drops all records"""
+        if QMessageBox.question(self, "Create new database", "This will create a backup and then clear the current database. \nAre you sure you want to continue?", QMessageBox.Yes|QMessageBox.No) == QMessageBox.Yes:
+            self.createBackupAction_triggered()
+            result = dbInteractionInstance.cleanDb()
+            if result == "":
+                QMessageBox.information(self, "Success", "New Database created.", QMessageBox.Ok)
+            else:
+                QMessageBox.critical(self, "Failed", "Could not create new database. Aborted with error:\n{0}".format(result))
 
     def entriesByDisciplineBtn_clicked(self):
         """Saves a csv of all the entries sorted by Discipline"""
