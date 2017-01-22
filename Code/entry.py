@@ -254,7 +254,7 @@ class Entry(object):
             early=participant.earliestPerformanceTime,
             late=participant.latestPerformanceTime
         )
-        s += ',,,,,,,'
+        # s += ',,,,,,,'
         # else:
             # pString = ""
             # tokens = participant.participants.split(',')
