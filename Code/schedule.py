@@ -254,27 +254,27 @@ class Schedule(object):
                     info = document.add_paragraph()
                     # TODO fake some horizontal lines (maybe can do with custom style in ms word?)
                     run = info.add_run("\tClass: {0} {1}\n".format(classNumber, className))
-                    run.bold = True
-                    run.font.size = Pt(12)
+                    # run.bold = True
+                    run.font.size = Pt(10)
                     run = info.add_run("\tParticipant(s): {0}\n".format(pString))
                     run.bold = True
-                    run.font.size = Pt(16)
+                    run.font.size = Pt(10)
                     run = info.add_run("\tSelection(s): {0}\n".format(selString))
-                    run.bold = True
-                    run.font.size = Pt(16)
+                    # run.bold = True
+                    run.font.size = Pt(10)
 
                     # Marking scale
                     marks = document.add_paragraph()
                     # marks.alignment = WD_ALIGN_PARAGRAPH.LEFT
-                    run = marks.add_run("STANDARD SCALE OF MARKS\n75 represents a performance which is good.\n80 represent Merit.\n85 represents Distinction. \n90 represents Honours.")
+                    run = marks.add_run("STANDARD SCALE OF MARKS\t\t\t\t\t\tMark : ______________________________\n75 represents a performance which is good.\n80 represent Merit.\n85 represents Distinction. \n90 represents Honours.")
                     run.font.size = Pt(8)
 
-                    markLine = document.add_paragraph()
-                    # markLine.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-                    markLine.add_run("\nMark : ").font.size = Pt(8)
-                    run = markLine.add_run("_"*30)
-                    # run.underline = True
-                    run.font.size = Pt(8)
+                    # markLine = document.add_paragraph()
+                    # # markLine.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+                    # markLine.add_run("\nMark : ").font.size = Pt(8)
+                    # run = markLine.add_run("_"*30)
+                    # # run.underline = True
+                    # run.font.size = Pt(8)
 
                     # Adjudicator
                     # footerStyle = document.styles["Footer"]
