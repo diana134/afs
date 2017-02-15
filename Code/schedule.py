@@ -281,7 +281,7 @@ class Schedule(object):
                     # adj = document.add_paragraph(style=footerStyle)
                     adj = document.add_paragraph()
                     # adj.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-                    adj.add_run("\n"*20)
+                    adj.add_run("\n"*28)
                     run = adj.add_run("_"*100 + "\n")
                     # run.underline = True
                     run.font.size = Pt(8)
