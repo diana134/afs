@@ -16,6 +16,11 @@ class AverageAgeCalculatorDialog(QDialog):
         super(AverageAgeCalculatorDialog, self).__init__(parent)
         self.ui = Ui_AverageAgeCalculatorDialog()
         self.ui.setupUi(self)
+
+         # Set the age as of default date
+        self.defaultDate = QDate(QDate.currentDate().year(), 1, 1)
+        self.ui.asOfDateEdit.setDate(self.defaultDate)
+
         # Make the buttons do things
         self.connectSlots()
 
